@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASAPALABRA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="main-page">
+        <h1>PASAPALABRA</h1>
+            <p>Bienvenido al PASAPALABRA</p>
+            <div>
+                <input id="nombre-usuario" type="text" placeholder="Introduz tu nombre">
+                <button id="submition-nombre">Enviar</button>
+                <p id="invalido"></p>
+            </div>
+
+    </section>
+    
+    <section id="juego-principal">
+        <div class="letter-wrapper">
+            <div class="letter" id="0">A</div>
+            <div class="letter" id="1">B</div>
+            <div class="letter" id="2">C</div>
+            <div class="letter" id="3">D</div>
+            <div class="letter" id="4">E</div>
+            <div class="letter" id="5">F</div>
+            <div class="letter" id="6">G</div>
+            <div class="letter" id="7">H</div>
+            <div class="letter" id="8">I</div>
+            <div class="letter" id="9">J</div>
+            <div class="letter" id="10">K</div>
+            <div class="letter" id="11">L</div>
+            <div class="letter" id="12">M</div>
+            <div class="letter" id="13">N</div>
+            <div class="letter" id="14">O</div>
+            <div class="letter" id="15">P</div>
+            <div class="letter" id="16">Q</div>
+            <div class="letter" id="17">R</div>
+            <div class="letter" id="18">S</div>
+            <div class="letter" id="19">T</div>
+            <div class="letter" id="20">U</div>
+            <div class="letter" id="21">V</div>
+            <div class="letter" id="22">W</div>
+            <div class="letter" id="23">X</div>
+            <div class="letter" id="24">Y</div>
+            <div class="letter" id="25">Z</div>
+        </div>
+        <div class="letter-wrapper display-question">
+            <div id="questions"></div>
+        </div>
+        <div class="answer letter-wrapper">
+            <input id="respuesta" type="text" placeholder="Tu respuesta">
+            <button id="submition">Next</button>
+        </div>
+    </section>
+    <section id="scores-wrapper">
+        <div id="scores"></div>
+        <button id="Back">Menu Principal</button>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
