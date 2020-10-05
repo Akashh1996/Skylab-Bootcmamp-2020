@@ -10,7 +10,7 @@
 - [GitHub](http://github.com/)
 - [Trello](https://trello.com/)
 
-## Recommended VSCode Extensions
+## Recommended VSCode Extensions
 
 - Live Server `ritwickdey.liveserver`
 - ESLint `dbaeumer.vscode-eslint`
