@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>PASAPALABRAS HTML</title>
+  </head>
+  <body>
+    <div id="main-container" class="flx-center">
+      <div id="menu-option">
+        <h1>PASAPALABRA SKYLABCODERS</h1>
+        <button id="start-game" class="grow btn-bg-color btn-border">
+          JUGAR
+        </button>
+        <button id="rules-display" class="grow btn-bg-color btn-border">
+          ¿COMO JUGAR?
+        </button>
+      </div>
+      <div id="play-option">
+        <div id="errorMessage">
+          <p>Introduce un Nombre para poder Jugar</p>
+        </div>
+        <div id="playerInputName">
+          <label>Nombre:</label>
+          <input
+            type="text"
+            id="userName"
+            class="btn-border"
+						placeholder="John Doe"
+						onfocus="this.value =''"
+          />
+          <button id="confirm" class="grow btn-bg-color btn-border">
+            CONFIRMAR
+          </button>
+          <button data-back-to-menu class="grow btn-bg-color btn-border">
+            SALIR
+          </button>
+        </div>
+        <div id="in-game">
+          <p>Comienza por: <span id="letter"></span></p>
+          <p id="question"></p>
+          <div id="letter-container">
+            <ul class="circle-container flx-center">
+              <li class="flx-center" data-letter>A</li>
+              <li class="flx-center" data-letter>B</li>
+              <li class="flx-center" data-letter>C</li>
+              <li class="flx-center" data-letter>D</li>
+              <li class="flx-center" data-letter>E</li>
+              <li class="flx-center" data-letter>F</li>
+              <li class="flx-center" data-letter>G</li>
+              <li class="flx-center" data-letter>H</li>
+              <li class="flx-center" data-letter>I</li>
+              <li class="flx-center" data-letter>J</li>
+              <li class="flx-center" data-letter>K</li>
+              <li class="flx-center" data-letter>L</li>
+              <li class="flx-center" data-letter>M</li>
+              <li class="flx-center" data-letter>N</li>
+              <li class="flx-center" data-letter>O</li>
+              <li class="flx-center" data-letter>P</li>
+              <li class="flx-center" data-letter>Q</li>
+              <li class="flx-center" data-letter>R</li>
+              <li class="flx-center" data-letter>S</li>
+              <li class="flx-center" data-letter>T</li>
+              <li class="flx-center" data-letter>U</li>
+              <li class="flx-center" data-letter>V</li>
+              <li class="flx-center" data-letter>W</li>
+              <li class="flx-center" data-letter>X</li>
+              <li class="flx-center" data-letter>Y</li>
+              <li class="flx-center" data-letter>Z</li>
+            </ul>
+          </div>
+          <div class="wrappInpBnt">
+            <input type="text" id="answer" placeholder="RESPUESTA" class="btn-border"/>
+            <button id="confirmAnswer" class="grow btn-bg-color btn-border" type="submit">
+              CONFIRMAR
+            </button>
+            <button id="nextQuestion" class="grow btn-bg-color btn-border">PASAPALABRA</button>
+            <span class="countdown"></span>
+          </div>
+          <button id="forceExit" class="exit grow btn-bg-color btn-border">SALIR</button>
+        </div>
+      </div>
+      <div id="rules-option">
+        <h1>¿Como Jugar?</h1>
+        <ul>
+          <li>
+            Veras cada letra asociada a una pregunta, escribir la respuesta que
+            creas correcta y darle a confirmar.
+          </li>
+          <li>Veras cada</li>
+          <li>
+            En caso de no estar seguro de la palabra, puedes hacer clic sobre
+            “PASAPALBRA” para probar más tarde, ¡siempre que no te quedes sin
+            tiempo!
+          </li>
+          <li>
+            Puedes finalizar el juego en cualquier momento, pero no entraras en
+            el ranking.
+          </li>
+        </ul>
+        <p>¡Buena Suerte!</p>
+        <button
+          data-back-to-menu
+          id="back"
+          class="grow btn-bg-color btn-border"
+        >
+          GO BACK
+        </button>
+			</div>
+			<div id="ranking">
+        <p id="exitResume"></p>
+        <ol id="rankList">
+        </ol>
+			</div>
+    </div>
+  </body>
+</html>
