@@ -1,0 +1,18 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.test {
+  font-size: 200px;
+}
+.modal-body {
+  text-align: center;
+}

@@ -1,0 +1,75 @@
+body {
+	font-size: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+/* li {
+	color: blue;
+}
+
+.italic {
+	font-style: italic;
+}
+
+p {
+  background-color: blue;
+	color: white;
+	padding: 5px;
+}
+
+.specific {
+  background-color: gray;
+}
+
+#morespecific {
+  background-color: red !important;
+  border: 3px solid black;
+}
+
+#morespecific {
+  background-color: purple;
+} */
+
+span {
+  font-size: 90px;
+  color: white;
+}
+
+div {
+	width: 200px;
+	height: 200px;
+  margin: 2px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+@media (max-width: 599px) {
+	div {
+		background-color: red;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+	div {
+		background-color: green;
+		width: 400px;
+		height: 200px;
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+	div {
+		background-color: darkblue;
+		width: 600px;
+		height: 200px;
+	}
+}
+
+@media (min-width: 1440px) {
+	div {
+		background-color: purple;
+		width: 800px;
+		height: 200px;
+	}
+}
