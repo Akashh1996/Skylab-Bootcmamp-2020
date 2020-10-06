@@ -254,7 +254,7 @@ const time = () => {
         document.getElementById('timer').innerHTML = '150';
         document.getElementById('right-answers').innerHTML = '0';
         let circles = document.getElementsByClassName('circle'); 
-        for (circle of circles) {
+        for (const circle of circles) {
             circle.style.background = 'linear-gradient(45deg, blue, rgb(86, 172, 206))';
         }
     }

@@ -105,8 +105,8 @@ const display = () => {
             } else {
                 if (event.target === buttons['point']) {
                     if (input.innerHTML[input.innerHTML.length - 1] !== ')') {
-                        var lastSpace = input.innerHTML.lastIndexOf(' ');
-                        var lastParenth = input.innerHTML.lastIndexOf('(');
+                        lastSpace = input.innerHTML.lastIndexOf(' ');
+                        lastParenth = input.innerHTML.lastIndexOf('(');
                         if (lastParenth > lastSpace) {
                             if (!input.innerHTML.slice(lastParenth + 1, input.innerHTML.length).includes('.')) {
                                 input.innerHTML += event.target.innerHTML;
@@ -235,7 +235,7 @@ const results = () => {
             const originalLength = arrayOfCalc.length;
             while (arrayOfCalc.length > 1) {    
                 let findSymbol = arrayOfCalc.find(element => element === 'x' || element === '÷');
-                findSymbol ? findSymbol: findSymbol = arrayOfCalc.find(element => element === '+' || element === '–');
+                findSymbol ? findSymbol : findSymbol = arrayOfCalc.find(element => element === '+' || element === '–');
                 var symbolIndex = arrayOfCalc.indexOf(findSymbol);
                 
                 switch(findSymbol) {

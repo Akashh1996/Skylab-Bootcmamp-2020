@@ -109,11 +109,11 @@ do {
 var playAgain;
 var numOfGamesPlayed = 0;
 
-const arrayOfObjects = [{name: 'David', points: 149}, {name: 'Pedro', points: 126}, {name: 'Celsa', points: 84}, {name: 'Ernest', points: 66}, {name: 'Katy', points: 42}];
+const arrayOfObjects = [{name: 'David', pointsUser: 149}, {name: 'Pedro', pointsUser: 126}, {name: 'Celsa', pointsUser: 84}, {name: 'Ernest', pointsUser: 66}, {name: 'Katy', pointsUser: 42}];
 
-function rankingUsers (name, points) {
+function rankingUsers (name, pointsUser) {
     this.name = name;
-    this.points = points;
+    this.pointsUser = pointsUser;
 }
 
 function bingo () {
@@ -220,7 +220,7 @@ function bingo () {
                         } while (storedRandomNumbers.includes(ballNumber))
 
                         storedRandomNumbers.push(ballNumber);
-                        ballNumberModified = ('0' + ballNumber).slice(-2);
+                        let ballNumberModified = ('0' + ballNumber).slice(-2);
                         var coincidenceFound = storedCardNumbers.find(element => element === ballNumberModified)
 
                         if (coincidenceFound) {
@@ -315,15 +315,15 @@ function bingo () {
                             alert("GAME OVER");
                             let userObject = new rankingUsers(userName, points);
                             arrayOfObjects.push(userObject);
-                            var sortedByPoints = arrayOfObjects.sort((a, b) => (a.points < b.points) ? 1 : (a.points === b.points) ? ((arrayOfObjects.indexOf(a) > arrayOfObjects.indexOf(a)) ? 1 : -1) : -1 );
+                            arrayOfObjects.sort((a, b) => (a.pointsUser < b.pointsUser) ? 1 : (a.pointsUser === b.pointsUser) ? ((arrayOfObjects.indexOf(a) > arrayOfObjects.indexOf(b)) ? 1 : -1) : -1 );
                             
                             alert(`Ranking de usuarios:
 
-- ${arrayOfObjects[0].name}: ${arrayOfObjects[0].points}
-- ${arrayOfObjects[1].name}: ${arrayOfObjects[1].points}
-- ${arrayOfObjects[2].name}: ${arrayOfObjects[2].points}
-- ${arrayOfObjects[3].name}: ${arrayOfObjects[3].points}
-- ${arrayOfObjects[4].name}: ${arrayOfObjects[4].points}
+- ${arrayOfObjects[0].name}: ${arrayOfObjects[0].pointsUser}
+- ${arrayOfObjects[1].name}: ${arrayOfObjects[1].pointsUser}
+- ${arrayOfObjects[2].name}: ${arrayOfObjects[2].pointsUser}
+- ${arrayOfObjects[3].name}: ${arrayOfObjects[3].pointsUser}
+- ${arrayOfObjects[4].name}: ${arrayOfObjects[4].pointsUser}
 
 ${userName}, has quedado en ${arrayOfObjects.indexOf(arrayOfObjects.find(element => element == userObject)) + 1}.ª posición.`);
                             playAgain = confirm(`¿Quieres volver a jugar, ${userName}?`)

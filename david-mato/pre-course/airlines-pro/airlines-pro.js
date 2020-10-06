@@ -51,7 +51,7 @@ function consoleFlights () {
     var totalScale = 0;
     var lastDestinations = "";
 
-    for (flight of flights) {
+    for (const flight of flights) {
 
          if (flight.scale) {
             console.log(`El vuelo con origen en ${flight.from} y destino a ${flight.to} 
@@ -208,7 +208,7 @@ function airline () {
                             }
                             break;
                         case 2:
-                            deletedFlight = deleteFlight();
+                            let deletedFlight = deleteFlight();
                             do {
                                 var deleteFlight1 = confirm(`Has eliminado el vuelo ${deletedFlight[0].from} - ${deletedFlight[0].to}, con ID: ${('0' + deletedFlight[0].id).slice(-2)}.\n¿Quieres eliminar otro vuelo?`);
                                 if (deleteFlight1) {

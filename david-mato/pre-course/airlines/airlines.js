@@ -35,7 +35,7 @@ function airline () {
     var totalScale = 0;
     var lastDestinations = "";
 
-    for (flight of flights) {
+    for (const flight of flights) {
 
          if (flight.scale) {
             console.log(`El vuelo con origen en ${flight.from} y destino a ${flight.to} 
