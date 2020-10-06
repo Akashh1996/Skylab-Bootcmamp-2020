@@ -2,7 +2,6 @@ var nombreJugador;
 nombreJugador = prompt("Introduzca el nombre del Jugador: ")
 
 var cartonJ1 = [];
-var volverJugar;
 var numerosPremiados = [];
 var sorteo;
 var volverJugar = true;
