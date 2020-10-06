@@ -3,10 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script
-			src="https://kit.fontawesome.com/8619792f44.js"
-			crossorigin="anonymous"
-		></script>
+
 		<link
 			href="https://fonts.googleapis.com/icon?family=Material+Icons"
 			rel="stylesheet"
@@ -18,7 +15,7 @@
 		<h1>Hola mundo!</h1>
 		<span class="material-icons"> anchor </span>
 		<code>Wake up... Jorge!</code>
-		<!-- <section>
+		<section>
     <ul>
       <li>this</li>
       <li class="italic">is</li>
@@ -27,15 +24,19 @@
     </ul>
   </section>
   <p class="specific">parrafo con clase</p>
-  <p class="specific" id="morespecific">parrafo con clase y id</p> -->
+	<p class="specific" id="morespecific">parrafo con clase y id</p>
+		<button onclick="sayHi()">SALUDAME</button>
+		<p id="greeting">Quieres un saludo, has click en el boton de arriba</p>
 		<div><span class="fas fa-skiing"></span></div>
-
 		<div>
-			<span class="material-icons"> skip_next </span>
+			<p id="displayGreeting"></p>
 		</div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
+		<button onclick="loadData()">LOAD DATA</button>
+		<p id="data">No hay elementos que mostrar</p>
 	</body>
+	<script
+		src="https://kit.fontawesome.com/8619792f44.js"
+		crossorigin="anonymous"
+	></script>
+	<script src="script.js"></script>
 </html>
