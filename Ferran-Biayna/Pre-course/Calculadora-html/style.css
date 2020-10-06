@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 150%;
+  font-weight: 200;
+  background-image: url("https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131_1280.jpg");
+}
+
+footer {
+  display: grid;
+  align-self: center;
+  margin: 5%;
+  font-size: 45%;
+  font-weight: 700;
+}
+
+.screen {
+  display: grid;
+  align-self: center;
+  align-content: flex-end;
+  text-align: right;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  width: 240px;
+  height: 90px;
+  border: 2px solid rgb(167, 167, 167);
+  border-radius: 1%;
+  background-color: rgb(43, 50, 68);
+  color: white;
+  font-size: 140%;
+  position: relative;
+  top: 2px;
+}
+
+.buttons {
+  display: grid;
+  align-self: center;
+  cursor: pointer;
+  width: 240px;
+  height: 260px;
+  grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+  background-color: rgb(221, 221, 221);
+  border: 2px solid rgb(167, 167, 167);
+  border-radius: 1%;
+}
+
+.buttons .numbers {
+  display: flex;
+  border: 1px solid rgb(167, 167, 167);
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons .numbers:hover {
+  background-color: rgb(207, 207, 207);
+}
+
+.buttons .operations {
+  display: flex;
+  background-color: rgb(240, 142, 51);
+  border: 1px solid rgb(167, 167, 167);
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons .operations:hover {
+  background-color: rgb(231, 168, 109);
+  color: #fff;
+}
+
+#reset {
+  display: flex;
+  justify-content: left;
+  padding-left: 25px;
+  grid-column: 1 / span 2;
+  background-color: rgb(221, 221, 221);
+  color: black;
+}
+
+#reset:hover {
+  background-color: rgb(207, 207, 207);
+}
+
+#undo {
+  background-color: rgb(221, 221, 221);
+  font-weight: 800;
+  color: black;
+  font-size: 125%;
+}
+
+#undo:hover {
+  background-color: rgb(207, 207, 207);
+}
+
+#number0 {
+  display: flex;
+  justify-content: left;
+  padding-left: 25px;
+  grid-column: 1 / span 2;
+}
+
+#previousDisplay {
+  font-size: 40%;
+}
