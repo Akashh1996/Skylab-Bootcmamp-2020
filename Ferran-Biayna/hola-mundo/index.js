@@ -11,6 +11,7 @@ function sayHi() {
 	}
 }
 
+
 async function loadData() {
 	const response = await fetch('heroes.txt');
 	const text = await response.text();
