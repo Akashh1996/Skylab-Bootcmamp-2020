@@ -79,7 +79,9 @@ nav span.material-icons{
         margin: 0 32px;
         width: 50%;
     }
-}@media screen and (max-width: 1439px) and (min-width: 1024px){
+}
+
+@media screen and (max-width: 1439px) and (min-width: 1024px){
     .specific {
         background-color: orange;
         font-size: 40px;
