@@ -1,15 +1,15 @@
 'use strict';
 
-function calc(ar) {
+function calc(array1) {
 	let sum = 0;
-	let rest = ar[0];
-	let mult = ar[0];
-	let div = ar[0];
-	for (let i = 0; i < ar.length; i++) {
-		sum += ar[i];
-		rest -= ar[i];
-		mult *= ar[i];
-		div /= ar[i];
+	let rest = array1[0];
+	let mult = array1[0];
+	let div = array1[0];
+	for (let i = 0; i < array1.length; i++) {
+		sum += array1[i];
+		rest -= array1[i];
+		mult *= array1[i];
+		div /= array1[i];
 	}
 	let all = [sum, rest + ar[0], mult / ar[0], div * ar[0]];
 	return all;

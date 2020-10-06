@@ -39,7 +39,7 @@ function pasapalabra() {
         for (var i=0;i<questions.length;i++) {
             if (questions[i].status===0) {
                 console.log(`${questions[i].question}`)
-                option=prompt('¿Cuál es tu respuesta?').toUpperCase() //Arreglar problema amb els null
+                let option=prompt('¿Cuál es tu respuesta?').toUpperCase() //Arreglar problema amb els null
                 if (option===(questions[i].answer).toUpperCase()) {
                     console.log('¡Respuesta correcta!')
                     questions[i].status=1

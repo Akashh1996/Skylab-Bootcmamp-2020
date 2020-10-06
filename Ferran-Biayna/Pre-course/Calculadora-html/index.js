@@ -76,7 +76,7 @@ for (let i = 0; i < numbers.length; i++) {
 
 // 2. OPERACIONES
 
-for (i = 0; i < operations.length; i++) {
+for (let j = 0; j < operations.length; j++) {
   const operation = document.getElementById(operations[i]);
   operation.addEventListener("click", function (event) {
     if (display.innerHTML === "Desbordam.") {

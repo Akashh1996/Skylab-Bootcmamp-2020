@@ -1,40 +1,40 @@
 'use strict';
 
-function calculadora(n1, n2 = undefined) {
-	if (n2 === undefined) {
-		if (entero(Math.sqrt(n1)) == true) {
-			return Math.sqrt(n1);
+function calculadora(num1, num2 = undefined) {
+	if (num2 === undefined) {
+		if (entero(Math.sqrt(num1)) == true) {
+			return Math.sqrt(num1);
 		} else {
-			return Math.sqrt(n1).toFixed(3);
+			return Math.sqrt(num1).toFixed(3);
 		}
 	} else {
-		var resultSum = n1 + n2;
-		var resultRest = n1 - n2;
-		var resultMult = n1 * n2;
-		var resultDiv = n1 / n2;
+		var resultSum = num1 + num2;
+		var resultRest = num1 - num2;
+		var resultMult = num1 * num2;
+		var resultDiv = num1 / num2;
 		if (entero(resultSum) == false) {
-			resultSum = (n1 + n2).toFixed(3);
+			resultSum = (num1 + num2).toFixed(3);
 		}
 		if (entero(resultRest) == false) {
-			resultRest = (n1 - n2).toFixed(3);
+			resultRest = (num1 - num2).toFixed(3);
 		}
 		if (entero(resultMult) == false) {
-			resultMult = (n1 * n2).toFixed(3);
+			resultMult = (num1 * num2).toFixed(3);
 		}
 		if (entero(resultDiv) == false) {
-			resultDiv = (n1 / n2).toFixed(3);
+			resultDiv = (num1 / num2).toFixed(3);
 		}
 		var results = [
-			`Suma --> ${n1}+${n2}=${resultSum}`,
-			`Resta --> ${n1}-${n2}=${resultRest}`,
-			`Multiplicación --> ${n1}*${n2}=${resultMult}`,
-			`División --> ${n1}/${n2}=${resultDiv}`
+			`Suma --> ${num1}+${num2}=${resultSum}`,
+			`Resta --> ${num1}-${num2}=${resultRest}`,
+			`Multiplicación --> ${num1}*${num2}=${resultMult}`,
+			`División --> ${num1}/${num2}=${resultDiv}`
 		];
 		return results;
 	}
 }
-function entero(n) {
-	if (n % 1 == 0) {
+function entero(num) {
+	if (num % 1 == 0) {
 		return true;
 	} else {
 		return false;
@@ -42,15 +42,18 @@ function entero(n) {
 }
 
 console.log('\t-- CALCULADORA --\t');
+var n1 = null;
+var n2 = null;
+var n = null;
 while (true) {
-	var n = parseInt(
+	n = parseInt(
 		prompt('\n¿Cuántos números quieres introducir? (Elige entre 1 y 2): ', '')
 	);
 	if (n != 1 && n != 2) {
 		console.log('\nLa opción introducida no es correcta. Vuelve a intentarlo');
 	} else if (n == 1) {
 		while (true) {
-			var n1 = parseFloat(prompt('\nIntroduce el número: '));
+			n1 = parseFloat(prompt('\nIntroduce el número: '));
 			if (isNaN(n1) == false) {
 				console.log(calculadora(n1));
 				break;
@@ -63,8 +66,8 @@ while (true) {
 		break;
 	} else {
 		while (true) {
-			var n1 = parseFloat(prompt('\nIntroduce el primer número: '));
-			var n2 = parseFloat(prompt('Introduce el segundo número: '));
+			n1 = parseFloat(prompt('\nIntroduce el primer número: '));
+			n2 = parseFloat(prompt('Introduce el segundo número: '));
 			if (isNaN(n1) == false && isNaN(n2) == false) {
 				console.log(calculadora(n1, n2));
 				break;
