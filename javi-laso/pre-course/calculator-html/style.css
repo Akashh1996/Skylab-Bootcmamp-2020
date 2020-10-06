@@ -1,0 +1,184 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  background-color: black;
+  width: 300px;
+  height: auto;
+  display: grid;
+  grid-template-rows: 60px 80px 72px 72px 72px 72px 72px;
+  grid-template-columns: 72px 72px 72px 72px;
+  column-gap: 4px;
+  row-gap: 4px;
+  align-self: center;
+  padding: 4px;
+  position: relative;
+}
+
+#miniscreen {
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+  color: gray;
+  font-size: 30px;
+  text-align: end;
+  padding-top: 10px;
+}
+
+#screen {
+  grid-column: 1 / 5;
+  grid-row: 2 / 3;
+  color: white;
+  font-size: 70px;
+  text-align: end;
+  padding-top: 5px;
+}
+
+#erase-all{
+  font-size: 30px;
+  background-color: gray;
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+}
+
+#erase-number {
+  font-size: 30px;
+  background-color: gray;
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+}
+
+#erase {
+  background-image: url("./icono-borrar.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-color: gray;
+  grid-row: 3 / 4;
+  grid-column: 3 / 4;
+}
+
+#divide {
+  font-size: 25px;
+  background-color: orange;
+  color: white;
+  grid-row: 3 / 4;
+  grid-column: 4 / 5;
+}
+
+#num7 {
+  font-size: 30px;
+  background-color: gray;
+  grid-row: 4 / 5;
+  grid-column: 1 / 2;
+}
+
+#num8 {
+  font-size: 30px;
+  background-color: gray;
+  grid-row: 4 / 5;
+  grid-column: 2 / 3;
+}
+
+#num9 {
+  font-size: 30px;
+  background-color: gray;
+  grid-row: 4 / 5;
+  grid-column: 3 / 4;
+}
+
+#multiply {
+  font-size: 25px;
+  background-color: orange;
+  color: white;
+  grid-row: 4 / 5;
+  grid-column: 4 / 5;
+}
+
+#num4 {
+  font-size: 30px;
+  background-color: gray;
+  grid-row: 5 / 6;
+  grid-column: 1 / 2;
+}
+
+#num5 {
+  font-size: 30px;
+  background-color: gray;
+  grid-row: 5 / 6;
+  grid-column: 2 / 3;
+}
+
+#num6 {
+  font-size: 30px;
+  background-color: gray;
+  grid-row: 5 / 6;
+  grid-column: 3 / 4;
+}
+
+#subtract {
+  font-size: 25px;
+  background-color: orange;
+  color: white;
+  grid-row: 5 / 6;
+  grid-column: 4 / 5;
+}
+
+#num1 {
+  font-size: 30px;
+  background-color: gray;
+  grid-row: 6 / 7;
+  grid-column: 1 / 2;
+}
+
+#num2 {
+  font-size: 30px;
+  background-color: gray;
+  grid-row: 6 / 7;
+  grid-column: 2 / 3;
+}
+
+#num3 {
+  font-size: 30px;
+  background-color: gray;
+  grid-row: 6 / 7;
+  grid-column: 3 / 4;
+}
+
+#sum {
+  font-size: 25px;
+  background-color: orange;
+  color: white;
+  grid-row: 6 / 7;
+  grid-column: 4 / 5;
+}
+
+#num0 {
+  font-size: 30px;
+  background-color: gray;
+  grid-row: 7 / 8;
+  grid-column: 1 / 3;
+}
+
+#comma {
+  padding-bottom: 20px;
+  font-size: 30px;
+  background-color: gray;
+  grid-row: 7 / 8;
+  grid-column: 3 / 4;
+}
+
+#equals {
+  font-size: 25px;
+  background-color: orange;
+  color: white;
+  grid-row: 7 / 8;
+  grid-column: 4 / 5;
+}
+
+
+
