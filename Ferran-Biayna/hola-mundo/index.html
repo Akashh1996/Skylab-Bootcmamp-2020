@@ -4,16 +4,45 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Hola mundo</title>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="index.css" />
 	</head>
 	<body>
 		<h1>Hola mundo!</h1>
+		<header>
+			<nav>
+				<span class="material-icons"> account_circle </span>
+				<span class="material-icons"> list </span>
+				<span class="material-icons"> add_alert </span>
+			</nav>
+		</header>
 		<code>Wake up... Neo!</code>
 		<div>
 			<ul>
 				<li>This</li>
-				<li>is an</li>
+				<li class="italic">is an</li>
 				<li>unordered list</li>
 			</ul>
 		</div>
+		<p class="specific">Paragraph</p>
+		<p class="specific" id="morespecific">Paragraph with id</p>
+		<i id="skiing" class="fas fa-skiing"></i>
+		<i class="fas fa-space-shuttle"></i>
+		<div>
+			<button onclick="showDate()">See the date</button>
+			<p id="demo">Haz click en el botón para ver la fecha actual</p>
+			<button onclick="sayHi()">Salúdame</button>
+			<p id="saludo">Haz click en el botón para que te saludemos!</p>
+			<button onclick="loadData()">Load Data</button>
+			<p id="data">There are no elements to show!</p>
+		</div>
 	</body>
+	<script
+		src="https://kit.fontawesome.com/8619792f44.js"
+		crossorigin="anonymous"
+	></script>
+	<script src="index.js"></script>
 </html>
