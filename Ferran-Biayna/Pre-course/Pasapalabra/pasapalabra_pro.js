@@ -75,7 +75,7 @@ function pasapalabra(name) {
         return b.point - a.point;
     })
     console.log('- Hall Of Fame -')
-    for (var i=0;i<hallOfFame.length;i++) {
+    for (i=0;i<hallOfFame.length;i++) {
         console.log(`${hallOfFame[i].name} - ${hallOfFame[i].point} puntos`)
     }
 }

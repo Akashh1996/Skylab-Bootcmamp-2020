@@ -11,7 +11,7 @@ function game() {
             i=false
         }
     }
-    var option=window.confirm('¿Estás preparado?\nSi(Aceptar) / No(Cancelar)')
+    let option=window.confirm('¿Estás preparado?\nSi(Aceptar) / No(Cancelar)')
     if (option) {
         pasapalabra()
     } else {
@@ -22,9 +22,9 @@ function game() {
             pasapalabra()
         }
     }
-    option=window.confirm('¿Quieres volver a jugar?\nSi(Aceptar / No(Cancelar)')
+    let option=window.confirm('¿Quieres volver a jugar?\nSi(Aceptar / No(Cancelar)')
     if (option) {
-        for (var i=0;i<questions.length;i++) {
+        for (i=0;i<questions.length;i++) {
             questions[i].status=0
         }
         game()

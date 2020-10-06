@@ -41,7 +41,7 @@ function overflow(num) { // Caracteres maximos en pantalla
 
 // 1. NÚMEROS
 
-for (i = 0; i < numbers.length; i++) {
+for (let i = 0; i < numbers.length; i++) {
   const number = document.getElementById(numbers[i]);
   number.addEventListener("click", function (event) {
     if (

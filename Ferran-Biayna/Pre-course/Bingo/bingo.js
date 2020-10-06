@@ -39,7 +39,7 @@ function nuevoCarton() {
 		while (c === 0) {
 			z = 0;
 			s = Math.floor(Math.random() * 90);
-			for (let j = 0; j <= carton.fila1.length; j++) {
+			for (j = 0; j <= carton.fila1.length; j++) {
 				if (s === carton.fila1[j] || s === 0) {
 					z = 1;
 				}
@@ -169,7 +169,7 @@ function pasarTurno() {
 	console.log(nuevoCarton());
 	i = true;
 	while (i === true) {
-		var op = window.confirm(
+		op = window.confirm(
 			'¿Quieres canviar el cartón?\nSI (Aceptar) / NO (Cancelar)'
 		);
 		if (op) {

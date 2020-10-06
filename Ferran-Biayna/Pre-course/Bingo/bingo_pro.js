@@ -71,7 +71,7 @@ function newBcard() {
 		while (count1 === 0) {
 			count2 = 0;
 			num = Math.floor(Math.random() * 90);
-			for (var j = 0; j <= bcard.row3.length; j++) {
+			for (j = 0; j <= bcard.row3.length; j++) {
 				if (
 					num === bcard.row1[j] ||
 					num === bcard.row2[j] ||
@@ -95,7 +95,7 @@ function newNumber() {
 	while (true) {
 		count1 = 0;
 		ball = Math.floor(Math.random() * 90);
-		for (var i = 0; i < numbers.length; i++) {
+		for (i = 0; i < numbers.length; i++) {
 			if (ball === numbers[i]) {
 				count1 = 1;
 			}
