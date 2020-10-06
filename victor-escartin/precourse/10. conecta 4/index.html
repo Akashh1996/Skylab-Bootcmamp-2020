@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Conecta 4 Pro</title>
+  </head>
+  <body>
+    <div id="container_menu" class="menu">
+      <div id="play_menu">
+        <p id="menu_title">SKYLAB<span style="color: rgb(16, 53, 219)"> Coders </span>ACADEMY</p>
+        <p id="menu_subtitle" style="color: rgb(16, 53, 219)">Conecta 4 Pro Edition</p>
+        <div>
+          <button id="new_game" class="btn_menu" onclick="singlePlayerMenu()">PARTIDA INDIVIDUAL</button><br /><br />
+          <button id="new_game" class="btn_menu" onclick="multiPlayerMenu()">PARTIDA MULTIJUGADOR</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="container_multiplayer" class="menu">
+      <div id="play_menu">
+        <p id="menu_title">SKYLAB<span style="color: rgb(16, 53, 219)"> Coders </span>ACADEMY</p>
+        <p id="menu_subtitle" style="color: rgb(16, 53, 219)">Conecta 4 Pro Edition</p>
+
+        <div id="name_intro">
+          <input id="player1" class="textBox" type="text" placeholder="Jugador 1" /><br /><br />
+          <input id="player2" class="textBox" type="text" placeholder="Jugador 2" /><br /><br />
+          <button id="new_game" class="btn_menu" onclick="multiGame()">Nueva partida</button><br />
+          <p id="alert_user1">Lo siento, debe completar ambos campos para continuar</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="container_singleplayer" class="menu">
+      <div id="play_menu">
+        <p id="menu_title">SKYLAB<span style="color: rgb(16, 53, 219)"> Coders </span>ACADEMY</p>
+        <p id="menu_subtitle" style="color: rgb(16, 53, 219)">Conecta 4 Pro Edition</p>
+
+        <div id="name_intro">
+          <input id="gamer1" class="textBox" type="text" placeholder="Jugador 1" /><br /><br />
+          <input id="gamer2" class="textBox" type="text" value="CPU" readonly /><br /><br />
+          <button id="new_game" class="btn_menu" onclick="singleGame()">Nueva partida</button><br />
+          <p id="alert_user2">Lo siento, debe introducir un nombre para empezar a jugar</p>
+        </div>
+      </div>
+    </div>
+    <div id="container_game" class="container_game">
+      <div class="game-board">
+        <h3 class="player-turn"></h3>
+        <div class="cell row-top col-0"></div>
+        <div class="cell row-top col-1"></div>
+        <div class="cell row-top col-2"></div>
+        <div class="cell row-top col-3"></div>
+        <div class="cell row-top col-4"></div>
+        <div class="cell row-top col-5"></div>
+        <div class="cell row-top col-6"></div>
+        <div class="cell row-0 col-0 left-border top-border"></div>
+        <div class="cell row-0 col-1 top-border"></div>
+        <div class="cell row-0 col-2 top-border"></div>
+        <div class="cell row-0 col-3 top-border"></div>
+        <div class="cell row-0 col-4 top-border"></div>
+        <div class="cell row-0 col-5 top-border"></div>
+        <div class="cell row-0 col-6 top-border right-border"></div>
+        <div class="cell row-1 col-0 left-border"></div>
+        <div class="cell row-1 col-1"></div>
+        <div class="cell row-1 col-2"></div>
+        <div class="cell row-1 col-3"></div>
+        <div class="cell row-1 col-4"></div>
+        <div class="cell row-1 col-5"></div>
+        <div class="cell row-1 col-6 right-border"></div>
+        <div class="cell row-2 col-0 left-border"></div>
+        <div class="cell row-2 col-1"></div>
+        <div class="cell row-2 col-2"></div>
+        <div class="cell row-2 col-3"></div>
+        <div class="cell row-2 col-4"></div>
+        <div class="cell row-2 col-5"></div>
+        <div class="cell row-2 col-6 right-border"></div>
+        <div class="cell row-3 col-0 left-border"></div>
+        <div class="cell row-3 col-1"></div>
+        <div class="cell row-3 col-2"></div>
+        <div class="cell row-3 col-3"></div>
+        <div class="cell row-3 col-4"></div>
+        <div class="cell row-3 col-5"></div>
+        <div class="cell row-3 col-6 right-border"></div>
+        <div class="cell row-4 col-0 left-border"></div>
+        <div class="cell row-4 col-1"></div>
+        <div class="cell row-4 col-2"></div>
+        <div class="cell row-4 col-3"></div>
+        <div class="cell row-4 col-4"></div>
+        <div class="cell row-4 col-5"></div>
+        <div class="cell row-4 col-6 right-border"></div>
+        <div class="cell row-5 col-0 bottom-border left-border"></div>
+        <div class="cell row-5 col-1 bottom-border"></div>
+        <div class="cell row-5 col-2 bottom-border"></div>
+        <div class="cell row-5 col-3 bottom-border"></div>
+        <div class="cell row-5 col-4 bottom-border"></div>
+        <div class="cell row-5 col-5 bottom-border"></div>
+        <div class="cell row-5 col-6 bottom-border right-border"></div>
+      </div>
+      <div id="playing" class="player-turn">COMIENZA EL JUEGO</div>
+      <div class="box_players">
+        <ul id="player-list">
+          JUGADORES:<br /><br />
+          <li id="p1">JUGADOR 1</li>
+          <li id="p2">JUGADOR 2</li>
+        </ul>
+      </div>
+
+      <div>
+        <button class="reset" onclick="reset()">Reset</button>
+        <button class="exit" onclick="location.reload()">Salir</button>
+        <footer id="creator">Víctor Escartín <span style="color: blue"> CONECTA 4</span></footer>
+        <footer id="academy">SKYLAB<span style="color: rgb(16, 53, 219)"> Coders </span>ACADEMY</footer>
+      </div>
+    </div>
+
+    <script src="app/app.js"></script>
+  </body>
+</html>

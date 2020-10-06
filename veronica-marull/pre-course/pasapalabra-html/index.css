@@ -1,0 +1,120 @@
+.hidden {
+    display: none;
+}
+
+.letters {
+    display: grid;
+    grid-template-columns: repeat(13, 70px) ;
+    grid-template-rows: 30px 30px;
+    grid-gap: 90px;
+    margin-left: 100px;
+    margin-right: auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    
+    
+}
+
+.game, #rules, .start, h1 {
+    text-align: center;
+}
+
+#answersWrong {
+    text-align: left;
+}
+
+.letter{
+
+    display: grid;
+    justify-content: center;
+    border: 1px solid grey;
+    background: orange;
+    align-self: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;  
+
+}
+#watch {
+
+    font-size: xx-large;
+    text-align: center;
+}
+
+.score {
+    font-size: x-large;
+    
+}
+
+.rightAnswer {
+    background: greenyellow;
+}
+
+.wrongAnswer {
+    background: red;
+}
+
+p {
+    font-family: Verdana;
+    font-size: large;
+}
+
+.backgroundExit {
+    background-color: black;
+    background-image: url(https://ak.picdn.net/shutterstock/videos/22752961/thumb/7.jpg);
+    background-repeat: no-repeat;
+    background-position: 300px 200px;
+    
+}
+
+.backgroundStart {
+    background-image: url(https://i.pinimg.com/236x/fc/50/65/fc50656435fb46f42c3ce10ccdf3ba80--sciences.jpg);
+    background-repeat: no-repeat;
+    background-position: 1000px 500px;
+    
+}
+
+.backgroundGame {
+    background-image: url(https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?ixlib=rb-1.2.1&w=1000&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#startButton {
+    font-size: medium;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(247, 185, 205);
+    border-style: solid;
+    border-color: rgb(204, 47, 99);
+}
+
+#newGameButton {
+    font-size: large;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(103, 228, 20);
+    border-style: solid;
+    border-color: rgb(28, 168, 59);
+}
+
+#exitGameButton {
+    font-size: large;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(226, 50, 6);
+    border-style: solid;
+    border-color: rgb(163, 28, 10);
+}
+
+#screenNewGame {
+
+    align-content: center;
+}

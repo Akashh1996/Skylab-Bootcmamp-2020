@@ -1,0 +1,206 @@
+body {
+    background-image: url("maths.jpg");
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Bookman, serif;
+    font-size: 73px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(155, 57, 57);
+    background: linear-gradient(0.25turn, transparent, rgb(35, 35, 35) 30% 69.75%, transparent);
+    padding-top: 10px;
+    padding-bottom: 3px;
+}
+
+.calculator {
+    position: relative;
+    margin: auto auto;
+    display: grid;
+    height: 400px;
+    grid-template-rows: 1.6fr repeat(5, 1fr);
+    grid-template-columns: repeat(4, 100px);
+    grid-template-areas: 
+    "input input input input"
+    "parenth1 parenth2 AC arrow"
+    "seven eight nine div"
+    "four five six mult"
+    "one two three subt"
+    "zero point equal addi";
+    gap: 6px;
+    font-size: 24px;
+}
+
+.input {
+    background-color: rgb(224, 217, 217);
+    margin-bottom: 8px;
+    border-radius: 10px;
+    grid-area: input;
+    border-left: solid 9px rgba(0, 0, 0, 0);
+    border-right: solid 9px rgba(0, 0, 0, 0);
+    overflow-x: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+img {
+    width: 20px;
+    mix-blend-mode: darken;
+    position: relative;
+    top: 12px;
+    left: 4px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#history {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: rgb(224, 217, 217);
+    border-radius: 10px;
+    box-shadow: 0 0 8px black;
+    visibility: hidden;
+    overflow: scroll;
+    resize: both;
+    max-height: 390px;
+    max-width: 408px;
+    min-height: 266px;
+    min-width: 302px;
+    border-top: 38px solid rgb(204, 162, 162);
+}
+
+#past-operations {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    padding-right: 20px;
+}
+
+.operation {
+    display: flex;
+    position: relative;
+    top: 9px;
+    left: 11px;
+    white-space: nowrap;
+    font-size: 22.5px;
+}
+
+.operation-segment {
+    border: 1px solid rgb(143, 102, 102);
+    margin: 9px 8px;
+    padding: 1px 4px;
+    border-radius: 3.5px;
+    color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.operation-segment:hover {
+    background: rgb(200, 136, 124);
+    color:rgb(235, 228, 228);
+}
+
+.operation-segment:active {
+    background:rgb(187, 86, 86);
+    color:rgb(235, 228, 228);
+}
+
+.equals {
+    margin: 10px;
+    color: rgb(102, 88, 86);
+}
+
+#upper-input {
+    position: absolute;
+    text-align: end;
+    top: 15px;
+    right: 2px;
+    font-size: 20px;
+    color: rgb(102, 88, 86);
+    max-width: 91.5%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#main-input {
+    text-align: end;
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    font-size: 40px;
+}
+
+.number {background-color: rgb(189, 163, 160)}
+
+.number:hover {background-color: rgb(178, 148, 145)}
+
+.symbol {background-color: rgb(166, 132, 129)}
+
+.symbol:hover {background-color: rgb(154, 117, 117)}
+
+#equal {background-color: rgb(143, 102, 102)}
+
+#equal:hover {background-color: rgb(150, 110, 110)}
+
+.number, .symbol {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.number:active, .symbol:active, .arrow:active{
+    width:97.5%;
+    height:97.5%;
+    justify-self: center;
+    align-self: center;
+}
+
+#zero {grid-area: zero}
+
+#one {grid-area: one}
+
+#two {grid-area: two}
+
+#three {grid-area: three}
+
+#four {grid-area: four}
+
+#five {grid-area: five}
+
+#six {grid-area: six}
+
+#seven {grid-area: seven}
+
+#eight {grid-area: eight}
+
+#nine {grid-area: nine}
+
+#point {grid-area: point}
+
+#addi {grid-area: addi}
+
+#subt {grid-area: subt}
+
+#mult {grid-area: mult}
+
+#div {grid-area: div}
+
+#equal {grid-area: equal}
+
+#AC {grid-area: AC}
+
+#parenth1 {grid-area: parenth1}
+
+#parenth2 {grid-area: parenth2}
+
+#arrow {grid-area: arrow}

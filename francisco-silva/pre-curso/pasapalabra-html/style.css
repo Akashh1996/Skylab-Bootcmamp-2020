@@ -1,0 +1,67 @@
+.letter-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: DodgerBlue;
+    justify-content: center;
+  }
+  
+  .letter-wrapper > div {
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    /* border-radius: 50%; */
+  }
+
+  #questions {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+.display-question > #questions {
+    width: 1000px;
+    text-align: center;
+    background-color: rgb(79, 160, 79);
+    height: auto;
+}
+
+#respuesta{
+    height: 50px;
+    width: 100px;
+}
+
+#submition{
+    height: 56px;
+    width: 80px;
+}
+
+#scores-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(62, 122, 181);
+    justify-content: center;
+}
+
+#juego-principal, #scores-wrapper {
+    display: none;
+}
+
+#letter-wrapper > p {
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+
+* {
+    font-family: Helvetica, sans-serif;
+}
+
+#questions {
+    border-radius: 0%;
+}
+

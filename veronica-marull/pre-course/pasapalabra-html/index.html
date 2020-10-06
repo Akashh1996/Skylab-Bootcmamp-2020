@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasapalabra</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body class="backgroundStart">
+    <div class="start" id="startScreen">
+        <h1>Bienvenida/o al Pasapalabra!</h1>
+        <br><br>
+    
+        <div class="start" id="rules"></div>
+            <p>Ingrese su nombre y haga click en "Jugar" para comenzar.<br>
+            Aparecera una definición en pantalla y deberá contestar correctamente para ganar el juego, o al menos obtener mayor puntaje.
+            <br> Utilice el boton Ok o la tecla Enter para enviar la respuesta.<br>
+            Por cada palabra acertada se le asignará un punto. Si desea responder mas adelante, haga click en "Pasapalabra" o pulse la barra espaciadora.<br>
+            En cualquier momento, para salir del juego, puede hacer click en el boton "END" o pulse Esc (en este caso no se grabará la partida). 
+            </p>
+        
+        </div>
+        <br><br>
+        <div class ="start" id="start">
+            
+            <input type="text" name="player" id="player">
+            <br><br>
+            <input class="button" type="button" value="Start!" id="startButton">
+        </div>
+    </div>    
+    <div class ="game hidden" id="display">
+        <div class="welcome" id="welcome"></div>
+        <br><br><br>
+        <div class="letters" id="letters">
+
+            <div class="letter" id="a">A</div>
+            <div class="letter" id="b">B</div>
+            <div class="letter" id="c">C</div>
+            <div class="letter" id="d">D</div>
+            <div class="letter" id="e">E</div>
+            <div class="letter" id="f">F</div>
+            <div class="letter" id="g">G</div>
+            <div class="letter" id="h">H</div>
+            <div class="letter" id="i">I</div>
+            <div class="letter" id="j">J</div>
+            <div class="letter" id="k">K</div>
+            <div class="letter" id="l">L</div>
+            <div class="letter" id="m">M</div>
+            <div class="letter" id="n">N</div>
+            <div class="letter" id="o">O</div>
+            <div class="letter" id="p">P</div>
+            <div class="letter" id="q">Q</div>
+            <div class="letter" id="r">R</div>
+            <div class="letter" id="s">S</div>
+            <div class="letter" id="t">T</div>
+            <div class="letter" id="u">U</div>
+            <div class="letter" id="v">V</div>
+            <div class="letter" id="w">W</div>
+            <div class="letter" id="x">X</div>
+            <div class="letter" id="y">Y</div>
+            <div class="letter" id="z">Z</div>
+
+        </div>
+    
+        <br><br><br>
+        <div id = "wrapDefinitionAnswer">
+            <div class="definition" id="definition"></div>
+            <br>
+            <div class= "answer">
+
+                <input type="text" id="answer">
+                <input class="button" type="button" value="Ok" id="okButton">
+                <input class="button" type="button" value="Pasapalabra" id="pasapalabraButton"> 
+                <input class="button" type="button" value="END" id="endButton">         
+
+            </div>
+        </div>
+
+        <div id="answersWrong"></div>
+        <br>
+        <div class="score" id="currentPlayerScore">
+            
+            
+        </div>   
+
+    </div>
+    <div id="screenNewGame"></div>
+    <br><br>
+    <div class="score" id="ranking"></div>
+    <br><br>
+    
+    <div class="time hidden" id="watch"> </div>
+    
+    
+    
+    <script src="index.js"></script>
+
+
+</body>
+</html>
