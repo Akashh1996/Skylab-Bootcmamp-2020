@@ -27,6 +27,7 @@ function presentacion(){
        }
     }
     costeMedio();
+    lastFive();
 }
 
 function costeMedio(){
@@ -36,7 +37,6 @@ function costeMedio(){
     }
     costMig = (costTotal/flights.length).toFixed(3);
     console.log("El coste medio de los vuelos es de " + costMig + "â‚¬.")
-    lastFive();
 }
 
 function lastFive(){
