@@ -1,0 +1,442 @@
+body {
+    background-image: url('blue.jpg');
+    overflow: hidden;
+}
+
+h1 {
+    position: absolute;
+    top: 110px;
+    left: -37px;
+    font-size: 70px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgb(189, 213, 224);
+    text-shadow: 3px 3px 4px rgb(58, 58, 179);
+}
+
+#display {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(20%, -50%);
+    width: 300px;
+    height: 300px;
+}
+
+.circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(226, 226, 226);
+    border-radius: 50%;
+    font-size: 29px;
+    color: white;
+    text-shadow: 3px 3px 5px rgb(0, 0, 122);
+    text-align: center;
+    line-height: 46px;
+    background: linear-gradient(45deg, blue, rgb(86, 172, 206));
+}
+
+#instructions-icon {
+    position: absolute;
+    top: -120px;
+    left: 960px;
+    width: 90px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#instructions {
+    visibility: hidden;
+    position: absolute;
+    top: -130px;
+    left: 683px;
+    width: 378px;
+    height: 430px;
+    background: linear-gradient(45deg, rgb(100, 183, 235), rgb(193, 223, 243));
+    z-index: 2;
+    border-radius: 20px;
+    opacity: 0;
+    border: 1px solid white;
+    border-top: 110px solid rgb(146, 193, 255)
+}
+
+#instructions h3 {
+    font-size: 28px;
+    font-weight: 900;
+    font-family: serif;
+    position: relative;
+    top: -65px;
+    left: 24px;
+    padding-bottom: 0px;
+    z-index: 2;
+    color: rgb(18, 31, 71);
+}
+
+#instructions ul {
+    font-size: 18px;
+    position: relative;
+    list-style-type: disc;
+    line-height: 29px;
+    left: 30px;
+    top: -10px;
+    width: 325px;
+    text-align:justify;
+}
+
+#instructions li {
+    margin: 10px 0;
+}
+
+#start {
+    background: linear-gradient(35deg, rgb(209, 45, 45),rgb(250, 115, 115));
+    font-size: 45px;
+    color:  rgb(255, 255, 255);
+    padding-top: 10px;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 2px solid rgb(226, 226, 226);
+    width: 266px;
+    position: absolute;
+    top: 110px;
+    left: 615px;
+    box-shadow: 0px 0px 5px red;
+    cursor: pointer;
+}
+
+#start:hover {
+    background: linear-gradient(35deg, rgb(204, 29, 29),rgb(255, 106, 106));
+}
+
+#start:active {
+    background: linear-gradient(35deg, rgb(187, 30, 30),rgb(255, 99, 99));
+}
+
+#play-symbol {
+    width: 55px;
+    position: relative;
+    left: 10px;
+}
+
+#play {
+    position: relative;
+    left: 20px;
+    bottom: 10px;
+    font-family: serif;
+    font-size: 50px;
+    font-weight: 800;
+    text-shadow: 3px 3px 4px rgb(82, 28, 28);
+}
+
+#countdown {
+    position: absolute;
+    top: 165;
+    left: 480px;
+    font-size: 10px;
+    color: rgb(39, 39, 39);
+}
+
+#questions {
+    padding-top: 10px;
+    position: absolute;
+    top: 10px;
+    left: 490px;
+    width: 550px;
+    height: 170px;
+    line-height: 156px;
+    text-align: center;
+    overflow: auto;
+    background: linear-gradient(35deg, rgb(33, 156, 212), rgb(69, 209, 202)) ;
+    border: 2px solid rgb(164, 221, 214);
+    border-radius: 20px;
+}
+
+#questions p {
+    line-height: 1.3;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 600;
+    font-size: 29px;
+    padding: 0 20px;
+    letter-spacing: 1px;
+    color: rgb(237, 243, 242);
+    text-shadow: 1.7px 1.7px 2px rgb(11, 106, 119);
+}
+
+#input {
+    position: absolute;
+    top: 187px;
+    left: 540px;
+    width: 261px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 23px;
+    border: 1px solid rgb(255, 255, 255);
+    background: linear-gradient(35deg, rgb(215, 222, 255), rgb(238, 235, 250));
+    padding: 0 15px;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 40px;
+    font-family: serif;
+}
+
+::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    font-family: serif;
+}
+
+#input:focus {
+    outline: none;
+    box-shadow: 0 0 0px 2.8px rgb(99, 121, 247);
+}
+
+#name {
+    opacity: 1;
+    position: absolute;
+    top: 30px;
+    left: 588px;
+    width: 320px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 23px;
+    border: 1px solid rgb(255, 255, 255);
+    background: linear-gradient(35deg, rgb(215, 222, 255), rgb(238, 235, 250));
+    padding: 0 15px;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 40px;
+    font-family: serif;
+}
+
+#name:focus {
+    outline: none;
+    box-shadow: 0 0 0px 2.8px rgb(99, 121, 247);
+}
+
+#end {
+    position: relative;
+    top: 17px;
+    left: 979px;
+    background: linear-gradient(35deg, rgb(240, 95, 124), rgb(238, 172, 186));
+    width: 55px;
+    height: 30px;
+    text-align: center;
+    line-height: 29px;
+    padding: 2px;
+    border-radius: 5px 15px 5px 5px;
+    font-family: serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    text-shadow: 1px 1px 3px rgb(224, 66, 66);
+}
+
+#end:hover {
+    background: linear-gradient(35deg, rgb(235, 94, 94),rgb(253, 64, 64));
+    border: 1.5px solid  rgb(240, 95, 124);
+    line-height: 28px;
+}
+
+#end:active {
+    color:rgb(253, 212, 212);
+    background: rgb(246, 97, 97);
+    line-height: 29px;
+}
+
+#pasapalabra {
+    position: absolute;
+    top: 188px;
+    left: 813px;
+    height: 40px;
+    width: 179px;
+    background: linear-gradient(35deg, rgb(206, 131, 131), rgb(200, 162, 162));
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(195, 200, 240);
+    color: rgb(235, 239, 250);
+    text-shadow: 1px 1px 3px rgb(92, 45, 45);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#pasapalabra:hover {
+    background: linear-gradient(35deg, rgb(247, 93, 93), rgb(228, 138, 138));
+}
+
+#pasapalabra:active {
+    background: linear-gradient(35deg, rgb(228, 85, 85), rgb(231, 122, 122));
+    color: rgb(245, 224, 224);
+}
+
+#hidden-display {
+    visibility: hidden;
+}
+
+#timer {
+    left: 448px;
+    font-size: 60px;
+    text-shadow: 3px 3px 5px rgb(122, 45, 0);
+    background: linear-gradient(45deg, rgb(255, 81, 51), rgb(235, 175, 135));
+    box-shadow: 0 0 5px tomato;
+}
+
+#letter {
+    left: 674px;
+    font-size: 90px;
+    text-shadow: 3px 3px 5px rgb(0, 0, 122);
+    background: linear-gradient(45deg, blue, rgb(86, 172, 206));
+    box-shadow: 0 0 5px blue;
+}
+
+#right-answers {
+    left: 900px;
+    font-size: 60px;
+    text-shadow: 3px 3px 5px rgb(0, 122, 30);
+    background: linear-gradient(45deg, rgb(45, 175, 34), rgb(152, 235, 135));
+    box-shadow: 0 0 5px green;
+}
+
+#timer, #letter, #right-answers {
+    position: absolute;
+    top: 275px;
+    width: 150px;
+    height: 150px;
+    border: 2px solid rgb(226, 226, 226);
+    border-radius: 50%;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    line-height: 146px;
+}
+
+#ranking-title {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width: 350px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 39px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    top: -69px;
+    left: 573.5px;
+    background: linear-gradient(165deg, rgb(231, 104, 104), rgb(223, 146, 146));
+    border: 1.8px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px  rgb(173, 92, 92);
+    z-index: 1;
+}
+
+#ranking {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: -69px;
+    left: 604px;
+    background: linear-gradient(15deg, rgb(245, 205, 205), rgb(238, 150, 150));
+    width: 290px;
+    height: 105px; 
+    border-bottom-left-radius: 20px ;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-top: none;
+    line-height: 29px;
+    text-align:justify;
+    max-height: 450px;
+    font-size: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    padding-top: 25px;
+    box-shadow: 0px 0px 5px  rgb(173, 92, 92);
+    min-height: 105px;
+}
+
+#ranking-list {
+    position: relative;
+    top: 12px
+}
+
+#ranking-list li {
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 3px;
+    display: table;
+    margin: 12px auto;
+    width: 200px;
+    text-align: center;
+    text-shadow: 1px 1px 0px rgb(218, 127, 127);
+    background: linear-gradient(35deg, rgb(224, 106, 106), rgb(235, 150, 150)) ;
+    color: rgb(65, 47, 47);
+    font-size: 22px;
+    letter-spacing: 0.5px;
+}
+
+hr {
+    position: relative;
+    width: 100%;
+    top: 12px;
+    border-top: 1px solid rgb(0, 0, 0);
+}
+
+#arrow {
+    position: relative;
+    bottom: 0px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#arrow2 {
+    position: relative;
+    bottom: 0px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#outer-box {
+    background: linear-gradient(360deg, rgb(236, 122, 122), rgb(247, 196, 196));
+    width: 290px;
+    height: 50px;
+    padding-top: 5px;
+    align-self: flex-end;
+    perspective: 1000px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.flip-box {
+    width: 40px;
+    height: 40px;
+}
+
+.flip-box-inner {
+    position: relative;
+    bottom: 0px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+
+.flip-box-back {
+    transform: rotateX(180deg);
+} 
