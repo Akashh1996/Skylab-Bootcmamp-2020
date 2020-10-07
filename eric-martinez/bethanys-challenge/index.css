@@ -116,21 +116,21 @@ nav a{
         border: 0px solid #000000;
     }
 
-    .h1-title{
+    .section-title{
         margin-top: 10px;
         font-size: 20px;
         font-weight: bold;
         margin-left: 20px;
     }
 
-    .h2-subtitle{
+    .section-subtitle{
         margin-top: 20px;
         font-size: 18px;
         font-weight: bold;
         margin-left: 20px;
     }
 
-    .h3-price{
+    .section-price{
         margin-top: 20px;
         font-size: 20px;
         margin-left: 20px;
@@ -153,6 +153,10 @@ nav a{
         margin-left: 50px;
         display: flex;
         align-content: center;
+    }
+
+    .asideTitle{
+        margin-left: 140px;
     }
 
     .container{
@@ -225,21 +229,21 @@ nav a{
         margin-right: 70px;
     }
 
-    .h1-title{
+    .section-title{
         margin-top: 20px;
         font-size: 20px;
         font-weight: bold;
         margin-left: 20px;
     }
 
-    .h2-subtitle{
+    .section-subtitle{
         margin-top: 20px;
         font-size: 18px;
         font-weight: bold;
         margin-left: 20px;
     }
 
-    .h3-price{
+    .section-price{
         margin-top: 20px;
         font-size: 20px;
         margin-left: 20px;
@@ -253,6 +257,7 @@ nav a{
 
     footer{
         text-align: left;
+        margin-top: 100px;
         margin-left: 100px;
     }
 }
