@@ -49,7 +49,7 @@ function adminOrUser(){
         return admin();
     } else if (adminUser.toUpperCase() === 'USER') {
         return user();
-    } else if(adminUser === null){
+    } else if(adminUser == null){
         return console.log('¡Hasta pronto!');
     } else {
         alert('Solo es posible acceder como ADMIN o USER');
@@ -129,7 +129,7 @@ function añadirDestino(){
 
 function añadirPrecio(){
     var precio = Number(prompt('Introduzca el precio:'));
-    if (isNaN(precio) || precio === null || precio === 0){
+    if (isNaN(precio) || precio == null || precio == 0){
         alert('Debes introducir un precio válido.');
         return añadirPrecio();
     } else {
@@ -139,7 +139,7 @@ function añadirPrecio(){
 
 function añadirEscalas(){
     var escalas = Number(prompt('Introduzca el número de escalas:'));
-    if (Number.isInteger(escalas) && escalas !==""){
+    if (Number.isInteger(escalas) && escalas !=""){
         return escalas
     } else {
         alert('Debes introducir un entero.');
@@ -198,8 +198,8 @@ function buscarPorPrecio(){
     var busca =[];
     switch(prompt('Elige una opción:\n1. Precio más alto que\n2. Precio más bajo que\n3. Precio igual a\n4. Salir')){
         case '1':
-            var precio = Number(prompt('Precio:'));
-            for (var i = 0; i < vuelos.length; i++){
+            precio = Number(prompt('Precio:'));
+            for (i = 0; i < vuelos.length; i++){
                 if (vuelos[i][3] > precio){
                     busca.push(vuelos[i]);
                 }
@@ -207,7 +207,7 @@ function buscarPorPrecio(){
             if (busca.length == 0){
                 console.log('No hay vuelos con precio más alto que ' + precio.toFixed(2) + '€');
             } else {
-                for (var j = 0; j < busca.length; j++){
+                for (j = 0; j < busca.length; j++){
                     console.log('ID' + busca[j][0] + ': Origen: '+ busca[j][1]+ '    Destino: '+ busca[j][2] + '  -  ' + busca[j][3].toFixed(2) + '€, ' + busca[j][4] + ' escalas');
                 }
             }
@@ -218,8 +218,8 @@ function buscarPorPrecio(){
             }
             break;
         case '2':
-            var precio = Number(prompt('Precio:'));
-            for (var i = 0; i < vuelos.length; i++){
+            precio = Number(prompt('Precio:'));
+            for (i = 0; i < vuelos.length; i++){
                 if (vuelos[i][3] < precio){
                     busca.push(vuelos[i]);
                 }
@@ -227,7 +227,7 @@ function buscarPorPrecio(){
             if (busca.length == 0){
                 console.log('No hay vuelos con precio más bajo que ' + precio.toFixed(2) + '€');
             } else {
-                for (var j = 0; j < busca.length; j++){
+                for (j = 0; j < busca.length; j++){
                     console.log('ID' + busca[j][0] + ': Origen: '+ busca[j][1]+ '    Destino: '+ busca[j][2] + '  -  ' + busca[j][3].toFixed(2) + '€, ' + busca[j][4] + ' escalas');
                 }
             }

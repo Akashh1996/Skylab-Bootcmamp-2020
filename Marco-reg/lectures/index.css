@@ -1,0 +1,53 @@
+div{
+    color:blueviolet
+}
+li{
+    font-style:italic
+}
+
+#morespecific{
+    background-color:brown ;
+    
+    padding:5px;
+    border-radius: black;
+}
+
+
+.specific{
+    background-color: darkkhaki;
+    color: darkmagenta;
+    border: olive ;
+}
+
+p{
+    background-color: chocolate;
+    color: darkgoldenrod;
+    padding: 5px;
+}
+
+@media screen and (min-width:600px) and (max-width:1023px){
+    .specific{
+        background:linear-gradient(brown,grey);
+        font-size:20px;
+        margin: 0 16px;
+        border-radius: 10px 10px 30px 10px;
+    }
+}
+@media screen and (min-width:1024px) and (max-width:1439px){
+    .specific{
+        background:linear-gradient(grey,brown);
+
+        font-size:32px;
+        margin:0 32px;
+        border-radius: 10px 10px 30px 10px;
+    }
+}
+@media screen and (min-width:1440x){
+    .specific{
+        background-color:yellow;
+        font-size:40px;
+        margin: 0 64px;
+        width:30%;
+        border-radius: 10px 10px 30px 10px;
+    }
+}
