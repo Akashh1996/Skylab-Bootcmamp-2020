@@ -8,8 +8,11 @@
     <title>Media queries</title>
 </head>
 <body>
+  <h1 class='noDisplay'>Main</h1>
   <header>
     <img src='images/pie.png' class='pieIcon'>
+    <nav>
+      <h2 class='noDisplay'>Header Nav</h2>
     <ul class="nav justify-content-end headerNav">
         <li class="nav-item">
           <a class="nav-link active" href="#">Active</a>
@@ -21,11 +24,15 @@
           <a class="nav-link" href="#">Link</a>
         </li>
       </ul>
+    </nav>
   </header>
-  <div class='logo'>
-    <img src='images/bethanylogo.png'>
-  </div>
+  <main>
+  <div class='grid'>
   <div class='choosePies'>
+    <div class='logo'>
+      <img src='images/bethanylogo.png'>
+    </div>
+    <h2 class='noDisplay'>left section</h2>
     <h3>Browse our pies</h3>
     <ul class="list-group">
       <li class="list-group-item">All Pies</li>
@@ -37,15 +44,16 @@
   </div>
 
   <div class='content'>
-    <h1>Welcome to Bethany's Pie Shop</h1>
+    <h2 class='noDisplay'>Right section</h2>
+    <p>Welcome to Bethany's Pie Shop</p>
     <div class="bethImg">
-      <img  src='images/bethany-fullsize.jpg'>
+      <img src='images/bethany-fullsize.jpg'>
       <p class='bethText'>bethany in her pie shop</p>
     </div>
   </div>
-
+</div>
   <div class="history">
-    <h2>Our History</h2>
+    <h3>Our History</h3>
     <p>For manu years, <a>Bethany</a> has been baking the most delicious
       pies at her home. In 2013, we opened our first store in Brussels (Belgium)
       in a cosy little street near the Grand Market. People from all over the world
@@ -62,13 +70,14 @@
   </div>
 
   <div class='promotion'>
-    <h2>Our weekly Promotion</h2>
+    <h3>Our weekly Promotion</h3>
     <b>Cheese Cake</b>
     <p>$12.95 - serves 4</p>
     <img src='images/products/cheesecake.jpg'>
-  </div>
-
+  </div>  
+</main>
   <footer>
+    <h2 class='noDisplay'>Footer</h2>
     Our adress is 
     <br>
     bethany's Pie shop - Bakery street 555 Brussels Belgium

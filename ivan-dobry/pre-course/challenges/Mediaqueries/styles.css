@@ -39,16 +39,15 @@ header  {
     color: white;
 }
 
-.content h1 {
+.content p {
     text-align: center;
     color: rgb(112, 59, 236);
+    font-size: 50px;
 }
 
-.bethImg {
-    max-width: 80vh;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
+.bethImg img {
+    height: 100%;
+    width: 100%;
 }
 
 .promotion {
@@ -60,7 +59,7 @@ header  {
 }
 
 .promotion img {
-    max-width: 80vh;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -78,4 +77,15 @@ footer {
 
 .promotion p {
     margin-bottom: 0.2px;
+}
+
+@media screen and (min-width: 1000px) {
+    .grid {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+}
+
+.noDisplay {
+    display: none;
 }
