@@ -1,0 +1,51 @@
+body {
+    background-image: url("./images/pattern.png");
+}
+
+h3 {
+    color: #b8a9c9;
+    font-weight: 800;
+}
+
+.navbar {
+    background-color: #b8a9c9;
+}
+
+.upperButtons {    
+    color: white;
+    font-weight: 50px;
+}
+
+.options {
+    display: block;
+    min-width: 200px;
+    max-width: 280px;
+    height: 40px;
+    text-align: left;
+    padding-left: 40px;
+    background-color: #d34333;
+    color:white;
+    font-weight: 500;
+    border: none;
+    margin: 1px;
+}
+
+.cake {
+    background-color: white;
+    border-radius: 15px;
+}
+
+footer p {
+    font-weight: 600;
+}
+
+footer a {
+    color: blue;
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 600px){
+    footer p{
+        text-align: left;
+    }
+}
