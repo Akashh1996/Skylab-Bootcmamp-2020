@@ -25,6 +25,15 @@ nav a{
     color: white;
 }
 
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-options{
+    margin-bottom: 2px;
+}
+
 @media (max-width: 599px) {
 	.listContainer{
         margin-top: 20px;
@@ -42,6 +51,11 @@ nav a{
         margin-left: auto;
         margin-right: auto;
         align-content: center;
+        border: 2px solid white;
+    }
+
+    .menu-options{
+        margin-bottom: 2px;
     }
 
     .logo{
@@ -103,7 +117,7 @@ nav a{
     }
 
     .h1-title{
-        margin-top: 20px;
+        margin-top: 10px;
         font-size: 20px;
         font-weight: bold;
         margin-left: 20px;
@@ -141,6 +155,10 @@ nav a{
         align-content: center;
     }
 
+    .container{
+        flex-direction: row;
+    }
+
     .logo{
         margin-top: 50px;
         height: 300px;
@@ -154,7 +172,7 @@ nav a{
         text-align: left;
         margin-left: 150px;
     }
-    .left-options{
+    .menu-options{
         margin-left: 100px;
     }
 
@@ -203,7 +221,7 @@ nav a{
     }
 
     .promotions{
-        margin-left: 100px;
+        margin-left: 80px;
         margin-right: 70px;
     }
 
