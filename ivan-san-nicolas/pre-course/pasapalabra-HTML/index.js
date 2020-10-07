@@ -2,7 +2,9 @@ var definition;
 var answer;
 var info;
 var playerName;
+var secondRow;
 var i = 0; //Iteration variable. Used to avoid the for method
+var k;
 var enterKeys = document.getElementById("ingame");
 var questions = [
 
@@ -678,14 +680,14 @@ function buttonStartGame() {
 
 function selectQuestions() {
     selectedQuestions = [];
-    for (var j = 0; j < questions[0].length; j++) {
+    for (let j = 0; j < questions[0].length; j++) {
         var k = Math.floor(Math.random() * (3 - 0)) + 0; //Math.floor(Math.random() * (max - min) ) + min
         selectedQuestions.push(questions[k][j]);
     }
 }
 
 function buttonAceptar() {
-    if (document.getElementById("button-pasapalabra").style.display !== "none"){
+    if (document.getElementById("button-pasapalabra").style.display !== "none") {
         //Check answer
         checkAnswer();
         //buttons display
@@ -693,7 +695,7 @@ function buttonAceptar() {
         //Change info bar
         return infoBar();
     }
-    if (document.getElementById("button-pasapalabra").style.display = "none"){
+    if (document.getElementById("button-pasapalabra").style.display = "none") {
         return buttonNext();
     }
 }
@@ -708,10 +710,6 @@ function changeDisplay() {
         document.getElementById("button-pasapalabra").style.display = "unset";
         document.getElementById("button-aceptar").style.display = "unset";
         document.getElementById("button-next").style.display = "none";
-    } else {
-        document.getElementById("button-pasapalabra").style.display = "none";
-        document.getElementById("button-aceptar").style.display = "none";
-        document.getElementById("button-next").style.display = "unset";
     }
 }
 
@@ -770,7 +768,7 @@ function buttonNext() {
 }
 
 function buttonPasapalabra() {
-    if (document.getElementById("button-pasapalabra").style.display !== "none"){
+    if (document.getElementById("button-pasapalabra").style.display !== "none") {
         //Change display
         changeDisplay();
         //Answer info pasapalabra
@@ -791,7 +789,6 @@ function seeRanking() {
         document.getElementById("podium").style.display = "flex";
         initRanking();
         orderRanking();
-        firstTime = false;
     } else if (document.getElementById("podium").style.display !== "flex" && !firstTime) {
         document.getElementById("podium").style.display = "flex";
     } else {
@@ -801,7 +798,7 @@ function seeRanking() {
 
 function initRanking() {
     rankingNames.push(playerName);
-    for (var i = 0; i < rankingNames.length; i++) { //Initialize ranking
+    for (let i = 0; i < rankingNames.length; i++) { //Initialize ranking
         if (rankingNames[i] === playerName) {
             ranking.push(rankingFactory(rankingNames[i], correctQuestions));
         } else {
@@ -819,8 +816,8 @@ function rankingFactory(name, points) {
 }
 
 function orderRanking() {
-    var num = 1;
-    for (var j = 0; j < ranking.length + orderedRanking.length; j++) {
+    var num;
+    for (let j = 0; j < ranking.length + orderedRanking.length; j++) {
         var maxPoints = 0;
         var maxRanking;
         for (let k = 0; k < ranking.length; k++) {
@@ -832,7 +829,7 @@ function orderRanking() {
         orderedRanking.push(maxRanking);
         ranking.splice(ranking.indexOf(maxRanking), 1);
     }
-    for (var j = 0; j < orderedRanking.length; j++) {
+    for (let j = 0; j < orderedRanking.length; j++) {
         document.getElementById(j).innerHTML = orderedRanking[j].name + "              " + orderedRanking[j].points + " puntos"
     }
 }
@@ -860,7 +857,7 @@ function reset() {
     document.getElementById("count-down").style.color = "white";
 
     var x = document.getElementsByClassName("dot");
-    for (var j = 0; j < 27; j++) {
+    for (let j = 0; j < 27; j++) {
         x[j].style.color = "white";
         x[j].style.backgroundImage = "linear-gradient(135deg, rgb(219, 219, 219), rgb(56, 56, 56))";
         x[j].style.border = "9px solid blue";

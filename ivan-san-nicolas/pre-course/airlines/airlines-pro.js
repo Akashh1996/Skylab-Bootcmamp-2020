@@ -1,26 +1,91 @@
 function airlinesPro() {
-  var flights = [
-    { id: 0, to: 'Bilbao', from: 'Barcelona', cost: 1600, scale: false },
+  var flights = [{
+      id: 0,
+      to: 'Bilbao',
+      from: 'Barcelona',
+      cost: 1600,
+      scale: false
+    },
 
-    { id: 1, to: 'New York', from: 'Barcelona', cost: 700, scale: false },
+    {
+      id: 1,
+      to: 'New York',
+      from: 'Barcelona',
+      cost: 700,
+      scale: false
+    },
 
-    { id: 2, to: 'Los Angeles', from: 'Madrid', cost: 1100, scale: true },
+    {
+      id: 2,
+      to: 'Los Angeles',
+      from: 'Madrid',
+      cost: 1100,
+      scale: true
+    },
 
-    { id: 3, to: 'Paris', from: 'Barcelona', cost: 210, scale: false },
+    {
+      id: 3,
+      to: 'Paris',
+      from: 'Barcelona',
+      cost: 210,
+      scale: false
+    },
 
-    { id: 4, to: 'Roma', from: 'Barcelona', cost: 150, scale: false },
+    {
+      id: 4,
+      to: 'Roma',
+      from: 'Barcelona',
+      cost: 150,
+      scale: false
+    },
 
-    { id: 5, to: 'London', from: 'Madrid', cost: 200, scale: false },
+    {
+      id: 5,
+      to: 'London',
+      from: 'Madrid',
+      cost: 200,
+      scale: false
+    },
 
-    { id: 6, to: 'Madrid', from: 'Barcelona', cost: 90, scale: false },
+    {
+      id: 6,
+      to: 'Madrid',
+      from: 'Barcelona',
+      cost: 90,
+      scale: false
+    },
 
-    { id: 7, to: 'Tokyo', from: 'Madrid', cost: 1500, scale: true },
+    {
+      id: 7,
+      to: 'Tokyo',
+      from: 'Madrid',
+      cost: 1500,
+      scale: true
+    },
 
-    { id: 8, to: 'Shangai', from: 'Barcelona', cost: 800, scale: true },
+    {
+      id: 8,
+      to: 'Shangai',
+      from: 'Barcelona',
+      cost: 800,
+      scale: true
+    },
 
-    { id: 9, to: 'Sydney', from: 'Barcelona', cost: 150, scale: true },
+    {
+      id: 9,
+      to: 'Sydney',
+      from: 'Barcelona',
+      cost: 150,
+      scale: true
+    },
 
-    { id: 10, to: 'Tel-Aviv', from: 'Madrid', cost: 150, scale: false },
+    {
+      id: 10,
+      to: 'Tel-Aviv',
+      from: 'Madrid',
+      cost: 150,
+      scale: false
+    },
   ];
   var name = '';
   var escala = []; //To have a valid answer for the stopover's bools in flights. Used in stopover function!!
@@ -32,41 +97,45 @@ function airlinesPro() {
   function showFlights() {
     stopOver();
     clear();
-    for (var i = 0; i < flights.length; i++) {
+    for (let i = 0; i < flights.length; i++) {
       console.log('The flight with id ' + flights[i].id + ' originating in ' + flights[i].from +
-          ' and destination in ' + flights[i].to + ', has a cost of ' + flights[i].cost + '€' + 
-          ' and ' + escala[i] + ' stopover.');
+        ' and destination in ' + flights[i].to + ', has a cost of ' + flights[i].cost + '€' +
+        ' and ' + escala[i] + ' stopover.');
     }
     return avPrice();
   }
-  function stopOver() {   //We need to transform the bool into a friendly answer to the user!! Used in showFlights function!!
-    escala = [];                      //
-    scaleNum = 0;                     //Reinitialize to empty
-    for (i = 0; i < flights.length; i++) {
-      if (flights[i].scale) {     //If the bool is true, we add 'does'
+
+  function stopOver() { //We need to transform the bool into a friendly answer to the user!! Used in showFlights function!!
+    escala = []; //
+    scaleNum = 0; //Reinitialize to empty
+    for (let i = 0; i < flights.length; i++) {
+      if (flights[i].scale) { //If the bool is true, we add 'does'
         escala.push('does');
         scaleNum++;
       } else escala.push('does not'); //If the bool is false, we add 'does not'
     }
   }
+
   function avPrice() {
     average = 0;
-    for (var i = 0; i < flights.length; i++) {
+    for (let i = 0; i < flights.length; i++) {
       average += flights[i].cost;
     }
     average /= flights.length;
     console.log('\n' + 'The average price of the flights is: ' + average.toFixed(2) + '€');
-    console.log('The number of flights with stopover is: ' + scaleNum);     //This is the total stepovers!!! Is here 'cause it doesn't need and entire function for a console log.
+    console.log('The number of flights with stopover is: ' + scaleNum); //This is the total stepovers!!! Is here 'cause it doesn't need and entire function for a console log.
     return lastFlightDes();
   }
-  function lastFlightDes() {    //To show the last 5 flight destinations
+
+  function lastFlightDes() { //To show the last 5 flight destinations
     var lastFlights = [];
-    for (var i = flights.length - 5; i < flights.length; i++) {
+    for (let i = flights.length - 5; i < flights.length; i++) {
       lastFlights.push(flights[i].to);
     }
     console.log('\n' + 'The destiny of the last 5 flights are: ' + lastFlights.join(', '));
     return adminOrUser();
   }
+
   function adminOrUser() {
     while (user.toLowerCase() !== 'admin' && user.toLowerCase() !== 'user') {
       user = window.prompt('What are your permissions? \n Admin / User');
@@ -80,11 +149,12 @@ function airlinesPro() {
       return userIsAdmin();
     } else if (user.toLowerCase() === 'user') {
       return userIsUser();
-    } else {  //In case of user not being admin or user (some errors idk)
+    } else { //In case of user not being admin or user (some errors idk)
       alert('There was an error. Insert your permissions again please.');
       user = undefined;
     }
   }
+
   function userIsAdmin() {
     console.log('\n' + 'You have Admin permissions.');
     if (window.confirm('Do you want to create a new flight?')) {
@@ -96,16 +166,23 @@ function airlinesPro() {
       alert('Bye!');
     }
   }
+
   function newFlight() {
     if (flights.length < 15) {
-      var newFlight = { id: 0, to: '', from: '', cost: 0, scale: undefined };
+      let newFlight = {
+        id: 0,
+        to: '',
+        from: '',
+        cost: 0,
+        scale: undefined
+      };
       newFlight.id = flights.length; //If it's index is the length, it'll always be the last one
-      for (var i = 0; i < flights.length; i++) {  //If we have removed flights, the index and the length may not coincide. Check if the index is taken and adds 1.
+      for (let i = 0; i < flights.length; i++) { //If we have removed flights, the index and the length may not coincide. Check if the index is taken and adds 1.
         if (newFlight.id === flights[i].id) {
           newFlight.id++;
         }
       }
-      do {    //Use do while in order to not push empty flights.
+      do { //Use do while in order to not push empty flights.
         newFlight.from = window.prompt("Insert the flight's origin");
         if (
           typeof newFlight.from != 'string' ||
@@ -113,13 +190,13 @@ function airlinesPro() {
         ) {
           alert('Please, enter a valid origin');
         }
-      } while (typeof newFlight.from != 'string' ||newFlight.from[0] === undefined); //An empty string still a string, we want a string with at least one character.
+      } while (typeof newFlight.from != 'string' || newFlight.from[0] === undefined); //An empty string still a string, we want a string with at least one character.
       do {
         newFlight.to = window.prompt("Insert the flight's destiny");
         if (typeof newFlight.to != 'string' || newFlight.to[0] === undefined) {
           alert('Please, enter a valid destiny');
         }
-      } while (typeof newFlight.to != 'string' ||newFlight.to[0] === undefined);
+      } while (typeof newFlight.to != 'string' || newFlight.to[0] === undefined);
       do {
         newFlight.cost = Number(window.prompt("Insert the flight's cost"));
         if (isNaN(newFlight.cost)) {
@@ -133,10 +210,12 @@ function airlinesPro() {
         else alert('Please, enter a valid answer');
       } while (newFlight.scale === undefined);
       flights.push(newFlight);
-    } else
+    } else {
       alert('The maximum number of flights is 15. Please, delete a flight before adding a new one.');
-    return showFlights();
+      return showFlights();
+    }
   }
+
   function removeFlight() {
     var flightId;
     var flightRemoved;
@@ -148,7 +227,7 @@ function airlinesPro() {
         alert('Please, insert a valid number');
       }
     } while (isNaN(flightId));
-    for (var i = 0; i < flights.length; i++) {
+    for (let i = 0; i < flights.length; i++) {
       if (flights[i].id === flightId) {
         flights.splice(i, 1);
         alert('Flight removed!');
@@ -159,12 +238,13 @@ function airlinesPro() {
       alert('Sorry, there are no flights with the id ' + flightId);
     return showFlights();
   }
+
   function userIsUser() {
     console.log('\n' + 'You have User permissions.');
     if (window.confirm('Do you want to filter the flights by cost?')) {
       do {
         var filter = window.prompt('Insert higher than, equal or lower than, and then put the price (no whitespaces)' +
-            '\n' + 'Example: <500 (lower than 500)');
+          '\n' + 'Example: <500 (lower than 500)');
         var price = Number(filter.slice(1, filter.length));
         if (price < 0 || isNaN(price)) {
           alert('Please, enter a valid option');
@@ -173,31 +253,31 @@ function airlinesPro() {
       do {
         if (filter.charAt(0) === '<') {
           clear();
-          for (var i = 0; i < flights.length; i++) {
+          for (let i = 0; i < flights.length; i++) {
             if (flights[i].cost < price) {
               console.log('The flight with id ' + flights[i].id + ' originating in ' + flights[i].from +
-                  ' and destination in ' + flights[i].to + ', has a cost of ' + flights[i].cost + '€' +
-                  ' and ' + escala[i] + ' stopover.');
+                ' and destination in ' + flights[i].to + ', has a cost of ' + flights[i].cost + '€' +
+                ' and ' + escala[i] + ' stopover.');
               filterFlights.push(flights[i].id);
             }
           }
         } else if (filter.charAt(0) === '>') {
           clear();
-          for (var i = 0; i < flights.length; i++) {
+          for (let i = 0; i < flights.length; i++) {
             if (flights[i].cost > price) {
               console.log('The flight with id ' + flights[i].id + ' originating in ' + flights[i].from +
-                  ' and destination in ' + flights[i].to + ', has a cost of ' + flights[i].cost + '€' + 
-                  ' and ' + escala[i] + ' stopover.');
+                ' and destination in ' + flights[i].to + ', has a cost of ' + flights[i].cost + '€' +
+                ' and ' + escala[i] + ' stopover.');
               filterFlights.push(flights[i].id);
             }
           }
         } else if (filter.charAt(0) === '=') {
           clear();
-          for (var i = 0; i < flights.length; i++) {
+          for (let i = 0; i < flights.length; i++) {
             if (flights[i].cost == price) {
               console.log('The flight with id ' + flights[i].id + ' originating in ' + flights[i].from +
-                  ' and destination in ' + flights[i].to + ', has a cost of ' + flights[i].cost + '€' +
-                  ' and ' + escala[i] + ' stopover.');
+                ' and destination in ' + flights[i].to + ', has a cost of ' + flights[i].cost + '€' +
+                ' and ' + escala[i] + ' stopover.');
               filterFlights.push(flights[i].id);
             }
           }
@@ -210,6 +290,7 @@ function airlinesPro() {
       alert('Bye!');
     }
   }
+
   function buyFlight() {
     var thereIsFlight = false;
     if (filterFlights.length === 0) {
@@ -218,14 +299,14 @@ function airlinesPro() {
     } else if (window.confirm('Do you want to buy one of these flights?')) {
       do {
         var choice = window.prompt("Insert the flight's id please");
-        for (var i = 0; i < filterFlights.length; i++) {
+        for (let i = 0; i < filterFlights.length; i++) {
           if (filterFlights[i] == choice) {
             thereIsFlight = true;
             alert('Thank you! You bought the flight with the id ' +
-                filterFlights[i] + '\n' + 'Comeback soon!');
+              filterFlights[i] + '\n' + 'Comeback soon!');
             clear();
-            console.log("You bought the flight with it's origin in " + flights[i].from + " and it's destiny in " + flights[i].to + 
-            ' with a cost of ' + flights[i].cost + '€, and ' + escala[i] + ' stopover.' + '\n' + 'Enjoy your flight!');
+            console.log("You bought the flight with it's origin in " + flights[i].from + " and it's destiny in " + flights[i].to +
+              ' with a cost of ' + flights[i].cost + '€, and ' + escala[i] + ' stopover.' + '\n' + 'Enjoy your flight!');
           }
         }
         if (thereIsFlight === false) {
@@ -236,19 +317,18 @@ function airlinesPro() {
       alert('Bye!');
     }
   }
-  function logIn(){
+
+  function logIn() {
     name = window.prompt('Insert your username please');
-      if(name === null){
-        alert('Bye!')
-      }
-      else if (name === ''){
-        alert('You must enter at least 1 character');
-        return logIn();
-      }
-      else {
-       alert('Welcome ' + name + '!') 
+    if (name === null) {
+      alert('Bye!')
+    } else if (name === '') {
+      alert('You must enter at least 1 character');
+      return logIn();
+    } else {
+      alert('Welcome ' + name + '!')
       return showFlights();
-      }
+    }
   }
   logIn();
 }
