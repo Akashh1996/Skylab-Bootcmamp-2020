@@ -1,0 +1,45 @@
+.image1 {
+  width: 100%;
+}
+
+.image2 {
+  display: none;
+}
+
+.image3 {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+body {
+  background-image: url(/images/pattern.png);
+}
+
+header nav {
+  background-color: #b488c2;
+}
+
+header nav ul li a {
+  color: white;
+}
+
+section aside div ul li {
+  cursor: pointer;
+  background-color: #d15454;
+  max-width: 70%;
+  margin: auto;
+}
+
+section aside div ul li a {
+  color: white;
+}
+
+section article h1 {
+  color: #b488c2;
+}
+
+footer p {
+  font-size: 20px;
+}
+/*# sourceMappingURL=style.css.map */
