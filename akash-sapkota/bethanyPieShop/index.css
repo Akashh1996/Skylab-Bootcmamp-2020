@@ -33,17 +33,15 @@ body{
 .wrapper-content{
     display: flex;
     align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    padding: 15px;
+    justify-content: space-evenly;
 }
  .left-content {
-    flex-basis: 200px;
     flex-grow: inherit;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-right: 20px;
+    flex-basis: 400px;
+
 
 
     
