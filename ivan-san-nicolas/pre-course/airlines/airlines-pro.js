@@ -169,47 +169,47 @@ function airlinesPro() {
 
   function newFlight() {
     if (flights.length < 15) {
-      let newFlight = {
+      let newFlights = {
         id: 0,
         to: '',
         from: '',
         cost: 0,
         scale: undefined
       };
-      newFlight.id = flights.length; //If it's index is the length, it'll always be the last one
+      newFlights.id = flights.length; //If it's index is the length, it'll always be the last one
       for (let i = 0; i < flights.length; i++) { //If we have removed flights, the index and the length may not coincide. Check if the index is taken and adds 1.
-        if (newFlight.id === flights[i].id) {
-          newFlight.id++;
+        if (newFlights.id === flights[i].id) {
+          newFlights.id++;
         }
       }
       do { //Use do while in order to not push empty flights.
-        newFlight.from = window.prompt("Insert the flight's origin");
+        newFlights.from = window.prompt("Insert the flight's origin");
         if (
-          typeof newFlight.from != 'string' ||
-          newFlight.from[0] === undefined
+          typeof newFlights.from != 'string' ||
+          newFlights.from[0] === undefined
         ) {
           alert('Please, enter a valid origin');
         }
-      } while (typeof newFlight.from != 'string' || newFlight.from[0] === undefined); //An empty string still a string, we want a string with at least one character.
+      } while (typeof newFlights.from != 'string' || newFlights.from[0] === undefined); //An empty string still a string, we want a string with at least one character.
       do {
-        newFlight.to = window.prompt("Insert the flight's destiny");
-        if (typeof newFlight.to != 'string' || newFlight.to[0] === undefined) {
+        newFlights.to = window.prompt("Insert the flight's destiny");
+        if (typeof newFlights.to != 'string' || newFlights.to[0] === undefined) {
           alert('Please, enter a valid destiny');
         }
-      } while (typeof newFlight.to != 'string' || newFlight.to[0] === undefined);
+      } while (typeof newFlights.to != 'string' || newFlights.to[0] === undefined);
       do {
-        newFlight.cost = Number(window.prompt("Insert the flight's cost"));
-        if (isNaN(newFlight.cost)) {
+        newFlights.cost = Number(window.prompt("Insert the flight's cost"));
+        if (isNaN(newFlights.cost)) {
           alert('Please, enter a valid number');
         }
-      } while (isNaN(newFlight.cost));
+      } while (isNaN(newFlights.cost));
       do {
         var stepover = window.prompt('The flight haves stepover? \n Yes/No').toLowerCase();
-        if (stepover === 'yes' || stepover === 'y') newFlight.scale = true;
-        else if (stepover === 'no' || stepover === 'n') newFlight.scale = false;
+        if (stepover === 'yes' || stepover === 'y') newFlights.scale = true;
+        else if (stepover === 'no' || stepover === 'n') newFlights.scale = false;
         else alert('Please, enter a valid answer');
-      } while (newFlight.scale === undefined);
-      flights.push(newFlight);
+      } while (newFlights.scale === undefined);
+      flights.push(newFlights);
     } else {
       alert('The maximum number of flights is 15. Please, delete a flight before adding a new one.');
       return showFlights();

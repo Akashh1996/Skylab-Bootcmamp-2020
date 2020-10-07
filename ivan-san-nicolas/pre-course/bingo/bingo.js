@@ -26,6 +26,7 @@ function bingo() {
     line: false,
     bingo: false
   }
+  var numOfX;
 
   function askName() {
     clear();
@@ -103,7 +104,6 @@ function bingo() {
       }
     }
     if (player.bingo === false) {
-      var numOfX;
       for (let i = 0; i < player.board.length; i++) {
         for (let k = 0; k < player.board[i].length; k++) {
           if (player.board[i][k] === 'X') numOfX++;
@@ -115,7 +115,6 @@ function bingo() {
         alert('BINGO!');
         return endGame();
       } else {
-        numOfX = 0;
         return newTurn();
       }
     }

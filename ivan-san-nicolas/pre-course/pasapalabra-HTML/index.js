@@ -681,7 +681,7 @@ function buttonStartGame() {
 function selectQuestions() {
     selectedQuestions = [];
     for (let j = 0; j < questions[0].length; j++) {
-        var k = Math.floor(Math.random() * (3 - 0)) + 0; //Math.floor(Math.random() * (max - min) ) + min
+        k = Math.floor(Math.random() * (3 - 0)) + 0; //Math.floor(Math.random() * (max - min) ) + min
         selectedQuestions.push(questions[k][j]);
     }
 }
@@ -798,11 +798,11 @@ function seeRanking() {
 
 function initRanking() {
     rankingNames.push(playerName);
-    for (let i = 0; i < rankingNames.length; i++) { //Initialize ranking
-        if (rankingNames[i] === playerName) {
-            ranking.push(rankingFactory(rankingNames[i], correctQuestions));
+    for (let ñ = 0; ñ < rankingNames.length; ñ++) { //Initialize ranking
+        if (rankingNames[ñ] === playerName) {
+            ranking.push(rankingFactory(rankingNames[ñ], correctQuestions));
         } else {
-            ranking.push(rankingFactory(rankingNames[i], Math.floor(Math.random() * (27 - 0)) + 0));
+            ranking.push(rankingFactory(rankingNames[ñ], Math.floor(Math.random() * (27 - 0)) + 0));
 
         }
     }
@@ -816,14 +816,13 @@ function rankingFactory(name, points) {
 }
 
 function orderRanking() {
-    var num;
     for (let j = 0; j < ranking.length + orderedRanking.length; j++) {
         var maxPoints = 0;
         var maxRanking;
-        for (let k = 0; k < ranking.length; k++) {
-            if (ranking[k].points >= maxPoints) {
-                maxPoints = ranking[k].points;
-                maxRanking = ranking[k];
+        for (let ñ = 0; ñ < ranking.length; ñ++) {
+            if (ranking[ñ].points >= maxPoints) {
+                maxPoints = ranking[ñ].points;
+                maxRanking = ranking[ñ];
             }
         }
         orderedRanking.push(maxRanking);
@@ -862,5 +861,4 @@ function reset() {
         x[j].style.backgroundImage = "linear-gradient(135deg, rgb(219, 219, 219), rgb(56, 56, 56))";
         x[j].style.border = "9px solid blue";
     }
-
 }

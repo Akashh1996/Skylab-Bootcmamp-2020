@@ -71,7 +71,7 @@ h3 {
 /*IN-GAME CSS*/
 .ingame-box {
     margin: 0 auto;
-    font-family: "Arial Black";
+    font-family: "Arial Black", Arial, Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
 }
 
