@@ -146,10 +146,10 @@ const colorMatch = (one, two, three, four) => {
 };
 
 const drawWin = (cell, cell1, cell2, cell3) => {
-	(cell.style.border = '3px solid black'),
-		(cell1.style.border = '3px solid black'),
-		(cell2.style.border = '3px solid black'),
-		(cell3.style.border = '3px solid black');
+	cell.style.border = '3px solid black';
+	cell1.style.border = '3px solid black';
+	cell2.style.border = '3px solid black';
+	cell3.style.border = '3px solid black';
 };
 
 const checkHorizontalWin = () => {
