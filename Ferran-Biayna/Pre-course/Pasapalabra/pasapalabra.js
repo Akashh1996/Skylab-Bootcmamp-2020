@@ -11,7 +11,7 @@ function game() {
             i=false
         }
     }
-    var option=window.confirm('¿Estás preparado?\nSi(Aceptar) / No(Cancelar)')
+    let option=window.confirm('¿Estás preparado?\nSi(Aceptar) / No(Cancelar)')
     if (option) {
         pasapalabra()
     } else {
@@ -22,9 +22,9 @@ function game() {
             pasapalabra()
         }
     }
-    option=window.confirm('¿Quieres volver a jugar?\nSi(Aceptar / No(Cancelar)')
+    let option=window.confirm('¿Quieres volver a jugar?\nSi(Aceptar / No(Cancelar)')
     if (option) {
-        for (var i=0;i<questions.length;i++) {
+        for (i=0;i<questions.length;i++) {
             questions[i].status=0
         }
         game()
@@ -39,7 +39,7 @@ function pasapalabra() {
         for (var i=0;i<questions.length;i++) {
             if (questions[i].status===0) {
                 console.log(`${questions[i].question}`)
-                option=prompt('¿Cuál es tu respuesta?').toUpperCase() //Arreglar problema amb els null
+                let option=prompt('¿Cuál es tu respuesta?').toUpperCase() //Arreglar problema amb els null
                 if (option===(questions[i].answer).toUpperCase()) {
                     console.log('¡Respuesta correcta!')
                     questions[i].status=1

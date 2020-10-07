@@ -1,0 +1,23 @@
+body {
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
+}
+
+.form-container {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.buton-container {
+	margin-left: 10px;
+	display: flex;
+	width: 800px;
+}
+
+p {
+	display: flex;
+	margin-left: 10px;
+	margin-top: 10px;
+}
