@@ -1,0 +1,151 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.all-the-page{
+    width: 800px;
+    display: flex;    
+    flex-direction: column;
+    align-items: stretch;
+    border-style: solid;
+    border-color: black;
+    border-width: thin;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-bottom: solid;
+    border-color: black;
+    border-width: thin;
+    background-color: rgb(231, 231, 231);
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.first-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px 30px 0px 30px;
+}
+
+.heading-and-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.heading-subheading{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 2;
+    margin-left: 30px;
+}
+
+.heading-first-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 0px 0px 30px;
+}
+
+.second-content {
+    padding: 0px 30px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 2;
+}
+
+.footer-triangles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.triangle-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.subheading {
+    color: rgb(170, 170, 170);
+}
+
+#date {
+    color: rgb(170, 170, 170);
+}
+
+.big-square {
+    background-color: rgb(231, 231, 231);
+    min-height: 200px;
+    max-height: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    border-style: solid;
+    border-color: black;
+    border-width: thin;
+    margin-bottom: 20px;
+}
+
+.triangle {
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+    border-bottom: 50px solid rgb(231, 231, 231);
+    margin: 10px;
+}
+
+.circle {
+    background-color: rgb(231, 231, 231);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: black;
+    border-width: thin;
+}
+
+.small-circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+#orange-circle {
+    background-color: rgb(255, 115, 0);
+}
+
+#yellow-circle {
+    background-color: rgb(255, 198, 41);
+}
+
+#brown-circle {
+    background-color: rgb(128, 50, 5);
+}
+
+@media screen and (max-width: 600px) {
+    .first-content, .footer-triangles {
+        flex-direction: column;
+    }
+}
