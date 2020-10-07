@@ -5,12 +5,12 @@
 	margin-right: 5vw;
 }
 
-.right img {
+.right-column img {
 	width: 90%;
 	max-width: 700px;
 }
 
-.right h1,
+.right-column h1,
 img {
 	font-weight: 900;
 	margin: 2vw;
@@ -18,30 +18,30 @@ img {
 	color: #a593c2;
 }
 
-.right h2,
+.right-column h2,
 p,
 h3,
 h4 {
 	margin-left: 5vw;
 }
 
-.right footer {
+.right-column footer {
 	font-size: 70%;
 	margin-top: -2%;
 }
 
-.left img {
+.left-column img {
 	max-width: 250px;
 }
 
-.left p {
+.left-column p {
 	background-color: #cf4522;
 	padding: 15px;
 	color: white;
 	margin: 2px;
 }
 
-.left footer {
+.left-column footer {
 	font-size: 90%;
 	display: flex;
 	justify-content: center;
@@ -80,14 +80,14 @@ footer {
 	padding-left: 5vw;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
 	.text {
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
 	}
 
-	.left img {
+	.left-column img {
 		max-width: 150px;
 	}
 
