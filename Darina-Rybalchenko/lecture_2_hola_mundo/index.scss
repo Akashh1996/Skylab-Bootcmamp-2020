@@ -1,0 +1,31 @@
+/* //EJEMPLOS DE SCSS
+
+
+@mixin specificRules($background, $fontSize, $value, $margin, $width) {
+	background: $background;
+	font-size: $fontSize;
+	margin: $value $value $value;
+	width: $width;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+	.specific {
+		@include specificRules(
+			linear-gradient(rgb(134, 91, 91), rgb(217, 255, 192))
+		);
+	}
+
+	%specific_base {
+		background-color: rgb(231, 255, 192);
+		font-size: 40px;
+		margin: auto;
+		width: 30%;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.specific {
+		@extend %specific_base;
+	}
+}
+ */
