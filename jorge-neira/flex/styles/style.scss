@@ -1,0 +1,110 @@
+$secondaryColor: rgb(161, 161, 161);
+$bg-color-gray: rgb(214, 214, 214);
+$formsBorder: 1px solid black;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 1rem;
+}
+
+h3 {
+  margin-top: 0.6rem;
+}
+
+header {
+  background-color: $bg-color-gray;
+  nav {
+    padding: 2rem;
+  }
+}
+
+main {
+  section {
+    padding: 2rem;
+  }
+}
+
+article {
+  padding-bottom: 3rem;
+}
+
+.color1 {
+ background-color: rgb(226, 43, 43);
+}
+
+.color2 {
+ background-color: rgb(223, 155, 28);
+}
+
+.color3 {
+  background-color: rgb(124, 102, 54);
+}
+
+.letterColor {
+  color: $secondaryColor;
+}
+
+.bg-color-gray {
+  background-color: $bg-color-gray;
+}
+
+.formsBorder {
+  border: $formsBorder;
+}
+
+.size {
+  height: 40px;
+  width: 40px;
+  margin-left: 1rem;
+}
+
+.size1 {
+  height: 70px;
+  width: 70px;
+}
+
+.size2 {
+  height: 200px;
+  width: 200px;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.square {
+  margin: 0 2rem 2rem 0;
+}
+
+.main-content {
+  border-top: none;
+}
+
+
+///////////////////////////////////////////////////////
+
+.d-flex {
+  display: flex;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.justify-content-center {
+  justify-content: space-around;
+}
+

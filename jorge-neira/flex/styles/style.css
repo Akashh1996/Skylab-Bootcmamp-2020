@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 1rem;
+}
+
+h3 {
+  margin-top: 0.6rem;
+}
+
+header {
+  background-color: #d6d6d6;
+}
+
+header nav {
+  padding: 2rem;
+}
+
+main section {
+  padding: 2rem;
+}
+
+article {
+  padding-bottom: 3rem;
+}
+
+.color1 {
+  background-color: #e22b2b;
+}
+
+.color2 {
+  background-color: #df9b1c;
+}
+
+.color3 {
+  background-color: #7c6636;
+}
+
+.letterColor {
+  color: #a1a1a1;
+}
+
+.bg-color-gray {
+  background-color: #d6d6d6;
+}
+
+.formsBorder {
+  border: 1px solid black;
+}
+
+.size {
+  height: 40px;
+  width: 40px;
+  margin-left: 1rem;
+}
+
+.size1 {
+  height: 70px;
+  width: 70px;
+}
+
+.size2 {
+  height: 200px;
+  width: 200px;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.triangle {
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.square {
+  margin: 0 2rem 2rem 0;
+}
+
+.main-content {
+  border-top: none;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-direction-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.justify-content-center {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+/*# sourceMappingURL=style.css.map */
