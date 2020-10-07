@@ -1,0 +1,14 @@
+.inputs {
+    position: relative;
+    text-align: center;
+    top: 100px;
+}
+
+#user, #password {
+    margin: 10px;
+}
+
+.material-icons{
+    font-size: 30px !important;
+    margin-top: 0px;
+}
