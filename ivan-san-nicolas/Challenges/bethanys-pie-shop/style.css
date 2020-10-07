@@ -218,6 +218,7 @@ body {
         flex-direction: column;
         align-items: center;
         width: 40%;
+        margin: 40px auto;
     }
     .right {
         display: flex;
