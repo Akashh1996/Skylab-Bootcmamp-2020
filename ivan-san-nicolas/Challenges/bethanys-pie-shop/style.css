@@ -2,6 +2,10 @@ body {
     background-image: url("pattern.png");
 }
 
+.hide {
+    display: none;
+}
+
 .nav {
     background-color: rgb(156, 59, 198);
     display: flex;
@@ -207,6 +211,13 @@ body {
 }
 
 @media screen and (min-width: 600px) {
+    .nav-directions {
+        width: 75vw;
+        height: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: right;
+    }
     .web-body {
         display: flex;
         flex-direction: row;
@@ -256,7 +267,7 @@ body {
         color: black;
         font-size: 25px;
         width: auto;
-        margin: 0 auto;
+        margin-left: 90px;
     }
     .history {
         width: 80%;
