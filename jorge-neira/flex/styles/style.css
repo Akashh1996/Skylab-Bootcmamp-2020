@@ -7,107 +7,69 @@
   padding: 0;
 }
 
-body {
-  margin: 1rem;
-}
-
-h3 {
-  margin-top: 0.6rem;
-}
-
-header {
-  background-color: #d6d6d6;
-}
-
-header nav {
+.main-container {
+  margin: 2rem;
   padding: 2rem;
-}
-
-main section {
-  padding: 2rem;
-}
-
-article {
-  padding-bottom: 3rem;
-}
-
-.color1 {
-  background-color: #e22b2b;
-}
-
-.color2 {
-  background-color: #df9b1c;
-}
-
-.color3 {
-  background-color: #7c6636;
-}
-
-.letterColor {
-  color: #a1a1a1;
-}
-
-.bg-color-gray {
-  background-color: #d6d6d6;
-}
-
-.formsBorder {
   border: 1px solid black;
 }
 
-.size {
-  height: 40px;
-  width: 40px;
-  margin-left: 1rem;
-}
-
-.size1 {
-  height: 70px;
-  width: 70px;
-}
-
-.size2 {
-  height: 200px;
-  width: 200px;
-}
-
-.circle {
-  border-radius: 50%;
-}
-
-.triangle {
-  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
-
-.square {
-  margin: 0 2rem 2rem 0;
-}
-
-.main-content {
-  border-top: none;
-}
-
-.d-flex {
+.section-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.flex-direction-column {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.box {
+  background-color: #d6d6d6;
+  border: 1px solid black;
+  height: 200px;
+  min-width: 200px;
+  margin-right: 2rem;
 }
 
-.flex-wrap {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.circle-heading-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.justify-content-center {
+.circle {
+  border-radius: 50%;
+  background-color: #d6d6d6;
+  border: 1px solid black;
+  height: 70px;
+  width: 70px;
+  margin-right: 1rem;
+}
+
+.date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 50%;
+}
+
+.second-article {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.triangle {
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: #d6d6d6;
+  height: 100px;
+  width: 100px;
+}
+
+.margintop {
+  margin-top: 2rem;
 }
 /*# sourceMappingURL=style.css.map */
