@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Form validation</h1>
+    <form>
+        <label for="visitors">Number of visitors : </label>  <!-- for es para quien es , y en este caso es para search que es el id de input -->
+        <input id="visitors" type="Number" placeholder="search here.." name="visitors" required minlength="5" maxlength="10">
+
+        <br>
+        <br>
+
+        <label for="search">Search : </label>  <!-- for es para quien es , y en este caso es para search que es el id de input -->
+        <input id="search" type="number" placeholder="search here.." name="search" required max = "5" required>
+
+        <br>
+
+        <br>
+
+        <label for="age">Age : </label>
+        <select name="age" id="age">
+            <option value="1">Uno</option>
+            <option value="2">dos</option>
+            <option value="3">tres</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label for="description">Description : </label>  
+        <textarea id="description" name="description" cols = "10" rows = "10" placeholder="Tell me a little abt you..."></textarea>
+
+        <br>
+        <br>
+
+        <label for="radio">radio : </label>  <!-- for es para quien es , y en este caso es para search que es el id de input -->
+        <input id="radio" type="radio" name="radio">
+
+        <br>
+        <br>
+
+        <fieldset>
+            <legend>Me gusta git?</legend>
+            <label for="gitlovertrue">True</label>
+            <input id="gitlovertrue" name="git lover" type="radio" value="true" />
+            <label for="gitloverfalse">False</label>
+            <input id="gitloverfalse" name="git lover" type="radio" value="false" />
+        </fieldset>
+        
+        <br />
+        <br />
+        <fieldset>
+            
+            <legend>Frameworks</legend>
+            <label for="framework-angular">Angular</label>
+            <input id="framework-angular" name="frameworks" type="checkbox" value="true"/>
+            <label for="framework-react">React</label>
+            <input id="framework-react" name="frameworks" type="checkbox" value="true"/>
+            <label for="Vue">Vue</label>
+            <input id="framework-vue" name="frameworks" type="checkbox" value="true"/>
+        </fieldset>
+        <br />
+        <br />
+
+    </form>
+</body>
+</html>
