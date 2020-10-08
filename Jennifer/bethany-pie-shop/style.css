@@ -1,0 +1,118 @@
+body{  
+    background-image: url(fotos-web/pattern.png);
+}
+
+h2{
+    font-size: 30px;
+    text-align: center;
+    margin: none;
+}
+
+h4{
+    text-align: center;
+}
+
+img{
+    display: block;
+    margin: auto;
+}
+
+p{
+    font-size: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+h1{
+    color: #a593c2;
+    text-align: center;
+    font-size: 20px;
+}
+
+div{
+    margin: 5%;
+}
+
+header{
+    width: 100%;
+    background: #a593c2;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+
+.headerNav{
+    display:flex;
+    width: 100%;
+    text-align: end;
+    text-align: center;
+    justify-content: space-between;
+    padding: 2%;
+    font-size: 15px;
+    color: white;
+    list-style-type:none;
+}
+
+#image-header{
+    margin-left: 10%;
+}
+
+
+div li{
+    margin: 10px;
+}
+
+div p{
+    display: block;
+    width:  60%
+}
+
+.menu {
+    margin:auto;
+    width: 40%;
+}
+
+.white-div{
+    margin: auto;
+    width: 50%;;
+    background-color: white;
+    padding: 2%;
+}
+
+.div-paragraph{
+    display: block;
+    margin: auto;
+}
+
+
+@media only screen and (min-width: 400px){
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .responsive-principal{
+        display:inline;
+    }
+
+  .format-responsive{
+      display: inline-block;
+      width: 30%;
+      vertical-align: top;
+    }
+
+    .div-responsive{
+        display: inline-block;
+        width: 40%;
+    }
+
+    .headerNav{
+        font-size: 20px;
+    }
+}
+
+
+
+
+

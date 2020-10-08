@@ -1,0 +1,122 @@
+body {
+    background-image: linear-gradient( to right, rgb(102, 101, 98), rgb(159, 153, 161));
+    font-family: "Open Sans", sans-serif;
+}
+
+.tittle {
+    color: rgb(30, 25, 32);
+    text-align: center;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% auto auto auto auto auto;
+    width: 300px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px ridge rgba(12, 11, 12, 0.103);
+}
+
+.button-screen {
+    grid-column: 1/5;
+    background-color: rgb(63, 60, 61);
+    text-align: end;
+    font-size: 35px;
+    color: white;
+    padding: 30px 10px 10px 10px;
+}
+
+.button-reset {
+    text-align: center;
+    padding: 15px;
+    background-color: rgb(160, 155, 157);
+    border: 1px ridge rgba(12, 11, 12, 0.103);
+}
+
+.button-reset:hover {
+    background-color: rgb(153, 144, 153)
+}
+
+.button-sqrt {
+    text-align: center;
+    padding: 15px;
+    background-color: rgb(160, 155, 157);
+    border: 1px ridge rgba(12, 11, 12, 0.103);
+}
+
+.button-sqrt:hover {
+    background-color: rgb(153, 144, 153)
+}
+
+.button-plus-minus {
+    text-align: center;
+    padding: 15px;
+    background-color: rgb(160, 155, 157);
+    border: 1px ridge rgba(12, 11, 12, 0.103);
+}
+
+.button-plus-minus:hover {
+    background-color: rgb(153, 144, 153)
+}
+
+.button-number {
+    text-align: center;
+    padding: 15px;
+    background-color: rgb(160, 155, 157);
+    border: 1px ridge rgba(12, 11, 12, 0.103);
+    font-size: 20px;
+}
+
+.button-number:hover {
+    background-color: rgb(153, 144, 153)
+}
+
+.button-operation {
+    text-align: center;
+    padding: 15px;
+    align-items: center;
+    background-color: rgb(245, 162, 38);
+    border: 1px ridge rgba(12, 11, 12, 0.103);
+    font-size: 6mm;
+}
+
+.button-operation:hover {
+    background-color: rgb(153, 144, 153)
+}
+
+.button-equal {
+    text-align: center;
+    padding: 15px;
+    grid-column-end: 5;
+    background-color: rgb(245, 162, 38);
+    border: 1px ridge rgba(12, 11, 12, 0.103);
+    align-items: center;
+    font-size: 6mm;
+}
+
+.button-equal:hover {
+    background-color: rgb(153, 144, 153)
+}
+
+.button-comma {
+    text-align: center;
+    padding: 15px;
+    grid-column-end: 4;
+    grid-column: 2/4;
+    background-color: rgb(160, 155, 157);
+    border: 1px ridge rgba(12, 11, 12, 0.103);
+    font-size: 6mm;
+}
+
+.button-comma:hover {
+    background-color: rgb(153, 144, 153)
+}
+
+.footer {
+    color: rgb(44, 41, 44);
+    font-size: 12px;
+    text-align: end;
+    font-style: oblique;
+}

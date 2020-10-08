@@ -1,0 +1,129 @@
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    background-color: rgb(24,24,24);
+    color: greenyellow;
+    font-style: italic;
+ 
+}
+ .main-wrapper{
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     justify-content: flex-start;
+     align-items: center;
+ }
+ .display-question{
+     display: flex;
+     flex-direction: column;
+     height: auto;
+     width: 70%;
+     text-align: center;
+     border: 3px solid greenyellow;
+    margin: 30px auto;
+    box-shadow:   0 0 20px red;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+  
+ }
+.wrapper{
+    border: 3px solid greenyellow;
+     display: flex;
+    flex-direction : row;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px auto;
+    box-shadow:   0 0 20px red;
+    border-radius: 20px;
+
+    
+}
+.alphabetes{
+    border-radius: 50%;
+    flex-basis: 20px;
+    border: 3px solid white; 
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+    align-content: space-between;
+    font-size: x-large;
+    box-shadow:   0 0 25px red;         
+}
+
+h1::first-letter{
+    font-size: 80px;
+    font-weight: bolder;
+    font-style: oblique;
+    font-family: cursive;
+    color: white;
+}
+
+h1{
+    text-align: center;
+    color: greenyellow;
+    font-family: cursive;
+    text-shadow: violet;
+    text-decoration: underline red;
+
+    
+}
+.pasapalabra,.input,.cancel,.next,.reset,.instructions,.new-game,.nameInput,.submit-name,.home,.timer,.time-up{
+    flex-direction: column;
+    border-radius: 10%;
+    flex-basis: 20px;
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+    align-content: center;
+    font-size: x-large;
+    box-shadow:   0 0 25px red;
+    height: 20px;
+    width: auto;
+    border: 1px solid white;
+}
+.pasapalabra:hover,.cancel:hover,.next:hover,.reset:hover,.instructions:hover,.new-game:hover,.submit-name:hover,.home:hover{
+  background: linear-gradient(to right, red 50%, blue 50%);
+  cursor: grab;
+} 
+.secondary-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+
+}
+.question{
+    font-size: x-large;
+}
+
+.main-page{
+    height: 150px;
+    border: 8px solid greenyellow;
+    margin-top: 10px;
+}
+
+.welcome,.instructions-display,.main,.second,.scoreBoard,.time-up{
+    display: none;
+} 
+
+.instructions-display{
+    border: 0px;
+    box-shadow: none;
+    height: 40px;
+}
+.result{
+    height: auto;
+   align-content: center;
+   flex-direction: column;
+   font-size: 30px;
+}
+.menu{
+    flex-basis: 100px;
+}

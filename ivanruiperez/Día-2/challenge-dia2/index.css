@@ -1,0 +1,123 @@
+body{
+    background-image: url("images/pattern.png");
+    margin: 0;
+    
+}
+.header{
+    display: grid;
+    text-align: left;
+    color: white;
+    font-size: 12px;
+    background-color:#a593c2;
+}
+#logo{
+    height: 40px;
+    width: 40px;
+    margin-left: 50px;
+    float: left;
+}
+.menu{
+    display: inline;
+    float: left;
+}
+.bethanylogo{
+    position: flex;
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 90px;
+    height: 90px;
+    font-size: 8px;
+    text-align: center;
+
+    
+}
+#logo1{
+    width: 70px;
+    height: 70px;
+}
+.grid{
+    display: grid;
+    text-align: center;
+    max-width: 50px;
+    margin-left: 50px;
+    margin-bottom: 300px;
+    font-size: 6px;
+    color: white;
+}
+.a{
+    background-color: red;
+    border: black;
+    border-width: 2px;
+    margin-top: 1px;
+}
+.b{
+    background-color: red;
+    border: black;
+    border-width: 2px;
+    margin-top: 1px;
+}
+.c{
+    background-color: red;
+    border: black;
+    border-width: 2px;
+    margin-top: 1px;
+}
+.d{
+    background-color: red;
+    border: black;
+    border-width: 2px;
+    margin-top: 1px;
+}
+.e{
+    background-color: red;
+    border: black;
+    border-width: 2px;
+    margin-top: 1px;
+}
+.main{
+    margin-top: 10px;
+    float: none;
+    
+}
+#tittle{
+    color: #a593c2;
+}
+#logo2{
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 120px;
+    width: 200px;
+}
+#letterLow{
+    font-size: 5px;
+    text-align: left;
+}
+#miniTittle{
+    margin-top: 8px;
+    font-size: 12px;
+}
+#mainText{
+    margin-top: 5px;
+    margin-right: 10px;
+    font-size: 8px;
+    text-align: left;
+    padding: 0px;
+    
+}
+#miniTittle2{
+    margin-top: 10px;
+    font-size: 10px;
+}
+#cheese{
+    margin-top: 10px;
+    font-size: 6px;
+}
+#cheese1{
+    height: 100px;
+    width: 180px;
+}
+.bottom{
+    margin-left: 50px;
+    margin-top: 10px;
+    font-size: 8px;
+}

@@ -1,0 +1,52 @@
+
+  
+  body{
+      background-color: lightslategray;
+  }
+  
+  
+  .screen{
+      
+      width: 250px;
+      height: 30px;
+      border: 1px solid black;
+
+  }
+  
+  .buttons-wrapper{
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 5px;
+      margin: 10px;
+  
+  }
+  
+  .button{
+
+      display: flex;
+      justify-content: center;
+      border: 1px solid gray;
+      
+  }
+
+  #reset, #delete{
+    
+    background-color: greenyellow;
+
+  }
+
+  #addition, #minus, #multiply, #division, #result {
+
+    background-color: orange;
+
+  }
+
+  #calculadora {
+
+      width: 250px;
+      height: 200px;
+      border: 1px solid black;
+      background-color: pink;
+  }
+  
