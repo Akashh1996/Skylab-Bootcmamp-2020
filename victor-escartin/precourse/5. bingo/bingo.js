@@ -20,81 +20,88 @@ var result = 0;
 var showCard;
 
 function user() {
-  let name = prompt("Por favor, introduce tu nombre:");
-  if (name === null || name === "") {
-    alert("Debes introducir un nombre de JUGADOR para iniciar el BINGO");
-    user();
-  } else {
-    alert("¡Bienvenido " + name + ", iniciamos el juego!");
-    createCard();
-    console.log("Tu resultado ha sido: " + result + " intentos");
-    menu();
-  }
+	let name = prompt('Por favor, introduce tu nombre:');
+	if (name === null || name === '') {
+		alert('Debes introducir un nombre de JUGADOR para iniciar el BINGO');
+		user();
+	} else {
+		alert('¡Bienvenido ' + name + ', iniciamos el juego!');
+		createCard();
+		console.log('Tu resultado ha sido: ' + result + ' intentos');
+		menu();
+	}
 }
 
 function menu() {
-  let option = prompt("Indica si quieres JUGAR o SALIR");
+	let option = prompt('Indica si quieres JUGAR o SALIR');
 
-  if (option === null) {
-    return;
-  } else {
-    option = option.toString();
-    option = option.toLowerCase();
-    switch (option) {
-      case "jugar":
-        createCard();
-      case "salir":
-        break;
-      default:
-        alert("Por favor, vuelva a indicar tu elección");
-        menu();
-    }
-  }
+	if (option === null) {
+		return;
+	} else {
+		option = option.toString();
+		option = option.toLowerCase();
+		switch (option) {
+			case 'jugar':
+				createCard();
+				break;
+			case 'salir':
+				break;
+			default:
+				alert('Por favor, vuelva a indicar tu elección');
+				menu();
+		}
+	}
 }
 
 function createCard() {
-  console.log("%c ¡Bienvenido al Bingo Skylab!", "color:blue");
-  var card = [];
-  for (let i = 0; i < 5; i++) {
-    let randNum = Math.ceil(Math.random() * 10);
-    if (card.includes(randNum)) {
-      i--;
-      continue;
-    } else {
-      card.push(randNum);
-    }
-  }
-  card.sort((a, b) => a - b);
-  console.log("%cEsta es tu tarjeta de juego:", "color: blue");
-  showCard = card.join();
-  console.log(showCard);
-  console.log("%c¡Mucha Suerte!", "color: blue");
-  bingo(card);
+	console.log('%c ¡Bienvenido al Bingo Skylab!', 'color:blue');
+	var card = [];
+	for (let i = 0; i < 5; i++) {
+		let randNum = Math.ceil(Math.random() * 10);
+		if (card.includes(randNum)) {
+			i--;
+			continue;
+		} else {
+			card.push(randNum);
+		}
+	}
+	card.sort((a, b) => a - b);
+	console.log('%cEsta es tu tarjeta de juego:', 'color: blue');
+	showCard = card.join();
+	console.log(showCard);
+	console.log('%c¡Mucha Suerte!', 'color: blue');
+	bingo(card);
 }
 
 function bingo(card) {
-  if (confirm("¿Sacamos un número nuevo?")) {
-    number = Math.ceil(Math.random() * 10);
-    console.log("El número es el " + number);
-    result += 1;
-  } else {
-    return;
-  }
+	if (confirm('¿Sacamos un número nuevo?')) {
+		number = Math.ceil(Math.random() * 10);
+		console.log('El número es el ' + number);
+		result += 1;
+	} else {
+		return;
+	}
 
-  if (card.includes(number)) {
-    card[card.indexOf(number)] = "X";
-    showCard = card.join();
-    console.log(showCard);
-    if (card[0] != "X" || card[1] != "X" || card[2] != "X" || card[3] != "X" || card[4] != "X") {
-      bingo(card);
-    } else {
-      console.log("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡LINEA!!!!!!!!!!!!!!!!!!!!");
-      console.log("%cHas completado la tarjeta, ¡ENHORABUENA!", "color:blue");
-    }
-  } else {
-    console.log(showCard);
-    bingo(card);
-  }
+	if (card.includes(number)) {
+		card[card.indexOf(number)] = 'X';
+		showCard = card.join();
+		console.log(showCard);
+		if (
+			card[0] != 'X' ||
+			card[1] != 'X' ||
+			card[2] != 'X' ||
+			card[3] != 'X' ||
+			card[4] != 'X'
+		) {
+			bingo(card);
+		} else {
+			console.log('¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡LINEA!!!!!!!!!!!!!!!!!!!!');
+			console.log('%cHas completado la tarjeta, ¡ENHORABUENA!', 'color:blue');
+		}
+	} else {
+		console.log(showCard);
+		bingo(card);
+	}
 }
 
 user();
