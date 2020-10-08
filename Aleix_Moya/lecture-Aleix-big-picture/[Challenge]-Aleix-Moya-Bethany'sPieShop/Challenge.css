@@ -82,8 +82,8 @@
     #navlet{
         float: right;
         color: white;
-        margin-top:10px;
-        font-size: 20px;
+        margin-top:0px;
+        font-size: 15px;
     }
     body{
         background-image:url("pattern.png");
