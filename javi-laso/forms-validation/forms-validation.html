@@ -61,7 +61,6 @@
 							type="date"
 							name="date-start"
 							id="date-start"
-							value="2020-10-08"
 							min="2020-10-08"
 							max="2021-10-07"
 							required
@@ -70,7 +69,6 @@
 							type="date"
 							name="date-end"
 							id="date-end"
-							value="2020-10-08"
 							min="2020-10-08"
 							max="2021-10-07"
 							required
@@ -97,7 +95,13 @@
 					></textarea>
 				</section>
 				<section class="email">
-					<input id="email-input" type="email" placeholder="Email *" required />
+					<input
+						id="email-input"
+						type="email"
+						placeholder="Email *"
+						pattern="[a-z0-9A-Z._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+						required
+					/>
 				</section>
 				<section class="phone">
 					<input
@@ -105,6 +109,7 @@
 						type="tel"
 						placeholder="Número de teléfono *"
 						pattern="[0-9]{9}"
+						maxlength="9"
 						required
 					/>
 				</section>
