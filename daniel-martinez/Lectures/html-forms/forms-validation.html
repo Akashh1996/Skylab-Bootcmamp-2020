@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Forms Validation</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1>Forms Validation</h1>
+		<form>
+			<label for="name">Name:</label>
+			<input
+				name="name"
+				id="name"
+				type="text"
+				placeholder="Write your name..."
+				required
+				minlength="2"
+				maxlength="10"
+			/><br /><br />
+
+			<label for="visitors">How many visitors?</label>
+			<input
+				name="visitors"
+				id="visitors"
+				type="number"
+				placeholder="Visitors?"
+				required
+				min="1"
+				max="5"
+			/><br /><br />
+
+			<label for="age">Age:</label>
+			<select name="age" id="age">
+				<option value="1">Uno</option>
+				<option value="2">Dos</option>
+				<option value="3">Tres</option>
+			</select>
+			<br /><br />
+
+			<label for="description">Description:</label>
+			<textarea
+				name="description"
+				id="description"
+				cols="30"
+				rows="3"
+				placeholder="Tell me about your experience as a developer..."
+			></textarea>
+			<br /><br />
+
+			<label for="checkbox">checkbox</label>
+			<input
+				id="checkbox"
+				name="checkbox"
+				type="checkbox"
+				placeholder="Search here"
+			/>
+
+			<label for="radio">Radio</label>
+			<input id="radio" name="radio" type="radio" placeholder="Search here" />
+			<br /><br />
+
+			<fieldset>
+				<legend>Frameworks</legend>
+				<input id="framework-angular" name="Frameworks" type="checkbox" />
+				<label for="framework-angular">Angular</label>
+				<input id="react" name="Frameworks" type="checkbox" />
+				<label for="react">React</label>
+			</fieldset>
+			<br /><br />
+
+			<fieldset>
+				<legend>Me gusta Git !?</legend>
+				<input id="true" name="gitlover" type="radio" value="true" required />
+				<label for="radio">True</label>
+				<input id="false" name="gitlover" type="radio" value="true" required />
+				<label for="radio">False</label>
+			</fieldset>
+		</form>
+	</body>
+</html>
