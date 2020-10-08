@@ -19,13 +19,6 @@ body {
 	display: inline;
 	float: left;
 }
-.hidden {
-	display: none;
-}
-.mainContent {
-	display: flex;
-	flex-direction: row-reverse;
-}
 .bethanylogo {
 	position: flex;
 	margin-top: 10px;
