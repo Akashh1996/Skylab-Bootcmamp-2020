@@ -11,7 +11,9 @@
 </head>
 
 <body>
-    <div class="nav">
+    <h1 class="hide">Bethany's Pie Shop</h1>
+    <header class="nav">
+        <h2 class="hide">Navigation</h2>
         <div class="nav-logo">
             <a href="index.html">
                 <img src="pie.png" alt="pie.png">
@@ -21,34 +23,37 @@
             <a href="index.html"><span>home</span></a>
             <a href="index.html"><span>all pies</span></a>
             <a href="index.html"><span>about</span></a>
-
         </div>
         <div class="spacer"></div>
-    </div>
-    <div class="web-body">
-        <div class="left">
+    </header>
+    <section class="web-body">
+        <h2 class="hide">Web Body</h2>
+        <aside class="left">
+            <h2 class="hide">Left Section</h2>
             <div class="logo">
                 <img src="bethanylogo.png" alt="bethany-logo.png">
             </div>
             <div class="browser">
                 <span id="browser-title">browse our pies</span>
-                <div class="menu">
+                <nav class="menu">
+                    <h2 class="hide">Navegation Menu</h2>
                     <div class="menu-bar">all pies</div>
                     <div class="menu-bar">cheese cakes</div>
                     <div class="menu-bar">fruit pies</div>
                     <div class="menu-bar">seasonal pies</div>
                     <div class="menu-bar">promotions</div>
-                </div>
+                </nav>
             </div>
-        </div>
-        <div class="right">
-            <div class="welcome">
-                <span id="welcome-message">Welcome to Betahny's Pie Shop</span>
+        </aside>
+        <section class="right">
+            <h2 class="hide">Right Section</h2>
+            <article class="welcome">
+                <h2 id="welcome-message">Welcome to Betahny's Pie Shop</h2>
                 <img src="bethany-fullsize.jpg" alt="bethany-fullsize.jpg" id="bethany-img">
                 <span id="img-footer">Bethany in her pie shop</span>
-            </div>
-            <div class="history">
-                <span id="our-history">Our history</span>
+            </article>
+            <article class="history">
+                <h2 id="our-history">Our history</h2>
                 <span>For many years, Bethany has been baking the most delicious pies at her home. In 2013, we opened
                     our first store in Brussels (Belgium) in a cosy little street near the Grand Market. People from all
                     over the world fell in love with the soft cakes, heavenly cheese cakes, spicy apple pies...</span>
@@ -58,22 +63,23 @@
                     to order pies from the comfort of your own home and from anywhere in the world. You are now looking
                     at the result of this: our very own webstore, making it possible to order Bethany's delicious pies
                     whenever you feel like it!</span>
-            </div>
-            <div class="promo">
-                <span id="promo-title">Our weekly promotions</span>
+            </article>
+            <article class="promo">
+                <h2 id="promo-title">Our weekly promotions</h2>
                 <span id="promo-product">Cheese cake</span>
-                <span id="promo-info">$12.95 - serves 4</span>
+                <span id="promo-info"> <abbr title="dollar-sign">$</abbr>12.95 - serves 4</span>
                 <img src="cheesecake.jpg" alt="cheescake.jpg" id="promo-img">
-            </div>
-            <div class="footer">
+            </article>
+            <footer class="footer">
+                <h3 class="hide">Footer</h3>
                 <span>Our adress is</span>
-                <span>Bethany's Pie Shop - Bakery Street 555 Brussels Belgium</span>
+                <address>Bethany's Pie Shop - Bakery Street 555 Brussels Belgium</address>
                 <span>© 2020 Bethany's Pie Shop - All rights reserved</span>
-                <span>Contact us via email</span>
+                <span>Contact us via <a href="index.html">email</a></span>
                 <span>Created by Ivanovich Dojo</span>
-            </div>
-        </div>
-    </div>
+            </footer>
+        </section>
+    </section>
 
 
     <script src="app.js"></script>
