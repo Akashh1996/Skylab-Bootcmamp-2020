@@ -26,186 +26,224 @@ Pro
 ● Ranking de usuarios (ordenado por puntos)
 */
 
-var result=0;
+var result = 0;
 var showCard;
 var score;
-var finalRanking=[];
+var finalRanking = [];
 var line = [];
 var card = [];
 
 //Función perfil usuario
 function user() {
-    var player = { name:String, score:Number }
-    var name = prompt('Por favor, introduce tu nombre:');
-    name= name.toString();
-    if (name == null || name === '' ) {
-        alert("Debes introducir un nombre de JUGADOR para iniciar el BINGO");
-        user();
-    } else {
-        alert("¡Bienvenido "+ name +", iniciamos el juego!")
-        createCard();
-        console.log("Tu resultado ha sido: "+result+" intentos");
-        points();
-        player.name=name;
-        player.score=score;
-        finalRanking.push(player);
-        //console.log(finalRanking);
-    }    
-        
-    menu();
-    
-} 
+	var player = { name: String, score: Number };
+	var name = prompt('Por favor, introduce tu nombre:');
+	name = name.toString();
+	if (name == null || name === '') {
+		alert('Debes introducir un nombre de JUGADOR para iniciar el BINGO');
+		user();
+	} else {
+		alert('¡Bienvenido ' + name + ', iniciamos el juego!');
+		createCard();
+		console.log('Tu resultado ha sido: ' + result + ' intentos');
+		points();
+		player.name = name;
+		player.score = score;
+		finalRanking.push(player);
+		//console.log(finalRanking);
+	}
+
+	menu();
+}
 
 //Función menú opciones usuario
 function menu() {
-    let option= prompt("Indica si quieres JUGAR, ver RESULTADOS o SALIR")
+	let option = prompt('Indica si quieres JUGAR, ver RESULTADOS o SALIR');
 
-    if (option===null) {
-        return;
-    } else {
-        option= option.toString();
-        option= option.toLowerCase();
-        switch (option) {
-            case "jugar": 
-                user();
-            case "resultados":
-                ranking();
-            case "salir": 
-                break;
-            default:
-                alert("Por favor, vuelva a indicar tu elección");
-                menu(); 
-        }
-    }  
+	if (option === null) {
+		return;
+	} else {
+		option = option.toString();
+		option = option.toLowerCase();
+		switch (option) {
+			case 'jugar':
+				user();
+				break;
+			case 'resultados':
+				ranking();
+				break;
+			case 'salir':
+				break;
+			default:
+				alert('Por favor, vuelva a indicar tu elección');
+				menu();
+		}
+	}
 }
 
 //Función crear tarjeta
 function createCard() {
-    var card = [];
+	card = [];
 
-    for (let i = 0; i < 15; i++) {
-       let randNum = Math.ceil(Math.random()*10 );
-        card.push(randNum);
-       }
-    
-    
-    console.log("%cEsta es tu tarjeta de juego:", "color: blue");
-    
-    
-    showCard=card.join();
-    console.log(showCard[0],showCard[1],showCard[2],showCard[3],showCard[4],'\n',showCard[5],showCard[6],showCard[7],showCard[8],showCard[9],'\n',showCard[10],showCard[11],showCard[12],showCard[13],showCard[14]);
-    console.log("%c¡Mucha Suerte!", "color: blue");
-    bingo(card);
-    return result;
+	for (let i = 0; i < 15; i++) {
+		let randNum = Math.ceil(Math.random() * 10);
+		card.push(randNum);
+	}
+
+	console.log('%cEsta es tu tarjeta de juego:', 'color: blue');
+
+	showCard = card.join();
+	console.log(
+		showCard[0],
+		showCard[1],
+		showCard[2],
+		showCard[3],
+		showCard[4],
+		'\n',
+		showCard[5],
+		showCard[6],
+		showCard[7],
+		showCard[8],
+		showCard[9],
+		'\n',
+		showCard[10],
+		showCard[11],
+		showCard[12],
+		showCard[13],
+		showCard[14]
+	);
+	console.log('%c¡Mucha Suerte!', 'color: blue');
+	bingo(card);
+	return result;
 }
 
 //Función tachar números de la tarjeta
-function bingo(card) {
-    if (confirm("¿Sacamos un número nuevo?")) {
-        result += 1 ;
-        number = Math.ceil(Math.random()*10 );
-        console.log("El número es el " + number);
-    } else {
-        return;
-    }
+function bingo(userCard) {
+	if (confirm('¿Sacamos un número nuevo?')) {
+		result += 1;
+		number = Math.ceil(Math.random() * 10);
+		console.log('El número es el ' + number);
+	} else {
+		return;
+	}
 
-    if (card.includes(number)) {
-        card[card.indexOf(number)] = "X";
-        showCard=card.join();
-        console.log(showCard);
+	if (userCard.includes(number)) {
+		userCard[userCard.indexOf(number)] = 'X';
+		showCard = userCard.join();
+		console.log(showCard);
 
-        while (card[0] != "X" || card[1] != "X" || card[2] != "X" || card[3] != "X" || card[4] != "X" || card[4] != "X" || card[4] != "X" || card[4] != "X" || card[4] != "X" || card[4] != "X" || card[4] != "X" || card[4] != "X" || card[4] != "X" || card[4] != "X" || card[4] != "X"){
-            if ((card[0] == "X" && card[1] == "X" && card[2] == "X" && card[3] == "X" && card[4] == "X") || (card[5] == "X" && card[6] == "X" && card[7] == "X" && card[8] == "X" && card[9] == "X") || (card[10] == "X" && card[11] == "X" && card[12] == "X" && card[13] == "X" && card[14] == "X")) {
-                
-                console.log("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡LINEA!!!!!!!!!!!!!!!!!!!!");
-                console.log(showCard);
-                bingo(card);
+		while (
+			userCard[0] != 'X' ||
+			userCard[1] != 'X' ||
+			userCard[2] != 'X' ||
+			userCard[3] != 'X' ||
+			userCard[4] != 'X' ||
+			userCard[4] != 'X' ||
+			userCard[4] != 'X' ||
+			userCard[4] != 'X' ||
+			userCard[4] != 'X' ||
+			userCard[4] != 'X' ||
+			userCard[4] != 'X' ||
+			userCard[4] != 'X' ||
+			userCard[4] != 'X' ||
+			userCard[4] != 'X' ||
+			userCard[4] != 'X'
+		) {
+			if (
+				(userCard[0] == 'X' &&
+					userCard[1] == 'X' &&
+					userCard[2] == 'X' &&
+					userCard[3] == 'X' &&
+					userCard[4] == 'X') ||
+				(userCard[5] == 'X' &&
+					userCard[6] == 'X' &&
+					userCard[7] == 'X' &&
+					userCard[8] == 'X' &&
+					userCard[9] == 'X') ||
+				(userCard[10] == 'X' &&
+					userCard[11] == 'X' &&
+					userCard[12] == 'X' &&
+					userCard[13] == 'X' &&
+					userCard[14] == 'X')
+			) {
+				console.log('¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡LINEA!!!!!!!!!!!!!!!!!!!!');
+				console.log(showCard);
+				bingo(userCard);
+			} else {
+				bingo(userCard);
+			}
+		}
 
-            } else {
+		console.log('¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡BINGO!!!!!!!!!!!!!!!!!!!!');
+		console.log('%cHas completado la tarjeta, ¡ENHORABUENA!', 'color:blue');
+	} else {
+		console.log(showCard);
+		bingo(card);
+	}
 
-                bingo(card);
-
-            }  
-            
-        }
-        
-        console.log("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡BINGO!!!!!!!!!!!!!!!!!!!!");
-        console.log("%cHas completado la tarjeta, ¡ENHORABUENA!","color:blue");
-        
-    } else {
-        console.log(showCard);
-        bingo(card);
-    }
-
-    return result;
-    
-} 
-
+	return result;
+}
 
 //Función solicitar cambio tarjeta
 function otherCard() {
-    let newCard= prompt("¿Quieres cambiar tu cartón?")
-    if (newCard===null) {
-        return;
-    } else {
-        newCard= newCard.toString();
-        newCard= newCard.toLowerCase();
-        switch (newCard) {
-            case "si": 
-                createCard();
-            case "no": 
-                bingo(card);
-            default:
-                alert("Por favor, responde SI o NO");
-                otherCard(); 
-            }
-    } 
+	let newCard = prompt('¿Quieres cambiar tu cartón?');
+	if (newCard === null) {
+		return;
+	} else {
+		newCard = newCard.toString();
+		newCard = newCard.toLowerCase();
+		switch (newCard) {
+			case 'si':
+				createCard();
+				break;
+			case 'no':
+				bingo(card);
+				break;
+			default:
+				alert('Por favor, responde SI o NO');
+				otherCard();
+		}
+	}
 }
 
 //Función calcular resultados
 function points() {
-    if (result <40) {
-        score=100;
-    } else if (result <60) {
-        score=50;
-    } else if (result <80) {
-        score=20;
-    } else {
-        score=10;
-    }
-    return console.log("La puntuación obtenida es "+score+" puntos");
+	if (result < 40) {
+		score = 100;
+	} else if (result < 60) {
+		score = 50;
+	} else if (result < 80) {
+		score = 20;
+	} else {
+		score = 10;
+	}
+	return console.log('La puntuación obtenida es ' + score + ' puntos');
 }
 
 //Función mostrar resultados y clasificación jugadores ordenada por puntuación de mayor a menor
-function ranking () {
-    console.log("PUNTUACIONES:\n\n -Menos de 40 intentos= 100 puntos\n -Menos de 600 intentos= 50 puntos\n -Menos de 80 intentos= 20 puntos\n -80 intentos o más= 10 punto");
+function ranking() {
+	console.log(
+		'PUNTUACIONES:\n\n -Menos de 40 intentos= 100 puntos\n -Menos de 600 intentos= 50 puntos\n -Menos de 80 intentos= 20 puntos\n -80 intentos o más= 10 punto'
+	);
 
+	finalRanking.sort(function (a, b) {
+		if (a.score > b.score) {
+			return -1;
+		}
+		if (a.score < b.score) {
+			return 1;
+		}
+		return 0;
+	});
 
+	console.log('%cEste es el ranking de resultados: ', 'color: blue');
 
-    finalRanking.sort(function (a,b){
-        if (a.score > b.score) {
-            return -1;
-        }
-        if (a.score<b.score) {
-            return 1;
-        }
-        return 0;
-    });
+	for (let z = 0; z < finalRanking.length; z++) {
+		console.log(
+			finalRanking[z].name + ': ' + finalRanking[z].score + ' puntos'
+		);
+	}
 
-    console.log("%cEste es el ranking de resultados: ","color: blue");
-
-    for (let z=0; z<finalRanking.length; z++){
-        console.log(finalRanking[z].name+": "+ finalRanking[z].score+" puntos");
-    }
-
-    menu();
-
+	menu();
 }
 
 user();
-
-
-
-
-
-
