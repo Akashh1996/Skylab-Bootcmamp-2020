@@ -1,0 +1,231 @@
+body {
+	font-family: sans-serif;
+}
+
+h1 {
+	margin: 20px;
+}
+
+label {
+	color: rgb(153, 153, 153);
+}
+
+select {
+	border: none;
+	border-bottom: 1px solid rgb(153, 153, 153);
+}
+
+input {
+	border: none;
+	border-bottom: 1px solid rgb(153, 153, 153);
+}
+
+textarea {
+	border: 1px solid rgb(153, 153, 153);
+	resize: none;
+}
+
+.box {
+	width: 80vw;
+	max-width: 700px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	border-top: 2px solid rgb(156, 156, 156);
+}
+
+.viaje-pasajeros-clase {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px;
+}
+
+.viaje-pasajeros {
+	display: flex;
+}
+
+.viaje-label-select,
+.pasajeros-label-select,
+.clase-label-select {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	min-width: 140px;
+}
+
+.pasajeros-label-select,
+.clase-label-select {
+	margin-left: 20px;
+}
+
+.salida-llegada {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 20px;
+}
+
+.salida,
+.llegada {
+	width: 46%;
+}
+
+.dates-with-label {
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+}
+
+.dates {
+	display: flex;
+	flex-direction: row;
+}
+
+#date-end {
+	margin-left: 10px;
+}
+
+.blue-button {
+	margin: 20px;
+	display: flex;
+	flex-direction: row;
+}
+
+.name,
+.description,
+.email,
+.phone {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 60%;
+	margin: 15px 20px;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: '';
+	height: 16px;
+	width: 16px;
+	left: 2px;
+	bottom: 2px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(20px);
+	-ms-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 20px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+#viaje-profesional {
+	color: black;
+	margin-left: 5px;
+}
+
+.submit-button {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+#submit {
+	border: none;
+	background-color: #d40504;
+	color: white;
+	padding: 15px;
+}
+
+input:invalid {
+	color: red;
+}
+
+@media screen and (max-width: 960px) {
+	.salida-llegada {
+		flex-direction: column;
+		min-height: 60px;
+		justify-content: space-between;
+	}
+
+	.salida,
+	.llegada {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.viaje-label-select,
+	.pasajeros-label-select {
+		width: 100%;
+		min-width: 90px;
+	}
+
+	.viaje-pasajeros-clase {
+		flex-direction: column;
+	}
+
+	.clase-label-select {
+		width: 100%;
+		margin: 20px 0px 0px 0px;
+	}
+
+	#submit {
+		display: block;
+		width: 100%;
+		margin: 20px;
+	}
+
+	.name,
+	.description,
+	.email,
+	.phone {
+		width: initial;
+		align-items: stretch;
+	}
+}
