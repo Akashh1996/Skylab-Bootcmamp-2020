@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Hola mundo</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Hola mundo!</h1>
+			<nav>
+				<span class="material-icons"> account_circle </span>
+				<span class="material-icons"> info </span>
+				<span class="material-icons"> settings </span>
+			</nav>
+		</header>
+		<code>Wake up... Neo!</code>
+		<nav id="list">
+			<ul>
+				<li>This</li>
+				<li class="italic">is an</li>
+				<li>unordered list</li>
+			</ul>
+		</nav>
+
+		<p class="specific">Paragraph</p>
+		<p class="specific" id="morespecific">Paragraph with id</p>
+
+		<i class="fa fa-users"></i>
+		<span class="material-icons">supervisor_account </span>
+
+		<button onclick="showDate()">Show date</button>
+		<p id="date">Click the button to see the current date!</p>
+
+		<button onclick="sayHi()">Salúdame</button>
+		<p id="greeting">Quieres un saludo? Haz click en el botón ;)</p>
+
+		<button onclick="loadData()">LOAD DATA</button>
+		<p id="data">There are no elements to show!</p>
+
+		<script src="index.js"></script>
+	</body>
+</html>
