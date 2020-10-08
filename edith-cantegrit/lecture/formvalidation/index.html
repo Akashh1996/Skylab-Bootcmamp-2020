@@ -1,0 +1,81 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<header class="flexhead sectiontitles">
+		<h4><u>RESERVAR UN VUELO</u></h4>
+		<h4 style="margin-left: 20px">RESERVAR UN VUELO CON MILLAS</h4>
+	</header>
+	<hr id="line" />
+
+	<body>
+		<section class="sectionRow text">
+			<fieldset class="flexQuestForm boxTipodeViaje">
+				<label for="idayvuelta">Viaje</label>
+				<input
+					list="idayvueltas"
+					name="idayvuelta"
+					id="idayvuelta"
+					placeholder="Ida y vuelta"
+				/>
+				<datalist id="idayvueltas">
+					<option value="Ida y vuelta">Ida y vuelta</option>
+					<option value="Sólo ida">Sólo ida</option>
+					<option value="Destinos múltiples">Destinos múltiples</option>
+				</datalist>
+			</fieldset>
+
+			<fieldset class="flexQuestForm boxTipodeViaje">
+				<label for="pasenger">Pasajeros</label>
+				<select id="idayvueltas">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+			</fieldset>
+
+			<fieldset class="flexQuestForm boxTipodeViaje">
+				<label for="clase">Clase</label>
+				<input list="clases" name="clase" id="clase" placeholder="ECONOMY" />
+				<datalist id="clases">
+					<option value="ECONOMY">ECONOMY</option>
+					<option value="PREMIUM ECONOMY">PREMIUM ECONOMY</option>
+					<option value="BUSINESS">BUSINESS</option>
+					<option value="LA PREMIÈRE">LA PREMIÈRE</option>
+				</datalist>
+			</fieldset>
+		</section>
+
+		<section class="sectionRow">
+			<input
+				class="boxIdayVuelta"
+				id="Salida"
+				name="Salida"
+				type="text"
+				placeholder="Salida de *"
+			/>
+			<input
+				class="boxIdayVuelta"
+				id="Llegada"
+				name="Llegada"
+				type="text"
+				placeholder="Llegada a *"
+			/>
+		</section>
+
+		<section class="sectionColumn">
+			<input class="boxdate" type="date" value="2017-06-01" />
+			<fieldset class="boxProfesional">
+				<input type="checkbox" id="profesional" name="profesional" />
+				<label for="scales">Viaje profesional</label>
+			</fieldset>
+		</section>
+
+		<div class="buttonFlex">
+			<button class="buttonBuscar" type="button">Buscar vuelos</button>
+		</div>
+	</body>
+</html>

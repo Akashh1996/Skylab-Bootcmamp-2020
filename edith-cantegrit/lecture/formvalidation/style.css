@@ -1,0 +1,59 @@
+.sectiontitles {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+.text {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.flexhead {
+	display: flex;
+	flex-direction: row;
+}
+
+.sectionRow {
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+}
+.sectionColumn {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+}
+
+.flexQuestForm {
+	display: flex;
+	flex-direction: column;
+}
+
+.boxdate {
+	margin-top: 50px;
+	margin-left: 15px;
+	width: 200px;
+}
+
+.boxIdayVuelta {
+	margin-top: 50px;
+	margin-left: 15px;
+	height: 30px;
+	width: 300px;
+}
+
+.boxTipodeViaje {
+	margin-top: 40px;
+	margin-left: 15px;
+	width: 100px;
+}
+
+.boxProfesional {
+	margin-top: 20px;
+	margin-left: 15px;
+	width: 200px;
+}
+
+.buttonBuscar {
+	align-self: flex-end;
+}
