@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>RESERVAR UN VUELO</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<form class="container">
+			<div class="formulario">
+				<div class="container__title">
+					<h2>RESERVAR UN VUELO</h2>
+				</div>
+				<div class="datosPersonales">
+					<div class="labels">
+						<label for="nombre">Nombre y apellidos:</label>
+						<br />
+						<input
+							class="tInput"
+							id="nombre"
+							name="nombre"
+							type="text"
+							placeholder="Nombre..."
+							required
+						/>
+					</div>
+
+					<div class="labels">
+						<label for="description">Descripción:</label>
+						<br />
+						<textarea
+							class="tInput"
+							type="textarea"
+							name="description"
+							id="description"
+							placeholder="Descripción...."
+							required
+						></textarea>
+					</div>
+					<div class="labels">
+						<label for="mail">Email:</label>
+						<br />
+						<input
+							class="tInput"
+							id="mail"
+							name="mail"
+							type="email"
+							placeholder="Email..."
+							required
+						/>
+					</div>
+
+					<div class="labels">
+						<label for="phone">Teléfono:</label>
+						<br />
+						<input
+							class="tInput"
+							id="phone"
+							name="phone"
+							type="tel"
+							pattern="[0-9]{9}"
+							placeholder="Teléfono..."
+							required
+						/>
+					</div>
+				</div>
+
+				<div class="vuelo">
+					<div class="labels">
+						<label for="viaje">Viaje: </label>
+						<br />
+						<select class="mInput" name="viaje" id="viaje">
+							<option value="1">Ida</option>
+							<option value="2">Ida y vuelta</option>
+						</select>
+					</div>
+
+					<div class="labels">
+						<label for="pasajeros">Pasajeros: </label>
+						<br />
+						<select class="mInput" name="pasajeros" id="pasajeros">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+					</div>
+
+					<div class="labels">
+						<label for="class">Clase: </label>
+						<br />
+						<select class="mInput" name="class" id="class">
+							<option value="1">ECONOMY</option>
+							<option value="2">PREMIUM ECONOMY</option>
+							<option value="3">BUSINESS</option>
+							<option value="4">LA PREMIÈRE</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="fechas">
+					<input
+						id="salida"
+						name="salida"
+						type="text"
+						placeholder="Salida de ..."
+						required
+					/>
+
+					<input
+						id="llegada"
+						name="llegada"
+						type="text"
+						placeholder="Llegada a..."
+						required
+					/>
+					<div class="labels">
+						<label for="fecha">Fechas de viaje</label>
+						<br />
+						<input type="date" id="fecha" name="fecha" />
+					</div>
+				</div>
+				<div class="checkbox">
+					<label class="switch">
+						<input type="checkbox" />
+						<span class="slider round"></span>
+					</label>
+					<label class="checkbox__label" for="checkbox"
+						>Viaje profesional</label
+					>
+				</div>
+				<div class="search">
+					<button class="buttonSearch" type="button">Buscar vuelos</button>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>
