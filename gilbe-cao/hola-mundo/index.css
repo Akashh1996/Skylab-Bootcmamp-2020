@@ -1,0 +1,27 @@
+div {
+	color: blue;
+}
+
+li.italic {
+	font-style: italic;
+}
+
+#morespecific {
+	background: red;
+	border: 3px solid black;
+}
+
+.specific {
+	background: linear-gradient(gray, red);
+	border: none !important;
+}
+
+p {
+	background: blue;
+	color: white;
+	padding: 5px;
+}
+
+nav span.material-icons {
+	font-size: 32px;
+}

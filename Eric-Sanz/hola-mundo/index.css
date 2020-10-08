@@ -1,0 +1,61 @@
+div {
+	color: blue;
+}
+
+li.italic {
+	font-style: italic;
+}
+
+#morespecific {
+	background-color: red;
+}
+
+.specific {
+	text-align: center;
+}
+
+p {
+	background-color: blue;
+	color: white;
+	padding: 5px;
+}
+
+@media screen and (max-width: 599px) {
+	.specific {
+		background-color: rgb(207, 44, 72);
+		font-size: 20px;
+		border: 1px solid black;
+		margin: 2px 16px;
+		height: 40px;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+	.specific {
+		background-color: teal;
+		font-size: 30px;
+		border: 2px solid black;
+		margin: 4px 32px;
+		height: 80px;
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+	.specific {
+		background-color: purple;
+		font-size: 40px;
+		border: 3px solid black;
+		margin: 8px 64px;
+		height: 160px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.specific {
+		background-color: seagreen;
+		font-size: 50px;
+		border: 4px solid black;
+		margin: 16px 128px;
+		height: 320px;
+	}
+}

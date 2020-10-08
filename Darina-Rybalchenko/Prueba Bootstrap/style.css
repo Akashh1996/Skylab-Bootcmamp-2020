@@ -1,0 +1,15 @@
+body {
+    background-image: linear-gradient( to right, rgb(102, 101, 98), rgb(159, 153, 161));
+}
+
+.userNameBox {
+    margin-top: 100px;
+    margin-right: 500px;
+    margin-left: 500px;
+
+}
+
+.bg-ligh {
+    background-color: plum;
+
+}
