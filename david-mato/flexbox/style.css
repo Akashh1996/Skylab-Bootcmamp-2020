@@ -1,0 +1,136 @@
+body {
+	margin: 0;
+}
+
+header {
+	height: 80px;
+	background: rgb(224, 217, 217);
+	border: 1px solid rgb(75, 70, 70);
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+}
+
+.buttons {
+	height: 25px;
+	width: 25px;
+	border-radius: 20px;
+	margin: 0 10px;
+}
+
+.one {
+	background: rgb(241, 112, 112);
+}
+
+.two {
+	background: rgb(219, 152, 75);
+}
+
+.three {
+	background: rgb(187, 107, 107);
+}
+
+.mainContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 40px;
+	border: 1px solid rgb(75, 70, 70);
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.upperContent {
+	display: flex;
+}
+
+@media only screen and (max-width: 797px) {
+	.upperContent {
+		flex-wrap: wrap;
+	}
+}
+
+.square {
+	min-width: 250px;
+	height: 250px;
+	border: 1px solid black;
+	margin-right: 40px;
+	background: rgb(224, 217, 217);
+}
+
+.first-p,
+.second-p {
+	text-align: justify;
+}
+.article {
+	display: flex;
+	flex-direction: column;
+	max-width: 900px;
+}
+
+.circle {
+	width: 90px;
+	height: 90px;
+	border-radius: 90px;
+	background: rgb(224, 217, 217);
+	border: 1px solid black;
+}
+
+.second-p {
+	padding-left: 10px;
+	margin-top: 20px;
+}
+
+.first-p {
+	padding-left: 10px;
+}
+
+.first-p > p {
+	margin: 0;
+	padding-top: 15px;
+}
+
+.bottom-row {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+
+.triangle-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.triangle {
+	width: 0;
+	height: 0;
+	border-left: 35px solid transparent;
+	border-right: 35px solid transparent;
+	border-bottom: 70px solid rgb(224, 217, 217);
+	margin-bottom: 10px;
+}
+
+.heading {
+	font-size: 20px;
+}
+
+.subheading,
+.date {
+	color: rgba(0, 0, 0, 0.3);
+	font-size: 17px;
+}
+
+.circle-and-heading {
+	display: flex;
+}
+
+.block {
+	display: flex;
+	flex-direction: column;
+	padding-left: 30px;
+}
+
+.date {
+	text-align: right;
+}
