@@ -75,14 +75,14 @@ function pasapalabra(name) {
         return b.point - a.point;
     })
     console.log('- Hall Of Fame -')
-    for (var i=0;i<hallOfFame.length;i++) {
+    for (i=0;i<hallOfFame.length;i++) {
         console.log(`${hallOfFame[i].name} - ${hallOfFame[i].point} puntos`)
     }
 }
-var hall = (name,point) => {
+var hall = (n,p) => {
     return {
-        name:name,
-        point:point
+        name:n,
+        point:p
     }
 }
 var questions = [

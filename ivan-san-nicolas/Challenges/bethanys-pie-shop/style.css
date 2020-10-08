@@ -1,0 +1,292 @@
+body {
+    background-image: url("pattern.png");
+}
+
+.nav {
+    background-color: rgb(156, 59, 198);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    color: white;
+    width: 100vw;
+    text-transform: uppercase;
+}
+
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    width: 20vw;
+}
+
+.spacer {
+    width: 25vw;
+}
+
+.nav-directions {
+    width: 75vw;
+    height: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+.nav-directions>a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 50px;
+}
+
+.web-body {
+    display: flex;
+    width: auto;
+}
+
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.browser {
+    display: flex;
+    flex-direction: column; 
+    margin-top: 20px;
+}
+
+#browser-title {
+    color: black;
+    font-weight: bolder;
+    text-transform: capitalize;
+    font-size: 25px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.menu-bar {
+    color: white;
+    text-transform: capitalize;
+    margin: 2px;
+    padding: 10px;
+    background-color: rgb(191, 2, 2);
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    color: rgb(156, 59, 198);
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+#welcome-message {
+    width: auto;
+    margin: 0 auto;
+}
+
+.welcome>img {
+    max-width: 80vw;
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+}
+
+#img-footer {
+    color: black;
+    font-size: 25px
+}
+
+.history {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-weight: bold;
+    font-size: 25px;
+    width: 80vw;
+}
+
+#our-history {
+    text-align: left;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.promo {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: auto;
+    margin: 60px auto;
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+#promo-title {
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+#promo-product {
+    font-weight: bold;
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+#promo-info {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+#promo-img {
+    border-radius: 10%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
+
+@media screen and (max-width: 599px) {
+    .web-body {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        overflow: auto;
+        align-items: center;
+        margin: 20px;
+    }
+    .nav-directions>a {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .welcome {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        margin: 50px auto;
+        color: rgb(156, 59, 198);
+        font-weight: bolder;
+        font-size: 30px;
+    }
+    .history {
+        width: 80vw;
+        margin: 0 auto;
+        font-size: medium;
+    }
+    .promo {
+        width: 80vw;
+    }
+    #promo-img {
+        height: 100%;
+        width: 100%;
+    }
+    .footer {
+        width: 80vw;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .web-body {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        margin: 0 auto;
+    }
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        margin: 40px auto;
+    }
+    .right {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 60%;
+        align-items: center;
+    }
+    .promo {
+        width: 80%;
+    }
+    #promo-img {
+        height: auto;
+        width: 100%;
+    }
+    .footer {
+        width: 80%;
+        font-size: 20px;
+    }
+    .welcome {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 50px auto;
+        color: rgb(156, 59, 198);
+        font-weight: bolder;
+        font-size: 30px;
+    }
+    #bethany-img {
+        width: 80%;
+        height: auto;
+    }
+
+    #img-footer {
+        color: black;
+        font-size: 25px;
+        width: auto;
+        margin: 0 auto;
+    }
+    .history {
+        width: 80%;
+        margin: 0 auto;
+        font-size: medium;
+    }
+    .browser {
+        display: flex;
+        flex-direction: column; 
+        margin-top: 20px;
+    }
+    
+    #browser-title {
+        color: black;
+        font-weight: bolder;
+        text-transform: capitalize;
+        font-size: 25px;
+    }
+    
+    .menu {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .menu-bar {
+        color: white;
+        text-transform: capitalize;
+        margin: 2px;
+        padding: 10px;
+        background-color: rgb(191, 2, 2);
+    }
+}
