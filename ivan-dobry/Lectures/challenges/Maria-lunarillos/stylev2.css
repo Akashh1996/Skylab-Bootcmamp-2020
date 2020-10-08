@@ -1,0 +1,136 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font: 12px/1.55 'Source Sans Pro', sans-serif;
+}
+
+.ingredients {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.ingredients__icon {
+	text-align: center;
+}
+
+.ingredients__title {
+	display: flex;
+	margin-bottom: 67px;
+	line-height: 22px;
+	font-size: 22px;
+	font-weight: 900;
+	letter-spacing: 6px;
+	color: #2e2925;
+	border-top: solid;
+	border-bottom: solid;
+	margin-top: 50px;
+	justify-content: center;
+}
+
+.ingredients__images img {
+	width: 100%;
+}
+
+.ingredients__images--big {
+	padding: 7.5px;
+	max-height: 140px;
+	overflow: hidden;
+	border: 0;
+	max-width: 90vw;
+	position: relative;
+}
+
+.ingredients__images--small {
+	padding: 7.5px;
+	max-height: 140px;
+	overflow: hidden;
+	border: 0;
+	max-width: 90vw;
+	position: relative;
+}
+
+.ingredients__images--text {
+	bottom: 0;
+	left: 7.5px;
+	background: rgba(255, 255, 255, 0.8);
+	width: 50%;
+	margin: 0;
+	position: absolute;
+}
+
+.ingredients__images h2 {
+	color: #67635f;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+.ingredients__vermas {
+	background: #ff5959;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+	max-width: 40vw;
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.ustensileImg {
+	margin-top: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.titleSection {
+	padding: 20px 0;
+	text-transform: uppercase;
+	margin-bottom: 60px;
+	line-height: 22px;
+	font-size: 22px;
+	font-weight: 900;
+	letter-spacing: 6px;
+	color: #2e2925;
+	font-family: sans-serif;
+	border-style: solid none solid none;
+}
+.widget-img {
+	max-height: 140px;
+	overflow: hidden;
+	border: 0;
+	max-width: 90vw;
+	position: relative;
+	padding: 7.5px;
+}
+.widget-img-resize {
+	border: 0;
+	width: 100%;
+	max-height: 140px;
+	position: relative;
+	padding: 7.5px;
+	max-width: 345px;
+	overflow: hidden;
+}
+
+.ustensileImg {
+	margin-top: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.titleSection {
+	padding: 20px 0;
+	text-transform: uppercase;
+	margin-bottom: 60px;
+	line-height: 22px;
+	font-size: 22px;
+	font-weight: 900;
+	letter-spacing: 6px;
+	color: #2e2925;
+	font-family: sans-serif;
+	border-style: solid none solid none;
+}
