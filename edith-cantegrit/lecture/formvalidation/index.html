@@ -6,31 +6,27 @@
 	</head>
 
 	<header class="flexhead sectiontitles">
-		<h4><u>RESERVAR UN VUELO</u></h4>
-		<h4 style="margin-left: 20px">RESERVAR UN VUELO CON MILLAS</h4>
+		<h4 class="selectedSection">RESERVAR UN VUELO</h4>
+		<h4 style="font-weight: normal; margin-left: 40px">
+			RESERVAR UN VUELO CON MILLAS
+		</h4>
 	</header>
-	<hr id="line" />
 
 	<body>
+		<hr id="line" />
 		<section class="sectionRow text">
 			<fieldset class="flexQuestForm boxTipodeViaje">
-				<label for="idayvuelta">Viaje</label>
-				<input
-					list="idayvueltas"
-					name="idayvuelta"
-					id="idayvuelta"
-					placeholder="Ida y vuelta"
-				/>
-				<datalist id="idayvueltas">
-					<option value="Ida y vuelta">Ida y vuelta</option>
-					<option value="Sólo ida">Sólo ida</option>
-					<option value="Destinos múltiples">Destinos múltiples</option>
-				</datalist>
+				<label for="idayvuelta" class="labelstyle">Viaje</label>
+				<select id="idayvuelta" class="caja">
+					<option value="1">Ida y vuelta</option>
+					<option value="2">Sólo ida</option>
+					<option value="3">Múltiples destinos</option>
+				</select>
 			</fieldset>
 
 			<fieldset class="flexQuestForm boxTipodeViaje">
-				<label for="pasenger">Pasajeros</label>
-				<select id="idayvueltas">
+				<label for="pasenger" class="labelstyle">Pasajeros</label>
+				<select id="idayvueltas caja">
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -38,27 +34,30 @@
 			</fieldset>
 
 			<fieldset class="flexQuestForm boxTipodeViaje">
-				<label for="clase">Clase</label>
-				<input list="clases" name="clase" id="clase" placeholder="ECONOMY" />
-				<datalist id="clases">
-					<option value="ECONOMY">ECONOMY</option>
-					<option value="PREMIUM ECONOMY">PREMIUM ECONOMY</option>
-					<option value="BUSINESS">BUSINESS</option>
-					<option value="LA PREMIÈRE">LA PREMIÈRE</option>
-				</datalist>
+				<label for="clase" class="labelstyle">Clase</label>
+				<select id="clases" class="caja">
+					<option value="1">ECONOMY</option>
+					<option value="2">PREMIUM ECONOMY</option>
+					<option value="3">BUSINESS</option>
+					<option value="4">LA PREMIÈRE</option>
+				</select>
 			</fieldset>
 		</section>
 
 		<section class="sectionRow">
 			<input
-				class="boxIdayVuelta"
+				class="boxIdayVuelta caja"
+				minlength="1"
+				required
 				id="Salida"
 				name="Salida"
 				type="text"
 				placeholder="Salida de *"
 			/>
 			<input
-				class="boxIdayVuelta"
+				class="boxIdayVuelta caja"
+				minlength="1"
+				required
 				id="Llegada"
 				name="Llegada"
 				type="text"
@@ -67,11 +66,15 @@
 		</section>
 
 		<section class="sectionColumn">
-			<input class="boxdate" type="date" value="2017-06-01" />
-			<fieldset class="boxProfesional">
-				<input type="checkbox" id="profesional" name="profesional" />
-				<label for="scales">Viaje profesional</label>
-			</fieldset>
+			<input class="boxdate caja" type="date" value="2017-06-01" />
+
+			<div class="checkbox">
+				<label class="switch">
+					<input name="scales" id="scales" type="checkbox" />
+					<span class="slider round"></span>
+				</label>
+				<label for="scales" style="margin-left: 5px">Viaje profesional</label>
+			</div>
 		</section>
 
 		<div class="buttonFlex">
