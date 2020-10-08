@@ -122,15 +122,3 @@ body {
 	flex-wrap: wrap;
 	justify-content: center;
 }
-.titleSection {
-	padding: 20px 0;
-	text-transform: uppercase;
-	margin-bottom: 60px;
-	line-height: 22px;
-	font-size: 22px;
-	font-weight: 900;
-	letter-spacing: 6px;
-	color: #2e2925;
-	font-family: sans-serif;
-	border-style: solid none solid none;
-}
