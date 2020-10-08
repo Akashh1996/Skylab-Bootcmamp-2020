@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Pasapalabra GAME HTML</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <h1>PASAPALABRA</h1>
+  <div class="ingame-box" id="input-name-box">
+    <div class="ingame-input-name">
+      <h3 class="insert-name-text">Introduce tu nombre</h3>
+      <input type="text" class="answer-bar" id="input-name" placeholder="Nombre...">
+      <div class="button" id="button-name" onclick="buttonStartGame()">Empezar Juego</div>
+    </div>
+  </div>
+  <div class="ingame-box" id="ingame">
+    <div class="box-name">
+      <span id="player-name"></span>
+    </div>
+    <div class="box-roulette">
+      <div class="roulette">
+        <span class="dot" id="a">a</span>
+        <span class="dot" id="b">b</span>
+        <span class="dot" id="c">c</span>
+        <span class="dot" id="d">d</span>
+        <span class="dot" id="e">e</span>
+        <span class="dot" id="f">f</span>
+        <span class="dot" id="g">g</span>
+        <span class="dot" id="h">h</span>
+        <span class="dot" id="i">i</span>
+        <span class="dot" id="j">j</span>
+        <span class="dot" id="k">k</span>
+        <span class="dot" id="l">l</span>
+        <span class="dot" id="m">m</span>
+        <span class="dot" id="n">n</span>
+      </div>
+      <div class="roulette">
+        <span class="dot" id="ñ">ñ</span>
+        <span class="dot" id="o">o</span>
+        <span class="dot" id="p">p</span>
+        <span class="dot" id="q">q</span>
+        <span class="dot" id="r">r</span>
+        <span class="dot" id="s">s</span>
+        <span class="dot" id="t">t</span>
+        <span class="dot" id="u">u</span>
+        <span class="dot" id="v">v</span>
+        <span class="dot" id="w">w</span>
+        <span class="dot" id="x">x</span>
+        <span class="dot" id="y">y</span>
+        <span class="dot" id="z">z</span>
+      </div>
+    </div>
+    <div class="box-definition">
+      <span id="definition">AQUÍ LA DEFINITION</span>
+    </div>
+    <div class="result-info">
+      <span id="result-info"></span>
+    </div>
+    <div class="box-answer">
+      <input type="text" class="answer-bar" id="answer" placeholder="RESPUESTA">
+      <div class="buttons">
+        <div class="button" id="button-pasapalabra" onclick="buttonPasapalabra()">pasapalabra</div>
+        <div class="button" id="button-aceptar" onclick="buttonAceptar()">aceptar</div>
+        <div class="button" id="button-next" onclick="buttonNext()">Siguiente</div>
+      </div>
+    </div>
+    <div class="box-info">
+      <div class="timer" id="count-down">210 secs</div>
+      <span id="info"></span>
+    </div>
+  </div>
+  <div class="ingame-box" id="endgame">
+    <h3 class="insert-name-text">¡FIN DEL JUEGO!</h3>
+    <div class="button" id="button-name" onclick="seeRanking()">Ver Ranking</div>
+    <div class="ranking" id="podium">
+      <span id="0">1</span>
+      <span id="1">2</span>
+      <span id="2">3</span>
+      <span id="3">4</span>
+      <span id="4">5</span>
+      <span id="5">6</span>
+    </div>
+    <div class="button" id="button-play-again" onclick="playAgain()">Jugar de nuevo</div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>

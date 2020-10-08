@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasalabra HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="title">
+        <h1 id="header">PASAPALABRA SKYLAB</h1>
+    </div>
+    <div class="pasapalabra">
+        <div id="container-nueva-partida" class="nuevapartida">
+                <input id="input-player-name" type="text" placeholder="Introduce tu nombre" required>
+                <button id="instrucciones">Instrucciones</button>
+                <button id="play">Jugar</button>
+        </div>
+        <div id="contenedor-juego" class="contenedor-juego">
+            <div class="contenedor-contador">
+                <div id="timer" class="contadores">200 seconds</div>
+                <div id="current-letter" class="contadores">A</div>
+                <div id="remaining-letters"class="contadores">Remaining letters: 27</div>
+                <button id="exit-button">EXIT</button>
+            </div>
+            <div class="contenedor-pregunta">
+                <display id="display"></display>
+            </div>
+            <div class="contenedor-letras">
+                <div id="A" class="letra">A</div>
+                <div id="B" class="letra">B</div>
+                <div id="C" class="letra">C</div>
+                <div id="D" class="letra">D</div>
+                <div id="E" class="letra">E</div>
+                <div id="F" class="letra">F</div>
+                <div id="G" class="letra">G</div>
+                <div id="H" class="letra">H</div>
+                <div id="I" class="letra">I</div>
+                <div id="J" class="letra">J</div>
+                <div id="K" class="letra">K</div>
+                <div id="L" class="letra">L</div>
+                <div id="M" class="letra">M</div>
+                <div id="N" class="letra">N</div>
+                <div id="Ñ" class="letra">Ñ</div>
+                <div id="O" class="letra">O</div>
+                <div id="P" class="letra">P</div>
+                <div id="Q" class="letra">Q</div>
+                <div id="R" class="letra">R</div>
+                <div id="S" class="letra">S</div>
+                <div id="T" class="letra">T</div>
+                <div id="U" class="letra">U</div>
+                <div id="V" class="letra">V</div>
+                <div id="W" class="letra">W</div>
+                <div id="X" class="letra">X</div>
+                <div id="Y" class="letra">Y</div>
+                <div id="Z" class="letra">Z</div>
+            </div><br><br><br>
+            <div class="contenedor-respuesta">
+                    <input id="input-respuesta" type="text" placeholder="Escribe aquí la respuesta,pulsa enter para validar" autofocus required>
+            </div>
+        </div>  
+    </div>
+    
+<script src="pasapalabraHtml.js"></script>
+
+</body>
+</html>
