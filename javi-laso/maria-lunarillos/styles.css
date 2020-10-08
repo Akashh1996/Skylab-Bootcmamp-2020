@@ -3,6 +3,7 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	width: 100%;
+	padding: 0%;
 }
 
 .header-fixed {
@@ -13,14 +14,17 @@
 	background-color: #f8f8f8;
 }
 
+.limited-width {
+	width: 86%;
+}
+
 .header-fixed__navbar {
 	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
-	margin: auto;
-	width: 86%;
-	max-width: 1080px;
+	max-width: 350px;
 	height: 50px;
+	background-color: #f8f8f8;
+	margin: auto;
 }
 
 .mobile-icon__link {
@@ -241,6 +245,7 @@
 	width: 100%;
 	margin-top: 50px;
 	justify-content: flex-start;
+	align-items: center;
 }
 
 .small-subheader {
@@ -277,6 +282,7 @@
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
+	max-width: 350px;
 	margin-top: 25px;
 	margin-bottom: 100px;
 }
@@ -289,6 +295,7 @@
 .sections__points {
 	display: flex;
 	justify-content: space-around;
+	margin-top: 10px;
 }
 
 .sections__points a {
@@ -307,6 +314,8 @@
 .tools {
 	background-color: #f8f8f8;
 	display: flex;
+	width: 100%;
+	max-width: 350px;
 	flex-direction: column;
 	align-items: center;
 }
@@ -324,7 +333,7 @@
 
 .tools-title h2 {
 	font: 12px/1.55 'Source Sans Pro', sans-serif;
-	padding: 10px 0px 24px;
+	padding: 22px 0px;
 	text-transform: uppercase;
 	margin-bottom: 0;
 	line-height: 22px;
@@ -336,13 +345,18 @@
 
 .tools-row,
 .tools-row__column {
-	display: flex;
+	display: table;
 	flex-direction: column;
 	align-items: center;
 }
 
 .tools-row img {
 	width: 100%;
+}
+
+.tools-row__high,
+.column__line {
+	max-height: 140px;
 }
 
 /*///////////////////////////////////////////////// Media query < 900px ////////////////////////////////////////*/
@@ -485,6 +499,11 @@
 		width: 0px;
 		height: 0px;
 	}
+
+	.header-fixed__navbar {
+		max-width: 1080px;
+		margin: initial;
+	}
 }
 
 /*///////////////////////////////////////////////// Media query < 600px ////////////////////////////////////////*/
@@ -518,11 +537,6 @@
 	.iconlinks__cucu-link,
 	.iconlinks__mumu-link {
 		margin-top: -70px;
-	}
-
-	.header-fixed__navbar {
-		margin: auto;
-		justify-content: stretch;
 	}
 
 	.navbar__iconlinks {
@@ -583,6 +597,10 @@
 		margin: 3px;
 	}
 
+	.quick-access p {
+		margin: auto;
+	}
+
 	.news-star {
 		width: 30px;
 		height: 30px;
@@ -601,5 +619,13 @@
 
 	.quick-bar--dissapear-600 {
 		display: initial;
+	}
+
+	.sections {
+		max-width: initial;
+	}
+
+	.tools {
+		max-width: initial;
 	}
 }
