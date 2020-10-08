@@ -1,0 +1,24 @@
+/* @media only screen and (max-width: 600px) {
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+body {
+    background-image: url('pattern.png');
+}
+
+}
+ */
+.colorscheme {
+    color: #a38ebb;;
+}
+
+.colorlist {
+    color: white;
+}
+
+.fond {
+    background-color: #ee5108;
+}

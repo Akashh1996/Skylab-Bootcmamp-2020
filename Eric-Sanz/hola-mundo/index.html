@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola mundo!</title>
+    <link  rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+<body>
+    <h1>hola mundo!</h1>
+    <code>Wake up.. Neo!</code>
+    <div>
+        <ul>
+            <li>This</li>
+            <li class = "italic">is an</li>
+            <li>unordered list</li>
+        </ul>
+    </div>
+
+    <p class = 'specific'>Paragraph</p>
+    <p class = 'specific' id = 'morespecific'><span class = 'fas fa-address-card'></span></span>Paragraph with id</p>
+    <i class="fas fa-address-card"></i>
+    <span class="material-icons">android</span>
+    <button
+        onclick="document.getElementById('date').innerHTML = Date();">
+        See the date
+    </button>
+    <p id="date"></p>
+    <button onclick="sayHi();">Salúdame!</button>
+    <p id = 'hello'></p>
+    
+    <button onclick = 'loadData();'>LOAD DATA</button>
+    <p id = 'result'></p>
+
+    <script src="https://kit.fontawesome.com/8fea6703e0.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
