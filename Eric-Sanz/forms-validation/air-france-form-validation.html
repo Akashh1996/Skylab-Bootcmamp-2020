@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="air-france-form-validation.css" />
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header class="header-form">
+			<div class="header-p">
+				<p class="header-p new-font-bold">Reservar un vuelo</p>
+				<div class="red-line"></div>
+			</div>
+			<p class="new-font">Reservar un vuelo con Millas</p>
+		</header>
+		<main class="form-style new-font">
+			<form class="form-name">
+				<div class="more-passengers">
+					<a href="">Book for 10+ passengers</a>
+				</div>
+				<div class="name-information">
+					<label for="name">Nombre</label>
+					<input
+						id="name"
+						name="name"
+						type="text"
+						placeholder="Name"
+						required
+					/>
+					<div class="surnames">
+						<label for="surnames">Apellidos</label>
+						<input
+							id="surname1"
+							name="surnames"
+							type="text"
+							placeholder="First surname"
+							required
+						/>
+						<input
+							id="surname2"
+							name="surnames"
+							type="text"
+							placeholder="Second surname"
+							required
+						/>
+					</div>
+				</div>
+				<div class="client-information">
+					<label for="email">E-mail</label>
+					<input
+						id="email"
+						name="email"
+						type="text"
+						placeholder="E-mail"
+						required
+					/>
+					<div class="phone">
+						<label for="telephone-number">Telephone number</label>
+						<input
+							id="telephone-number"
+							name="telephone-number"
+							type="number"
+							placeholder="telephone number"
+							required
+							minlength="9"
+						/>
+					</div>
+				</div>
+				<div class="fligth-options">
+					<div>
+						<label for="travel">Viaje</label>
+						<select name="travel" id="travel">
+							<option value="ida">Ida</option>
+							<option value="vuelta">Vuelta</option>
+							<option value="ida y vuelta">Ida y vuelta</option>
+						</select>
+					</div>
+					<div>
+						<label for="passenger">Pasajeros</label>
+						<select name="passenger" id="passenger">
+							<option value="1">1 Pasajero</option>
+							<option value="2">2 Pasajeros</option>
+							<option value="3">3 Pasajeros</option>
+							<option value="4">4 Pasajeros</option>
+							<option value="5">5 Pasajeros</option>
+						</select>
+					</div>
+					<div>
+						<label for="flight-class">Clase</label>
+						<select name="flight-class" id="flight-class">
+							<option value="economy">Economy</option>
+							<option value="premium economy">premium economy</option>
+							<option value="Business">Business</option>
+							<option value="la premiere">La Premiére</option>
+						</select>
+					</div>
+				</div>
+				<div class="destinations">
+					<div class="departures-place">
+						<label for="departure">Salida desde:</label>
+						<span class="material-icons"> flight_takeoff </span>
+						<input
+							id="departure"
+							name="departure"
+							type="text"
+							placeholder="Departure"
+							required
+						/>
+					</div>
+					<div class="arrives-place">
+						<label for="arrives">Salida desde:</label>
+						<span class="material-icons"> flight_land </span>
+						<input
+							id="arrives"
+							name="arrives"
+							type="text"
+							placeholder="Arrives"
+							required
+						/>
+					</div>
+				</div>
+				<div class="date">
+					<label for="date">Fechas de viaje</label>
+					<input
+						id="date"
+						name="date"
+						type="date"
+						placeholder="Dates"
+						required
+					/>
+					<div class="description-space">
+						<label for="description"></label>
+						<textarea
+							name="description"
+							id="description"
+							cols="30"
+							rows="3"
+							placeholder="Any especial request?"
+						></textarea>
+					</div>
+				</div>
+				<div class="buttons">
+					<div class="switch-position">
+						<label class="switch">
+							<input type="checkbox" />
+							<span class="slider round"></span>
+						</label>
+						<p>Viaje profesional</p>
+					</div>
+					<button class="search-button">Buscar vuelos</button>
+				</div>
+			</form>
+		</main>
+	</body>
+</html>
