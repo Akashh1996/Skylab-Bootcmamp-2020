@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1 solid;
+}
+
+.header-element {
+    display: flex;
+    flex-direction: row;
+    background: white;
+    border: 1px solid black;
+}
+
+.heading-top {
+    display: flex;
+    flex-direction: row;
+}
+
+.heading-top div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(153, 122, 122);
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.wrapper-left-content {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+}
+
+.left-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-element {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(204, 197, 197);
+    border: 1px solid black;
+}
+
+.wrapper-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.firstElement {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.firstElement div {
+    margin-top: 20px;
+    font-size: 20px;
+    color: grey;
+}
+
+.roundElement {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(179, 173, 172);
+}
+
+.firstP {
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.secondElement {
+    display: flex;
+    justify-content: center;
+}
+
+.secondP {
+    margin-left: 30px;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.footer {
+    display: flex;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footer-element-contener1 {
+    display: flex;
+    flex-direction: column;
+    color: grey;
+    align-items: center;
+}
+
+.footer-element-contener2 {
+    display: flex;
+    flex-direction: column;
+    color: grey;
+    align-items: center;
+}
+
+.footer-element-contener3 {
+    display: flex;
+    flex-direction: column;
+    color: grey;
+    align-items: center;
+}
+
+.footer-element-round1 {
+    width: 90px;
+    height: 90px;
+    background-color: rgb(204, 197, 197);
+    border: 1px solid black;
+}
+
+.footer-element-round2 {
+    width: 90px;
+    height: 90px;
+    background-color: rgb(204, 197, 197);
+    border: 1px solid black;
+}
+
+.footer-element-round3 {
+    width: 90px;
+    height: 90px;
+    background-color: rgb(204, 197, 197);
+    border: 1px solid black;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1>Reservar un vuelo</h1>
+		<form>
+			<div class="ticket">
+				<label for="viaje">Viaje</label>
+
+				<select name="viaje" id="viaje">
+					<option value="idayvuelta">Ida y vuelta</option>
+					<option value="soloida">Sólo ida</option>
+					<option value="multiplesdestinos">Múltples destinos</option>
+				</select>
+
+				<label for="pasajero">Pasajeros</label>
+
+				<select name="pasajero" id="pasajero">
+					<option value="adulto">Adulto</option>
+					<option value="bebe">Bebe(0 a 23 meses)</option>
+					<option value="niño">Niño(2 a 11)</option>
+					<option value="senior">Senior(más 65)</option>
+				</select>
+
+				<label for="clase">Clase</label>
+
+				<select name="clase" id="clase">
+					<option value="economy">ECONOMY</option>
+					<option value="premiuneconomy">PREMIUN ECONOMY</option>
+					<option value="business">BUSINESS</option>
+				</select>
+			</div>
+
+			<div class="from-to">
+				<label for="from"></label>
+
+				<select name="from" id="from" required>
+					<option value="">Salida de</option>
+					<optgroup label="ARGENTINA">
+						<option value="eze">EZE-Bs.As.Ministro Pistarini</option>
+					</optgroup>
+					<optgroup label="ESPAÑA">
+						<option value="mad">MAD-Madrid-Barajas</option>
+						<option value="bcn">BCN-Barcelona-Prat</option>
+						<option value="pmi">PMI-Palma de Mallorca</option>
+					</optgroup>
+					<optgroup label="FRANCIA">
+						<option value="ory">ORY-Paris Orly Airport</option>
+						<option value="lys">LYS-Lyon Saint Exúpery</option>
+						<option value="nce">NCE-Niza</option>
+					</optgroup>
+				</select>
+
+				<label for="to"></label>
+
+				<select name="to" id="to" required>
+					<option value="">Llegada a</option>
+					<optgroup label="ARGENTINA">
+						<option value="eze">EZE-Bs.As.Ministro Pistarini</option>
+					</optgroup>
+					<optgroup label="ESPAÑA">
+						<option value="mad">MAD-Madrid-Barajas</option>
+						<option value="bcn">BCN-Barcelona-Prat</option>
+						<option value="pmi">PMI-Palma de Mallorca</option>
+					</optgroup>
+					<optgroup label="FRANCIA">
+						<option value="ory">ORY-Paris Orly Airport</option>
+						<option value="lys">LYS-Lyon Saint Exúpery</option>
+						<option value="nce">NCE-Niza</option>
+					</optgroup>
+				</select>
+			</div>
+			<div class="departure-arrival">
+				<label for="departure-date" id="departure">Fecha de partida:</label>
+				<input
+					type="date"
+					id="departure-date"
+					name="departure-date"
+					value=""
+					min="2020-10-09"
+					max="2021-07-31"
+					required
+				/>
+				<label for="arrival-date" id="arrival">Fecha de llegada:</label>
+				<input
+					type="date"
+					id="arrival-date"
+					name="arrival-date"
+					value=""
+					min="2020-10-11"
+					max="2021-12-31"
+					required
+				/>
+			</div>
+
+			<div class="personal-data">
+				<label for="name">Nombre:</label>
+				<input type="text" name="name" id="name" required />
+
+				<label for="lastname">Apellidos:</label>
+				<input type="text" name="lastname" id="lastname" required />
+
+				<label for="age">Edad:</label>
+				<input type="number" name="age" id="age" required />
+				<br />
+				<label for="number-phone">Número de telefono: </label>
+				<input
+					type="tel"
+					name="number-phone"
+					id="number-phone"
+					pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+					required
+				/>
+				<label for="email">E-mail: </label>
+				<input
+					type="email"
+					name="email"
+					id="email"
+					pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
+					required
+				/>
+				<br />
+				<label for="peticiones">Peticiones especiales:</label><br />
+				<textarea
+					name="peticiones"
+					rows="5"
+					cols="50"
+					placeholder="Peticiones especiales"
+					id="peticiones"
+				>
+				</textarea>
+				<br />
+				<input
+					class="button"
+					type="button"
+					value="Buscar vuelo"
+					id="searchButton"
+				/>
+			</div>
+		</form>
+	</body>
+</html>
