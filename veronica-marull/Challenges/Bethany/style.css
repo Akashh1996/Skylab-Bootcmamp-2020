@@ -1,0 +1,94 @@
+body {
+	background-image: url('images/pattern.png');
+	height: 100%;
+	background-repeat: repeat;
+}
+
+nav {
+	font-family: Impact;
+	font-size: 20;
+	color: white;
+}
+
+.mainContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.left-nav a {
+	display: flex;
+	align-items: baseline;
+	padding-inline-start: 10px;
+}
+
+.left-nav a {
+	display: flex;
+	justify-content: center;
+	border: 1px solid red;
+	background: red;
+	align-self: center;
+	margin-bottom: 1px;
+	width: 300px;
+	margin-left: 120px;
+}
+
+nav h6 {
+	color: black;
+	display: flex;
+	justify-content: center;
+}
+
+.title {
+	margin-top: 30px;
+	font-family: Verdana;
+	color: #ac75da;
+}
+.title2 {
+	font-family: sans-serif;
+}
+.address {
+	font-style: italic;
+}
+footer {
+	margin-left: 270px;
+}
+#bethanyimage,
+#textimage {
+	margin-left: 70px;
+}
+
+#logo {
+	margin-left: 90px;
+}
+.blue-text {
+	color: blue;
+}
+
+@media screen and (max-width: 600px) {
+	.mainContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	footer {
+		text-align: center;
+	}
+	#title-left-nav {
+		text-align: center;
+	}
+	section {
+		border-radius: 8px;
+		border-radius: 8px;
+		background-color: white;
+		padding-bottom: 20px;
+		margin-right: 10px;
+		margin-left: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		width: 550px;
+	}
+}

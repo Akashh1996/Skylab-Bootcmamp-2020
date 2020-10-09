@@ -1,0 +1,103 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+header nav {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    border: 1px solid;
+    background-color: rgb(233, 227, 227)
+}
+
+main {
+    width: 100%;
+    margin: -1px;
+    border: 1px solid;
+}
+
+.figures-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.figures {
+    display: flex;
+}
+
+.elements {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 60%;
+}
+
+.heading {
+    font-weight: 200;
+}
+
+.subheading {
+    margin-top: -30px;
+    color: rgb(233, 227, 227);
+    font-weight: 200;
+}
+
+#circle1 {
+    background-color: rgb(255, 81, 0);
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+}
+
+#circle2 {
+    background-color: orange;
+    margin-left: -5px;
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+}
+
+#circle3 {
+    background-color: rgb(134, 88, 2);
+    margin-left: -5px;
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+}
+
+#circle4 {
+    background-color: rgb(233, 227, 227);
+    border: 1px solid;
+    margin-left: -5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+#square1 {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(233, 227, 227);
+    border: 1px solid;
+}
+
+.text {
+    padding-left: 40px;
+}
+
+.triangle {
+    display: flex;
+    justify-content: space-around;
+}
+
+#triangle {
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 0 30px 52.0px 30px;
+border-color: transparent transparent #e9e3e3 transparent;
+  }

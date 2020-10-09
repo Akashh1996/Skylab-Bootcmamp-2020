@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Forms Validation</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<h1>Forms Validation</h1>
+		<form>
+			<label for="search">Search</label>
+			<input
+				id="search"
+				name="search"
+				type="text"
+				placeholder="Search"
+				required
+				minlength="7"
+				maxlength="10"
+			/>
+
+			<label for="visitors">Number of visitors</label>
+			<input
+				id="visitors"
+				name="visitors"
+				type="number"
+				placeholder="How many visitors?"
+				required
+				min="0"
+				max="6"
+			/>
+
+			<label for="description"></label>
+			<textarea
+				name="description"
+				id="description"
+				cols="30"
+				rows="3"
+			></textarea>
+
+			<br />
+
+			<label for="radio">Radio:</label>
+			<input id="radio" name="radio" type="radio" placeholder="Search" />
+
+			<br />
+			<fieldset>
+				<legend>Frameworks</legend>
+				<label for="react">React</label>
+				<input id="react" name="girlover" type="radio" value="true" />
+				<label for="angular">Angular</label>
+				<input id="angular" name="girlover" type="radio" value="false" />
+				<label for="vue">Vue</label>
+				<input id="vue" name="girlover" type="radio" value="false" />
+			</fieldset>
+			<br />
+			<fieldset>
+				<legend>Git lover?</legend>
+				<label for="gitlovertrue">True</label>
+				<input
+					id="gitlovertrue"
+					name="girlover"
+					type="radio"
+					value="true"
+					required
+				/>
+				<label for="gitloverfalse">False</label>
+				<input
+					id="gitloverfalse"
+					name="girlover"
+					type="radio"
+					value="false"
+					required
+				/>
+			</fieldset>
+
+			<label for="age">Age</label>
+			<select name="age" id="search">
+				<option value="1">Uno</option>
+				<option value="2">Dos</option>
+				<option value="3">Tres</option>
+			</select>
+		</form>
+	</body>
+</html>
