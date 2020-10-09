@@ -1,0 +1,48 @@
+* {
+	font-family: NotoSans-Regular, Arial, sans-serif;
+	margin: 0px;
+}
+
+.footer__mini {
+	background-color: #0d0d0d;
+	padding: 35px 55px;
+}
+
+.footer__mini__company__wrapper {
+	color: #ccc;
+	font-size: 14px;
+}
+
+.footer__mini__company__about {
+	color: #737373;
+	font-size: 14px;
+	margin: 3px 0px;
+	padding: 15px 0px 0px;
+}
+
+.footer__mini__company {
+	display: block;
+	text-align: left;
+}
+.footer__mini__company__wrapper > a {
+	padding: 3px 0px;
+	margin: 0px 0px 0px 15px;
+}
+
+.footer__mini__company__wrapper > img {
+	padding: 28px 0px 0px;
+}
+
+.footer__info {
+	background: #212121;
+	display: block;
+	padding: 25px;
+	text-align: center;
+}
+.footer__info > p {
+	color: #cccccc;
+}
+
+.title__footer__info {
+	color: white;
+}
