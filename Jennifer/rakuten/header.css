@@ -1,0 +1,41 @@
+* {
+	padding: none;
+	color: white;
+	font-family: inherit;
+}
+
+body {
+	background: black;
+}
+
+.d-slider-header {
+	display: flex;
+	flex-direction: row;
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+}
+
+.d-banners-principal {
+	display: flex;
+	flex-direction: row;
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+}
+
+.d-banners-last-movies {
+	display: flex;
+	flex-direction: row;
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+}
+
+.footer-mobile {
+	display: flex;
+	flex-direction: row;
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+}
