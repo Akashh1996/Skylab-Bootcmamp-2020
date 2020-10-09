@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Forms Validation</title>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<h1>Forms validation</h1>
+		<form>
+			<label for="search">Search:</label>
+			<input
+				id="search"
+				name="search"
+				type="text"
+				placeholder="Search here..."
+				required
+				minlength="7"
+				maxlength="10"
+			/>
+
+			<br />
+			<br />
+
+			<label for="visitors">Number of visitors:</label>
+			<input
+				id="visitors"
+				name="visitors"
+				type="number"
+				placeholder="How many people to lunch?"
+				required
+				min="1"
+				max="5"
+			/>
+
+			<br />
+			<br />
+
+			<label for="description">Description:</label>
+			<textarea
+				name="description"
+				id="description"
+				cols="30"
+				rows="3"
+				placeholder="Tell me a little bit about your experience as a developer..."
+			></textarea>
+
+			<br />
+			<br />
+
+			<label for="age">Age:</label>
+			<select name="age" id="age">
+				<option value="1">Uno</option>
+				<option value="2">Dos</option>
+				<option value="3">Tres</option>
+			</select>
+
+			<br />
+			<br />
+
+			<fieldset>
+				<legend>Frameworks</legend>
+				<label for="framework-angular">angular</label>
+				<input
+					id="framework-angular"
+					name="frameworks"
+					type="checkbox"
+					value="Angular"
+				/>
+				<label for="framework-react">react</label>
+				<input
+					id="framework-react"
+					name="frameworks"
+					type="checkbox"
+					value="React"
+				/>
+				<label for="framework-vue">vue</label>
+				<input
+					id="framework-vue"
+					name="frameworks"
+					type="checkbox"
+					value="Vue"
+				/>
+			</fieldset>
+
+			<br />
+			<br />
+
+			<fieldset>
+				<legend>Me gusta Git !?</legend>
+				<label for="gitlovertrue">true</label>
+				<input id="gitlovertrue" name="gitlover" type="radio" value="true" />
+				<label for="gitloverfalse">false</label>
+				<input id="gitloverfalse" name="gitlover" type="radio" value="false" />
+			</fieldset>
+		</form>
+		<section class="toolbar">
+			<span class="material-icons desktop-logo"> desktop_mac </span>
+			<span class="material-icons mobile-logo"> phone_iphone </span>
+			<span class="flex-spacer"></span>
+			<span class="material-icons"> account_circle </span>
+			<span class="material-icons"> settings </span>
+		</section>
+		<section class="blocks">
+			<div class="block">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+			</div>
+			<div class="blocks__group">
+				<div class="block">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+				</div>
+				<div class="block">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
