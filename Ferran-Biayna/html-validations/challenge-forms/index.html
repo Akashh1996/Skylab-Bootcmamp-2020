@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Forms-Validations</title>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<section class="form-content">
+			<header>
+				<nav>
+					<span class="reservar">Reservar un vuelo</span>
+					<span>Reservar un vuelo con millas</span>
+				</nav>
+			</header>
+			<form>
+				<div class="row1">
+					<a href="">Book for 10+ passengers</a>
+				</div>
+				<div class="row2">
+					<div class="column1">
+						<label for="viaje">Viaje</label>
+						<select name="viaje" id="viaje">
+							<option value="ida">Ida</option>
+							<option value="idayvuelta">Ida y Vuelta</option>
+							<option value="destinos">Destinos Múltiples</option>
+						</select>
+					</div>
+					<div class="column2">
+						<label for="pasajeros">Pasajeros *</label>
+						<select required name="pasajeros" id="pasajeros">
+							<option value="1">1 Pasajero</option>
+							<option value="2">2 Pasajeros</option>
+							<option value="3">3 Pasajeros</option>
+							<option value="4">4 Pasajeros</option>
+							<option value="5">5 Pasajeros</option>
+							<option value="otras">Más opciones</option>
+						</select>
+					</div>
+					<div class="column3">
+						<label for="clase">Clase</label>
+						<select name="clase" id="clase">
+							<option value="economy">ECONOMY</option>
+							<option value="premiumeconomy">PREMIUM ECONOMY</option>
+							<option value="business">BUSINESS</option>
+							<option value="lapremiere">LA PREMIÈRE</option>
+						</select>
+					</div>
+				</div>
+				<div class="row3">
+					<div class="column4">
+						<label for="salida"><i class="fas fa-plane-departure"></i></label>
+						<input
+							id="salida"
+							name="salida"
+							type="text"
+							placeholder="Salida de *"
+							title="Por favor, indique la ciudad de salida"
+							required
+						/>
+					</div>
+					<div class="column5">
+						<label for="llegada"><i class="fas fa-plane-arrival"></i></label>
+						<input
+							id="llegada"
+							name="llegada"
+							type="text"
+							placeholder="Llegada a *"
+							title="Por favor, indique la ciudad de llegada"
+							required
+						/>
+					</div>
+				</div>
+				<div class="row4">
+					<label for="fecha"><i class="fas fa-calendar-alt"></i></label>
+					<input
+						id="fecha"
+						name="fecha"
+						type="text"
+						placeholder="Fechas de viaje *"
+						title="Por favor, indique la fecha de ida"
+						required
+					/>
+				</div>
+				<div class="row5">
+                      <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+					<label id="check" for="professional">Viaje profesional</label>
+				</div>
+				<div class="row6">
+					<div class="column6">
+						<label for="nombre">Nombre:</label>
+						<input
+							id="nombre"
+							name="nombre"
+							type="text"
+							placeholder="Escribe tu nombre... *"
+							title="Por favor, indique su nombre"
+							required
+							minlength="2"
+						/>
+						<label for="apellidos">Apellidos:</label>
+						<input
+							id="apellidos"
+							name="apellidos"
+							type="text"
+							placeholder="Escribe tus apellidos... *"
+							title="Por favor, indique sus apellidos"
+							required
+							minlength="2"
+						/>
+					</div>
+					<label for="description"
+						>¿Qué es lo que más te motiva de viajar?</label
+					>
+					<textarea
+						id="description"
+						name="description"
+						placeholder="Cuéntanos algo sobre ti..."
+						type="textarea"
+						cols="30"
+						rows="3"
+					></textarea>
+				</div>
+				<div class="row7">
+					<label for="email">Email:</label>
+					<input
+						id="email"
+						name="email"
+						type="email"
+						placeholder="Escribe tu email... *"
+						title="Por favor, indique su email"
+						pattern=".+@globex.com"
+						required
+					/>
+					<label for="phone">Teléfono:</label>
+					<input
+						id="phone"
+						name="phone"
+						type="tel"
+						placeholder="Escribe tu teléfono... *"
+						pattern="/^[679]{1}[0-9]{8}$/"
+						title="Por favor, indique su teléfono"
+						required
+					/>
+				</div>
+				<div class="row8">
+					<button>Buscar vuelos</button>
+				</div>
+			</form>
+		</section>
+	</body>
+	<script
+		src="https://kit.fontawesome.com/8619792f44.js"
+		crossorigin="anonymous"
+	></script>
+</html>
