@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="my-style.css" />
+		<title>My form</title>
+	</head>
+	<body>
+        <div class="content">
+            <div class="divform">
+                <form class="myform">
+                    <div class="head-form">
+                        <button class="boton-opcion"><u>Reservar un vuelo</u></button>
+                        <button class="boton-opcion">Reservar un vuelo con millas</button>
+                    </div>
+                    <div class="contacto">
+                        <div class="d-name">
+                            <label for="Name">Name</label>
+                        <input
+                            type="text"
+                            name="Name"
+                            required
+                            minlength="1"
+                            maxlength="15"
+                            placeholder="Nombre"
+                        />
+                        </div>
+                        <div class="d-apellidos">
+                            <label for="Apellidos">Apellidos</label>
+                        <input
+                            type="text"
+                            name="Apellidos"
+                            required
+                            minlength="1"
+                            maxlength="20"
+                            placeholder="Apellidos"
+                        />
+                        </div>
+                        <div class="d-telefono">
+                            <label for="Teléfono"> Teléfono<label>
+                                <input
+                                    type="tel"
+                                    name="Teléfono"
+                                    required
+                                    minlength="1"
+                                    maxlength="9"
+                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                    placeholder="Teléfono"
+                                    
+                                />
+                        </div>
+                    </div>
+
+                    <div class="vuelo">
+                        <div class="d-viaje">
+                            <label for="viaje" id="viaje">Viaje</label>
+                        <select name="viaje" id="viaje" required>
+                            <option value="1">Sólo ida</option>
+                            <option value="2">Destinos múltiples</option>
+                        </select>
+                        </div>
+
+                        <div class="d-pasajeros">
+                            <label for="pasajeros" id="pasajeros">Clase</label>
+                        <select name="pasajeros" id="pasajeros" required>
+                            <option value="1">1 pasajero</option>
+                            <option value="2">2 pasajeros</option>
+                            <option value="1">3 pasajeros</option>
+                            <option value="2">4 pasajeros</option>
+                        </select>
+                        </div>
+
+                        <div class="d-clasevuelo">
+                            <label for="clasevuelo" id="clasevuelo">Clase</label>
+                        <select name="clasevuelo" id="clasevuelo" required>
+                            <option value="1">ECONOMY</option>
+                            <option value="2">PREMIUM ECONOMY</option>
+                            <option value="1">BUSINESS</option>
+                            <option value="2">LA PREMIÈRE</option>
+                        </select>
+                        </div>
+
+                    </div>
+                    <div class="horario">
+                        <div class="d-salida">
+                            <label for="salida" id="salida">SALIDA</label>
+                        <select name="salida" id="salida" required>
+                            <option value="1">Barcelona, Barcelona</option>
+                            <option value="2">Madrid, Adolfo Suárez Madrid-Barajas</option>
+                            <option value="1">Girona, Costa Brava Airport</option>
+                            <option value="2">Alicante, Alicante</option>
+                        </select>
+                        </div>
+                        <div class="llegada">
+                            <label for="llegada" id="llegada">LLEGADA</label>
+                        <select name="llegada" id="llegada" required>
+                            <option value="1">A Coruña, A Coruna Airport</option>
+                            <option value="2">Aalborg, Aalborg</option>
+                            <option value="1">Aberdeen, SD, Municipal Airport</option>
+                            <option value="2">Adís Abeba, Bole Airport</option>
+                        </select>
+                        </div>
+                    </div>
+
+                    <div class="fecha">
+                        <label for="date" id="date">Fecha</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="viajeprofesional">
+                        <div class= "div-checkbox">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                            <p>Viaje professional</p>
+                        </div>
+                        <div class="textarea">
+                            <label for="text">Sugerencias/Comentarios</label>
+                            <textarea class= "text">
+                                
+                            </textarea>
+                        </div>
+                        <div class="div-button">
+                            <button type="button" id="boton-comprar">Comprar vuelo</button>
+                        </div>
+        
+                    </div>
+                </form>
+            </div>
+        </div>
+		
+	</body>
+</html>
