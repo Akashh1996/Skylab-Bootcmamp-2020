@@ -21,11 +21,29 @@
 }
 
 .burgermenu {
+	display: block;
 	width: 50px;
 	height: 50px;
 	background: url(MariaLunarillosMedia/burger_menu.png) no-repeat center left;
 	top: 0;
 	left: 0;
+}
+
+.red-block {
+	display: none;
+}
+
+.blue-block {
+	display: none;
+}
+
+.yellow-block {
+	display: none;
+}
+
+.flex-spacer {
+	display: none;
+	height: 50px;
 }
 
 .user {
@@ -558,5 +576,12 @@
 	line-height: 50px;
 }
 
-@media screen and (min-width: 675) {
+@media screen and (min-width: 675px) {
+	.burgermenu {
+		display: none;
+	}
+
+	.flex-spacer {
+		flex: 2;
+	}
 }
