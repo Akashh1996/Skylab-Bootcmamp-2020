@@ -1,0 +1,562 @@
+* {
+	font-family: 'Source Sans Pro';
+	color: black;
+	margin: 0;
+}
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: rgb(248, 248, 248);
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	z-index: 1000;
+}
+
+.page {
+	position: relative;
+	top: 50px;
+	min-width: 350px;
+}
+
+.burgermenu {
+	width: 50px;
+	height: 50px;
+	background: url(MariaLunarillosMedia/burger_menu.png) no-repeat center left;
+	top: 0;
+	left: 0;
+}
+
+.user {
+	margin: 10px 60px 10px 30px;
+	width: 27px;
+	height: 27px;
+	background: url(MariaLunarillosMedia/sprite.svg) 0 0 no-repeat;
+}
+.search {
+	width: 50px;
+	height: 50px;
+	background: #bbb8b6 url(MariaLunarillosMedia/sprite.svg) -304px 12px no-repeat;
+}
+
+.cart {
+	width: 50px;
+	height: 50px;
+	background: #fff url(MariaLunarillosMedia/sprite.svg) -66px 10px no-repeat;
+	margin: 0;
+}
+
+.zero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 22px;
+	font-weight: 500;
+	margin: 0;
+	width: 50px;
+	height: 50px;
+	color: white;
+	background-color: #ff5959;
+}
+
+.logo {
+	padding: 30px 30px 0 0;
+	text-align: center;
+}
+
+.logo-small {
+	max-width: 325px;
+}
+
+.top-container {
+	margin-top: 40px;
+}
+
+.big-image {
+	width: 100%;
+}
+
+.circles {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.dot {
+	height: 13px;
+	width: 13px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 15px 10px 20px 10px;
+}
+
+.wrapper-container {
+	background: #f8f8f8;
+	margin-bottom: 15px;
+	margin-top: 130px;
+}
+
+.container-home {
+	position: relative;
+	text-align: center;
+	border-bottom: 0;
+}
+
+.category-header {
+	position: relative;
+	bottom: 175px;
+	padding-top: 110px;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	text-align: center;
+}
+
+.category-header .icon-category {
+	top: -64px;
+	width: 100%;
+	height: 100px;
+}
+
+.drawing {
+	top: -64px;
+	height: 120px;
+}
+
+.category-header .title {
+	display: inline-block;
+	padding: 20px 0;
+	text-transform: uppercase;
+	margin-bottom: 0;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	margin-top: 20px;
+	line-height: 22px;
+	font-size: 22px;
+	font-weight: 800;
+	letter-spacing: 6px;
+	width: 200px;
+	color: #2e2925;
+}
+
+.categories-photos {
+	padding-top: 0;
+	margin-top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.box {
+	display: flex;
+	justify-content: left;
+	margin-bottom: 7.5px;
+	align-items: flex-end;
+	width: 320px;
+	height: 136.36px;
+}
+
+.categories-photos__molde {
+	background-image: url(MariaLunarillosMedia/moldesdereposteria.jpg);
+	background-size: cover;
+}
+
+.categories-photos__uten-basico {
+	background-image: url(MariaLunarillosMedia/utensiliosbasicos.jpg);
+	background-size: cover;
+}
+
+.categories-photos__pequeno-elect {
+	background-image: url(MariaLunarillosMedia/pequenoelectrodomestico2.jpg);
+	background-size: cover;
+}
+
+.categories-photos__capsulas {
+	background-image: url(MariaLunarillosMedia/capsulas-cupcakes.jpg);
+	background-size: cover;
+}
+
+.categories-photos__cajas-y-bases {
+	background-image: url(MariaLunarillosMedia/cajas3.jpg);
+	background-size: cover;
+}
+
+.categories-photos__cortadores-galletas {
+	background-image: url(MariaLunarillosMedia/cortadoresgalletas2.jpg);
+	background-size: cover;
+}
+
+.categories-photos__ceramica-y-textil {
+	background-image: url(https://static3.marialunarillos.com/media/wysiwyg/stands.jpg);
+	background-size: cover;
+}
+
+.categories-photos__banetones {
+	background-image: url(MariaLunarillosMedia/banetones.jpg);
+	background-size: cover;
+}
+
+.categories-photos__toppers-y-figuritas {
+	background-image: url(MariaLunarillosMedia/toppers3.jpg);
+	background-size: cover;
+}
+
+.description {
+	color: rgb(102, 99, 95);
+	width: 40%;
+	padding: 20px 20px 20px 20px;
+	font-size: 18px;
+	line-height: 18px;
+	background-color: rgba(248, 248, 248, 0.8);
+}
+.ver-mas {
+	display: flex;
+	justify-content: center;
+	margin-top: 35px;
+}
+
+.ver-mas__button {
+	color: white;
+	background-color: #ff5959;
+	border: 0;
+	padding: 15px 30px;
+	font-size: 18px;
+}
+
+.categories-photos__fondant {
+	background-image: url(MariaLunarillosMedia/fondant2.jpg);
+	background-size: cover;
+}
+
+.categories-photos__ingredientes-de-reposteria {
+	background-image: url(MariaLunarillosMedia/ingredientesreposteria.jpg);
+	background-size: cover;
+}
+
+.categories-photos__impresion-personalizada {
+	background-image: url(https://static3.marialunarillos.com/media/wysiwyg/impresionpersonalizada.jpg);
+	background-size: cover;
+}
+
+.categories-photos__colorantes-alimentarios {
+	background-image: url(MariaLunarillosMedia/Colorantes-alimentarios.jpg);
+	background-size: cover;
+}
+
+.categories-photos__papel-comestible {
+	background-image: url(MariaLunarillosMedia/papelcomestible.jpg);
+	background-size: cover;
+}
+
+.categories-photos__sprinkles-y-purpurinas {
+	background-image: url(MariaLunarillosMedia/sprinkles3.jpg);
+	background-size: cover;
+}
+
+.categories-photos__fiestas-tematicas {
+	background-image: url(MariaLunarillosMedia/fiestastematicas.jpg);
+	background-size: cover;
+}
+
+.categories-photos__fiestas-personajes {
+	background-image: url(MariaLunarillosMedia/fiestaspersonajes.jpg);
+	background-size: cover;
+}
+
+.categories-photos__accesorios-para-fiestas {
+	background-image: url(https://static3.marialunarillos.com/media/wysiwyg/pompones.jpg);
+	background-size: cover;
+}
+
+.ultimas-entradas {
+	display: flex;
+	justify-content: center;
+	margin-top: 35px;
+}
+
+.ultimas-entradas__button {
+	color: white;
+	background-color: #ff5959;
+	border: 0;
+	padding: 15px 1px 15px 1px;
+	width: 320px;
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-weight: 900;
+}
+
+.blog__picture {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 15px;
+}
+
+.blog__picture--caption {
+	background-color: white;
+	width: 320px;
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+}
+
+.blog__picture--image {
+	width: 320px;
+}
+
+.blog__picture--caption--author {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	padding: 5px 10px 10px 15px;
+}
+
+.blog__picture--caption--author--name {
+	margin-left: 5px;
+}
+
+.author-name {
+	color: #ff5959;
+	font-weight: 600;
+	margin-top: 0;
+}
+
+.caption-blog {
+	color: rgb(102, 99, 95);
+	padding: 20px 20px 20px 20px;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 18px;
+	background-color: white;
+}
+
+.wrapper-container-icons {
+	margin-bottom: 15px;
+	border-top: 100px solid white;
+}
+
+.container-home-icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	top: 200px;
+	background-color: #e8e6e5;
+	padding-bottom: 40px;
+}
+
+.container-home-icons__row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 40px 10px 10px 10px;
+	width: 60%;
+}
+
+.container-home-icons__row--icon {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+}
+
+.container-home-icons__row--camion {
+	height: 60px;
+	width: 85px;
+	background: url(MariaLunarillosMedia/sprite.svg) 0 -38px no-repeat transparent;
+}
+
+.container-home-icons__row--reloj {
+	padding-bottom: 0;
+	height: 60px;
+	width: 55px;
+	background: url(MariaLunarillosMedia/sprite.svg) -90px -38px no-repeat
+		transparent;
+}
+
+.container-home-icons__row--sobre {
+	padding-bottom: 0;
+	height: 60px;
+	width: 68px;
+	background: url(MariaLunarillosMedia/sprite.svg) -150px -36px no-repeat
+		transparent;
+}
+
+.container-home-icons__row--card {
+	padding-bottom: 0;
+	height: 60px;
+	width: 77px;
+	background: url(MariaLunarillosMedia/sprite.svg) -223px -38px no-repeat
+		transparent;
+}
+
+.icons-caption {
+	text-align: center;
+	color: rgb(102, 99, 95);
+	padding: 20px 0px 0px 0px;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 18px;
+}
+.icons-subcaption {
+	text-align: center;
+	color: rgb(102, 99, 95);
+	padding: 0px 0px 0px 0px;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 18px;
+}
+
+.social-networks {
+	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.h3 {
+	color: #67625f;
+	padding: 20px 0px 0px 0px;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.sn-icons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 15px;
+}
+
+.sn {
+	display: block;
+	margin-bottom: 30px;
+	width: 33px;
+	height: 32px;
+	background: url(MariaLunarillosMedia/sprite.svg) 0 0 no-repeat transparent;
+}
+
+.facebook {
+	background-position: 0 -494px;
+}
+
+.twitter {
+	background-position: -35px -494px;
+}
+
+.instagram {
+	background-position: -70px -494px;
+}
+
+.pinterest {
+	background-position: -106px -494px;
+}
+
+.youtube {
+	background-position: -176px -494px;
+}
+
+.novedades {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.recibe-novedades {
+	text-align: center;
+	width: 320px;
+	padding: 55px 0 15px;
+	border-top: 1px solid rgb(102, 99, 95);
+}
+
+.email {
+	width: 320px;
+	height: 40px;
+	padding: 0 10px;
+	margin-bottom: 10px;
+	border: 1px solid #67625f;
+	font-family: 'Source Sans Pro';
+	font-size: 15px;
+	font-weight: 300px;
+}
+
+.label-politica {
+	margin: 5px 0 5px 0;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+	font-family: 'Source Sans Pro';
+	color: rgb(102, 99, 95);
+}
+
+.politica-checkbox {
+	width: 24px;
+}
+
+.suscribete-button {
+	margin-top: 10px;
+	margin-bottom: 55px;
+	color: white;
+	background-color: #ff5959;
+	border: 0;
+	padding: 10px 1px;
+	width: 320px;
+	font-size: 17px;
+	font-weight: 700;
+}
+
+.more-info {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 320px;
+	padding-top: 55px;
+	padding-bottom: 100px;
+	border-top: 1px solid rgb(102, 99, 95);
+}
+
+.more-info__icon {
+	display: block;
+	width: 30px;
+	height: 31px;
+	margin: auto;
+}
+
+.contact-icon {
+	background: url(MariaLunarillosMedia/sprite.svg) 0 -207px no-repeat;
+}
+
+.about-us-icon {
+	background: url(MariaLunarillosMedia/sprite.svg) 0 -246px no-repeat;
+}
+
+.conditions-icon {
+	background: url(MariaLunarillosMedia/sprite.svg) 0 -285px no-repeat;
+}
+
+.more-info__caption {
+	text-align: center;
+	margin: 5px auto 20px auto;
+	color: #ff5959;
+	font-size: 14px;
+}
+
+.copyright {
+	background-color: #ff5959;
+	margin: 0;
+}
+
+.copyright__text {
+	text-align: center;
+	font-size: 14px;
+	color: white;
+	line-height: 50px;
+}
+
+@media screen and (min-width: 675) {
+}
