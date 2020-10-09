@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form>
+        <div class="dropdown">
+            <h1>Welcome to skylab Airlines </h1>
+        </div> 
+
+        <div class="dropdown">
+
+            <div class="dropdown_element">
+                    <label for="viaje">Viaje : </label>
+                    <select name="viaje" id="viaje">
+                    <option value="1">solo vuelta</option>
+                    <option value="2">Ida y vuelta</option>
+                    <option value="3">Solo ida</option>
+                    </select>
+            </div>
+
+            <div class= "dropdown_element">
+                <label for="pasajero">Nº Pasajero : </label> 
+                <select name="viaje" id="viaje">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3 and more</option>
+                </select>
+            </div>
+
+            
+            <div class= "dropdown_element">
+                    <label for="clase">clase : </label>
+                    <select name="clase" id="clase">
+                    <option value="1">Economy</option>
+                    <option value="2">Business</option>
+                    </select>
+            </div>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown_element">
+                <label for="salida">salida de: </label> 
+                <input id="salida" type="text" placeholder="de.." name="salida" required maxlength = "10" pattern="^[a-zA-Z ]*$" >
+            </div>
+
+            <div class= "dropdown_element">
+                <label for="llegada">Llegada a: </label> 
+                <input id="llegada" type="text" placeholder="a.." name="llegada" required maxlength = "10" pattern="^[a-zA-Z ]*$">
+            </div>
+
+            <div class= "dropdown_element">
+                <label for="fecha">Fecha de viaje:</label>
+            <input type="date" id="fecha" name="fecha" required>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown_element">
+                <label for="nombre">Nombre :</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="nombre" pattern="^[a-zA-Z ]*$">
+            </div>
+
+            <div class= "dropdown_element">
+                <label for="apellido">Apellido : </label>
+                <input type="text" id="apellido" name="apellido" required placeholder="apellido" pattern="^[a-zA-Z ]*$">
+    
+            </div>
+
+            <div class= "dropdown_element">
+                <label for="email">Enter your email:</label>
+                <input type="email" id="email" name="email" required  >
+            </div>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown_element">
+                <label for="contactNumber">Entra el numero :</label>
+                <input type="number" id="contactNumber" name="contactNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required >
+            </div>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown_element">
+                <label for="description">Description : </label>  
+                <textarea id="description" name="description" cols = "50" rows = "4" placeholder="Give us your feedback..." ></textarea>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="button">Submit</div>
+        </div>
+        <div class="dropdown"> 
+    </form>
+
+
+
+</body>
+</html>
