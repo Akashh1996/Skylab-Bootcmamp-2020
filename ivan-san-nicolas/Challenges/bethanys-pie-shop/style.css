@@ -2,6 +2,10 @@ body {
     background-image: url("pattern.png");
 }
 
+.hide {
+    display: none;
+}
+
 .nav {
     background-color: rgb(156, 59, 198);
     display: flex;
@@ -53,7 +57,7 @@ body {
 
 .browser {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     margin-top: 20px;
 }
 
@@ -173,12 +177,14 @@ body {
         align-items: center;
         margin: 20px;
     }
+
     .nav-directions>a {
         text-decoration: none;
         color: white;
         font-size: 15px;
         font-weight: bold;
     }
+
     .welcome {
         display: flex;
         flex-direction: column;
@@ -188,18 +194,22 @@ body {
         font-weight: bolder;
         font-size: 30px;
     }
+
     .history {
         width: 80vw;
         margin: 0 auto;
         font-size: medium;
     }
+
     .promo {
         width: 80vw;
     }
+
     #promo-img {
         height: 100%;
         width: 100%;
     }
+
     .footer {
         width: 80vw;
         font-size: 20px;
@@ -207,12 +217,21 @@ body {
 }
 
 @media screen and (min-width: 600px) {
+    .nav-directions {
+        width: 75vw;
+        height: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: right;
+    }
+
     .web-body {
         display: flex;
-        flex-direction: row;
+        flex-direction: ;
         width: 100vw;
         margin: 0 auto;
     }
+
     .left {
         display: flex;
         flex-direction: column;
@@ -220,6 +239,7 @@ body {
         width: 40%;
         margin: 40px auto;
     }
+
     .right {
         display: flex;
         flex-direction: column;
@@ -227,17 +247,21 @@ body {
         width: 60%;
         align-items: center;
     }
+
     .promo {
         width: 80%;
     }
+
     #promo-img {
         height: auto;
         width: 100%;
     }
+
     .footer {
         width: 80%;
         font-size: 20px;
     }
+
     .welcome {
         display: flex;
         flex-direction: column;
@@ -247,6 +271,7 @@ body {
         font-weight: bolder;
         font-size: 30px;
     }
+
     #bethany-img {
         width: 80%;
         height: auto;
@@ -256,32 +281,34 @@ body {
         color: black;
         font-size: 25px;
         width: auto;
-        margin: 0 auto;
+        margin-left: 90px;
     }
+
     .history {
         width: 80%;
         margin: 0 auto;
         font-size: medium;
     }
+
     .browser {
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         margin-top: 20px;
     }
-    
+
     #browser-title {
         color: black;
         font-weight: bolder;
         text-transform: capitalize;
         font-size: 25px;
     }
-    
+
     .menu {
         display: flex;
         flex-direction: column;
         text-align: center;
     }
-    
+
     .menu-bar {
         color: white;
         text-transform: capitalize;
