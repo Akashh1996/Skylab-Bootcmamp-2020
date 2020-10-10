@@ -212,6 +212,7 @@ body {
 .carousel__title-bar__title,
 .carousel__title-bar__see {
 	cursor: pointer;
+	color: #fff;
 }
 
 .carousel__title-bar__title:hover,
