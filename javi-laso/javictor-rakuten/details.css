@@ -1,0 +1,140 @@
+body {
+	display: flex;
+	flex-direction: column;
+	line-height: 1;
+	color: #fff;
+	font-family: NotoSans-Regular, Arial, sans-serif;
+	background-color: black;
+}
+
+body,
+ul,
+figure,
+h1 {
+	margin: 0;
+	padding: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.trailer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.trailer iframe {
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+    max-height: 900px;
+}
+
+.trailer__rating {
+    display: flex;
+    align-items: center;
+    margin: 20px 0px 0px 0px;
+}
+
+.trailer__rating span {
+    color: #ffe300;
+    height: 100%;
+    margin:5px;
+}
+
+.buttons-see-coupon {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 15px;
+}
+
+.button-see-now,
+.button-coupon {
+    display: flex;
+    align-items: center;
+    margin: 2px;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	transition: 0.1s;
+    font-weight: 700;
+    border: none;
+}
+
+.button-see-now {
+    justify-content: space-between;
+    padding: 15px;
+    color: #252525;
+    background-color: #ffe300;
+}
+
+.button-see-now > span {
+    text-transform: uppercase;
+}
+
+.see-now__price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.button-coupon {
+	text-transform: uppercase;
+    justify-content: center;
+    padding: 20px;    
+	color: #ffe300;
+    background-color: black;
+    border: 2px solid #ffe300;
+}
+
+.price-small {
+    display: flex;
+    align-items: center;
+}
+
+.price-small .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.price-small .P {
+    color: #ffe300;
+    font-size: 8px;
+}
+
+.price-small > span {
+    font-size: 11px;
+    margin-right: 2px;
+    font-weight: initial;
+}
+
+/*
+<div class="buttons-see-coupon">
+    <button class="button-see-now">
+        <span class="see-now">Ver ahora</span>
+        <div class="see-now__price">
+            <span class="price-big">desde 21,99<symbol>€</symbol></span>
+            <span class="price-small">
+                <span>o 2199</span>
+                <div class="icon-container">
+                    <span class="material-icons">local_parking</span>
+                </div>
+            </span>
+        </div>
+    </button>
+    <button class="button-coupon"></button>
+</div>
+*/

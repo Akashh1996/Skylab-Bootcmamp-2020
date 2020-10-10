@@ -1,6 +1,4 @@
 body {
-	display: flex;
-	flex-direction: column;
 	line-height: 1;
 	color: #fff;
 	font-family: NotoSans-Regular, Arial, sans-serif;
@@ -41,7 +39,6 @@ figure {
 .button-bottom a {
 	text-decoration: none;
 	color: rgb(153, 153, 153);
-	text-transform: uppercase;
 	font-family: Arial, sans-serif;
 	text-transform: uppercase;
 	font-size: 10px;
