@@ -8,7 +8,13 @@ body {
     padding: 0;
 }
 
+.nav__mobile {
+    display: none;
+}
+
 @media screen and (max-width: 1024px) {
+
+
     h2 {
         font-size: 10px;
         font-family: NotoSans-Bold, Arial, sans-serif;
@@ -19,11 +25,16 @@ body {
         padding: 0;
     }
 
-    .nav {
+    span {
+        color: #999;
+    }
+
+    .nav__mobile {
         display: flex;
         justify-content: space-around;
         width: 100%;
         height: 56px;
+        background-color: black;
         border-top: 1px solid rgba(255, 255, 255, .2);
         box-shadow: 0 -5px 15px 0 rgba(0, 0, 0, .5);
         position: fixed;
@@ -32,21 +43,25 @@ body {
         left: 0;
     }
 
-    .nav__menu {
+    .nav__mobile__menu {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        width: 20%;
+        cursor: pointer;
     }
 
-    .nav__menu__icon {
-        margin: 0;
-        padding: 0;
+    .nav__mobile__menu:hover span {
+        color: yellow;
     }
 
-    #portada {
-        background: url(home.png);
-        width: 10px;
-        height: 10px;
+    .nav__mobile__menu:hover h2 {
+        color: yellow;
     }
+
+    .nav__mobile__menu__title {
+        padding-top: 5px;
+    }
+
 }
