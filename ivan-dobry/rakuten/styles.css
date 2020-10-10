@@ -42,6 +42,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	font-weight: bold;
 }
 
 .main__navmenu {
@@ -51,6 +52,7 @@
 	width: 100%;
 	justify-content: space-around;
 	min-width: 700px;
+	max-height: 60px;
 }
 
 .dropdown::after {
@@ -70,6 +72,16 @@
 	border: 2px solid transparent;
 	border-radius: 2px;
 	opacity: 1;
+	font-weight: bold;
+	font-size: 14px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: auto 20px;
+}
+
+.useritems button a {
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 .searchbox {
