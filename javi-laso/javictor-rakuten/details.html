@@ -4,9 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="details.css">
 </head>
 <body>
-    
+    <header>
+        <div class="header-navbar-container">
+            <nav class="header-navbar">
+                <ul class="navbar__buttons-bottom">
+                    <li class="button-bottom">
+                        <a href="#" class="home">
+                            <figure>
+                                <div class="img-container">
+                                    <span class="material-icons">
+                                        home
+                                    </span>
+                                </div>
+                                <figcaption>Portada</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="button-bottom">
+                        <a href="#">
+                            <figure>
+                                <div class="img-container">
+                                    <span class="material-icons">
+                                        movie
+                                    </span>
+                                </div>
+                                <figcaption>Cinema</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="button-bottom">
+                        <a href="#">
+                            <figure>
+                                <div class="img-container">
+                                    <span class="material-icons">
+                                        visibility
+                                    </span>
+                                </div>
+                                <figcaption>Free</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="button-bottom">
+                        <a href="#">
+                            <figure>
+                                <div class="img-container">
+                                    <span class="material-icons">
+                                        local_activity
+                                    </span>
+                                </div>
+                                <figcaption>Subscription</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="button-bottom">
+                        <a href="#">
+                            <figure>
+                                <div class="img-container">
+                                    <span class="material-icons">
+                                        person
+                                    </span>
+                                </div>
+                                <figcaption>Entrar</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+                <div class="navbar-top">
+                    <a href="index.html"><img src="img/rakuten-logo.jpg" alt="" class="rakuten-logo"></a>
+                    <ul class="cinema-free-suscription">
+                        <li>
+                            <a href="#" class="cinema">Cinema</a>
+                            <div class="cinema-options options">
+                                <a href="#" class="genres">Todos los géneros</a>
+                                <a href="#" class="family">Family</aa href="#">
+                            </div>
+                        </li>
+                        <li><a href="#" class="free">Free</a></li>
+                        <li>
+                            <a href="#" class="suscription">Suscription</a>
+                            <div class="suscription-options options">
+                                <a href="#" class="starzplay">Starzplay</a>
+                                <a href="#" class="rtv-suscription">Rtv suscripción</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="search-bar">
+                        <div class="img-container">
+                            <span class="material-icons">
+                                search
+                            </span>
+                        </div>
+                        <input id="search-bar-input" type="text" placeholder="Buscar" maxlength="64" onclick="document.getElementById('search-bar-input').value = ''">
+                    </div>
+                    <div class="flex-spacer"></div>
+                    <div class="help"><a href="#">Ayuda y dispositivos</a></div>
+                    <div class="login">
+                        <span class="enter"><a href="#">Entrar</a></span>
+                        <button class="sign-up">Registrarse</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
 </body>
 </html>
