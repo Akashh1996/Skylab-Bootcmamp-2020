@@ -330,7 +330,7 @@ figure {
     
     .cinema-home__work-pay-help {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         width: 100%;
         margin-top: 20px;
     }
@@ -347,6 +347,8 @@ figure {
         flex-direction: column;
         align-items: center;
         width: 30%;
+        text-decoration: none;
+        color:inherit;
     }
 
 	.footer-container {
