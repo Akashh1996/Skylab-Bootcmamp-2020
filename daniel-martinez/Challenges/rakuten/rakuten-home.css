@@ -1,0 +1,179 @@
+body {
+    background-color: #171717;
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    margin: 0;
+}
+
+/* .header-container {
+    display: none;
+} */
+
+.nav__items {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 60px;
+    font-weight: 400;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.nav__bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.nav__items__menu {
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    align-items: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    padding-top: 5px;
+    width: 100%;
+}
+
+.header-logo {
+    height: 37px;
+    width: 122px;
+    margin-left: 20px;
+}
+
+.header-help {
+    color: rgb(153, 153, 153);
+}
+
+.search__box__input {
+    padding-left: 40px;
+    height: 35px;
+    background-color: #333;
+    border-radius: 2px;
+    border: 0;
+    font-family: 'Noto Sans', sans-serif;
+    outline: none;
+}
+
+.search__box__input:focus {
+    background-color: white;
+    color: black;
+}
+
+.button-signup {
+    background-color: rgba(255, 227, 0, 1);
+    padding-right: 8px;
+    padding-left: 8px;
+    min-height: 32px;
+    border: 0;
+    border-radius: 2px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    outline: none;
+}
+
+.button-signup:hover {
+    background-color: rgba(255, 227, 0, .8);
+}
+
+.header__bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    background-color: #000;
+    z-index: 200;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    width: 100%;
+}
+
+.header__bottom__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 8px;
+    font-weight: 400;
+    color: #999;
+}
+
+.header__bottom__element {
+    width: 100%;
+    text-align: center;
+}
+
+.header__bottom__element:hover {
+    color: #ffe300;
+}
+
+.header__bottom__items__home, .header__bottom__items__cinema, .header__bottom__items__free, .header__bottom__items__subscription, .header__bottom__items__signIn {
+    height: 30px;
+    width: 100%;
+}
+
+.header__bottom__items__home {
+    background: url('rakuten-images-daina/home.png') bottom center no-repeat;
+}
+
+.header__bottom__items__home:hover {
+    background: url('rakuten-images-daina/home_hover.png') bottom center no-repeat;
+}
+
+.header__bottom__items__cinema {
+    background: url('rakuten-images-daina/cinema.png') bottom center no-repeat;
+}
+
+.header__bottom__items__cinema:hover {
+    background: url('rakuten-images-daina/cinema_hover.png') bottom center no-repeat;
+}
+
+.header__bottom__items__free {
+    background: url('rakuten-images-daina/eye.png') bottom center no-repeat;
+}
+
+.header__bottom__items__free:hover {
+    background: url('rakuten-images-daina/eye_hover.png') bottom center no-repeat;
+}
+
+.header__bottom__items__subscription {
+    background: url('rakuten-images-daina/ticket.png') bottom center no-repeat;
+}
+
+.header__bottom__items__subscription:hover {
+    background: url('rakuten-images-daina/ticket_hover.png') bottom center no-repeat;
+}
+
+.header__bottom__items__signIn {
+    background: url('rakuten-images-daina/user.png') bottom center no-repeat;
+}
+
+.header__bottom__items__signIn:hover {
+    background: url('rakuten-images-daina/user_hover.png') bottom center no-repeat;
+}
+
+.slider__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.slide-image {
+    width: 100%;
+}
+
+@media only screen and (min-width: 1025px) {
+    .nav__items__menu {
+        display: flex;
+    }
+    .nav__items {
+        background-color: black;
+    }
+    .header__bottom {
+        display: none;
+    }
+}
