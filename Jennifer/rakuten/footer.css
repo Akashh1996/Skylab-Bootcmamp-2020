@@ -137,13 +137,16 @@
 	padding-top: 5px;
 	color: rgba(255, 255, 255, 0.8);
 }
+.nav__menu__mobile {
+	display: none;
+}
 
 @media (max-width: 600px) {
 	.footer__info {
 		display: none;
 	}
 	.footer__mini {
-		background-color: black;
+		background-color: #0d0d0d;
 	}
 	.footer__mini__company {
 		text-align: center;
@@ -155,5 +158,27 @@
 		min-width: 30%;
 		margin-bottom: 20px;
 		margin-left: 35%;
+	}
+	.nav__menu__mobile {
+		height: 56px;
+		background-color: black;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	.items__nav__menu__mobile {
+		color: #838383;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 15px;
+	}
+
+	.items__nav__menu__mobile:hover {
+		color: #fee200;
+	}
+	.nav__mobile__text {
+		font-size: 8px;
+		margin-top: 4px;
 	}
 }
