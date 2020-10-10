@@ -1,55 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			href="https://fonts.googleapis.com/icon?family=Material+Icons"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="./styles/style.css" />
-		<title>RakutenTV</title>
-	</head>
-	<body>
-		<section>
-			<header>
-				<nav>
-					<div class="main-logo">
-						<img
-							src="./rakuten image/detalle/rktv-grey-eae681a197.svg"
-							alt=""
-						/>
-					</div>
-					<button class="header-btn__buttons home__button">
-						<span class="material-icons navigation-icon"> home </span>
-						<span>home</span>
-					</button>
-					<button class="header-btn__buttons free-button">
-						<span>free</span>
-						<span class="material-icons navigation-icon"> visibility </span>
-					</button>
-					<button class="header-btn__buttons subscrition-button">
-						<span>subscrition</span>
-						<span class="material-icons navigation-icon"> local_activity </span>
-					</button>
-					<div class="search-input">
-						<input
-							type="search"
-							name="search"
-							id="search"
-							placeholder="Buscar..."
-						/>
-						<span class="material-icons navigation-icon"> search </span>
-					</div>
-					<button class="header-btn__buttons enter-button">
-						<span>entrar</span>
-						<span class="material-icons navigation-icon"> account_box </span>
-					</button>
-					<button class="header-btn__buttons register-button">
-						<span>registrarse</span>
-					</button>
-				</nav>
-			</header>
-		</section>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./rakuten-image/detalle/favicon-503f333345.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Rakuten TV - Tu cine en casa</title>
+  </head>
+  <body>
+    <section id="nav-header">
+      <header class="header-wrapper">
+        <nav class="nav">
+          <div class="nav__items">
+            <div class="items__logo">
+              <img
+                src="./rakuten-image/detalle/GroupRakuteWhiteLogo.svg"
+                alt="Logo Rakuten"
+                class="logo-img"
+              />
+            </div>
+            <div class="items__menu">
+              <button class="menu__button home-menu">
+                <div class="button-group">
+                  <span class="material-icons navigation-icon"> home </span>
+                  <span class="icon-title">portada</span>
+                </div>
+              </button>
+              <button class="menu__button movie-menu">
+                <div class="button-group">
+                  <span class="material-icons navigation-icon"> movie </span>
+                  <span class="icon-title">cinema</span>
+                </div>
+              </button>
+              <button class="menu__button free-menu">
+                <div class="button-group">
+                  <span class="material-icons navigation-icon">
+                    visibility
+                  </span>
+                  <span class="icon-title">free</span>
+                </div>
+              </button>
+              <button class="menu__button subscrition-menu">
+                <div class="button-group">
+                  <span class="material-icons navigation-icon">
+                    local_activity
+                  </span>
+                  <span class="icon-title">subscrition</span>
+                </div>
+              </button>
+              <button class="menu__button enter-menu">
+                <div class="button-group">
+                  <span class="material-icons navigation-icon">
+                    account_box
+                  </span>
+                  <span class="icon-title">entrar</span>
+                </div>
+              </button>
+            </div>
+            <div class="items__search">
+              <div class="search-input">
+                <input
+                  type="search"
+                  name="search"
+                  id="search"
+                  placeholder="Buscar"
+                  maxlength="64"
+                  class="search-box__input"
+                />
+                <span class="fas fa-search input-icon"></span>
+              </div>
+            </div>
+            <div class="items__user">
+              <button class="user-login item-btn">entrar</button>
+              <button class="user-register item-btn">
+                registrarse
+              </button>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </section>
+    <section class="content"></section>
+    <script src="./app/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/8619792f44.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

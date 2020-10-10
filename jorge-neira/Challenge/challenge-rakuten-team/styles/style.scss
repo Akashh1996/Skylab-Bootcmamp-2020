@@ -1,13 +1,185 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap");
+
+$primaryColor: #fff;
+$secondaryColor: #000;
+
+$hoverColor: #ffe300;
+
+$navIconBg-Txt-Color: #999;
+
+$footerBgColor: #212121;
+$footerLinkBgColor: #101010;
+$footerLinkTextColor: #ccc;
+$footerFontSizeLinks: 14px;
+$footerFontSizeCopyRight: 10px;
 
 *,
 *::after,
 *::before {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+///////////////////////HEADER STYLES///////////////////////
+.header-wrapper {
+  .nav {
+    position: absolute;
+    height: 50px;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0.7) 20%,
+      rgba(0, 0, 0, 0.4) 50%,
+      transparent 100%
+    );
+    width: 100%;
+    .nav__items {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px 0;
+      .items__logo {
+        flex: 1;
+        .logo-img {
+          cursor: pointer;
+          filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.6));
+          height: 25px;
+          margin-top: 7px;
+        }
+      }
+      .items__menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        box-shadow: 0 -5px 15px 0 rgba(0, 0, 0, 0.5);
+        height: 56px;
+        width: 100%;
+        display: flex;
+        .menu__button {
+          border: none;
+          outline: none;
+          background-color: $secondaryColor;
+          width: 100%;
+          .button-group {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            .navigation-icon {
+              color: $navIconBg-Txt-Color;
+              font-size: 26px;
+            }
+            .icon-title {
+              text-transform: uppercase;
+              color: $navIconBg-Txt-Color;
+              font-weight: 600;
+              font-size: 10px;
+            }
+          }
+        }
+      }
+      .items__search {
+        .search-box__input {
+          display: none;
+        }
+        .input-icon {
+          cursor: pointer;
+          text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+          font-size: 20px;
+          color: $primaryColor;
+        }
+      }
+      .items__user {
+        display: none;
+      }
+    }
+  }
+}
+
+.content {
+  // background-image: url(../rakuten);
+  background-color: $navIconBg-Txt-Color;
+  height: 200vh;
+}
+
+@media screen and (min-width: 599px) {
+  .header-wrapper {
+    .nav {
+      position: fixed;
+      height: 56px;
+      background: $secondaryColor;
+      width: 100%;
+      .nav__items {
+        position: relative;
+        padding: 0 20px;
+        .items__logo {
+          flex: 1;
+          // order: 1;
+          .logo-img {
+            cursor: pointer;
+            filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.6));
+            height: 25px;
+            margin-top: 7px;
+          }
+        }
+        .items__menu {
+          position: relative;
+          bottom: 0;
+          left: 0;
+          box-shadow: none;
+          display: flex;
+          .menu__button {
+            // width: 100%;
+            .button-group {
+              cursor: pointer;
+              .navigation-icon {
+                display: none;
+              }
+              .icon-title {
+                color: $primaryColor;
+                font-size: 14px;
+              }
+            }
+          }
+          .home-menu {
+            display: none;
+          }
+          .enter-menu {
+            display: none;
+          }
+        }
+        .items__search {
+          .search-box__input {
+            display: inline;
+          }
+          .input-icon {
+            cursor: pointer;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+            font-size: 20px;
+            color: $primaryColor;
+          }
+        }
+        .items__user {
+          display: inline;
+          .item-btn {
+            outline: none;
+            border: none;
+            background-color: $secondaryColor;
+            color: $primaryColor;
+          }
+          .user-login:hover {
+            color: $hoverColor;
+            transition: color 0.1s ease;
+          }
+          .user-register {
+            color: $secondaryColor;
+            background-color: $hoverColor;
+          }
+        }
+      }
+    }
+  }
 }
