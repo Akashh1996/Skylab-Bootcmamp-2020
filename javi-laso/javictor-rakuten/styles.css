@@ -1,18 +1,16 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	background-color: #101010;
+}
+
 body {
-	display: flex;
-	flex-direction: column;
 	line-height: 1;
 	color: #fff;
 	font-family: NotoSans-Regular, Arial, sans-serif;
-	background-color: #101010;
 	overflow-x: hidden;
-}
-
-body,
-ul,
-figure {
-	margin: 0;
-	padding: 0;
+	font-size: bold;
 }
 
 .header-navbar {
@@ -133,8 +131,8 @@ figure {
 
 .about-conditions-workwithus li a {
 	color: rgb(204, 204, 204);
-    text-decoration: none;
-    font-size: 14px;
+	text-decoration: none;
+	font-size: 14px;
 }
 
 .about-conditions-workwithus li a:hover {
@@ -147,7 +145,82 @@ figure {
 	margin-top: 15px;
 }
 
-@media screen and (min-width: 1100px) {
+.sectionTitle {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.sectionNameTitle {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-weight: bold;
+	margin-top: 2%;
+	margin-bottom: 1%;
+}
+
+.seeAll {
+	display: none;
+}
+
+.carousel-container1,
+.carousel-container2,
+.carousel-container3 {
+	width: 90%;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.carousel-slide1,
+.carousel-slide2,
+.carousel-slide3 {
+	display: flex;
+	width: 100%;
+	height: 30%;
+}
+
+img {
+	padding: 1%;
+}
+
+img:hover {
+	border-top: 5px solid #ffe300;
+	border-left: 5px solid #ffe300;
+	border-right: 5px solid #ffe300;
+	border-bottom: 5px solid #ffe300;
+}
+
+#prevBtn1,
+#prevBtn2,
+#prevBtn3 {
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	left: 5%;
+	font-size: 60px;
+	color: white;
+	opacity: 0.7;
+	cursor: pointer;
+}
+#nextBtn1,
+#nextBtn2,
+#nextBtn3 {
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	right: 5%;
+	font-size: 60px;
+	color: white;
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+.hidden1,
+.hidden2,
+.hidden3 {
+	display: none;
 }
 
 @media screen and (min-width: 900px) {
@@ -311,8 +384,8 @@ figure {
 		text-align: center;
 	}
 
-    .cinema-home__paragraph h1,
-    .cinema-home__work-pay-help h2 {
+	.cinema-home__paragraph h1,
+	.cinema-home__work-pay-help h2 {
 		font-size: 22px;
 	}
 
@@ -320,36 +393,36 @@ figure {
 		max-width: 550px;
 	}
 
-    .paragraph-container span,
-    .cinema-home__work-pay-help span {
+	.paragraph-container span,
+	.cinema-home__work-pay-help span {
 		color: rgb(204, 204, 204);
 		font-size: 14px;
 		text-align: center;
 		line-height: 160%;
-    }
-    
-    .cinema-home__work-pay-help {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin-top: 20px;
-    }
+	}
 
-    .cinema-home img {
-        width: 180px;
-        height: 90px;
-    }
+	.cinema-home__work-pay-help {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-top: 20px;
+	}
 
-    .cinema-home__work, 
-    .cinema-home__pay, 
-    .cinema-home__help {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 30%;
-        text-decoration: none;
-        color:inherit;
-    }
+	.cinema-home img {
+		width: 180px;
+		height: 90px;
+	}
+
+	.cinema-home__work,
+	.cinema-home__pay,
+	.cinema-home__help {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 30%;
+		text-decoration: none;
+		color: inherit;
+	}
 
 	.footer-container {
 		margin-bottom: 0px;
@@ -375,5 +448,53 @@ figure {
 	}
 }
 
-@media screen and (min-width: 599px) and (max-width: 899px) {
+@media screen and (min-width: 600px) {
+	* {
+		padding: 0px;
+		margin: 0px;
+		box-sizing: border-box;
+	}
+
+	.seeAll {
+		display: block;
+	}
+
+	.carousel-container {
+		width: 90%;
+		margin: auto;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.carousel-slide {
+		display: flex;
+		width: 100%;
+		height: 30%;
+	}
+
+	#prevBtn {
+		position: absolute;
+		top: 50%;
+		z-index: 10;
+		left: 5%;
+		font-size: 60px;
+		color: white;
+		opacity: 0.7;
+		cursor: pointer;
+	}
+	#nextBtn {
+		position: absolute;
+		top: 50%;
+		z-index: 10;
+		right: 5%;
+		font-size: 60px;
+		color: white;
+		opacity: 0.7;
+		cursor: pointer;
+	}
+
+	.hidden {
+		display: block;
+		border: 1px solid rgba(255, 255, 255, 0);
+	}
 }
