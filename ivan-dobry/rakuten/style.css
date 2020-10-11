@@ -573,7 +573,7 @@ body {
 
 .carousel {
 	margin: 0px 0px 30px 30px;
-	overflow-x: hidden;
+	overflow-x: visible;
 }
 
 .first {
@@ -687,6 +687,16 @@ a {
 	justify-content: center;
 	align-items: center;
 	padding: 5px 20px;
+}
+
+.slide-generos,
+.box__title {
+	background-color: rgb(23, 23, 23);
+}
+
+#generos__first-element {
+	background-color: rgb(23, 23, 23);
+	padding-left: 40px;
 }
 
 .slide-generos img {
