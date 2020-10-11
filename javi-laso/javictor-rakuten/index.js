@@ -13,12 +13,6 @@ const carouselImages3= document.querySelectorAll('.carousel-slide3 img');
 const carouselSlideG= document.querySelector('.carousel-slideG');
 const carouselImagesG= document.querySelectorAll('.carousel-slideG div');
 
-const carouselSlideCast= document.querySelector('.carousel-slide-cast');
-const carouselImagesCast= document.querySelectorAll('.carousel-slide-cast a');
-
-let carouselSlideAnother= document.querySelector('.carousel-slide-another');
-let carouselImagesAnother= document.querySelectorAll('.carousel-slide-another .img-another');
-
 //Buttons
 const prevBtnS=document.querySelector('#prevBtnS');
 const nextBtnS=document.querySelector('#nextBtnS');
@@ -34,12 +28,6 @@ const nextBtn3=document.querySelector('#nextBtn3');
 
 const prevBtnG=document.querySelector('#prevBtnG');
 const nextBtnG=document.querySelector('#nextBtnG');
-
-const prevBtnCast=document.querySelector('#prevBtnCast');
-const nextBtnCast=document.querySelector('#nextBtnCast');
-
-const prevBtnAnother=document.querySelector('#prevBtnAnother');
-const nextBtnAnother=document.querySelector('#nextBtnAnother');
 
 // CAROUSEL SECTION
 
@@ -191,123 +179,5 @@ carouselSlide3.addEventListener('transitionend',()=>{
         carouselSlide3.style.transition='none';
         counter3=carouselImages3.length - counter3;
         carouselSlide3.style.transform='translateX('+(-size3*counter3)+'px)';
-    }
-});
-
-// CAROUSEL GENDER
-
-//Counter
-let counterG=0;
-const sizeG= carouselImagesG[0].clientWidth;
-
-carouselSlideG.getElementsByClassName.transform='translateX('+(-sizeG*counterG)+'px)';
-
-//Button Listeners
-
-nextBtnG.addEventListener('click',()=>{
-    if (counterG>=carouselImagesG.length-1)return;
-    carouselSlideG.style.transition="transform 0.7s ease-in-out";
-    counterG+=7;
-    carouselSlideG.style.transform='translateX('+(-sizeG*counterG)+'px)';
-});
-
-prevBtnG.addEventListener('click',()=>{
-    if (counterG<=0)return;
-    carouselSlideG.style.transition="transform 0.7s ease-in-out";
-    counterG-=7;
-    carouselSlideG.style.transform='translateX('+(-sizeG*counterG)+'px)';
-});
-
-carouselSlideG.addEventListener('transitionend',()=>{
-    if(carouselImagesG[counterG].id==='lastCloneG'){
-        carouselSlideG.style.transition='none';
-        counterG=carouselImagesG.length - counterG;
-        carouselSlideG.style.transform='translateX('+(-sizeG*counterG)+'px)';
-
-    }
-    if(carouselImagesG[counterG].id==='firstCloneG'){
-        carouselSlideG.style.transition='none';
-        counterG=carouselImagesG.length - counterG;
-        carouselSlideG.style.transform='translateX('+(-sizeG*counterG)+'px)';
-
-    }
-});
-
-
-// CAROUSEL CAST
-
-//Counter
-let counterCast=1;
-const sizeCast= carouselImagesCast[0].clientWidth;
-
-carouselSlideCast.getElementsByClassName.transform='translateX('+(-sizeCast*counterCast)+'px)';
-
-// Button Listeners
-
-nextBtnCast.addEventListener('click',()=>{
-    if (counterCast>=carouselImagesCast.length-1)return;
-    carouselSlideCast.style.transition="transform 0.7s ease-in-out";
-    counterCast+=3;
-    carouselSlideCast.style.transform='translateX('+(-sizeCast*counterCast)+'px)';
-});
-
-prevBtnCast.addEventListener('click',()=>{
-    if (counterCast<=0)return;
-    carouselSlideCast.style.transition="transform 0.7s ease-in-out";
-    counterCast-=4;
-    carouselSlideCast.style.transform='translateX('+(-sizeCast*counterCast)+'px)';
-});
-
-carouselSlideCast.addEventListener('transitionend',()=>{
-    if(carouselImagesCast[counterCast].id==='lastCloneCast'){
-        carouselSlideCast.style.transition='none';
-        counterCast=carouselImagesCast.length - counterCast;
-        carouselSlideCast.style.transform='translateX('+(-sizeCast*counterCast)+'px)';
-
-    }
-    if(carouselImagesCast[counterCast].id==='firstCloneCast'){
-        carouselSlideCast.style.transition='none';
-        counterCast=carouselImagesCast.length - counterCast;
-        carouselSlideCast.style.transform='translateX('+(-sizeCast*counterCast)+'px)';
-    }
-});
-
-// CAROUSEL ANOTHER FILMS
-
-//Counter
-let counterAnother = 1;
-// const sizeAnother = carouselImagesAnother[0].clientWidth;
-const sizeAnother = 200;
-console.log(sizeAnother);
-
-carouselSlideAnother.getElementsByClassName.transform='translateX(' + (-sizeAnother * counterAnother) + 'px)';
-
-//Button Listeners
-
-nextBtnAnother.addEventListener('click',() => {
-    if (counterAnother >= carouselImagesAnother.length - 1) {
-        counterAnother = carouselImagesAnother.length - 1;
-        return;
-    }
-    carouselSlideAnother.style.transition = "transform 0.7s ease-in-out";
-    counterAnother += 3;
-    carouselSlideAnother.style.transform = 'translateX(' + (-sizeAnother * counterAnother) + 'px)';
-
-    if (counterAnother >= carouselImagesAnother.length - 1) {
-        carouselSlideAnother.style.transform = 'translateX(' + (-(carouselImagesAnother.length - 2) * sizeAnother) + 'px)';
-    }
-});
-
-prevBtnAnother.addEventListener('click',()=>{
-    if (counterAnother <= 0){
-        return;
-    }
-    carouselSlideAnother.style.transition = "transform 0.7s ease-in-out";
-    counterAnother -= 4;
-    carouselSlideAnother.style.transform = 'translateX(' + (-sizeAnother * counterAnother) + 'px)';
-
-    if (counterAnother <= 0){
-        counterAnother = 0;
-        carouselSlideAnother.style.transform = 'translateX(0px)';
     }
 });
