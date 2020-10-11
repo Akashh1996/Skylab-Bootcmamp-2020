@@ -288,6 +288,11 @@ body {
 	background-color: #ffe300;
 }
 
+.image__icon a {
+	position: absolute;
+	opacity: 0%;
+}
+
 @media screen and (max-width: 1024px) {
 	.header {
 		display: none;
