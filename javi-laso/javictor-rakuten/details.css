@@ -483,9 +483,14 @@ h1 {
 
 .carousel-slide-another img {
 	width: 200px;
+	padding: 0px 4px;
 }
 
 @media screen and (min-width: 900px) {
+	main {
+		margin-bottom: 0;
+	}
+
 	.buttons-see-coupon {
 		flex-direction: row;
 		justify-content: center;
