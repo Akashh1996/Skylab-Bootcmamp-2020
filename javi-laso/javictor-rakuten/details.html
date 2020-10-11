@@ -113,7 +113,9 @@
     <main>
         <div class="main-container">
             <div class="trailer">
-                <iframe src="https://www.youtube.com/embed/KK8FHdFluOQ" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/KK8FHdFluOQ" frameborder="0" allowfullscreen>
+                    <div class="gradient"></div>
+                </iframe>
                 <div class="trailer__rating">
                     <span class="material-icons">star_rate</span>
                     <span>5.4</span>
@@ -219,10 +221,229 @@
                                 </tbody>
                             </table>
                         </div>
+                        <div class="cast">
+                            <div class="cast__container">
+                                <div class="title">
+                                    <span class="material-icons">movie</span>
+                                    <span>Dirección y reparto</span>
+                                </div>
+                                <div class="carousel-containerCast">
+                                    <span class="material-icons" id="nextBtnCast"> keyboard_arrow_right </span>
+                                    <span class="material-icons" id="prevBtnCast"> keyboard_arrow_left </span>
+                                    <div class="carousel-slide-cast">
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/niki-caro-1525311147-width170-quality50.jpeg" alt="Niki Caro">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Niki Caro</span>
+                                                    <span class="director">DIRECCIÓN</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/yifei-liu-1525283501-width170-quality50.jpeg" alt="Yifei Liu">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Yifei Liu</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/donnie-yen-1525279749-width170-quality50.jpeg" alt="Donnie Yen">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Donnie Yen</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/li-gong-1525283640-width170-quality50.jpeg" alt="Li Gong">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Li Gong</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/jet-li-1525277511-width170-quality50.jpeg" alt="Jet li">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Jet li</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/jason-scott-lee-1525295648-width170-quality50.jpeg" alt="Jason Scott Lee">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Jason Scott Lee</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/yoson-an-1558058544-width170-quality50.jpeg" alt="Yoson An" id="lastCloneCast">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Yoson An</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/tzi-ma-1525278658-width170-quality50.jpeg" alt="Tzi Ma">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Tzi Ma</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/rosalind-chao-1525296176-width170-quality50.jpeg" alt="Rosalind Chao">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Rosalind Chao</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/pei-pei-cheng-1525291918-width170-quality50.jpeg" alt="Pei-pei Cheng" id="firstCloneCast">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Pei-pei Cheng</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                          
+                        <button id="prevBtnCast" class="hiddenCast">P</button>
+                        <button id="nextBtnCast" class="hiddenCast">N</button>
+
+                        <div class="score-genders">
+                            <div class="score">
+                                <div class="score__container">
+                                    <div class="title">
+                                        <span class="material-icons">star</span>
+                                        <span>Puntuación</span>
+                                    </div>
+                                    <div class="scores-various">
+                                        <div class="score__circle-name">
+                                            <div class="score__circle">
+                                                <div class="score__circle">                                            
+                                                    <div class="half-circle2"></div>
+                                                    <div class="half-circle">
+                                                        <div class="inner-circle">
+                                                            <span class="number">5.4</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="score__name">IMDb</span>
+                                        </div>
+                                        <div class="score__circle-name">
+                                            <div class="score__circle">                                            
+                                                <div class="half-circle3"></div>
+                                                <div class="half-circle">
+                                                    <div class="inner-circle">
+                                                        <span class="number">7.4</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="score__name">The Movie Database</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="genders">
+                                <div class="genders__container">
+                                    <div class="title">
+                                        <span class="fas fa-theater-masks"></span>
+                                        <span>Géneros</span>
+                                    </div>
+                                    <div class="genders__content">
+                                        <div class="content__icon-name">
+                                            <div class="icon-circle">
+                                                <img src="img/action-1591342700.png" alt="Acción">
+                                            </div>
+                                            <span class="icon-name">Acción</span>
+                                        </div>
+                                        <div class="content__icon-name">
+                                            <div class="icon-circle">
+                                                <img src="img/adventure-1591342698.png" alt="Aventuras">
+                                            </div>
+                                            <span class="icon-name">Aventuras</span>
+                                        </div>
+                                        <div class="content__icon-name">
+                                            <div class="icon-circle">
+                                                <img src="img/kids-family-1591342710.png" alt="Cinem familiar">
+                                            </div>
+                                            <span class="icon-name">Cinem familiar</span>
+                                        </div>
+                                        <div class="content__icon-name">
+                                            <div class="icon-circle">
+                                                <img src="img/disney-1591342735.png" alt="Disney">
+                                            </div>
+                                            <span class="icon-name">Disney</span>
+                                        </div>
+                                        <div class="content__icon-name">
+                                            <div class="icon-circle">
+                                                <img src="img/drama-1591342739.png" alt="Drama">
+                                            </div>
+                                            <span class="icon-name">Drama</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="another-films"></div>
+            <div class="another-films">
+                <h2>Otras películas que te pueden gustar:</h2>                
+                <div class="carousel-containerAnother">
+                    <button class="material-icons" id="nextBtnAnother"> keyboard_arrow_right </button>
+                    <button class="material-icons" id="prevBtnAnother"> keyboard_arrow_left </button>
+                    <div class="carousel-slide-another">
+                      <img src="img/mainpage/capitan-america-civil-war-1558444881-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/alien-covenant-1558458967-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/la-influencia-1601890708-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/la-fuerza-de-la-naturaleza-1600249838-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/a-vigilante-1599127920-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/atrapado-1601552390-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/la-herencia-1595322451-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/deep-blue-sea-3-1598947260-width217-quality80.jpeg" id="lastCloneAnother" alt="" class="img-another"/>
+                      <img src="img/mainpage/oro-blanco-1596785227-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/escape-plan-3-1597237664-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/la-lista-de-a-la-mierda-1601555234-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/mortal-1597848971-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/desconectados-1600768252-width217-quality80.jpeg" id="firstCloneAnother" alt="" class="img-another"/>
+                    </div>
+                  </div>
+  
+                  <button id="prevBtnAnother" class="hiddenAnother">P</button>
+                  <button id="nextBtnAnother" class="hiddenAnother">N</button>
+            </div>
         </div>
     </main>
     <footer>
@@ -275,5 +496,6 @@
             </div>
         </div>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>
