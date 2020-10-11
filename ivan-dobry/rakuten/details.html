@@ -1,55 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="shortcut icon"
+        href="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f81e309067bcf2ba584da0e/ab17fc05123f20dfd4c62dc9714a5540/web-icon.png">
+    <!--stylesheet----------------->
+    <link rel="stylesheet" href="style-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--light-slider.css----------->
+    <link rel="stylesheet" href="lightslider.css">
+    <!--Jquery--------------------->
+    <script src="jquery.js" type="text/javascript"></script>
+    <!--lightslider.js------------->
+    <script src="lightslider.js" type="text/javascript"></script>
+
+    <title>Rakuten Challenge</title>
 </head>
+
 <body>
+    <!--Header--------------------->
     <header class="header">
         <nav class="desktopNav">
             <div class="main__navmenu">
                 <div class="rakutenLogo">
                     <div class="nav__items__logo">
-                        <a class="nav__items__logo__link" id="Rakuten TV" target="_self"
-                            ><span
-                                ><svg
-                                    height="42"
-                                    viewBox="0 0 187 42"
-                                    width="187"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
+                        <a class="nav__items__logo__link" id="Rakuten TV" target="_self"><span><svg height="42"
+                                    viewBox="0 0 187 42" width="187" xmlns="http://www.w3.org/2000/svg">
                                     <g fill="#fff" fill-rule="evenodd">
                                         <path
-                                            d="m162.126 10.7207c-.054-.891-.075-1.259.593-1.663.467-.283 3.036-1.768 7.653-3.196.57-.178 1.09-.066 1.422.307.345.389.419.983.181 1.509-.433.952-.55 1.847-.068 2.224.395.309.782.418 1.982-.207 1.573-.821 3.433-2.885 3.32-6.274-.041-1.213-.495-2.119-1.349-2.695-.806-.544-1.888-.726-2.988-.726-2.999 0-4.453.746-8.406 2.158-5.48 1.958-12.385 4.246-16.209 5.186-1.572.386-2.948 1.543-2.948 3.131 0 2.512 3.026 3.152 5.096 2.459.435-.145 4.729-1.692 6.25-1.887.217-.028.322.053.339.212.025.209.118 2.362.158 3.335.169 4.105.515 12.084.547 12.642.062 1.058.07 4.386 1.882 4.386 1.685 0 2.497-1.8 2.924-4.386.601-3.656.1-8.888-.143-13.071-.069-1.181-.236-3.444-.236-3.444"
-                                        ></path>
+                                            d="m162.126 10.7207c-.054-.891-.075-1.259.593-1.663.467-.283 3.036-1.768 7.653-3.196.57-.178 1.09-.066 1.422.307.345.389.419.983.181 1.509-.433.952-.55 1.847-.068 2.224.395.309.782.418 1.982-.207 1.573-.821 3.433-2.885 3.32-6.274-.041-1.213-.495-2.119-1.349-2.695-.806-.544-1.888-.726-2.988-.726-2.999 0-4.453.746-8.406 2.158-5.48 1.958-12.385 4.246-16.209 5.186-1.572.386-2.948 1.543-2.948 3.131 0 2.512 3.026 3.152 5.096 2.459.435-.145 4.729-1.692 6.25-1.887.217-.028.322.053.339.212.025.209.118 2.362.158 3.335.169 4.105.515 12.084.547 12.642.062 1.058.07 4.386 1.882 4.386 1.685 0 2.497-1.8 2.924-4.386.601-3.656.1-8.888-.143-13.071-.069-1.181-.236-3.444-.236-3.444">
+                                        </path>
                                         <path
-                                            d="m184.6924 4.1435c-2.267 0-4.425 4.197-5.978 7.923-1.96 4.711-3.058 8.941-3.716 10.348-.517-1.36-1.872-5.359-2.563-6.809-1.176-2.471-2.432-4.368-4.029-4.368-.892 0-1.949.548-1.949 2.135 0 1.125.466 2.531.953 3.826.155.416 3.208 7.814 3.645 9.181 0 0 1.456 4.474 1.588 4.869.891 2.681 1.729 3.02 2.293 3.02.919 0 2.17-.37 2.809-3.107.406-1.745.986-3.728 1.481-5.352.898-2.94 3.146-8.501 4.592-11.886 1.173-2.745 2.645-5.907 2.645-7.871 0-.931-.393-1.909-1.771-1.909"
-                                        ></path>
+                                            d="m184.6924 4.1435c-2.267 0-4.425 4.197-5.978 7.923-1.96 4.711-3.058 8.941-3.716 10.348-.517-1.36-1.872-5.359-2.563-6.809-1.176-2.471-2.432-4.368-4.029-4.368-.892 0-1.949.548-1.949 2.135 0 1.125.466 2.531.953 3.826.155.416 3.208 7.814 3.645 9.181 0 0 1.456 4.474 1.588 4.869.891 2.681 1.729 3.02 2.293 3.02.919 0 2.17-.37 2.809-3.107.406-1.745.986-3.728 1.481-5.352.898-2.94 3.146-8.501 4.592-11.886 1.173-2.745 2.645-5.907 2.645-7.871 0-.931-.393-1.909-1.771-1.909">
+                                        </path>
                                         <path d="m111.2695 35.3252h-83.625l6.661 6.661z"></path>
                                         <path
-                                            d="m30.5391 26.166c-2.889 0-5.004-2.844-5.004-6.438 0-3.591 2.115-6.436 5.004-6.436 2.893 0 4.931 2.845 4.931 6.436 0 3.594-2.038 6.438-4.931 6.438zm4.852-17.784v1.007c-1.552-.989-2.945-1.565-4.852-1.565-5.858 0-10.309 5.343-10.309 11.904 0 6.563 4.451 11.902 10.309 11.902 1.907 0 3.3-.572 4.852-1.563v1.006h5.15v-22.691z"
-                                        ></path>
+                                            d="m30.5391 26.166c-2.889 0-5.004-2.844-5.004-6.438 0-3.591 2.115-6.436 5.004-6.436 2.893 0 4.931 2.845 4.931 6.436 0 3.594-2.038 6.438-4.931 6.438zm4.852-17.784v1.007c-1.552-.989-2.945-1.565-4.852-1.565-5.858 0-10.309 5.343-10.309 11.904 0 6.563 4.451 11.902 10.309 11.902 1.907 0 3.3-.572 4.852-1.563v1.006h5.15v-22.691z">
+                                        </path>
                                         <path
-                                            d="m76.6465 8.3818v13.33c0 2.5-1.719 4.612-4.221 4.612-2.5 0-4.218-2.112-4.218-4.612v-13.33h-5.151v13.33c0 5.469 3.741 9.919 9.212 9.919 2.533 0 4.378-1.401 4.378-1.401v.843h5.149v-22.691z"
-                                        ></path>
+                                            d="m76.6465 8.3818v13.33c0 2.5-1.719 4.612-4.221 4.612-2.5 0-4.218-2.112-4.218-4.612v-13.33h-5.151v13.33c0 5.469 3.741 9.919 9.212 9.919 2.533 0 4.378-1.401 4.378-1.401v.843h5.149v-22.691z">
+                                        </path>
                                         <path
-                                            d="m124.6328 31.0732v-13.33c0-2.501 1.718-4.612 4.22-4.612 2.5 0 4.219 2.111 4.219 4.612v13.33h5.151v-13.33c0-5.469-3.742-9.919-9.213-9.919-2.533 0-4.377 1.401-4.377 1.401v-.843h-5.15v22.691z"
-                                        ></path>
+                                            d="m124.6328 31.0732v-13.33c0-2.501 1.718-4.612 4.22-4.612 2.5 0 4.219 2.111 4.219 4.612v13.33h5.151v-13.33c0-5.469-3.742-9.919-9.213-9.919-2.533 0-4.377 1.401-4.377 1.401v-.843h-5.15v22.691z">
+                                        </path>
                                         <path
-                                            d="m95.6768 25.7036c-.463.314-1.047.558-1.723.558-.84 0-2.427-.642-2.427-2.784v-9.71h4.404v-5.386h-4.404v-5.655h-5.151l.001 5.655h-2.725v5.386h2.725v9.789c-.002 5.067 3.816 8.093 7.655 8.093 1.432 0 3.418-.468 5.039-1.428z"
-                                        ></path>
+                                            d="m95.6768 25.7036c-.463.314-1.047.558-1.723.558-.84 0-2.427-.642-2.427-2.784v-9.71h4.404v-5.386h-4.404v-5.655h-5.151l.001 5.655h-2.725v5.386h2.725v9.789c-.002 5.067 3.816 8.093 7.655 8.093 1.432 0 3.418-.468 5.039-1.428z">
+                                        </path>
                                         <path
-                                            d="m53.3447 19.018 8.834-10.636h-7.219l-6.178 7.905v-15.434h-5.304v30.22h5.304v-9.321l7.595 9.321h7.216z"
-                                        ></path>
+                                            d="m53.3447 19.018 8.834-10.636h-7.219l-6.178 7.905v-15.434h-5.304v30.22h5.304v-9.321l7.595 9.321h7.216z">
+                                        </path>
                                         <path
-                                            d="m112.0684 16.7983h-9.275c1.083-5.314 8.271-5.62 9.275 0m-4.496-8.993c-5.961 0-10.236 5.239-10.236 11.922 0 7.028 5.366 11.924 10.748 11.924 2.715 0 6.196-.932 9.121-5.08l-4.549-2.627c-3.519 5.186-9.382 2.554-10.059-2.632l14.835.004c1.27-8.15-4.001-13.511-9.86-13.511"
-                                        ></path>
+                                            d="m112.0684 16.7983h-9.275c1.083-5.314 8.271-5.62 9.275 0m-4.496-8.993c-5.961 0-10.236 5.239-10.236 11.922 0 7.028 5.366 11.924 10.748 11.924 2.715 0 6.196-.932 9.121-5.08l-4.549-2.627c-3.519 5.186-9.382 2.554-10.059-2.632l14.835.004c1.27-8.15-4.001-13.511-9.86-13.511">
+                                        </path>
                                         <path
-                                            d="m5.3857 8.1088h3.516c2.418 0 4.396 1.968 4.396 4.391 0 2.43-1.978 4.396-4.396 4.396h-3.516zm0 22.964v-8.791h3.811l6.594 8.791h6.743l-7.969-10.608c2.483-1.782 4.115-4.681 4.115-7.965 0-5.393-4.386-9.773-9.778-9.773h-8.902v28.346z"
-                                        ></path>
-                                    </g></svg></span
-                        ></a>
+                                            d="m5.3857 8.1088h3.516c2.418 0 4.396 1.968 4.396 4.391 0 2.43-1.978 4.396-4.396 4.396h-3.516zm0 22.964v-8.791h3.811l6.594 8.791h6.743l-7.969-10.608c2.483-1.782 4.115-4.681 4.115-7.965 0-5.393-4.386-9.773-9.778-9.773h-8.902v28.346z">
+                                        </path>
+                                    </g>
+                                </svg></span></a>
                     </div>
                 </div>
                 <div class="navMenu dropdown">
@@ -64,17 +74,12 @@
                         <a>STARZ PLAY</a><a>RTV SUSCRIPCIÓN</a>
                     </div>
                 </div>
-                </div>
-                </div>
-                <div class="searchbox">
-                    <span class="material-icons searchicon"> search </span>
-                    <input
-                        type="text"
-                        name="searchbox"
-                        id="searchbox"
-                        placeholder="Buscar"
-                    />
-                </div>
+            </div>
+            </div>
+            <div class="searchbox">
+                <span class="material-icons searchicon"> search </span>
+                <input type="text" name="searchbox" id="searchbox" placeholder="Buscar" />
+            </div>
             </div>
             <div class="useritems">
                 <!--<a>AYUDA Y DISPOSITIVOS</a>-->
@@ -83,5 +88,240 @@
             </div>
         </nav>
     </header>
+    <!--Carousel------------------->
+    <section class="carousel">
+        <div class="carousel__title-bar">
+            <span class="carousel__title-bar__title">Otras películas que te pueden gustar</span>
+        </div>
+        <section class="carousel__details">
+            <ul id="carousel__details" class="cs-hidden">
+                <!--1------------------------------->
+                <li class="item-a">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/c65c64e3db76e34c224e2787a339d7fc/las-aventuras-del-doctor-dolittle-1586250044-width217-quality80.jpeg"
+                                alt="doctor-dolittle">
+                        </div>
+                    </div>
+                </li>
+                <!--2------------------------------->
+                <li class="item-b">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/6423c195975bdeaed138fdf4aee5a62b/lo-dejo-cuando-quiera-2019-1565707317-width217-quality80.jpeg"
+                                alt="lo-dejo-cuando-quiera">
+                        </div>
+                    </div>
+                </li>
+                <!--3------------------------------->
+                <li class="item-c">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/f4510663d8daee7592d5ab62d57c3ea8/geostorm-1558460693-width217-quality80.jpeg"
+                                alt="geostorm">
+                        </div>
+                    </div>
+                </li>
+                <!--4------------------------------->
+                <li class="item-d">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/a21783c512b1911335be260cbf2ba248/godzilla-rey-de-los-monstruos-1564579273-width217-quality80.jpeg"
+                                alt="godzilla">
+                        </div>
+                    </div>
+                </li>
+                <!--5------------------------------->
+                <li class="item-e">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/516fb06c4cacea1dd431a3a6d4661462/bajo-el-mismo-techo-1558483127-width217-quality80.jpeg"
+                                alt="bajo-el-mismo-techo">
+                        </div>
+                    </div>
+                </li>
+                <!--6------------------------------->
+                <li class="item-f">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/54d6824490f48ba07d0d137ba69a130e/malos-tiempos-en-el-royale-1558478567-width217-quality80.jpeg"
+                                alt="malos-tiempos-en-el-royale">
+                        </div>
+                    </div>
+                </li>
+                <!--7------------------------------->
+                <li class="item-g">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/8e801f3537a3a2885ce2882b426c50df/crimen-a-contrarreloj-1588603638-width217-quality80.jpeg"
+                                alt="crimen-a-contrareloj">
+                        </div>
+                    </div>
+                </li>
+                <!--8------------------------------->
+                <li class="item-h">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/62c9346d8ccc07b4a6af49281b7d4b08/pesadillas-2-noche-de-halloween-1558465179-width217-quality80.jpeg"
+                                alt="pesadillas-2">
+                        </div>
+                    </div>
+                </li>
+                <!--9------------------------------->
+                <li class="item-i">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/364c69520f65ec3460fdad05ecdef7f0/durante-la-tormenta-1558478564-width217-quality80.jpeg"
+                                alt="durante-la-tormenta">
+                        </div>
+                    </div>
+                </li>
+                <!--10------------------------------->
+                <li class="item-j">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/b32a7f4bd13e083b96ad88d497a866d0/cats-1586171337-width217-quality80.jpeg"
+                                alt="cats">
+                        </div>
+                    </div>
+                </li>
+                <!--11------------------------------->
+                <li class="item-k">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/b1b32b4421a6dd3857217529b2c440dd/first-man-el-primer-hombre-1558478149-width217-quality80.jpeg"
+                                alt="first-man">
+                        </div>
+                    </div>
+                </li>
+                <!--12------------------------------->
+                <li class="item-l">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/3082f0bc7994302f9d85f664e7640b40/peter-rabbit-1558461709-width217-quality80.jpeg"
+                                alt="peter-rabit">
+                        </div>
+                    </div>
+                </li>
+                <!--13------------------------------->
+                <li class="item-m">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/6f093a899527188f3a782dc18f9d5fb3/jumanji-bienvenidos-a-la-jungla-1558459394-width217-quality80.jpeg"
+                                alt="jumanji">
+                        </div>
+                    </div>
+                </li>
+                <!--14------------------------------->
+                <li class="item-n">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/75a6a763650fe3d12c9be58e6493aa26/viudas-1558478969-width217-quality80.jpeg"
+                                alt="viudas">
+                        </div>
+                    </div>
+                </li>
+                <!--15------------------------------->
+                <li class="item-ñ">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/013a7a16e2279b215a0112dc93a98bd6/inside-kilian-jornet-1579262727-width217-quality80.jpeg"
+                                alt="inside-kilian-jornet">
+                        </div>
+                    </div>
+                </li>
+                <!--16------------------------------->
+                <li class="item-o">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/e007e85924d5e7211718a0e0845d1132/the-spirit-1562145301-width217-quality80.jpeg"
+                                alt="the_spirit">
+                        </div>
+                    </div>
+                </li>
+                <!--10------------------------------->
+                <li class="item-o">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/05a3a2f5591cc859764bf80d7180e40e/el-juego-del-amor-1558427372-width217-quality80.jpeg"
+                                alt="el-juego-del-amor">
+                        </div>
+                    </div>
+                </li>
+                <!--10------------------------------->
+                <li class="item-p">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/bcd9922d7049a0d342a6839f4ee6578a/el-rey-leon-1558427984-width217-quality80.jpeg"
+                                alt="el-rey-leon">
+                        </div>
+                    </div>
+                </li>
+                <!--END------------------------------->
+                <li class="item-q">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/170e16cd9c8710fe8d8d2bd1b0183e5f/carousel-end-width217.jpeg"
+                                alt="end" id="carousel__end">
+                        </div>
+                    </div>
+                </li>
+                <!--END------------------------------->
+                <li class="item-r">
+                    <!--box-slider∫------------------->
+                    <div class="box">
+                        <!--img-box----------->
+                        <div class="slide-img">
+                            <img src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078c22fd9a26d7272dd95/170e16cd9c8710fe8d8d2bd1b0183e5f/carousel-end-width217.jpeg"
+                                alt="end" id="carousel__end-space">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </section>
+
+
+    <script src="app.js" type="text/javascript"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
