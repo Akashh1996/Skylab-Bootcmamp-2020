@@ -62,7 +62,7 @@ body {
 
 .useritems__help {
 	color: #999;
-	margin-right: 20px;
+	margin: 0 20px;
 	font-size: 14px;
 	text-transform: uppercase;
 	transition: color .1s ease;
@@ -309,6 +309,13 @@ a {
 	width: 30px;
 }
 
+/*///////////MEDIA QUERY FOR AYUDA Y DISPOSITIVOS///////*/
+
+@media screen and (max-width: 1250px) {
+	.useritems__help {
+		visibility: hidden;
+	}
+}
 
 
 
