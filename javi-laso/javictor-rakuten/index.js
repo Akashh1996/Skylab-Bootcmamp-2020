@@ -4,6 +4,10 @@ const carouselSlide2= document.querySelector('.carousel-slide2');
 const carouselImages2= document.querySelectorAll('.carousel-slide2 img');
 const carouselSlide3= document.querySelector('.carousel-slide3');
 const carouselImages3= document.querySelectorAll('.carousel-slide3 img');
+const carouselSlideS= document.querySelector('.carousel-slideS');
+const carouselImagesS= document.querySelectorAll('.carousel-slideS img');
+const carouselSlideG= document.querySelector('.carousel-slideG');
+const carouselImagesG= document.querySelectorAll('.carousel-slideG div');
 
 //Buttons
 const prevBtn1=document.querySelector('#prevBtn1');
@@ -12,6 +16,48 @@ const prevBtn2=document.querySelector('#prevBtn2');
 const nextBtn2=document.querySelector('#nextBtn2');
 const prevBtn3=document.querySelector('#prevBtn3');
 const nextBtn3=document.querySelector('#nextBtn3');
+const prevBtnS=document.querySelector('#prevBtnS');
+const nextBtnS=document.querySelector('#nextBtnS');
+const prevBtnS=document.querySelector('#prevBtnG');
+const nextBtnS=document.querySelector('#nextBtnG');
+
+// CAROUSEL SECTION-MENU
+
+//Counter
+let counterS=1;
+const sizeS= carouselImagesS[0].clientWidth;
+
+carouselSlideS.getElementsByClassName.transform='translateX('+(-sizeS*counterS)+'px)';
+
+//Button Listeners
+
+nextBtnS.addEventListener('click',()=>{
+    if (counterS>=carouselImagesS.length-1)return;
+    carouselSlideS.style.transition="transform 0.7s ease-in-out";
+    counterS+=3;
+    carouselSlideS.style.transform='translateX('+(-sizeS*counterS)+'px)';
+});
+
+prevBtnS.addEventListener('click',()=>{
+    if (counterS<=0)return;
+    carouselSlideS.style.transition="transform 0.7s ease-in-out";
+    counterS-=3;
+    carouselSlideS.style.transform='translateX('+(-sizeS*counterS)+'px)';
+});
+
+carouselSlideS.addEventListener('transitionend',()=>{
+    if(carouselImagesS[counterS].id==='lastCloneS'){
+        carouselSlideS.style.transition='none';
+        counterS=carouselImagesS.length - counterS;
+        carouselSlideS.style.transform='translateX('+(-sizeS*counterS)+'px)';
+
+    }
+    if(carouselImagesS[counterS].id==='firstCloneS'){
+        carouselSlideS.style.transition='none';
+        counterS=carouselImagesS.length - counterS;
+        carouselSlideS.style.transform='translateX('+(-sizeS*counterS)+'px)';
+    }
+});
 
 // CAROUSEL 1
 
@@ -25,15 +71,15 @@ carouselSlide1.getElementsByClassName.transform='translateX('+(-size1*counter1)+
 
 nextBtn1.addEventListener('click',()=>{
     if (counter1>=carouselImages1.length-1)return;
-    carouselSlide1.style.transition="transform 0.3s ease-in-out";
-    counter1++;
+    carouselSlide1.style.transition="transform 0.7s ease-in-out";
+    counter1+=3;
     carouselSlide1.style.transform='translateX('+(-size1*counter1)+'px)';
 });
 
 prevBtn1.addEventListener('click',()=>{
     if (counter1<=0)return;
-    carouselSlide1.style.transition="transform 0.3s ease-in-out";
-    counter1--;
+    carouselSlide1.style.transition="transform 0.7s ease-in-out";
+    counter1-=4;
     carouselSlide1.style.transform='translateX('+(-size1*counter1)+'px)';
 });
 
@@ -64,15 +110,15 @@ carouselSlide2.getElementsByClassName.transform='translateX('+(-size2*counter2)+
 
 nextBtn2.addEventListener('click',()=>{
     if (counter2>=carouselImages2.length-1)return;
-    carouselSlide2.style.transition="transform 0.3s ease-in-out";
-    counter2++;
+    carouselSlide2.style.transition="transform 0.7s ease-in-out";
+    counter2+=3;
     carouselSlide2.style.transform='translateX('+(-size2*counter2)+'px)';
 });
 
 prevBtn2.addEventListener('click',()=>{
     if (counter2<=0)return;
-    carouselSlide2.style.transition="transform 0.3s ease-in-out";
-    counter2--;
+    carouselSlide2.style.transition="transform 0.7s ease-in-out";
+    counter2-=4;
     carouselSlide2.style.transform='translateX('+(-size2*counter2)+'px)';
 });
 
@@ -102,15 +148,15 @@ carouselSlide3.getElementsByClassName.transform='translateX('+(-size3*counter3)+
 
 nextBtn3.addEventListener('click',()=>{
     if (counter3>=carouselImages3.length-1)return;
-    carouselSlide3.style.transition="transform 0.3s ease-in-out";
-    counter3++;
+    carouselSlide3.style.transition="transform 0.7s ease-in-out";
+    counter3+=3;
     carouselSlide3.style.transform='translateX('+(-size3*counter3)+'px)';
 });
 
 prevBtn3.addEventListener('click',()=>{
     if (counter3<=0)return;
-    carouselSlide3.style.transition="transform 0.3s ease-in-out";
-    counter3--;
+    carouselSlide3.style.transition="transform 0.7s ease-in-out";
+    counter3-=4;
     carouselSlide3.style.transform='translateX('+(-size3*counter3)+'px)';
 });
 
@@ -125,5 +171,43 @@ carouselSlide3.addEventListener('transitionend',()=>{
         carouselSlide3.style.transition='none';
         counter3=carouselImages3.length - counter1;
         carouselSlide3.style.transform='translateX('+(-size3*counter3)+'px)';
+    }
+});
+
+// CAROUSEL GENDER
+
+//Counter
+let counterG=1;
+const sizeG= carouselImagesG[0].clientWidth;
+
+carouselSlideG.getElementsByClassName.transform='translateX('+(-sizeG*counter3)+'px)';
+
+//Button Listeners
+
+nextBtnG.addEventListener('click',()=>{
+    if (counterG>=carouselImagesG.length-1)return;
+    carouselSlideG.style.transition="transform 0.7s ease-in-out";
+    counterG+=3;
+    carouselSlideG.style.transform='translateX('+(-sizeG*counter3)+'px)';
+});
+
+prevBtn3.addEventListener('click',()=>{
+    if (counterG<=0)return;
+    carouselSlideG.style.transition="transform 0.7s ease-in-out";
+    counterG-=4;
+    carouselSlideG.style.transform='translateX('+(-sizeG*counterG)+'px)';
+});
+
+carouselSlideG.addEventListener('transitionend',()=>{
+    if(carouselImagesG[counterG].id==='lastCloneG'){
+        carouselSlideG.style.transition='none';
+        counterG=carouselImagesG.length - counter3;
+        carouselSlideG.style.transform='translateX('+(-sizeG*counterG)+'px)';
+
+    }
+    if(carouselImagesG[counterG].id==='firstCloneG'){
+        carouselSlideG.style.transition='none';
+        counterG=carouselImagesG.length - counter1;
+        carouselSlideG.style.transform='translateX('+(-sizeG*counterG)+'px)';
     }
 });
