@@ -1,115 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Document</title>
+    <title>RAKUTEN TV</title>
 </head>
 <body>
     <header>
-        <div class="header-navbar-container">
-            <nav class="header-navbar">
-                <ul class="navbar__buttons-bottom">
-                    <li class="button-bottom">
-                        <a href="#" class="home">
-                            <figure>
-                                <div class="img-container">
-                                    <span class="material-icons">
-                                        home
-                                    </span>
-                                </div>
-                                <figcaption>Portada</figcaption>
-                            </figure>
-                        </a>
+        <nav class="header-navbar">
+            <ul class="navbar__buttons-bottom">
+                <li class="button-bottom">
+                    <a href="#" class="home">
+                        <figure>
+                            <div class="img-container">
+                                <span class="material-icons">
+                                    home
+                                </span>
+                            </div>
+                            <figcaption>Portada</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="button-bottom">
+                    <a href="#">
+                        <figure>
+                            <div class="img-container">
+                                <span class="material-icons">
+                                    movie
+                                </span>
+                            </div>
+                            <figcaption>Cinema</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="button-bottom">
+                    <a href="#">
+                        <figure>
+                            <div class="img-container">
+                                <span class="material-icons">
+                                    visibility
+                                </span>
+                            </div>
+                            <figcaption>Free</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="button-bottom">
+                    <a href="#">
+                        <figure>
+                            <div class="img-container">
+                                <span class="material-icons">
+                                    local_activity
+                                </span>
+                            </div>
+                            <figcaption>Subscription</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="button-bottom">
+                    <a href="#">
+                        <figure>
+                            <div class="img-container">
+                                <span class="material-icons">
+                                    person
+                                </span>
+                            </div>
+                            <figcaption>Entrar</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+            <div class="navbar-top">
+                <a href="index.html"><img src="img/rakuten-logo.jpg" alt="Rakuten logo" class="rakuten-logo"></a>
+                <ul class="cinema-free-suscription">
+                    <li>
+                        <a href="#" class="cinema">Cinema</a>
+                        <div class="cinema-options options">
+                            <a href="#" class="genres">Todos los géneros</a>
+                            <a href="#" class="family">Family</aa href="#">
+                        </div>
                     </li>
-                    <li class="button-bottom">
-                        <a href="#">
-                            <figure>
-                                <div class="img-container">
-                                    <span class="material-icons">
-                                        movie
-                                    </span>
-                                </div>
-                                <figcaption>Cinema</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="button-bottom">
-                        <a href="#">
-                            <figure>
-                                <div class="img-container">
-                                    <span class="material-icons">
-                                        visibility
-                                    </span>
-                                </div>
-                                <figcaption>Free</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="button-bottom">
-                        <a href="#">
-                            <figure>
-                                <div class="img-container">
-                                    <span class="material-icons">
-                                        local_activity
-                                    </span>
-                                </div>
-                                <figcaption>Subscription</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="button-bottom">
-                        <a href="#">
-                            <figure>
-                                <div class="img-container">
-                                    <span class="material-icons">
-                                        person
-                                    </span>
-                                </div>
-                                <figcaption>Entrar</figcaption>
-                            </figure>
-                        </a>
+                    <li><a href="#" class="free">Free</a></li>
+                    <li>
+                        <a href="#" class="suscription">Suscription</a>
+                        <div class="suscription-options options">
+                            <a href="#" class="starzplay">Starzplay</a>
+                            <a href="#" class="rtv-suscription">Rtv suscripción</a>
+                        </div>
                     </li>
                 </ul>
-                <div class="navbar-top">
-                    <a href="index.html"><img src="img/rakuten-logo.jpg" alt="Rakuten logo" class="rakuten-logo"></a>
-                    <ul class="cinema-free-suscription">
-                        <li>
-                            <a href="#" class="cinema">Cinema</a>
-                            <div class="cinema-options options">
-                                <a href="#" class="genres">Todos los géneros</a>
-                                <a href="#" class="family">Family</aa href="#">
-                            </div>
-                        </li>
-                        <li><a href="#" class="free">Free</a></li>
-                        <li>
-                            <a href="#" class="suscription">Suscription</a>
-                            <div class="suscription-options options">
-                                <a href="#" class="starzplay">Starzplay</a>
-                                <a href="#" class="rtv-suscription">Rtv suscripción</a>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="search-bar">
-                        <div class="img-container">
-                            <span class="material-icons">
-                                search
-                            </span>
-                        </div>
-                        <input id="search-bar-input" type="text" placeholder="Buscar" maxlength="64" onclick="document.getElementById('search-bar-input').value = ''">
+                <div class="search-bar">
+                    <div class="img-container">
+                        <span class="material-icons">
+                            search
+                        </span>
                     </div>
-                    <div class="flex-spacer"></div>
-                    <div class="help"><a href="#">Ayuda y dispositivos</a></div>
-                    <div class="login">
-                        <span class="enter"><a href="#">Entrar</a></span>
-                        <button class="sign-up">Registrarse</button>
-                    </div>
+                    <input id="search-bar-input" type="text" placeholder="Buscar" maxlength="64" onclick="document.getElementById('search-bar-input').value = ''">
                 </div>
-            </nav>
-        </div>
+                <div class="flex-spacer"></div>
+                <div class="help"><a href="#">Ayuda y dispositivos</a></div>
+                <div class="login">
+                    <span class="enter"><a href="#">Entrar</a></span>
+                    <button class="sign-up">Registrarse</button>
+                </div>
+            </div>
+        </nav>
     </header>
+    <main>
+      <div id="peliculas1">
+        <div class="sectionTitle">
+          <div class="sectionNameTitle">
+            CINEMA - Últimos estrenos &nbsp; >
+            <div class="seeAll">VER TODO ></div>
+          </div>
+        </div>
+        <div class="carousel-container1">
+          <span class="material-icons" id="nextBtn1"> keyboard_arrow_right </span>
+          <span class="material-icons" id="prevBtn1"> keyboard_arrow_left </span>
+          <div class="carousel-slide1">
+            <img
+              src="img/mainpage/mulan-2020-1601313907-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/the-sleeping-beauty-ballet-1602253454-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/la-influencia-1601890708-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/la-fuerza-de-la-naturaleza-1600249838-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/a-vigilante-1599127920-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/atrapado-1601552390-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/la-herencia-1595322451-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/deep-blue-sea-3-1598947260-width217-quality80.jpeg"
+              id="lastClone1"
+              alt=""
+            />
+            <img
+              src="img/mainpage/oro-blanco-1596785227-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/escape-plan-3-1597237664-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/la-lista-de-a-la-mierda-1601555234-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/mortal-1597848971-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/desconectados-1600768252-width217-quality80.jpeg"
+              id="firstClone1"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+  
+      <button id="prevBtn1" class="hidden1">P</button>
+      <button id="nextBtn1" class="hidden1">N</button>
+  
+      <div id="peliculas2">
+        <div class="sectionTitle">
+          <div class="sectionNameTitle">
+            <div>FREE - La mejor selección de películas &nbsp; ></div>
+            <div class="seeAll">VER TODO ></div>
+          </div>
+        </div>
+        <div class="carousel-container2">
+          <span class="material-icons" id="nextBtn2"> keyboard_arrow_right </span>
+          <span class="material-icons" id="prevBtn2"> keyboard_arrow_left </span>
+          <div class="carousel-slide2">
+            <img
+              src="img/mainpage/vikingdom-1558429794-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/el-ultimo-engano-1598276446-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/guerra-de-vinos-1558429194-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/sunlight-jr-1595426778-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/santos-y-soldados-1600075598-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/hulk-vs-1558460507-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/girl-in-progress-1558460505-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/en-la-niebla-1558429264-width217-quality80.jpeg"
+              id="lastClone2"
+              alt=""
+            />
+            <img
+              src="img/mainpage/fuerzas-des-armadas-1601475509-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/a-escondidas-1598887807-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/eve-s-bayou-1601368476-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/red-dog-true-blue-1593599066-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/la-sombra-de-los-otros-1558428783-width217-quality80.jpeg"
+              id="firstClone2"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+  
+      <button id="prevBtn2" class="hidden2">P</button>
+      <button id="nextBtn2" class="hidden2">N</button>
+  
+      <div id="peliculas3">
+        <div class="sectionTitle">
+          <div class="sectionNameTitle">
+            STARZPLAY - Series exclusivas y originales &nbsp; >
+            <div class="seeAll">VER TODO ></div>
+          </div>
+        </div>
+        <div class="carousel-container3">
+          <span class="material-icons" id="nextBtn3"> keyboard_arrow_right </span>
+          <span class="material-icons" id="prevBtn3"> keyboard_arrow_left </span>
+          <div class="carousel-slide3">
+            <img
+              src="img/mainpage/brave-new-world-1601895330-width308-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/power-book-ii-ghost-1599491703-width308-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/the-spanish-princess-1601981791-width308-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/nashville-1590746782-width308-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/power-1588836382-width308-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/america-to-me-1588070329-width308-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/manhunt-deadly-games-1588600035-width308-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/hightown-1596109689-width308-quality80.jpeg"
+              id="lastClone3"
+              alt=""
+            />
+            <img
+              src="img/mainpage/p-valley-1599492672-width308-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/vida-1589203937-width308-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/pennyworth-1588749099-width308-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/hasta-que-la-boda-nos-separe-1585750169-width217-quality80.jpeg"
+              alt=""
+            />
+            <img
+              src="img/mainpage/tres-metros-sobre-el-cielo-1558427428-width217-quality80.jpeg"
+              id="firstClone3"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+  
+      <button id="prevBtn3" class="hidden2">P</button>
+      <button id="nextBtn3" class="hidden2">N</button>
+    </main>
     <footer>
         <div class="footer-container">
             <div class="cinema-home">
@@ -161,4 +378,5 @@
         </div>
     </footer>
 </body>
+<script src="index.js"></script>
 </html>

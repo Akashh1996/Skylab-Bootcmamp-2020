@@ -1,16 +1,44 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
 body {
 	line-height: 1;
 	color: #fff;
 	font-family: NotoSans-Regular, Arial, sans-serif;
-	background-color: #101010;
 	overflow-x: hidden;
+	font-size: bold;
+	background-color: #101010;
+	position: relative;
 }
 
-body,
-ul,
-figure {
-	margin: 0;
-	padding: 0;
+header {
+	position: absolute;
+	bottom: 0;
+	height: 60px;
+	width: 100%;
+	z-index: 10;
+}
+
+main {
+	margin-bottom: 138px;
+}
+
+footer {
+	height: 138px;
+}
+
+img {
+	padding: 1%;
+}
+
+img:hover {
+	border-top: 5px solid #ffe300;
+	border-left: 5px solid #ffe300;
+	border-right: 5px solid #ffe300;
+	border-bottom: 5px solid #ffe300;
 }
 
 .header-navbar {
@@ -19,7 +47,6 @@ figure {
 	height: 60px;
 	width: 100%;
 	border-top: 1px solid rgba(255, 255, 255, 0.2);
-	background-color: black;
 	margin: 0;
 	padding: 0;
 }
@@ -77,16 +104,13 @@ figure {
 	display: none;
 }
 
-.footer-container {
-	position: absolute;
-	bottom: 0;
-}
-
 .cinema-home {
 	display: none;
 }
 
 .footer-container {
+	position: absolute;
+	bottom: 0;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
@@ -115,6 +139,10 @@ figure {
 	justify-content: center;
 }
 
+.footer-container img {
+	border: none;
+}
+
 .about-conditions-workwithus {
 	display: flex;
 	justify-content: center;
@@ -130,8 +158,8 @@ figure {
 
 .about-conditions-workwithus li a {
 	color: rgb(204, 204, 204);
-    text-decoration: none;
-    font-size: 14px;
+	text-decoration: none;
+	font-size: 14px;
 }
 
 .about-conditions-workwithus li a:hover {
@@ -144,13 +172,102 @@ figure {
 	margin-top: 15px;
 }
 
-@media screen and (min-width: 1100px) {
+.sectionTitle {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.sectionNameTitle {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-weight: bold;
+	margin-top: 2%;
+	margin-bottom: 1%;
+}
+
+.seeAll {
+	display: none;
+}
+
+.carousel-container1,
+.carousel-container2,
+.carousel-container3 {
+	width: 90%;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.carousel-slide1,
+.carousel-slide2,
+.carousel-slide3 {
+	display: flex;
+	width: 100%;
+	height: 30%;
+}
+
+#prevBtn1,
+#prevBtn2,
+#prevBtn3 {
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	left: 5%;
+	font-size: 60px;
+	color: white;
+	opacity: 0.7;
+	cursor: pointer;
+}
+#nextBtn1,
+#nextBtn2,
+#nextBtn3 {
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	right: 5%;
+	font-size: 60px;
+	color: white;
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+.hidden1,
+.hidden2,
+.hidden3 {
+	display: none;
 }
 
 @media screen and (min-width: 900px) {
+
+	main {
+		margin-top: 60px;
+		margin-bottom: 0px;
+	}
+
+	footer {
+		height: 527px;
+	}
+
+	.header-navbar,
+	.navbar-top,	
+	.navbar-top div,
+	.navbar-top a,
+	.navbar-top ul,	
+	.navbar-top li
+	{		
+		background-color: black;
+	}
+
+	.navbar-top img {
+		border: none;
+	}
+
 	.header-navbar {
 		bottom: initial;
 		top: 0;
+		position: fixed;
 	}
 
 	.navbar__buttons-bottom {
@@ -182,6 +299,7 @@ figure {
 		margin: 0px 6px;
 		height: inherit;
 		align-items: center;
+		cursor: pointer;
 	}
 
 	.cinema-free-suscription a,
@@ -228,6 +346,7 @@ figure {
 		width: auto;
 		margin-left: -15px;
 		background-color: black;
+		z-index: 10;
 	}
 
 	.cinema-free-suscription li:hover .options a {
@@ -235,9 +354,14 @@ figure {
 		font-weight: 400;
 	}
 
+	.navbar-top .search-bar,
+	.navbar-top .search-bar .img-container,
+	.navbar-top .search-bar .material-icons {
+		background-color: #333;
+	}
+
 	.navbar-top .search-bar {
 		display: flex;
-		background-color: #333;
 		margin: 0px 15px;
 		height: 60%;
 	}
@@ -296,11 +420,21 @@ figure {
 		transition: 0.1s;
 	}
 
+	.cinema-home,
+	.cinema-home div,
+	.cinema-home span,
+	.cinema-home h1,
+	.cinema-home h2,
+	.cinema-home a,
+	.cinema-home img {
+		background-color: rgb(33, 33, 33);
+		box-sizing: none;
+	}
+
 	.cinema-home {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		background-color: rgb(33, 33, 33);
 		padding: 10px 35px 40px;
 	}
 
@@ -308,8 +442,8 @@ figure {
 		text-align: center;
 	}
 
-    .cinema-home__paragraph h1,
-    .cinema-home__work-pay-help h2 {
+	.cinema-home__paragraph h1,
+	.cinema-home__work-pay-help h2 {
 		font-size: 22px;
 	}
 
@@ -317,39 +451,50 @@ figure {
 		max-width: 550px;
 	}
 
-    .paragraph-container span,
-    .cinema-home__work-pay-help span {
+	.paragraph-container span,
+	.cinema-home__work-pay-help span {
 		color: rgb(204, 204, 204);
 		font-size: 14px;
 		text-align: center;
 		line-height: 160%;
-    }
-    
-    .cinema-home__work-pay-help {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin-top: 20px;
-    }
+	}
 
-    .cinema-home img {
-        width: 180px;
-        height: 90px;
-    }
+	.cinema-home__work-pay-help {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-top: 20px;
+	}
 
-    .cinema-home__work, 
-    .cinema-home__pay, 
-    .cinema-home__help {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 30%;
-        text-decoration: none;
-        color:inherit;
-    }
+	.cinema-home img {
+		width: 180px;
+		height: 90px;
+	}
+
+	.cinema-home__work,
+	.cinema-home__pay,
+	.cinema-home__help {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 30%;
+		text-decoration: none;
+		color: inherit;
+	}
 
 	.footer-container {
 		margin-bottom: 0px;
+	}
+
+	.footer-container,
+	.final-footer,
+	.final-footer div,
+	.final-footer span,
+	.final-footer ul,
+	.final-footer li,
+	.final-footer img {
+		background-color: rgb(13, 13, 13);
+		box-sizing: none;
 	}
 
 	.final-footer {
@@ -372,5 +517,47 @@ figure {
 	}
 }
 
-@media screen and (min-width: 599px) and (max-width: 899px) {
+@media screen and (min-width: 600px) {
+	.seeAll {
+		display: block;
+	}
+
+	.carousel-container {
+		width: 90%;
+		margin: auto;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.carousel-slide {
+		display: flex;
+		width: 100%;
+		height: 30%;
+	}
+
+	#prevBtn {
+		position: absolute;
+		top: 50%;
+		z-index: 10;
+		left: 5%;
+		font-size: 60px;
+		color: white;
+		opacity: 0.7;
+		cursor: pointer;
+	}
+	#nextBtn {
+		position: absolute;
+		top: 50%;
+		z-index: 10;
+		right: 5%;
+		font-size: 60px;
+		color: white;
+		opacity: 0.7;
+		cursor: pointer;
+	}
+
+	.hidden {
+		display: block;
+		border: 1px solid rgba(255, 255, 255, 0);
+	}
 }
