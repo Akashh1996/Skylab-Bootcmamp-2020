@@ -1,9 +1,32 @@
 $(document).ready(function () {
-    $('#autoWidth').lightSlider({
+    $('#carousel__tall-1').lightSlider({
         autoWidth: true,
-        loop: true,
+        loop: false,
         onSliderLoad: function () {
-            $('#autoWidth').removeClass('cS-hidden');
+            $('#carousel__tall-1').removeClass('cS-hidden');
+        }
+    });
+
+    $('#carousel__tall-2').lightSlider({
+        autoWidth: true,
+        loop: false,
+        onSliderLoad: function () {
+            $('#autoWidth2').removeClass('cS-hidden');
+        }
+    });
+    $('#carousel__wide-1').lightSlider({
+        autoWidth: true,
+        loop: false,
+        onSliderLoad: function () {
+            $('#carousel__wide-1').removeClass('cS-hidden');
+        }
+    });
+
+    $('#carousel__wide-2').lightSlider({
+        autoWidth: true,
+        loop: false,
+        onSliderLoad: function () {
+            $('#carousel__wide-2').removeClass('cS-hidden');
         }
     });
 });

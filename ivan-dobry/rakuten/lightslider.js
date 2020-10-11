@@ -3,7 +3,7 @@
     var defaults = {
         item: 3,
         autoWidth: false,
-        slideMove: 1,
+        slideMove: 5,
         slideMargin: 12,
         addClass: '',
         mode: 'slide',

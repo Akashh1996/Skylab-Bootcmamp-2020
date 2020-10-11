@@ -6,10 +6,14 @@
 	box-sizing: border-box;
 }
 
+/*///////// NOTOSANS-FONTS ////////*/
+@import url('https://fonts.googleapis.com/css?family=NotoSans-Regular&display=swap');
+@import url('https://fonts.googleapis.com/css?family=NotoSans-Bold&display=swap');
+
 body {
 	line-height: 1;
 	color: #fff;
-	background-color: #101010;
+	background-color: rgb(23, 23, 23);
 	overflow-x: hidden;
 }
 
@@ -54,6 +58,14 @@ body {
 	align-items: center;
 	justify-content: flex-end;
 	font-weight: bold;
+}
+
+.useritems__help {
+	color: #999;
+	margin-right: 20px;
+	font-size: 14px;
+	text-transform: uppercase;
+	transition: color .1s ease;
 }
 
 .main__navmenu {
@@ -101,6 +113,7 @@ body {
 	padding-right: 5px;
 }
 
+
 .searchbox {
 	display: flex;
 	align-content: center;
@@ -123,6 +136,7 @@ body {
 
 .rakutenLogo {
 	margin: auto 0;
+	cursor: pointer;
 }
 
 .searchbox input {
@@ -142,15 +156,18 @@ body {
 }
 
 .searchicon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	height: 40px;
 	background-color: #333;
 	border-radius: 2px;
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	color: #ccc;
-	font-size: 16px;
+	padding: 10px;
+	color: #999;
+	font-size: 25px;
+	font-weight: 600;
 	border: none;
 	transition: background-color 0.1s ease;
 	margin: auto;
@@ -186,22 +203,29 @@ body {
 .dropdown-content a {
 	margin-top: auto;
 	margin-bottom: auto;
+	padding-top: 15px;
 	padding-left: 10px;
+	padding-bottom: 10px;
 	font-weight: normal;
+	background-color: black;
 }
 
 /*//////////CAROUSEL////////////*/
 
 .carousel {
-	padding: 0px 0px 15px 30px;
+	padding: 0px 0px 30px 30px;
 	overflow-x: hidden;
+}
+
+.first {
+	margin-top: 80px;
 }
 
 .carousel__title-bar {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	margin-right: 20px;
 	font-size: 20px;
 	color: #fff;
@@ -220,6 +244,11 @@ body {
 	color: rgb(232, 231, 231);
 	-webkit-font-smoothing: antialiased;
 	transition: color .1s ease;
+}
+
+.carousel__title-bar__title {
+	font-size: 22px;
+	font-weight: 600;
 }
 
 .carousel__title-bar__see {
@@ -269,7 +298,13 @@ a {
 	cursor: pointer;
 	display: block;
 	position: relative;
+	border-radius: 5px;
 }
+
+#carousel__end-space {
+	width: 30px;
+}
+
 
 
 
