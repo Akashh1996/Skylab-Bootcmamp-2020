@@ -22,11 +22,19 @@ $(document).ready(function () {
         }
     });
 
-    $('#carousel__wide-2').lightSlider({
+    $('#carousel__tall-3').lightSlider({
         autoWidth: true,
         loop: false,
         onSliderLoad: function () {
-            $('#carousel__wide-2').removeClass('cS-hidden');
+            $('#carousel__tall-3').removeClass('cS-hidden');
+        }
+    });
+
+    $('#carousel__tall-4').lightSlider({
+        autoWidth: true,
+        loop: false,
+        onSliderLoad: function () {
+            $('#carousel__tall-4').removeClass('cS-hidden');
         }
     });
 });

@@ -274,6 +274,10 @@ a {
 	position: relative;
 }
 
+.wide {
+	height: 200px;
+}
+
 .slide-img::after {
 	content: '';
 	position: absolute;
@@ -342,6 +346,7 @@ a {
 		bottom: 0;
 		right: 0;
 		left: 0;
+		z-index: 500;
 	}
 
 	.nav__mobile__menu {
