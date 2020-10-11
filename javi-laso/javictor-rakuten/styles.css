@@ -11,10 +11,11 @@ body {
 	font-family: NotoSans-Regular, Arial, sans-serif;
 	overflow-x: hidden;
 	font-size: bold;
+	padding: 1%;
 }
 
 .header-navbar {
-	position: absolute;
+	/* position: absolute; */
 	bottom: 0;
 	height: 60px;
 	width: 100%;
@@ -79,7 +80,7 @@ body {
 }
 
 .footer-container {
-	position: absolute;
+	/* position: absolute; */
 	bottom: 0;
 }
 
@@ -166,7 +167,9 @@ body {
 
 .carousel-container1,
 .carousel-container2,
-.carousel-container3 {
+.carousel-container3,
+.carousel-containerS,
+.carousel-containerG {
 	width: 90%;
 	margin: auto;
 	overflow: hidden;
@@ -175,7 +178,9 @@ body {
 
 .carousel-slide1,
 .carousel-slide2,
-.carousel-slide3 {
+.carousel-slide3,
+.carousel-slideS,
+.carousel-slideG {
 	display: flex;
 	width: 100%;
 	height: 30%;
@@ -194,7 +199,9 @@ img:hover {
 
 #prevBtn1,
 #prevBtn2,
-#prevBtn3 {
+#prevBtn3,
+#prevBtnS,
+#prevBtnG {
 	position: absolute;
 	top: 50%;
 	z-index: 10;
@@ -206,7 +213,9 @@ img:hover {
 }
 #nextBtn1,
 #nextBtn2,
-#nextBtn3 {
+#nextBtn3,
+#nextBtnS,
+#nextBtnG {
 	position: absolute;
 	top: 50%;
 	z-index: 10;
@@ -219,9 +228,35 @@ img:hover {
 
 .hidden1,
 .hidden2,
-.hidden3 {
+.hidden3,
+.hiddenS,
+.hiddenG {
 	display: none;
 }
+
+.gender_item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100px;
+	margin: 2%;
+	margin-bottom: 4%;
+}
+
+.gender_item > img {
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: none;
+	cursor: pointer;
+	height: 85%;
+}
+
+.gender_item > span {
+	text-align: center;
+}
+
+/* MEDIA QUERIES */
 
 @media screen and (min-width: 900px) {
 	.header-navbar {
@@ -458,6 +493,28 @@ img:hover {
 	.seeAll {
 		display: block;
 	}
+
+	#nextBtnS,
+	#prevBtnS {
+		display: none;
+	}
+
+	.carousel-containerSection {
+		display: flex;
+		flex-direction: row;
+		justify-items: auto;
+	}
+
+	.carousel-container1,
+	.carousel-container2,
+	.carousel-container3 {
+		margin: 0.5%;
+	}
+
+	/* .carousel-slideS > img {
+		margin: 0.5%;
+		padding: 0.1%;
+	} */
 
 	.carousel-container {
 		width: 90%;
