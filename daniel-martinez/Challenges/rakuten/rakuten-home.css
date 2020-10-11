@@ -44,9 +44,7 @@ body {
 	padding: 0px 15px 0px 0px;
 }
 
-.latest-releases__title,
-.free-best-selection__title,
-.gender-container__title {
+.latest-releases__title, .free-best-selection__title, .gender-container__title {
 	margin-bottom: 5px;
 	font-weight: bold;
 	font-size: 14px;
@@ -165,51 +163,82 @@ body {
 
 .nav__items {
 	display: flex;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	right: 0;
 	left: 0;
 	height: 60px;
 	font-weight: 400;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	font-size: 14px;
+	background: linear-gradient(to bottom, black, transparent);
 }
 
 .nav__bar {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	width: 100%;
+	margin-top: 20px;
+	margin: 10px 10px;
 }
 
 .nav__items__menu {
 	display: none;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	position: relative;
 	align-items: center;
 	font-family: 'Noto Sans', sans-serif;
 	font-size: 14px;
 	padding-top: 5px;
 	width: 100%;
+	margin-right: 15px;
 }
 
 .header-logo {
-	height: 37px;
-	width: 122px;
-	margin-left: 20px;
+	height: 43px;
+	margin-bottom: 0px;
 }
 
-.header-help {
-	color: rgb(153, 153, 153);
+.search__icon {
+	display: block;
+}
+
+.header-cinema {
+	display: flex;
+}
+
+.header__cinema__text {
+	margin: 0 4px;
+}
+
+.header-subscription {
+	display: flex;
+}
+
+.header__subscription__text {
+	margin: 0 4px;
+}
+
+.header-search {
+	display: flex;
+	flex-direction: row;
+	background-color: #333;
+	color: #999;
+	align-items: center;
+	padding-left: 10px;
 }
 
 .search__box__input {
-	padding-left: 40px;
 	height: 35px;
 	background-color: #333;
 	border-radius: 2px;
 	border: 0;
 	font-family: 'Noto Sans', sans-serif;
 	outline: none;
+	font-size: 16px;
+	height: 40px;
+	width: 250px;
 }
 
 .search__box__input:focus {
@@ -217,16 +246,78 @@ body {
 	color: black;
 }
 
+.header-help {
+	display: none;
+	color: rgb(153, 153, 153);
+}
+
 .button-signup {
 	background-color: rgba(255, 227, 0, 1);
-	padding-right: 8px;
-	padding-left: 8px;
+	padding: 10px 20px;
+	/* padding-right: 8px;
+	padding-left: 8px; */
 	min-height: 32px;
 	border: 0;
 	border-radius: 2px;
 	font-family: 'Noto Sans', sans-serif;
 	font-weight: bold;
 	outline: none;
+}
+
+.header-cinema:hover {
+	color: rgba(255, 227, 0, 1);
+}
+
+.tooltip__header__cinema {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+}
+
+.tooltip__header__cinema .tooltip__box__cinema {
+	visibility: hidden;
+	width: 160px;
+	background-color: black;
+	color: #fff;
+	/* text-align: center; */
+	border-radius: 6px;
+	padding: 20px 10px 20px 10px;
+	position: absolute;
+	z-index: 1;
+	text-align: start;
+	margin-bottom: 0px;
+}
+
+.cinema__text__all__genres {
+	margin-bottom: 10px;
+}
+
+.cinema__text__all__genres:hover {
+	color: rgba(255, 227, 0, 1);
+}
+
+.cinema__text___family:hover {
+	color: rgba(255, 227, 0, 1);
+}
+
+.tooltip__header__cinema:hover .tooltip__box__cinema {
+	visibility: visible;
+}
+
+.header-free:hover {
+	color: rgba(255, 227, 0, 1);
+}
+
+.header-subscription:hover {
+	color: rgba(255, 227, 0, 1);
+}
+
+.header-help:hover {
+	color: rgba(255, 227, 0, 1);
+}
+
+.header-login:hover {
+	color: rgba(255, 227, 0, 1);
 }
 
 .button-signup:hover {
@@ -239,7 +330,6 @@ body {
 	left: 0;
 	height: 50px;
 	background-color: #000;
-	z-index: 200;
 	border-top: 1px solid rgba(255, 255, 255, 0.2);
 	width: 100%;
 }
@@ -263,58 +353,55 @@ body {
 	color: #ffe300;
 }
 
-.header__bottom__items__home,
-.header__bottom__items__cinema,
-.header__bottom__items__free,
-.header__bottom__items__subscription,
-.header__bottom__items__signIn {
+.header__bottom__items__home, .header__bottom__items__cinema, .header__bottom__items__free, .header__bottom__items__subscription, .header__bottom__items__signIn {
 	height: 30px;
 	width: 100%;
 }
 
 .header__bottom__items__home {
-	background: url('rakuten-images-daina/home.png') bottom center no-repeat;
+	background: url('rakuten-image/home.png') bottom center no-repeat;
 }
 
-.header__bottom__items__home:hover {
-	background: url('rakuten-images-daina/home_hover.png') bottom center no-repeat;
-}
+/* .header__bottom__items__home:hover {
+	background: url('rakuten-image/home_hover.png') bottom center no-repeat;
+} */
 
 .header__bottom__items__cinema {
-	background: url('rakuten-images-daina/cinema.png') bottom center no-repeat;
+	background: url('rakuten-image/cinema.png') bottom center no-repeat;
 }
 
-.header__bottom__items__cinema:hover {
-	background: url('rakuten-images-daina/cinema_hover.png') bottom center
-		no-repeat;
+/* .header__bottom__items__cinema:hover {
+	background: url('rakuten-images-daina/cinema_hover.png') bottom center no-repeat;
 }
+ */
 
 .header__bottom__items__free {
-	background: url('rakuten-images-daina/eye.png') bottom center no-repeat;
+	background: url('rakuten-image/eye.png') bottom center no-repeat;
 }
 
-.header__bottom__items__free:hover {
+/* .header__bottom__items__free:hover {
 	background: url('rakuten-images-daina/eye_hover.png') bottom center no-repeat;
-}
+} */
 
 .header__bottom__items__subscription {
-	background: url('rakuten-images-daina/ticket.png') bottom center no-repeat;
+	background: url('rakuten-image/ticket.png') bottom center no-repeat;
 }
 
-.header__bottom__items__subscription:hover {
-	background: url('rakuten-images-daina/ticket_hover.png') bottom center
-		no-repeat;
+/* .header__bottom__items__subscription:hover {
+	background: url('rakuten-images-daina/ticket_hover.png') bottom center no-repeat;
 }
+ */
 
 .header__bottom__items__signIn {
-	background: url('rakuten-images-daina/user.png') bottom center no-repeat;
+	background: url('rakuten-imagerakuten-home.htmlrakuten-home.css/user.png') bottom center no-repeat;
 }
 
-.header__bottom__items__signIn:hover {
+/* .header__bottom__items__signIn:hover {
 	background: url('rakuten-images-daina/user_hover.png') bottom center no-repeat;
 }
+ */
 
-.slider__wrapper {
+.big__slider__wrapper {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -331,9 +418,26 @@ body {
 		display: flex;
 	}
 	.nav__items {
+		position: fixed;
 		background-color: black;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 	}
 	.header__bottom {
 		display: none;
+	}
+	.search__icon {
+		display: none;
+	}
+	.header-logo {
+		margin-bottom: 0px;
+	}
+	.nav__bar {
+		margin-top: 0;
+	}
+}
+
+@media only screen and (min-width: 1250px) {
+	.header-help {
+		display: block;
 	}
 }
