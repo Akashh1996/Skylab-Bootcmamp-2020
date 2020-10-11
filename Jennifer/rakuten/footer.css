@@ -61,6 +61,7 @@
 	display: flex;
 	flex-direction: row;
 	color: white;
+	justify-content: space-around;
 }
 .text__footer__info__howItWorks {
 	color: #cccccc;
@@ -74,7 +75,7 @@
 .image__footer__info__howItWorks__payments {
 	max-width: 70%;
 	max-height: 70%;
-	margin-top: 5px;
+	margin-top: 7px;
 }
 
 .text__footer__info__howItWorks__payments {
