@@ -194,7 +194,8 @@
 .mini__rakuten-logo {
 	position: absolute;
 	left: 0;
-	top: 1.1%;
+  top: 1.1%;
+  z-index: 900;
 }
 
 .mini__rakuten-logo img {
@@ -207,7 +208,8 @@
 .mini__search {
 	position: absolute;
 	right: 10px;
-	top: 10px;
+  top: 10px;
+  z-index: 900;
 }
 
 .mini__search img {
@@ -230,7 +232,7 @@
 	background-color: #000;
 	box-shadow: 0 -5px 15px 0 rgba(0, 0, 0, 0.5);
 	border-top: 1px solid rgba(255, 255, 255, 0.2);
-	z-index: 200;
+	z-index: 1;
 }
 
 .mobile-header__page {
@@ -386,9 +388,9 @@ body {
 }
 
 @media screen and (min-width: 1025px) {
-	.mobile-header {
+	.mobile-header, .mini__rakuten-logo, .mini__search {
 		display: none;
-	}
+  }
 
 	.desktop-header {
 		position: fixed;
