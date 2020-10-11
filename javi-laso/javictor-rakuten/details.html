@@ -6,110 +6,225 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="details.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3511c56a9e.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <div class="header-navbar-container">
-            <nav class="header-navbar">
-                <ul class="navbar__buttons-bottom">
-                    <li class="button-bottom">
-                        <a href="#" class="home">
-                            <figure>
-                                <div class="img-container">
-                                    <span class="material-icons">
-                                        home
-                                    </span>
-                                </div>
-                                <figcaption>Portada</figcaption>
-                            </figure>
-                        </a>
+        <nav class="header-navbar">
+            <ul class="navbar__buttons-bottom">
+                <li class="button-bottom">
+                    <a href="#" class="home">
+                        <figure>
+                            <div class="img-container">
+                                <span class="material-icons">
+                                    home
+                                </span>
+                            </div>
+                            <figcaption>Portada</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="button-bottom">
+                    <a href="#">
+                        <figure>
+                            <div class="img-container">
+                                <span class="material-icons">
+                                    movie
+                                </span>
+                            </div>
+                            <figcaption>Cinema</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="button-bottom">
+                    <a href="#">
+                        <figure>
+                            <div class="img-container">
+                                <span class="material-icons">
+                                    visibility
+                                </span>
+                            </div>
+                            <figcaption>Free</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="button-bottom">
+                    <a href="#">
+                        <figure>
+                            <div class="img-container">
+                                <span class="material-icons">
+                                    local_activity
+                                </span>
+                            </div>
+                            <figcaption>Subscription</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="button-bottom">
+                    <a href="#">
+                        <figure>
+                            <div class="img-container">
+                                <span class="material-icons">
+                                    person
+                                </span>
+                            </div>
+                            <figcaption>Entrar</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+            <div class="navbar-top">
+                <a href="index.html"><img src="img/rakuten-logo.jpg" alt="Rakuten logo" class="rakuten-logo"></a>
+                <ul class="cinema-free-suscription">
+                    <li>
+                        <a href="#" class="cinema">Cinema</a>
+                        <div class="cinema-options options">
+                            <a href="#" class="genres">Todos los géneros</a>
+                            <a href="#" class="family">Family</aa href="#">
+                        </div>
                     </li>
-                    <li class="button-bottom">
-                        <a href="#">
-                            <figure>
-                                <div class="img-container">
-                                    <span class="material-icons">
-                                        movie
-                                    </span>
-                                </div>
-                                <figcaption>Cinema</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="button-bottom">
-                        <a href="#">
-                            <figure>
-                                <div class="img-container">
-                                    <span class="material-icons">
-                                        visibility
-                                    </span>
-                                </div>
-                                <figcaption>Free</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="button-bottom">
-                        <a href="#">
-                            <figure>
-                                <div class="img-container">
-                                    <span class="material-icons">
-                                        local_activity
-                                    </span>
-                                </div>
-                                <figcaption>Subscription</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="button-bottom">
-                        <a href="#">
-                            <figure>
-                                <div class="img-container">
-                                    <span class="material-icons">
-                                        person
-                                    </span>
-                                </div>
-                                <figcaption>Entrar</figcaption>
-                            </figure>
-                        </a>
+                    <li><a href="#" class="free">Free</a></li>
+                    <li>
+                        <a href="#" class="suscription">Suscription</a>
+                        <div class="suscription-options options">
+                            <a href="#" class="starzplay">Starzplay</a>
+                            <a href="#" class="rtv-suscription">Rtv suscripción</a>
+                        </div>
                     </li>
                 </ul>
-                <div class="navbar-top">
-                    <a href="index.html"><img src="img/rakuten-logo.jpg" alt="" class="rakuten-logo"></a>
-                    <ul class="cinema-free-suscription">
-                        <li>
-                            <a href="#" class="cinema">Cinema</a>
-                            <div class="cinema-options options">
-                                <a href="#" class="genres">Todos los géneros</a>
-                                <a href="#" class="family">Family</aa href="#">
-                            </div>
-                        </li>
-                        <li><a href="#" class="free">Free</a></li>
-                        <li>
-                            <a href="#" class="suscription">Suscription</a>
-                            <div class="suscription-options options">
-                                <a href="#" class="starzplay">Starzplay</a>
-                                <a href="#" class="rtv-suscription">Rtv suscripción</a>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="search-bar">
-                        <div class="img-container">
-                            <span class="material-icons">
-                                search
+                <div class="search-bar">
+                    <div class="img-container">
+                        <span class="material-icons">
+                            search
+                        </span>
+                    </div>
+                    <input id="search-bar-input" type="text" placeholder="Buscar" maxlength="64" onclick="document.getElementById('search-bar-input').value = ''">
+                </div>
+                <div class="flex-spacer"></div>
+                <div class="help"><a href="#">Ayuda y dispositivos</a></div>
+                <div class="login">
+                    <span class="enter"><a href="#">Entrar</a></span>
+                    <button class="sign-up">Registrarse</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="trailer">
+                <iframe src="https://www.youtube.com/embed/KK8FHdFluOQ" frameborder="0" allowfullscreen></iframe>
+                <div class="trailer__rating">
+                    <span class="material-icons">star_rate</span>
+                    <span>5.4</span>
+                </div>
+                <h1>Mulán</h1>
+                <div class="buttons-see-coupon">
+                    <button class="button-see-now">
+                        <span class="see-now">Ver ahora</span>
+                        <div class="see-now__price">
+                            <span class="price-big">desde 21,99 <symbol>€</symbol></span>
+                            <span class="price-small">
+                                <span>o 2199 </span>
+                                <div class="icon-container">
+                                    <span class="P">P</span>
+                                </div>
                             </span>
                         </div>
-                        <input id="search-bar-input" type="text" placeholder="Buscar" maxlength="64" onclick="document.getElementById('search-bar-input').value = ''">
-                    </div>
-                    <div class="flex-spacer"></div>
-                    <div class="help"><a href="#">Ayuda y dispositivos</a></div>
-                    <div class="login">
-                        <span class="enter"><a href="#">Entrar</a></span>
-                        <button class="sign-up">Registrarse</button>
+                    </button>
+                    <button class="button-coupon">Canjear cupón</button>
+                </div>
+            </div>
+            <div class="rrss-information">
+                <div class="rrss-container">
+                    <div class="rrss">
+                        <a href="#" class="icon-description">                    
+                            <div class="circle">
+                                <span class="material-icons">visibility</span>
+                            </div>
+                            <span class="text-description">Marcar como ya leído</span>
+                        </a>
+                        <a href="#" class="icon-description">
+                            <div class="circle">
+                                <span class="fab fa-twitter"></span>
+                            </div>
+                            <span class="text-description">Twitter</span>
+                        </a>
+                        <a href="#" class="icon-description">
+                            <div class="circle">
+                                <span class="fab fa-facebook-f"></span>
+                            </div>
+                            <span class="text-description">Facebook</span>
+                        </a>                   
+                        <a href="#" class="icon-description">
+                            <div class="circle">
+                                <span class="fab fa-pinterest-p"></span>
+                            </div>
+                            <span class="text-description">Pinterest</span>
+                        </a>
                     </div>
                 </div>
-            </nav>
+                <div class="film-information">
+                    <div class="information__varied">
+                        <div class="group1">
+                            <div class="icon-and-info age">
+                                <span class="material-icons">supervisor_account</span>
+                                <span class="text">7</span>
+                            </div>
+                            <div class="icon-and-info duration">
+                                <span class="material-icons">watch_later</span>
+                                <span class="text">116 minutos</span>
+                            </div>
+                            <div class="icon-and-info year">
+                                <span class="material-icons">calendar_today</span>
+                                <span class="text">2020</span>
+                            </div>
+                            <div class="icon-and-info countries">
+                                <span class="material-icons">flag</span>
+                                <span class="text">Estados Unidos, Hong Kong, Canadá</span>
+                            </div>
+                            <div class="icon-and-info title">
+                                <span class="material-icons">info</span>
+                                <span class="text">Título original: Mulan (2020)</span>
+                            </div>
+                        </div>
+                        <div class="group2">
+                            <div class="icon-and-info premiere">
+                                <span class="text">Premiere digital</span>
+                            </div>
+                            <div class="icon-and-info uhd">
+                                <span class="text">UHD</span>
+                            </div>
+                        </div>
+                        <span class="text-description">La aclamada cineasta Niki Caro da vida a la épica historia de la legendaria guerrera china en el largometraje de Disney, MULÁN, en el que una intrépida joven lo arriesga todo por amor a su familia y a su país, hasta convertirse en una de las mayores guerreras de la historia de China. Cuando el emperador de China decreta que un hombre de cada familia debe servir en el Ejército Imperial para defender al país de los invasores del norte, Hua Mulán, la hija mayor de un condecorado guerrero, decide ocupar el lugar de su padre enfermo. Haciéndose pasar por un hombre, Hua Jun, se enfrenta a constantes desafíos y deberá aprender a canalizar su fuerza interior y a aceptar su verdadero potencial.</span>
+                        <div class="languages-subtitles">
+                            <div class="languages-subtitles__title">
+                                <span class="material-icons">textsms</span>
+                                <h2>Idiomas y subtítulos</h2>
+                            </div>
+                            <table class="languages-table">
+                                <tbody>
+                                    <tr>
+                                        <th class="first-column">Audio</th>
+                                        <th class="second-column">Subtítulos</th>
+                                    </tr>
+                                    <tr class="languages-table__content">
+                                        <th class="first-column">Inglés</th>
+                                        <th class="second-column">Alemán, Italiano, Español, Inglés, Holandés / Flamenco, Francés, Sin subtítulos</th>
+                                    </tr>
+                                    <tr class="languages-table__content">
+                                        <th class="first-column">Español</th>
+                                        <th class="second-column">Alemán, Italiano, Español, Inglés, Holandés / Flamenco, Francés, Sin subtítulos </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="another-films"></div>
         </div>
-    </header>
+    </main>
     <footer>
         <div class="footer-container">
             <div class="cinema-home">
