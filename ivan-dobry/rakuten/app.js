@@ -37,4 +37,12 @@ $(document).ready(function () {
             $('#carousel__tall-4').removeClass('cS-hidden');
         }
     });
+
+    $('#carousel__generos').lightSlider({
+        autoWidth: true,
+        loop: false,
+        onSliderLoad: function () {
+            $('#carousel__generos').removeClass('cS-hidden');
+        }
+    });
 });
