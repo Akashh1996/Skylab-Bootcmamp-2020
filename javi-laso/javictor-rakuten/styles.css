@@ -24,7 +24,7 @@ header {
 }
 
 main {
-	margin-bottom: 110px;
+	margin-bottom: 180px;
 }
 
 footer {
@@ -266,8 +266,8 @@ img:hover {
 .hidden1,
 .hidden2,
 .hidden3,
-.hiddenS,
 .hiddenG,
+.hiddenS,
 .hiddenCast,
 .hiddenAnother {
 	display: none;
@@ -578,11 +578,6 @@ img:hover {
 		display: block;
 	}
 
-	#nextBtnS,
-	#prevBtnS {
-		display: none;
-	}
-
 	.carousel-containerSection {
 		display: flex;
 		flex-direction: row;
@@ -595,10 +590,9 @@ img:hover {
 		margin: 0.5%;
 	}
 
-	/* .carousel-slideS > img {
-		margin: 0.5%;
-		padding: 0.1%;
-	} */
+	.carousel-containerS {
+		overflow: visible;
+	}
 
 	.carousel-container {
 		width: 90%;
@@ -632,6 +626,11 @@ img:hover {
 		color: white;
 		opacity: 0.7;
 		cursor: pointer;
+	}
+
+	#nextBtnS,
+	#prevBtnS {
+		display: none;
 	}
 
 	.hidden {
