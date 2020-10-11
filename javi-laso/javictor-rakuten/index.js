@@ -6,8 +6,6 @@ const carouselSlide3= document.querySelector('.carousel-slide3');
 const carouselImages3= document.querySelectorAll('.carousel-slide3 img');
 const carouselSlideS= document.querySelector('.carousel-slideS');
 const carouselImagesS= document.querySelectorAll('.carousel-slideS img');
-const carouselSlideG= document.querySelector('.carousel-slideG');
-const carouselImagesG= document.querySelectorAll('.carousel-slideG div');
 
 //Buttons
 const prevBtn1=document.querySelector('#prevBtn1');
@@ -18,8 +16,6 @@ const prevBtn3=document.querySelector('#prevBtn3');
 const nextBtn3=document.querySelector('#nextBtn3');
 const prevBtnS=document.querySelector('#prevBtnS');
 const nextBtnS=document.querySelector('#nextBtnS');
-const prevBtnS=document.querySelector('#prevBtnG');
-const nextBtnS=document.querySelector('#nextBtnG');
 
 // CAROUSEL SECTION-MENU
 
@@ -171,43 +167,5 @@ carouselSlide3.addEventListener('transitionend',()=>{
         carouselSlide3.style.transition='none';
         counter3=carouselImages3.length - counter1;
         carouselSlide3.style.transform='translateX('+(-size3*counter3)+'px)';
-    }
-});
-
-// CAROUSEL GENDER
-
-//Counter
-let counterG=1;
-const sizeG= carouselImagesG[0].clientWidth;
-
-carouselSlideG.getElementsByClassName.transform='translateX('+(-sizeG*counter3)+'px)';
-
-//Button Listeners
-
-nextBtnG.addEventListener('click',()=>{
-    if (counterG>=carouselImagesG.length-1)return;
-    carouselSlideG.style.transition="transform 0.7s ease-in-out";
-    counterG+=3;
-    carouselSlideG.style.transform='translateX('+(-sizeG*counter3)+'px)';
-});
-
-prevBtn3.addEventListener('click',()=>{
-    if (counterG<=0)return;
-    carouselSlideG.style.transition="transform 0.7s ease-in-out";
-    counterG-=4;
-    carouselSlideG.style.transform='translateX('+(-sizeG*counterG)+'px)';
-});
-
-carouselSlideG.addEventListener('transitionend',()=>{
-    if(carouselImagesG[counterG].id==='lastCloneG'){
-        carouselSlideG.style.transition='none';
-        counterG=carouselImagesG.length - counter3;
-        carouselSlideG.style.transform='translateX('+(-sizeG*counterG)+'px)';
-
-    }
-    if(carouselImagesG[counterG].id==='firstCloneG'){
-        carouselSlideG.style.transition='none';
-        counterG=carouselImagesG.length - counter1;
-        carouselSlideG.style.transform='translateX('+(-sizeG*counterG)+'px)';
     }
 });

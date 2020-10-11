@@ -187,6 +187,7 @@ img:hover {
 	font-weight: bold;
 	margin-top: 2%;
 	margin-bottom: 1%;
+	padding: 0% 1%;
 }
 
 .seeAll {
@@ -199,7 +200,7 @@ img:hover {
 .carousel-containerS,
 .carousel-containerG {
 	width: 90%;
-	margin: auto;
+
 	overflow: hidden;
 	position: relative;
 }
@@ -241,6 +242,10 @@ img:hover {
 	color: white;
 	opacity: 0.7;
 	cursor: pointer;
+}
+
+.args-container {
+	display: none;
 }
 
 .hidden1,
@@ -615,5 +620,105 @@ img:hover {
 	.hidden {
 		display: block;
 		border: 1px solid rgba(255, 255, 255, 0);
+	}
+
+	.general-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.picture {
+		cursor: pointer;
+	}
+
+	.general-container:hover > .args-container {
+		display: flex;
+		position: absolute;
+		left: 220px;
+	}
+
+	.args-container {
+		display: none;
+		grid-template-columns: 10px auto;
+	}
+
+	.args-box {
+		background-color: rgba(0, 0, 0, 0.74);
+		color: white;
+		font-family: NotoSans-Regular, Arial, sans-serif;
+		height: 300px;
+		width: 400px;
+		padding: 3% 3%;
+		font-weight: bold;
+	}
+
+	.args-arrow {
+		width: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.args-arrow-inside {
+		width: 0;
+		height: 0;
+		border-right: 15px solid rgb(0, 0, 0);
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+	}
+
+	.args-items {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.args-title {
+		height: 5%;
+		font-size: 30px;
+		margin: 0;
+		margin-bottom: 20px;
+	}
+
+	.args-btn {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-content: center;
+	}
+
+	.args-btn > p {
+		border: solid 3px white;
+		padding: 5%;
+		border-radius: 50px;
+		font-size: 10px;
+		font-weight: bolder;
+		background-color: black;
+	}
+
+	.args_keyArgs {
+		font-size: 10px;
+		font-weight: bolder;
+		margin-bottom: 5px;
+	}
+
+	.args_resum {
+		margin-top: 3%;
+		font-size: 15px;
+		font-weight: 100;
+		margin-bottom: 10px;
+	}
+
+	.args_buy {
+		margin-top: 3%;
+		color: #ffe300;
+		font-size: 10px;
+		font-weight: bolder;
+	}
+
+	.carousel-slide1 > div {
+		margin-right: 1%;
 	}
 }
