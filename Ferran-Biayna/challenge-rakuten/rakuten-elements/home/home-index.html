@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Rakuten TV - Tu cine en casa</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link
 			href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
 			rel="stylesheet"
@@ -30,33 +31,34 @@
 				/>
 			</div>
 			<nav class="desktop-header">
-				<figure class="desktop-header__rakuten-logo">
-					<img
-						src="https://appstv-static-content-prod.wuaki.tv/images/720p/UI30_about_us-logo.70c3538baaaa2c6937b498be48c7e456.png"
-					/>
-				</figure>
 				<div class="desktop-header__menu-bar">
-					<span class="menu-bar__cinema">
-						<button class="cinema__dropdown">CINEMA &#9662</button>
+					<span class="desktop-header__rakuten-logo">
+						<img
+							src="https://appstv-static-content-prod.wuaki.tv/images/720p/UI30_about_us-logo.70c3538baaaa2c6937b498be48c7e456.png"
+						/>
+					</span>
+					<span class="menu-bar">
+						<button class="menu-bar__dropdown">CINEMA &#9662</button>
 						<div class="dropdown-content">
 							<span>TODOS LOS GÉNEROS</span>
 							<span>FAMILY</span>
 						</div>
 					</span>
 					<span>FREE</span>
-					<span class="menu-bar__cinema">
-						<button class="cinema__dropdown">SUBSCRIPTION &#9662</button>
+					<span class="menu-bar">
+						<button class="menu-bar__dropdown">SUBSCRIPTION &#9662</button>
 						<div class="dropdown-content">
 							<span>STARZPLAY</span>
 							<span>RTV SUSCRIPCIÓN</span>
 						</div>
 					</span>
-				</div>
-				<div class="desktop-header__search">
-					<input name="search" placeholder="Buscar" maxlength="64" />
-					<span></span>
+					<form class="desktop-header__search">
+						<button type="submit"><i class="fa fa-search"></i></button>
+						<input type="text" placeholder="Buscar" name="search">
+					  </form>
 				</div>
 				<div class="desktop-header__login">
+					<span class="login__help">AYUDA Y DISPOSITIVOS</span>
 					<span class="login__enter">ENTRAR</span>
 					<span class="login__log">REGISTRARSE</span>
 				</div>
