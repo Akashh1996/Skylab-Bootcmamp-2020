@@ -270,7 +270,9 @@
 	border-top: none;
 	border-right: 1px solid #d9d9d9;
 	border-left: 1px solid #d9d9d9;
+	border-bottom: 1px solid #d9d9d9;
 	border-radius: 0 0 2px 2px;
+	background-color: white;
 }
 .text__detail__content__block__inline {
 	margin-left: 5px;
@@ -360,4 +362,22 @@
 
 .detail__content__block__title-direccion {
 	margin-top: 30px;
+}
+
+.main__detail__content {
+	padding: 0 20px 20px;
+	background-color: #f1f1f1;
+}
+.detail__content__genres--title {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.detail__content__genres--icons {
+	display: flex;
+	flex-direction: row;
+	margin: 10px 20px;
 }
