@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Formularios</title>
+	</head>
+	<body>
+		<h1>Formularios</h1>
+		<form>
+			<label for="Description">Search:</label>
+			<input
+				id="search"
+				name="search"
+				type="text"
+				placeholder="Search here..."
+				required
+				minlength="7"
+				maxlength="10"
+			/>
+			<br />
+			<br />
+			<label for="visitors">Visitors:</label>
+			<input
+				id="visitors"
+				name="visitors"
+				type="number"
+				value="1"
+				placeholder="Search here..."
+				required
+				min="1"
+				max="12"
+			/>
+			<br />
+			<br />
+			<label for="textArea">Text Area:</label>
+			<textarea
+				name="description"
+				id="description"
+				rows="4"
+				maxlength="100"
+				placeholder="Tell me a little bit about your experience as a developer..."
+			></textarea>
+			<br />
+			<br />
+			<label for="age">Age:</label>
+			<select name="age" id="age">
+				<option value="1">Uno</option>
+				<option value="2">Dos</option>
+				<option value="3">Tres</option>
+			</select>
+			<br />
+			<br />
+			<label for="checkbox">Checkbox:</label>
+			<input type="checkbox" name="" id="" />
+			<br />
+			<br />
+			<fieldset>
+				<legend>Frameworks</legend>
+				<label for="React">React:</label>
+				<input
+					id="frameworks-react"
+					name="framworks"
+					type="checkbox"
+					value="react"
+				/>
+				<label for="Angular">Angular:</label>
+				<input
+					id="frameworks-angular"
+					name="framworks"
+					type="checkbox"
+					value="angular"
+				/>
+				<label for="vue">Vue:</label>
+				<input
+					id="frameworks-vue"
+					name="framworks"
+					type="checkbox"
+					value="vue"
+				/>
+				<br />
+				<br />
+			</fieldset>
+			<br />
+			<br />
+			<fieldset>
+				<legend>Me gusta GIT!?</legend>
+				<label for="true">True:</label>
+				<input id="gitlover" name="gitlover" type="radio" value="true" />
+				<label for="false">False:</label>
+				<input id="gitlover" name="gitlover" type="radio" value="false" />
+			</fieldset>
+		</form>
+	</body>
+</html>

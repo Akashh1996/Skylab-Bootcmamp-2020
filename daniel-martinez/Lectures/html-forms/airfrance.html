@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Airfrance Form</title>
+		<link rel="stylesheet" href="airfrance.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+			rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	</head>
+	<body>
+		<article>
+			<header>
+                <nav>
+				<h3 class="title t1">RESERVAR UN VUELO</h3>
+                <h3 class="title t2">RESERVAR UN VUELO CON MILLAS</h3>
+            </nav>
+			</header>
+			<main>
+				<form>
+					<section class="passengers10">
+						<a href="">Book for 10+ passengers</a>
+					</section>
+
+					<section class="row first">
+						<div class="viaje">
+							<label for="viajeForm">Viaje:</label><br />
+							<select name="viajeForm" id="viajeForm">
+								<option value="idaVuelta">Ida y vuelta</option>
+								<option value="soloIda">Sólo ida</option>
+								<option value="destinosMultiples">Destinos múltiples</option>
+							</select>
+						</div>
+						<div class="pasajeros">
+							<label for="pasajerosForm">Pasajeros:</label><br />
+							<select name="pasajerosForm" id="pasajerosForm">
+								<option value="1pasajero">1 Pasajero</option>
+								<option value="2pasajeros">2 Pasajeros</option>
+								<option value="3pasajeros">3 Pasajeros</option>
+							</select>
+						</div>
+						<div class="clase">
+							<label for="claseForm">Clase:</label><br />
+							<select name="claseForm" id="pasajerosForm">
+								<option value="economy">ECONOMY</option>
+								<option value="premiumEconomy">PREMIUM ECONOMY</option>
+								<option value="economyBusiness">ECONOMY BUSINESS</option>
+								<option value="laPremiere">LA PREMIÈRE</option>
+							</select>
+						</div>
+					</section>
+					<section class="row second">
+						<div class="salida">
+                            <span class="material-icons">flight_takeoff</span>
+                            <label class="label" for="salida">Salida de:</label>
+							<input
+								type="text"
+								name="salida"
+								id="salida"
+								placeholder="Salida"
+								required
+							/>
+						</div>
+						<div class="llegada">
+                            <span class="material-icons">flight_land</span>
+							<label class="label" for="llegada">Llegada a:</label>
+							<input
+								type="text"
+								name="llegada"
+								id="llegada"
+								placeholder="Llegada"
+								required
+							/>
+						</div>
+					</section>
+					<section class="dateAndLabel">
+						<label class="date" for="date">Fechas de viaje:</label>
+						<input
+							type="date"
+							name="date"
+							id="date"
+							placeholder="Fecha"
+							required
+						/>
+					</section>
+					<section class="checkboxPro">
+						<label class="switch">
+							<input type="checkbox" checked />
+							<span class="slider round"></span>
+						</label>
+						<p class="pro">Viaje profesional</p>
+					</section>
+
+					<section class="row info">
+						<div class="name">
+							<label class="label" for="name">Nombre:</label>
+							<input
+								type="text"
+								name="nombre"
+								id="nombre"
+								placeholder="Nombre"
+								required
+							/>
+						</div>
+						<div class="apellido">
+							<label class="label" for="apellido">Apellido:</label>
+							<input
+								type="text"
+								name="apellido"
+								id="apellido"
+								placeholder="Apellido"
+								required
+							/>
+						</div>
+						<div class="email">
+							<label class="label" for="email">Email:</label>
+							<input
+								type="text"
+								name="email"
+								id="email"
+								placeholder="email@ejemplo.com"
+								pattern=".+@globex.com"
+								required
+							/>
+						</div>
+						<div class="num">
+							<label class="label" for="num">Nº teléfono:</label>
+							<input
+								type="number"
+								name="num"
+								id="num"
+								minlength="9"
+								maxlength="9"
+								placeholder="123456789"
+								required
+							/>
+						</div>
+                    </section>
+                </section>
+                <section class="descripcion">
+                    <label class="descripcion" for="descripcion">Información adicional:</label>
+                    <textarea
+                        name="descripcion"
+                        id="descripcion"  
+                        cols="30"
+                        rows="3" 
+                    ></textarea>
+                </section>
+					<section class="buttonBuscar">
+						<button type="button" class="buscar">Buscar vuelos</button>
+					</section>
+				</form>
+			</main>
+		</article>
+	</body>
+</html>

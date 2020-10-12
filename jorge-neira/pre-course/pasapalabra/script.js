@@ -342,7 +342,7 @@ const pasapalabra = () => {
 					);
 					questionListArray[x].status = 1;
 					letters[x] = check;
-					questionAnswerCounter++, correct++;
+					questionAnswerCounter = questionAnswerCounter++, correct++;
 				} else {
 					console.log(
 						`INCORRECTO! Lo haras mejor en la proxima pregunta! \n\tTu respuesta: ${userAnswer} \n\tRespuesta Correcta: ${questionListArray[x].answer[questionsToAsk]}`
