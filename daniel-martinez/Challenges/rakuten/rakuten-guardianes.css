@@ -527,10 +527,202 @@ body {
 
 .info-block__movie {
 	background-color: rgb(255, 255, 255);
+	padding: 20px;
 }
 
 .movie__data {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
 	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.data-icon {
+	font-size: 14px !important;
+	margin-right: 2px;
+}
+
+.movie__description {
+	font-size: 16px;
+	line-height: 180%;
+	margin-bottom: 30px;
+}
+
+.language-and-subs,
+.direction-and-actors,
+.ratings,
+.movie-genre {
+	padding-bottom: 30px;
+}
+
+.language-and-subs__title,
+.direction-and-actors__title,
+.ratings__title,
+.movie-genres__title {
+	font-size: 16px;
+	margin-bottom: 10px;
+	color: #252525;
+}
+
+.audio-subs__block {
+	display: flex;
+	flex-direction: row;
+}
+
+.audio-row {
+	display: flex;
+	flex-direction: column;
+	padding-right: 30px;
+	width: 100px;
+	margin-right: 0 !important;
+}
+
+.subtitles-row {
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+}
+
+.audio,
+.sub {
+	padding-bottom: 5px;
+	color: #737373;
+}
+
+.audio-subtitle,
+.subtitles-subtitle {
+	color: #252525;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.container {
+	align-items: center;
+	margin-top: 20px;
+}
+
+.scrollable::-webkit-scrollbar {
+	display: none;
+}
+
+.scrollable {
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+}
+
+.cast {
+	height: 140px;
+	margin: 0;
+	border-radius: 2px;
+	border: 5px solid transparent;
+	border-radius: 8px;
+}
+
+.movie-genres__block {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.genre-block {
+	margin: 10px 5px;
+}
+
+.genre__title {
+	display: flex;
+	justify-content: center;
+	font-weight: 300;
+	font-size: 13px;
+	width: 80%;
+	color: #252525;
+	margin-left: 10px;
+	margin-top: 5px;
+	text-align: center;
+}
+
+.cast-block {
+	margin: 10px 0;
+}
+
+.cast__name {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: center;
+	height: 30px;
+	font-weight: 300;
+	font-size: 13px;
+	width: 90%;
+	color: #252525;
+	margin-left: 10px;
+	margin-top: 5px;
+	text-align: center;
+}
+
+.genre__icon {
+	width: 95px;
+	height: 95px;
+	margin: 5px 5px;
+	background-position: center center;
+	background-size: 115%;
+	background-color: rgb(217, 217, 217);
+	border-radius: 50%;
+	margin: auto;
+}
+
+.action__icon {
+	background-image: url(rakuten-image/mainpage/action-1591342700.png);
+}
+
+.adventures__icon {
+	background-image: url(rakuten-image/mainpage/adventure-1591342698.png);
+}
+
+.sci-fi__icon {
+	background-image: url(rakuten-image/mainpage/science-fiction-1591342715.png);
+}
+
+.fantasy__icon {
+	background-image: url(rakuten-image/mainpage/fantasy-1591342745.png);
+}
+
+.family-cinema__icon {
+	background-image: url(rakuten-image/mainpage/kids-family-1591342710.png);
+}
+
+.comedy__icon {
+	background-image: url(rakuten-image/mainpage/comedy-1591342725.png);
+}
+
+.disney__icon {
+	background-image: url(rakuten-image/mainpage/disney-1591342735.png);
+}
+
+.other-films {
+	padding-top: 10px;
+	padding-bottom: 50px;
+	background-color: rgb(241, 241, 241);
+	border-top: 1px solid rgb(217, 217, 217);
+}
+
+.other-films__title {
+	font-size: 18px;
+	color: #252525;
+	font-weight: bold;
+	padding: 15px 5px 0px;
+}
+
+.container {
+	align-items: center;
+	margin-left: 10px;
+}
+
+.vertical-movie {
+	margin: 0 5px;
+	border-radius: 5px;
 }
 
 @media only screen and (min-width: 1025px) {
