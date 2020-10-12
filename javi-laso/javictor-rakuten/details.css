@@ -35,6 +35,68 @@ main {
 	z-index: 20;
 }
 
+.navbar-top-details .logo img {
+	width: auto;
+	height: 60px;
+	margin: 10px;
+}
+
+.navbar-top-details .search-bar {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-top-details .search-bar input {
+	height: 90%;
+	background-color: white;
+	border: none;
+	font-family: NotoSans-Regular, Arial, sans-serif;
+	font-size: 16px;
+	outline: none;
+	flex-grow: 2;
+}
+
+.navbar-top-details .search-bar .material-icons {
+	color: rgb(153, 153, 153);
+	font-size: 30px;
+}
+
+.navbar-top-details .search-bar,
+.navbar-top-details .search-bar .img-container,
+.navbar-top-details .search-bar .material-icons {
+	background-color: white;
+}
+
+.navbar-top-details .search-bar .img-container {
+	margin: 5px 5px 5px 15px;
+	width: 28px;
+}
+
+#searchBox {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	-webkit-transition: 0.7s ease-in-out;
+	transition: 0.7s ease-in-out;
+}
+
+#searchBtn,
+#closeBtn {
+	margin: 15px;
+	border: none;
+	background: none;
+	outline: none;
+	cursor: pointer;
+}
+
+#searchBtn {
+	color: white;
+	width: 20px;
+}
+
 .main-container {
 	display: flex;
 	flex-direction: column;
@@ -139,6 +201,7 @@ main {
 	color: #ffe300;
 	height: 100%;
 	margin: 5px;
+	font-weight: 600;
 }
 
 .buttons-see-coupon {

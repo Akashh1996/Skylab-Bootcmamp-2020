@@ -358,7 +358,7 @@ footer {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: inherit;
+		height: 59px;
 		margin: 0px 15px;
 	}
 
