@@ -9,7 +9,6 @@ html {
 
 body {
 	background-color: rgb(23, 23, 23);
-	margin-left: 10px;
 }
 
 .nav__items {
@@ -458,45 +457,43 @@ body {
 }
 
 .header__bottom__items__home {
-	background: url('rakuten-images-daina/home.png') bottom center no-repeat;
+	background: url('rakuten-image/home.png') bottom center no-repeat;
 }
 
 .header__bottom__items__home:hover {
-	background: url('rakuten-images-daina/home_hover.png') bottom center no-repeat;
+	background: url('rakuten-image/home_hover.png') bottom center no-repeat;
 }
 
 .header__bottom__items__cinema {
-	background: url('rakuten-images-daina/cinema.png') bottom center no-repeat;
+	background: url('rakuten-image/cinema.png') bottom center no-repeat;
 }
 
 .header__bottom__items__cinema:hover {
-	background: url('rakuten-images-daina/cinema_hover.png') bottom center
-		no-repeat;
+	background: url('rakuten-image/cinema_hover.png') bottom center no-repeat;
 }
 
 .header__bottom__items__free {
-	background: url('rakuten-images-daina/eye.png') bottom center no-repeat;
+	background: url('rakuten-image/eye.png') bottom center no-repeat;
 }
 
 .header__bottom__items__free:hover {
-	background: url('rakuten-images-daina/eye_hover.png') bottom center no-repeat;
+	background: url('rakuten-image/eye_hover.png') bottom center no-repeat;
 }
 
 .header__bottom__items__subscription {
-	background: url('rakuten-images-daina/ticket.png') bottom center no-repeat;
+	background: url('rakuten-image/ticket.png') bottom center no-repeat;
 }
 
 .header__bottom__items__subscription:hover {
-	background: url('rakuten-images-daina/ticket_hover.png') bottom center
-		no-repeat;
+	background: url('rakuten-image/ticket_hover.png') bottom center no-repeat;
 }
 
 .header__bottom__items__signIn {
-	background: url('rakuten-images-daina/user.png') bottom center no-repeat;
+	background: url('rakuten-image/user.png') bottom center no-repeat;
 }
 
 .header__bottom__items__signIn:hover {
-	background: url('rakuten-images-daina/user_hover.png') bottom center no-repeat;
+	background: url('rakuten-image/user_hover.png') bottom center no-repeat;
 }
 
 @media only screen and (min-width: 1025px) {
