@@ -18,7 +18,9 @@ body {
 }
 
 .container {
+	align-items: center;
 	margin-top: 20px;
+	margin-left: 10px;
 }
 
 .scrollable::-webkit-scrollbar {
@@ -34,17 +36,98 @@ body {
 
 .horizontal-movie {
 	margin: 0 5px;
+	border-radius: 2px;
+	border: 5px solid transparent;
 }
 
 .vertical-movie {
 	margin: 0 5px;
+	border-radius: 2px;
+	border: 5px solid transparent;
+}
+
+.tooltip-movie6 {
+	position: relative;
+}
+
+.tooltip__box {
+	position: absolute;
+	opacity: 0;
+	transition: 1s;
+	z-index: -1000;
+	text-align: center;
+	padding: 15px;
+	border-radius: 4px;
+	background-color: rgba(0, 0, 0, 0.8);
+	box-shadow: 1px 1px 10px 1px black;
+	width: 470px;
+	bottom: 50px;
+	left: 250px;
+}
+
+.tooltip-box__title {
+	font-size: 24px;
+	font-weight: bold;
+	padding: 0px 0px 15px;
+}
+
+.tooltip-box__buttons {
+	margin: 0px 0px 20px;
+}
+
+.buttons__trailer {
+	border-radius: 20px;
+	background-color: black;
+	color: white;
+	border: 3px solid white;
+	font-weight: bold;
+	padding: 8px 16px;
+	font-size: 11px;
+}
+
+.buttons__will-see {
+	border-radius: 20px;
+	background-color: black;
+	color: white;
+	border: 3px solid white;
+	font-weight: bold;
+	padding: 8px 16px;
+	font-size: 11px;
+}
+
+.tooltip-box__genders {
+	font-size: 11px;
+	color: #d9d9d9;
+	margin: 0px 0px 5px 5px;
+	font-weight: bold;
+}
+
+.tooltip-box__description {
+	font-size: 14px;
+	color: #d9d9d9;
+}
+
+.genders__text,
+.tooltip-box__description {
+	opacity: 0;
+	z-index: -1000;
+}
+
+.tooltip-box__watch-now {
+	font-size: 12px;
+	font-weight: bold;
+	color: yellow;
+	-webkit-font-smoothing: antialiased;
+	text-decoration: none;
 }
 
 .latest-releases {
 	padding: 0px 15px 0px 0px;
 }
 
-.latest-releases__title, .free-best-selection__title, .gender-container__title {
+.latest-releases__title,
+.free-best-selection__title,
+.gender-container__title {
 	margin-bottom: 5px;
 	font-weight: bold;
 	font-size: 14px;
@@ -59,9 +142,9 @@ body {
 .gender__title {
 	display: flex;
 	justify-content: center;
-	margin-left: 0px;
 	font-weight: 300;
 	font-size: 14px;
+	width: 80%;
 	color: white;
 	margin-left: 10px;
 	text-align: center;
@@ -73,6 +156,7 @@ body {
 	background-position: center center;
 	background-size: 115%;
 	border-radius: 50%;
+	margin: auto;
 }
 
 .all-genders__icon {
@@ -111,29 +195,91 @@ body {
 	background-image: url(rakuten-image/mainpage/western-1591342759.png);
 }
 
-footer {
-	background-color: rgb(13, 13, 13);
-	padding: 35px 55px 80px;
-	text-align: center;
-}
-
-.footer__footer-logo {
-	display: flex;
-	justify-content: center;
-	margin: 0 auto 20px;
-	width: 122px;
-}
-
 .footer-logo__image {
 	width: 122px;
 }
 
-.footer__links {
+.footer-first {
+	display: none;
+}
+
+.info__cine-en-casa-titulo,
+.how-it-works__title,
+.help__title,
+.pay__title {
+	color: #fff;
+	font-size: 22px;
+	text-align: center;
+}
+
+.other-info__how-it-works,
+.other-info__pay,
+.other-info__help {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
+}
+
+.how-it-works__subtitle,
+.pay__subtitle,
+.help__subtitle {
+	font-size: 14px;
+	color: #cccccc;
+	text-align: center;
+	margin: 10px 5px 0 10px;
+}
+
+.info__cine-en-casa-texto {
+	margin: 10px auto 20px;
+	font-size: 14px;
+	color: #ccc;
+	text-align: center;
+	width: 50%;
+}
+
+.footer-first__other-info {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.other-info__icon {
+	width: 60%;
+	vertical-align: top;
+	padding: 90px 15px 0;
+	background-position: center center;
+	background-size: 180px 90px;
+	background-repeat: no-repeat;
+}
+
+.help__icon {
+	margin: 0 auto;
+}
+
+.how-it-works__icon {
+	background-image: url(https://prod1-kraken-cloudfront.rakuten.tv/images/footer/howitworks-555729f452.svg);
+}
+
+.pay__icon {
+	background-image: url(https://prod3-kraken-cloudfront.rakuten.tv/images/footer/payments-ec797a77da.svg);
+}
+
+.help__icon {
+	background-image: url(https://prod1-kraken-cloudfront.rakuten.tv/images/footer/support-cd17a5040b.svg);
+}
+
+.footer-second {
 	display: flex;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	background-color: rgb(13, 13, 13);
+	padding: 35px 55px 80px;
+	text-align: center;
+	margin: 0 0;
 }
 
 .footer-links__link {
@@ -143,12 +289,12 @@ footer {
 	font-size: 14px;
 	-webkit-font-smoothing: antialiased;
 	text-decoration: none;
+	display: inline-block;
 }
 
 .footer-copyright__text {
-	margin-top: 10px;
+	margin: 10px 10px;
 	color: #737373;
-	margin-left: 0;
 	font-size: 14px;
 }
 
@@ -353,7 +499,11 @@ body {
 	color: #ffe300;
 }
 
-.header__bottom__items__home, .header__bottom__items__cinema, .header__bottom__items__free, .header__bottom__items__subscription, .header__bottom__items__signIn {
+.header__bottom__items__home,
+.header__bottom__items__cinema,
+.header__bottom__items__free,
+.header__bottom__items__subscription,
+.header__bottom__items__signIn {
 	height: 30px;
 	width: 100%;
 }
@@ -393,7 +543,8 @@ body {
  */
 
 .header__bottom__items__signIn {
-	background: url('rakuten-imagerakuten-home.htmlrakuten-home.css/user.png') bottom center no-repeat;
+	background: url('rakuten-imagerakuten-home.htmlrakuten-home.css/user.png')
+		bottom center no-repeat;
 }
 
 /* .header__bottom__items__signIn:hover {
@@ -414,6 +565,46 @@ body {
 }
 
 @media only screen and (min-width: 1025px) {
+	.footer-first {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		background-color: rgb(33, 33, 33);
+		margin: 0;
+		padding: 30px;
+		padding-bottom: 80px;
+	}
+
+	.tooltip-movie6:hover .tooltip__box {
+		opacity: 1;
+		transition-delay: 1s;
+		z-index: 1000;
+	}
+
+	.tooltip-movie6:hover .genders__text {
+		opacity: 1;
+		z-index: 1000;
+		transition-delay: 0s;
+	}
+
+	.tooltip-movie6:hover .tooltip-box__description {
+		opacity: 1;
+		z-index: 1000;
+		transition-delay: 0s;
+	}
+
+	.latest-releases__title,
+	.free-best-selection__title,
+	.gender-container__title {
+		font-size: 20px;
+	}
+
+	.first-row {
+		width: 100vw;
+	}
+
 	.nav__items__menu {
 		display: flex;
 	}
@@ -425,6 +616,15 @@ body {
 	.header__bottom {
 		display: none;
 	}
+
+	.horizontal-movie:hover {
+		border: 5px solid yellow;
+	}
+
+	.vertical-movie:hover {
+		border: 5px solid yellow;
+	}
+
 	.search__icon {
 		display: none;
 	}

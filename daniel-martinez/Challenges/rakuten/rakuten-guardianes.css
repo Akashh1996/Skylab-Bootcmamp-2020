@@ -1,0 +1,597 @@
+ * {
+ 	margin: 0;
+ 	font-family: 'Noto Sans';
+ }
+
+ html {
+ 	background-color: rgb(23, 23, 23);
+ }
+
+ body {
+ 	background-color: rgb(23, 23, 23);
+ 	margin-left: 10px;
+ }
+
+ .first-row {
+ 	margin: 25px 0px 20px 0px;
+ 	padding: 0px 15px 0px 0px;
+ }
+
+ .container {
+ 	align-items: center;
+ 	margin-top: 20px;
+ 	margin-left: 10px;
+ }
+
+ .scrollable::-webkit-scrollbar {
+ 	display: none;
+ }
+
+ .scrollable {
+ 	display: flex;
+ 	flex-direction: row;
+ 	overflow-x: auto;
+ 	background: rgb(23, 23, 23);
+ }
+
+ .horizontal-movie {
+ 	margin: 0 5px;
+ 	border-radius: 2px;
+ 	border: 5px solid transparent;
+ }
+
+ .vertical-movie {
+ 	margin: 0 5px;
+ 	border-radius: 2px;
+ 	border: 5px solid transparent;
+ }
+
+ .tooltip-movie6 {
+ 	position: relative;
+ }
+
+ .tooltip__box {
+ 	position: absolute;
+ 	opacity: 0;
+ 	transition: 1s;
+ 	z-index: -1000;
+ 	text-align: center;
+ 	padding: 15px;
+ 	border-radius: 4px;
+ 	background-color: rgba(0, 0, 0, 0.8);
+ 	box-shadow: 1px 1px 10px 1px black;
+ 	width: 470px;
+ 	bottom: 50px;
+ 	left: 250px;
+ }
+
+ .tooltip-box__title {
+ 	font-size: 24px;
+ 	font-weight: bold;
+ 	padding: 0px 0px 15px;
+ }
+
+ .tooltip-box__buttons {
+ 	margin: 0px 0px 20px;
+ }
+
+ .buttons__trailer {
+ 	border-radius: 20px;
+ 	background-color: black;
+ 	color: white;
+ 	border: 3px solid white;
+ 	font-weight: bold;
+ 	padding: 8px 16px;
+ 	font-size: 11px;
+ }
+
+ .buttons__will-see {
+ 	border-radius: 20px;
+ 	background-color: black;
+ 	color: white;
+ 	border: 3px solid white;
+ 	font-weight: bold;
+ 	padding: 8px 16px;
+ 	font-size: 11px;
+ }
+
+ .tooltip-box__genders {
+ 	font-size: 11px;
+ 	color: #d9d9d9;
+ 	margin: 0px 0px 5px 5px;
+ 	font-weight: bold;
+ }
+
+ .tooltip-box__description {
+ 	font-size: 14px;
+ 	color: #d9d9d9;
+ }
+
+ .genders__text, .tooltip-box__description {
+ 	opacity: 0;
+ 	z-index: -1000;
+ }
+
+ .tooltip-box__watch-now {
+ 	font-size: 12px;
+ 	font-weight: bold;
+ 	color: yellow;
+ 	-webkit-font-smoothing: antialiased;
+ 	text-decoration: none;
+ }
+
+ .latest-releases {
+ 	padding: 0px 15px 0px 0px;
+ }
+
+ .latest-releases__title, .free-best-selection__title, .gender-container__title {
+ 	margin-bottom: 5px;
+ 	font-weight: bold;
+ 	font-size: 14px;
+ 	color: white;
+ 	margin-left: 10px;
+ }
+
+ .gender-container {
+ 	margin-bottom: 30px;
+ }
+
+ .gender__title {
+ 	display: flex;
+ 	justify-content: center;
+ 	font-weight: 300;
+ 	font-size: 14px;
+ 	width: 80%;
+ 	color: white;
+ 	margin-left: 10px;
+ 	text-align: center;
+ }
+
+ .gender__icon {
+ 	width: 95px;
+ 	height: 95px;
+ 	background-position: center center;
+ 	background-size: 115%;
+ 	border-radius: 50%;
+ 	margin: auto;
+ }
+
+ .all-genders__icon {
+ 	background-image: url(rakuten-image/mainpage/all-cb781ac8669959b586ff362be895a182d31a7f5865c80b3a2870da8d1d338a09.png);
+ }
+
+ .action__icon {
+ 	background-image: url(rakuten-image/mainpage/action-1591342700.png);
+ }
+
+ .animation__icon {
+ 	background-image: url(rakuten-image/mainpage/animation-1591342706.png);
+ }
+
+ .adventures__icon {
+ 	background-image: url(rakuten-image/mainpage/adventure-1591342698.png);
+ }
+
+ .classics__icon {
+ 	background-image: url(rakuten-image/mainpage/animation-1591342706.png);
+ }
+
+ .sci-fi__icon {
+ 	background-image: url(rakuten-image/mainpage/science-fiction-1591342715.png);
+ }
+
+ .comedy__icon {
+ 	background-image: url(rakuten-image/mainpage/comedy-1591342725.png);
+ }
+
+ .disney__icon {
+ 	background-image: url(rakuten-image/mainpage/disney-1591342735.png);
+ }
+
+ .western__icon {
+ 	background-image: url(rakuten-image/mainpage/western-1591342759.png);
+ }
+
+ .footer-logo__image {
+ 	width: 122px;
+ }
+
+ .footer-first {
+ 	display: none;
+ }
+
+ .info__cine-en-casa-titulo, .how-it-works__title, .help__title, .pay__title {
+ 	color: #fff;
+ 	font-size: 22px;
+ 	text-align: center;
+ }
+
+ .other-info__how-it-works, .other-info__pay, .other-info__help {
+ 	display: flex;
+ 	flex-direction: column;
+ 	align-items: center;
+ 	flex: 1;
+ }
+
+ .how-it-works__subtitle, .pay__subtitle, .help__subtitle {
+ 	font-size: 14px;
+ 	color: #cccccc;
+ 	text-align: center;
+ 	margin: 10px 5px 0 10px;
+ }
+
+ .info__cine-en-casa-texto {
+ 	margin: 10px auto 20px;
+ 	font-size: 14px;
+ 	color: #ccc;
+ 	text-align: center;
+ 	width: 50%;
+ }
+
+ .footer-first__other-info {
+ 	display: flex;
+ 	flex-direction: row;
+ 	justify-content: center;
+ 	align-items: center;
+ }
+
+ .other-info__icon {
+ 	width: 60%;
+ 	vertical-align: top;
+ 	padding: 90px 15px 0;
+ 	background-position: center center;
+ 	background-size: 180px 90px;
+ 	background-repeat: no-repeat;
+ }
+
+ .help__icon {
+ 	margin: 0 auto;
+ }
+
+ .how-it-works__icon {
+ 	background-image: url(https://prod1-kraken-cloudfront.rakuten.tv/images/footer/howitworks-555729f452.svg);
+ }
+
+ .pay__icon {
+ 	background-image: url(https://prod3-kraken-cloudfront.rakuten.tv/images/footer/payments-ec797a77da.svg);
+ }
+
+ .help__icon {
+ 	background-image: url(https://prod1-kraken-cloudfront.rakuten.tv/images/footer/support-cd17a5040b.svg);
+ }
+
+ .footer-second {
+ 	display: flex;
+ 	justify-content: center;
+ 	align-content: center;
+ 	align-items: center;
+ 	flex-wrap: wrap;
+ 	background-color: rgb(13, 13, 13);
+ 	padding: 35px 55px 80px;
+ 	text-align: center;
+ 	margin: 0 0;
+ }
+
+ .footer-links__link {
+ 	margin-left: 15px;
+ 	padding: 3px 0;
+ 	color: #ccc;
+ 	font-size: 14px;
+ 	-webkit-font-smoothing: antialiased;
+ 	text-decoration: none;
+ 	display: inline-block;
+ }
+
+ .footer-copyright__text {
+ 	margin: 10px 10px;
+ 	color: #737373;
+ 	font-size: 14px;
+ }
+
+ /* Darina:  */
+
+ body {
+ 	background-color: #171717;
+ 	font-family: 'Noto Sans', sans-serif;
+ 	color: white;
+ 	margin: 0;
+ }
+
+ .nav__items {
+ 	display: flex;
+ 	position: fixed;
+ 	top: 0;
+ 	right: 0;
+ 	left: 0;
+ 	height: 60px;
+ 	font-weight: 400;
+ 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+ }
+
+ .nav__bar {
+ 	display: flex;
+ 	align-items: center;
+ 	width: 100%;
+ }
+
+ .nav__items__menu {
+ 	display: none;
+ 	flex-direction: row;
+ 	justify-content: space-around;
+ 	position: relative;
+ 	align-items: center;
+ 	font-family: 'Noto Sans', sans-serif;
+ 	font-size: 14px;
+ 	padding-top: 5px;
+ 	width: 100%;
+ }
+
+ .header-logo {
+ 	height: 37px;
+ 	width: 122px;
+ 	margin-left: 20px;
+ }
+
+ .header-help {
+ 	color: rgb(153, 153, 153);
+ }
+
+ .search__box__input {
+ 	padding-left: 40px;
+ 	height: 35px;
+ 	background-color: #333;
+ 	border-radius: 2px;
+ 	border: 0;
+ 	font-family: 'Noto Sans', sans-serif;
+ 	outline: none;
+ }
+
+ .search__box__input:focus {
+ 	background-color: white;
+ 	color: black;
+ }
+
+ .button-signup {
+ 	background-color: rgba(255, 227, 0, 1);
+ 	padding-right: 8px;
+ 	padding-left: 8px;
+ 	min-height: 32px;
+ 	border: 0;
+ 	border-radius: 2px;
+ 	font-family: 'Noto Sans', sans-serif;
+ 	font-weight: bold;
+ 	outline: none;
+ }
+
+ .button-signup:hover {
+ 	background-color: rgba(255, 227, 0, 0.8);
+ }
+
+ .header__bottom {
+ 	position: fixed;
+ 	bottom: 0;
+ 	left: 0;
+ 	height: 50px;
+ 	background-color: #000;
+ 	z-index: 200;
+ 	border-top: 1px solid rgba(255, 255, 255, 0.2);
+ 	width: 100%;
+ }
+
+ .header__bottom__items {
+ 	display: flex;
+ 	flex-direction: row;
+ 	justify-content: space-around;
+ 	align-items: center;
+ 	font-size: 8px;
+ 	font-weight: 400;
+ 	color: #999;
+ }
+
+ .header__bottom__element {
+ 	width: 100%;
+ 	text-align: center;
+ }
+
+ .header__bottom__element:hover {
+ 	color: #ffe300;
+ }
+
+ .header__bottom__items__home, .header__bottom__items__cinema, .header__bottom__items__free, .header__bottom__items__subscription, .header__bottom__items__signIn {
+ 	height: 30px;
+ 	width: 100%;
+ }
+
+ .header__bottom__items__home {
+ 	background: url('rakuten-images-daina/home.png') bottom center no-repeat;
+ }
+
+ .header__bottom__items__home:hover {
+ 	background: url('rakuten-images-daina/home_hover.png') bottom center no-repeat;
+ }
+
+ .header__bottom__items__cinema {
+ 	background: url('rakuten-images-daina/cinema.png') bottom center no-repeat;
+ }
+
+ .header__bottom__items__cinema:hover {
+ 	background: url('rakuten-images-daina/cinema_hover.png') bottom center no-repeat;
+ }
+
+ .header__bottom__items__free {
+ 	background: url('rakuten-images-daina/eye.png') bottom center no-repeat;
+ }
+
+ .header__bottom__items__free:hover {
+ 	background: url('rakuten-images-daina/eye_hover.png') bottom center no-repeat;
+ }
+
+ .header__bottom__items__subscription {
+ 	background: url('rakuten-images-daina/ticket.png') bottom center no-repeat;
+ }
+
+ .header__bottom__items__subscription:hover {
+ 	background: url('rakuten-images-daina/ticket_hover.png') bottom center no-repeat;
+ }
+
+ .header__bottom__items__signIn {
+ 	background: url('rakuten-images-daina/user.png') bottom center no-repeat;
+ }
+
+ .header__bottom__items__signIn:hover {
+ 	background: url('rakuten-images-daina/user_hover.png') bottom center no-repeat;
+ }
+
+ @media only screen and (min-width: 1025px) {
+ 	.footer-first {
+ 		display: flex;
+ 		flex-direction: column;
+ 		justify-content: center;
+ 		align-content: center;
+ 		align-items: center;
+ 		background-color: rgb(33, 33, 33);
+ 		margin: 0;
+ 		padding: 30px;
+ 		padding-bottom: 80px;
+ 	}
+ 	.tooltip-movie6:hover .tooltip__box {
+ 		opacity: 1;
+ 		transition-delay: 1s;
+ 		z-index: 1000;
+ 	}
+ 	.tooltip-movie6:hover .genders__text {
+ 		opacity: 1;
+ 		z-index: 1000;
+ 		transition-delay: 0s;
+ 	}
+ 	.tooltip-movie6:hover .tooltip-box__description {
+ 		opacity: 1;
+ 		z-index: 1000;
+ 		transition-delay: 0s;
+ 	}
+ 	.latest-releases__title, .free-best-selection__title, .gender-container__title {
+ 		font-size: 20px;
+ 	}
+ 	.first-row {
+ 		width: 100vw;
+ 	}
+ 	.nav__items__menu {
+ 		display: flex;
+ 	}
+ 	.nav__items {
+ 		background-color: black;
+ 	}
+ 	.header__bottom {
+ 		display: none;
+ 	}
+ 	.horizontal-movie:hover {
+ 		border: 5px solid yellow;
+ 	}
+ 	.vertical-movie:hover {
+ 		border: 5px solid yellow;
+ 	}
+ }
+
+ .detail-movie {
+ 	position: absolute;
+ 	background: linear-gradient(to bottom, transparent 30%, rgba(0, 0, 0, .3) 45%, rgba(0, 0, 0, .7) 60%, #000 70%);
+ 	width: 100%;
+ 	height: 680px;
+ }
+
+ .detail__movie__wrapper {
+ 	display: flex;
+ 	flex-direction: column;
+ 	background: url('rakuten-guardianes/snapshot-1590662517-width1920-quality80.jpeg') no-repeat;
+ 	background-size: cover;
+ 	background-position: top;
+ }
+
+ .deatail__movie__round__action {
+ 	display: flex;
+ 	flex-direction: row;
+ 	margin-top: 80px;
+ 	justify-content: center;
+ 	font-size: 10px;
+ 	width: 100%;
+ 	text-align: center;
+ }
+
+ .round-action__trailer {
+ 	display: flex;
+ 	flex-direction: column;
+ 	margin-right: 20px;
+ }
+
+ .round-action__wishlist {
+ 	display: flex;
+ 	flex-direction: column;
+ 	margin-left: 20px;
+ }
+
+ .round-action__trailer__element, .round-action__wishlist__element {
+ 	margin-bottom: 10px;
+ 	background-color: rgba(0, 0, 0, .7);
+ 	background-size: 30px;
+ 	border-radius: 50%;
+ 	padding: 20px;
+ }
+
+ .rating {
+ 	display: flex;
+ 	flex-direction: row;
+ 	color: #ffe300;
+ 	font-size: 18px;
+ 	justify-content: center;
+ 	margin-top: 200px;
+ }
+
+ .score {
+ 	margin: 0 4px;
+ }
+
+ .detail__title {
+ 	text-align: center;
+ }
+
+ .detail__title__text {
+ 	font-size: 28px;
+ 	font-weight: bold;
+ }
+
+ .detail__action {
+ 	display: flex;
+ 	flex-direction: column;
+ 	flex-wrap: wrap;
+ 	align-content: center;
+ }
+
+ .detail__action__purchase {
+ 	background: #ffe300;
+ 	border: 2px double #ffe300;
+ 	width: 350px;
+ 	color: #252525;
+ 	font-size: 14px;
+ }
+
+ .detail__action__redeem {
+ 	width: 350px;
+ 	color: #ffe300;
+ 	background-color: rgba(0, 0, 0, .5);
+ 	border: 2px solid #ffe300;
+ 	font-size: 14px;
+ 	font-weight: bold;
+ 	text-align: center;
+ }
+
+ .detail__action__purchase__text {
+ 	margin-left: 10px;
+ }
+
+ @media only screen and (min-width: 900px) {
+ 	.detail__action {
+ 		flex-wrap: nowrap;
+ 		flex-direction: row;
+ 		justify-content: center;
+ 	}
+ }
