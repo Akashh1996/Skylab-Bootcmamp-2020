@@ -16,6 +16,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+<<<<<<< HEAD
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/8fea6703e0.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -23,6 +24,104 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="detail-style.css" />
+=======
+    <link rel="stylesheet" href="detail-style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8fea6703e0.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      let translateMovies = 0;
+      let translateCast = 0;
+
+      const scrollingRightCast = () => {
+		  translateCast -= 92;
+		if (window.innerWidth < 1024) {
+			if (translateCast === -184) {
+			  document.getElementsByClassName(
+				"right-arrow-container"
+			  )[0].style.visibility = "hidden";
+			}
+		} else {
+			if (translateCast === -92) {
+			  document.getElementsByClassName(
+				"right-arrow-container"
+			  )[0].style.visibility = "hidden";
+			}
+		}
+        document.getElementsByClassName(
+          "left-arrow-container"
+        )[0].style.visibility = "visible";
+        document.getElementsByClassName(
+          "scrollable-list"
+        )[0].style.transform = `translateX(${translateCast}%)`;
+      };
+
+      const scrollingLeftCast = () => {
+		translateCast += 92;
+        translateCast = +translateCast.toFixed(4);
+        if (!translateCast) {
+          document.getElementsByClassName(
+            "left-arrow-container"
+          )[0].style.visibility = "hidden";
+        }
+        document.getElementsByClassName(
+          "right-arrow-container"
+        )[0].style.visibility = "visible";
+        document.getElementsByClassName(
+          "scrollable-list"
+        )[0].style.transform = `translateX(${translateCast}%)`;
+      };
+
+      const scrollingRightMovies = () => {
+		  if (window.innerWidth < 1024) {
+        translateMovies -= 77.1;
+			  if (translateMovies.toFixed(1) == -616.8) {
+          console.log('entro')
+				document.getElementsByClassName(
+				  "right-arrow-container"
+				)[1].style.visibility = "hidden";
+			  }
+			} else {
+				translateMovies -= 90;
+				if (translateMovies === -180) {
+				  document.getElementsByClassName(
+					"right-arrow-container"
+				  )[1].style.visibility = "hidden";
+				}
+      }
+        document.getElementsByClassName(
+          "left-arrow-container"
+        )[1].style.visibility = "visible";
+        document.getElementsByClassName(
+          "scrollable-list"
+        )[1].style.transform = `translateX(${translateMovies}%)`;
+      };
+
+      const scrollingLeftMovies = () => {
+		  	if (window.innerWidth < 1024) {
+			  translateMovies += 77.1;
+			  translateMovies = +translateMovies.toFixed(4);
+			} else {
+				translateMovies += 90;
+				translateMovies = +translateMovies.toFixed(4);
+			}
+			if (!translateMovies) {
+				document.getElementsByClassName(
+				"left-arrow-container"
+				)[1].style.visibility = "hidden";
+			}
+        document.getElementsByClassName(
+          "right-arrow-container"
+        )[1].style.visibility = "visible";
+        document.getElementsByClassName(
+          "scrollable-list"
+        )[1].style.transform = `translateX(${translateMovies}%)`;
+      };
+    </script>
+>>>>>>> b431499db7b400ef0a0877d81132b15319ef6a22
   </head>
   <body>
     <header>
@@ -72,7 +171,11 @@
               </div>
             </div>
           <div class = 'search__container'>
+<<<<<<< HEAD
               <span class='material-icons material-icons-hero-image search__button__nav'>search</span>
+=======
+              <span class='material-icons-hero-image material-icons search__button__nav'>search</span>
+>>>>>>> b431499db7b400ef0a0877d81132b15319ef6a22
               <input type="text" name = 'input__nav' id = 'input__nav__id' class = 'input__nav' placeholder = 'Buscar' >
           </div>
           <div class = 'nav__items__user'>
@@ -94,7 +197,11 @@
           <div class="details__rounds">
               <div class = 'rounds__column'>
                   <div class="round-button">
+<<<<<<< HEAD
                       <span><a href="video.html" class="fas fa-play-circle play"></a></span>
+=======
+                      <a href="video.html" target="_blank" class="fas fa-play-circle play"></a></span>
+>>>>>>> b431499db7b400ef0a0877d81132b15319ef6a22
                   </div>
                       <div class="round-button__text text__left">TRÁILER</div>
               </div>

@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@media screen and (min-width: 730px) {
+	.details__background {
+		background-size: 10%;
+	}
+}
+
+body {
+	box-sizing: border-box;
+	outline: 0;
+	margin: 0px;
+	color: #fff;
+}
+
+.details {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	position: absolute;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+.search__nav__mobile {
+	display: flex;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 50px;
+}
+
+.details__logo {
+	height: 40px;
+	margin-left: -15px;
+	margin-top: 10px;
+	max-height: 60px;
+	width: 187px;
+	object-fit: contain;
+	position: relative;
+}
+
+.details__search {
+	object-fit: contain;
+	margin-left: 140px;
+	width: 50px;
+	height: 30px;
+	max-height: 60px;
+	margin-top: 15px;
+	color: snow;
+}
+
+.upper__gradient:hover > img {
+	cursor: pointer;
+	color: yellow;
+}
+
+#search__nav__id {
+	display: none;
+	position: absolute;
+	top: 0;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+	background: snow;
+}
+
+.search__button__nav {
+	display: flex;
+	position: relative;
+	width: 10%;
+	height: 30px;
+	color: #252525;
+	opacity: 60%;
+	margin-left: 2%;
+	margin-top: 2%;
+}
+
+.search__button__nav__mobile {
+	display: flex;
+	position: relative;
+	width: 10%;
+	height: 30px;
+	color: #252525;
+	opacity: 60%;
+	margin-left: 2%;
+	margin-top: 2%;
+}
+
+
+.input__nav {
+	border: 0px;
+	outline: 0px;
+	color: #252525;
+	font-size: 18px;
+	font-family: 'Noto Sans', sans-serif;
+	width: 80%;
+}
+
+.x {
+	width: 10%;
+	color: #252525;
+	opacity: 60%;
+	position: relative;
+}
+
+.materials-icon {
+	position: relative;
+}
+
+.details__container {
+	position: relative;
+}
+
+.details__background {
+	background: url(background-details-top.jpeg) no-repeat;
+	background-position: center top;
+	position: relative;
+	height: calc(100vh - 0px);
+	min-height: 455px;
+	background-color: #000;
+	background-size: 215%;
+	z-index: -1;
+}
+
+@media screen and (min-width: 1023px) {
+	.details__background {
+		background-size: 100%;
+	}
+}
+
+.gradient {
+	background: linear-gradient(
+		to bottom,
+		transparent 10%,
+		rgba(0, 0, 0, 0.3) 45%,
+		rgba(0, 0, 0, 0.95) 55%,
+		#000 60%
+	);
+}
+
+.upper__gradient {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	background: linear-gradient(
+		to top,
+		transparent 30%,
+		rgba(0, 0, 0, 0.1) 45%,
+		rgba(0, 0, 0, 0.3) 60%,
+		#000 95%
+	);
+}
+
+.details__rounds {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80px;
+	width: 80%;
+	top: 9%;
+	left: 10%;
+}
+
+.rounds__column {
+	margin: 8%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.round-button__text {
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: bold;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+	font-size: 60%;
+	margin-top: 10%;
+	display: flex;
+	height: 50px;
+	-webkit-font-smoothing: antialiased;
+}
+
+.text__rigth {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	width: 80px;
+}
+
+.round-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.play {
+	font-size: 30px;
+}
+
+.icon__rotate {
+	transform: rotate(35deg);
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.details__data {
+	z-index: 1;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	bottom: 330px;
+	width: 100%;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: bold;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.details__data__score {
+	margin-top: 10%;
+	display: flex;
+	align-items: center;
+}
+
+.fa-star {
+	font-size: 13px;
+	color: yellow;
+}
+
+.score {
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 8px;
+	color: yellow;
+}
+
+.data__title {
+	font-size: 30px;
+}
+
+.details__actions {
+	position: relative;
+	margin: 0 auto;
+	width: 80%;
+	text-align: center;
+	bottom: 220px;
+}
+
+.details__actions__options {
+	display: block;
+}
+
+.details__actions__purchase {
+	position: relative;
+	display: flex;
+	height: 50px;
+	width: 100%;
+}
+
+#purchase {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	text-shadow: none;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: bold;
+	padding-left: 5%;
+	border: 0px;
+	border-radius: 3px;
+	-webkit-font-smoothing: antialiased;
+	color: #252525;
+	background-color: #ffe300;
+	outline: 0px;
+}
+
+#rent,
+#buy,
+#watch-now {
+	text-shadow: none;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: bold;
+	color: #252525;
+	background: snow;
+	border: 0px;
+}
+
+.details__actions__coupon {
+	display: flex;
+	height: 50px;
+}
+
+.coupon__button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1%;
+	width: 100%;
+	color: #ffe300;
+	background-color: rgba(0, 0, 0, 0.5);
+	border: 2px solid #ffe300;
+	border-radius: 3px;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: bold;
+}
+
+#coupon__code {
+	outline: none;
+	border: none;
+	margin-top: 1%;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: bold;
+	font-size: 13px;
+	display: flex;
+	text-align: center;
+	width: 50%;
+}
+
+.coupon__call {
+	display: none;
+	width: 100%;
+}
+
+.coupon__confirm {
+	border-radius: 3px;
+	margin-top: 1%;
+	display: none;
+	width: 50%;
+	color: #252525;
+	background-color: #ffe300;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: bold;
+	border: 0px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+
+@media screen and (min-width: 910px) {
+	
+	.details__data {
+		bottom: 450px;
+	}
+
+	.details__rounds {
+		top: 17%;
+	}
+
+	.upper__gradient {
+		display: none;
+	}
+
+	.rounds__column {
+		margin:2%;
+	}
+
+	.round-button__text {
+		text-shadow: 0 3px 3px rgba(0, 0, 0, 0.8);
+		font-size: 90%;
+	}
+
+	.text__rigth {
+		width: 150px;
+
+	}
+
+	.round-button {
+		width: 120px;
+		height: 120px;
+		background: rgba(0, 0, 0, 0.7);
+	}
+
+	.play {
+		font-size: 45px;
+	}
+
+	.icon__rotate {
+		font-size: 45px;
+	}
+
+	.data__title {
+		font-size: 50px;
+	}
+
+	.details__actions__options {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.details__actions {
+		width: 70%;
+		bottom: 360px;
+	}
+
+	.details__actions__purchase {
+		margin-right: 10px;
+		margin-top: 2px;
+		height: 55px;
+		width: 50%;
+	}
+
+	#purchase {
+		padding-left: 4%;
+		font-size: 18px;
+	}
+
+	#rent,
+	#buy,
+	#watch-now {
+		font-size: 18px;
+		padding-left: 2%;
+	}
+
+	.details__actions__coupon {
+		height: 60px;
+		width: 50%;
+	}
+
+	.coupon__button {
+		font-size: 18px;
+	}
+
+	#coupon__code {
+		height: 53px;
+		font-size: 16px;
+	}
+
+	.coupon__confirm {
+		height: 55px;
+		border-radius: 0px;
+		font-size: 16px;
+	}
+
+	
+	#search__nav__id {
+		display: flex;
+		flex-wrap: nowrap;
+		margin: 0 auto;
+		height: 60px;
+		background:#101010;
+		border-bottom: 1px solid gray;
+	}
+
+	.search__button__nav {
+		display: none;
+	}
+
+	.input__nav {
+		border: 0px;
+		outline: 0px;
+		height: 35px;
+		margin-left: 40px;
+		color: #252525;
+		font-size: 18px;
+		font-family: 'Noto Sans', sans-serif;
+		width: 20%;
+		border-radius: 2px;
+		background-color: #333;
+	}
+
+	.details__logo {
+		display: none;
+	}
+	
+	.details__logo__desktop {
+		height: 40px;
+		left: 0;
+		margin-left: -10px;
+		max-height: 60px;
+		width: 187px;
+		object-fit: contain;
+		position: absolute;
+	}
+
+	.details__search {
+		display: flex;
+		justify-content: flex-end;
+		position: absolute;
+		object-fit: contain;
+		right: 0;
+		width: 50px;
+		height: 30px;
+		max-height: 60px;
+		margin-top: 15px;
+		color: snow;
+	}
+
+	.material-icons {
+		visibility: hidden;
+
+	}
+
+	.x {
+		visibility: hidden;
+	}
+
+	.search__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		position: relative;
+	}
+
+	.search__container > .material-icons {
+		visibility: visible;
+		position: absolute;
+		color: #fff;
+		margin-bottom: 1.5%;
+		margin-left: -7%;
+		margin-right: 2%;
+	}
+
+	.search__container > input {
+		padding-left: 40px;
+	  }
+
+	
+	
+}
