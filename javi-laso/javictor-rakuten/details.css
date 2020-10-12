@@ -127,7 +127,7 @@ main {
 }
 
 .trailer__container {
-	background-image: url('img/mulan-2020-1601313574-width1920-quality80.jpeg');
+	background-image: url('img/detalle/mulan-2020-1601313574-width1920-quality80.jpeg');
 	background-repeat: no-repeat;
 	background-size: auto 100%;
 	background-position: center top;
@@ -199,7 +199,6 @@ main {
 
 .trailer__rating span {
 	color: #ffe300;
-	height: 100%;
 	margin: 5px;
 	font-weight: 600;
 }
