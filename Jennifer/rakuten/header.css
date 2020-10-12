@@ -101,8 +101,6 @@ h3 {
 	display: flex;
 	max-width: fit-content;
 }
-#select-cinema {
-}
 
 .button-nav-left,
 .button-nav-right {
@@ -215,33 +213,6 @@ button > b:hover {
 	background-color: black;
 }
 
-/*
-
-.input-search-icon {
-	display: flex;
-	flex-direction: row;
-}
-
-li button {
-	background: black;
-	margin: 10px;
-	border: none;
-}
-
-button {
-	height: 10px;
-}
-
-.icon-search,
-.search {
-	background: grey;
-}
-
-#sign-up {
-	background: #ffe300;
-}
-*/
-
 @media screen and (min-width: 764px) {
 	.img-scroll-1,
 	.img-scroll-2,
@@ -252,19 +223,20 @@ button {
 		width: 190px;
 		height: 300px;
 	}
-
 }
 
-::-webkit-scrollbar {display: none;} 
+::-webkit-scrollbar {
+	display: none;
+}
 
-@media screen and (min-width:600px){
+@media screen and (min-width: 600px) {
 	.wrapper-premieres,
-.wrapper-selection,
-.wrapper-recomendations,
-.wrapper-rakuten-stories,
-.wrapper-all-movies{
-	overflow-x: auto;
-
+	.wrapper-selection,
+	.wrapper-recomendations,
+	.wrapper-rakuten-stories,
+	.wrapper-all-movies {
+		overflow-x: auto;
+	}
 }
 
 .logo-nav {
