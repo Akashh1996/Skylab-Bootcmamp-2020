@@ -4,13 +4,13 @@
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 100%;
+	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .title__body {
-  display: none;
+	display: none;
 }
 
 /* Hide the images by default */
@@ -108,7 +108,7 @@
 
 @media screen and (min-width: 812px) {
 	.slideshow-container {
-    max-width: 100%;
+		max-width: 100%;
 		position: relative;
 		margin: auto;
 	}
@@ -194,8 +194,8 @@
 .mini__rakuten-logo {
 	position: absolute;
 	left: 0;
-  top: 1.1%;
-  z-index: 900;
+	top: 1.1%;
+	z-index: 900;
 }
 
 .mini__rakuten-logo img {
@@ -208,8 +208,8 @@
 .mini__search {
 	position: absolute;
 	right: 10px;
-  top: 10px;
-  z-index: 900;
+	top: 10px;
+	z-index: 900;
 }
 
 .mini__search img {
@@ -320,8 +320,8 @@
 }
 
 .footer-content__info {
-  display: none;
-  font-family: 'Noto Sans', sans-serif;
+	display: none;
+	font-family: 'Noto Sans', sans-serif;
 }
 
 .footer-content__mobile {
@@ -332,8 +332,8 @@
 	padding-top: 35px;
 	padding-bottom: 75px;
 	background-color: #0d0d0d;
-  text-align: center;
-  font-family: 'Noto Sans', sans-serif;
+	text-align: center;
+	font-family: 'Noto Sans', sans-serif;
 }
 
 .contact__content {
@@ -388,9 +388,11 @@ body {
 }
 
 @media screen and (min-width: 1025px) {
-	.mobile-header, .mini__rakuten-logo, .mini__search {
+	.mobile-header,
+	.mini__rakuten-logo,
+	.mini__search {
 		display: none;
-  }
+	}
 
 	.desktop-header {
 		position: fixed;
@@ -402,8 +404,8 @@ body {
 		left: 0;
 		height: 60px;
 		background: #000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    font-family: 'Noto Sans', sans-serif;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		font-family: 'Noto Sans', sans-serif;
 	}
 
 	.login__help {
@@ -473,10 +475,10 @@ body {
 
 	.desktop-header__search input {
 		padding: 10px;
-    font-size: 15px;
-    height: 43px;
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: 100;
+		font-size: 15px;
+		height: 43px;
+		font-family: 'Noto Sans', sans-serif;
+		font-weight: 100;
 		border: 1px solid #333;
 		border-left: none;
 		border-top-right-radius: 2%;
@@ -492,6 +494,7 @@ body {
 		color: grey;
 		font-size: 18px;
 		margin-right: -10px;
+		outline: none;
 		border: 1px solid #333;
 		border-right: none;
 		border-top-left-radius: 5%;
@@ -499,9 +502,22 @@ body {
 		cursor: pointer;
 	}
 
+	.desktop-header__search button:hover {
+		color:grey;
+	}
+
 	.desktop-header__search input,
 	.desktop-header__search button {
 		background-color: #333;
+	}
+
+	.search__input:focus {
+		color: black;
+		background-color: white;
+		outline: none;
+		border: 1px solid white;
+		border-top-right-radius: 2%;
+		border-bottom-right-radius: 2%;
 	}
 
 	.desktop-header__login {
@@ -535,31 +551,30 @@ body {
 		margin-right: 20px;
 		font-weight: 700;
 		cursor: pointer;
-  }
-
+	}
 
 	.footer-content__info {
 		display: block;
 		padding: 25px;
-    background-color: #212121;
-    font-family: 'Noto Sans', sans-serif;
+		background-color: #212121;
+		font-family: 'Noto Sans', sans-serif;
 	}
 
 	.info__title {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-    text-align: center;
-    padding-top: 15px;
-  }
-  
-  .title__footer {
-    margin-bottom: 15px;
-		color: #fff;
-    font-size: 22px;
-    font-weight: 700;
 		text-align: center;
-  }
+		padding-top: 15px;
+	}
+
+	.title__footer {
+		margin-bottom: 15px;
+		color: #fff;
+		font-size: 22px;
+		font-weight: 700;
+		text-align: center;
+	}
 
 	.info__title {
 		margin: 10px auto 20px;
@@ -605,13 +620,13 @@ body {
 	}
 
 	.tools__howitworks img {
-    width: 100px;
-    margin-bottom: -15px;
-  }
-  
-  .tools__howitworks p {
-    margin-bottom: 20px;
-  }
+		width: 100px;
+		margin-bottom: -15px;
+	}
+
+	.tools__howitworks p {
+		margin-bottom: 20px;
+	}
 
 	.tools__pay {
 		display: flex;
@@ -624,13 +639,13 @@ body {
 
 	.tools__pay img {
 		width: 200px;
-    margin-top: 30px;
-    margin-bottom: -15px;
+		margin-top: 30px;
+		margin-bottom: -15px;
 	}
 
 	.tools__pay p {
-    margin-top: 25px;
-    margin-bottom: 20px;
+		margin-top: 25px;
+		margin-bottom: 20px;
 	}
 
 	.tools__help {
@@ -645,13 +660,13 @@ body {
 	.tools__help img {
 		min-width: 30%;
 		width: 95px;
-    margin-top: 10px;
-    margin-bottom: -15px;
+		margin-top: 10px;
+		margin-bottom: -15px;
 	}
 
 	.tools__help p {
-    margin-top: 10px;
-    margin-bottom: 20px;
+		margin-top: 10px;
+		margin-bottom: 20px;
 	}
 
 	.contact__content {

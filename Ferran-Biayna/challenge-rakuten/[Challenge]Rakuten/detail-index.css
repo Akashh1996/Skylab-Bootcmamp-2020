@@ -1,6 +1,8 @@
 .description {
     display: flex;
     flex-direction: column;
+    padding-bottom: 10px;
+    padding-top: 50px;
 }
 
 .description__social {
@@ -27,6 +29,11 @@
     cursor: pointer;
 }
 
+.social__button:active {
+    background-color: black;
+    color: white;
+}
+
 .button__twitter {
     width: 50%;
 }
@@ -41,6 +48,10 @@
 
 .social__button:hover {
     color: grey
+}
+
+.social__button:active {
+    color: white;
 }
 
 .desktop__text {
@@ -103,6 +114,12 @@
     flex-wrap: wrap;
     padding-right: 20px;
     padding-top: 5px;
+}
+
+.title__actors {
+    display: flex;
+    flex-direction: flex;
+    align-items: flex-start;
 }
 
 .lang__sound {
