@@ -287,7 +287,7 @@ footer {
 	margin-top: 6px;
 }
 
-.material-icons {
+.nav-bar__icon {
 	color: #999;
 }
 
@@ -424,11 +424,12 @@ footer {
 		flex-direction: row;
 		align-items: center;
 	}
+}
 
 /* AKASH */
 
 
-nav {
+.top-nav {
     background-color: black;
     position: fixed; 
     width: 100%;
@@ -572,7 +573,7 @@ input:focus{
     .mobile{
         display: block;
     }
-    nav{
+    .top-nav{
         position: absolute;
         background: linear-gradient(to bottom, black, transparent);
     }
