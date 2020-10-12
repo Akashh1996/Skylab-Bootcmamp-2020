@@ -425,5 +425,175 @@ footer {
 		align-items: center;
 	}
 
+/* AKASH */
 
+
+nav {
+    background-color: black;
+    position: fixed; 
+    width: 100%;
+    top: 0px;
+}
+
+.nav-items {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    height: 60px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+
+
+}
+
+.nav-logo {
+    width: 140px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-items-menu,
+.nav-items-user {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-items-menu>div,
+.nav-items-user>div {
+    margin: 0 10px;
+}
+
+.nav-search{
+    display: flex;
+    background-color: #333333;
+    flex-direction: row;
+    height: 40px;
+    align-items: center;
+    color: #999;
+    border-radius: 2px;
+}
+
+input{
+    background-color: #333333;
+    height: -webkit-fill-available;
+    border: none;
+    width: 270px;
+    font-size: 16px;
+}
+.nav-search>div{
+    height: 40px;
+    padding-left: 10px;
+}
+.search-icon{
+    padding-top: 8px;
+}
+.nav-option{
+    display: flex;
+}
+.nav-option>div{
+    margin: 0 4px;
+}
+.nav-register{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: #ffe300;
+    color: black;
+    border-radius: 2px;
+    padding: 12px;
+}
+div.slider-wrapper{
+    background-color: black;
+}
+
+
+.main-image img{
+    height: auto;
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.mobile{
+    display: none;
+} 
+
+.boxes img{
+    width: 230px;
+    height: auto;
+    
+} 
+.movies-row-fixed{
+    display: flex;
+    background-color: black;
+    overflow-x: auto;
+}
+
+.movies-row-fixed a {
+    text-align: center;
+    margin: 0 10px;
+}
+
+ header{
+     width: 100%;
+ }
+
+ .movies-row-fixed::-webkit-scrollbar{
+    width: 0;
+   
+}
+input:focus{
+    outline: none;
+  
+}
+.nav-hover:hover{
+    color: yellow;
+    cursor: pointer;
+   
+}
+.search-hover:hover{
+    background-color: white;
+}
+
+@media only screen and (max-width: 1240px) {
+    .nav-help{
+        display: none;
+
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .nav-option,.nav-search, .nav-help, .nav-signin, .nav-register{
+        display: none;
+        
+    }
+    .mobile{
+        display: block;
+    }
+    nav{
+        position: absolute;
+        background: linear-gradient(to bottom, black, transparent);
+    }
+    .movies-row-fixed{
+        display: flex;
+        overflow-x: auto;
+       
+    }
+    .movies-row-fixed::-webkit-scrollbar{
+        width: 0;
+       
+    }
+    .movies-row-fixed a {
+        text-align: center;
+        min-width: 225px;
+        line-height: 20px;
+        margin-right: 0 0px;
+    
+    }
+    .main-image img{
+    margin-top: 0;
+    margin-bottom: 10px;
+    }
 }
