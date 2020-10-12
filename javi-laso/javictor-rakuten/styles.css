@@ -10,14 +10,11 @@ body {
 	font-family: NotoSans-Regular, Arial, sans-serif;
 	overflow-x: hidden;
 	font-size: bold;
-	padding: 1%;
 	background-color: #101010;
 	position: relative;
 }
 
 header {
-	position: absolute;
-	bottom: 0;
 	height: 60px;
 	width: 100%;
 	z-index: 20;
@@ -29,17 +26,6 @@ main {
 
 footer {
 	height: 110px;
-}
-
-img {
-	padding: 1%;
-}
-
-img:hover {
-	border-top: 5px solid #ffe300;
-	border-left: 5px solid #ffe300;
-	border-right: 5px solid #ffe300;
-	border-bottom: 5px solid #ffe300;
 }
 
 .header-navbar {
@@ -143,7 +129,7 @@ img:hover {
 }
 
 .footer-container img {
-	border: none;
+	outline: none;
 }
 
 .about-conditions-workwithus {
@@ -228,6 +214,21 @@ img:hover {
 	display: flex;
 	width: 100%;
 	height: 30%;
+}
+
+.carousel-slide1 img:hover,
+.carousel-slide2 img:hover,
+.carousel-slide3 img:hover,
+.carousel-slideS img:hover {
+	outline: 5px solid #ffe300;
+}
+
+.carousel-slide1 img,
+.carousel-slide2 img,
+.carousel-slide3 img,
+.carousel-slideS img,
+.carousel-slideG img {
+	margin: 5px;
 }
 
 #prevBtn1,
@@ -315,6 +316,11 @@ img:hover {
 /* MEDIA QUERIES */
 
 @media screen and (min-width: 900px) {
+	header {
+		position: absolute;
+		top: 0;
+	}
+
 	main {
 		margin-top: 60px;
 		margin-bottom: 90px;
@@ -334,6 +340,7 @@ img:hover {
 	}
 
 	.navbar-top img {
+		outline: none;
 		border: none;
 	}
 
@@ -438,6 +445,10 @@ img:hover {
 		display: flex;
 		margin: 0px 15px;
 		height: 60%;
+	}
+
+	#search-bar-input {
+		outline: none;
 	}
 
 	.navbar-top .search-bar .img-container {
