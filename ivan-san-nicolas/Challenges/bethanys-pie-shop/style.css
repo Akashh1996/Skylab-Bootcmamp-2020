@@ -222,7 +222,7 @@ body {
         height: 40px;
         display: flex;
         flex-wrap: wrap;
-        align-items: right;
+        justify-content: center;
     }
 
     .web-body {
