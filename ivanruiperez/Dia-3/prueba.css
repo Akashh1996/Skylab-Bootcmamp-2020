@@ -1,9 +1,11 @@
 .allpage {
 	display: flex;
+	flex-wrap: wrap;
 	flex-direction: column;
 	border-color: black;
 	border-style: solid;
 	max-width: 1000px;
+	max-height: 1000px;
 }
 .header {
 	display: flex;
