@@ -272,6 +272,7 @@ button > b:hover {
 
 .nav-icon-search {
 	display: inline-block;
+	margin-right: 20px;
 }
 
 @media only screen and (min-width: 1249px) {
@@ -316,6 +317,7 @@ button > b:hover {
 @media (max-width: 600px) {
 	.nav-icon-search {
 		display: inline-block;
+		margin-right: 20px;
 	}
 }
 
