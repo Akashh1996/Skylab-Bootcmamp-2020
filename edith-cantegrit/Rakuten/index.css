@@ -133,11 +133,20 @@ li {
 }
 
 .seccion__items {
-	display: block;
+	display: flex;
+	flex-direction: row;
 	height: auto;
 	max-height: 170px;
 	margin-top: 35px;
 	width: auto;
+	overflow: auto;
+}
+
+.scrollable {
+	height: auto;
+	max-height: 170px;
+	margin-top: 35px;
+	width: 50px;
 	overflow: auto;
 }
 
