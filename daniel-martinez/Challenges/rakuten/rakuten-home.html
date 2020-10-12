@@ -9,30 +9,52 @@
 			href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
             rel="stylesheet"
         />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+		rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
         <header>
             <div class="header-container">
                 <div class="nav__items">
-    
                     <div class="nav__bar">
-    
-                        <img src="https://appstv-static-content-prod.wuaki.tv/images/720p/UI30_about_us-logo.70c3538baaaa2c6937b498be48c7e456.png" class="header-logo" alt="">
-    
+                        <img src="https://appstv-static-content-prod.wuaki.tv/images/720p/UI30_about_us-logo.70c3538baaaa2c6937b498be48c7e456.png"
+                            class="header-logo" alt="">
+                        <div class="search__icon">
+                            <span class="material-icons">
+                                search
+                            </span>
+                        </div>
                         <div class="nav__items__menu">
     
-                            <div class="header-cinema">
-                                <p>CINEMA</p>
+    
+                            <div class="tooltip__header__cinema">
+                                <div class="header-cinema">
+                                    <div class="header__cinema__text">CINEMA
+                                    </div>
+                                    <i class="fa fa-caret-down" style="font-size: 20px;"></i>
+                                </div>
+                                <div class="tooltip__box__cinema">
+                                    <p class="cinema__text__all__genres">TODOS LOS GENEROS</p>
+                                    <p class="cinema__text___family">FAMILY</p>
+                                </div>
                             </div>
+    
+    
                             <div class="header-free">
-                                <p>FREE</p>
+                                <div class="header-free__text">FREE</div>
                             </div>
                             <div class="header-subscription">
-                                <p>SUBSCRIPTION</p>
+                                <div class="header__subscription__text">SUBSCRIPTION</div>
+                                <i class="fa fa-caret-down" style="font-size: 20px;"></i>
                             </div>
                             <div class="header-search">
-                                <input type="text" class="search__box__input" name="search" placeholder="Buscar"
-                                    maxlength="64" value="" autocomplete="off">
+                                <span class="material-icons">
+                                    search
+                                </span>
+                                <input type="text" class="search__box__input" name="search" placeholder="Buscar" value=""
+                                    autocomplete="off">
                             </div>
                             <div class="header-help">
                                 <p>AYUDA Y DISPOSITIVOS</p>
@@ -73,7 +95,6 @@
                     </div>
                 </div>
             </div>
-    
         </header>
         <main>
             <div class="slider__wrapper">
@@ -218,104 +239,4 @@
             </div>
         </footer>
 	</body>
-</html>
-
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="rakuten-home.css" />
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-		rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-</head>
-
-<body>
-	<header>
-		<div class="header-container">
-			<div class="nav__items">
-				<div class="nav__bar">
-					<img src="https://appstv-static-content-prod.wuaki.tv/images/720p/UI30_about_us-logo.70c3538baaaa2c6937b498be48c7e456.png"
-						class="header-logo" alt="">
-					<div class="search__icon">
-						<span class="material-icons">
-							search
-						</span>
-					</div>
-					<div class="nav__items__menu">
-
-
-						<div class="tooltip__header__cinema">
-							<div class="header-cinema">
-								<div class="header__cinema__text">CINEMA
-								</div>
-								<i class="fa fa-caret-down" style="font-size: 20px;"></i>
-							</div>
-							<div class="tooltip__box__cinema">
-								<p class="cinema__text__all__genres">TODOS LOS GENEROS</p>
-								<p class="cinema__text___family">FAMILY</p>
-							</div>
-						</div>
-
-
-						<div class="header-free">
-							<div>FREE</div>
-						</div>
-						<div class="header-subscription">
-							<div class="header__subscription__text">SUBSCRIPTION</div>
-							<i class="fa fa-caret-down" style="font-size: 20px;"></i>
-						</div>
-						<div class="header-search">
-							<span class="material-icons">
-								search
-							</span>
-							<input type="text" class="search__box__input" name="search" placeholder="Buscar" value=""
-								autocomplete="off">
-						</div>
-						<div class="header-help">
-							<p>AYUDA Y DISPOSITIVOS</p>
-						</div>
-						<div class="header-login">
-							<p>ENTRAR</p>
-						</div>
-						<div class="header-signup">
-							<button class="button-signup">REGISTRARSE</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-		<div class="header__bottom">
-			<div class="header__bottom__items">
-				<div class="header__bottom__element">
-					<div class="header__bottom__items__home"></div>
-					<div class="header__bottom__items__description">PORTADA</div>
-				</div>
-				<div class="header__bottom__element">
-					<div class="header__bottom__items__cinema"></div>
-					<div class="header__bottom__items__description">CINEMA</div>
-				</div>
-				<div class="header__bottom__element">
-					<div class="header__bottom__items__free"></div>
-					<div class="header__bottom__items__description">FREE</div>
-				</div>
-				<div class="header__bottom__element">
-					<div class="header__bottom__items__subscription"></div>
-					<div class="header__bottom__items__description">SUBSCRIPTION</div>
-				</div>
-				<div class="header__bottom__element">
-					<div class="header__bottom__items__signIn"></div>
-					<div class="header__bottom__items__description">ENTRAR</div>
-				</div>
-			</div>
-		</div>
-	</header>
-
-
-</body>
-
 </html>

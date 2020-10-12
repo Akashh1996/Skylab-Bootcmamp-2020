@@ -352,14 +352,23 @@ body {
 
 .header-cinema {
 	display: flex;
+	font-weight: 700;
+	margin-left: 20px;
 }
 
 .header__cinema__text {
 	margin: 0 4px;
 }
 
+.header-free__text {
+	font-size: 14px;
+	font-weight: 700;
+	margin-bottom: 1px;
+}
+
 .header-subscription {
 	display: flex;
+	font-weight: 700;
 }
 
 .header__subscription__text {
