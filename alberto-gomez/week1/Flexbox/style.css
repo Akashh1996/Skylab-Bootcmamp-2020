@@ -1,0 +1,140 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav-bar {
+	display: flex;
+	flex-direction: row;
+	background-color: #ededed;
+	height: 50px;
+	align-items: center;
+}
+
+.nav-bar > div {
+	width: 20px;
+	height: 20px;
+	/* 	border: 1px solid black; */
+	margin-left: 20px;
+	border-radius: 10px;
+}
+
+.circle-red {
+	background-color: red;
+}
+
+.circle-yellow {
+	background-color: yellow;
+}
+
+.circle-brown {
+	background-color: brown;
+}
+
+.first-container {
+	display: flex;
+	flex-flow: row nowrap;
+	margin: 20px 20px 0 20px;
+}
+
+.shape-square {
+	height: 150px;
+	width: 150px;
+	flex-shrink: 0;
+	border: 1px solid black;
+	background-color: #ededed;
+}
+
+.first-container-two {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.shape-circle {
+	height: 50px;
+	width: 50px;
+	border: 1px solid black;
+	border-radius: 25px;
+	margin-left: 20px;
+	flex-shrink: 0;
+	background-color: #ededed;
+}
+
+.headings {
+	margin-left: 10px;
+}
+
+.first-container-two-upper {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.first-container-two-upper > .date-box {
+	width: 100%;
+	text-align: end;
+}
+
+.first-container-two-lower {
+	margin-left: 20px;
+}
+.second-container {
+	margin: 20px 20px 0 20px;
+}
+
+.tr-shapes {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.triangle-shape {
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid black;
+	position: relative;
+}
+
+.triangle-shape::before {
+	content: '';
+	width: 0;
+	height: 0;
+
+	position: absolute;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 40px solid #ededed;
+	top: 7px;
+	left: -20px;
+}
+
+.space-between {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	flex-wrap: nowrap;
+}
+
+h6 {
+	font-weight: lighter;
+	color: gray;
+}
+
+.headings > h4 {
+	color: gray;
+	font-weight: lighter;
+}
+
+.date {
+	color: gray;
+	font-weight: lighter;
+}
