@@ -45,4 +45,12 @@ $(document).ready(function () {
             $('#carousel__generos').removeClass('cS-hidden');
         }
     });
+
+    $('#carousel__details').lightSlider({
+        autoWidth: true,
+        loop: false,
+        onSliderLoad: function () {
+            $('#carousel__details').removeClass('cS-hidden');
+        }
+    });
 });
