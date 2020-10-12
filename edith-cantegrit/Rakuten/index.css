@@ -121,7 +121,9 @@ li {
 	width: 100%;
 	height: auto;
 }
-
+.seccion__item {
+	margin-left: 5px;
+}
 .seccion__items_list {
 	display: flex;
 	flex-direction: row;
@@ -186,11 +188,13 @@ li {
 .seccion__cinema__items__img {
 	height: -webkit-fill-available;
 }
+.seccion__cinema__items__img:hover {
+	border: 4px solid yellow;
+}
 .seccion__cinema__items__img--last {
 	margin-right: 20px;
 	height: -webkit-fill-available;
 }
-
 .seccion__free {
 	display: block;
 	margin-bottom: 100px;
@@ -305,5 +309,8 @@ li {
 	}
 	.header__img {
 		padding-top: 52px;
+	}
+	.seccion__cinema__items__img :hover {
+		border: 4px solid yellow;
 	}
 }

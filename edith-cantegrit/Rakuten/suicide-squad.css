@@ -108,7 +108,12 @@ li {
 }
 
 .filmImg {
-	background-image: url('https://images-2.wuaki.tv/system/shots/193046/original/snapshot-1590662756-width960-quality80.jpeg');
+	background-image: linear-gradient(
+			to top,
+			rgba(2, 2, 3, 0.966),
+			rgba(20, 14, 17, 0)
+		),
+		url(“https://images-2.wuaki.tv/system/shots/193046/original/snapshot-1590662756-width960-quality80.jpeg”);
 	background-position: center;
 	background-repeat: no-repeat;
 	width: 100%;
@@ -354,6 +359,7 @@ td {
 .seccion__cinema__items__img {
 	height: -webkit-fill-available;
 }
+
 .seccion__cinema__items__img--last {
 	margin-right: 20px;
 	height: -webkit-fill-available;
@@ -579,12 +585,7 @@ td {
 	}
 
 	.nav__items__search {
-		display: flex;
-		height: 30px;
-		margin-top: 5px;
-		justify-content: end;
-		align-items: center;
-		width: 30px;
+		display: none;
 	}
 
 	.payAndPlay {
