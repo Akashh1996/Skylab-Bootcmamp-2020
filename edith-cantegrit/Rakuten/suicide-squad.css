@@ -312,4 +312,121 @@ td {
     text-align: center;
 
 }
+
+.footerBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+    background-color: black;
+}
+
+.footerBlock__information {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    padding: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+.about__logo {
+    width: 122px;
+    height: 28px;
+    padding: 28px 0px 15px 0px;
+}
+
+.links {
+    color: lightgray;
+    text-decoration: none;
+    line-height: 20px;
+    margin-left: 10px;
+}
+
+.information__license {
+    padding: 0px 55px 0px 55px;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    color: grey;
+    margin: 5px 0px 0px;
+}
+
+@media only screen and (min-width: 500px) {
+    footer div div div br {
+        display:none;
+    }
+    
+    .wrapper {
+        padding: 0px 55px 0px 55px;
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .payAndPlay {
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-around;
+        padding: 0px 110px 60px;
+        background-color: black;
+    } 
+
+    .payAndPlay__watchNow {
+        display: flex; 
+        flex-direction: row;
+        height: 54px;
+        width:100%;
+        justify-content: space-between; 
+        align-items: center;
+        border: 1px; 
+        border-radius: 3px; 
+        background-color: yellow;
+        padding: 0px 15px;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .filmImg {
+        background-image: url("https://images-2.wuaki.tv/system/shots/193046/original/snapshot-1590662756-width960-quality80.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .features {
+        display:flex;
+        flex-direction: row; 
+        justify-content: center;
+        padding: 30px 55px 30px 55px;
+    }
+
+    .socialLinks {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start
+    }
+
+    .socialMedias {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        background-color: white;
+        padding: 25px 90px;
+    }
+
+    .presentationMovie {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10px;
+        border-right: 1px solid;
+        border-color: lightgrey;
+        border-left: none;
+        flex: 7;
+    }
+}
   
