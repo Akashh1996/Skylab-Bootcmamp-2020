@@ -315,6 +315,24 @@ footer {
 
 /* MEDIA QUERIES */
 
+@media screen and (min-width: 1630px) {
+	#sections_menu {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+@media screen and (min-width: 1450px) {
+	.carousel-containerS {
+		overflow: hidden;
+	}
+
+	#nextBtnS,
+	#prevBtnS {
+		display: none;
+	}
+}
+
 @media screen and (min-width: 900px) {
 	header {
 		position: absolute;
@@ -422,7 +440,7 @@ footer {
 		display: flex;
 		flex-direction: column;
 		position: absolute;
-		top: 60px;
+		top: 58px;
 		height: auto;
 		width: auto;
 		margin-left: -15px;
@@ -624,10 +642,6 @@ footer {
 		margin: 0.5%;
 	}
 
-	.carousel-containerS {
-		overflow: visible;
-	}
-
 	.carousel-container {
 		width: 90%;
 		margin: auto;
@@ -662,11 +676,6 @@ footer {
 		cursor: pointer;
 	}
 
-	#nextBtnS,
-	#prevBtnS {
-		display: none;
-	}
-
 	.hidden {
 		display: block;
 		border: 1px solid rgba(255, 255, 255, 0);
@@ -684,6 +693,7 @@ footer {
 
 	.general-container:hover > .args-container {
 		display: flex;
+		align-items: center;
 		position: absolute;
 		left: 220px;
 	}
@@ -697,7 +707,7 @@ footer {
 		background-color: rgba(0, 0, 0, 0.74);
 		color: white;
 		font-family: NotoSans-Regular, Arial, sans-serif;
-		height: 300px;
+		height: 315px;
 		width: 400px;
 		padding: 3% 3%;
 		font-weight: bold;
@@ -739,13 +749,21 @@ footer {
 		align-content: center;
 	}
 
-	.args-btn > p {
+	.args-btn > a {
 		border: solid 3px white;
 		padding: 5%;
 		border-radius: 50px;
+		margin-bottom: 40px;
 		font-size: 10px;
 		font-weight: bolder;
 		background-color: black;
+		color: white;
+	}
+
+	.args-btn > a:hover {
+		border: solid 3px #ffe300;
+		color: #ffe300;
+		text-decoration: none;
 	}
 
 	.args_keyArgs {
