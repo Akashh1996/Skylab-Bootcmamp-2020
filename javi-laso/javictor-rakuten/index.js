@@ -181,3 +181,41 @@ carouselSlide3.addEventListener('transitionend',()=>{
         carouselSlide3.style.transform='translateX('+(-size3*counter3)+'px)';
     }
 });
+
+// CAROUSEL GENDER
+
+//Counter
+let counterG=0;
+const sizeG= carouselImagesG[0].clientWidth;
+
+carouselSlideG.getElementsByClassName.transform='translateX('+(-sizeG*counterG)+'px)';
+
+//Button Listeners
+
+nextBtnG.addEventListener('click',()=>{
+    if (counterG>=carouselImagesG.length-1)return;
+    carouselSlideG.style.transition="transform 0.7s ease-in-out";
+    counterG+=4;
+    carouselSlideG.style.transform='translateX('+(-sizeG*counterG)+'px)';
+});
+
+prevBtnG.addEventListener('click',()=>{
+    if (counterG<=0)return;
+    carouselSlideG.style.transition="transform 0.7s ease-in-out";
+    counterG-=4;
+    carouselSlideG.style.transform='translateX('+(-sizeG*counterG)+'px)';
+});
+
+carouselSlideG.addEventListener('transitionend',()=>{
+    if(carouselImagesG[counterG].id==='lastCloneG'){
+        carouselSlideG.style.transition='none';
+        counterG=carouselImagesG.length - counterG;
+        carouselSlideG.style.transform='translateX('+(-sizeG*counterG)+'px)';
+
+    }
+    if(carouselImagesG[counterG].id==='firstCloneG'){
+        carouselSlideG.style.transition='none';
+        counterG=carouselImagesG.length - counterG;
+        carouselSlideG.style.transform='translateX('+(-sizeG*counterG)+'px)';
+    }
+});
