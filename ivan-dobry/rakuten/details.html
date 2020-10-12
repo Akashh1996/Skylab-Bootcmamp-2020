@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="shortcut icon"
         href="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f81e309067bcf2ba584da0e/ab17fc05123f20dfd4c62dc9714a5540/web-icon.png">
 	<!--stylesheet----------------->
@@ -16,12 +15,15 @@
     <script src="jquery.js" type="text/javascript"></script>
     <!--lightslider.js------------->
     <script src="lightslider.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
 
     <title>Rakuten Challenge</title>
 </head>
 
 <body>
-    <!--Header--------------------->
+
+    <!--Header----------------------->
     <header class="header">
         <nav class="desktopNav">
             <div class="main__navmenu">
@@ -69,17 +71,16 @@
                     </div>
                 </div>
                 <div class="navMenu">FREE</div>
-                <div class="navMenu dropdown">SUBSCRIPTION
+                <div class="navMenu dropdown">
+                  SUBSCRIPTION
                     <div class="dropdown-content">
                         <a>STARZ PLAY</a><a>RTV SUSCRIPCIÓN</a>
                     </div>
                 </div>
             </div>
-            </div>
             <div class="searchbox">
                 <span class="material-icons searchicon"> search </span>
                 <input type="text" name="searchbox" id="searchbox" placeholder="Buscar" />
-            </div>
             </div>
             <div class="useritems">
                 <!--<a>AYUDA DISPOSITVOS</a>-->
@@ -145,12 +146,58 @@
             </div>
         </nav>
     </header>
+    <!--Main-detail------------------>
+    <section class="main__detail">
+        <div class="detail__image--box">
+            <img class="detail__image"
+                src="https://trello-attachments.s3.amazonaws.com/5f80786e4c6bee34fc175fbd/5f8078ec613ffd2a6ac8e1c4/74b46f428cd5aadb1a7fb933c2be2936/A5D657AD-0993-4AE6-A35A-198B9BD2F065.JPG" />
+            <div class="icon__box">
+                <div class="image__icon">
+                    <a href="https://www.youtube.com/watch?v=JGVCCyts7OE" style="color: white">asd</a>
+                    <span class="material-icons icon-link"> play_circle_filled </span>
+                </div>
+                <div class="image__icon">
+                    <span class="material-icons md-48"> push_pin </span>
+                </div>
+            </div>
+            <div class="rating-box">
+                <span class="material-icons"> star_rate </span><a>10.0</a>
+            </div>
+            <div class="title-box">
+                <h1>La Bella durmiente</h1>
+            </div>
+            <div class="buttons__box">
+                <button class="watch"></button>
+                <button class="coupon"></button>
+            </div>
+        </div>
+    </section>
+    <!--<a>AYUDA Y DISPOSITIVOS</a>-->
+    <div>ENTRAR</div>
+    <button><a>REGISTRARSE</a></button>
+    </div>
+    </nav>
+    </header>
     <!--Mid-page------------------->
     <section class="midpage">
         <div class="midpage__movie-info">
             <header class="midpage__header">
-                <section class="midpage__header__line"></section>
-                <section class="midpage__header__premiere"></section>
+                <section class="midpage__header__line">
+                    <span class="material-icons">group</span>
+                    <span class="midpage__header__line-text">7</span>
+                    <span class="material-icons">access_time</span>
+                    <span class="midpage__header__line-text">116 minutos</span>
+                    <span class="material-icons">calendar_today</span>
+                    <span class="midpage__header__line-text">2020</span>
+                    <span class="material-icons">flag</span>
+                    <span class="midpage__header__line-text">Estados Unidos, Hong Kong, Canadá</span>
+                    <span class="material-icons">info</span>
+                    <span class="midpage__header__line-text">Título original: Mulan (2020)</span>
+                </section>
+                <section class="midpage__header__premiere">
+                    <span class="midpage__header__premiere-span red-background">premiere digital</span>
+                    <span class="midpage__header__premiere-span yellow-background">uhd</span>
+                </section>
             </header>
             <article class="midpage__article">
                 La aclamada cineasta Niki Caro da vida a la épica historia de la legendaria guerrera china en el
@@ -162,60 +209,89 @@
                 aprender a canalizar su fuerza interior y a aceptar su verdadero potencial.
             </article>
             <div class="midpage__language">
-                <img src="" alt="" class="midpage__language-icon">
-                <div class="midpage__language__titles">
-                    <h2></h2>
-                    <h2></h2>
+                <div class="midpage__title">
+                    <span class="material-icons" id="language-icon">message</span>
+                    <span class="midpage__section-title"> Idioma y subtítulos</span>
+                </div>
+                <div class="midpage__language__columns">
+                    <div class="midpage__language__columns-audio margin-right">
+                        <span class="bold">audio</span>
+                        <span class="grey-text">Español</span>
+                        <span class="grey-text">Inglés</span>
+                    </div>
+                    <div class=" midpage__language__columns-sub">
+                        <span class="bold">subtítulos</span>
+                        <span class="grey-text">Alemán, Italiano, Español, Inglés, Holandés / Flamenco,Francés, Sin
+                            subtítulos</span>
+                        <span class="grey-text">Alemán, Italiano, Español, Inglés, Holandés / Flamenco,Francés, Sin
+                            subtítulos</span>
+                    </div>
                 </div>
             </div>
             <section class="midpage__cast">
-                <h2></h2>
+                <div class="midpage__title">
+                    <span class="material-icons">movie_filter</span>
+                    <span class="midpage__section-title">Dirección y reparto</span>
+                </div>
                 <div class="midpage__cast__img">
                     <div class="midpage__cast__img__container">
-                        <img src="" alt="">
-                        <span class="midpage__cast__img__title"></span>
+                        <img src="https://images-0.wuaki.tv/system/photos/134374/original/niki-caro-1525311147-width85-quality80.jpeg"
+                            alt="Niki-caro" class="detail__cast-img">
+                        <span class="midpage__cast__img__title">Niki Caro</span>
                     </div>
                     <div class="midpage__cast__img__container">
-                        <img src="" alt="">
-                        <span class="midpage__cast__img__title"></span>
+                        <img src="https://images-1.wuaki.tv/system/photos/7482/original/yifei-liu-1525283501-width85-quality80.jpeg"
+                            alt="yifei-liu" class="detail__cast-img">
+                        <span class="midpage__cast__img__title">Yifei Liu</span>
                     </div>
                     <div class="midpage__cast__img__container">
-                        <img src="" alt="">
-                        <span class="midpage__cast__img__title"></span>
+                        <img src="https://images-2.wuaki.tv/system/photos/4238/original/donnie-yen-1525279749-width85-quality80.jpeg"
+                            alt="donnie-yen" class="detail__cast-img">
+                        <span class="midpage__cast__img__title">Donnie Yen</span>
                     </div>
                     <div class="midpage__cast__img__container">
-                        <img src="" alt="">
-                        <span class="midpage__cast__img__title"></span>
+                        <img src="https://images-2.wuaki.tv/system/photos/7610/original/li-gong-1525283640-width85-quality80.jpeg"
+                            alt="li-gong" class="detail__cast-img">
+                        <span class="midpage__cast__img__title">Li Gong</span>
                     </div>
                     <div class="midpage__cast__img__container">
-                        <img src="" alt="">
-                        <span class="midpage__cast__img__title"></span>
+                        <img src="https://images-1.wuaki.tv/system/photos/2299/original/jet-li-1525277511-width85-quality80.jpeg"
+                            alt="jet-li" class="detail__cast-img">
+                        <span class="midpage__cast__img__title">Jet Li</span>
                     </div>
                     <div class="midpage__cast__img__container">
-                        <img src="" alt="">
-                        <span class="midpage__cast__img__title"></span>
+                        <img src="https://images-0.wuaki.tv/system/photos/18731/original/jason-scott-lee-1525295648-width85-quality80.jpeg"
+                            alt="jason-scott-lee" class="detail__cast-img">
+                        <span class="midpage__cast__img__title">Jason Scott</span>
                     </div>
                     <div class="midpage__cast__img__container">
-                        <img src="" alt="">
-                        <span class="midpage__cast__img__title"></span>
+                        <img src="https://images-1.wuaki.tv/system/photos/168764/original/yoson-an-1558058544-width85-quality80.jpeg"
+                            alt="yoson-an" class="detail__cast-img">
+                        <span class="midpage__cast__img__title">Yoson An</span>
                     </div>
                     <div class="midpage__cast__img__container">
-                        <img src="" alt="">
-                        <span class="midpage__cast__img__title"></span>
+                        <img src="https://images-3.wuaki.tv/system/photos/3257/original/tzi-ma-1525278658-width85-quality80.jpeg"
+                            alt="tzi-ma" class="detail__cast-img">
+                        <span class="midpage__cast__img__title">Tzi Ma</span>
                     </div>
                     <div class="midpage__cast__img__container">
-                        <img src="" alt="">
-                        <span class="midpage__cast__img__title"></span>
+                        <img src="https://images-3.wuaki.tv/system/photos/19269/original/rosalind-chao-1525296176-width85-quality80.jpeg"
+                            alt="rosalind-chao" class="detail__cast-img">
+                        <span class="midpage__cast__img__title">Rosalind Chao</span>
                     </div>
                     <div class="midpage__cast__img__container">
-                        <img src="" alt="">
-                        <span class="midpage__cast__img__title"></span>
+                        <img src="https://images-3.wuaki.tv/system/photos/14666/original/pei-pei-cheng-1525291918-width85-quality80.jpeg"
+                            alt="pei-pei-cheng" class="detail__cast-img">
+                        <span class="midpage__cast__img__title">Pei-pei</span>
                     </div>
                 </div>
             </section>
             <section class="midpage__end-icons">
                 <div class="puntuation">
-                    <h2 class="end-icons__title"></h2>
+                    <div class="midpage__title">
+                        <span class="material-icons">star_rate</span>
+                        <span class="midpage__section-title">Puntuación</span>
+                    </div>
                     <div class="end-icons__container">
                         <div class="end-icons__container__block"></div>
                         <div class="end-icons__container__block"></div>
@@ -530,6 +606,29 @@
             <span class='footer__mini__copy'>2009 - 2020 © Rakuten TV Europe, S.L.U. - v1.838.0</span>
         </div>
     </section>
+    <!--Nav-mobile----------------->
+    <nav class="nav__mobile">
+        <section class="nav__mobile__menu">
+            <span class="material-icons">home</span>
+            <h2 class="nav__mobile__menu__title">portada</h2>
+        </section>
+        <section class="nav__mobile__menu">
+            <span class="material-icons">local_movies</span>
+            <h2 class="nav__mobile__menu__title">cinema</h2>
+        </section>
+        <section class="nav__mobile__menu">
+            <span class="material-icons">remove_red_eye</span>
+            <h2 class="nav__mobile__menu__title">free</h2>
+        </section>
+        <section class="nav__mobile__menu">
+            <span class="material-icons">bookmark</span>
+            <h2 class="nav__mobile__menu__title">subscription</h2>
+        </section>
+        <section class="nav__mobile__menu">
+            <span class="material-icons">person</span>
+            <h2 class="nav__mobile__menu__title">entrar</h2>
+        </section>
+    </nav>
 
 
     <script src="app.js" type="text/javascript"></script>
@@ -537,4 +636,3 @@
 </body>
 
 </html>
-
