@@ -511,8 +511,6 @@ body {
 
 .detail-movie {
 	background: linear-gradient( to bottom, transparent 30%, rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0.7) 60%, #000 70%);
-	width: 100%;
-	height: 550px;
 }
 
 .detail__movie__wrapper {
@@ -521,12 +519,13 @@ body {
 	background: url('rakuten-guardianes/snapshot-1590662517-width1920-quality80.jpeg') no-repeat;
 	background-size: cover;
 	background-position: top;
+	height: 600px;
 }
 
 .deatail__movie__round__action {
 	display: flex;
 	flex-direction: row;
-	margin-top: 80px;
+	margin-top: 125px;
 	justify-content: center;
 	font-size: 10px;
 	width: 100%;
@@ -538,6 +537,8 @@ body {
 	flex-direction: column;
 	margin-right: 30px;
 	color: white;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .8);
+	font-size: 12px;
 }
 
 .round-action__wishlist {
@@ -545,6 +546,8 @@ body {
 	flex-direction: column;
 	margin-left: 30px;
 	color: white;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .8);
+	font-size: 12px;
 }
 
 .round-action__trailer__element, .round-action__wishlist__element {
@@ -561,7 +564,8 @@ body {
 	color: #ffe300;
 	font-size: 18px;
 	justify-content: center;
-	margin-top: 200px;
+	margin-top: 125px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .8);
 }
 
 .score {
@@ -573,9 +577,10 @@ body {
 }
 
 .detail__title__text {
-	font-size: 28px;
+	font-size: 32px;
 	font-weight: bold;
 	color: white;
+	margin-bottom: 15px;
 }
 
 .detail__action {
@@ -586,11 +591,14 @@ body {
 }
 
 .detail__action__purchase {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 	background: #ffe300;
 	border: 2px double #ffe300;
 	width: 350px;
-	color: #252525;
-	font-size: 14px;
+	color: rgb(37, 37, 37);
+	font-weight: bold;
 	height: 50px;
 	margin-bottom: 5px;
 }
@@ -600,14 +608,24 @@ body {
 	color: #ffe300;
 	background-color: rgba(0, 0, 0, 0.5);
 	border: 2px solid #ffe300;
-	font-size: 14px;
 	font-weight: bold;
+	font-size: 16px;
 	text-align: center;
 	height: 50px;
 }
 
-.detail__action__purchase__text {
-	margin-left: 10px;
+.detail__action__purchase__text__show {
+	padding: 15px;
+	font-size: 16px;
+}
+
+.detail__action__purchase__text__price {
+	padding: 15px;
+	font-size: 14px;
+}
+
+.detail__action__redeem__text {
+	padding: 15px;
 }
 
 @media only screen and (min-width: 900px) {
@@ -615,5 +633,15 @@ body {
 		flex-wrap: nowrap;
 		flex-direction: row;
 		justify-content: center;
+	}
+	.detail__action__purchase {
+		margin-right: 10px;
+		width: 340px;
+	}
+	.detail__action__redeem {
+		width: 340px;
+	}
+	.round-action__trailer__element, .round-action__wishlist__element {
+		padding: 35px;
 	}
 }
