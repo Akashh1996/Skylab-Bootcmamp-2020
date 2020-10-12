@@ -310,6 +310,7 @@ body {
 .nav__items {
 	display: flex;
 	position: absolute;
+	z-index: 100000;
 	top: 0;
 	right: 0;
 	left: 0;
@@ -481,6 +482,7 @@ body {
 
 .header__bottom {
 	position: fixed;
+	z-index: 10000;
 	bottom: 0;
 	left: 0;
 	height: 50px;
@@ -552,8 +554,7 @@ body {
  */
 
 .header__bottom__items__signIn {
-	background: url('rakuten-imagerakuten-home.htmlrakuten-home.css/user.png')
-		bottom center no-repeat;
+	background: url('rakuten-image/user.png') bottom center no-repeat;
 }
 
 /* .header__bottom__items__signIn:hover {

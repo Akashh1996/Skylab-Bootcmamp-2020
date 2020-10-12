@@ -346,6 +346,159 @@ body {
 	color: #737373;
 	font-size: 14px;
 }
+
+/* Darina:  */
+
+.nav__items {
+	display: flex;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 60px;
+	font-weight: 400;
+}
+
+.nav__bar {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.nav__items__menu {
+	display: none;
+	flex-direction: row;
+	justify-content: space-around;
+	position: relative;
+	align-items: center;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 14px;
+	padding-top: 5px;
+	width: 100%;
+}
+
+.header-logo {
+	height: 37px;
+	width: 122px;
+	margin-left: 20px;
+}
+
+.header-help {
+	color: rgb(153, 153, 153);
+}
+
+.search__box__input {
+	padding-left: 40px;
+	height: 35px;
+	background-color: #333;
+	border-radius: 2px;
+	border: 0;
+	font-family: 'Noto Sans', sans-serif;
+	outline: none;
+}
+
+.search__box__input:focus {
+	background-color: white;
+	color: black;
+}
+
+.button-signup {
+	background-color: rgba(255, 227, 0, 1);
+	padding-right: 8px;
+	padding-left: 8px;
+	min-height: 32px;
+	border: 0;
+	border-radius: 2px;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: bold;
+	outline: none;
+}
+
+.button-signup:hover {
+	background-color: rgba(255, 227, 0, 0.8);
+}
+
+.header__bottom {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 50px;
+	background-color: #000;
+	z-index: 200;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	width: 100%;
+}
+
+.header__bottom__items {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 8px;
+	font-weight: 400;
+	color: #999;
+}
+
+.header__bottom__element {
+	width: 100%;
+	text-align: center;
+}
+
+.header__bottom__element:hover {
+	color: #ffe300;
+}
+
+.header__bottom__items__home,
+.header__bottom__items__cinema,
+.header__bottom__items__free,
+.header__bottom__items__subscription,
+.header__bottom__items__signIn {
+	height: 30px;
+	width: 100%;
+}
+
+.header__bottom__items__home {
+	background: url('rakuten-images-daina/home.png') bottom center no-repeat;
+}
+
+.header__bottom__items__home:hover {
+	background: url('rakuten-images-daina/home_hover.png') bottom center no-repeat;
+}
+
+.header__bottom__items__cinema {
+	background: url('rakuten-images-daina/cinema.png') bottom center no-repeat;
+}
+
+.header__bottom__items__cinema:hover {
+	background: url('rakuten-images-daina/cinema_hover.png') bottom center
+		no-repeat;
+}
+
+.header__bottom__items__free {
+	background: url('rakuten-images-daina/eye.png') bottom center no-repeat;
+}
+
+.header__bottom__items__free:hover {
+	background: url('rakuten-images-daina/eye_hover.png') bottom center no-repeat;
+}
+
+.header__bottom__items__subscription {
+	background: url('rakuten-images-daina/ticket.png') bottom center no-repeat;
+}
+
+.header__bottom__items__subscription:hover {
+	background: url('rakuten-images-daina/ticket_hover.png') bottom center
+		no-repeat;
+}
+
+.header__bottom__items__signIn {
+	background: url('rakuten-images-daina/user.png') bottom center no-repeat;
+}
+
+.header__bottom__items__signIn:hover {
+	background: url('rakuten-images-daina/user_hover.png') bottom center no-repeat;
+}
+
 @media only screen and (min-width: 1025px) {
 	.footer-first {
 		display: flex;
@@ -363,45 +516,128 @@ body {
 		display: flex;
 	}
 	.nav__items {
-		position: fixed;
 		background-color: black;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 	}
 	.header__bottom {
 		display: none;
 	}
-
 	.horizontal-movie:hover {
 		border: 5px solid yellow;
 	}
-
 	.vertical-movie:hover {
 		border: 5px solid yellow;
 	}
+}
 
-	.search__icon {
-		display: none;
-	}
-	.header-logo {
-		margin-bottom: 0px;
-	}
-	.nav__bar {
-		margin-top: 0;
-	}
+.detail-movie {
+	background: linear-gradient(
+		to bottom,
+		transparent 30%,
+		rgba(0, 0, 0, 0.3) 45%,
+		rgba(0, 0, 0, 0.7) 60%,
+		#000 70%
+	);
+	width: 100%;
+	height: 680px;
+}
 
-	.header-help {
-		display: block;
-	}
+.detail__movie__wrapper {
+	display: flex;
+	flex-direction: column;
+	background: url('rakuten-guardianes/snapshot-1590662517-width1920-quality80.jpeg')
+		no-repeat;
+	background-size: cover;
+	background-position: top;
+}
 
-	.footer-first {
-		display: flex;
-		flex-direction: column;
+.deatail__movie__round__action {
+	display: flex;
+	flex-direction: row;
+	margin-top: 80px;
+	justify-content: center;
+	font-size: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+.round-action__trailer {
+	display: flex;
+	flex-direction: column;
+	margin-right: 20px;
+	color: white;
+}
+
+.round-action__wishlist {
+	display: flex;
+	flex-direction: column;
+	margin-left: 20px;
+	color: white;
+}
+
+.round-action__trailer__element,
+.round-action__wishlist__element {
+	margin-bottom: 10px;
+	background-color: rgba(0, 0, 0, 0.7);
+	background-size: 30px;
+	border-radius: 50%;
+	padding: 20px;
+}
+
+.rating {
+	display: flex;
+	flex-direction: row;
+	color: #ffe300;
+	font-size: 18px;
+	justify-content: center;
+	margin-top: 200px;
+}
+
+.score {
+	margin: 0 4px;
+}
+
+.detail__title {
+	text-align: center;
+}
+
+.detail__title__text {
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.detail__action {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+.detail__action__purchase {
+	background: #ffe300;
+	border: 2px double #ffe300;
+	width: 350px;
+	color: #252525;
+	font-size: 14px;
+}
+
+.detail__action__redeem {
+	width: 350px;
+	color: #ffe300;
+	background-color: rgba(0, 0, 0, 0.5);
+	border: 2px solid #ffe300;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.detail__action__purchase__text {
+	margin-left: 10px;
+}
+
+@media only screen and (min-width: 900px) {
+	.detail__action {
+		flex-wrap: nowrap;
+		flex-direction: row;
 		justify-content: center;
-		align-content: center;
-		align-items: center;
-		background-color: rgb(33, 33, 33);
-		margin: 0;
-		padding: 30px;
-		padding-bottom: 80px;
 	}
 }
