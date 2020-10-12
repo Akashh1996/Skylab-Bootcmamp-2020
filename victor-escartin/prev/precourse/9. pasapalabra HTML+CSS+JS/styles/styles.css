@@ -1,0 +1,276 @@
+* {
+	font-family: 'Encode Sans Semi Expanded', sans-serif;
+}
+body {
+	background-image: url(avengers2.jpg); 
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat; 
+	background-attachment: fixed;
+}
+
+header {
+	margin-left: 25px;
+	margin-top: 25px;
+}
+
+#container_menu {
+	width: 100%;
+	z-index: 1;
+	left: 0px;
+	top: 45%;
+	position: absolute;
+	border: 1px;
+	background-color: rgba(134, 4, 10, 0.432);
+	height: 400px;
+}
+
+#play_menu {
+	text-align: center;
+	color: white;
+}
+
+#menu_title {
+	font-size: 70px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+#menu_subtitle {
+	font-size: 30px;
+	margin-top: 0px;
+	margin-bottom: 70px;
+}
+
+.btn_menu {
+	background-color: rgba(255, 166, 0, 0.801);
+	text-align: center;
+	color: white;
+	border-radius: 15px;
+	font-size: 20px;
+	height: 40px;
+	width: 200px;
+	margin: 2px;
+	border: none;
+	cursor: pointer;
+	outline: 0;
+}
+
+.btn_menu:hover {
+	font-size: 20px;
+	background: rgba(102, 2, 7, 0.753);
+}
+
+.btn_menu:active {
+	color: orange;
+}
+
+.ok_btn_menu {
+	background-color: rgba(0, 0, 0, 0);
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	height: 50px;
+	border: none;
+	cursor: pointer;
+	outline: 0;
+}
+
+.ok_btn_menu:hover {
+	color: orange;
+}
+
+#name_intro{
+	visibility: hidden;
+	margin-bottom: 20px;
+}
+
+#user_name {
+	margin-top: 30px;
+	text-align: center;
+	font-size: 20px;
+	width: 300px;
+	height: 40px;
+	border: none;
+}
+
+#alert_user {
+	visibility: hidden;
+}
+
+#container_best_players {
+	visibility: hidden;
+	height: 600px;
+	width: 100%;
+	z-index: 2;
+	left: 0px;
+	top: 25%;
+	position: absolute;
+	border: 1px;
+	background-color: rgba(134, 4, 11, 0.774);
+}
+
+#best_players {
+	text-align: center;
+	color: white;
+}
+
+li{
+    list-style-position: inside;
+}
+
+#best_players_list {
+	font-size: 30px;
+}
+
+#container_instructions {
+	height: 550px;
+	width: 100%;
+	z-index: 1;
+	left: 0px;
+	top: 15%;
+	position: absolute;
+	border: 1px;
+	background-color: rgba(134, 4, 11, 0.774);
+	visibility: hidden;
+	
+}
+
+#instructions {
+	text-align: center;
+	color: white;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+#container_game {
+	width: 100%;
+	z-index: 0;
+	visibility: hidden;
+}
+
+#titlename {
+	margin: auto;
+	text-align: center;
+	color: white;
+	font-size: 60px;
+	background-color: rgba(0, 0, 0, 0.493);
+}
+
+#subtitle {
+	margin: auto;
+	background-color: rgba(0, 0, 0, 0.44);
+	text-align: center;
+	color: rgb(255, 255, 255);
+	font-size: 40px;
+}
+
+#globalLetters {
+	
+	text-align: center;
+	margin-top: 150px;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.letters {
+	text-align: center;
+	margin-top: 100px;
+	background: radial-gradient(circle,rgb(245, 2, 123), rgba(5, 0, 4, 0.603));
+	margin-left: 5px;
+	display: inline-block;
+	font-size: 35px;
+	color: white;
+}
+
+.results {
+	display: block;
+	height: 5px;
+	width: 40px;
+	background-color: white;
+}
+
+#game_questions {
+	background-color: rgba(0, 0, 0, 0.664);
+	font-size: 20px;
+	margin-top: 10px;
+	width: 50;
+	height: auto;
+	text-align: center;
+	color: white;
+}
+
+#user_buttons {
+	margin-top: 100px;
+	text-align: center;
+}
+
+.btn_game {
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	background-color: rgba(0, 0, 0, 0.44);
+	width: 50;
+	height: 50px;
+	border: none;
+	cursor: pointer;
+	outline: 0;
+}
+
+.results_panel {
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	background-color: rgba(0, 0, 0, 0.44);
+	width: 130px;
+	height: 50px;
+	border: none;
+	outline: 0;
+}
+
+.btn_game:hover {
+	color: orange;
+}
+
+.btn_game:active {
+	color: white;
+}
+
+.btn_return {
+	text-align: center;
+	margin-top: 50px;
+	color: white;
+	font-size: 20px;
+	background-color: rgba(0, 0, 0, 0);
+	width: 50;
+	height: 50px;
+	border: none;
+	cursor: pointer;
+	outline: 0;
+}
+
+.btn_return:hover {
+	color: orange;
+}
+
+.btn_return:active {
+	color: white;
+}
+
+#answer {
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	background-color: rgba(0, 0, 0, 0.44);
+	width: 300px;
+	height: 50px;
+	border: none;
+}
+
+#creator {
+	text-align: right;
+	margin-top: 50px;
+	margin-right: 25px;
+	color: white;
+	font-size: 20px;
+}
