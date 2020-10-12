@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Forms Validation</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<h1>Forms Validation</h1>
+		<form>
+			<label for="search">Search:</label>
+			<input
+				id="search"
+				name="search"
+				type="text"
+				placeholder="Search here..."
+				required
+				minlength="8"
+				maxlength="12"
+			/>
+			<br />
+			<br />
+			<label for="checkbox">Checkbox</label>
+			<input id="checkbox" name="checkbox" type="checkbox" />
+			<br />
+			<label for="radio">Radio:</label>
+			<input
+				id="radio"
+				name="radio"
+				type="radio"
+				placeholder="Search here..."
+			/>
+			<br />
+			<br />
+			<label for="description">Description:</label>
+			<textarea
+				id="description"
+				name="description"
+				type="textarea"
+				cols="30"
+				rows="3"
+			></textarea>
+			<br />
+			<br />
+			<label for="age">Age</label>
+			<select name="age" id="age">
+				<option value="1">Uno</option>
+				<option value="2">Dos</option>
+				<option value="3">Tres</option>
+			</select>
+			<br />
+			<br />
+			<fieldset>
+				<legend>Frameworks</legend>
+				<label for="framework1">Angular</label>
+				<input
+					id="framework1"
+					name="framework"
+					type="checkbox"
+					value="angular"
+				/>
+				<label for="framework2">React</label>
+				<input id="framework2" name="framework" type="checkbox" value="react" />
+				<label for="framework3">Vue</label>
+				<input id="framework3" name="framework" type="checkbox" value="vue" />
+			</fieldset>
+		</form>
+	</body>
+</html>

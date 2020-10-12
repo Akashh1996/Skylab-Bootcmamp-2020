@@ -1,43 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Calculator HTML</title>
+		<link rel="stylesheet" href="calculadoracss.css" />
+	</head>
+	<body onload="calculator();">
+		<div class="buttons">
+			<div class="displayScreen">
+				<div id="result"></div>
+			</div>
 
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Calculator HTML</title>
-    <link rel="stylesheet" href="calculadoracss.css">
-</head>
-<body onload="calculator();">
+			<button id="delete" class="e">AC</button>
+			<button id="back">
+				<img src="back.png" alt="" width="40" height="40" />
+			</button>
+			<button id="op/" class="op">/</button>
+			<button id="num7">7</button>
+			<button id="num8">8</button>
+			<button id="num9">9</button>
+			<button id="opx" class="op">x</button>
+			<button id="num4">4</button>
+			<button id="num5">5</button>
+			<button id="num6">6</button>
+			<button id="op-" class="op">-</button>
+			<button id="num1">1</button>
+			<button id="num2">2</button>
+			<button id="num3">3</button>
+			<button id="op+" class="op">+</button>
+			<button id="num0" class="e">0</button>
+			<button id="dot">.</button>
+			<button id="equal" class="op">=</button>
+		</div>
 
-    <div class="buttons">
-        
-        <div class="displayScreen">
-            <div id="result"></div>
-        </div>      
-        
-        <button id="delete" class="e">AC</button>
-        <button id="back"><img src=back.png width="40" height="40"></button>
-        <button id="op/" class="op">/</button>
-        <button id="num7">7</button>
-        <button id="num8">8</button>
-        <button id="num9">9</button>
-        <button id="opx" class="op">x</button>
-        <button id="num4">4</button>
-        <button id="num5">5</button>
-        <button id="num6">6</button>
-        <button id="op-" class="op">-</button>
-        <button id="num1">1</button>
-        <button id="num2">2</button>
-        <button id="num3">3</button>
-        <button id="op+" class="op">+</button>
-        <button id="num0" class="e">0</button>
-        <button id="dot">.</button>
-        <button id="equal" class="op">=</button>
-        
-
-
-    
-    </div>
-    
-    <script src="calculadorajs.js"></script>
-
-</body>
+		<script src="calculadorajs.js"></script>
+	</body>
 </html>

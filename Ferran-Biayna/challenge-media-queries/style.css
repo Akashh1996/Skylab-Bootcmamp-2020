@@ -1,0 +1,127 @@
+.d-none {
+	display: none;
+}
+
+.text {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.right-column {
+	margin-top: 50px;
+	min-width: 300px;
+	max-width: 70%;
+}
+
+.left-column {
+	min-width: 100px;
+	max-width: 70%;
+}
+
+.right-column img {
+	max-width: 80%;
+}
+
+.right-column h2,
+img {
+	font-weight: 900;
+	margin: 2vw;
+	margin-left: 5vw;
+	color: #a593c2;
+}
+
+.right-column p,
+h3 {
+	margin-left: 5vw;
+}
+
+.pay {
+	margin-bottom: -2vw;
+}
+
+.right-column footer {
+	font-size: 70%;
+	margin-top: -2%;
+}
+
+.left-column img {
+	max-width: 90%;
+}
+
+.left-column .button {
+	background-color: #cf4522;
+	padding: 15px;
+	color: white;
+	margin: 2px;
+}
+
+.left-column footer {
+	font-size: 90%;
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+	margin-top: 3px;
+	margin-bottom: 20px;
+}
+
+.bethany-footer {
+	font-size: 80%;
+	margin-top: -10px;
+	margin-bottom: 20px;
+}
+
+body {
+	background-image: url('images-challenge-media-query/pattern.png');
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header nav {
+	display: flex;
+	height: 60px;
+	background-color: #a593c2;
+	justify-content: flex-start;
+	align-items: center;
+	color: white;
+	font-weight: bold;
+}
+
+header nav img {
+	padding-left: 10vw;
+}
+
+header nav span {
+	padding-left: 2vw;
+}
+
+.footer-contact {
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+	margin-top: 2vw;
+}
+
+.title {
+	font-size: 300%;
+}
+
+.subtitles {
+	font-size: 200%;
+}
+
+.browse {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+}
+
+.cheese {
+	background-color: white;
+	border-radius: 10%;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+}

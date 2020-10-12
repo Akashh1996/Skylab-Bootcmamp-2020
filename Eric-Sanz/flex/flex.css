@@ -1,0 +1,135 @@
+header {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	background: black;
+	width: 100%;
+	height: 100px;
+	padding: 20px;
+}
+
+body {
+	margin-left: 15%;
+	margin-right: 15%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 1000px;
+}
+
+.circles {
+	display: flex;
+	justify-content: space-around;
+	margin-left: 10px;
+	width: 300px;
+}
+
+.header-circles-1 {
+	width: 50px;
+	height: 50px;
+	background: aquamarine;
+	border-radius: 50%;
+}
+
+.header-circles-2 {
+	width: 50px;
+	height: 50px;
+	background: chocolate;
+	border-radius: 50%;
+}
+
+.header-circles-3 {
+	width: 50px;
+	height: 50px;
+	background: darkred;
+	border-radius: 50%;
+}
+
+.triangles-container {
+	display: flex;
+}
+
+.main {
+	display: flex;
+	flex-wrap: column wrap;
+	padding: 30px 30px 0px 30px;
+}
+
+.square {
+	min-width: 200px;
+	height: 200px;
+	background-color: coral;
+}
+
+.text-article {
+	padding-left: 40px;
+}
+
+.heading-container {
+	padding-left: 40px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.circle-container {
+	display: flex;
+	align-items: flex-start;
+}
+
+.circle {
+	width: 70px;
+	height: 70px;
+	background: darkgoldenrod;
+	border-radius: 50%;
+	margin-top: 20px;
+}
+
+.heading-circle {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-left: 40px;
+}
+
+h3 {
+	margin-top: -20px;
+}
+
+.triangles-container {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.triangle {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.triangle-1 {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid black;
+}
+
+.triangle-2 {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid royalblue;
+}
+
+.triangle-3 {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid purple;
+}
+
+.more-text {
+	padding: 0px 30px 30px 30px;
+}
