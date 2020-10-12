@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="detail-style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8fea6703e0.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      let translateMovies = 0;
+      let translateCast = 0;
+
+      const scrollingRightCast = () => {
+		  translateCast -= 92;
+		if (window.innerWidth < 1024) {
+			if (translateCast === -184) {
+			  document.getElementsByClassName(
+				"right-arrow-container"
+			  )[0].style.visibility = "hidden";
+			}
+		} else {
+			if (translateCast === -92) {
+			  document.getElementsByClassName(
+				"right-arrow-container"
+			  )[0].style.visibility = "hidden";
+			}
+		}
+        document.getElementsByClassName(
+          "left-arrow-container"
+        )[0].style.visibility = "visible";
+        document.getElementsByClassName(
+          "scrollable-list"
+        )[0].style.transform = `translateX(${translateCast}%)`;
+      };
+
+      const scrollingLeftCast = () => {
+		translateCast += 92;
+        translateCast = +translateCast.toFixed(4);
+        if (!translateCast) {
+          document.getElementsByClassName(
+            "left-arrow-container"
+          )[0].style.visibility = "hidden";
+        }
+        document.getElementsByClassName(
+          "right-arrow-container"
+        )[0].style.visibility = "visible";
+        document.getElementsByClassName(
+          "scrollable-list"
+        )[0].style.transform = `translateX(${translateCast}%)`;
+      };
+
+      const scrollingRightMovies = () => {
+		  if (window.innerWidth < 1024) {
+        translateMovies -= 77.1;
+			  if (translateMovies.toFixed(1) == -616.8) {
+          console.log('entro')
+				document.getElementsByClassName(
+				  "right-arrow-container"
+				)[1].style.visibility = "hidden";
+			  }
+			} else {
+				translateMovies -= 90;
+				if (translateMovies === -180) {
+				  document.getElementsByClassName(
+					"right-arrow-container"
+				  )[1].style.visibility = "hidden";
+				}
+      }
+        document.getElementsByClassName(
+          "left-arrow-container"
+        )[1].style.visibility = "visible";
+        document.getElementsByClassName(
+          "scrollable-list"
+        )[1].style.transform = `translateX(${translateMovies}%)`;
+      };
+
+      const scrollingLeftMovies = () => {
+		  	if (window.innerWidth < 1024) {
+			  translateMovies += 77.1;
+			  translateMovies = +translateMovies.toFixed(4);
+			} else {
+				translateMovies += 90;
+				translateMovies = +translateMovies.toFixed(4);
+			}
+			if (!translateMovies) {
+				document.getElementsByClassName(
+				"left-arrow-container"
+				)[1].style.visibility = "hidden";
+			}
+        document.getElementsByClassName(
+          "right-arrow-container"
+        )[1].style.visibility = "visible";
+        document.getElementsByClassName(
+          "scrollable-list"
+        )[1].style.transform = `translateX(${translateMovies}%)`;
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-raku-mobile">
+        <div class="navbar-icon-container">
+          <span class="material-icons"> home </span>
+          <span class="navbar-icon-subtitle">portada</span>
+        </div>
+        <div class="navbar-icon-container">
+          <span class="material-icons"> theaters </span>
+          <span class="navbar-icon-subtitle">cinema</span>
+        </div>
+        <div class="navbar-icon-container">
+          <span class="material-icons"> visibility </span>
+          <span class="navbar-icon-subtitle">free</span>
+        </div>
+        <div class="navbar-icon-container">
+          <span class="material-icons"> local_activity </span>
+          <span class="navbar-icon-subtitle">subscription</span>
+        </div>
+        <div class="navbar-icon-container">
+          <span class="material-icons"> person </span>
+          <span class="navbar-icon-subtitle">entrar</span>
+        </div>
+      </nav>
+    </header>
+    <section id = 'search__nav__id'>
+      <div class = 'nav__items__menu'>
+          <img class = 'details__logo__desktop' src="rakuten-logo.png">
+          <div class="dropdown show">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                CINEMA
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">TODOS LOS GÈNEROS</a>
+                <a class="dropdown-item" href="#">FAMILY</a>
+              </div>
+            </div>
+          <span class = 'nav__items__free'>FREE</span>
+          <div class="dropdown show order">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                SUBSCRIPTIONS
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">STARZPLAY</a>
+                <a class="dropdown-item" href="#">RTV SUSCRIPCIÓN </a>
+              </div>
+            </div>
+          <div class = 'search__container'>
+              <span class='material-icons-hero-image search__button__nav'>search</span>
+              <input type="text" name = 'input__nav' id = 'input__nav__id' class = 'input__nav' placeholder = 'Buscar' >
+          </div>
+          <div class = 'nav__items__user'>
+              <span class = 'user__log-in'> ENTRAR </span>
+              <span class = 'user__register'> REGISTRARSE </span>
+          </div>
+      </div>
+      <span class="material-icons-hero-image x">close</span>
+    </section>
+  <section class="details gradient">
+      <div class="details__container">
+          <div class="details__background"></div>
+          <div class = 'search__nav__mobile'>
+              <div class = 'upper__gradient'>
+                  <img class = 'details__logo' src="rakuten-logo.png">
+                  <img src="baseline_search_white_18dp.png" class = 'details__search'>
+              </div>
+          </div>
+          <div class="details__rounds">
+              <div class = 'rounds__column'>
+                  <div class="round-button">
+                      <span><a href="video.html" target="_blank" class="fas fa-play-circle play"></a></span>
+                  </div>
+                      <div class="round-button__text text__left">TRÁILER</div>
+              </div>
+              <div class = 'rounds__column'>
+                  <div class="round-button">
+                      <i class="fas fa-thumbtack icon__rotate"></i>
+                  </div>
+                      <div class="round-button__text text__right">AÑADIR A QUIERO VER</div>
+              </div>
+          </div>
+      </div>
+          <div class="details__data">
+              <div class="details__data__score">
+                  <span class="fas fa-star score"></span>
+                  <div class="score"> 8.8 </div>
+              </div>
+              <div class="data__title"> Origen</div>
+          </div>
+      <div class="details__actions">
+          <div class="details__actions__options">
+              <div class="details__actions__purchase">
+                  <label for="purchase"></label>
+                  <select name="purchase" id="purchase">
+                      <option value="watch-now" id = 'watch-now'> 
+                        VER AHORA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; desde 3,99€</option>
+                      <option value="rent" id = 'rent'>ALQUILAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;desde 3,99€</option>
+                      <option value="buy" id = 'buy'>COMPRAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;desde 10,99 €</option>
+                  </select>
+              </div>
+              <div class="details__actions__coupon">
+                  <button class="coupon__button" id = 'coupon__button__id' onclick="couponFunction()">
+                      <div class="coupon__contents">
+                          <span class="coupon__message">CANJEAR CUPÓN</span>
+                      </div>
+                  </button>
+                  <div class="coupon__call" id = 'coupon__call__id'>
+                          <input id = 'coupon__code' name = 'coupon__code' placeholder = 'Escribir código...' type="text" class="coupon__code" required>
+                          <button class = 'coupon__confirm' id = 'coupon__confirm__id'>CONFIRMAR</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+    <main>
+      <section class="desktop-padding-left">
+        <article class="social-links">
+			<div class="social-link-wrapper">
+				<div class="social-links__button">
+					<span class="material-icons link"> visibility </span>
+				</div>
+				<span class="link-title">Marcar como ya visto</span>
+			</div>
+			<div class="social-link-wrapper">
+				<div class="social-links__button">
+					<i class="fa fa-twitter link"></i>
+				</div>
+				<span class="link-title">Twitter</span>
+			</div>
+			<div class="social-link-wrapper">
+				<div class="social-links__button">
+					<i class="fa fa-facebook-f link"></i>
+				</div>
+				<span class="link-title">Facebook</span>
+			</div>
+			<div class="social-link-wrapper">
+				<div class="social-links__button">
+					<i class="fa fa-pinterest-p link"></i>
+				</div>
+				<span class="link-title">Pinterest</span>
+			</div>
+        </article>
+        <section class="detail">
+          <article>
+            <div class="detail__header">
+              <div>
+                <span class="material-icons detail-icon"> group </span>
+                13
+              </div>
+              <div>
+                <span class="material-icons detail-icon"> watch_later </span>
+                148 minutos
+              </div>
+              <div>
+                <span class="material-icons detail-icon"> date_range </span>
+                2010
+              </div>
+              <div>
+                <i class="fa fa-flag detail-icon-fa"></i>
+                Francia, Reino Unido, Estados Unidos
+              </div>
+              <div>
+                <i class="fa fa-info-circle detail-icon-fa"></i>
+                Título original: Inception
+              </div>
+            </div>
+            <div class="uhd-cleared">
+              <span class="uhd">uhd</span>
+            </div>
+            <p class="detail-highlight">
+              Nominada a 8 Oscar® incluyendo el de mejor película del año 2010.
+              Ganadora de 4 Oscar®
+            </p>
+            <p class="movie-plot">
+              Dom Cobb (Leonardo DiCaprio) es un calificado ladrón que roba
+              secretos valiosos de lo más profundo del subconsciente durante el
+              sueño. La rara habilidad de Cobb lo ha convertido en un codiciado
+              jugador en el mundo del espionaje corporativo, pero también lo ha
+              convertido en un fugitivo, cosa que le ha costado todo lo que
+              alguna vez ha amado. Ahora, a Cobb le han ofrecido una oportunidad
+              de redención. Un último trabajo podría devolverle su vida.
+            </p>
+          </article>
+          <article class="detail-section">
+            <div class="secondary-titles">
+              <span class="material-icons secondary-titles__icons">
+                textsms
+              </span>
+              Idiomas y subtítulos
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Audio</th>
+                  <th>Subtítulos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Inglés</td>
+                  <td>
+                    Francés, Noruego, Inglés, Alemán, Rumano, Polaco, Portugués,
+                    Español, Holandés / Flamenco, Sueco, Finés, Danés, Italiano,
+                    Checo, Húngaro, Sin subtítulos
+                  </td>
+                </tr>
+                <tr>
+                  <td>Alemán</td>
+                  <td>
+                    Francés, Noruego, Inglés, Alemán, Rumano, Polaco, Portugués,
+                    Español, Holandés / Flamenco, Sueco, Finés, Danés, Italiano,
+                    Checo, Húngaro, Sin subtítulos
+                  </td>
+                </tr>
+                <tr>
+                  <td>Español</td>
+                  <td>
+                    Francés, Noruego, Inglés, Alemán, Rumano, Polaco, Portugués,
+                    Español, Holandés / Flamenco, Sueco, Finés, Danés, Italiano,
+                    Checo, Húngaro, Sin subtítulos
+                  </td>
+                </tr>
+                <tr>
+                  <td>Francés</td>
+                  <td>
+                    Francés, Noruego, Inglés, Alemán, Rumano, Polaco, Portugués,
+                    Español, Holandés / Flamenco, Sueco, Finés, Danés, Italiano,
+                    Checo, Húngaro, Sin subtítulos
+                  </td>
+                </tr>
+                <tr>
+                  <td>Ucraniano</td>
+                  <td>
+                    Francés, Noruego, Inglés, Alemán, Rumano, Polaco, Portugués,
+                    Español, Holandés / Flamenco, Sueco, Finés, Danés, Italiano,
+                    Checo, Húngaro, Sin subtítulos
+                  </td>
+                </tr>
+                <tr>
+                  <td>Polaco</td>
+                  <td>
+                    Francés, Noruego, Inglés, Alemán, Rumano, Polaco, Portugués,
+                    Español, Holandés / Flamenco, Sueco, Finés, Danés, Italiano,
+                    Checo, Húngaro, Sin subtítulos
+                  </td>
+                </tr>
+                <tr>
+                  <td>Húngaro</td>
+                  <td>
+                    Francés, Noruego, Inglés, Alemán, Rumano, Polaco, Portugués,
+                    Español, Holandés / Flamenco, Sueco, Finés, Danés, Italiano,
+                    Checo, Húngaro, Sin subtítulos
+                  </td>
+                </tr>
+                <tr>
+                  <td>Checo</td>
+                  <td>
+                    Francés, Noruego, Inglés, Alemán, Rumano, Polaco, Portugués,
+                    Español, Holandés / Flamenco, Sueco, Finés, Danés, Italiano,
+                    Checo, Húngaro, Sin subtítulos
+                  </td>
+                </tr>
+                <tr>
+                  <td>Italiano</td>
+                  <td>
+                    Francés, Noruego, Inglés, Alemán, Rumano, Polaco, Portugués,
+                    Español, Holandés / Flamenco, Sueco, Finés, Danés, Italiano,
+                    Checo, Húngaro, Sin subtítulos
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article>
+            <div class="secondary-titles">
+              <span class="material-icons movie-icon"> movie_creation </span>
+              <span>Dirección y reparto</span>
+            </div>
+            <div class="cast">
+              <div
+                class="arrow-container left-arrow-container"
+                onclick="scrollingLeftCast()"
+              >
+                <span class="material-icons arrow-left"> navigate_before </span>
+              </div>
+              <div
+                class="arrow-container right-arrow-container"
+                onclick="scrollingRightCast()"
+              >
+                <span class="material-icons arrow-right"> navigate_next </span>
+              </div>
+              <div class="scrollable-list">
+                <div class="cast-member">
+                  <img
+                    class="cast-member__photo"
+                    src="detalle/christopher-nolan.jpg"
+                    alt="Christopher Nolan"
+                  />
+                  <span class="subtitle">Christopher Nolan</span>
+                  <p class="cast-member-director">dirección</p>
+                </div>
+                <div class="cast-member">
+                  <img
+                    class="cast-member__photo"
+                    src="detalle/leonardo-dicaprio.jpg"
+                    alt="Leonardo Dicaprio"
+                  />
+                  <span class="subtitle">Leonardo Dicaprio</span>
+                </div>
+                <div class="cast-member">
+                  <img
+                    class="cast-member__photo"
+                    src="detalle/ellen-page.jpg"
+                    alt="Ellen Page"
+                  />
+                  <span class="subtitle">Ellen Page</span>
+                </div>
+                <div class="cast-member">
+                  <img
+                    class="cast-member__photo"
+                    src="detalle/ken-watanabe.jpg"
+                    alt="Ken Watanabe"
+                  />
+                  <span class="subtitle">Ken Watanabe</span>
+                </div>
+                <div class="cast-member">
+                  <img
+                    class="cast-member__photo"
+                    src="detalle/tom-berenger.jpg"
+                    alt="Tom Berenger"
+                  />
+                  <span class="subtitle">Tom Berenger</span>
+                </div>
+                <div class="cast-member">
+                  <img
+                    class="cast-member__photo"
+                    src="detalle/marion-cotillard.jpg"
+                    alt="Marion Cotillard"
+                  />
+                  <span class="subtitle">Marion Cotillard</span>
+                </div>
+                <div class="cast-member">
+                  <img
+                    class="cast-member__photo"
+                    src="detalle/michael-caine.jpg"
+                    alt="Michael Caine"
+                  />
+                  <span class="subtitle">Michael Caine</span>
+                </div>
+                <div class="cast-member">
+                  <img
+                    class="cast-member__photo"
+                    src="detalle/lukas-haas.jpg"
+                    alt="Lukas Haas"
+                  />
+                  <span class="subtitle">Lukas Haas</span>
+                </div>
+                <div class="cast-member">
+                  <img
+                    class="cast-member__photo"
+                    src="detalle/joseph-gordon-levitt.jpg"
+                    alt="Joseph Gordon Levitt"
+                  />
+                  <span class="subtitle">Joseph Gordon Levitt</span>
+                </div>
+                <div class="cast-member">
+                  <img
+                    class="cast-member__photo"
+                    src="detalle/tom-hardy.jpg"
+                    alt="Tom Hardy"
+                  />
+                  <span class="subtitle">Tom Hardy</span>
+                </div>
+                <div class="cast-member">
+                  <img
+                    class="cast-member__photo"
+                    src="detalle/cillian-murphy.jpg"
+                    alt="Cillian Murphy"
+                  />
+                  <span class="subtitle">Cillian Murphy</span>
+                </div>
+                <div class="cast-member">
+                  <img
+                    class="cast-member__photo"
+                    src="detalle/dileep-rao.jpg"
+                    alt="Dileep Rao"
+                  />
+                  <span class="subtitle">Dileep Rao</span>
+                </div>
+                <div class="cast-member">
+                  <img
+                    class="cast-member__photo"
+                    src="detalle/pete-postlethwaite.jpg"
+                    alt="Pete Postlethwaite"
+                  />
+                  <span class="subtitle">Pete Postlethwaite</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="secondary-titles">
+              <span class="material-icons movie-icon"> emoji_events </span>
+              <span>Premios</span>
+            </div>
+            <div class="awards-container">
+              <img
+                class="olive-branch left-branch"
+                src="detalle/olive-branch-left.png"
+                alt="Left olive branch"
+              />
+              <div class="award">
+                <span class="award__info award__title"
+                  >Mejor edición de sonido</span
+                >
+                <span class="award__info award__type">Oscar 2011</span>
+                <span class="award__info award__result">Ganador</span>
+              </div>
+              <img
+                class="olive-branch"
+                src="detalle/olive-branch-right.png"
+                alt="Right olive branch"
+              />
+            </div>
+          </article>
+          <article>
+            <div class="secondary-titles">
+              <span class="material-icons movie-icon"> star_rate </span>
+              <span class="score-title">Puntuación</span>
+            </div>
+            <div class="website-scores">
+              <div class="website-scores__score">
+                <div class="score-circle imbd-score">8.8</div>
+                <p class="subtitle website-subtitle">IMDb</p>
+              </div>
+              <div class="website-scores__score">
+                <div class="score-circle filmaffinity-score">8</div>
+                <p class="subtitle website-subtitle">FilmAffinity</p>
+              </div>
+              <div class="website-scores__score">
+                <div class="score-circle sensacine-score">7.9</div>
+                <p class="subtitle website-subtitle">Sensacine</p>
+              </div>
+              <div class="website-scores__score">
+                <div class="score-circle the-movie-database-score">8.3</div>
+                <p class="subtitle website-subtitle">The Movie Database</p>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="secondary-titles">
+              <img
+                class="theater-masks-icon"
+                src="detalle/theater-masks.png"
+                alt="Theater masks"
+              />
+              <span>Géneros</span>
+            </div>
+            <div class="genre-types">
+              <div class="genre-type">
+                <img class="genre-icon" src="detalle/action.png" alt="Action" />
+                <span class="subtitle genre-subtitle">Acción</span>
+              </div>
+              <div class="genre-type">
+                <img
+                  class="genre-icon"
+                  src="detalle/adventure.png"
+                  alt="Adventure"
+                />
+                <span class="subtitle genre-subtitle">Aventuras</span>
+              </div>
+              <div class="genre-type">
+                <img
+                  class="genre-icon"
+                  src="detalle/science-fiction.png"
+                  alt="Science fiction"
+                />
+                <span class="subtitle genre-subtitle">Ciencia ficción</span>
+              </div>
+              <div class="genre-type">
+                <img
+                  class="genre-icon"
+                  src="detalle/fantasy.png"
+                  alt="Fantasy"
+                />
+                <span class="subtitle genre-subtitle">Fantasía</span>
+              </div>
+              <div class="genre-type">
+                <img
+                  class="genre-icon"
+                  src="detalle/thriller.png"
+                  alt="Thriller"
+                />
+                <span class="subtitle genre-subtitle">Thriller</span>
+              </div>
+            </div>
+          </article>
+        </section>
+      </section>
+      <section class="recommendations">
+        <h2 class="recommendations__title">
+          Otras películas que te pueden gustar
+        </h2>
+        <div class="recommended-movies">
+          <div
+            class="arrow-container left-arrow-container"
+            onclick="scrollingLeftMovies()"
+          >
+            <span class="material-icons arrow-left"> navigate_before </span>
+          </div>
+          <div
+            class="arrow-container right-arrow-container"
+            onclick="scrollingRightMovies()"
+          >
+            <span class="material-icons arrow-right"> navigate_next </span>
+          </div>
+          <div class="scrollable-list">
+            <img
+              class="recommended-movie-photo"
+              src="detalle/onward.jpeg"
+              alt="Onward"
+            />
+            <img
+              class="recommended-movie-photo"
+              src="detalle/aves-de-presa.jpeg"
+              alt="Aladdin"
+            />
+            <img
+              class="recommended-movie-photo"
+              src="detalle/el-hombre-invisible.jpeg"
+              alt="El hombre invisible"
+            />
+            <img
+              class="recommended-movie-photo"
+              src="detalle/manhattan-sin-salida.jpeg"
+              alt="Manhattan sin salida"
+            />
+            <img
+              class="recommended-movie-photo"
+              src="detalle/la-llamada-de-lo-salvaje.jpeg"
+              alt="La llamada de lo salvaje"
+            />
+            <img
+              class="recommended-movie-photo"
+              src="detalle/star-wars-the-rise-of-skywalker.jpeg"
+              alt="Star wars: the rise of skywalker"
+            />
+            <img
+              class="recommended-movie-photo"
+              src="detalle/underwater.jpeg"
+              alt="Underwater"
+            />
+            <img
+              class="recommended-movie-photo"
+              src="detalle/the-gentlemen-los-senores-de-la-mafia.jpeg"
+              alt="The gentlemen. Los señores de la mafia"
+            />
+            <img
+              class="recommended-movie-photo"
+              src="detalle/x-men-fenix-oscura.jpeg"
+              alt="X-men: fenix oscura"
+            />
+            <img
+              class="recommended-movie-photo"
+              src="detalle/los-angeles-de-charlie.jpeg"
+              alt="Los ángeles de Charlie"
+            />
+            <img
+              class="recommended-movie-photo"
+              src="detalle/las-aventuras-del-doctor-dolittle.jpeg"
+              alt="Las aventuras del doctor Dolittle"
+            />
+            <img
+              class="recommended-movie-photo"
+              src="detalle/los-nuevos-mutantes.jpeg"
+              alt="Los nuevos mutantes"
+            />
+            <img
+              class="recommended-movie-photo"
+              src="detalle/malefica-maestra-del-mal.jpeg"
+              alt="Maléfica, maestra del mal"
+            />
+            <img
+              class="recommended-movie-photo"
+              src="detalle/2-22-la-hora-senalada.jpeg"
+              alt="2:22. La hora señalada"
+            />
+            <img
+              class="recommended-movie-photo"
+              src="detalle/a-vigilante.jpeg"
+              alt="A vigilante"
+            />
+            <img
+              class="recommended-movie-photo"
+              src="detalle/1917.jpeg"
+              alt="1917"
+            />
+            <img
+              class="recommended-movie-photo"
+              src="detalle/frozen.jpeg"
+              alt="Frozen"
+            />
+            <img
+              class="recommended-movie-photo"
+              src="detalle/aladdin.jpeg"
+              alt="Aladdin"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="desktop-footer-wrapper">
+      <h2 class="desktop-footer-title">Rakuten TV - Tu cine en casa</h2>
+      <p class="rakuten-info">
+        Rakuten TV proporciona una serie de servicios que ofrecen todo un
+        universo de contenidos en solo unos clics. Disfruta de una verdadera
+        experiencia cinematográfica con los últimos estrenos, servicios de
+        suscripción premium y una serie de canales temáticos gratis, como
+        Movies, Euronews, Kids TV, Viki, Documentaries y Rakuten Stories, un
+        canal que incorpora el contenido original y exclusivo de Rakuten TV.
+	  </p>
+	  <div class="desktop-footer-articles-wrapper">
+		  <div class="desktop-footer-article">
+		  <img class="how-it-works-img" src="detalle/how-it-works.png" alt="Cómo funciona" />
+			<span class="desktop-footer-article__title">Cómo funciona</span>
+			<span class="desktop-footer-article__info"
+			  >Rakuten TV es compatible con la gran mayoría de dispositivos
+			  conectados.</span
+			>
+		  </div>
+		  <div class="desktop-footer-article offsetting-top">
+			<img class="payment-img" src="detalle/payment.png" alt="Más formas de pago" />
+			<span class="desktop-footer-article__title">Más formas de pago</span>
+			<span class="desktop-footer-article__info"
+			  >Rakuten TV es compatible con PayPal y con tarjetas de crédito Visa y
+			  Mastercard.</span
+			>
+		  </div>
+		  <div class="desktop-footer-article offsetting-top">
+			<img class="help-img" src="detalle/help.png" alt="Ayuda y soporte" />
+			<span class="desktop-footer-article__title">Ayuda y soporte</span>
+			<span class="desktop-footer-article__info"
+			  >¿Tienes problemas con nuestro servicio? Ponte en contacto con nuestro
+			  equipo de soporte</span
+			>
+		  </div>
+		</footer>
+	  </div>
+    <footer class="footer-wrapper">
+      <article class="footer-container">
+        <div class="footer-content">
+          <a href="#"
+            ><img
+              class="logo-footer"
+              src="detalle/rakuten-gray.png"
+              alt="Rakuten TV logo"
+          /></a>
+          <div class="links-footer-wrapper">
+            <a href="#" class="links-footer">Acerca de Rakuten</a>
+            <a href="#" class="links-footer">Quiénes somos</a>
+            <a href="#" class="links-footer">Condiciones de uso</a>
+            <a href="#" class="links-footer"
+              >Política de privacidad y cookies</a
+            >
+            <a href="#" class="links-footer">Trabaja con nosotros</a>
+          </div>
+        </div>
+        <span class="copyright"
+          >2009 - 2020 © Rakuten TV Europe, S.L.U. - v1.838.0</span
+        >
+      </article>
+    </footer>
+  </body>
+</html>
