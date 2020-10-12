@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rakuten</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
@@ -53,50 +53,10 @@
                     <img src="baseline_search_white_18dp.png" class = 'details__search'>
                 </div>
             </div>
-            <div class="details__rounds">
-                <div class = 'rounds__column'>
-                    <div class="round-button">
-                        <span><a href="video.html" target="_blank" class="fas fa-play-circle play"></a></span>
-                    </div>
-                        <div class="round-button__text text__left">TRÁILER</div>
-                </div>
-                <div class = 'rounds__column'>
-                    <div class="round-button">
-                        <i class="fas fa-thumbtack icon__rotate"></i>
-                    </div>
-                        <div class="round-button__text text__rigth">AÑADIR A QUIERO VER</div>
-                </div>
-            </div>
         </div>
-            <div class="details__data">
-                <div class="details__data__score">
-                    <span class="fas fa-star score"></span>
-                    <div class="score"> 8.8 </div>
-                </div>
-                <div class="data__title"> Origen</div>
-            </div>
-        <div class="details__actions">
-            <div class="details__actions__options">
-                <div class="details__actions__purchase">
-                    <label for="purchase"></label>
-                    <select name="purchase" id="purchase">
-                        <option value="watch-now" id = 'watch-now'> VER AHORA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;desde 3,99€</option>
-                        <option value="rent" id = 'rent'>ALQUILAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;desde 3,99€</option>
-                        <option value="buy" id = 'buy'>COMPRAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;desde 10,99 €</option>
-                    </select>
-                </div>
-                <div class="details__actions__coupon">
-                    <button class="coupon__button" id = 'coupon__button__id' onclick="couponFunction()">
-                        <div class="coupon__contents">
-                            <span class="coupon__message">CANJEAR CUPÓN</span>
-                        </div>
-                    </button>
-                    <div class="coupon__call" id = 'coupon__call__id'>
-                            <input id = 'coupon__code' name = 'coupon__code' placeholder = 'Escribir código...' type="text" class="coupon__code" required>
-                            <button class = 'coupon__confirm' id = 'coupon__confirm__id'>CONFIRMAR</button>
-                    </div>
-                </div>
-            </div>
+        <div class = 'iframe__position'>
+            <iframe id = 'video__id' class = 'play__mobile' width="224" height="126" src="https://www.youtube.com/embed/RV9L7ui9Cn8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id = 'video__id' class = 'play__desktop' width="1120" height="630" src="https://www.youtube.com/embed/RV9L7ui9Cn8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </section>
     <script src="https://kit.fontawesome.com/8fea6703e0.js" crossorigin="anonymous"></script>
@@ -104,5 +64,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
 </body>
 </html>
