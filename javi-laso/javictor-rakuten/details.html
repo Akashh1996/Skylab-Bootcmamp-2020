@@ -11,6 +11,23 @@
 </head>
 <body>
     <header>
+        <nav class="navbar-top-details">
+            <a href="index.html" class="logo">
+                <img src="img/rakuten-logo-details.png" alt="Rakuten logo">
+            </a>
+            <div class="flex-spacer"></div>
+            
+            <div class="search">
+                <div id="searchBox" class="search-bar">
+                    <div class="img-container">
+                        <span class="material-icons">search</span>
+                    </div>
+                    <input id="search-bar-input-details" type="text" placeholder="Buscar" maxlength="64">
+                    <button id="closeBtn" class="material-icons">close</button>
+                </div>
+                <button id="searchBtn" class="material-icons">searchbutton</button>
+            </div>
+        </nav>        
         <nav class="header-navbar">
             <ul class="navbar__buttons-bottom">
                 <li class="button-bottom">
@@ -113,28 +130,38 @@
     <main>
         <div class="main-container">
             <div class="trailer">
-                <iframe src="https://www.youtube.com/embed/KK8FHdFluOQ" frameborder="0" allowfullscreen>
-                    <div class="gradient"></div>
-                </iframe>
-                <div class="trailer__rating">
-                    <span class="material-icons">star_rate</span>
-                    <span>5.4</span>
-                </div>
-                <h1>Mulán</h1>
-                <div class="buttons-see-coupon">
-                    <button class="button-see-now">
-                        <span class="see-now">Ver ahora</span>
-                        <div class="see-now__price">
-                            <span class="price-big">desde 21,99 <symbol>€</symbol></span>
-                            <span class="price-small">
-                                <span>o 2199 </span>
-                                <div class="icon-container">
-                                    <span class="P">P</span>
-                                </div>
-                            </span>
+                <div class="gradient"></div>
+                <div class="trailer__container">
+                    <div class="video-controllers">
+                        <div class="video__play">
+                            <a href="trailer.html" class="play material-icons">play_circle_filled</a>
+                            <span>Tráiler</span>
                         </div>
-                    </button>
-                    <button class="button-coupon">Canjear cupón</button>
+                        <div class="video__stick">
+                            <a href="#" class="stick material-icons">push_pin</a>
+                            <span>Añadir a quiero ver</span>
+                        </div>
+                    </div>
+                    <div class="trailer__rating">
+                        <span class="material-icons">star_rate</span>
+                        <span>5.4</span>
+                    </div>
+                    <h1>Mulán</h1>
+                    <div class="buttons-see-coupon">
+                        <button class="button-see-now">
+                            <span class="see-now">Ver ahora</span>
+                            <div class="see-now__price">
+                                <span class="price-big">desde 21,99 <symbol>€</symbol></span>
+                                <span class="price-small">
+                                    <span>o 2199 </span>
+                                    <div class="icon-container">
+                                        <span class="P">P</span>
+                                    </div>
+                                </span>
+                            </div>
+                        </button>
+                        <button class="button-coupon">Canjear cupón</button>
+                    </div>
                 </div>
             </div>
             <div class="rrss-information">
