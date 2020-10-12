@@ -11,13 +11,61 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="home-styles.css" />
+    <link rel="stylesheet" href="Rakuten.css"/>
 
 </head>
-
 <body>
+    <h1 class="title__body">Rakuten TV</h1>
+    <nav class="mobile-header">
+        <h2 class="title__body">Rakuten - Header</h2>
+        <div class="mobile-header__page"></div>
+        <div class="mobile-header__cinema"></div>
+        <div class="mobile-header__free"></div>
+        <div class="mobile-header__subscription"></div>
+        <div class="mobile-header__login"></div>
+    </nav>
+    <div class="mini__rakuten-logo">
+        <img
+            src="https://appstv-static-content-prod.wuaki.tv/images/720p/UI30_about_us-logo.70c3538baaaa2c6937b498be48c7e456.png" />
+    </div>
+    <div class="mini__search">
+        <img src="mobile-icon/herramienta-de-aumento-de-lentes-de-busqueda.svg" />
+    </div>
+    <div class="desktop-header mobile-header">
+        <div class="desktop-header">
+            <div class="desktop-header__menu-bar">
+                <span class="desktop-header__rakuten-logo">
+                    <img
+                        src="https://appstv-static-content-prod.wuaki.tv/images/720p/UI30_about_us-logo.70c3538baaaa2c6937b498be48c7e456.png" />
+                </span>
+                <span class="menu-bar">
+                    <button class="menu-bar__dropdown">CINEMA &#9662</button>
+                    <div class="dropdown-content">
+                        <span>TODOS LOS GÉNEROS</span>
+                        <span>FAMILY</span>
+                    </div>
+                </span>
+                <span>FREE</span>
+                <span class="menu-bar">
+                    <button class="menu-bar__dropdown">SUBSCRIPTION &#9662</button>
+                    <div class="dropdown-content">
+                        <span>STARZPLAY</span>
+                        <span>RTV SUSCRIPCIÓN</span>
+                    </div>
+                </span>
+                <form class="desktop-header__search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" placeholder="Buscar" name="search">
+                </form>
+            </div>
+            <div class="desktop-header__login">
+                <span class="login__help">AYUDA Y DISPOSITIVOS</span>
+                <span class="login__enter">ENTRAR</span>
+                <span class="login__log">REGISTRARSE</span>
+            </div>
+        </div>
+    </div>
     <header class="Back">
-        <!---->
         <div id="bigCircle" class="iconPlay">
             <div id="circle" class="iconPlay">
                 <div id="triangle-right" class="iconPlay"></div>
