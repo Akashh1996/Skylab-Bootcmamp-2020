@@ -29,21 +29,11 @@
     cursor: pointer;
 }
 
-.social__button:active {
-    background-color: black;
-    color: white;
-}
-
-.button__twitter {
-    width: 50%;
-}
-
-.button__facebook {
-    width: 50%;
-}
-
-.button__pinterest {
-    width: 50%;
+.social__button {
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: center;
 }
 
 .social__button:hover {
@@ -52,6 +42,7 @@
 
 .social__button:active {
     color: white;
+    background-color: black;
 }
 
 .desktop__text {
@@ -120,6 +111,40 @@
     display: flex;
     flex-direction: flex;
     align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.MultiCarousel-inner .MultiCarousel {
+    position: relative;
+    overflow: hidden;
+}
+
+#item__denis {
+    width: 100px;
+}
+
+#item__manuela {
+    width: 100px;
+}
+
+#item__maggie {
+    width: 100px;
+}
+#item__emma {
+    width: 100px;
+}
+#item__alain {
+    width: 100px;
+}
+#item__claudia {
+    width: 100px;
+}
+#item__david {
+    width: 100px;
+}
+#item__marta {
+    width: 100px;
 }
 
 .lang__sound {
