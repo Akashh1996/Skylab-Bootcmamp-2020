@@ -1,0 +1,315 @@
+.mainPage {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif; 
+    margin: 0px;
+}
+
+.filmImg {
+    background-image: url("https://images-2.wuaki.tv/system/shots/193046/original/snapshot-1590662756-width960-quality80.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+}
+
+.features {
+    display:flex;
+    flex-direction: row; 
+    justify-content: center;
+    padding: 0px 55px 0px 55px;
+}
+
+.features__action { 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    align-content: center;
+    font-size: 10px; 
+    color: white;
+}
+
+.action__round {
+    margin-bottom: 10px; 
+    background-color: rgba(0, 0, 0, 0.938);
+    border-radius: 50%;
+    box-shadow:0 1px 1px rgba(0,0,0,.5);
+    cursor: pointer;
+    transition: background-color .1s ease,border .1s ease;
+} 
+
+#push-pin {
+    margin-left: 55px;
+    text-align: center;
+}
+
+/* TITULO */
+
+.titleBlock {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    align-content: center; 
+    color: yellow;
+    margin-top: 50px;
+}
+
+.title__rating {
+    font-size: 18px;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    align-content: center;
+} 
+
+.titleBlock__title {
+    font-size: 22px;
+    margin: 10px 0px;
+    color: white;
+}
+
+
+/* BOTONES */
+
+.payAndPlay {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 0px 25px 60px;
+    background-color: black;
+} 
+
+.payAndPlay__watchNow {
+    display: flex; 
+    flex-direction: row;
+    height: 54px;
+    width:100%;
+    justify-content: space-between; 
+    align-items: center;
+    border: 1px; 
+    border-radius: 3px; 
+    background-color: yellow;
+    padding: 0px 15px;
+    font-weight: bold;
+} 
+
+#watchNow {
+    font-size: 14px; 
+    color: black;
+} 
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center; 
+    color: black; 
+    margin-left: 15px;
+} 
+
+.price__sub {
+    font-size: 10px;
+} 
+
+.payAndPlay__voucher {
+    margin-top: 4px;
+    display: flex; 
+    flex-direction: row;
+    height: 54px;
+    width:100%;
+    justify-content: center; 
+    align-items: center;
+    border-width: 2px;
+    border-color: yellow;
+    border-radius: 3px; 
+    background-color: black;
+    padding: 0px 15px;
+    font-weight: bold;
+    color:yellow;
+}
+/* SOCIAL MEDIA */
+
+.socialMedias {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    padding: 25px 0px;
+    border-style: none none solid none;
+    border-width: 1px;
+    border-color: lightgrey;
+}
+
+.socialMedias__roundBorder {
+    display:block;
+    height: 50px;
+    width: 50px;
+    margin: 0 2px;
+    border-radius: 100px;
+    border: solid 1px;
+    border-color:grey;
+    text-align: center;
+}
+
+.socialImg {
+   margin-top: 15px;
+}
+
+/* MOVIE CARD PRESENTATION */
+
+.presentationMovie {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    border-right: none;
+    border-left: none;
+}
+
+.presentationMovie__information {
+    display: flex;
+    flex-direction: column; 
+    justify-content:center;
+    align-items: flex-start; 
+    margin-bottom: 10px;
+}  
+
+.information__data {
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start;
+    padding: 5px 0px;
+}
+
+.infotext { 
+    font-weight: bold; 
+    font-size: 14px; 
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+.label {
+    background-color: #ffcc00; 
+    color: black; 
+    position: relative; padding: 3px 4px;
+    border-radius: 2px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.presentationMovie__synopsis {
+    font-size: 16px;
+    line-height: 180%;
+    margin-bottom: 30px;
+}
+
+.presentationMovie__subTitles {
+    font-weight: bold; 
+    font-size: 16px; 
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 0px 10px;
+}
+table {
+    margin-bottom: 30px;
+}
+
+th {
+    text-align: left;
+}
+td {
+    word-break: break-word;
+    vertical-align: top;
+    font-size: 15px;
+    min-width: 99px;
+    color:gray;
+    line-height: 20px;
+}
+
+.presentationMovie__awards {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.awards__titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+#oscar {
+    color: #c2a104;
+}
+
+/*SCORE*/
+.section__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.section__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-right: 15px;
+}
+
+.gauge-enhanced {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    align-content: center;
+    width: 80px;
+    height: 80px;
+    border: 1px solid lightgray;
+    border-radius: 666em;
+    position: relative;
+    background: white;
+    
+}
+
+.gauge-enhanced::before, .gauge-enhanced::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom:0;
+    left: 0; right: 0;
+    border: 10px solid #B8D916;
+    border-radius: 666em;
+}
+.gauge-enhanced::before{
+    clip: rect(0, 80px, 80px, 40px);
+}
+
+.gauge-enhanced::after{
+    clip: rect(0, 40px, 80px, 0); 
+    border-color:1px solid lightgray;
+    background: white;  
+}
+  
+.gauge-enhanced[data-fill="66"]::after{ border-color: #B8D916 }
+.gauge-enhanced[data-fill="66"]::after{transform: rotate(-118.8deg)}
+
+.gauge__score {
+    color: black;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.block__round {
+    height: 80px;
+    width: 80px;
+    border-radius: 100px;
+    background-color: grey;
+    text-align: center;
+
+}
+  
