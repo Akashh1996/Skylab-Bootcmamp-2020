@@ -1,169 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="shortcut icon"
-			href="./rakuten-image/detalle/favicon-503f333345.png"
-			type="image/x-icon"
-		/>
-		<link
-			href="https://fonts.googleapis.com/icon?family=Material+Icons"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="./styles/style.css" />
-		<title>Mulán-Rakuten TV</title>
-	</head>
-	<body>
-		<section id="nav-header">
-			<header class="header-wrapper">
-				<nav class="nav">
-					<div class="nav__items">
-						<div class="items__logo">
-							<img
-								src="./rakuten-image/detalle/GroupRakuteWhiteLogo.svg"
-								alt="Logo Rakuten"
-								class="logo-img"
-							/>
-						</div>
-						<div class="items__menu">
-							<button class="menu__button home-menu">
-								<div class="button-group">
-									<span class="material-icons navigation-icon"> home </span>
-									<span class="icon-title">portada</span>
-								</div>
-							</button>
-							<button class="menu__button drop-list-button">
-								<div class="button-group">
-									<span class="material-icons navigation-icon"> movie </span>
-									<span class="icon-title title-arrow">cinema</span>
-									<ul class="title-drop-options">
-										<li class="drop-items">todo los géneros</li>
-										<li class="drop-items">family</li>
-									</ul>
-								</div>
-							</button>
-							<button class="menu__button free-menu">
-								<div class="button-group">
-									<span class="material-icons navigation-icon">
-										visibility
-									</span>
-									<span class="icon-title">free</span>
-								</div>
-							</button>
-							<button class="menu__button drop-list-button">
-								<div class="button-group">
-									<span class="material-icons navigation-icon">
-										local_activity
-									</span>
-									<span class="icon-title title-arrow">subscrition</span>
-									<ul class="title-drop-options">
-										<li class="drop-items">starzplay</li>
-										<li class="drop-items">rtv subscripción</li>
-									</ul>
-								</div>
-							</button>
-							<button class="menu__button enter-menu">
-								<div class="button-group">
-									<span class="material-icons navigation-icon">
-										account_box
-									</span>
-									<span class="icon-title">entrar</span>
-								</div>
-							</button>
-						</div>
-						<div class="items__search">
-							<div class="search-input">
-								<input
-									type="search"
-									name="search"
-									id="search"
-									placeholder="Buscar"
-									maxlength="64"
-									class="search-box__input"
-								/>
-								<span class="fas fa-search input-icon"></span>
-							</div>
-						</div>
-						<div class="items__user">
-							<button class="user-login item-btn">entrar</button>
-							<button class="user-register item-btn">registrarse</button>
-						</div>
-					</div>
-				</nav>
-			</header>
-		</section>
-		<section class="content">
-			<div class="detail-hero">
-				<div class="detail__info">
-					<div class="detail__rounds">
-						<span class="round-action round-action-trailer">
-							<span class="round-action__element">
-								<span class="material-icons">
-									play_circle_filled
-									</span>
-							</span>
-							<span class="round-action__text">TRAILER</span>
-						</span>
-						<span class="round-action round-action-whishlist">
-							<span class="round-action__element">
-								<span class="material-icons pushpin">
-									push_pin
-									</span>
-							</span>
-							<span class="round-action__text">añadir a quiero ver</span>
-						</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./rakuten-image/detalle/favicon-503f333345.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Mulán-Rakuten TV</title>
+  </head>
+  <body>
+    <section id="nav-header">
+      <header class="header-wrapper">
+        <nav class="nav">
+          <div class="nav__items">
+            <div class="items__logo">
+              <a href="./index.html" target="_blank">
+                <img
+                  src="./rakuten-image/detalle/GroupRakuteWhiteLogo.svg"
+                  alt="Logo Rakuten"
+                  class="logo-img"
+                />
+              </a>
+            </div>
+            <div class="items__menu">
+              <button class="menu__button home-menu">
+                <div class="button-group">
+                  <span class="material-icons navigation-icon"> home </span>
+                  <span class="icon-title">portada</span>
+                </div>
+              </button>
+              <button class="menu__button drop-list-button">
+                <div class="button-group">
+                  <span class="material-icons navigation-icon"> movie </span>
+                  <span class="icon-title title-arrow">cinema</span>
+                  <ul class="title-drop-options">
+                    <li class="drop-items">todo los géneros</li>
+                    <li class="drop-items">family</li>
+                  </ul>
+                </div>
+              </button>
+              <button class="menu__button free-menu">
+                <div class="button-group">
+                  <span class="fas fa-eye navigation-icon"> </span>
+                  <span class="icon-title">free</span>
+                </div>
+              </button>
+              <button class="menu__button drop-list-button">
+                <div class="button-group">
+                  <span class="material-icons navigation-icon">
+                    local_activity
+                  </span>
+                  <span class="icon-title title-arrow">subscrition</span>
+                  <ul class="title-drop-options">
+                    <li class="drop-items">starzplay</li>
+                    <li class="drop-items">rtv subscripción</li>
+                  </ul>
+                </div>
+              </button>
+              <button class="menu__button enter-menu">
+                <div class="button-group">
+                  <span class="material-icons navigation-icon">
+                    account_box
+                  </span>
+                  <span class="icon-title">entrar</span>
+                </div>
+              </button>
+            </div>
+            <div class="items__search">
+              <div class="search-input">
+                <input
+                  type="search"
+                  name="search"
+                  id="search"
+                  placeholder="Buscar"
+                  maxlength="64"
+                  class="search-box__input"
+                />
+                <span
+                  class="fas fa-search input-icon search-dropdown__input"
+                ></span>
+              </div>
+            </div>
+            <div class="items__user">
+              <button class="user-help-divice item-btn">
+                ayuda y dispositivos
+              </button>
+              <button class="user-login item-btn">entrar</button>
+              <button class="user-register item-btn">registrarse</button>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </section>
+    <!-- //////////////////////////////////////////////////////////////////// -->
+    <section class="detail">
+      <div class="detail__hero">
+        <div class="detail__info">
+          <div class="detail-info__links">
+            <div class="links__group">
+              <span class="group__icon fas fa-play-circle"></span>
+              <span class="group__title">tráiler</span>
+            </div>
+            <div class="links__group left-spacer">
+              <span class="group__icon fas fa-thumbtack"></span>
+              <span class="group__title">añadir a quiero ver</span>
+            </div>
+          </div>
+          <div class="detail-info__data">
+            <span class="detail-star fa-start">5.4</span>
+            <h1 class="detail-title">Mulán</h1>
+          </div>
+          <div class="detail-info__buttons">
+            <button class="info-btn button-seenow">
+              <span class="button__title">ver ahora</span>
+              <div class="info__price">
+                <span class="price__euro">desde 21.99€</span>
+                <small class="price__points"
+                  >o 2199
+                  <span class="fab fa-product-hunt"></span>
+                </small>
+              </div>
+              <button class="info-btn button-seenow button-seenow__buy">
+                <span class="button__title">ver ahora</span>
+                <div class="info__price">
+                  <span class="price__euro">desde 21.99€</span>
+                  <small class="price__points"
+                    >o 2199
+                    <span class="fab fa-product-hunt"></span>
+                  </small>
+                </div>
+              </button>
+            </button>
+            <button class="info-btn button-discount">
+              <span class="button__title">canjear cupón</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <article class="detail-content">
+        <aside class="detail__socialmedia">
+          <button class="socialmedia-icon fas fa-eye"></button>
+          <button class="socialmedia-icon fab fa-twitter"></button>
+          <button class="socialmedia-icon fab fa-facebook-f"></button>
+          <button class="socialmedia-icon fab fa-pinterest-p"></button>
+        </aside>
+        <div class="detail-main__content">
+          <div class="content__wrapper"></div>
+        </div>
+      </article>
+    </section>
 
-					</div>
 
-				</div>
-				<div class="detail__data">
-					<div class="detail__data__score">
-						<div class="score">
-							<div class="score__wrapper">
-								<span class="score__rate">
-									<span class ="icon_rate">
-										&#9733;
-									</span>
-									5.4
-								</span>
-							</div>
-						</div>
-					</div>
-					<div class="detail__data__meta">
-						<div class="detail__data__meta__wrap">
-							<h1 class="detail__data__meta__title">Mulán</h1>
-						</div>
-					</div>
+    <section id="footer-wrapper">
+      <footer class="footer">
+        <div class="footer-info">
+          <h1 class="footer-info__title">Rakuten TV - Tu cine en casa</h1>
+          <p class="footer-info__text">
+            Rakuten TV proporciona una serie de servicios que ofrecen todo un
+            universo de contenidos en solo unos clics. Disfruta de una verdadera
+            experiencia cinematográfica con los últimos estrenos, servicios de
+            suscripción premium y una serie de canales temáticos gratis, como
+            Movies, Euronews, Kids TV, Viki, Documentaries y Rakuten Stories, un
+            canal que incorpora el contenido original y exclusivo de Rakuten TV.
+          </p>
+          <div class="footer-info__links">
+            <a href="#" class="links-info__a howitwork links-info--bg">
+              <span class="footer-info-block__title">Cómo funciona</span>
+              <span class="footer-info-block__text"
+                >Rakuten TV es compatible con la gran mayoría de dispositivos
+                conectados.</span
+              >
+            </a>
+            <a href="#" class="links-info__a payments links-info--bg">
+              <span class="footer-info-block__title">Más formas de pago</span>
+              <span class="footer-info-block__text"
+                >Rakuten TV es compatible con PayPal y con tarjetas de crédito
+                Visa y Mastercard.</span
+              >
+            </a>
+            <a href="#" class="links-info__a helpandsupport links-info--bg">
+              <span class="footer-info-block__title">Ayuda y soporte</span>
+              <span class="footer-info-block__text"
+                >¿Tienes problemas con nuestro servicio? Ponte en contacto con
+                nuestro equipo de soporte</span
+              >
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-links__content">
+            <a
+              href="#"
+              class="footer-links__content--a footer-links-content__logo"
+            ></a>
+            <a href="#" class="footer-links__content--a">Acerca de Rakuten</a>
+            <a href="#" class="footer-links__content--a">Quiénes somos</a>
+            <a href="#" class="footer-links__content--a">Condiciones de uso</a>
+            <a href="#" class="footer-links__content--a"
+              >Política de privacidad y cookies</a
+            >
+            <a href="#" class="footer-links__content--a"
+              >Trabaja con nosotros</a
+            >
+          </div>
+          <span class="footer-links__company"
+            >2009 - 2020 © Rakuten TV Europe, S.L.U. - v1.838.0</span
+          >
+        </div>
+      </footer>
+    </section>
+    <!-- //////////////////////////////////////////////////////////////////// -->
 
-				</div>
-				<div class="detail__action">
-					<div class="detail__action__wrapper">
-						<div class="detail__action__purchase">
-							<div class="orderselect">
-								<button class="button button-yellow button-combined button-full">
-									<div class="button__content">
-										<span class="button__content__call">Ver ahora</span>
-										<span class="button__content__info">21,99 &#8364;
-											<span class="button__content__info__sub">o 2199 ₧</span>
-										</span>
-									</div>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-			</div>
-				
-			
-		</section>
-		<script src="./app/script.js"></script>
-		<script
-			src="https://kit.fontawesome.com/8619792f44.js"
-			crossorigin="anonymous"
-		></script>
-	</body>
+    <script src="./app/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/8619792f44.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
