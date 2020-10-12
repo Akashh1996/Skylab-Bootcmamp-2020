@@ -10,6 +10,105 @@ body {
 	background: #101010;
 }
 
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show > .btn-secondary.dropdown-toggle {
+	background-color: black;
+}
+
+.detail-info {
+	position: relative;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 455px;
+	height: 570px;
+	background-image: url(detail/mulan-2020-1601313574-width1920-quality80.jpeg);
+}
+
+.detail-container {
+	width: 100%;
+	height: 600px;
+	position: absolute;
+	justify-content: center;
+	display: flex;
+	background: linear-gradient(
+		to bottom,
+		transparent 50%,
+		rgba(0, 0, 0, 0.15) 60%,
+		rgba(0, 0, 0, 0.5) 70%,
+		rgba(0, 0, 0, 0.7) 80%,
+		#000 100%
+	);
+}
+
+.icons-detail {
+	position: absolute;
+	width: 50%;
+	top: 15%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.detail-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-wrap: wrap;
+	top: 30%;
+	width: 40%;
+	position: absolute;
+}
+
+.h1-detail {
+	font-size: 40px;
+	text-align: center;
+	margin: 0px;
+	top: 60px;
+}
+
+.button-detail-watch {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	height: 8%;
+	width: 50%;
+	background: #ffe300;
+	border: 3px solid #ffe300;
+	color: black;
+}
+
+.button-detail-buy {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	top: 62%;
+	height: 8%;
+	width: 50%;
+	background: black;
+	border: 3px solid #ffe300;
+	opacity: 0.8;
+}
+
+.fa-star {
+	color: #ffe300;
+	text-align: center;
+}
+
+.fa-play-circle,
+.fa-thumbtack {
+	font-size: 400%;
+	color: black;
+	opacity: 0.8;
+	margin-left: 10px;
+}
+
 h1,
 h2,
 h3 {
@@ -21,7 +120,7 @@ h3 {
 	overflow: hidden;
 }
 
-.d-slider-header {
+.nav-detail {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
@@ -79,6 +178,14 @@ h3 {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
+}
+.logo-racuten,
+.icon-search {
+	margin: 5px;
+}
+
+.logo-nav {
+	margin-top: 10px;
 }
 
 .div-nav-left,
@@ -179,6 +286,10 @@ button > b:hover {
 	.nav-icon-search {
 		display: none;
 	}
+
+	.d-slider-header {
+		align-items: center;
+	}
 }
 
 @media only screen and (max-width: 1000px) {
@@ -188,15 +299,16 @@ button > b:hover {
 		display: none;
 	}
 
-	.d-slider-header {
+	.nav-detail {
 		display: flex;
 		flex-wrap: wrap;
 		position: absolute;
 		justify-content: space-between;
 		font-size: 20px;
-		width: 98%;
 		z-index: 10;
 		background: none;
+		width: 96%;
+		align-items: center;
 		position: fixed;
 	}
 }
@@ -207,10 +319,21 @@ button > b:hover {
 	}
 }
 
-.btn-secondary:not(:disabled):not(.disabled).active,
-.btn-secondary:not(:disabled):not(.disabled):active,
-.show > .btn-secondary.dropdown-toggle {
-	background-color: black;
+@media (min-width: 450px) {
+	.icons-detail {
+		width: 180px;
+		justify-content: space-between;
+	}
+}
+
+@media screen and (min-width: 764px) {
+	.wrapper-premieres,
+	.wrapper-selection,
+	.wrapper-recomendations,
+	.wrapper-rakuten-stories,
+	.wrapper-all-movies {
+		overflow-x: hidden;
+	}
 }
 
 @media screen and (min-width: 764px) {
@@ -223,22 +346,4 @@ button > b:hover {
 		width: 190px;
 		height: 300px;
 	}
-}
-
-::-webkit-scrollbar {
-	display: none;
-}
-
-@media screen and (min-width: 600px) {
-	.wrapper-premieres,
-	.wrapper-selection,
-	.wrapper-recomendations,
-	.wrapper-rakuten-stories,
-	.wrapper-all-movies {
-		overflow-x: auto;
-	}
-}
-
-.logo-nav {
-	margin: 10px;
 }
