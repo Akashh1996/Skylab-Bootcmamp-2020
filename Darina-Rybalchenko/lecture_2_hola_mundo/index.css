@@ -1,63 +1,32 @@
+/* //EJEMPLOS DE SCSS
 
-h1 {
-    background: linear-gradient(grey,pink);
-    width: 40vw;
-}
-div {
-    color: rgb(15, 120, 146);
-}
 
-li {
-    font-style: italic;
+@mixin specificRules($background, $fontSize, $value, $margin, $width) {
+	background: $background;
+	font-size: $fontSize;
+	margin: $value $value $value;
+	width: $width;
 }
-
-#moreSpesific {
-    background-color: red;
-    border: 3px solid black;
-}
-
-.specific {
-    background: linear-gradient(grey,pink);
-    border: none !important
-}
-
-p {
-    background-color: blue;
-    color: white;
-    padding: 5px;
-}
-
-nav {
-    width: 32px;
-    height: 32px;
-    font-size: 50px;
-    line-height: 32px;
-}
-
 
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-    .specific {
-        background: linear-gradient(rgb(134, 91, 91),rgb(217, 255, 192));
-        font-size: 20px;
-        margin: 0 16px;
-        width: 10vw;
-    }
-}
+	.specific {
+		@include specificRules(
+			linear-gradient(rgb(134, 91, 91), rgb(217, 255, 192))
+		);
+	}
 
-@media screen and (min-width: 1024px) and (max-width: 1439px) {
-    .specific {
-        background-color: pink;
-        font-size: 30px;
-        margin: 32px;
-        width: 20vw;
-    }
+	%specific_base {
+		background-color: rgb(231, 255, 192);
+		font-size: 40px;
+		margin: auto;
+		width: 30%;
+	}
 }
 
 @media screen and (min-width: 1440px) {
-    .specific {
-        background-color: rgb(231, 255, 192);
-        font-size: 40px;
-        margin: auto;
-        width: 30%;
-    }
+	.specific {
+		@extend %specific_base;
+	}
 }
+ */
+/*# sourceMappingURL=index.css.map */

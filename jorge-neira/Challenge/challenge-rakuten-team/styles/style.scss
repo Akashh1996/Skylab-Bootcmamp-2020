@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
 
 $primaryColor: #fff;
 $secondaryColor: #000;
@@ -15,277 +15,398 @@ $footerFontSizeLinks: 14px;
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body,
 input {
-  font-family: "Noto Sans JP", sans-serif;
+	font-family: 'Noto Sans JP', sans-serif;
 }
 
 ///////////////////////HEADER STYLES///////////////////////
 .header-wrapper {
-  .nav {
-    position: absolute;
-    height: 50px;
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.8) 0,
-      rgba(0, 0, 0, 0.7) 20%,
-      rgba(0, 0, 0, 0.4) 50%,
-      transparent 100%
-    );
-    width: 100%;
-    z-index: 999;
-    .nav__items {
-      position: relative;
-      display: flex;
-      align-items: center;
-      padding: 10px 20px 0;
-      .items__logo {
-        flex: 1;
-        .logo-img {
-          cursor: pointer;
-          filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.6));
-          height: 25px;
-          margin-top: 7px;
-        }
-      }
-      .items__menu {
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        box-shadow: 0 -5px 15px 0 rgba(0, 0, 0, 0.5);
-        height: 56px;
-        width: 100%;
-        display: flex;
-        .menu__button {
-          border: none;
-          outline: none;
-          background-color: $secondaryColor;
-          width: 100%;
-          .button-group {
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            .navigation-icon {
-              color: $navIconBg-Txt-Color;
-              font-size: 26px;
-            }
-            .icon-title {
-              text-transform: uppercase;
-              color: $navIconBg-Txt-Color;
-              font-weight: 600;
-              font-size: 10px;
-            }
-            .title-drop-options {
-              display: none;
-            }
-          }
-          .title-drop-option {
-            display: none;
-          }
-        }
-      }
-      .items__search {
-        .search-box__input {
-          position: fixed;
-          display: none;
-          background-color: $primaryColor;
-          width: 100%;
-          top: 0;
-          left: 0;
-          height: 50px;
-          padding-left: 40px;
-          outline: none;
-          border: none;
-          background: url(../rakuten-image/detalle/Vectorsearch999.svg)
-            $primaryColor no-repeat;
-          background-size: 20px;
-          background-position: 10px center;
-          font-size: 16px;
-        }
-        .input-icon {
-          cursor: pointer;
-          text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
-          font-size: 20px;
-          color: $primaryColor;
-        }
-      }
-      .items__user {
-        display: none;
-      }
-    }
-  }
+	.nav {
+		position: absolute;
+		height: 50px;
+		background: linear-gradient(
+			rgba(0, 0, 0, 0.8) 0,
+			rgba(0, 0, 0, 0.7) 20%,
+			rgba(0, 0, 0, 0.4) 50%,
+			transparent 100%
+		);
+		width: 100%;
+		z-index: 999;
+		.nav__items {
+			position: relative;
+			display: flex;
+			align-items: center;
+			padding: 10px 20px 0;
+			.items__logo {
+				flex: 1;
+				.logo-img {
+					cursor: pointer;
+					filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.6));
+					height: 25px;
+					margin-top: 7px;
+				}
+			}
+			.items__menu {
+				border-top: 1px solid rgba(255, 255, 255, 0.2);
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				box-shadow: 0 -5px 15px 0 rgba(0, 0, 0, 0.5);
+				height: 56px;
+				width: 100%;
+				display: flex;
+				.menu__button {
+					border: none;
+					outline: none;
+					background-color: $secondaryColor;
+					width: 100%;
+					.button-group {
+						cursor: pointer;
+						display: flex;
+						flex-direction: column;
+						.navigation-icon {
+							color: $navIconBg-Txt-Color;
+							font-size: 26px;
+						}
+						.icon-title {
+							text-transform: uppercase;
+							color: $navIconBg-Txt-Color;
+							font-weight: 600;
+							font-size: 10px;
+						}
+						.title-drop-options {
+							display: none;
+						}
+					}
+					.title-drop-option {
+						display: none;
+					}
+				}
+			}
+			.items__search {
+				.search-box__input {
+					position: fixed;
+					display: none;
+					background-color: $primaryColor;
+					width: 100%;
+					top: 0;
+					left: 0;
+					height: 50px;
+					padding-left: 40px;
+					outline: none;
+					border: none;
+					background: url(../rakuten-image/detalle/Vectorsearch999.svg)
+						$primaryColor no-repeat;
+					background-size: 20px;
+					background-position: 10px center;
+					font-size: 16px;
+				}
+				.input-icon {
+					cursor: pointer;
+					text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+					font-size: 20px;
+					color: $primaryColor;
+				}
+			}
+			.items__user {
+				display: none;
+			}
+		}
+	}
 }
 //////////////////////////////////////////////////////////////
 .detail {
-  .detail__hero {
-    background-image: url(../rakuten-image/detalle/mulan-2020-1601313574-width1920-quality80.jpeg);
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 455px;
-    height: 570px;
-    .detail__info {
-      position: relative;
-      background: linear-gradient(
-        to bottom,
-        transparent 50%,
-        rgba(0, 0, 0, 0.15) 60%,
-        rgba(0, 0, 0, 0.5) 70%,
-        rgba(0, 0, 0, 0.7) 80%,
-        #000 100%
-      );
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: center;
-      .detail-info__links {
-        position: absolute;
-        top: 23%;
-        display: flex;
-        .left-spacer {
-          margin-left: 55px;
-        }
-        .links__group {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 80px;
-          .fa-thumbtack {
-            transform: rotate(45deg);
-          }
-          .group__icon {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            color: $primaryColor;
-            font-size: 28px;
-            height: 82px;
-            width: 82px;
-            border-radius: 50%;
-            background-color: rgba(0, 0, 0, 0.513);
-          }
-          .group__title {
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
-            text-align: center;
-            margin-top: 10px;
-            color: $primaryColor;
-            text-transform: uppercase;
-            font-size: 12px;
-            font-weight: 600;
-          }
-        }
-      }
-      .detail-info__data {
-        position: absolute;
-        bottom: 195px;
-        text-align: center;
-        .detail-star {
-          position: relative;
-          color: $hoverColor;
-          font-weight: 900;
-          font-size: 20px;
-        }
-        .detail-title {
-          text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
-          color: $primaryColor;
-          font-size: 36px;
-        }
-      }
-      .detail-info__buttons {
-        padding: 0 0 60px;
-        width: 100%;
-        .info-btn {
-          background-color: $hoverColor;
-          cursor: pointer;
-          outline: none;
-          border: none;
-          margin: 0 auto;
-          width: 50%;
-          display: flex;
-          justify-content: space-between;
-          padding: 12px 14px;
-        }
-        .button__title {
-          font-size: 16px;
-          font-weight: 600;
-          text-transform: uppercase;
-        }
-        .button-seenow {
-          align-items: center;
-          .info__price {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            .price__euro {
-              font-weight: 600;
-              font-size: 14px;
-            }
-          }
-        }
-        .button-seenow__buy {
-          display: none;
-          background-color: $primaryColor;
-          // position: absolute;
-          // transform: translateY(52px);
-        }
-        .button-discount {
-          justify-content: center;
-          margin-top: 5px;
-          background-color: $secondaryColor;
-          border: 2px solid #f5da00;
-          .button__title {
-            color: #f5da00;
-          }
-        }
-      }
-    }
-  }
+	.detail__hero {
+		background-image: url(../rakuten-image/detalle/mulan-2020-1601313574-width1920-quality80.jpeg);
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-height: 455px;
+		height: 570px;
+		.detail__info {
+			position: relative;
+			background: linear-gradient(
+				to bottom,
+				transparent 50%,
+				rgba(0, 0, 0, 0.15) 60%,
+				rgba(0, 0, 0, 0.5) 70%,
+				rgba(0, 0, 0, 0.7) 80%,
+				#000 100%
+			);
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: center;
+			.detail-info__links {
+				position: absolute;
+				top: 23%;
+				display: flex;
+				.left-spacer {
+					margin-left: 55px;
+				}
+				.links__group {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					width: 80px;
+					.fa-thumbtack {
+						transform: rotate(45deg);
+					}
+					.group__icon {
+						display: inline-flex;
+						justify-content: center;
+						align-items: center;
+						color: $primaryColor;
+						font-size: 28px;
+						height: 82px;
+						width: 82px;
+						border-radius: 50%;
+						background-color: rgba(0, 0, 0, 0.513);
+					}
+					.group__title {
+						text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+						text-align: center;
+						margin-top: 10px;
+						color: $primaryColor;
+						text-transform: uppercase;
+						font-size: 12px;
+						font-weight: 600;
+					}
+				}
+			}
+			.detail-info__data {
+				position: absolute;
+				bottom: 195px;
+				text-align: center;
+				.detail-star {
+					position: relative;
+					color: $hoverColor;
+					font-weight: 900;
+					font-size: 20px;
+				}
+				.detail-title {
+					text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+					color: $primaryColor;
+					font-size: 36px;
+				}
+			}
+			.detail-info__buttons {
+				padding: 0 0 60px;
+				width: 100%;
+				.info-btn {
+					background-color: $hoverColor;
+					cursor: pointer;
+					outline: none;
+					border: none;
+					margin: 0 auto;
+					width: 50%;
+					display: flex;
+					justify-content: space-between;
+					padding: 12px 14px;
+				}
+				.button__title {
+					font-size: 16px;
+					font-weight: 600;
+					text-transform: uppercase;
+				}
+				.button-seenow {
+					align-items: center;
+					.info__price {
+						display: flex;
+						flex-direction: column;
+						align-items: flex-end;
+						.price__euro {
+							font-weight: 600;
+							font-size: 14px;
+						}
+					}
+				}
+				.button-seenow__buy {
+					display: none;
+					background-color: $primaryColor;
+					// position: absolute;
+					// transform: translateY(52px);
+				}
+				.button-discount {
+					justify-content: center;
+					margin-top: 5px;
+					background-color: $secondaryColor;
+					border: 2px solid #f5da00;
+					.button__title {
+						color: #f5da00;
+					}
+				}
+			}
+		}
+	}
 }
 //////////////////////////////////////////////////////////////
+
+.movie-gallery {
+	.banner-container {
+		position: relative;
+		display: flex;
+		align-items: center;
+		background: linear-gradient(
+			to top,
+			transparent 30%,
+			rgba(0, 0, 0, 0.3) 45%,
+			rgba(0, 0, 0, 0.7) 60%,
+			#000 70%
+		);
+		.image-banner {
+			width: 100%;
+		}
+		.arrows {
+			color: white;
+			font-size: 25px;
+			transition: all 0.7s ease-in-out;
+		}
+		.arrows::before {
+			text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+		}
+
+		.left-arrow {
+			position: absolute;
+			margin-left: 10px;
+			padding: 30px 30px 30px 0;
+		}
+		.right-arrow {
+			position: absolute;
+			right: 0;
+			margin-right: 10px;
+			padding: 30px 0 30px 30px;
+		}
+	}
+	.section-banners {
+		.section-banners-container {
+			min-height: 40px;
+			line-height: 0;
+			width: 100%;
+			display: flex;
+			overflow: hidden;
+			background-color: $searchBgColorOnLargeScreen;
+
+			.section-mini-banners {
+				display: inline-block;
+				border-radius: 2px;
+				margin: 0 auto;
+				background-color: $searchBgColorOnLargeScreen;
+				.mini-banners-images {
+					height: 126px;
+					background-size: cover;
+					width: 198px;
+					margin: 10px;
+				}
+			}
+			.section-mini-banners:hover {
+				border: 3px solid $hoverColor;
+				box-shadow: inset 0 0 0 3px $hoverColor;
+			}
+		}
+	}
+	.first-carru {
+		.carru-title {
+			.carru-title-top {
+				display: flex;
+				justify-content: space-between;
+				background-color: $searchBgColorOnLargeScreen;
+				padding-bottom: 8px;
+				.carru-title-left {
+					color: $primaryColor;
+				}
+				.carru-title-right {
+					color: $primaryColor;
+					font-size: 18px;
+					margin-right: 8px;
+				}
+			}
+		}
+		.first-carru-movies {
+			min-height: 40px;
+			line-height: 0;
+			width: 100%;
+			display: flex;
+			overflow: hidden;
+			background-color: $searchBgColorOnLargeScreen;
+			position: relative;
+			.arrows {
+				color: white;
+				font-size: 25px;
+				transition: all 0.7s ease-in-out;
+			}
+			.rightarrow-carru {
+				position: absolute;
+
+				right: 0;
+				margin-right: 10px;
+				padding: 30px 0 30px 30px;
+			}
+			.first-posters-carru {
+				margin: 10px;
+				.poster-carru-one {
+					display: inline-block;
+					border-radius: 2px;
+					margin: 0 auto;
+					width: 170px;
+					height: 238px;
+					margin: 10px;
+				}
+			}
+			.first-posters-carru:hover {
+				border: 3px solid $hoverColor;
+				box-shadow: inset 0 0 0 3px $hoverColor;
+			}
+		}
+	}
+}
+
+//////////////////////////////////////////////////////////////
 #footer-wrapper {
-  .footer {
-    margin-bottom: 50px;
-    .footer-info {
-      display: none;
-    }
-    .footer-links {
-      padding: 35px 55px;
-      background-color: $footerBgColor;
-      text-align: center;
-      .footer-links__content {
-        .footer-links-content__logo {
-          display: block;
-          margin: 0 auto 15px;
-          width: 130px;
-          height: 30px;
-          background: no-repeat
-            url(../rakuten-image/detalle/rktv-grey-eae681a197.svg);
-          background-size: contain;
-        }
-        .footer-links__content--a {
-          transition: color 0.1s ease;
-          color: $footerLinkTextColor;
-          font-size: $footerFontSizeLinks;
-          text-decoration: none;
-          padding-left: 6px;
-        }
-        .footer-links__content--a:hover {
-          color: $primaryColor;
-        }
-      }
-      .footer-links__company {
-        margin-top: 10px;
-        font-size: $footerFontSizeLinks;
-        color: #737373;
-      }
-    }
-  }
+	.footer {
+		margin-bottom: 50px;
+		.footer-info {
+			display: none;
+		}
+		.footer-links {
+			padding: 35px 55px;
+			background-color: $footerBgColor;
+			text-align: center;
+			.footer-links__content {
+				.footer-links-content__logo {
+					display: block;
+					margin: 0 auto 15px;
+					width: 130px;
+					height: 30px;
+					background: no-repeat
+						url(../rakuten-image/detalle/rktv-grey-eae681a197.svg);
+					background-size: contain;
+				}
+				.footer-links__content--a {
+					transition: color 0.1s ease;
+					color: $footerLinkTextColor;
+					font-size: $footerFontSizeLinks;
+					text-decoration: none;
+					padding-left: 6px;
+				}
+				.footer-links__content--a:hover {
+					color: $primaryColor;
+				}
+			}
+			.footer-links__company {
+				margin-top: 10px;
+				font-size: $footerFontSizeLinks;
+				color: #737373;
+			}
+		}
+	}
 }
 
 /////////////////////////////////////////////////////////////
@@ -452,228 +573,228 @@ input {
 // }
 
 @media screen and (min-width: 1023px) {
-  .header-wrapper {
-    .nav {
-      background: $secondaryColor;
-      position: fixed;
-      height: 56px;
-      .nav__items {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        position: relative;
-        padding: 0 20px;
-        max-width: 1680px;
-        margin: 0 auto;
-        .items__logo {
-          flex: 0;
-          margin-right: 19px;
-          .logo-img {
-            cursor: pointer;
-            filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.6));
-            height: 25px;
-            margin-top: 7px;
-          }
-        }
-        .items__menu {
-          position: relative;
-          box-shadow: none;
-          max-width: fit-content;
-          border-top: none;
-          .menu__button {
-            margin: 0 19px 0 0;
-            .button-group {
-              cursor: pointer;
-              position: relative;
-              .navigation-icon {
-                display: none;
-              }
-              .icon-title {
-                color: #fff;
-                font-size: 14px;
-              }
-              .title-arrow::after {
-                content: "▼";
-                position: relative;
-                bottom: 1px;
-                margin-left: 4px;
-                font-size: 10px;
-              }
-              .title-arrow:hover::after {
-                content: "▲";
-                position: relative;
-                bottom: 1px;
-                margin-left: 4px;
-                font-size: 10px;
-              }
-              .title-drop-options {
-                position: absolute;
-                color: white;
-                top: 30px;
-                list-style: none;
-                margin-left: -15px;
-                padding: 0 15px 5px 15px;
-                background-color: $secondaryColor;
-                border-radius: 0 0 3px 3px;
-                box-shadow: 0 3px 10px -4px rgba(0, 0, 0, 0.8);
-                .drop-items {
-                  display: flex;
-                  text-transform: uppercase;
-                  white-space: nowrap;
-                  font-size: 14px;
-                  padding: 10px 0;
-                  color: $primaryColor;
-                }
-                .drop-items:hover {
-                  color: $hoverColor;
-                }
-              }
-            }
-          }
-          .home-menu {
-            display: none;
-          }
-          .enter-menu {
-            display: none;
-          }
-        }
-        .items__search {
-          flex: 1;
-          .search-box__input {
-            display: block;
-            position: relative;
-            max-width: 300px;
-            height: 40px;
-            width: 100%;
-            border-radius: 2px;
-          }
-          .search-box__input:focus {
-            background-color: $primaryColor;
-            transition: color 0.2s ease-in-out;
-          }
-          .input-icon {
-            display: none;
-          }
-        }
-        .items__user {
-          display: flex;
-          .user-help-divice {
-            display: none;
-          }
-          .item-btn {
-            outline: none;
-            border: none;
-            background-color: $secondaryColor;
-            color: $primaryColor;
-            text-transform: uppercase;
-            padding: 0 9px;
-            min-height: 33px;
-            font-weight: 700;
-            font-size: 14px;
-            width: auto;
-          }
-          .user-login {
-            margin-right: 20px;
-          }
-          .user-login:hover {
-            color: $hoverColor;
-            transition: color 0.1s ease;
-          }
-          .user-register {
-            color: $secondaryColor;
-            background-color: $hoverColor;
-            border-radius: 2px;
-          }
-          .user-register:hover {
-            color: $searchBgColorOnLargeScreen;
-            background-color: $hoverRegisterColor;
-            transition: color 2s ease-in-out;
-            border-radius: 2px;
-          }
-        }
-      }
-    }
-  }
-  #footer-wrapper {
-    .footer {
-      .footer-info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 0;
-        background-color: $footerBgInfoColor;
-        text-align: center;
-        .footer-info__title {
-          color: $primaryColor;
-        }
-        .footer-info__text {
-          color: $footerLinkTextColor;
-          font-size: 13px;
-          width: 50%;
-        }
-        .footer-info__links {
-          display: flex;
-          justify-content: center;
-          .howitwork {
-            background: url(../rakuten-image/detalle/howitworks-555729f452.svg);
-          }
-          .payments {
-            background: url(../rakuten-image/detalle/payments-ec797a77da.svg);
-          }
-          .helpandsupport {
-            background: url(../rakuten-image/detalle/support-cd17a5040b.svg);
-          }
-          .links-info--bg {
-            padding: 90px 0 0 0;
-            background-size: 180px 90px;
-            background-repeat: no-repeat;
-            background-position: center top;
-          }
-          .links-info__a {
-            color: $footerLinkTextColor;
-            text-decoration: none;
-            width: 30%;
-            margin: 10px;
-            .footer-info-block__title {
-              display: flex;
-              flex-direction: column;
-              color: $primaryColor;
-              font-size: 22px;
-            }
-            .footer-info-block__text {
-              font-size: 13px;
-            }
-          }
-        }
-      }
-      .footer-links {
-        text-align: left;
-        .footer-links__content {
-          margin-bottom: 10px;
-          .footer-links-content__logo {
-            margin-bottom: 0;
-            display: inline-block;
-            vertical-align: middle;
-            margin-left: 0;
-          }
-        }
-      }
-    }
-  }
+	.header-wrapper {
+		.nav {
+			background: $secondaryColor;
+			position: fixed;
+			height: 56px;
+			.nav__items {
+				border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+				position: relative;
+				padding: 0 20px;
+				max-width: 1680px;
+				margin: 0 auto;
+				.items__logo {
+					flex: 0;
+					margin-right: 19px;
+					.logo-img {
+						cursor: pointer;
+						filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.6));
+						height: 25px;
+						margin-top: 7px;
+					}
+				}
+				.items__menu {
+					position: relative;
+					box-shadow: none;
+					max-width: fit-content;
+					border-top: none;
+					.menu__button {
+						margin: 0 19px 0 0;
+						.button-group {
+							cursor: pointer;
+							position: relative;
+							.navigation-icon {
+								display: none;
+							}
+							.icon-title {
+								color: #fff;
+								font-size: 14px;
+							}
+							.title-arrow::after {
+								content: '▼';
+								position: relative;
+								bottom: 1px;
+								margin-left: 4px;
+								font-size: 10px;
+							}
+							.title-arrow:hover::after {
+								content: '▲';
+								position: relative;
+								bottom: 1px;
+								margin-left: 4px;
+								font-size: 10px;
+							}
+							.title-drop-options {
+								position: absolute;
+								color: white;
+								top: 30px;
+								list-style: none;
+								margin-left: -15px;
+								padding: 0 15px 5px 15px;
+								background-color: $secondaryColor;
+								border-radius: 0 0 3px 3px;
+								box-shadow: 0 3px 10px -4px rgba(0, 0, 0, 0.8);
+								.drop-items {
+									display: flex;
+									text-transform: uppercase;
+									white-space: nowrap;
+									font-size: 14px;
+									padding: 10px 0;
+									color: $primaryColor;
+								}
+								.drop-items:hover {
+									color: $hoverColor;
+								}
+							}
+						}
+					}
+					.home-menu {
+						display: none;
+					}
+					.enter-menu {
+						display: none;
+					}
+				}
+				.items__search {
+					flex: 1;
+					.search-box__input {
+						display: block;
+						position: relative;
+						max-width: 300px;
+						height: 40px;
+						width: 100%;
+						border-radius: 2px;
+					}
+					.search-box__input:focus {
+						background-color: $primaryColor;
+						transition: color 0.2s ease-in-out;
+					}
+					.input-icon {
+						display: none;
+					}
+				}
+				.items__user {
+					display: flex;
+					.user-help-divice {
+						display: none;
+					}
+					.item-btn {
+						outline: none;
+						border: none;
+						background-color: $secondaryColor;
+						color: $primaryColor;
+						text-transform: uppercase;
+						padding: 0 9px;
+						min-height: 33px;
+						font-weight: 700;
+						font-size: 14px;
+						width: auto;
+					}
+					.user-login {
+						margin-right: 20px;
+					}
+					.user-login:hover {
+						color: $hoverColor;
+						transition: color 0.1s ease;
+					}
+					.user-register {
+						color: $secondaryColor;
+						background-color: $hoverColor;
+						border-radius: 2px;
+					}
+					.user-register:hover {
+						color: $searchBgColorOnLargeScreen;
+						background-color: $hoverRegisterColor;
+						transition: color 2s ease-in-out;
+						border-radius: 2px;
+					}
+				}
+			}
+		}
+	}
+	#footer-wrapper {
+		.footer {
+			.footer-info {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 40px 0;
+				background-color: $footerBgInfoColor;
+				text-align: center;
+				.footer-info__title {
+					color: $primaryColor;
+				}
+				.footer-info__text {
+					color: $footerLinkTextColor;
+					font-size: 13px;
+					width: 50%;
+				}
+				.footer-info__links {
+					display: flex;
+					justify-content: center;
+					.howitwork {
+						background: url(../rakuten-image/detalle/howitworks-555729f452.svg);
+					}
+					.payments {
+						background: url(../rakuten-image/detalle/payments-ec797a77da.svg);
+					}
+					.helpandsupport {
+						background: url(../rakuten-image/detalle/support-cd17a5040b.svg);
+					}
+					.links-info--bg {
+						padding: 90px 0 0 0;
+						background-size: 180px 90px;
+						background-repeat: no-repeat;
+						background-position: center top;
+					}
+					.links-info__a {
+						color: $footerLinkTextColor;
+						text-decoration: none;
+						width: 30%;
+						margin: 10px;
+						.footer-info-block__title {
+							display: flex;
+							flex-direction: column;
+							color: $primaryColor;
+							font-size: 22px;
+						}
+						.footer-info-block__text {
+							font-size: 13px;
+						}
+					}
+				}
+			}
+			.footer-links {
+				text-align: left;
+				.footer-links__content {
+					margin-bottom: 10px;
+					.footer-links-content__logo {
+						margin-bottom: 0;
+						display: inline-block;
+						vertical-align: middle;
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 1249px) {
-  .header-wrapper {
-    .nav {
-      .nav__items {
-        .items__user {
-          .user-help-divice {
-            display: block;
-            color: $navIconBg-Txt-Color;
-          }
-          .user-help-divice:hover {
-            color: $hoverColor;
-          }
-        }
-      }
-    }
-  }
+	.header-wrapper {
+		.nav {
+			.nav__items {
+				.items__user {
+					.user-help-divice {
+						display: block;
+						color: $navIconBg-Txt-Color;
+					}
+					.user-help-divice:hover {
+						color: $hoverColor;
+					}
+				}
+			}
+		}
+	}
 }
