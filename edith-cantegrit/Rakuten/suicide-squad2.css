@@ -5,16 +5,12 @@
 	margin: 0px;
 }
 
-ul,
-li {
-	list-style: none;
-}
-
+/*NAVBAR*/
 .nav {
 	display: block;
 	position: absolute;
 	width: 100%;
-	height: 50px;
+	height: 52px;
 	background: #000;
 	background: linear-gradient(
 		to bottom,
@@ -68,6 +64,9 @@ li {
 .nav__items__links {
 	display: none;
 }
+.nav__items__search {
+	display: none;
+}
 .nav__items__links__entrar {
 	display: none;
 }
@@ -106,25 +105,27 @@ li {
 	text-align: center;
 	text-transform: uppercase;
 }
+.nav__menu__items:hover {
+	color: yellow;
+}
+
+/* BACKGROUND IMG */
 
 .filmImg {
-	background-image: linear-gradient(
-			to top,
-			rgba(2, 2, 3, 0.966),
-			rgba(20, 14, 17, 0)
-		),
-		url(“https://images-2.wuaki.tv/system/shots/193046/original/snapshot-1590662756-width960-quality80.jpeg”);
+	background: url('https://images-2.wuaki.tv/system/shots/193046/original/snapshot-1590662756-width960-quality80.jpeg');
 	background-position: center;
 	background-repeat: no-repeat;
 	width: 100%;
 	height: auto;
 }
 
+/* BUTTONS START */
+
 .features {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	padding: 300px 55px 0px 55px;
+	padding: 100px 55px 0px 55px;
 }
 
 .features__action {
@@ -150,7 +151,11 @@ li {
 	text-align: center;
 }
 
-/* TITULO */
+body div section div a {
+	color: white;
+}
+
+/* TITLE AND RATING */
 
 .titleBlock {
 	display: flex;
@@ -175,7 +180,7 @@ li {
 	color: white;
 }
 
-/* BOTONES */
+/* WATCH PAY BUTTONS */
 
 .payAndPlay {
 	display: flex;
@@ -254,12 +259,16 @@ li {
 	margin: 0 2px;
 	border-radius: 100px;
 	border: solid 1px;
-	border-color: grey;
+	border-color: lightgrey;
 	text-align: center;
 }
 
 .socialImg {
 	margin-top: 15px;
+}
+
+.textMediaDesktopMode {
+	display: none;
 }
 
 /* MOVIE CARD PRESENTATION */
@@ -332,18 +341,23 @@ td {
 	color: gray;
 	line-height: 20px;
 }
-
-/* CARROUSSEL*/
-
+/*CARROUSSEL*/
+.seccion__free {
+	display: flex;
+	flex-direction: row;
+	margin-left: 10px;
+	margin-bottom: 100px;
+}
 .seccion__cinema {
-	display: block;
+	display: flex;
+	flex-direction: row;
+	margin-left: 10px;
 	margin-bottom: 50px;
 }
 
 .seccion__cinema__top-films {
 	height: auto;
 	max-height: 250px;
-	max-width: 750px;
 	display: flex;
 	flex-direction: row;
 	overflow-x: auto;
@@ -359,11 +373,15 @@ td {
 .seccion__cinema__items__img {
 	height: -webkit-fill-available;
 }
-
+.seccion__cinema__items__img:hover {
+	border: 4px solid yellow;
+}
 .seccion__cinema__items__img--last {
 	margin-right: 20px;
 	height: -webkit-fill-available;
 }
+
+/* AWARDS */
 
 .presentationMovie__awards {
 	display: flex;
@@ -385,6 +403,7 @@ td {
 }
 
 /*SCORE*/
+
 .section__wrapper {
 	display: flex;
 	flex-direction: row;
@@ -399,7 +418,7 @@ td {
 	align-items: center;
 	text-align: center;
 	justify-content: space-between;
-	font-size: 13px;
+	font-size: 10px;
 	margin-right: 15px;
 }
 
@@ -411,7 +430,7 @@ td {
 	width: 80px;
 	height: 80px;
 	border: 1px solid lightgray;
-	border-radius: 666em;
+	border-radius: 50%;
 	position: relative;
 	background: white;
 }
@@ -425,8 +444,9 @@ td {
 	left: 0;
 	right: 0;
 	border: 10px solid #b8d916;
-	border-radius: 666em;
+	border-radius: 50%;
 }
+
 .gauge-enhanced::before {
 	clip: rect(0, 80px, 80px, 40px);
 }
@@ -448,7 +468,11 @@ td {
 	color: black;
 	font-size: 20px;
 	margin-top: 20px;
+	z-index: 2;
+	position: absolute;
 }
+
+/* GENRES */
 
 .block__round {
 	height: 80px;
@@ -457,6 +481,8 @@ td {
 	background-color: grey;
 	text-align: center;
 }
+
+/*FOOTER*/
 
 .footerBlock {
 	display: flex;
@@ -482,7 +508,7 @@ td {
 	padding: 28px 0px 15px 0px;
 }
 
-.links {
+.linksFooter {
 	color: lightgray;
 	text-decoration: none;
 	line-height: 20px;
@@ -498,26 +524,16 @@ td {
 	margin: 5px 0px 0px;
 }
 
-@media only screen and (min-width: 967px) {
-	footer div div div br {
-		display: none;
-	}
-
-	.wrapper {
-		padding: 0px 55px 0px 55px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-
+@media only screen and (min-width: 800px) {
+	/*NAVBAR*/
 	.nav {
 		position: fixed;
 		background: black;
-		height: 52px;
 	}
 	.nav__menu {
 		display: none;
 	}
+
 	.nav__items__links--right {
 		display: flex;
 		flex-direction: row;
@@ -536,11 +552,17 @@ td {
 		margin-left: 15px;
 		margin-right: 15px;
 	}
+	.nav__items__links__text:hover {
+		color: yellow;
+	}
 	.nav__items__links__text--GREY {
 		color: grey;
 		font-weight: bold;
 		margin-left: 15px;
 		margin-right: 15px;
+	}
+	.nav__items__links__text--GREY:hover {
+		color: yellow;
 	}
 	.nav__items__links__entrar {
 		display: block;
@@ -559,34 +581,64 @@ td {
 		-webkit-border-radius: 3px 3px 3px 3px;
 		border: 0px solid #000000;
 		border: 0;
-		height: 35px;
-		margin-bottom: 10px;
+		height: 30px;
 		margin-right: 10px;
 	}
 	.nav__items__links__search {
 		display: flex;
 		flex-direction: row;
-		align-items: center;
 		margin-left: 5px;
-		margin-bottom: 10px;
 		border: 0;
 		padding-left: 10px;
-		height: auto;
+		height: 30px;
 		background-color: #333;
 		border-radius: 2px;
+		align-items: center;
 	}
 	.search__box__input {
-		height: fit-content;
 		border: 0;
 		padding-left: 10px;
-		height: auto;
+		height: 30px;
 		background-color: #333;
 		border-radius: 2px;
 	}
 
-	.nav__items__search {
-		display: none;
+	/* BACKGROUND IMG */
+
+	.filmImg {
+		background-image: url('https://images-2.wuaki.tv/system/shots/193046/original/snapshot-1590662756-width960-quality80.jpeg');
+		background-image: linear-gradient(
+			to top rgba(15, 14, 14, 0.911),
+			rgba(255, 255, 255, 0.014)
+		);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: auto;
 	}
+	/* BUTTONS START */
+
+	.features {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding: 200px 55px 30px 55px;
+	}
+
+	.features__action {
+		font-size: 12px;
+	}
+
+	/*TITLE*/
+
+	.titleBlock__title {
+		font-size: 42px;
+		margin: 10px 0px;
+		color: white;
+	}
+
+	/* WATCH PAY BUTTONS */
 
 	.payAndPlay {
 		display: flex;
@@ -611,42 +663,76 @@ td {
 		margin-right: 10px;
 	}
 
-	.filmImg {
-		background-image: url('https://images-2.wuaki.tv/system/shots/193046/original/snapshot-1590662756-width960-quality80.jpeg');
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-
-	.features {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		padding: 300px 55px 30px 55px;
-	}
+	/* SOCIAL MEDIAS */
 
 	.socialLinks {
 		display: flex;
 		flex-direction: row-reverse;
-		align-items: flex-start;
+		padding: 0px 50px 0px 0px;
 	}
 
 	.socialMedias {
 		display: flex;
 		flex-direction: column;
-		align-items: flex-end;
-		justify-content: flex-end;
+		justify-content: flex-start;
+		padding: 20px 20px;
+		align-items: flex-start;
 		background-color: white;
-		padding: 25px 90px;
+		border: none;
 	}
+
+	.textMediaDesktopMode {
+		display: inline-flex;
+		font-size: 16px;
+		margin-left: 10px;
+	}
+
+	.blockLinksinDekstop {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 10px;
+	}
+
+	/* MOVIE CARD*/
 
 	.presentationMovie {
 		display: flex;
 		flex-direction: column;
-		padding: 20px 10px;
+		padding: 20px 40px;
 		border-right: 1px solid;
 		border-color: lightgrey;
 		border-left: none;
 		flex: 7;
+	}
+
+	.presentationMovie__information {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		margin-bottom: 10px;
+	}
+
+	/*CARROUSSEL */
+	.seccion__free {
+		display: flex;
+		flex-direction: row;
+		margin-left: 10px;
+		margin-bottom: 40px;
+		max-width: 850px;
+	}
+
+	/*FOOTER*/
+
+	.footerBlock__wrapper {
+		padding: 0px 55px 0px 55px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	footer div div div br {
+		display: none;
 	}
 }
