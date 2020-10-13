@@ -1,0 +1,65 @@
+$secondaryColor: rgb(161, 161, 161);
+$bg-color-gray: rgb(214, 214, 214);
+$formsBorder: 1px solid black;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.main-container {
+	margin: 2rem;
+	padding: 2rem;
+	border: $formsBorder;
+}
+
+.section-box {
+	display: flex;
+}
+
+.box {
+	background-color: $bg-color-gray;
+	border: $formsBorder;
+	height: 200px;
+	min-width: 200px;
+	margin-right: 2rem;
+}
+
+.circle-heading-date {
+	display: flex;
+}
+
+.circle {
+	border-radius: 50%;
+	background-color: $bg-color-gray;
+	border: $formsBorder;
+	height: 70px;
+	width: 70px;
+	margin-right: 1rem;
+}
+
+.date {
+	display: flex;
+	justify-content: flex-end;
+	width: 50%;
+}
+
+.second-article {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: space-around;
+}
+
+.triangle {
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	background-color: $bg-color-gray;
+	height: 100px;
+	width: 100px;
+}
+
+.margintop {
+	margin-top: 2rem;
+}

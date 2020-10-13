@@ -24,12 +24,12 @@ let appendNumber = number => {
     actualNumber = actualNumber.toString() + number.toString();
 }
 
-let operationOptions = operation => {
+let operationOptions = operator => {
     if (actualNumber === '') return;
     if (previousNumber !== '') {
         calculate();
     }
-    operation = operation;
+    operation = operator;
     previousNumber = actualNumber;
     actualNumber = '';
 }
