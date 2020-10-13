@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Forms Validation</title>
+	</head>
+	<body>
+		<link rel="stylesheet" href="style.css" />
+		<style>
+			* {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+		</style>
+
+		<h1>Forms validation</h1>
+		<form>
+			<label for="search">Search</label>
+			<input
+				id="search"
+				name="search"
+				type="text"
+				placeholder="Search here..."
+				required
+				minlength="5"
+				maxlength="10"
+			/><br /><br />
+			<label for="description">Description:</label>
+			<textarea
+				placeholder="Tell me a bit about yourself"
+				name=""
+				id=""
+				cols="30"
+				rows="10"
+			></textarea
+			><br /><br />
+			<label for="age">Age</label>
+			<select name="age" id="age">
+				<option value="1">Uno</option>
+				<option value="2">Dos</option>
+				<option value="3">Tres</option></select
+			><br /><br />
+			<label for="radio">Radio:</label>
+			<input
+				id="radio"
+				name="radio"
+				type="radio"
+				placeholder="Search here..."
+			/><br /><br />
+			<fieldset>
+				<legend>Me gusta git?</legend>
+				<label for="gitlovertrue">True</label>
+				<input id="gitlovertrue" name="git lover" type="radio" value="true" />
+				<label for="gitloverfalse">False</label>
+				<input id="gitloverfalse" name="git lover" type="radio" value="false" />
+			</fieldset>
+			<br /><br />
+			<fieldset>
+				<legend>Frameworks</legend>
+				<label for="framework-angular">Angular</label>
+				<input
+					id="framework-angular"
+					name="frameworks"
+					type="checkbox"
+					value="true"
+				/>
+				<label for="framework-react">React</label>
+				<input
+					id="framework-react"
+					name="frameworks"
+					type="checkbox"
+					value="true"
+				/>
+				<label for="Vue">Vue</label>
+				<input
+					id="framework-vue"
+					name="frameworks"
+					type="checkbox"
+					value="true"
+				/>
+			</fieldset>
+			<br /><br />
+		</form>
+	</body>
+</html>

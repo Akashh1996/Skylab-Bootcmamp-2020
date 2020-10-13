@@ -1,0 +1,164 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 45px;
+    width: 100vw;
+    background-color: rgb(219, 217, 217);
+    border: 1px solid gray;
+
+}
+
+.dot {
+    background-color: red;
+    height: 25px;
+    width: 25px;
+    clip-path: circle(50% at 50% 50%);
+    margin: 0 0.5%;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.brown {
+    background-color: rgb(165, 81, 42);
+}
+
+.grey {
+    background-color: rgb(219, 217, 217);
+}
+
+#header-dot {
+    height: 75px;
+    width: 75px;
+    border: 2px solid gray;
+    border-radius: 50%;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.left {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.right {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.right>article {
+    justify-self: center;
+    width: 90%;
+    padding-top: 40px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+}
+
+.head-text {
+    align-self: baseline;
+    padding-left: 40px;
+    font-size: 20px;
+}
+
+.heading {
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+.sub-heading {
+    text-transform: capitalize;
+    color: rgba(128, 128, 128, 0.6);
+}
+
+#date {
+    text-align: right;
+}
+
+.square {
+    height: 200px;
+    width: 200px;
+    border: 2px solid gray;
+
+}
+
+.mid {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.lorem {
+    padding: 0 30px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+
+.triangle {
+    background-color: rgb(161, 160, 160);
+    height: 50px;
+    width: 50px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.third {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

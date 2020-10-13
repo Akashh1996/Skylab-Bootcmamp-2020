@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link href="test.css" rel="stylesheet" />
+	</head>
+	<body>
+        <div class="center">
+            <div>
+                <div class="flex flex-row">
+                    <header class="header">
+                        <button class="button">RESERVAR UN VUELO</button>
+                        <button class="button">RESERVAR UN VUELO CON MILLAS</button>
+                    </header>
+                </div>
+                <div class="flex">
+                    <form>
+                        <div class="flex flex-row first">
+                            <div class="travels">
+                                <label for="ida-vuelta">Viaje</label>
+                            <select name="age" id="age">
+                                <option value="1">Ida y Vuelta</option>
+                                <option value="1">Sólo ida</option>
+                            </select>
+                            </div>
+                            <div class=travelers>
+                                <select name="someName" id="someId">
+                                    <option value="1 pasajero">1</option>
+                                    <option value="2 pasajeros">2</option>
+                                    <option value="3 pasajeros">3</option>
+                                    <option value="4 pasajeros">4</option>
+                                    <option value="4 o más">+4</option>
+                                </select>
+                            
+                            </div>
+                            <div class="client">
+                                
+                            <label for="Class-selection">Clase:</label>
+                            <select name="age" id="age" class="flex">
+                                <option value="1">BUSINESS</option>
+                                <option value="1">ECONOMY</option>
+                                <option value="1">MEMBER</option>
+                            </select>
+                            </div>
+                        </div>
+                        <div class="second">
+                            <div class="departures">
+                                <select name="Salida" id="salida" class="flex flex-column">
+                                    <option value="1" disabled selected hidden>
+                                        &#9992; Salida de *
+                                    </option>
+                                    <option value="1">Barcelona</option>
+                                    <option value="1">Berlín</option>
+                                    <option value="1">Malta</option>
+                                    <option value="1">París</option>
+                                    <option value="1">Londres</option>
+                                    <option value="1">Nueva York</option>
+                                    <option value="1">Chicago</option>
+                                    <option value="1">Las Vegas</option>
+                                    <option value="1">Madrid</option>
+                                    <option value="1">Düsseldorf</option>
+                                </select>
+                            </div>
+                            <div class="arrivals">
+                                <select name="Salida" id="salida" class="flex flex-column">
+                                    <option value="1" disabled selected hidden>
+                                        &#9992; llegada de *
+                                    </option>
+                                    <option value="1">Barcelona</option>
+                                    <option value="1">Berlín</option>
+                                    <option value="1">Malta</option>
+                                    <option value="1">Paris</option>
+                                    <option value="1">Londres</option>
+                                    <option value="1">Nueva York</option>
+                                    <option value="1">Chicago</option>
+                                    <option value="1">Las Vegas</option>
+                                    <option value="1">Madrid</option>
+                                    <option value="1">Düsseldorf</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="third">
+                            <div class="date">
+                                <label for="start">Fechas de viaje *:</label>
+        
+                            <input
+                                type="date"
+                                id="start"
+                                name="trip-start"
+                                value="2020-01-01"
+                                min="2020-01-01"
+                                max="2023-12-31"
+                            />
+                            </div>
+                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                            <label for="vehicle1">Viajes profesionales</label><br>
+                            </div>
+                            <div class="buy">
+                                <button type="button" class="button1">Buscar Vuelos</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    </form>
+            </div>
+        </div>
+		
+			
+	</body>
+</html>
