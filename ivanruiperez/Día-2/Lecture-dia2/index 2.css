@@ -1,0 +1,46 @@
+div {
+    color: blue;
+}
+li + li {
+    font-style: italic;
+}
+#morespecific {
+    background-color: red;
+    border: 3px solid black;
+}
+.specific {
+    background-color: gray;
+    border: none !important;
+}
+p {
+    background-color: blue;
+    color: white;
+    padding: 5px;
+}
+nav span.material-icons{
+    font-size: 30px;
+}
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+    .specific {
+        background-color: blue;
+        font-size: 20px;
+        margin: 0 16px;
+        width: 80%;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .specific {
+        background-color: black;
+        font-size: 30px;
+        margin: 0 32px;
+        width: 50%;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .specific {
+        background-color: yellow;
+        font-size: 40px;
+        margin: 0 16px;
+        width: 30%;
+    }
+}
