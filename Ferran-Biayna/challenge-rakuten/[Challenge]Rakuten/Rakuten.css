@@ -25,16 +25,18 @@
 .next {
 	cursor: pointer;
 	position: absolute;
-	top: 50%;
+	background-color: transparent;
+	border: none;
+	top: 40%;
 	width: auto;
 	margin-top: -22px;
 	padding: 16px;
 	color: white;
-	font-weight: bold;
-	font-size: 18px;
+	font-size: 45px;
 	transition: 0.6s ease;
 	border-radius: 0 3px 3px 0;
 	user-select: none;
+	outline: none;
 }
 
 /* Position the "next button" to the right */
@@ -46,7 +48,8 @@
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color:none;
+	color: white;
 }
 
 /* Caption text */
@@ -160,6 +163,7 @@
 }
 .MultiCarousel .MultiCarousel-inner .item {
 	float: left;
+	text-align: center;
 }
 .MultiCarousel .MultiCarousel-inner .item > div {
 	text-align: center;
@@ -167,6 +171,7 @@
 	margin: 10px;
 	background: #f1f1f1;
 	color: #666;
+	
 }
 .MultiCarousel .leftLst,
 .MultiCarousel .rightLst {
@@ -185,6 +190,11 @@
 .MultiCarousel .rightLst.over {
 	pointer-events: none;
 	background: #ccc;
+}
+
+.btn .btn-primary .leftLst {
+	color: grey;
+	background-color: white;
 }
 
 .desktop-header {
