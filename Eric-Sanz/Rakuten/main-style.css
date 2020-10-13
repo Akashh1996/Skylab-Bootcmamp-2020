@@ -286,27 +286,33 @@ body {
   );
 }
 
+#horizontal-photo {
+  width: 240px;
+}
+
 .carousel-indicators li {
   margin-right: 5px;
 }
 
 .carousel-indicators {
+  z-index: 1;
   bottom: 0;
 }
 
 .recommendations {
-  padding: 18px 0 65px 10px;
+  padding: 35px 0 10px 20px;
 }
 
 .recommendations__title {
-  color: #252525;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 0;
 }
 
 .recommended-movies {
   position: relative;
-  margin-top: 24px;
+  margin-top: 15px;
   display: flex;
   overflow: hidden;
 }
@@ -365,6 +371,13 @@ body {
 .scrollable-list > .recommended-movie-photo:hover {
   outline: 4px solid #ffe300;
   outline-offset: -4px;
+}
+
+.carousel-indicators .active {
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  margin-top: 1px;
 }
 
 .detail-hover {
@@ -433,24 +446,33 @@ body {
   margin-bottom: 0;
 }
 
-.background-a-vigilante:hover > .detail-hover {
+.horizontal-list-arrow {
   display: block;
-  position: relative;
-  left: 180px;
-  background-image: url(mainpage/a-vigilante-hover.jpg);
-  background-color: rgba(0, 0, 0, 0.8);
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
-  background-size: 120%;
-  width: 550px;
-  top: 6px;
-  border-radius: 10px;
-  height: 95%;
-  box-shadow: 0 0 1px white;
-  padding: 15px 25px;
+  top: 10px;
 }
 
 @media screen and (min-width: 1024px) {
+  .horizontal-list-arrow {
+    display: none;
+  }
+
+  .background-a-vigilante:hover > .detail-hover {
+    display: block;
+    position: relative;
+    left: 180px;
+    background-image: url(mainpage/a-vigilante-hover.jpg);
+    background-color: rgba(0, 0, 0, 0.8);
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-size: 120%;
+    width: 550px;
+    top: 6px;
+    border-radius: 10px;
+    height: 95%;
+    box-shadow: 0 0 1px white;
+    padding: 15px 25px;
+  }
+
   .search__nav__mobile {
     display: none;
   }

@@ -152,19 +152,62 @@
           </div>
         </div>
         <section class="recommendations">
+          <div class="recommended-movies">
+            <div
+              class="arrow-container left-arrow-container"
+              onclick="scrollingLeftMoviesMainPage()"
+            >
+              <span class="material-icons arrow-left horizontal-list-arrow"> navigate_before </span>
+            </div>
+            <div
+              class="arrow-container right-arrow-container"
+              onclick="scrollingRightMoviesMainPage()"
+            >
+              <span class="material-icons arrow-right horizontal-list-arrow"> navigate_next </span>
+            </div>
+            <div class="scrollable-list">
+              <img id="horizontal-photo"
+                class="recommended-movie-photo"
+                src="mainpage/intro-video.jpeg"
+                alt="Intro video"
+              />
+              <img id="horizontal-photo"
+                class="recommended-movie-photo"
+                src="mainpage/cinema-generic-middle-banner.jpeg"
+                alt="generic banner"
+              />
+              <img id="horizontal-photo"
+                class="recommended-movie-photo"
+                src="mainpage/the-australian-dream-middle-new-channels.jpeg"
+                alt="Contenido gratuito"
+              />
+                <img id="horizontal-photo"
+                  class="recommended-movie-photo el-hombre-invisible"
+                  src="mainpage/brave-new-world.jpeg"
+                  alt="Brave new world"
+                />
+                  <img id="horizontal-photo"
+                    class="recommended-movie-photo"
+                    src="mainpage/mulan-middle.jpeg"
+                    alt="Mulan"
+                  />
+            </div>
+          </div>
+        </section>
+        <section class="recommendations">
           <h2 class="recommendations__title">
-            Otras películas que te pueden gustar
+            CINEMA - Últimos estrenos
           </h2>
           <div class="recommended-movies">
             <div
               class="arrow-container left-arrow-container"
-              onclick="scrollingLeftMovies()"
+              onclick="scrollingLeftMoviesMainPage1()"
             >
               <span class="material-icons arrow-left"> navigate_before </span>
             </div>
             <div
               class="arrow-container right-arrow-container"
-              onclick="scrollingRightMovies()"
+              onclick="scrollingRightMoviesMainPage1()"
             >
               <span class="material-icons arrow-right"> navigate_next </span>
             </div>
@@ -184,11 +227,13 @@
                   src="detalle/el-hombre-invisible.jpeg"
                   alt="El hombre invisible"
                 />
-              <img
-                class="recommended-movie-photo"
-                src="detalle/manhattan-sin-salida.jpeg"
-                alt="Manhattan sin salida"
-              />
+                <a class="recommended-movie-photo" href="detail-index.html">
+                  <img
+                    class="recommended-movie-photo"
+                    src="detalle/manhattan-sin-salida.jpeg"
+                    alt="Manhattan sin salida"
+                  />
+                </a>
               <img
                 class="recommended-movie-photo"
                 src="detalle/la-llamada-de-lo-salvaje.jpeg"
@@ -239,11 +284,24 @@
                 src="detalle/2-22-la-hora-senalada.jpeg"
                 alt="2:22. La hora señalada"
               />
-              <img
-                class="recommended-movie-photo"
-                src="detalle/a-vigilante.jpeg"
-                alt="A vigilante"
-              />
+              <div class="recommended-movie-photo background-a-vigilante">
+                <div class="detail-hover">
+                  <h2>A vigilante</h2>
+                  <div class="hover-buttons">
+                    <div class="hover-button">
+                      <i class="fas fa-play hover-button__icon"></i>
+                      <p class="trailer">tráiler</p>
+                    </div>
+                    <div class="hover-button">
+                      <i class="fas fa-thumbtack hover-button__icon"></i>
+                      <p class="add-movie">añadir a quiero ver</p>
+                    </div>
+                  </div>
+                  <p class="summary">2018 <img class="pegi" src="mainpage/pegi.png" alt="pegi"> drama, thriller</p>
+                  <p class="plot-hover">Después de escapar de su violento marido, Sadie hace que su misión en la vida sea ayudar a liberar a otras mujeres en peligro. Después de meses de riguroso entrenamiento en habilidades de supervivenci...</p>
+                  <span class="whatch-now-hover">VER AHORA DESDE 3,99 €</span>
+                </div>
+              </div>
               <img
                 class="recommended-movie-photo"
                 src="detalle/1917.jpeg"
@@ -264,18 +322,18 @@
         </section>
         <section class="recommendations">
           <h2 class="recommendations__title">
-            Otras películas que te pueden gustar
+            FREE - La mejor sección de películas
           </h2>
           <div class="recommended-movies">
             <div
               class="arrow-container left-arrow-container"
-              onclick="scrollingLeftMovies()"
+              onclick="scrollingLeftMoviesMainPage2()"
             >
               <span class="material-icons arrow-left"> navigate_before </span>
             </div>
             <div
               class="arrow-container right-arrow-container"
-              onclick="scrollingRightMovies()"
+              onclick="scrollingRightMoviesMainPage2()"
             >
               <span class="material-icons arrow-right"> navigate_next </span>
             </div>
@@ -295,11 +353,13 @@
                 src="detalle/el-hombre-invisible.jpeg"
                 alt="El hombre invisible"
               />
-              <img
-                class="recommended-movie-photo"
-                src="detalle/manhattan-sin-salida.jpeg"
-                alt="Manhattan sin salida"
-              />
+              <a class="recommended-movie-photo" href="detail-index.html">
+                <img
+                  class="recommended-movie-photo"
+                  src="detalle/manhattan-sin-salida.jpeg"
+                  alt="Manhattan sin salida"
+                />
+              </a>
               <img
                 class="recommended-movie-photo"
                 src="detalle/la-llamada-de-lo-salvaje.jpeg"
@@ -388,18 +448,18 @@
         </section>
         <section class="recommendations">
           <h2 class="recommendations__title">
-            Otras películas que te pueden gustar
+            RTV Suscripción - Más populares
           </h2>
           <div class="recommended-movies">
             <div
               class="arrow-container left-arrow-container"
-              onclick="scrollingLeftMovies()"
+              onclick="scrollingLeftMoviesMainPage3()"
             >
               <span class="material-icons arrow-left"> navigate_before </span>
             </div>
             <div
               class="arrow-container right-arrow-container"
-              onclick="scrollingRightMovies()"
+              onclick="scrollingRightMoviesMainPage3()"
             >
               <span class="material-icons arrow-right"> navigate_next </span>
             </div>
@@ -419,11 +479,13 @@
                 src="detalle/el-hombre-invisible.jpeg"
                 alt="El hombre invisible"
               />
-              <img
-                class="recommended-movie-photo"
-                src="detalle/manhattan-sin-salida.jpeg"
-                alt="Manhattan sin salida"
-              />
+              <a class="recommended-movie-photo" href="detail-index.html">
+                <img
+                  class="recommended-movie-photo"
+                  src="detalle/manhattan-sin-salida.jpeg"
+                  alt="Manhattan sin salida"
+                />
+              </a>
               <img
                 class="recommended-movie-photo"
                 src="detalle/la-llamada-de-lo-salvaje.jpeg"
@@ -474,11 +536,24 @@
                 src="detalle/2-22-la-hora-senalada.jpeg"
                 alt="2:22. La hora señalada"
               />
-              <img
-                class="recommended-movie-photo"
-                src="detalle/a-vigilante.jpeg"
-                alt="A vigilante"
-              />
+              <div class="recommended-movie-photo background-a-vigilante">
+                <div class="detail-hover">
+                  <h2>A vigilante</h2>
+                  <div class="hover-buttons">
+                    <div class="hover-button">
+                      <i class="fas fa-play hover-button__icon"></i>
+                      <p class="trailer">tráiler</p>
+                    </div>
+                    <div class="hover-button">
+                      <i class="fas fa-thumbtack hover-button__icon"></i>
+                      <p class="add-movie">añadir a quiero ver</p>
+                    </div>
+                  </div>
+                  <p class="summary">2018 <img class="pegi" src="mainpage/pegi.png" alt="pegi"> drama, thriller</p>
+                  <p class="plot-hover">Después de escapar de su violento marido, Sadie hace que su misión en la vida sea ayudar a liberar a otras mujeres en peligro. Después de meses de riguroso entrenamiento en habilidades de supervivenci...</p>
+                  <span class="whatch-now-hover">VER AHORA DESDE 3,99 €</span>
+                </div>
+              </div>
               <img
                 class="recommended-movie-photo"
                 src="detalle/1917.jpeg"
@@ -502,13 +577,13 @@
             <div class="genres-container">
               <div
                   class="arrow-container left-arrow-container"
-                  onclick="scrollingLeftCast()"
+                  onclick="scrollingLeftMoviesMainPage4()"
               >
                   <span class="material-icons arrow-left"> navigate_before </span>
               </div>
               <div
                   class="arrow-container right-arrow-container"
-                  onclick="scrollingRightCast()"
+                  onclick="scrollingRightMoviesMainPage4()"
               >
                   <span class="material-icons arrow-right"> navigate_next </span>
               </div>
