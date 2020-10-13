@@ -1,0 +1,359 @@
+
+header {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    z-index: 995;
+}
+
+.header-fixed .burgermenu {
+    width: 50px;
+    height: 50px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/burger_menu.png) no-repeat center left;
+    position: absolute;
+    left: 6%;
+}
+
+.header-fixed .login{
+    width: 27px;
+    height: 27px;
+    left: 25%;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 0 no-repeat;
+    position: absolute;
+}
+
+.header-fixed .cart-menu {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    right: 10%
+}
+
+.header-fixed .cart-menu .search {
+    width: 50px;
+    height: 50px;
+    background: #BBB8B6 url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -304px 12px no-repeat;
+    position: absolute;
+    cursor: pointer;
+}
+
+.header-fixed .cart{
+    width: 50px;
+    height: 50px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -66px 10px no-repeat;
+    margin: 10px;
+    top: -20%;
+    left: 18%;
+    position: absolute;
+}
+
+.header-fixed .cart-menu .icon .num0 {
+    width: 50px;
+    height: 50px;
+    background: #FF5959;
+    margin: 0;
+    position: absolute;
+}
+
+.header-fixed .cart-menu .num0 {
+    position: absolute;
+    font-family: "Myriad Pro", "Myriad Web", "Tahoma", "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+    color: #fff;
+    background: none;
+    display: block;
+    height: auto;
+    margin: 0;
+    right: 15%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    text-align: center;
+    align-items: center;
+}
+
+body {
+    background: none;
+    padding: 0;
+    margin: 0;
+    font: 12px/1.55 'Source Sans Pro', sans-serif;
+    color: #67635F;
+}
+
+.header-fixed {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 50px;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #F8F8F8;
+    z-index: 5000;
+}
+
+
+.title {
+    display: flex;
+    margin-bottom: -5vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+}
+
+.banner {
+    width: 50px;
+    height: 100%;
+    margin: 0%;
+}
+
+.banner-title {
+    object-fit: scale-down;
+}
+
+.banner img {
+    height: 300px;
+    width: 375px;
+}
+
+.buttons {
+    display: flex;
+    height: 150px;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    justify-content: space-around;
+}
+
+.button-option {
+    background-color: #BBB8B6;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%
+}
+
+.button-option-display {
+    background-color: #FF5959;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%
+}
+
+.utensils {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:  #F8F8F8;
+}
+
+.utensils-icon {
+    height: 125px;
+    margin-top: -18vw;
+}
+
+.subtitle {
+    display: inline-block;
+    padding: 20px 0;
+    text-transform: uppercase;
+    margin-top: 12vw;
+    margin-bottom: 20vw;
+    line-height: 22px;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    color: #2E2925;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 3px solid #2E2925;
+    border-left-color: #F8F8F8;
+    border-right-color: #F8F8F8;
+}
+
+.widget-image {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.image-banner {
+    object-fit: cover;
+    object-position: 50% 0;
+    width: 100%;
+    height: 140px;
+}
+
+.widget-image img {
+    height: 150px;
+    width: 320px;
+    border: 4px solid white;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: rgba(255,255,255,0.8);
+    width: 50%;
+}
+
+.description p {
+    display: flex;
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.widget-button {
+    clear: both;
+    display: block;
+    text-align: center;
+    margin-top: 35px;
+    font-size: 18px;
+}
+
+.widget-button p {
+    background: #FF5959;
+    padding: 15px 30px;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.widget-image-blog {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.image-banner-blog {
+    object-fit: cover;
+}
+
+.widget-image-blog img {
+    height: auto;
+    width: 320px;
+    border: 4px solid white;
+}
+
+.widget-image-blog p {
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 25px 20px 20px;
+    margin-top: -1vw;
+}
+
+.widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin: -25px;
+}
+
+.footer-icons {
+    display: flex;
+    flex-direction: column;
+    background: #e8e6e5;
+    width: 100%;
+    padding: 0;
+    margin-top: -20vw;
+    padding-top: 10vw;
+}
+
+.envio-devolucion-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 15vw;
+}
+
+.envio-devolucion-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.envio-gratis {
+    width: 85px;
+    height: 60px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 -38px no-repeat transparent;
+}
+
+.envio-horas {
+    width: 55px;
+    height: 60px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -90px -38px no-repeat transparent;
+}
+
+.devolucion {
+    width: 68px;
+    height: 60px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -150px -36px no-repeat transparent;
+}
+
+.reembolso {
+    width: 77px;
+    height: 60px;
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -223px -38px no-repeat transparent;
+}
+
+.text-title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.contact {
+    background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) 0 -207px no-repeat;
+    display: block;
+    width: 30px;
+    height: 31px;
+    margin: auto;
+}
+
+
+
+
+.copyright {
+    background: #FF5959;
+    text-align: center;
+    color: #fff;
+    height: 50px;
+    font-size: 14px;
+    line-height: 50px;
+}
