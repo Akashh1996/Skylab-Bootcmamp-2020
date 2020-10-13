@@ -1,0 +1,170 @@
+.sectiontitles {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+.selectedSection {
+	border-style: none none solid none;
+	margin-block-end: 1.33em;
+	padding: 0px 0px 20px 0px;
+	border-color: rgba(255, 0, 0, 0.747);
+}
+
+#line {
+	margin-top: -20px;
+}
+
+.text {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.flexhead {
+	display: flex;
+	flex-direction: row;
+}
+
+.sectionRow {
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+}
+.sectionColumn {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+}
+
+.flexQuestForm {
+	display: flex;
+	flex-direction: column;
+	border: none;
+}
+
+.boxdate {
+	margin-top: 50px;
+	margin-left: 15px;
+	width: 265px;
+}
+
+.boxIdayVuelta {
+	margin-top: 50px;
+	margin-left: 15px;
+	height: 30px;
+	width: 265px;
+}
+
+.boxTipodeViaje {
+	margin-top: 20px;
+	width: 100px;
+}
+
+.checkbox {
+	display: flex;
+	align-items: center;
+	margin-top: 30px;
+	margin-left: 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+.buttonFlex {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.buttonBuscar {
+	margin-right: 50px;
+	height: 20px;
+	background-color: red;
+	color: white;
+	box-shadow: darkgray;
+	padding: 10px 10px 30px 10px;
+	text-align: center;
+}
+
+.caja {
+	border-style: none none solid none;
+	border-width: 0.5px;
+}
+
+input:valid {
+	border-style: none none solid none;
+	border-width: 0.5px;
+}
+
+input:invalid {
+	border-style: none none solid none;
+	border-width: 0.5px;
+	border-color: red;
+}
+
+.labelstyle {
+	font-size: 13px;
+	margin-bottom: 10px;
+	color: grey;
+}
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 30px;
+	height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: '';
+	height: 15px;
+	width: 15px;
+	left: 2px;
+	bottom: 2px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(13px);
+	-ms-transform: translateX(13px);
+	transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 20px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}

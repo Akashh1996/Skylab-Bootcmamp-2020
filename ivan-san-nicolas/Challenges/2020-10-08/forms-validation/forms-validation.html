@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Validation</title>
+    <link rel="stylesheet" href="forms-validation.css">
+</head>
+
+<body>
+    <h1>Forms Validation</h1>
+    <form action="">
+        <label for="search">Search</label>
+        <input name="search" id="search" type="text" placeholder="input..." required minlength="5" maxlength="7"><br>
+        <select name="age" id="select-age">
+            <option value="1">Volvo</option>
+        </select><br>
+        <label for="area">Description</label><br>
+        <textarea name="area" id="area" cols="30" rows="3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quisquam ut suscipit laboriosam iure nemo! Autem soluta ex eum consequatur distinctio fugit modi iure, natus minima, quis magnam culpa quia.
+        </textarea><br>
+        <label for="box">Checkbox</label>
+        <input name="box" id="box" type="checkbox" placeholder="checkbox...">
+    </form><br><br>
+    <fieldset>
+        <legend>Me gusta git</legend>
+        <input name="gitlover" id="gitlovertrue" type="radio" value="true">
+        <!-- Tienen que ser dos con el mismo nombre para que se alterne la selección, sino se podrían seleccionar ambos, aunque los id deben ser distintos-->
+        <input name="gitlover" id="gitloverfalse" type="radio" value="false">
+    </fieldset>
+    <fieldset>
+        <legend>Frameworks</legend>
+        <input name="frameworks" id="frametrue" type="checkbox" value="true">
+        <input name="frameworks" id="framefalse" type="checkbox" value="false">
+    </fieldset>
+</body>
+
+</html>

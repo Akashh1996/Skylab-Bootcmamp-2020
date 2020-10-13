@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="form">
+			<h1>Skylab vuelos</h1>
+			<div class="first">
+				<div class="viaje">
+					<label for="viaje">Viaje</label>
+					<select id="viaje" name="viaje">
+						<option value="1" aria-placeholder="ida">Ida y vuelta</option>
+						<option value="2" aria-placeholder="ida">Mi casa</option>
+						<option value="3" aria-placeholder="ida">Skylab</option>
+					</select>
+				</div>
+				<div class="pasajero">
+					<label for="pasajero">Pasajeros</label>
+					<select name="pasajero" id="pasajero">
+						<option value="1">1 Pasajero</option>
+						<option value="2">2 Pasajeros</option>
+						<option value="3">3 Pasajeros</option>
+					</select>
+				</div>
+				<div class="clase">
+					<label for="clase">Clase</label>
+					<select name="clase" id="clase">
+						<option value="1">ECONOMY</option>
+						<option value="2">PREMIUM ECONOMY</option>
+						<option value="3">BUSINESS</option>
+						<option value="4">LA PREMIÈRE</option>
+					</select>
+				</div>
+			</div>
+			<div class="second">
+				<div class="from">
+					<label for="from"></label>
+					<span class="material-icons"> flight_takeoff </span>
+					<input
+						type="text"
+						id="from"
+						name="from"
+						placeholder="Salida de *"
+						required
+						minlength="3"
+					/>
+				</div>
+				<div class="from">
+					<label for="to"></label>
+					<span class="material-icons"> flight_land </span>
+					<input
+						type="text"
+						id="to"
+						name="to"
+						placeholder="llegada a *"
+						required
+						minlength="3"
+					/>
+				</div>
+			</div>
+			<div class="first">
+				<div class="from">
+					<label for="date"></label>
+					<span class="material-icons"> insert_invitation </span>
+					<input
+						type="text"
+						onfocus="(this.type='date')"
+						onfocusout="(this.type='text')"
+						placeholder="Fechas de viaje*"
+						required
+					/>
+				</div>
+			</div>
+			<div class="first">
+				<label class="switch">
+					<input type="checkbox" />
+					<span class="slider round"></span>
+				</label>
+				Viaje profesional
+			</div>
+			<div class="second">
+				<div class="check">
+					<button class="button">Buscar Vuelos</button>
+				</div>
+			</div>
+		</div>
+		<h2>Contact us</h2>
+		<form class="form">
+			<div class="first">
+				<div class="from">
+					<label for="from"></label>
+					<input
+						type="text"
+						id="from"
+						name="from"
+						placeholder="Introduce tu nombre"
+						required
+						minlength="3"
+					/>
+				</div>
+				<div class="from">
+					<label for="to"></label>
+					<input
+						type="text"
+						id="to"
+						name="to"
+						placeholder="Introduce tu apellido"
+						required
+						minlength="3"
+					/>
+				</div>
+			</div>
+			<div class="first">
+				<div class="from">
+					<label for="from"></label>
+					<input type="text" placeholder="Introduce una descripción" />
+				</div>
+			</div>
+			<div class="first">
+				<div class="from">
+					<label for="from"><span class="material-icons"> email </span></label>
+					<input
+						type="email"
+						id="from"
+						name="from"
+						placeholder="Introduce tu e-mail"
+						required
+						minlength="3"
+					/>
+				</div>
+			</div>
+			<div class="first">
+				<div class="from">
+					<label for="from"
+						><span class="material-icons"> stay_current_portrait </span>
+					</label>
+					<input
+						type="text"
+						id="from"
+						name="from"
+						required
+						minlength="9"
+						maxlength="9"
+					/>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

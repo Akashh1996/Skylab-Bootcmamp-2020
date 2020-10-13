@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Validations</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Forms Validation</h1>
+
+    <form>
+        <label for="search">Search</label>
+        <input id="search" type="text" name="search" placeholder="Search here..." required minlength="7" maxlength="3">
+
+        <br>
+        <br>
+
+
+        <label for="People">How many people</label>
+        <input id="peaople" type="number" name="search" placeholder="Search here..." required minlength="7"
+            maxlength="3">
+
+        <br><br>
+
+        <label for="description">Description</label>
+
+        <textarea name="" id="description cols=" 30" rows="10">Description</textarea>
+        <br>
+        <br>
+
+        <label for="age">Age:</label>
+        <select name="age" id="age">
+            <option value="1">Uno</option>
+            <option value="1">Dos</option>
+            <option value="1">Tres</option>
+
+        </select> <!-- por si solo no representa nada -->
+
+        <br>
+        <br>
+
+        <label for="checkbox">Checkbox</label>
+        <input type="checkbox" name="checkbox" id="checkbox" placeholder="checkbox">
+        <br>
+        <br>
+        <label for="radio">Radio</label>
+        <input type="radio" name="radio" id="radio" placeholder="radio">
+
+        <br>
+        <br>
+
+        <fieldset>
+            <legend> Me gusta git</legend>
+            <label for="radio"></label>
+            <input type="radio" name="checkbox" id="radio" placeholder="checkbox">
+            <input type="radio" name="checkbox" id="radio" placeholder="checkbox">
+
+
+        </fieldset>
+
+
+        <fieldset>
+            <legend> Frameworks</legend>
+            <input type="checkbox" name="checkbox" id="Frameworks-angular" placeholder="checkbox"
+                value="Frameworks-angular">
+            <input type="checkbox" name="checkbox" id="Frameworks-react" placeholder="checkbox" value="false">
+            <input type="checkbox" name="checkbox" id="Frameworks-" placeholder="checkbox" value="false">
+
+
+        </fieldset>
+
+
+
+
+    </form>
+
+
+</body>
+
+</html>
