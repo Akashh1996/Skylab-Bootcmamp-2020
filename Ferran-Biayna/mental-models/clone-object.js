@@ -1,12 +1,12 @@
-function clone(object) {
-    let cloneData = Object.assign({}, object);
-    return cloneData;
-  }
-
-  let data = { name: "Ferran", surname: "Biayna" };
-  let cloneData = clone(data)
-
-  cloneData.name="Fernando"
-
-  console.log(data.name)
-  console.log(cloneData.name)
+function cloningObjects(object) {
+	let cloningObject = {};
+	let property;
+	for (property in object) {
+		if (typeof object[property] === 'object') {
+			cloningObject[property] = cloningObjects(object[property]);
+		} else {
+			cloningObject[property] = object[property];
+		}
+	}
+	return cloningObject;
+}
