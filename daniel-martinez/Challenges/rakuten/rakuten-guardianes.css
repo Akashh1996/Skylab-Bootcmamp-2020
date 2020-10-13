@@ -656,38 +656,51 @@ svg circle {
 	fill: none;
 	stroke: rgb(217, 217, 217);
 	stroke-width: 7;
-	stroke-linecap: round;
 	transform: translate(5px, 5px);
+	stroke-dasharray: 180;
+	stroke-dashoffset: 180;
 }
 
-svg circle:nth-child(2) {
-	stroke-dasharray: 150;
-	stroke-dashoffset: 220;
+.circle__percent {
+	position: relative;
+	width: 70px;
+	height: 70px;
 }
 
-svg circle:nth-child(3) {
-	stroke-dasharray: 200;
-	stroke-dashoffset: 220;
+.circle__number {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
 }
 
-svg circle:nth-child(4) {
-	stroke-dasharray: 150;
-	stroke-dashoffset: 220;
+svg circle:nth-child(1) {
+	stroke-dasharray: 0;
+	stroke-dashoffset: 0;
 }
 
-.circle__box:nth-child(1) svg circle:nth-child(1) {
+.first__circle:nth-child(1) svg circle:nth-child(2) {
+	stroke-dashoffset: calc(180 - (180 * 81) / 100);
 	stroke: rgb(38, 162, 0);
 }
 
-.circle__box:nth-child(2) svg circle:nth-child(2) {
+.second__circle:nth-child(2) svg circle:nth-child(2) {
+	stroke-dashoffset: calc(200 - (200 * 69) / 100);
 	stroke: rgb(172, 225, 0);
 }
 
-.circle__box:nth-child(3) svg circle:nth-child(3) {
+.third__circle:nth-child(3) svg circle:nth-child(2) {
+	stroke-dashoffset: calc(200 - (200 * 86) / 100);
 	stroke: rgb(38, 162, 0);
 }
 
-.circle__box:nth-child(4) svg circle:nth-child(4) {
+.fourth__circle:nth-child(4) svg circle:nth-child(2) {
+	stroke-dashoffset: calc(200 - (200 * 79) / 100);
 	stroke: rgb(38, 162, 0);
 }
 
@@ -698,7 +711,7 @@ svg circle:nth-child(4) {
 	font-size: 13px;
 	width: 80%;
 	color: #252525;
-	margin-left: 10px;
+	margin-left: 5px;
 	margin-top: 5px;
 }
 
@@ -785,7 +798,7 @@ svg circle:nth-child(4) {
 	font-size: 18px;
 	color: #252525;
 	font-weight: bold;
-	padding: 15px 5px 0px;
+	padding: 15px 15px 0px;
 }
 
 .container {
