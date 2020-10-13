@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;700;900&display=swap');
 
 $navHeaderBgColor: #f8f8f8;
+$primaryColor: #ff5959;
+$secondaryColor: #bbb8b6;
+$sectionColor: #f8f8f8;
 
 *,
 *::before,
@@ -86,6 +89,205 @@ body {
 	}
 }
 
+.points__span--color {
+	background: $primaryColor !important;
+}
+.section-titles {
+	span {
+		margin: 3rem 0;
+		padding: 0.7rem;
+		width: 180px;
+		border-top: 2px solid black;
+		border-bottom: 2px solid black;
+		text-align: center;
+		letter-spacing: 0.3rem;
+		font-weight: 900;
+	}
+}
+#utensils {
+	background: $sectionColor;
+	margin-top: 100px;
+	div {
+		.utensils-outcontainer__img {
+			margin-top: -50px;
+		}
+	}
+}
+div.img-container {
+	margin: 0 auto;
+	max-width: 345px;
+	div.imgcontainer__img {
+		max-height: 140px;
+		padding: 7.5px;
+		position: relative;
+		overflow: hidden;
+		figure.imggroup {
+			img {
+				width: 100%;
+			}
+			div.textbox {
+				position: absolute;
+				bottom: 0;
+				left: 7.5px;
+				background: rgba(255, 255, 255, 0.8);
+				padding: 19px;
+				width: 50%;
+				p {
+					text-align: center;
+					font-weight: 900;
+					color: #67635f;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}
+
+.utensils__button {
+	background: $primaryColor;
+	margin-top: 50px;
+	outline: none;
+	border: none;
+	font-size: 1rem;
+	color: white;
+	padding: 1rem 2rem;
+}
+
+#blog {
+	background: $sectionColor;
+	margin-top: 100px;
+	div.blog-icon {
+		img {
+			margin-top: -50px;
+		}
+	}
+	div.blogcontent {
+		margin: 0 auto;
+		max-width: 325px;
+		background-color: white;
+		div p.blogcontent-title {
+			display: block;
+			background: $primaryColor;
+			text-align: center;
+			padding: 1rem 0;
+			font-weight: 900;
+			font-size: 1.1rem;
+			color: white;
+			letter-spacing: 0.1rem;
+		}
+		img {
+			margin-top: 1rem;
+		}
+		p.imgtitle {
+			padding: 1rem;
+			font-weight: 600;
+			color: $secondaryColor;
+		}
+		div div.imgtitle__img {
+			margin-right: 1rem;
+		}
+		div div.imgtitle-autor {
+			p:nth-of-type(1) {
+				color: black;
+			}
+			p {
+				color: $primaryColor;
+			}
+		}
+	}
+}
+
+#infoIcons {
+	margin-top: 100px;
+	background-color: #e8e6e5;
+	div.infocontainer {
+		padding: 2rem 0;
+		margin: 0 auto;
+		max-width: 325px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: center;
+		align-items: baseline;
+		div.info-icon-group {
+			margin-top: 2rem;
+			width: 150px;
+			text-align: center;
+			p:nth-of-type(1) {
+				font-size: 1rem;
+			}
+			p {
+				font-size: 0.8rem;
+			}
+		}
+	}
+}
+
+#socialMedia {
+	div {
+		padding-top: 80px;
+		background-color: #f8f8f8;
+		p {
+			text-align: center;
+			text-transform: uppercase;
+			padding: 55px 0 15px;
+		}
+		ul {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			margin: 12px 0;
+			li {
+				margin: 0.2rem;
+				list-style: none;
+				.facebook {
+					height: 20px;
+				}
+			}
+		}
+	}
+	.underline-separator {
+		border-bottom: 1px solid black;
+		margin-bottom: 2rem;
+	}
+}
+
+/////////////////////Custom Flex Classes/////////////////////////////
+
+.d-flex {
+	display: flex;
+}
+.flex-direction-column {
+	flex-direction: column;
+}
+.justify-content-center {
+	justify-content: center;
+}
+.justify-content-space-around {
+	justify-content: space-around;
+}
+.justify-content-space-evently {
+	justify-content: space-evenly;
+}
+.justify-content-space-between {
+	justify-content: space-between;
+}
+.align-items-center {
+	align-items: center;
+}
+.align-items-end {
+	align-items: flex-end;
+}
+.align-items-start {
+	align-items: flex-start;
+}
+.align-self-end {
+	align-self: flex-end;
+}
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
 @media screen and (min-width: 1023px) {
 	.header {
 		.nav-header {
@@ -134,33 +336,6 @@ body {
 		.content-logo {
 			.logo-img {
 				padding: 50px;
-			}
-		}
-		.content-news {
-			display: flex;
-			justify-content: flex-end;
-
-			.news-option {
-				padding: 3px 10px;
-
-				.option__title {
-					text-transform: uppercase;
-					color: #ffffff;
-					font-size: 15px;
-					font-weight: 600;
-				}
-			}
-			.title-news {
-				background: #9faa4d;
-				padding-right: 8px;
-			}
-			.title-ofert {
-				background: #8e789d;
-				padding-right: 15px;
-				margin-left: 5px;
-			}
-			.search-input {
-				font-size: 12px;
 			}
 		}
 	}
