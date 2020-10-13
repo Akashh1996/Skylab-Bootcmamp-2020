@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakuten tu cine en casa</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="Rakuten.css">
+</head>
+<body style="background-color: #000000;">
+    <h1 class="title__body">Rakuten TV</h1>
+    <nav class="mobile-header">
+        <h2 class="title__body">Rakuten - Header</h2>
+        <div class="mobile-header__page"></div>
+        <div class="mobile-header__cinema"></div>
+        <div class="mobile-header__free"></div>
+        <div class="mobile-header__subscription"></div>
+        <div class="mobile-header__login"></div>
+    </nav>
+    <div class="mini__rakuten-logo">
+        <img
+            src="https://appstv-static-content-prod.wuaki.tv/images/720p/UI30_about_us-logo.70c3538baaaa2c6937b498be48c7e456.png" />
+    </div>
+    <div class="mini__search">
+        <img src="mobile-icon/herramienta-de-aumento-de-lentes-de-busqueda.svg" />
+    </div>
+    <div class="desktop-header mobile-header">
+        <div class="desktop-header">
+            <div class="desktop-header__menu-bar">
+                <span class="desktop-header__rakuten-logo">
+                    <img
+                        src="https://appstv-static-content-prod.wuaki.tv/images/720p/UI30_about_us-logo.70c3538baaaa2c6937b498be48c7e456.png" />
+                </span>
+                <span class="menu-bar">
+                    <button class="menu-bar__dropdown">CINEMA &#9662</button>
+                    <div class="dropdown-content">
+                        <span>TODOS LOS GÉNEROS</span>
+                        <span>FAMILY</span>
+                    </div>
+                </span>
+                <span>FREE</span>
+                <span class="menu-bar">
+                    <button class="menu-bar__dropdown">SUBSCRIPTION &#9662</button>
+                    <div class="dropdown-content">
+                        <span>STARZPLAY</span>
+                        <span>RTV SUSCRIPCIÓN</span>
+                    </div>
+                </span>
+                <form class="desktop-header__search">
+                    <button type="submit"><i class="fa fa-search search__input"></i></button>
+                    <input class="search__input" type="text" placeholder="Buscar" name="search"></input>
+                </form>
+            </div>
+            <div class="desktop-header__login">
+                <span class="login__help">AYUDA Y DISPOSITIVOS</span>
+                <span class="login__enter">ENTRAR</span>
+                <span class="login__log">REGISTRARSE</span>
+            </div>
+        </div>
+    </div>
+    <h2 class="title__body">Home - Body</h2>
+    <div style="background-color: #171717; margin-top: 4.4%;">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="1917Carrousel.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="AVigilanteCarrousel.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="gruCarrousel.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="LaFuerzaNatCarrouselG.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="MulanCarrusel.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="OroBlancoCarrousel.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="OtoñoCarrousel.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="PromoCarrousel.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="StarzCarrousel.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="TSBCarrusel.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="Promo2Carrousel.png" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-2)">&#10094;</a>
+            <a class="next" onclick="plusSlides(0)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+            <span class="dot" onclick="currentSlide(11)"></span>
+        </div>
+        <div class="container" style="margin-left: 1%; margin-right: 0px">
+            <div class="row">
+                <div class="MultiCarousel" data-items="1,3,5,6,7" style="width: 112%" data-slide="1" id="MultiCarousel"
+                    data-interval="1000">
+                    <div class="MultiCarousel-inner"
+                        style="display: flex; flex-direction: row; justify-content: space-between;">
+                        <div class=" item">
+                            <img src="video1.jpeg" id="imagesVideo">
+                        </div>
+                        <div class="item">
+                            <img src="video2.jpeg" id="imagesVideo">
+                        </div>
+                        <div class="item">
+                            <img src="video3.jpeg" id="imagesVideo">
+                        </div>
+                        <div class="item">
+                            <img src="video4.jpeg" id="imagesVideo">
+                        </div>
+                        <div class="item">
+                            <img src="video5.jpeg" id="imagesVideo">
+                            <div class="item" style="background-color: #171717;">
+
+                            </div>
+                        </div>
+                        <button class="btn btn-primary leftLst" id="passButtonVideo">&#10094;</button>
+                        <button class="btn btn-primary rightLst" id="passButtonVideo"
+                            style="left: 320px">&#10095;</button>
+                    </div>
+                </div>
+                <div class="row" id="filas">
+                    <div class="MultiCarousel" data-items="1,3,5,6,7" data-slide="5" id="MultiCarousel"
+                        data-interval="1000">
+                        <h3 id="Titulos">CINEMA - Últimos estrenos</h3>
+                        <div class="MultiCarousel-inner"
+                            style="display: flex; flex-direction: row; justify-content: space-between;">
+                            <div class="item">
+                                <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                            </div>
+                            <div class="item">
+                                <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                            </div>
+                            <div class="item">
+                                <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                            </div>
+                            <div class="item">
+                                <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                            </div>
+                            <div class="item">
+                                <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                            </div>
+                            <div class="item">
+                                <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                            </div>
+                            <div class="item">
+                                <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                            </div>
+                            <div class="item">
+                                <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                            </div>
+                            <div class="item">
+                                <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                            </div>
+                            <div class="item">
+                                <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                            </div>
+                            <div class="item">
+                                <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                            </div>
+                            <div class="item">
+                                <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                            </div>
+                            <div class="item">
+                                <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                            </div>
+                            <div class="item">
+                                <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                            </div>
+                            <div class="item">
+                                <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                            </div>
+                            <div class="item">
+                            </div>
+                        </div>
+                        <button class="btn btn-primary leftLst">&#10094;</button>
+                        <button class="btn btn-primary rightLst">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="filas">
+                <div class="MultiCarousel" data-items="1,3,5,6,7" data-slide="5" id="MultiCarousel"
+                    data-interval="1000">
+                    <h3 id="Titulos">FREE - La mejor selección de películas</h3>
+                    <div class="MultiCarousel-inner"
+                        style="display: flex; flex-direction: row; justify-content: space-between;">
+                        <div class="item">
+                            <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                        </div>
+                        <div class="item">
+                            <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                        </div>
+                        <div class="item">
+                            <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                        </div>
+                        <div class="item">
+                            <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                        </div>
+                        <div class="item">
+                            <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                        </div>
+                        <div class="item">
+                            <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                        </div>
+                        <div class="item">
+                            <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                        </div>
+                        <div class="item">
+                            <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                        </div>
+                        <div class="item">
+                            <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                        </div>
+                        <div class="item">
+                            <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                        </div>
+                        <div class="item">
+                            <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                        </div>
+                        <div class="item">
+                            <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                        </div>
+                        <div class="item">
+                            <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                        </div>
+                        <div class="item">
+                            <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                        </div>
+                        <div class="item">
+                            <img src="la-influencia-1601890708-width217-quality80.jpeg" id="imagesFilms">
+                        </div>
+                        <div class="item">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary leftLst">&#10094;</button>
+                    <button class="btn btn-primary rightLst">&#10095;</button>
+                </div>
+            </div>
+        </div>
+        <div class="interstellar"></div>
+        <span class="gender-text">Géneros</span>
+        <div class="gender-scroll">
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-0.wuaki.tv/assets/genres/all-cb781ac8669959b586ff362be895a182d31a7f5865c80b3a2870da8d1d338a09.png)"></span>
+                <p>Todo el catálogo</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-2.wuaki.tv/system/brandable_photos/13332/original/action-1591342700.png)"></span>
+                <p>Acción</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-2.wuaki.tv/system/brandable_photos/13336/original/animation-1591342706.png)"></span>
+                <p>Animación</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-1.wuaki.tv/system/brandable_photos/13330/original/adventure-1591342698.png)"></span>
+                <p>Aventuras</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-1.wuaki.tv/system/brandable_photos/13344/original/war-1591342712.png)"></span>
+                <p>Bélico</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-0.wuaki.tv/system/brandable_photos/13348/original/science-fiction-1591342715.png)"></span>
+                <p>Ciencia ficción</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-3.wuaki.tv/system/brandable_photos/13334/original/indie-1591342703.png)"></span>
+                <p>Cine de autor</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-3.wuaki.tv/system/brandable_photos/13352/original/spanish-cinema-1591342719.png)"></span>
+                <p>Cine español</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-3.wuaki.tv/system/brandable_photos/13340/original/kids-family-1591342710.png)"></span>
+                <p>Cine familiar</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-3.wuaki.tv/system/brandable_photos/13356/original/classic-movies-1591342722.png)"></span>
+                <p>Clásicos</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-0.wuaki.tv/system/brandable_photos/13358/original/comedy-1591342725.png)"></span>
+                <p>Comedia</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-3.wuaki.tv/system/brandable_photos/13362/original/romantic-comedy-1591342729.png)"></span>
+                <p>Comedia romántica</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-3.wuaki.tv/system/brandable_photos/13370/original/disney-1591342735.png)"></span>
+                <p>Disney</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-2.wuaki.tv/system/brandable_photos/13374/original/docs-specials-1591342738.png)"></span>
+                <p>Documental</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-3.wuaki.tv/system/brandable_photos/13376/original/drama-1591342739.png)"></span>
+                <p>Drama</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-3.wuaki.tv/system/brandable_photos/13378/original/romantic-drama-1591342741.png)"></span>
+                <p>Drama romántico</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-3.wuaki.tv/system/brandable_photos/13382/original/fantasy-1591342745.png)"></span>
+                <p>Fantasía</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-1.wuaki.tv/system/brandable_photos/13408/original/preschool-1591342773.png)"></span>
+                <p>Preescolar</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-3.wuaki.tv/system/brandable_photos/13390/original/horror-1591342755.png)"></span>
+                <p>Terror</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-1.wuaki.tv/system/brandable_photos/13392/original/thriller-1591342757.png)"></span>
+                <p>Thriller</p>
+            </div>
+            <div class="gender-scroll__item">
+                <span class="item__gender" style="background-image: url(https://images-3.wuaki.tv/system/brandable_photos/13394/original/western-1591342759.png)"></span>
+                <p>Western</p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-content">
+        <div class="footer-content__info">
+            <div class="info__title">
+                <h3 class="title__footer">Rakuten TV - Tu cine en casa</h3>
+                <p>
+                    Rakuten TV proporciona una serie de servicios que ofrecen todo un
+                    universo de contenidos en solo unos clics. Disfruta de una verdadera
+                    experiencia cinematográfica con los últimos estrenos, servicios de
+                    suscripción premium y una serie de canales temáticos gratis, como
+                    Movies, Euronews, Kids TV, Viki, Documentaries y Rakuten Stories, un
+                    canal que incorpora el contenido original y exclusivo de Rakuten TV.
+                </p>
+            </div>
+            <div class="info__tools">
+                <div class="tools__howitworks">
+                    <img src="https://prod1-kraken-cloudfront.rakuten.tv/images/footer/howitworks-555729f452.svg" />
+                    <p>Cómo funciona</p>
+                    <span>Rakuten TV es compatible con la gran mayoría de dispositivos
+                        conectados.</span>
+                </div>
+                <div class="tools__pay">
+                    <img src="https://prod3-kraken-cloudfront.rakuten.tv/images/footer/payments-ec797a77da.svg" />
+                    <p>Más formas de pago</p>
+                    <span>Rakuten TV es compatible con PayPal y con tarjetas de crédito
+                        Visa y Mastercard.</span>
+                </div>
+                <div class="tools__help">
+                    <img src="https://prod1-kraken-cloudfront.rakuten.tv/images/footer/support-cd17a5040b.svg" />
+                    <p>Ayuda y soporte</p>
+                    <span>¿Tienes problemas con nuestro servicio? Ponte en contacto con
+                        nuestro equipo de soporte</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content__mobile">
+            <div class="mobile__contact">
+                <div class="contact__content">
+                    <div class="content__logo"></div>
+                    <div class="content__company">
+                        <span>Acerca de Rakuten</span>
+                        <span>Quiénes somos</span>
+                        <span>Condiciones de uso</span>
+                        <span>Política de privacidad y cookies</span>
+                        <span>Trabaja con nosotros</span>
+                    </div>
+                </div>
+                <div class="content__info">
+                    <span>2009 - 2020 &copy; Rakuten TV Europe, S.L.U. - v1.838.0</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/e5fa61ddd0.js" crossorigin="anonymous"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="Rakuten.js"></script>
+</body>
+</html>
