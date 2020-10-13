@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   width: 100vw;
 }
 
@@ -78,6 +78,17 @@ body {
 
 .headerLogo__div {
   margin: 30px 25px 50px 25px;
+}
+
+#carrousel div {
+  padding: 1rem 0;
+}
+
+#carrousel div span {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #bbb8b6;
 }
 
 .points__span--color {
