@@ -60,10 +60,11 @@
 
 .midpage__header__line-text {
 	padding-right: 20px;
+	color: #252525;
 }
 
 .midpage__header__line>.material-icons {
-	font-size: 12px;
+	font-size: 16px;
 	padding-right: 5px;
 }
 
@@ -177,6 +178,7 @@
 	width: 80px;
 	height: 120px;
 	overflow-x: visible;
+	cursor: pointer;
 }
 
 .midpage__cast__img__title {
@@ -830,6 +832,8 @@ body {
 	padding-right: 5px;
 }
 
+.header-icon {}
+
 .bold {
 	padding-right: 30px;
 	text-transform: capitalize;
@@ -1000,4 +1004,13 @@ a {
 
 #carousel__end-space {
 	width: 30px;
+}
+
+.searchicon {
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.searchicon:hover {
+	color: yellow;
 }
