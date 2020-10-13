@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>PASALABRA AVENGERS VERSION PRO</title>
+    <link rel="stylesheet" href="styles\styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="container_menu">
+      <div id="play_menu">
+        <p id="menu_title">SKYLAB<span style="color: orange"> Coders </span>ACADEMY</p>
+        <p id="menu_subtitle" style="color: orange">Avengers Pro Edition</p>
+        <button id="new_game" class="btn_menu" onclick="newUserIntro()">Nueva partida</button><br />
+        <button id="instructions" class="btn_menu" onclick="showInstructions()">Instrucciones</button><br />
+        <button id="best_players" class="btn_menu" onclick="showBestPlayers()">Clasificación</button><br />
+        <div id="name_intro">
+          <input id="user_name" type="text" placeholder="Introduce tu nombre" />
+          <button id="ok_menu" class="ok_btn_menu" onclick="newUser()">OK</button>
+          <p id="alert_user">Lo siento, ese nombre ya está siendo utilizado por otro usuario</p>
+        </div>
+      </div>
+    </div>
+    <div id="container_best_players">
+      <div id="best_players">
+        <p id="menu_title">SKYLAB<span style="color: orange"> Coders </span>ACADEMY</p>
+        <p id="menu_subtitle" style="color: orange">Avengers Pro Edition</p>
+        <p id="best_players_list">CLASIFICACIÓN GENERAL</p>
+        <p></p>
+        <h3>TOP 10</h3>
+        <ol id="players_list">
+          <li id="first"><span style="color: orange">TONY STARK</span> con un total de: 25 puntos</li>
+          <li id="second"><span style="color: orange">STEPHEN STRANGE</span> con un total de: 24 puntos</li>
+          <li id="third"><span style="color: orange">BRUCE BANNER</span> con un total de: 22 puntos</li>
+          <li id="fourth"><span style="color: orange">ROCKET RACOON</span> con un total de 21 puntos</li>
+          <li id="fifth"><span style="color: orange">NATASHA ROMANOFF</span> con un total de 19 puntos</li>
+          <li id="sixth"><span style="color: orange">PETER PARKER</span> con un total de: 18 puntos</li>
+          <li id="seventh"><span style="color: orange">STEVE ROGERS</span> con un total de: 15 puntos</li>
+          <li id="eighth"><span style="color: orange">CAROL DANVERS</span> con un total de: 14 puntos</li>
+          <li id="nineth"><span style="color: orange">THOR</span> con un total de 8 puntos</li>
+          <li id="tenth"><span style="color: orange">YO SOY GROOT</span> con un total de 1 puntos</li>
+        </ol>
+        <button id="stop" class="btn_return" onclick="returnToMenu()">Menú principal</button>
+      </div>
+    </div>
+    <div id="container_instructions">
+      <div id="instructions">
+        <p id="menu_title">SKYLAB<span style="color: orange"> Coders </span>ACADEMY</p>
+        <p id="menu_subtitle" style="color: orange">Avengers Pro Edition</p>
+        <p>INSTRUCCIONES</p>
+        <p>
+          El juego realizará una pregunta por cada letra del alfabeto. El/La jugador/a deberá responderla y picar la tecla INTRO o el botón '<span style="color: orange">OK</span>' El objetivo será completar el círculo de preguntas, o en su defecto acertar el mayor número antes de que termine el tiempo. Una vez finalice la cuenta atrás se mostrará el número de aciertos y errores, así como el
+          Ranking de jugadores.
+        </p>
+        <p>Si durante el juego el/la jugador/a tiene dudas sobre alguna respuesta, podrá picar la tecla ESPACIO o el botón '<span style="color: orange">PASAPALABRA</span>', y el juego saltará a la siguiente pregunta sin contabilizarlo como error, retornando a ella una vez finalizada toda la rueda.</p>
+        <p>El/La jugador/a puede terminar el juego en cualquier momento pulsando '<span style="color: orange">SALIR DEL JUEGO</span>'. En este caso, el juego mostrará el total de aciertos y errores, pero no incluirá la partida en la CLASIFICACIÓN GENERAL.</p>
+        <p>Tras finalizar el juego, el/la jugador/a puede consultar la '<span style="color: orange">CLASIFICACIÓN GENERAL</span>' con el resto de jugadores/as.</p>
+        <p>Para completar la partida, el/la jugador/a dispondrá de <span style="color: orange">400 segundos</span> para completar todas las preguntas</p>
+        <button id="stop" class="btn_return" onclick="returnToMenu()">Menú principal</button>
+      </div>
+    </div>
+    <div id="container_game">
+      <header>
+        <p id="titlename">SKYLAB<span style="color: orange"> Coders </span>ACADEMY</p>
+        <p id="subtitle" style="color: orange">Avengers Pro Edition</p>
+      </header>
+      <div id="globalLetters">
+        <span id="a" class="letters">A<span class="results"></span></span>
+        <span id="b" class="letters">B<span class="results"></span></span>
+        <span id="c" class="letters">C<span class="results"></span></span>
+        <span id="d" class="letters">D<span class="results"></span></span>
+        <span id="e" class="letters">E<span class="results"></span></span>
+        <span id="f" class="letters">F<span class="results"></span></span>
+        <span id="g" class="letters">G<span class="results"></span></span>
+        <span id="h" class="letters">H<span class="results"></span></span>
+        <span id="i" class="letters">I<span class="results"></span></span>
+        <span id="j" class="letters">J<span class="results"></span></span>
+        <span id="k" class="letters">K<span class="results"></span></span>
+        <span id="l" class="letters">L<span class="results"></span></span>
+        <span id="m" class="letters">M<span class="results"></span></span>
+        <span id="n" class="letters">N<span class="results"></span></span>
+        <span id="ñ" class="letters">Ñ<span class="results"></span></span>
+        <span id="o" class="letters">O<span class="results"></span></span>
+        <span id="p" class="letters">P<span class="results"></span></span>
+        <span id="q" class="letters">Q<span class="results"></span></span>
+        <span id="r" class="letters">R<span class="results"></span></span>
+        <span id="s" class="letters">S<span class="results"></span></span>
+        <span id="t" class="letters">T<span class="results"></span></span>
+        <span id="u" class="letters">U<span class="results"></span></span>
+        <span id="v" class="letters">V<span class="results"></span></span>
+        <span id="w" class="letters">W<span class="results"></span></span>
+        <span id="x" class="letters">X<span class="results"></span></span>
+        <span id="y" class="letters">Y<span class="results"></span></span>
+        <span id="z" class="letters">Z<span class="results"></span></span>
+      </div>
+      <p id="game_questions">Con la A..</p>
+      <div id="user_buttons">
+        <button id="timer" class="results_panel">Tiempo</button>
+        <button id="correct" class="results_panel">Aciertos</button>
+        <button id="incorrect" class="results_panel">Errores</button>
+        <input id="answer" type="text" placeholder="Escribe tu respuesta" />
+        <button id="ok" class="btn_game" onclick="answerAnalyzer()">OK</button>
+        <button id="pasapalabra" class="btn_game" onclick="userPasapalabra()">PASAPALABRA</button>
+        <button id="stop" class="btn_game" onclick="endGame()">Salir del juego</button>
+      </div>
+      <footer id="creator">Víctor Escartín <span style="color: orange"> PASAPALABRA</span></footer>
+    </div>
+    <script src="app/app.js"></script>
+  </body>
+</html>
