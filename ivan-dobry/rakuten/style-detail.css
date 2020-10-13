@@ -710,130 +710,7 @@ body {
 	text-transform: initial;
 }
 
-@media screen and (max-width: 1024px) {
-	.header {
-		display: none;
-	}
 
-	h2 {
-		font-size: 10px;
-		font-family: NotoSans-Bold, Arial, sans-serif;
-		font-weight: bold;
-		text-transform: uppercase;
-		color: #999;
-		margin: 0;
-		padding: 0;
-	}
-
-	span {
-		color: #999;
-	}
-
-	.nav__mobile {
-		display: flex;
-		justify-content: space-around;
-		width: 100%;
-		height: 56px;
-		background-color: black;
-		border-top: 1px solid rgba(255, 255, 255, 0.2);
-		box-shadow: 0 -5px 15px 0 rgba(0, 0, 0, 0.5);
-		position: fixed;
-		bottom: 0;
-		right: 0;
-		left: 0;
-	}
-
-	.nav__mobile__menu {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		width: 20%;
-		cursor: pointer;
-	}
-
-	.nav__mobile__menu:hover span {
-		color: yellow;
-	}
-
-	.nav__mobile__menu:hover h2 {
-		color: yellow;
-	}
-
-	.nav__mobile__menu__title {
-		padding-top: 5px;
-	}
-
-	.buttons__box {
-		flex-direction: column;
-		height: 20%;
-	}
-
-	.buttons__box__img:first-child {
-		margin: auto auto 15px auto;
-	}
-
-	.buttons__box__img:last-child {
-		margin: auto;
-	}
-
-	.rating-box {
-		bottom: 35%;
-	}
-
-	.title-box {
-		bottom: 25%;
-	}
-
-	.detail__image--box {
-		padding-top: 0;
-	}
-
-	.footer-info {
-		display: none;
-	}
-
-	.footer__mini__flex {
-		flex-direction: column;
-	}
-
-	.footer__mini__logo {
-		flex-direction: column;
-		flex-wrap: nowrap;
-	}
-
-	.footer__mini__links {
-		display: flex;
-		flex-direction: row;
-	}
-
-	.footer__mini__copy {
-		display: flex;
-		justify-content: center;
-	}
-
-	.footer__mini {
-		display: flex;
-		flex-direction: column;
-		align-content: center;
-	}
-
-	.footer__mini__logo img {
-		margin-bottom: 15px;
-	}
-
-	.icon__box {
-		top: 25%;
-	}
-
-	.rating-icon {
-		color: #ffe300;
-	}
-
-	.play__icon {
-		color: white;
-	}
-}
 
 
 /*////////////////////MID-PAGE !IMPORTANT/////////////////*/
@@ -843,8 +720,6 @@ body {
 	color: #252525;
 	padding-right: 5px;
 }
-
-.header-icon {}
 
 .bold {
 	padding-right: 30px;
@@ -1053,4 +928,158 @@ a {
 	border-radius: 100%;
 	background-color: rgb(184, 217, 22);
 	background-image: linear-gradient(270deg, transparent 50%, #f0f0f0 50%), linear-gradient(90deg, #f0f0f0 50%, transparent 50%);
+}
+
+@media screen and (max-width: 1024px) {
+	.header {
+		display: none;
+	}
+
+	h2 {
+		font-size: 10px;
+		font-family: NotoSans-Bold, Arial, sans-serif;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #999;
+		margin: 0;
+		padding: 0;
+	}
+
+	span {
+		color: #999;
+	}
+
+	.nav__mobile {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		height: 56px;
+		background-color: black;
+		border-top: 1px solid rgba(255, 255, 255, 0.2);
+		box-shadow: 0 -5px 15px 0 rgba(0, 0, 0, 0.5);
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+
+	.nav__mobile__menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 20%;
+		cursor: pointer;
+	}
+
+	.nav__mobile__menu:hover span {
+		color: yellow;
+	}
+
+	.nav__mobile__menu:hover h2 {
+		color: yellow;
+	}
+
+	.nav__mobile__menu__title {
+		padding-top: 5px;
+	}
+
+	.buttons__box {
+		flex-direction: column;
+		height: 20%;
+	}
+
+	.buttons__box__img:first-child {
+		margin: auto auto 15px auto;
+	}
+
+	.buttons__box__img:last-child {
+		margin: auto;
+	}
+
+	.rating-box {
+		bottom: 35%;
+	}
+
+	.title-box {
+		bottom: 25%;
+	}
+
+	.detail__image--box {
+		padding-top: 0;
+	}
+
+	.footer-info {
+		display: none;
+	}
+
+	.footer__mini__flex {
+		flex-direction: column;
+	}
+
+	.footer__mini__logo {
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+
+	.footer__mini__links {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.footer__mini__copy {
+		display: flex;
+		justify-content: center;
+	}
+
+	.footer__mini {
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+	}
+
+	.footer__mini__logo img {
+		margin-bottom: 15px;
+	}
+
+	.icon__box {
+		top: 25%;
+	}
+
+	.rating-icon {
+		color: #ffe300;
+	}
+
+	.play__icon {
+		color: white;
+	}
+
+	.midpage {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	.midpage__movie-info,
+	.modpage__aside {
+		width: 100%;
+	}
+
+	.midpage__aside,
+	.midpage__aside__container {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.midpage__aside__container {
+		display: flex;
+		justify-content: center;
+	}
+
+	.aside-title {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+	}
 }
