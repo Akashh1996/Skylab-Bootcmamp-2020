@@ -1,22 +1,20 @@
 * {
-	font-family: Tahoma, sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
-.container1 {
+.content {
 	border: 1px solid black;
-	margin-left: 20px;
-	margin-right: 20px;
 }
 
-nav {
+.navbar {
 	display: flex;
 	flex-direction: row;
 	border: 1px solid black;
-	height: 60px;
-	background-color: #f1efee;
+	height: 40px;
+	background-color: rgb(211, 211, 211);
 }
 
-.minicircle {
-	margin-top: 20px;
+.minicircle1 {
+	margin-top: 10px;
 	margin-left: 1%;
 	width: 20px;
 	height: 20px;
@@ -25,19 +23,34 @@ nav {
 	border-radius: 50%;
 	background-color: red;
 }
-#minicircle2 {
-	background-color: #f9d966;
+.minicircle2 {
+	margin-top: 10px;
+	margin-left: 1%;
+	width: 20px;
+	height: 20px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background-color: rgb(255, 102, 0);
 }
-#minicircle3 {
-	background-color: #bc601e;
+.minicircle3 {
+	margin-top: 10px;
+	margin-left: 1%;
+	width: 20px;
+	height: 20px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background-color: rgb(143, 54, 3);
 }
 
-.container1-1 {
+.subContent {
 	border: 1px solid black;
-	padding: 20px;
+	padding: 10px;
+	/* display: flex; */
 }
 
-.first-paragraph {
+.row1 {
 	display: grid;
 	grid-template-columns: 200px auto;
 	height: 200px;
@@ -49,7 +62,7 @@ nav {
 	width: 200px;
 	height: 200px;
 	border: 1px solid black;
-	background-color: #f1efee;
+	background-color: rgb(211, 211, 211);
 }
 
 .circle {
@@ -59,26 +72,22 @@ nav {
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
 	border: 1px solid black;
-	background-color: #f1efee;
+	background-color: rgb(211, 211, 211);
 }
 
 .date {
-	color: #c6c4c2;
+	color: rgba(128, 128, 128, 0.712);
 	font-size: 25px;
 	position: absolute;
 	right: 10%;
 }
 
-.row2 {
+.subRow2 {
 	display: flex;
-	justify-content: space-around;
 	flex-direction: column;
-	margin-top: 20px;
-	margin-left: 30px;
-	margin-right: 10px;
 }
 
-.row2-1 {
+.subRow2-1 {
 	display: flex;
 	flex-direction: row;
 	margin-left: 5%;
@@ -93,19 +102,18 @@ nav {
 }
 
 span {
-	color: #c6c4c2;
+	color: rgba(128, 128, 128, 0.712);
 	font-size: 25px;
 }
 
 .text1 {
-	margin-top: 20px;
-	margin-left: 30px;
-	margin-right: 40px;
-	justify-content: space-around;
+	margin-top: 2%;
+	margin-left: 5%;
+	justify-content: space-between;
 	font-size: 20px;
 }
 
-.second-paragraph {
+.row2 {
 	margin-top: 5%;
 	font-size: 120%;
 }
@@ -116,7 +124,7 @@ span {
 	padding: 50px;
 }
 
-.triangles {
+.figures {
 	display: flex;
 	flex-direction: column;
 	align-items: center;

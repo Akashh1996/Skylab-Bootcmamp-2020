@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mulán</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="details.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3511c56a9e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar-top-details">
+            <a href="index.html" class="logo">
+                <img src="img/rakuten-logo-details.png" alt="Rakuten logo">
+            </a>
+            <div class="flex-spacer"></div>
+            
+            <div class="search">
+                <div id="searchBox" class="search-bar">
+                    <div class="img-container">
+                        <span class="material-icons">search</span>
+                    </div>
+                    <input id="search-bar-input-details" type="text" placeholder="Buscar" maxlength="64">
+                    <button id="closeBtn" class="material-icons">close</button>
+                </div>
+                <button id="searchBtn" class="material-icons">searchbutton</button>
+            </div>
+        </nav>        
+        <nav class="header-navbar">
+            <ul class="navbar__buttons-bottom">
+                <li class="button-bottom">
+                    <a href="#" class="home">
+                        <figure>
+                            <div class="img-container">
+                                <span class="material-icons">
+                                    home
+                                </span>
+                            </div>
+                            <figcaption>Portada</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="button-bottom">
+                    <a href="#">
+                        <figure>
+                            <div class="img-container">
+                                <span class="material-icons">
+                                    movie
+                                </span>
+                            </div>
+                            <figcaption>Cinema</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="button-bottom">
+                    <a href="#">
+                        <figure>
+                            <div class="img-container">
+                                <span class="material-icons">
+                                    visibility
+                                </span>
+                            </div>
+                            <figcaption>Free</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="button-bottom">
+                    <a href="#">
+                        <figure>
+                            <div class="img-container">
+                                <span class="material-icons">
+                                    local_activity
+                                </span>
+                            </div>
+                            <figcaption>Subscription</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="button-bottom">
+                    <a href="#">
+                        <figure>
+                            <div class="img-container">
+                                <span class="material-icons">
+                                    person
+                                </span>
+                            </div>
+                            <figcaption>Entrar</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+            <div class="navbar-top">
+                <a href="index.html"><img src="img/rakuten-logo.jpg" alt="Rakuten logo" class="rakuten-logo"></a>
+                <ul class="cinema-free-suscription">
+                    <li>
+                        <a href="#" class="cinema">Cinema</a>
+                        <div class="cinema-options options">
+                            <a href="#" class="genres">Todos los géneros</a>
+                            <a href="#" class="family">Family</aa href="#">
+                        </div>
+                    </li>
+                    <li><a href="#" class="free">Free</a></li>
+                    <li>
+                        <a href="#" class="suscription">Suscription</a>
+                        <div class="suscription-options options">
+                            <a href="#" class="starzplay">Starzplay</a>
+                            <a href="#" class="rtv-suscription">Rtv suscripción</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="search-bar">
+                    <div class="img-container">
+                        <span class="material-icons">
+                            search
+                        </span>
+                    </div>
+                    <input id="search-bar-input" type="text" placeholder="Buscar" maxlength="64" onclick="document.getElementById('search-bar-input').value = ''">
+                </div>
+                <div class="flex-spacer"></div>
+                <div class="help"><a href="#">Ayuda y dispositivos</a></div>
+                <div class="login">
+                    <span class="enter"><a href="#">Entrar</a></span>
+                    <button class="sign-up">Registrarse</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="trailer">
+                <div class="gradient"></div>
+                <div class="trailer__container">
+                    <div class="video-controllers">
+                        <div class="video__play">
+                            <a href="trailer.html" class="play material-icons">play_circle_filled</a>
+                            <span>Tráiler</span>
+                        </div>
+                        <div class="video__stick">
+                            <a href="#" class="stick material-icons">push_pin</a>
+                            <span>Añadir a quiero ver</span>
+                        </div>
+                    </div>
+                    <div class="trailer__rating">
+                        <span class="material-icons">star_rate</span>
+                        <span>5.4</span>
+                    </div>
+                    <h1>Mulán</h1>
+                    <div class="buttons-see-coupon">
+                        <button class="button-see-now">
+                            <span class="see-now">Ver ahora</span>
+                            <div class="see-now__price">
+                                <span class="price-big">desde 21,99 <symbol>€</symbol></span>
+                                <span class="price-small">
+                                    <span>o 2199 </span>
+                                    <div class="icon-container">
+                                        <span class="P">P</span>
+                                    </div>
+                                </span>
+                            </div>
+                        </button>
+                        <button class="button-coupon">Canjear cupón</button>
+                    </div>
+                </div>
+            </div>
+            <div class="rrss-information">
+                <div class="rrss-container">
+                    <div class="rrss">
+                        <a href="#" class="icon-description">                    
+                            <div class="circle">
+                                <span class="material-icons">visibility</span>
+                            </div>
+                            <span class="text-description">Marcar como ya leído</span>
+                        </a>
+                        <a href="#" class="icon-description">
+                            <div class="circle">
+                                <span class="fab fa-twitter"></span>
+                            </div>
+                            <span class="text-description">Twitter</span>
+                        </a>
+                        <a href="#" class="icon-description">
+                            <div class="circle">
+                                <span class="fab fa-facebook-f"></span>
+                            </div>
+                            <span class="text-description">Facebook</span>
+                        </a>                   
+                        <a href="#" class="icon-description">
+                            <div class="circle">
+                                <span class="fab fa-pinterest-p"></span>
+                            </div>
+                            <span class="text-description">Pinterest</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="film-information" id='film-i'>
+                    <div class="information__varied">
+                        <div class="group1">
+                            <div class="icon-and-info age">
+                                <span class="material-icons">supervisor_account</span>
+                                <span class="text">7</span>
+                            </div>
+                            <div class="icon-and-info duration">
+                                <span class="material-icons">watch_later</span>
+                                <span class="text">116 minutos</span>
+                            </div>
+                            <div class="icon-and-info year">
+                                <span class="material-icons">calendar_today</span>
+                                <span class="text">2020</span>
+                            </div>
+                            <div class="icon-and-info countries">
+                                <span class="material-icons">flag</span>
+                                <span class="text">Estados Unidos, Hong Kong, Canadá</span>
+                            </div>
+                            <div class="icon-and-info title">
+                                <span class="material-icons">info</span>
+                                <span class="text">Título original: Mulan (2020)</span>
+                            </div>
+                        </div>
+                        <div class="group2">
+                            <div class="icon-and-info premiere">
+                                <span class="text">Premiere digital</span>
+                            </div>
+                            <div class="icon-and-info uhd">
+                                <span class="text">UHD</span>
+                            </div>
+                        </div>
+                        <span class="text-description">La aclamada cineasta Niki Caro da vida a la épica historia de la legendaria guerrera china en el largometraje de Disney, MULÁN, en el que una intrépida joven lo arriesga todo por amor a su familia y a su país, hasta convertirse en una de las mayores guerreras de la historia de China. Cuando el emperador de China decreta que un hombre de cada familia debe servir en el Ejército Imperial para defender al país de los invasores del norte, Hua Mulán, la hija mayor de un condecorado guerrero, decide ocupar el lugar de su padre enfermo. Haciéndose pasar por un hombre, Hua Jun, se enfrenta a constantes desafíos y deberá aprender a canalizar su fuerza interior y a aceptar su verdadero potencial.</span>
+                        <div class="languages-subtitles">
+                            <div class="languages-subtitles__title">
+                                <span class="material-icons">textsms</span>
+                                <h2>Idiomas y subtítulos</h2>
+                            </div>
+                            <table class="languages-table">
+                                <tbody>
+                                    <tr>
+                                        <th class="first-column">Audio</th>
+                                        <th class="second-column">Subtítulos</th>
+                                    </tr>
+                                    <tr class="languages-table__content">
+                                        <th class="first-column">Inglés</th>
+                                        <th class="second-column">Alemán, Italiano, Español, Inglés, Holandés / Flamenco, Francés, Sin subtítulos</th>
+                                    </tr>
+                                    <tr class="languages-table__content">
+                                        <th class="first-column">Español</th>
+                                        <th class="second-column">Alemán, Italiano, Español, Inglés, Holandés / Flamenco, Francés, Sin subtítulos </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cast">
+                            <div class="cast__container">
+                                <div class="title">
+                                    <span class="material-icons">movie</span>
+                                    <span>Dirección y reparto</span>
+                                </div>
+                                <div class="carousel-containerCast">
+                                    <span class="material-icons" id="nextBtnCast"> keyboard_arrow_right </span>
+                                    <span class="material-icons" id="prevBtnCast"> keyboard_arrow_left </span>
+                                    <div class="carousel-slide-cast">
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/detalle/niki-caro-1525311147-width170-quality50.jpeg" alt="Niki Caro">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Niki Caro</span>
+                                                    <span class="director">DIRECCIÓN</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/detalle/yifei-liu-1525283501-width170-quality50.jpeg" alt="Yifei Liu">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Yifei Liu</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/detalle/donnie-yen-1525279749-width170-quality50.jpeg" alt="Donnie Yen">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Donnie Yen</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/detalle/li-gong-1525283640-width170-quality50.jpeg" alt="Li Gong">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Li Gong</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/detalle/jet-li-1525277511-width170-quality50.jpeg" alt="Jet li">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Jet li</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/detalle/jason-scott-lee-1525295648-width170-quality50.jpeg" alt="Jason Scott Lee">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Jason Scott Lee</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/detalle/yoson-an-1558058544-width170-quality50.jpeg" alt="Yoson An" id="lastCloneCast">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Yoson An</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/detalle/tzi-ma-1525278658-width170-quality50.jpeg" alt="Tzi Ma">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Tzi Ma</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/detalle/rosalind-chao-1525296176-width170-quality50.jpeg" alt="Rosalind Chao">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Rosalind Chao</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <a href="#">
+                                            <figure class="cast-and-name">
+                                                <div class="img-container">
+                                                    <img src="img/detalle/pei-pei-cheng-1525291918-width170-quality50.jpeg" alt="Pei-pei Cheng" id="firstCloneCast">
+                                                </div>
+                                                <figcaption>
+                                                    <span class="name">Pei-pei Cheng</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                          
+                        <button id="prevBtnCast" class="hiddenCast">P</button>
+                        <button id="nextBtnCast" class="hiddenCast">N</button>
+
+                        <div class="score-genders">
+                            <div class="score">
+                                <div class="score__container">
+                                    <div class="title">
+                                        <span class="material-icons">star</span>
+                                        <span>Puntuación</span>
+                                    </div>
+                                    <div class="scores-various">
+                                        <div class="score__circle-name">
+                                            <div class="score__circle">
+                                                <div class="score__circle">                                            
+                                                    <div class="half-circle2"></div>
+                                                    <div class="half-circle">
+                                                        <div class="inner-circle">
+                                                            <span class="number">5.4</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="score__name">IMDb</span>
+                                        </div>
+                                        <div class="score__circle-name">
+                                            <div class="score__circle">                                            
+                                                <div class="half-circle3"></div>
+                                                <div class="half-circle">
+                                                    <div class="inner-circle">
+                                                        <span class="number">7.4</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="score__name">The Movie Database</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="genders">
+                                <div class="genders__container">
+                                    <div class="title">
+                                        <span class="fas fa-theater-masks"></span>
+                                        <span>Géneros</span>
+                                    </div>
+                                    <div class="genders__content">
+                                        <div class="content__icon-name">
+                                            <div class="icon-circle">
+                                                <img src="img/detalle/action-1591342700.png" alt="Acción">
+                                            </div>
+                                            <span class="icon-name">Acción</span>
+                                        </div>
+                                        <div class="content__icon-name">
+                                            <div class="icon-circle">
+                                                <img src="img/detalle/adventure-1591342698.png" alt="Aventuras">
+                                            </div>
+                                            <span class="icon-name">Aventuras</span>
+                                        </div>
+                                        <div class="content__icon-name">
+                                            <div class="icon-circle">
+                                                <img src="img/detalle/kids-family-1591342710.png" alt="Cinem familiar">
+                                            </div>
+                                            <span class="icon-name">Cine familiar</span>
+                                        </div>
+                                        <div class="content__icon-name">
+                                            <div class="icon-circle">
+                                                <img src="img/detalle/disney-1591342735.png" alt="Disney">
+                                            </div>
+                                            <span class="icon-name">Disney</span>
+                                        </div>
+                                        <div class="content__icon-name">
+                                            <div class="icon-circle">
+                                                <img src="img/detalle/drama-1591342739.png" alt="Drama">
+                                            </div>
+                                            <span class="icon-name">Drama</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="another-films">
+                <h2>Otras películas que te pueden gustar:</h2>                
+                <div class="carousel-containerAnother">
+                    <button class="material-icons" id="nextBtnAnother"> keyboard_arrow_right </button>
+                    <button class="material-icons" id="prevBtnAnother"> keyboard_arrow_left </button>
+                    <div class="carousel-slide-another">
+                      <img src="img/mainpage/capitan-america-civil-war-1558444881-width217-quality80.jpeg" alt="" id="civil-war" class="img-another"/>
+                      <img src="img/mainpage/alien-covenant-1558458967-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/la-influencia-1601890708-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/la-fuerza-de-la-naturaleza-1600249838-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/a-vigilante-1599127920-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/atrapado-1601552390-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/la-herencia-1595322451-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/deep-blue-sea-3-1598947260-width217-quality80.jpeg" id="lastCloneAnother" alt="" class="img-another"/>
+                      <img src="img/mainpage/oro-blanco-1596785227-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/escape-plan-3-1597237664-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/la-lista-de-a-la-mierda-1601555234-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/mortal-1597848971-width217-quality80.jpeg" alt="" class="img-another"/>
+                      <img src="img/mainpage/desconectados-1600768252-width217-quality80.jpeg" id="firstCloneAnother" alt="" class="img-another"/>
+                    </div>
+                  </div>
+  
+                  <button id="prevBtnAnother" class="hiddenAnother">P</button>
+                  <button id="nextBtnAnother" class="hiddenAnother">N</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="cinema-home">
+                <div class="cinema-home__paragraph">
+                    <h1>Rakuten TV - Tu cine en casa</h1>
+                    <div class="paragraph-container">
+                        <span>Rakuten TV proporciona una serie de servicios que ofrecen todo un universo de contenidos en solo unos clics. Disfruta de una verdadera experiencia cinematográfica con los últimos estrenos, servicios de suscripción premium y una serie de canales temáticos gratis, como Movies, Euronews, Kids TV, Viki, Documentaries y Rakuten Stories, un canal que incorpora el contenido original y exclusivo de Rakuten TV.</span>
+                    </div>
+                </div>
+                <div class="cinema-home__work-pay-help">
+                    <a href="#" class="cinema-home__work">
+                        <div class="img-container">
+                            <img src="img/mainpage/howitworks-555729f452.svg" alt="Como funciona">
+                        </div>
+                        <h2>Cómo funciona</h2>
+                        <span>Rakuten TV es compatible con la gran mayoría de dispositivos conectados.</span>
+                    </a>
+                    <a href="#" class="cinema-home__pay">
+                        <div class="img-container">
+                            <img src="img/mainpage/payments-ec797a77da.svg" alt="Formas de pago">
+                        </div>
+                        <h2>Más formas de pago</h2>
+                        <span>Rakuten TV es compatible con PayPal y con tarjetas de crédito Visa y Mastercard.</span>
+                    </a>
+                    <a href="#" class="cinema-home__help">
+                        <div class="img-container">
+                            <img src="img/mainpage/support-cd17a5040b.svg" alt="Ayuda y soporte">
+                        </div>
+                        <h2>Ayuda y soporte</h2>
+                        <span>¿Tienes problemas con nuestro servicio? Ponte en contacto con nuestro equipo de soporte</span>
+                    </a>
+                </div>
+            </div>
+            <div class="final-footer">
+                <div class="final-footer__principal">
+                    <div class="footer__img-container">
+                        <img src="img/rakuten-logo-footer.jpg" alt="Rakuten logo">
+                    </div>
+                    <ul class="about-conditions-workwithus">
+                        <li><a href="#">Acerca de Rakuten</a></li>
+                        <li><a href="#">Quiénes somos</a></li>
+                        <li><a href="#">Condiciones de uso</a></li>
+                        <li><a href="#">Política de privacidad y cookies</a></li>
+                        <li><a href="#">Trabaja con nosotros</a></li>
+                    </ul>
+                </div>
+                <span class="company-sl">2009 - 2020 © Rakuten TV Europe, S.L.U. - v1.838.0</span>
+            </div>
+        </div>
+    </footer>
+    <script src="details.js"></script>
+</body>
+</html>
