@@ -109,8 +109,8 @@
 
 .title__cast-scroll {
 	display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+	flex-direction: row;
+	justify-content: flex-start;
 	width: 100%;
 	overflow-x: auto;
 }
@@ -120,18 +120,18 @@
 }
 
 .scroll__item {
-    text-align: center;
-    padding: 5px;
+	text-align: center;
+	padding: 5px;
 }
 
 .scroll__item p {
-    font-size: 12px;
-    padding-top: 2px;
+	font-size: 12px;
+	padding-top: 2px;
 }
 
 .denis__director {
-    margin-top: -10px;
-    font-weight: 700;
+	margin-top: -10px;
+	font-weight: 700;
 }
 
 #item__denis {

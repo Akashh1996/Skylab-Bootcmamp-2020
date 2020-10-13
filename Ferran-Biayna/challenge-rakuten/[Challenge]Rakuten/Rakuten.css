@@ -329,6 +329,57 @@
 	background-image: url('mobile-icon/login2.jpg');
 }
 
+.interstellar {
+	padding: 15px;
+}
+
+.gender-text {
+	font-family: 'Noto Sans', sans-serif;
+	color: white;
+	font-weight: 700;
+	font-size: 20px;
+	margin-top: px;
+	padding-left: 25px;
+}
+
+.gender-scroll {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	overflow-x: auto;
+	width: 100%;
+}
+
+.gender-scroll::-webkit-scrollbar {
+	display: none;
+}
+
+.gender-scroll__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	border: none;
+	padding: 20px;
+	cursor: pointer;
+}
+
+.gender-scroll__item p {
+    color: #fff;
+    font-size: 15px;
+    padding-top: 2px;
+}
+
+.item__gender {
+	display: block;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-size: 130%;
+	background-position: center;
+	background-color: transparent;
+}
+
 .footer-content__info {
 	display: none;
 	font-family: 'Noto Sans', sans-serif;
@@ -468,6 +519,7 @@ body {
 		background-color: black;
 		color: white;
 		border: 1px;
+		outline: none;
 		font-weight: 700;
 		font-family: 'Noto Sans', sans-serif;
 		font-size: 14px;
