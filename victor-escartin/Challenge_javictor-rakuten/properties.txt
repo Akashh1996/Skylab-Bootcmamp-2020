@@ -1,0 +1,21 @@
+body {
+    line-height: 1;
+    color: #fff;
+    font-family: NotoSans-Regular,Arial,sans-serif;
+    background-color: 
+    overflow-x: hidden;
+}
+
+.button--yellight {
+    color: #ffe300;
+}
+
+.footer__mini {
+    display: block;
+    padding: 35px 55px;
+    background-color: 
+}
+
+.footer-letras {
+    color: #ccc;
+}

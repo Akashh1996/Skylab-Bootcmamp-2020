@@ -1,0 +1,84 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<header class="flexhead sectiontitles">
+		<h4 class="selectedSection">RESERVAR UN VUELO</h4>
+		<h4 style="font-weight: normal; margin-left: 40px">
+			RESERVAR UN VUELO CON MILLAS
+		</h4>
+	</header>
+
+	<body>
+		<hr id="line" />
+		<section class="sectionRow text">
+			<fieldset class="flexQuestForm boxTipodeViaje">
+				<label for="idayvuelta" class="labelstyle">Viaje</label>
+				<select id="idayvuelta" class="caja">
+					<option value="1">Ida y vuelta</option>
+					<option value="2">Sólo ida</option>
+					<option value="3">Múltiples destinos</option>
+				</select>
+			</fieldset>
+
+			<fieldset class="flexQuestForm boxTipodeViaje">
+				<label for="pasenger" class="labelstyle">Pasajeros</label>
+				<select id="idayvueltas caja">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+			</fieldset>
+
+			<fieldset class="flexQuestForm boxTipodeViaje">
+				<label for="clase" class="labelstyle">Clase</label>
+				<select id="clases" class="caja">
+					<option value="1">ECONOMY</option>
+					<option value="2">PREMIUM ECONOMY</option>
+					<option value="3">BUSINESS</option>
+					<option value="4">LA PREMIÈRE</option>
+				</select>
+			</fieldset>
+		</section>
+
+		<section class="sectionRow">
+			<input
+				class="boxIdayVuelta caja"
+				minlength="1"
+				required
+				id="Salida"
+				name="Salida"
+				type="text"
+				placeholder="Salida de *"
+			/>
+			<input
+				class="boxIdayVuelta caja"
+				minlength="1"
+				required
+				id="Llegada"
+				name="Llegada"
+				type="text"
+				placeholder="Llegada a *"
+			/>
+		</section>
+
+		<section class="sectionColumn">
+			<input class="boxdate caja" type="date" value="2017-06-01" />
+
+			<div class="checkbox">
+				<label class="switch">
+					<input name="scales" id="scales" type="checkbox" />
+					<span class="slider round"></span>
+				</label>
+				<label for="scales" style="margin-left: 5px">Viaje profesional</label>
+			</div>
+		</section>
+
+		<div class="buttonFlex">
+			<button class="buttonBuscar" type="button">Buscar vuelos</button>
+		</div>
+	</body>
+</html>
