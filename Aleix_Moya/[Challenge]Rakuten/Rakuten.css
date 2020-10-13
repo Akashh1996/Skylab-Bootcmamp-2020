@@ -105,10 +105,30 @@
 .container:hover #imagesFilms {
 	border-color: yellow;
 }
-
+#MultiCarro{
+	max-width: 300px;
+}
+.container{
+	max-width: 310px;
+	margin-left: 2px;
+	margin-right: 0px;
+}
+#passButtonVideoLeft {
+	left: 17.5%;
+}
 @media screen and (min-width: 812px) {
+	body{
+		max-width: 100%;
+	}
+	.container{
+		margin-left: 1%;
+		margin-right: 0px;
+	}
+	#MultiCarro{
+		width: 112%;
+	}
 	.slideshow-container {
-    max-width: 100%;
+    	max-width: 100%;
 		position: relative;
 		margin: auto;
 	}
@@ -116,9 +136,12 @@
 		width: 110%;
 	}
 	#imagesFilms {
-		width: 100%;
+		width: 110%;
 	}
 	#passButtonVideo {
+		display: none;
+	}
+	#passButtonVideoLeft {
 		display: none;
 	}
 	#filas {
