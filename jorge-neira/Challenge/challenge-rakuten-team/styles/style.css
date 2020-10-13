@@ -386,6 +386,10 @@ input {
   line-height: 180%;
 }
 
+.movie-gallery {
+  background-color: #171717;
+}
+
 .movie-gallery .banner-container {
   position: relative;
   display: -webkit-box;
@@ -521,6 +525,53 @@ input {
   border: 3px solid #ffe300;
   -webkit-box-shadow: inset 0 0 0 3px #ffe300;
           box-shadow: inset 0 0 0 3px #ffe300;
+}
+
+.movie-gallery .genres .genres-titles .genres-titles-names {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #252525;
+  padding-bottom: 8px;
+}
+
+.movie-gallery .genres .genres-titles .genres-titles-names .genres-titles-names-left {
+  color: #fff;
+}
+
+.movie-gallery .genres .genres-titles .genres-titles-names .genres-titles-names-right {
+  color: #fff;
+  font-size: 12px;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+.movie-gallery .genres .genres-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #252525;
+  -webkit-box-pack: justify;
+}
+
+.movie-gallery .genres .genres-icons .genres-icons-pictures {
+  margin: 2px;
+  text-align: center;
+}
+
+.movie-gallery .genres .genres-icons .genres-icons-pictures .genres_text_icon {
+  color: #ccc;
+}
+
+.genres-icons {
+  overflow-x: auto;
+}
+
+.genres-icons::-webkit-scrollbar {
+  width: 0;
 }
 
 #footer-wrapper .footer {

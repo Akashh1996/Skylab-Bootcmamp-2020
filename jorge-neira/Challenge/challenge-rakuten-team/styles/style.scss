@@ -313,8 +313,8 @@ input {
 	}
 }
 //////////////////////////////////////////////////////////////
-
 .movie-gallery {
+	background-color: #171717;
 	.banner-container {
 		position: relative;
 		display: flex;
@@ -431,6 +431,46 @@ input {
 			}
 		}
 	}
+	.genres {
+		.genres-titles {
+			.genres-titles-names {
+				display: flex;
+				justify-content: space-between;
+				background-color: $searchBgColorOnLargeScreen;
+				padding-bottom: 8px;
+				.genres-titles-names-left {
+					color: $primaryColor;
+				}
+				.genres-titles-names-right {
+					color: $primaryColor;
+					font-size: 12px;
+					margin-right: 8px;
+					margin-top: 8px;
+				}
+			}
+		}
+		.genres-icons {
+			display: flex;
+			background-color: $searchBgColorOnLargeScreen;
+
+			-webkit-box-pack: justify;
+
+			.genres-icons-pictures {
+				margin: 2px;
+				text-align: center;
+
+				.genres_text_icon {
+					color: $footerLinkTextColor;
+				}
+			}
+		}
+	}
+}
+.genres-icons {
+	overflow-x: auto;
+}
+.genres-icons::-webkit-scrollbar {
+	width: 0;
 }
 
 //////////////////////////////////////////////////////////////
