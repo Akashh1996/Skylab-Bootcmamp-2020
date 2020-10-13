@@ -6,6 +6,8 @@ const dropDownButtons = document.querySelectorAll('.drop-list-button');
 const dropDownList = document.querySelectorAll('.title-drop-options');
 const searchDropDownbtn = document.querySelector('.search-dropdown__input');
 const searchDropDownInput = document.querySelector('.search-box__input');
+const detailSeeNowOption = document.querySelector('.button-seenow');
+const detailSeeNowBuyOption = document.querySelector('.button-seenow__buy');
 ///////////////NAV BUTTON HOVER////////////////////
 navMenuButtons.forEach((button, index) => {
 	button.addEventListener('mouseover', function () {
@@ -95,5 +97,16 @@ minWithScreen.addEventListener('change', function (change) {
 	if (change.matches != true) {
 		searchDropDownInput.style.transform = 'translateY(-50px)';
 		searchDropDownInput.style.transition = 'none';
+	}
+});
+detailSeeNowOption.addEventListener('click', function () {
+	if (detailSeeNowBuyOption.style.zIndex === '0') {
+		detailSeeNowBuyOption.style.transition = 'all .3s ease-in-out';
+		detailSeeNowBuyOption.style.transform = 'translateY(-52px)';
+		detailSeeNowBuyOption.style.zIndex = '-1';
+	} else {
+		detailSeeNowBuyOption.style.transition = 'all .3s ease-in-out';
+		detailSeeNowBuyOption.style.transform = 'translateY(0)';
+		detailSeeNowBuyOption.style.zIndex = '0';
 	}
 });

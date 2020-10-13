@@ -238,6 +238,7 @@ input {
 .detail .detail__hero .detail__info .detail-info__buttons {
   padding: 0 0 60px;
   width: 100%;
+  position: relative;
 }
 
 .detail .detail__hero .detail__info .detail-info__buttons .info-btn {
@@ -287,8 +288,12 @@ input {
 }
 
 .detail .detail__hero .detail__info .detail-info__buttons .button-seenow__buy {
-  display: none;
+  position: absolute;
+  left: 25%;
+  -webkit-transform: translateY(-52px);
+          transform: translateY(-52px);
   background-color: #fff;
+  z-index: -1;
 }
 
 .detail .detail__hero .detail__info .detail-info__buttons .button-discount {
@@ -302,6 +307,83 @@ input {
 
 .detail .detail__hero .detail__info .detail-info__buttons .button-discount .button__title {
   color: #f5da00;
+}
+
+.detail .detail-content__wrapper {
+  background-color: #f1f1f1;
+}
+
+.detail .detail-content__wrapper .detail__socialmedia {
+  padding: 30px;
+  text-align: center;
+}
+
+.detail .detail-content__wrapper .detail__socialmedia .socialmedia-icon {
+  cursor: pointer;
+  outline: none;
+  margin-left: 12px;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 16px;
+  height: 50px;
+  width: 50px;
+}
+
+.detail .detail-content__wrapper .detail__socialmedia .socialmedia-icon:hover {
+  color: #999;
+}
+
+.detail .detail-content__wrapper .detail__socialmedia .socialmedia-icon:active {
+  background-color: #252525;
+  color: #f1f1f1;
+}
+
+.detail .detail-content__wrapper .detail-content__main {
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card {
+  padding: 15px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__info {
+  font-size: 14px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__info .info__block {
+  margin-bottom: 4px;
+  margin-right: 15px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__premium {
+  margin-top: 10px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__premium .premium-box {
+  padding: 1px 3px;
+  font-size: 10px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__premium .premium-digital {
+  background-color: red;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__premium .uhd-resolution {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card-lg__text {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 180%;
 }
 
 .movie-gallery .banner-container {
