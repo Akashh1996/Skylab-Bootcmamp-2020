@@ -213,11 +213,7 @@ body {
 	color: #ffe300;
 }
 
-.header__bottom__items__home,
-.header__bottom__items__cinema,
-.header__bottom__items__free,
-.header__bottom__items__subscription,
-.header__bottom__items__signIn {
+.header__bottom__items__home, .header__bottom__items__cinema, .header__bottom__items__free, .header__bottom__items__subscription, .header__bottom__items__signIn {
 	height: 30px;
 	width: 100%;
 }
@@ -239,8 +235,7 @@ body {
 }
 
 .header__bottom__items__signIn {
-	background: url('rakuten-imagerakuten-home.htmlrakuten-home.css/user.png')
-		bottom center no-repeat;
+	background: url('rakuten-imagerakuten-home.htmlrakuten-home.css/user.png') bottom center no-repeat;
 }
 
 .footer-logo__image {
@@ -251,27 +246,20 @@ body {
 	display: none;
 }
 
-.info__cine-en-casa-titulo,
-.how-it-works__title,
-.help__title,
-.pay__title {
+.info__cine-en-casa-titulo, .how-it-works__title, .help__title, .pay__title {
 	color: #fff;
 	font-size: 22px;
 	text-align: center;
 }
 
-.other-info__how-it-works,
-.other-info__pay,
-.other-info__help {
+.other-info__how-it-works, .other-info__pay, .other-info__help {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	flex: 1;
 }
 
-.how-it-works__subtitle,
-.pay__subtitle,
-.help__subtitle {
+.how-it-works__subtitle, .pay__subtitle, .help__subtitle {
 	font-size: 14px;
 	color: #cccccc;
 	text-align: center;
@@ -446,11 +434,7 @@ body {
 	color: #ffe300;
 }
 
-.header__bottom__items__home,
-.header__bottom__items__cinema,
-.header__bottom__items__free,
-.header__bottom__items__subscription,
-.header__bottom__items__signIn {
+.header__bottom__items__home, .header__bottom__items__cinema, .header__bottom__items__free, .header__bottom__items__subscription, .header__bottom__items__signIn {
 	height: 30px;
 	width: 100%;
 }
@@ -549,17 +533,11 @@ body {
 	margin-bottom: 30px;
 }
 
-.language-and-subs,
-.direction-and-actors,
-.ratings,
-.movie-genre {
+.language-and-subs, .direction-and-actors, .ratings, .movie-genre {
 	padding-bottom: 30px;
 }
 
-.language-and-subs__title,
-.direction-and-actors__title,
-.ratings__title,
-.movie-genres__title {
+.language-and-subs__title, .direction-and-actors__title, .ratings__title, .movie-genres__title {
 	font-size: 16px;
 	margin-bottom: 10px;
 	color: #252525;
@@ -584,14 +562,12 @@ body {
 	width: 200px;
 }
 
-.audio,
-.sub {
+.audio, .sub {
 	padding-bottom: 5px;
 	color: #737373;
 }
 
-.audio-subtitle,
-.subtitles-subtitle {
+.audio-subtitle, .subtitles-subtitle {
 	color: #252525;
 	font-size: 16px;
 	font-weight: bold;
@@ -626,9 +602,77 @@ body {
 	flex-wrap: wrap;
 }
 
-.genre-block {
+.genre-block, .circle-block {
 	margin: 10px 5px;
 }
+
+/* Darina circle */
+
+.ratings__contaniner {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+svg {
+	width: 70px;
+	height: 70px;
+	z-index: 1000;
+}
+
+svg circle {
+	width: 100%;
+	height: 100%;
+	fill: none;
+	stroke: rgb(217, 217, 217);
+	stroke-width: 7;
+	stroke-linecap: round;
+	transform: translate(5px, 5px);
+}
+
+svg circle:nth-child(2) {
+	stroke-dasharray: 150;
+	stroke-dashoffset: 220;
+}
+
+svg circle:nth-child(3) {
+	stroke-dasharray: 200;
+	stroke-dashoffset: 220;
+}
+
+svg circle:nth-child(4) {
+	stroke-dasharray: 150;
+	stroke-dashoffset: 220;
+}
+
+.circle__box:nth-child(1) svg circle:nth-child(1) {
+	stroke: rgb(38, 162, 0);
+}
+
+.circle__box:nth-child(2) svg circle:nth-child(2) {
+	stroke: rgb(172, 225, 0);
+}
+
+.circle__box:nth-child(3) svg circle:nth-child(3) {
+	stroke: rgb(38, 162, 0);
+}
+
+.circle__box:nth-child(4) svg circle:nth-child(4) {
+	stroke: rgb(38, 162, 0);
+}
+
+.circle-title {
+	display: flex;
+	justify-content: center;
+	font-weight: 300;
+	font-size: 13px;
+	width: 80%;
+	color: #252525;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+/* --------- */
 
 .genre__title {
 	display: flex;
@@ -736,26 +780,22 @@ body {
 		padding: 30px;
 		padding-bottom: 80px;
 	}
-
 	.info-block {
 		flex-direction: row-reverse;
 		background-color: rgb(241, 241, 241);
 		width: 100%;
 	}
-
 	.info-block__movie {
 		width: 73%;
 		border-left: 1px solid rgb(217, 217, 217);
 		border-right: 1px solid rgb(217, 217, 217);
 	}
-
 	.info-block__social {
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-start;
 		margin: 5px 3px;
 	}
-
 	.nav__items__menu {
 		display: flex;
 	}
@@ -775,20 +815,13 @@ body {
 }
 
 .detail-movie {
-	background: linear-gradient(
-		to bottom,
-		transparent 30%,
-		rgba(0, 0, 0, 0.3) 45%,
-		rgba(0, 0, 0, 0.7) 60%,
-		#000 70%
-	);
+	background: linear-gradient( to bottom, transparent 30%, rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0.7) 60%, #000 70%);
 }
 
 .detail__movie__wrapper {
 	display: flex;
 	flex-direction: column;
-	background: url('rakuten-guardianes/snapshot-1590662517-width1920-quality80.jpeg')
-		no-repeat;
+	background: url('rakuten-guardianes/snapshot-1590662517-width1920-quality80.jpeg') no-repeat;
 	background-size: cover;
 	background-position: top;
 	height: 600px;
@@ -822,8 +855,7 @@ body {
 	font-size: 12px;
 }
 
-.round-action__trailer__element,
-.round-action__wishlist__element {
+.round-action__trailer__element, .round-action__wishlist__element {
 	margin-bottom: 10px;
 	background-color: rgba(0, 0, 0, 0.7);
 	background-size: 30px;
@@ -914,8 +946,7 @@ body {
 	.detail__action__redeem {
 		width: 340px;
 	}
-	.round-action__trailer__element,
-	.round-action__wishlist__element {
+	.round-action__trailer__element, .round-action__wishlist__element {
 		padding: 35px;
 	}
 }
