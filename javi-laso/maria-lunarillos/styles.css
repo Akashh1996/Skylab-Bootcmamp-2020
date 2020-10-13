@@ -389,6 +389,12 @@
 	overflow: hidden;
 }
 
+.tools-row__tall,
+.ingredients-row__tall,
+.parties-row__tall {
+	margin-top: 10px;
+}
+
 .tools__img-container,
 .ingredients__img-container,
 .parties__img-container {
@@ -757,6 +763,11 @@
 	#blog-entry2 {
 		display: initial;
 	}
+
+	.brands img {
+		margin: 15px;
+		filter: grayscale(100%);
+	}
 }
 
 /*///////////////////////////////////////////////// Media query > 900px //////////////////////////////////////////////*/
@@ -911,6 +922,12 @@
 
 	#blog-entry3 {
 		display: initial;
+	}
+
+	.brands {
+		display: flex;
+		justify-items: center;
+		flex-wrap: wrap;
 	}
 }
 
