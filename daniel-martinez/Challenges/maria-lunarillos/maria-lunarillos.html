@@ -6,6 +6,7 @@
 		<title>Utensilios de repostería - Tienda online María Lunarillos</title>
 		<link rel="stylesheet" href="maria-lunarillos.css" />
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">	
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 	<body>
 		<header class="header">
@@ -13,16 +14,55 @@
             <div class="red-block"></div>
             <div class="blue-block"></div>
             <div class="yellow-block"></div>
-            <div class="flex-spacer"></div>
+            <!-- <div class="flex-spacer"></div> -->
 			<div class="user"></div>
 			<div class="search"></div>
 			<div class="cart"></div>
 			<div class="zero">0</div>
 		</header>
 		<main class="page">
-			<section class="logo">
-                <img src="MariaLunarillosMedia/logo-small.svg" alt="logo-small" />
-			</section>
+            <div class="title-container">
+                <section class="logo">
+                    <img src="MariaLunarillosMedia/logo-small.svg" alt="logo-small" class="logo-small"/>
+                    <img src="https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/logo.svg" alt="logo-big" class="logo-big"/>
+                </section>
+                <div class="flex-spacer"></div>
+                <div class="quick-access">
+                    <div class="quick-access__top-block">
+                        <button class="novedades"><i class="fa fa-star" style="color: white;"></i> NOVEDADES</button>
+                        <button class="ofertas"><i class="fa fa-certificate"style="color: white;"></i> OFERTAS</button>
+                        <div class="form-search">
+                            <input type="text" name="search-desktop" id="search-desktop" class="search-desktop" maxlength="128" placeholder="¿Qué buscas?">
+                            <button class="form-search__icon"><i class="fa fa-search" style="color: white;"></i></button>
+                        </div>
+                    </div>
+                    <div class="quick-access__bottom-block">
+                        <div class="quick-access__bottom-block-left">
+                            <div class="category-block">
+                                <div class="utensilios-logo quick-access-logo"></div>
+                                <div class="category-caption">UTENSILIOS</div>
+                            </div>
+                            <div class="category-block">
+                                <div class="ingredientes-logo quick-access-logo"></div>
+                                <div class="category-caption">INGREDIENTES</div>
+                            </div>
+                            <div class="category-block">
+                                <div class="fiestas-logo quick-access-logo"></div>
+                                <div class="category-caption">FIESTAS</div>
+                            </div>
+                            <div class="category-block">
+                                <div class="marcas-logo quick-access-logo"></div>
+                                <div class="category-caption">MARCAS</div>
+                            </div>
+                        </div>
+                        <div class="flex-spacer"></div>
+                        <div class="category-block">
+                            <div class="blog-logo"></div>
+                            <div class="blog-caption">BLOG</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <section class="top-container">
                 <img src="MariaLunarillosMedia/1080X600(2).png" class="big-image" alt="big-image">
                 <div class="circles">
@@ -52,33 +92,52 @@
                     </div>
                 </div>
                 <div class="categories-photos">
-                    <figure class="categories-photos__molde box">
-                        <h2 class="description">MOLDES DE REPOSTERÍA</h2>
-                    </figure>
-                    <figure class="categories-photos__uten-basico box">
-                        <h2 class="description">UTENSILIOS BÁSICOS</h2>
-                    </figure>
-                    <figure class="categories-photos__pequeno-elect box">
-                        <h2 class="description">PEQUEÑO ELECTRODOMÉSTICO</h2>
-                    </figure>
-                    <figure class="categories-photos__capsulas box">
-                        <h2 class="description">CÁPSULAS PARA MAGDALENAS</h2>
-                    </figure>
-                    <figure class="categories-photos__cajas-y-bases box">
-                        <h2 class="description">CAJAS Y BASES</h2>
-                    </figure>
-                    <figure class="categories-photos__cortadores-galletas box">
-                        <h2 class="description">CORTADORES DE GALLETAS</h2>
-                    </figure>
-                    <figure class="categories-photos__ceramica-y-textil box">
-                        <h2 class="description">CERÁMICA Y TEXTIL</h2>
-                    </figure>
-                    <figure class="categories-photos__banetones box">
-                        <h2 class="description">BANETONES PARA PAN</h2>
-                    </figure>
-                    <figure class="categories-photos__toppers-y-figuritas box">
-                        <h2 class="description">TOPPERS Y FIGURITAS</h2>
-                    </figure>
+                    <div class="triple-block">
+                        <div class="single-block__column">
+                            <figure class="categories-photos__molde box-single">
+                            <h2 class="description">MOLDES DE REPOSTERÍA</h2>
+                            </figure>
+                        </div>
+                        <div class="triple-block__column">
+                            <figure class="categories-photos__uten-basico box-double">
+                                <h2 class="description">UTENSILIOS BÁSICOS</h2>
+                            </figure>
+                            <figure class="categories-photos__pequeno-elect box-double">
+                                <h2 class="description">PEQUEÑO ELECTRODOMÉSTICO</h2>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="triple-block">
+                        <div class="triple-block__column">
+                            <figure class="categories-photos__capsulas box-double">
+                                <h2 class="description">CÁPSULAS PARA MAGDALENAS</h2>
+                            </figure>          
+                            <figure class="categories-photos__cajas-y-bases box-double">
+                                <h2 class="description">CAJAS Y BASES</h2>
+                            </figure>
+                            </div>
+                            <div class="single-block__column">
+                            <figure class="categories-photos__cortadores-galletas box-single">
+                                <h2 class="description">CORTADORES DE GALLETAS</h2>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="triple-block">
+                        <div class="single-block__column">
+                            <figure class="categories-photos__ceramica-y-textil box-single">
+                                <h2 class="description">CERÁMICA Y TEXTIL</h2>
+                            </figure>
+                        </div>
+                        <div class="triple-block__column">
+                            <figure class="categories-photos__banetones box-double">
+                                <h2 class="description">BANETONES PARA PAN</h2>
+                            </figure>
+                            <figure class="categories-photos__toppers-y-figuritas box-double">
+                                <h2 class="description">TOPPERS Y FIGURITAS</h2>
+                            </figure>
+                        </div>
+                    </div>
+                    
                 </div>
                 <div class="ver-mas">
                     <button class="ver-mas__button">VER MÁS</button>
@@ -96,25 +155,37 @@
                     </div>
                 </div>
                 <div class="categories-photos">
-                    <figure class="categories-photos__fondant box">
-                        <h2 class="description">FONDANT</h2>
-                    </figure>
-                    <figure class="categories-photos__ingredientes-de-reposteria box">
-                        <h2 class="description">INGREDIENTES DE RESPOSTERÍA</h2>
-                    </figure>
-                    <figure class="categories-photos__impresion-personalizada box">
-                        <h2 class="description">IMPRESIÓN PERSONALIZADA</h2>
-                    </figure>
-                    <figure class="categories-photos__colorantes-alimentarios box">
-                        <h2 class="description">COLORANTES ALIMENTARIOS</h2>
-                    </figure>
-                    <figure class="categories-photos__papel-comestible box">
-                        <h2 class="description">PAPEL COMESTIBLE</h2>
-                    </figure>
-                    <figure class="categories-photos__sprinkles-y-purpurinas box">
-                        <h2 class="description">SPRINKLES Y PURPURINAS</h2>
-                    </figure>
-                </div>
+                    <div class="triple-block">
+                        <div class="single-block__column">
+                            <figure class="categories-photos__fondant box-single">
+                                <h2 class="description">FONDANT</h2>
+                            </figure>
+                            </div>
+                        <div class="triple-block__column">
+                            <figure class="categories-photos__ingredientes-de-reposteria box-double">
+                                <h2 class="description">INGREDIENTES DE RESPOSTERÍA</h2>
+                            </figure>
+                            <figure class="categories-photos__impresion-personalizada box-double">
+                                <h2 class="description">IMPRESIÓN PERSONALIZADA</h2>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="triple-block">
+                        <div class="triple-block__column">
+                            <figure class="categories-photos__colorantes-alimentarios box-double">
+                                <h2 class="description">COLORANTES ALIMENTARIOS</h2>
+                            </figure>
+                            <figure class="categories-photos__papel-comestible box-double">
+                                <h2 class="description">PAPEL COMESTIBLE</h2>
+                            </figure>
+                            </div>
+                            <div class="single-block__column">
+                                <figure class="categories-photos__sprinkles-y-purpurinas box-single">
+                                    <h2 class="description">SPRINKLES Y PURPURINAS</h2>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                 <div class="ver-mas">
                     <button class="ver-mas__button">VER MÁS</button>
                 </div>
@@ -131,16 +202,22 @@
                     </div>
                 </div>
                 <div class="categories-photos">
-                    <figure class="categories-photos__fiestas-tematicas box">
-                        <h2 class="description">FIESTAS TEMÁTICAS</h2>
-                    </figure>
-                    <figure class="categories-photos__fiestas-personajes box">
-                        <h2 class="description">FIESTAS PERSONAJES</h2>
-                    </figure>
-                    <figure class="categories-photos__accesorios-para-fiestas box">
-                        <h2 class="description">ACCESORIOS PARA FIESTAS</h2>
-                    </figure>
-                </div>
+                    <div class="triple-block">
+                        <div class="triple-block__column">
+                            <figure class="categories-photos__fiestas-tematicas box-double">
+                                <h2 class="description">FIESTAS TEMÁTICAS</h2>
+                            </figure>
+                            <figure class="categories-photos__fiestas-personajes box-double">
+                                <h2 class="description">FIESTAS PERSONAJES</h2>
+                            </figure>
+                            </div>
+                            <div class="single-block__column">
+                                <figure class="categories-photos__accesorios-para-fiestas box-single">
+                                    <h2 class="description">ACCESORIOS PARA FIESTAS</h2>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                 <div class="ver-mas">
                     <button class="ver-mas__button">VER MÁS</button>
                 </div>
@@ -218,7 +295,7 @@
                     <div class="sn youtube"></div>
                 </div>
             </section>
-            <section class="novedades">
+            <section class="novedades-footer">
                 <h3 class="recibe-novedades h3">RECIBE LAS NOVEDADES EN TU EMAIL</h3>
                 <input type="text" class="email">
                 <div class="politica-privacidad">

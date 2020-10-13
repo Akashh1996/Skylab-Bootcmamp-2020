@@ -85,8 +85,16 @@
 	text-align: center;
 }
 
+.logo-big {
+	display: none;
+}
+
 .logo-small {
 	max-width: 325px;
+}
+
+.quick-access {
+	display: none;
 }
 
 .top-container {
@@ -169,7 +177,8 @@
 	align-items: center;
 }
 
-.box {
+.box-single,
+.box-double {
 	display: flex;
 	justify-content: left;
 	margin-bottom: 7.5px;
@@ -478,7 +487,7 @@
 	background-position: -176px -494px;
 }
 
-.novedades {
+.novedades-footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -576,12 +585,228 @@
 	line-height: 50px;
 }
 
-@media screen and (min-width: 675px) {
+@media screen and (min-width: 1020px) {
 	.burgermenu {
 		display: none;
 	}
 
+	.title-container {
+		display: flex;
+		flex-direction: row;
+		margin: 0 60px;
+	}
+
 	.flex-spacer {
 		flex: 2;
+	}
+
+	.logo {
+		padding: 0;
+		display: flex;
+		align-content: center;
+		max-width: 300px;
+	}
+
+	.logo-small {
+		display: none;
+	}
+
+	.logo-big {
+		display: block;
+		max-width: 250px;
+		margin: 80px 0 30px;
+	}
+
+	.quick-access {
+		display: flex;
+		flex-direction: column;
+		max-width: 570px;
+		padding: 50px 0 0;
+	}
+
+	.flex-spacer {
+		display: block;
+		position: relative;
+		flex: 1;
+		background: rgb(255, 255, 255);
+	}
+
+	.quick-access__top-block {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 30px;
+	}
+
+	.novedades,
+	.ofertas {
+		padding: 0 8px 0 0;
+		width: 130px;
+		text-transform: uppercase;
+		color: #ffffff;
+		display: block;
+		font-size: 15px;
+		font-weight: 600;
+		text-decoration: none;
+		letter-spacing: 1px;
+		line-height: 30px;
+		text-align: center;
+		margin-right: 5px;
+		border: none;
+	}
+
+	.novedades {
+		background: #9faa4d;
+	}
+
+	.ofertas {
+		background: #8e789d;
+	}
+
+	.form-search {
+		color: #bbb;
+		display: flex;
+		width: 300px;
+		border: 1px solid #bbb8b6;
+	}
+
+	.form-search__icon {
+		width: 50px;
+		justify-self: right;
+		background-color: rgb(170, 170, 170);
+		border: none;
+	}
+
+	.search-desktop {
+		float: left;
+		border: none;
+		width: calc(100% - 49px);
+		height: 28px;
+		margin: 0;
+		font-size: 12px;
+		letter-spacing: 1px;
+		padding: 0 5px;
+		color: #bbb8b6;
+		text-transform: uppercase;
+	}
+
+	.quick-access__bottom-block {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.quick-access__bottom-block-left {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.category-block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-right: 5px;
+	}
+
+	.quick-access-logo {
+		background-position: center;
+		background-color: #f2f2f2;
+		background-repeat: no-repeat;
+		font-size: 15px;
+		letter-spacing: 1px;
+		color: #2e2925;
+		position: relative;
+		width: 100px;
+		height: 100px;
+	}
+
+	.blog-logo {
+		background-position: center;
+		background-color: #ff5959;
+		background-repeat: no-repeat;
+		background-size: 50%;
+		font-size: 15px;
+		position: relative;
+		width: 100px;
+		height: 100px;
+	}
+
+	.category-caption,
+	.blog-caption {
+		font-size: 15px;
+		margin-top: 7px;
+		text-align: center;
+		font-weight: 600;
+		position: relative;
+		padding: 0;
+		letter-spacing: 1px;
+		font-weight: 400;
+	}
+
+	.blog-caption {
+		color: #ff5959;
+	}
+
+	.utensilios-logo {
+		background-image: url(MariaLunarillosMedia/utensiliosML.png);
+		background-size: 50%;
+	}
+
+	.ingredientes-logo {
+		background-image: url(MariaLunarillosMedia/magdalena.png);
+		background-size: 50%;
+	}
+
+	.fiestas-logo {
+		background-image: url(MariaLunarillosMedia/tarta-cumpleanos.png);
+		background-size: 50%;
+	}
+
+	.marcas-logo {
+		background-image: url(MariaLunarillosMedia/delantal.png);
+		background-size: 70%;
+	}
+
+	.blog-logo {
+		background-image: url(MariaLunarillosMedia/menu.svg);
+		background-repeat: no-repeat;
+		background-position: -465px -5px;
+		background-size: 800px;
+	}
+
+	.top-container {
+		margin: 20px 174px;
+	}
+
+	.triple-block {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.triple-block__column {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.single-block__column {
+		padding-bottom: 10px;
+	}
+
+	.box-single,
+	.box-double {
+		margin: 7.5px;
+	}
+
+	.box-single {
+		height: 615px;
+		width: 350px;
+	}
+
+	.box-double {
+		height: 300px;
+		width: 715px;
+	}
+
+	.categories-photos {
+		margin-bottom: 100px;
 	}
 }
