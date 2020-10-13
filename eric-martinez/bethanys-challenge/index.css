@@ -8,10 +8,6 @@ body{
     margin-left: 30px;
 }
 
-.hidden-outline{
-    display: none;
-}
-
 nav{
     display: flex;
     align-content: center;
