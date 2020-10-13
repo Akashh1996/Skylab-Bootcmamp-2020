@@ -363,6 +363,11 @@ div.img-container div.imgcontainer__img figure.imggroup div.textbox p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  color: #ff5959;
 }
 
 .copyright {
