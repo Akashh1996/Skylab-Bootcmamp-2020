@@ -146,10 +146,22 @@
 			</div>
 			<article class="detail-content__wrapper">
 				<aside class="detail__socialmedia">
-					<button class="socialmedia-icon fas fa-eye"></button>
-					<button class="socialmedia-icon fab fa-twitter"></button>
-					<button class="socialmedia-icon fab fa-facebook-f"></button>
-					<button class="socialmedia-icon fab fa-pinterest-p"></button>
+					<div class="socialmedia__wrapper">
+						<button class="socialmedia-icon fas fa-eye"></button>
+						<span class="icon__description">Marcar como ya visto</span>
+					</div>
+					<div class="socialmedia__wrapper">
+						<button class="socialmedia-icon fab fa-twitter"></button>
+						<span class="icon__description">Twitter</span>
+					</div>
+					<div class="socialmedia__wrapper">
+						<button class="socialmedia-icon fab fa-facebook-f"></button>
+						<span class="icon__description">Facebook</span>
+					</div>
+					<div class="socialmedia__wrapper">
+						<button class="socialmedia-icon fab fa-pinterest-p"></button>
+						<span class="icon__description">Pinterest</span>
+					</div>
 				</aside>
 				<div class="detail-content__main">
 					<div class="main-content__card">
@@ -189,114 +201,126 @@
 							enfrenta a constantes desafíos y deberá aprender a canalizar su
 							fuerza interior y a aceptar su verdadero potencial.
 						</div>
-						<div>
-							<table>
-								<caption class="fas fa-language">
-									Idioma y subtítulo
-								</caption>
-								<tr>
-									<th>Audio</th>
-									<th>subtítulos</th>
+						<div class="content-card__table">
+							<span class="fas fa-language"> </span>
+							<span class="card-table__title"> Idioma y subtítulo </span>
+							<table class="card-table__container">
+								<tr class="table-row">
+									<th class="table-row__title">Audio</th>
+									<td class="table-space"></td>
+									<th class="table-row__title">Subtítulos</th>
 								</tr>
-								<tr>
-									<td>Inglés</td>
-									<td>
-										Alemán,Italiano,Español,Inglés,Holandés /
-										Flamenco,Francés,Sin subtítulos
+								<tr class="table-row">
+									<td class="table-row__text">Inglés</td>
+									<td class="table-space"></td>
+									<td class="table-row__text">
+										Alemán, Italiano, Español, Inglés, Holandés / Flamenco,
+										Francés, Sin subtítulos
 									</td>
 								</tr>
-								<tr>
-									<td>Español</td>
-									<td>
-										Alemán,Italiano,Español,Inglés,Holandés /
-										Flamenco,Francés,Sin subtítulos
+								<tr class="table-row">
+									<td class="table-row__text">Español</td>
+									<td class="table-space"></td>
+									<td class="table-row__text">
+										Alemán, Italiano, Español Inglés, Holandés / Flamenco,
+										Francés, Sin subtítulos
 									</td>
 								</tr>
 							</table>
 						</div>
-						<div>
-							<span>Direccion y reparto</span>
-							<div>
-								<div>
-									<span
-										><a href="#"
-											><img
-												src="./rakuten-image/detalle/niki-caro-1525311147-width170-quality50.jpeg"
-												alt="" /></a
-									></span>
+						<div class="content-card__actors">
+							<span class="fas fa-film"></span>
+							<span class="card-actors__title">Direccion y reparto</span>
+							<div class="card-actors__gallery">
+								<div class="actor-gallery__image">
+									<a href="#" class="image-cast">
+										<div class="image-nikicaro"></div>
+										<span class="actor-name">Niki Caro</span>
+									</a>
 								</div>
-								<div>
-									<span
-										><a href="#"
-											><img
-												src="./rakuten-image/detalle/yifei-liu-1525283501-width170-quality50.jpeg"
-												alt="" /></a
-									></span>
+								<div class="actor-gallery__image">
+									<a href="#" class="image-cast">
+										<div class="image-yifeiliu"></div>
+										<span class="actor-name">Yifei Liu</span>
+									</a>
 								</div>
-								<div>
-									<span
-										><a href="#"
-											><img
-												src="./rakuten-image/detalle/donnie-yen-1525279749-width170-quality50.jpeg"
-												alt="" /></a
-									></span>
+								<div class="actor-gallery__image">
+									<a href="#" class="image-cast">
+										<div class="image-donnieyen"></div>
+										<span class="actor-name">Donnie Yen</span>
+									</a>
 								</div>
-								<div>
-									<span
-										><a href="#"
-											><img
-												src="./rakuten-image/detalle/li-gong-1525283640-width170-quality50.jpeg"
-												alt="" /></a
-									></span>
+								<div class="actor-gallery__image">
+									<a href="#" class="image-cast">
+										<div class="image-ligong"></div>
+										<span class="actor-name">Li Gong</span>
+									</a>
 								</div>
-								<div>
-									<span
-										><a href="#"
-											><img
-												src="./rakuten-image/detalle/jet-li-1525277511-width170-quality50.jpeg"
-												alt="" /></a
-									></span>
+								<div class="actor-gallery__image">
+									<a href="#" class="image-cast">
+										<div class="image-jetli"></div>
+										<span class="actor-name">Jet Li</span>
+									</a>
 								</div>
-								<div>
-									<span
-										><a href="#"
-											><img
-												src="./rakuten-image/detalle/jason-scott-lee-1525295648-width170-quality50.jpeg"
-												alt="" /></a
-									></span>
+								<div class="actor-gallery__image">
+									<a href="#" class="image-cast">
+										<div class="image-jasonscottlee"></div>
+										<span class="actor-name">Jaso Scott Lee</span>
+									</a>
 								</div>
-								<div>
-									<span
-										><a href="#"
-											><img
-												src="./rakuten-image/detalle/yoson-an-1558058544-width170-quality50.jpeg"
-												alt="" /></a
-									></span>
+								<div class="actor-gallery__image">
+									<a href="#" class="image-cast">
+										<div class="image-yosonan"></div>
+										<span class="actor-name">Yoson An</span>
+									</a>
 								</div>
-								<div>
-									<span
-										><a href="#"
-											><img
-												src="./rakuten-image/detalle/tzi-ma-1525278658-width170-quality50.jpeg"
-												alt="" /></a
-									></span>
+								<div class="actor-gallery__image">
+									<a href="#" class="image-cast">
+										<div class="image-tzima"></div>
+										<span class="actor-name">Tzi Ma</span>
+									</a>
 								</div>
-								<div>
-									<span
-										><a href="#"
-											><img
-												src="./rakuten-image/detalle/rosalind-chao-1525296176-width170-quality50.jpeg"
-												alt="" /></a
-									></span>
+								<div class="actor-gallery__image">
+									<a href="#" class="image-cast">
+										<div class="image-rosalindchao"></div>
+										<span class="actor-name">Rosalind Chao</span>
+									</a>
 								</div>
-								<div>
-									<span
-										><a href="#"
-											><img
-												src="./rakuten-image/detalle/pei-pei-cheng-1525291918-width170-quality50.jpeg"
-												alt="" /></a
-									></span>
+								<div class="actor-gallery__image">
+									<a href="#" class="image-cast">
+										<div class="image-peipeicheng"></div>
+										<span class="actor-name">Pei-pei Cheng</span>
+									</a>
 								</div>
+							</div>
+						</div>
+						<div class="content-card__rating">
+							<div></div>
+						</div>
+						<div class="content-card__gender">
+							<span class="fas fa-theater-masks"></span>
+							<span class="card-gender__title">Géneros</span>
+							<div class="card-gender__genders">
+								<a href="#" class="gender__group">
+									<div class="gender__action gender-image"></div>
+									<span class="gender__name">Acción</span>
+								</a>
+								<a href="#" class="gender__group">
+									<div class="gender__adventure gender-image"></div>
+									<span class="gender__name">Aventuras</span>
+								</a>
+								<a href="#" class="gender__group">
+									<div class="gender__familyfilm gender-image"></div>
+									<span class="gender__name">Cine Familiar</span>
+								</a>
+								<a href="#" class="gender__group">
+									<div class="gender__disney gender-image"></div>
+									<span class="gender__name">Disney</span>
+								</a>
+								<a href="#" class="gender__group">
+									<div class="gender__drama gender-image"></div>
+									<span class="gender__name">Drama</span>
+								</a>
 							</div>
 						</div>
 					</div>

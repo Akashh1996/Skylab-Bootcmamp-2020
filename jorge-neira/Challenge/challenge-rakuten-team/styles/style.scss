@@ -170,6 +170,9 @@ input {
 						border-radius: 50%;
 						background-color: rgba(0, 0, 0, 0.513);
 					}
+					.group__icon:hover {
+						color: $hoverColor;
+					}
 					.group__title {
 						text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
 						text-align: center;
@@ -253,24 +256,30 @@ input {
 		.detail__socialmedia {
 			padding: 30px;
 			text-align: center;
-			.socialmedia-icon {
-				cursor: pointer;
-				outline: none;
-				margin-left: 12px;
-				background-color: $primaryColor;
-				border: 1px solid #d9d9d9;
-				border-radius: 50%;
-				text-align: center;
-				font-size: 16px;
-				height: 50px;
-				width: 50px;
-			}
-			.socialmedia-icon:hover {
-				color: $navIconBg-Txt-Color;
-			}
-			.socialmedia-icon:active {
-				background-color: #252525;
-				color: #f1f1f1;
+			.socialmedia__wrapper {
+				display: inline;
+				.icon__description {
+					display: none;
+				}
+				.socialmedia-icon {
+					cursor: pointer;
+					outline: none;
+					margin-left: 12px;
+					background-color: $primaryColor;
+					border: 1px solid #d9d9d9;
+					border-radius: 50%;
+					text-align: center;
+					font-size: 16px;
+					height: 50px;
+					width: 50px;
+				}
+				.socialmedia-icon:hover {
+					color: $navIconBg-Txt-Color;
+				}
+				.socialmedia-icon:active {
+					background-color: #252525;
+					color: #f1f1f1;
+				}
 			}
 		}
 		.detail-content__main {
@@ -307,6 +316,155 @@ input {
 					margin-top: 10px;
 					font-size: 16px;
 					line-height: 180%;
+					margin-bottom: 30px;
+				}
+				.content-card__table {
+					margin-bottom: 30px;
+					.card-table__title {
+						font-weight: 600;
+					}
+					.card-table__container {
+						.table-row {
+							.table-row__title {
+								text-align: left;
+							}
+							.table-row__text {
+								color: #737373;
+								font-weight: 100;
+							}
+							.table-space {
+								padding: 0 15px;
+							}
+						}
+					}
+				}
+				.content-card__actors {
+					margin-bottom: 30px;
+					.card-actors__title {
+						font-weight: 600;
+					}
+					.card-actors__gallery {
+						margin-top: 10px;
+						display: flex;
+						overflow: hidden;
+						.actor-gallery__image {
+							margin: 0 10px 0 0;
+							text-align: center;
+							.image-cast {
+								width: 80px;
+								white-space: normal;
+								text-decoration: none;
+								.actor-name {
+									color: #252525;
+									font-size: 13px;
+								}
+								.image-nikicaro {
+									background-image: url(../rakuten-image/detalle/niki-caro-1525311147-width170-quality50.jpeg);
+									background-size: cover;
+									width: 80px;
+									height: 120px;
+								}
+								.image-yifeiliu {
+									background-image: url(../rakuten-image/detalle/yifei-liu-1525283501-width170-quality50.jpeg);
+									background-size: cover;
+									width: 80px;
+									height: 120px;
+								}
+								.image-donnieyen {
+									background-image: url(../rakuten-image/detalle/donnie-yen-1525279749-width170-quality50.jpeg);
+									background-size: cover;
+									width: 80px;
+									height: 120px;
+								}
+								.image-ligong {
+									background-image: url(../rakuten-image/detalle/li-gong-1525283640-width170-quality50.jpeg);
+									background-size: cover;
+									width: 80px;
+									height: 120px;
+								}
+								.image-jetli {
+									background-image: url(../rakuten-image/detalle/jet-li-1525277511-width170-quality50.jpeg);
+									background-size: cover;
+									width: 80px;
+									height: 120px;
+								}
+								.image-jasonscottlee {
+									background-image: url(../rakuten-image/detalle/jason-scott-lee-1525295648-width170-quality50.jpeg);
+									background-size: cover;
+									width: 80px;
+									height: 120px;
+								}
+								.image-yosonan {
+									background-image: url(../rakuten-image/detalle/yoson-an-1558058544-width170-quality50.jpeg);
+									background-size: cover;
+									width: 80px;
+									height: 120px;
+								}
+								.image-tzima {
+									background-image: url(../rakuten-image/detalle/tzi-ma-1525278658-width170-quality50.jpeg);
+									background-size: cover;
+									width: 80px;
+									height: 120px;
+								}
+								.image-rosalindchao {
+									background-image: url(../rakuten-image/detalle/rosalind-chao-1525296176-width170-quality50.jpeg);
+									background-size: cover;
+									width: 80px;
+									height: 120px;
+								}
+								.image-peipeicheng {
+									background-image: url(../rakuten-image/detalle/pei-pei-cheng-1525291918-width170-quality50.jpeg);
+									background-size: cover;
+									width: 80px;
+									height: 120px;
+								}
+							}
+						}
+					}
+				}
+				.content-card__gender {
+					margin-bottom: 30px;
+					.card-gender__title {
+						font-weight: 600;
+					}
+					.card-gender__genders {
+						margin-top: 15px;
+						.gender__group {
+							display: inline-block;
+							text-decoration: none;
+							text-align: center;
+							color: #737373;
+							margin: 0 15px 10px 0;
+							.gender-image {
+								display: block;
+								width: 80px;
+								height: 80px;
+								background-color: #d9d9d9;
+								background-size: 100%;
+								border-radius: 50%;
+								transition: opacity 0.2s ease;
+								box-shadow: inset 0 0 0 7px #d9d9d9;
+							}
+							.gender__action {
+								background-image: url(../rakuten-image/detalle/action-1591342700.png);
+							}
+							.gender__adventure {
+								background-image: url(../rakuten-image/detalle/adventure-1591342698.png);
+							}
+							.gender__familyfilm {
+								background-image: url(../rakuten-image/detalle/kids-family-1591342710.png);
+							}
+							.gender__disney {
+								background-image: url(../rakuten-image/detalle/disney-1591342735.png);
+							}
+							.gender__drama {
+								background-image: url(../rakuten-image/detalle/drama-1591342739.png);
+							}
+							.gender__name {
+								font-size: 12px;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -651,6 +809,94 @@ input {
 						background-color: $hoverRegisterColor;
 						transition: color 2s ease-in-out;
 						border-radius: 2px;
+					}
+				}
+			}
+		}
+	}
+	.detail {
+		.detail__hero {
+			min-height: 455px;
+			height: 620px;
+			.detail__info {
+				height: 100%;
+				.detail-info__links {
+					top: 29%;
+
+					.links__group {
+						width: 115px;
+						.group__icon {
+							font-size: 38px;
+							height: 115px;
+							width: 115px;
+						}
+					}
+				}
+				.detail-info__data {
+					bottom: 180px;
+					text-align: center;
+					.detail-title {
+						font-size: 42px;
+					}
+				}
+				.detail-info__buttons {
+					display: flex;
+					width: 50%;
+					.info-btn {
+						background-color: $hoverColor;
+						cursor: pointer;
+						outline: none;
+						border: none;
+						margin: 0 auto;
+						width: 50%;
+						display: flex;
+						justify-content: space-between;
+						padding: 12px 14px;
+					}
+					.button-seenow__buy {
+						position: absolute;
+						left: 25%;
+						transform: translateY(-52px);
+						background-color: $primaryColor;
+						z-index: -1;
+					}
+					.button-discount {
+						justify-content: center;
+						margin-top: 5px;
+						background-color: $secondaryColor;
+						border: 2px solid #f5da00;
+						.button__title {
+							color: #f5da00;
+						}
+					}
+				}
+			}
+		}
+		.detail-content__wrapper {
+			background-color: #f1f1f1;
+			display: flex;
+			flex-direction: row-reverse;
+			.detail__socialmedia {
+				padding: 30px;
+				width: 25%;
+				.socialmedia__wrapper {
+					.icon__description {
+						display: inline-block;
+					}
+				}
+			}
+			.detail-content__main {
+				width: 75%;
+				.main-content__card {
+					padding: 15px;
+					.content-card__info {
+						font-size: 14px;
+						.info__block {
+							margin-bottom: 4px;
+							margin-right: 15px;
+							display: inline-block;
+							font-weight: 600;
+						}
 					}
 				}
 			}

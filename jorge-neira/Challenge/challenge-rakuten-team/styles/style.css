@@ -206,6 +206,10 @@ input {
   background-color: rgba(0, 0, 0, 0.513);
 }
 
+.detail .detail__hero .detail__info .detail-info__links .links__group .group__icon:hover {
+  color: #ffe300;
+}
+
 .detail .detail__hero .detail__info .detail-info__links .links__group .group__title {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
   text-align: center;
@@ -318,7 +322,15 @@ input {
   text-align: center;
 }
 
-.detail .detail-content__wrapper .detail__socialmedia .socialmedia-icon {
+.detail .detail-content__wrapper .detail__socialmedia .socialmedia__wrapper {
+  display: inline;
+}
+
+.detail .detail-content__wrapper .detail__socialmedia .socialmedia__wrapper .icon__description {
+  display: none;
+}
+
+.detail .detail-content__wrapper .detail__socialmedia .socialmedia__wrapper .socialmedia-icon {
   cursor: pointer;
   outline: none;
   margin-left: 12px;
@@ -331,11 +343,11 @@ input {
   width: 50px;
 }
 
-.detail .detail-content__wrapper .detail__socialmedia .socialmedia-icon:hover {
+.detail .detail-content__wrapper .detail__socialmedia .socialmedia__wrapper .socialmedia-icon:hover {
   color: #999;
 }
 
-.detail .detail-content__wrapper .detail__socialmedia .socialmedia-icon:active {
+.detail .detail-content__wrapper .detail__socialmedia .socialmedia__wrapper .socialmedia-icon:active {
   background-color: #252525;
   color: #f1f1f1;
 }
@@ -384,6 +396,187 @@ input {
   margin-top: 10px;
   font-size: 16px;
   line-height: 180%;
+  margin-bottom: 30px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__table {
+  margin-bottom: 30px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__table .card-table__title {
+  font-weight: 600;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__table .card-table__container .table-row .table-row__title {
+  text-align: left;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__table .card-table__container .table-row .table-row__text {
+  color: #737373;
+  font-weight: 100;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__table .card-table__container .table-row .table-space {
+  padding: 0 15px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__actors {
+  margin-bottom: 30px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__actors .card-actors__title {
+  font-weight: 600;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__actors .card-actors__gallery {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__actors .card-actors__gallery .actor-gallery__image {
+  margin: 0 10px 0 0;
+  text-align: center;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__actors .card-actors__gallery .actor-gallery__image .image-cast {
+  width: 80px;
+  white-space: normal;
+  text-decoration: none;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__actors .card-actors__gallery .actor-gallery__image .image-cast .actor-name {
+  color: #252525;
+  font-size: 13px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__actors .card-actors__gallery .actor-gallery__image .image-cast .image-nikicaro {
+  background-image: url(../rakuten-image/detalle/niki-caro-1525311147-width170-quality50.jpeg);
+  background-size: cover;
+  width: 80px;
+  height: 120px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__actors .card-actors__gallery .actor-gallery__image .image-cast .image-yifeiliu {
+  background-image: url(../rakuten-image/detalle/yifei-liu-1525283501-width170-quality50.jpeg);
+  background-size: cover;
+  width: 80px;
+  height: 120px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__actors .card-actors__gallery .actor-gallery__image .image-cast .image-donnieyen {
+  background-image: url(../rakuten-image/detalle/donnie-yen-1525279749-width170-quality50.jpeg);
+  background-size: cover;
+  width: 80px;
+  height: 120px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__actors .card-actors__gallery .actor-gallery__image .image-cast .image-ligong {
+  background-image: url(../rakuten-image/detalle/li-gong-1525283640-width170-quality50.jpeg);
+  background-size: cover;
+  width: 80px;
+  height: 120px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__actors .card-actors__gallery .actor-gallery__image .image-cast .image-jetli {
+  background-image: url(../rakuten-image/detalle/jet-li-1525277511-width170-quality50.jpeg);
+  background-size: cover;
+  width: 80px;
+  height: 120px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__actors .card-actors__gallery .actor-gallery__image .image-cast .image-jasonscottlee {
+  background-image: url(../rakuten-image/detalle/jason-scott-lee-1525295648-width170-quality50.jpeg);
+  background-size: cover;
+  width: 80px;
+  height: 120px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__actors .card-actors__gallery .actor-gallery__image .image-cast .image-yosonan {
+  background-image: url(../rakuten-image/detalle/yoson-an-1558058544-width170-quality50.jpeg);
+  background-size: cover;
+  width: 80px;
+  height: 120px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__actors .card-actors__gallery .actor-gallery__image .image-cast .image-tzima {
+  background-image: url(../rakuten-image/detalle/tzi-ma-1525278658-width170-quality50.jpeg);
+  background-size: cover;
+  width: 80px;
+  height: 120px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__actors .card-actors__gallery .actor-gallery__image .image-cast .image-rosalindchao {
+  background-image: url(../rakuten-image/detalle/rosalind-chao-1525296176-width170-quality50.jpeg);
+  background-size: cover;
+  width: 80px;
+  height: 120px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__actors .card-actors__gallery .actor-gallery__image .image-cast .image-peipeicheng {
+  background-image: url(../rakuten-image/detalle/pei-pei-cheng-1525291918-width170-quality50.jpeg);
+  background-size: cover;
+  width: 80px;
+  height: 120px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__gender {
+  margin-bottom: 30px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__gender .card-gender__title {
+  font-weight: 600;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__gender .card-gender__genders {
+  margin-top: 15px;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__gender .card-gender__genders .gender__group {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  color: #737373;
+  margin: 0 15px 10px 0;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__gender .card-gender__genders .gender__group .gender-image {
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-color: #d9d9d9;
+  background-size: 100%;
+  border-radius: 50%;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  -webkit-box-shadow: inset 0 0 0 7px #d9d9d9;
+          box-shadow: inset 0 0 0 7px #d9d9d9;
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__gender .card-gender__genders .gender__group .gender__action {
+  background-image: url(../rakuten-image/detalle/action-1591342700.png);
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__gender .card-gender__genders .gender__group .gender__adventure {
+  background-image: url(../rakuten-image/detalle/adventure-1591342698.png);
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__gender .card-gender__genders .gender__group .gender__familyfilm {
+  background-image: url(../rakuten-image/detalle/kids-family-1591342710.png);
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__gender .card-gender__genders .gender__group .gender__disney {
+  background-image: url(../rakuten-image/detalle/disney-1591342735.png);
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__gender .card-gender__genders .gender__group .gender__drama {
+  background-image: url(../rakuten-image/detalle/drama-1591342739.png);
+}
+
+.detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__gender .card-gender__genders .gender__group .gender__name {
+  font-size: 12px;
 }
 
 .movie-gallery {
@@ -771,6 +964,103 @@ input {
     -webkit-transition: color 2s ease-in-out;
     transition: color 2s ease-in-out;
     border-radius: 2px;
+  }
+  .detail .detail__hero {
+    min-height: 455px;
+    height: 620px;
+  }
+  .detail .detail__hero .detail__info {
+    height: 100%;
+  }
+  .detail .detail__hero .detail__info .detail-info__links {
+    top: 29%;
+  }
+  .detail .detail__hero .detail__info .detail-info__links .links__group {
+    width: 115px;
+  }
+  .detail .detail__hero .detail__info .detail-info__links .links__group .group__icon {
+    font-size: 38px;
+    height: 115px;
+    width: 115px;
+  }
+  .detail .detail__hero .detail__info .detail-info__data {
+    bottom: 180px;
+    text-align: center;
+  }
+  .detail .detail__hero .detail__info .detail-info__data .detail-title {
+    font-size: 42px;
+  }
+  .detail .detail__hero .detail__info .detail-info__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+  }
+  .detail .detail__hero .detail__info .detail-info__buttons .info-btn {
+    background-color: #ffe300;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin: 0 auto;
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 12px 14px;
+  }
+  .detail .detail__hero .detail__info .detail-info__buttons .button-seenow__buy {
+    position: absolute;
+    left: 25%;
+    -webkit-transform: translateY(-52px);
+            transform: translateY(-52px);
+    background-color: #fff;
+    z-index: -1;
+  }
+  .detail .detail__hero .detail__info .detail-info__buttons .button-discount {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 5px;
+    background-color: #000;
+    border: 2px solid #f5da00;
+  }
+  .detail .detail__hero .detail__info .detail-info__buttons .button-discount .button__title {
+    color: #f5da00;
+  }
+  .detail .detail-content__wrapper {
+    background-color: #f1f1f1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .detail .detail-content__wrapper .detail__socialmedia {
+    padding: 30px;
+    width: 25%;
+  }
+  .detail .detail-content__wrapper .detail__socialmedia .socialmedia__wrapper .icon__description {
+    display: inline-block;
+  }
+  .detail .detail-content__wrapper .detail-content__main {
+    width: 75%;
+  }
+  .detail .detail-content__wrapper .detail-content__main .main-content__card {
+    padding: 15px;
+  }
+  .detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__info {
+    font-size: 14px;
+  }
+  .detail .detail-content__wrapper .detail-content__main .main-content__card .content-card__info .info__block {
+    margin-bottom: 4px;
+    margin-right: 15px;
+    display: inline-block;
+    font-weight: 600;
   }
   #footer-wrapper .footer .footer-info {
     display: -webkit-box;
