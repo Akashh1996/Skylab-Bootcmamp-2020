@@ -1,4 +1,13 @@
 const strictEquals = (a, b) => {
+	// if (Object.is(a, NaN)) return false;
+	// if (
+	// 	(Object.is(a, 0) && Object.is(0, b)) ||
+	// 	(Object.is(a, -0) && Object.is(-0, b))
+	// )
+	// 	return true;
+	// if (Object.is(a, b)) {
+	// 	return;
+	// }
 	if (Object.is(a, b)) {
 		if (Object.is(a, NaN)) return false;
 		else return true;
@@ -30,11 +39,20 @@ const objectClone = (object) => {
 	return x;
 };
 
+// function deepCloning(object) {
+// 	let newObject = {};
+// 	for (const props in object) {
+
+// 		console.log(typeof object[props]);
+// 		console.log(object[props]);
+// 	}
+// }
+
 const deepCloning = (object) => {
 	return Object.assign({}, object);
 };
 
 let person = { name: 'jamon', age: 56 };
 
-console.log(objectClone(person));
-console.log(person);
+console.log(deepCloning(person));
+// console.log(person);
