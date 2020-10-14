@@ -1,7 +1,7 @@
-// import { sum } from './index';
-const sum = require('./sum');
+const sum = require('./sum'); // ES5
+// import sum from './sum'; ES6
 
-describe('Sum', () => {
+xdescribe('Sum', () => {
 	test('adds 1 + 2 to equal 3', () => {
 		expect(sum(1, 2)).toBe(3);
 	});
