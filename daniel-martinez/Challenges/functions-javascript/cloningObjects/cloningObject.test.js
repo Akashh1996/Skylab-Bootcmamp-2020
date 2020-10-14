@@ -1,36 +1,72 @@
 const cloningObjects = require('./cloningObjects');
 
 describe('cloningObjects', () => {
-	test('should have the property color with value red', () => {
+	test('should clone null', () => {
 		// arrange
-		const a = { color: 'red', size: 'big' };
-
+		const original = null;
 		// act
-		const response = cloningObjects(a);
-
-		//assert
-		expect(response).toHaveProperty('color', 'red');
+		const copy = cloningObjects(original);
+		// assert
+		expect(copy).toBe(original);
 	});
-
-	test('should have the property address with value {city: "NYC"}', () => {
+	test('should clone undefined', () => {
 		// arrange
-		const a = { name: 'John', address: { city: 'NYC' } };
-
+		const original = undefined;
 		// act
-		const response = cloningObjects(a);
-
-		//assert
-		expect(response).toHaveProperty('address', { city: 'NYC' });
+		const copy = cloningObjects(original);
+		// assert
+		expect(copy).toBe(original);
 	});
-
-	test('should equal objects', () => {
+	test('should clone an empty object', () => {
 		// arrange
-		const a = { name: 'John', address: { city: 'NYC' } };
-
+		const original = {};
 		// act
-		const response = cloningObjects(a);
-
-		//assert
-		expect(response).toEqual(a);
+		const copy = cloningObjects(original);
+		// assert
+		expect(copy).toMatchObject(original);
+	});
+	test('should clone a one level object', () => {
+		// arrange
+		const original = { name: 'Gilbe', age: 34 };
+		// act
+		const copy = cloningObjects(original);
+		// assert
+		expect(copy).toMatchObject(original);
+	});
+	test('should clone a two levels object', () => {
+		// arrange
+		const original = {
+			name: 'Gilbe',
+			age: 34,
+			skills: {
+				js: 100,
+				ski: 90
+			}
+		};
+		// act
+		const copy = cloningObjects(original);
+		// assert
+		expect(
+			copy.skills !== original.skills && copy.skills.js === original.skills.js
+		).toBe(true);
+	});
+	test('should clone a three levels object', () => {
+		// arrange
+		const original = {
+			name: 'Gilbe',
+			age: 34,
+			skills: {
+				js: { min: 0, max: 100, current: 100 },
+				ski: { min: 0, max: 100, current: 100 }
+			}
+		};
+		// act
+		const copy = cloningObjects(original);
+		// assert
+		expect(
+			copy.skills !== original.skills &&
+				copy.skills.js !== original.skills.js &&
+				copy.skills.js.min === original.skills.js.min
+		).toBe(true);
 	});
 });
