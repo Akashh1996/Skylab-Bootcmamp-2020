@@ -16,4 +16,4 @@ function findOdd(arr) {
 	return result;
 }
 
-export default findOdd;
+module.exports = findOdd
