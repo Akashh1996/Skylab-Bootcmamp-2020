@@ -1,7 +1,3 @@
-
-
-
-
 var silla = {
     patas : 4,
     color: "marron",
@@ -9,34 +5,22 @@ var silla = {
 }
 
 let sillaCopia = copyObject(silla);
-console.log(sillaCopia);
-
-sillaCopia.patas = 10;
-
-console.log(sillaCopia);
-console.log(silla);
-
-
-
-
-
-// Funciones
 
 function copyObject(object){
     let newObject = {};
-    let keysObject = Object.keys(object);
-    let valuesObject = Object.values(object);
 
-    for(let i = 0; i<keysObject.length; i++){
-        // Object.defineProperty(copyObject, keysObject[i], {value: valuesObject[i]});
-        newObject[keysObject[i]] = valuesObject[i];
+    if(typeof object !== "object" || object === null){
+        return object;
     }
 
-    // copyObject.patas = 5;
+    let keysObject = Object.keys(object);
+    let valuesObject = Object.values(object);   
+    for(let i = 0; i<keysObject.length; i++){
+        newObject[keysObject[i]] = copyObject(valuesObject[i]);
+    }
     return newObject;
 }
 
-
-
+module.exports = copyObject
 
 

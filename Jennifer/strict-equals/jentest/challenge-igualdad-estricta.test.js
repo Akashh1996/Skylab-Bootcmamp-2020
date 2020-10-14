@@ -1,7 +1,7 @@
 const strictEquals = require('./challenge-igualdad-estricta')
 
 describe('a y b no sean iguales', () => {
-    test("A y B no sean iguales", () => {
+    test("A y B sean iguales", () => {
         const a = 1;
         const b = 1;
         const response = strictEquals(a, b);

@@ -12,10 +12,6 @@ function strictEquals(a, b) {
 }
 
 
-
-
-console.log(strictEquals(1, "hola"));
-
 module.exports = strictEquals
 
 /*

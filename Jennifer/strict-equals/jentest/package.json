@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch",
     "jtest": "./node_modules/.bin/jest"
   },
   "keywords": [],
