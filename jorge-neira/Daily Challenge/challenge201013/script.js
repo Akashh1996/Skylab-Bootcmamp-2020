@@ -26,14 +26,15 @@ console.log(strictEquals(false, false)); //true
 console.log(strictEquals('Water', 'Oil')); //false
 
 const objectClone = (object) => {
-	let x = Object.assign({}, object, { name: 'nuria' });
-	console.log(x);
+	let x = Object.assign({}, object);
 	return x;
 };
 
-let person = { name: 'jorge', age: 25 };
+const deepCloning = (object) => {
+	return Object.assign({}, object);
+};
 
-// console.log(person);
+let person = { name: 'jamon', age: 56 };
+
 console.log(objectClone(person));
 console.log(person);
-// person.name = 'nuria';
