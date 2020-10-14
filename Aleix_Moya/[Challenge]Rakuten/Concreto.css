@@ -28,33 +28,15 @@
     height: 100%;
     width: 25%;   
 }
-#Pin:hover{
     top: 36%;
     left: 60.5%;
     position: absolute;
     width: 6%;
     height: 12%;
-    display:none
-}
-#Pin{
-    top: 36%;
-    left: 60.5%;   
-    width: 6%;
-    height: 12%;
-    background-image: url("Pin.png");
-}
-#PinYellow:hover{
+
     top: 36%;
     left: 60.5%;
     position: absolute;
-    width: 6%;
-    height: 12%;
-    background-image: url("PinHover.png");
-}
-#PinYellow{
-    display:none;
-    top: 36%;
-    left: 60.5%;   
     width: 6%;
     height: 12%;
     background-image: url("PinHover.png");
@@ -83,8 +65,7 @@
     height: 70px;
     background: white;
     border-radius: 50%
-}
-#circle:hover {
+
     background: yellow;
 }
 #FontIcons{
@@ -98,8 +79,7 @@
     font-size: large;
     color: yellow;
     z-index: 99;
-    top: 60%;
-    left: 52%;
+
 }
 #FontButtons{
     position: absolute;
@@ -143,6 +123,17 @@ iconPlay:hover {
         margin-left: 10%;
         background-position: center top; 
     }
+}
+.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
+    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+        .MultiCarousel .MultiCarousel-inner .item { float: left;}
+        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
+    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
+    .MultiCarousel .leftLst { left:0; }
+    .MultiCarousel .rightLst { right:0; }
+    
+        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
+=======
     #Pin{
         top: 36%;
         left: 60.5%;

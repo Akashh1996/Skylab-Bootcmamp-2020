@@ -4,17 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Influencia - Rakuten TV</title>
-    <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
-    rel="stylesheet"
-    />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"/>
-    <link rel="stylesheet" href="detail-index.css"/>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="Rakuten.css" />
+    <link rel="stylesheet" href="detail-index.css" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
+    <h1 class="title__body">Rakuten TV </h1>
+    <nav class="mobile-header">
+        <h2 class="title__body">Rakuten - Header</h2>
+        <div class="mobile-header__page"></div>
+        <div class="mobile-header__cinema"></div>
+        <div class="mobile-header__free"></div>
+        <div class="mobile-header__subscription"></div>
+        <div class="mobile-header__login"></div>
+    </nav>
+    <div class="mini__rakuten-logo">
+        <img
+            src="https://appstv-static-content-prod.wuaki.tv/images/720p/UI30_about_us-logo.70c3538baaaa2c6937b498be48c7e456.png" />
+    </div>
+    <div class="mini__search">
+        <img src="mobile-icon/herramienta-de-aumento-de-lentes-de-busqueda.svg" />
+    </div>
+    <div class="desktop-header mobile-header" style="z-index:100">
+        <div class="desktop-header">
+            <div class="desktop-header__menu-bar">
+                <span class="desktop-header__rakuten-logo">
+                    <img
+                        src="https://appstv-static-content-prod.wuaki.tv/images/720p/UI30_about_us-logo.70c3538baaaa2c6937b498be48c7e456.png" />
+                </span>
+                <span class="menu-bar">
+                    <button class="menu-bar__dropdown">CINEMA &#9662</button>
+                    <div class="dropdown-content">
+                        <span>TODOS LOS GÉNEROS</span>
+                        <span>FAMILY</span>
+                    </div>
+                </span>
+                <span>FREE</span>
+                <span class="menu-bar">
+                    <button class="menu-bar__dropdown">SUBSCRIPTION &#9662</button>
+                    <div class="dropdown-content">
+                        <span>STARZPLAY</span>
+                        <span>RTV SUSCRIPCIÓN</span>
+                    </div>
+                </span>
+                <form class="desktop-header__search">
+                    <button type="submit"><i class="fa fa-search search__input"></i></button>
+                    <input class="search__input" type="text" placeholder="Buscar" name="search"></input>
+                </form>
+            </div>
+            <div class="desktop-header__login">
+                <span class="login__help">AYUDA Y DISPOSITIVOS</span>
+                <span class="login__enter">ENTRAR</span>
+                <span class="login__log">REGISTRARSE</span>
+            </div>
+        </div>
+    </div>
+    <header class="Back">
+        <div id="bigCircle" class="iconPlay">
+            <button id="circle" class="iconPlay"
+                onclick="window.open('https://rakuten.tv/es/streams/movie/la-influencia/trailer')">
+                <div id="triangle-right" class="iconPlay"></div>
+            </button>
+            <a id="FontIcons">TRÁILER</a>
+        </div>
+        <div id="bigCircle2" class="iconPlay">
+            <a id="FontIcons" style="left: 25%;">AÑADIR A QUIERO VER</a>
+        </div>
+        <div class="squareGradient"></div>
+        <img src="Pin.png" class="iconPlay" id="Pin">
+        <img src="Pin.png" class="iconPlay" id="PinYellow">
+        <img src="FotoPresentacion.jpeg" id="picture">
+
+        <a id="FontPoints" style="top: 60%;left: 52%;">4.5</a><br>
+        <h1 id="FontButtons" style="top: 62%;left: 45%;">La Influencia</h1>
+        <div class="rectangle">
+            <a style="margin-top:10%; flex-direction: column;justify-content: center; color: black; font: bolder;">VER
+                AHORA</a>
+            <div style=" display: flex; flex-direction: column;justify-content: center">
+                <a style="color: black; font:bolder">Desde 3'99€</a>
+                <a style="color: black; font-size: small; justify-self: flex-end;">o 399p</a>
+            </div>
+        </div>
+        <div class="rectangle1">
+            <div style="color: yellow; display: flex; flex-direction: center;justify-content: center;">
+                <div style=" display: flex; flex-direction: column;justify-content: center">
+                    <a style="color: yellow">CANJEAR CUPON</a>
+                </div>
+            </div>
+        </div>
+    </header>
     <main>
+        <div>
+            <div class="backgroundTitle">
+                <h2 class="title">La Influencia
+                    <div class="rectangleTitle">
+                        <h3 class="subtitle">VER GRATIS CON ANUNCIOS</h3>
+                    </div>
+                </h2>
+            </div>
+
+        </div>
+        <h2 class="title__body">La Influencia - Body</h2>
         <div class="description">
+            <h3 class="title__body">La Influencia - Descripción</h3>
             <div class="description__social">
                 <div class="desktop-option">
                     <button class="social__button">
@@ -26,19 +125,19 @@
                 </div>
                 <div class="desktop-option">
                     <button class="social__button">
-                        <img class="button__twitter" src="https://www.flaticon.es/svg/static/icons/svg/2111/2111738.svg">
+                        <i class="fab fa-twitter"></i>
                     </button>
                     <span class="desktop__text">Twitter</span>
                 </div>
                 <div class="desktop-option">
                     <button class="social__button">
-                        <img class="button__facebook" src="https://www.flaticon.es/svg/static/icons/svg/733/733605.svg">
+                        <i class="fab fa-facebook-f"></i>
                     </button>
                     <span class="desktop__text">Facebook</span>
                 </div>
                 <div class="desktop-option">
                     <button class="social__button">
-                        <img class="button__pinterest" src="https://www.flaticon.es/svg/static/icons/svg/2111/2111601.svg">
+                        <i class="fab fa-pinterest-p"></i>
                     </button>
                     <span class="desktop__text">Pinterest</span>
                 </div>
@@ -78,17 +177,22 @@
                 </div>
                 <div class="body__text">
                     <p>
-                        Alicia vuelve a la casa de la que escapó cuando era niña y ahora es una joven madre, acompañada por su marido y Nora, su 
-                        hija de 9 años. Alicia quiere reconstruir su vida mientras se ve obligada a enfrentarse a un pasado que creía enterrado y 
-                        a un cuerpo que se resiste a la muerte: el de Victoria, la posesiva matriarca de la familia, que ha caído en un profundo 
-                        coma y sobrevive conectada a una máquina. La siniestra mansión nunca ha albergado una infancia feliz. Monstruos diabólicos y 
-                        fenómenos peligrosos comienzan a ocurrir en la casa. La débil inocencia de Nora pronto se desvanecerá al crecer una loca 
+                        Alicia vuelve a la casa de la que escapó cuando era niña y ahora es una joven madre, acompañada
+                        por su marido y Nora, su
+                        hija de 9 años. Alicia quiere reconstruir su vida mientras se ve obligada a enfrentarse a un
+                        pasado que creía enterrado y
+                        a un cuerpo que se resiste a la muerte: el de Victoria, la posesiva matriarca de la familia, que
+                        ha caído en un profundo
+                        coma y sobrevive conectada a una máquina. La siniestra mansión nunca ha albergado una infancia
+                        feliz. Monstruos diabólicos y
+                        fenómenos peligrosos comienzan a ocurrir en la casa. La débil inocencia de Nora pronto se
+                        desvanecerá al crecer una loca
                         fascinación por Victoria.
                     </p>
-                </div>               
+                </div>
                 <div class="title__details">
                     <span class="material-icons">
-                            textsms
+                        textsms
                     </span>
                     <span class="details__text">Idiomas y subtítulos</span>
                 </div>
@@ -104,16 +208,66 @@
                 </div>
                 <div class="title__details">
                     <span class="material-icons">
-                            movie
+                        movie
                     </span>
                     <span class="details__text">Dirección y reparto</span>
                 </div>
-                <div class="title__actors"></div>
+                <div class="title__cast-scroll">
+                    <div class="scroll__item">
+                        <img id="item__denis"
+                            src="https://prod3-kraken-cloudfront.rakuten.tv/images/placeholders/cast/positive-vip-5169fcbbfc.png"
+                            id="imagesFilms">
+                        <p>Denis Rovira van Boekholt</p>
+                        <p class="denis__director">DIRECCIÓN</p>
+                    </div>
+                    <div class="scroll__item">
+                        <img id="item__manuela"
+                            src="https://images-1.wuaki.tv/system/photos/3033/original/manuela-velles-1525278411-width170-quality50.jpeg"
+                            id="imagesFilms">
+                        <p>Manuela Vellés</p>
+                    </div>
+                    <div class="scroll__item">
+                        <img id="item__maggie"
+                            src="https://images-0.wuaki.tv/system/photos/163974/original/maggie-civantos-1539741757-width170-quality50.jpeg"
+                            id="imagesFilms">
+                        <p>Maggie Civantos</p>
+                    </div>
+                    <div class="scroll__item">
+                        <img id="item__emma"
+                            src="https://images-2.wuaki.tv/system/photos/6572/original/emma-suarez-1525282541-width170-quality50.jpeg"
+                            id="imagesFilms">
+                        <p>Emma Suárez</p>
+                    </div>
+                    <div class="scroll__item">
+                        <img id="item__alain"
+                            src="https://images-1.wuaki.tv/system/photos/146776/original/alain-hernandez-1525324622-width170-quality50.jpeg"
+                            id="imagesFilms">
+                        <p>Alain Hernández</p>
+                    </div>
+                    <div class="scroll__item">
+                        <img id="item__claudia"
+                            src="https://images-3.wuaki.tv/system/photos/155259/original/claudia-placer-1543641574-width170-quality50.jpeg"
+                            id="imagesFilms">
+                        <p>Claudia Pacer</p>
+                    </div>
+                    <div class="scroll__item">
+                        <img id="item__david"
+                            src="https://images-3.wuaki.tv/system/photos/181932/original/david-luque-1601949660-width170-quality50.jpeg"
+                            id="imagesFilms">
+                        <p>David Luque</p>
+                    </div>
+                    <div class="scroll__item">
+                        <img id="item__marta"
+                            src="https://images-0.wuaki.tv/system/photos/139677/original/marta-castellote-1525317524-width170-quality50.jpeg"
+                            id="imagesFilms">
+                        <p>Marta Castellote</p>
+                    </div>
+                </div>
                 <div class="title__score-gender">
                     <div class="score-gender__score">
                         <div class="title__details">
                             <span class="material-icons">
-                                    star
+                                star
                             </span>
                             <span class="details__text">Puntuación</span>
                         </div>
@@ -147,17 +301,213 @@
                     </div>
                     <div class="score-gender__gender">
                         <div class="title__details">
-                            <img class="details__mask" src="https://www.flaticon.es/svg/static/icons/svg/1052/1052039.svg">
+                            <img class="details__mask"
+                                src="https://www.flaticon.es/svg/static/icons/svg/1052/1052039.svg">
                             <span class="details__text">Géneros</span>
                         </div>
                         <div class="gender__terror">
-                            <img src="https://images-3.wuaki.tv/system/brandable_photos/13390/original/horror-1591342755.png">
+                            <img
+                                src="https://images-3.wuaki.tv/system/brandable_photos/13390/original/horror-1591342755.png">
                             <span>Terror</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="container">
+            <h3>Otras Películas que te pueden gustar</h3>
+            <div class="row">
+                <div class="MultiCarousel" data-items="1,3,5,6" data-slide="5" id="MultiCarousel" data-interval="1000">
+                    <div class="MultiCarousel-inner">
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="deep-blue-sea-3-1598947260-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="el-hombre-invisible-1587631430-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="fantasy-island-1589284789-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="gretel-hansel-1594375366-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="annabelle-vuelve-a-casa-1564584747-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="camara-policial-1596183041-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="dominios-oscuros-1558465010-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img
+                                    src="historias-de-miedo-para-contar-en-la-oscuridad-1571297191-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="la-casa-del-terror-1580893188-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="la-llorona-1562068428-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="la-maldicion-2020-1587569140-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="malasana-32-1584975820-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="mara-1580997191-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="mib-international-1568021575-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="nosotros-1561472768-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="vivarium-1585666555-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="zombieland-mata-y-remata-1579518126-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="john-wick-capitulo-3-parabellum-1568106431-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="2-22-la-hora-senalada-1597241725-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="el-asesino-del-nudo-1594721330-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="los-elegidos-dark-skies-1558429378-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="cementerio-de-animales-2019-1562579921-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="el-sotano-de-ma-1568018718-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="it-capitulo-2-1571310021-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pad15">
+                                <img src="doctor-sueno-1578926075-width217-quality80.jpeg">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary leftLst" id="buttonRight">&#10094;</button>
+                    <button class="btn btn-primary rightLst" id="buttonLeft">&#10095;</button>
+                </div>
+            </div>
     </main>
+
+    <script src="Concreto.js"></script>
+    <footer class="footer-content">
+        <div class="footer-content__info">
+            <div class="info__title">
+                <h3 class="title__footer">Rakuten TV - Tu cine en casa</h3>
+                <p>
+                    Rakuten TV proporciona una serie de servicios que ofrecen todo un
+                    universo de contenidos en solo unos clics. Disfruta de una verdadera
+                    experiencia cinematográfica con los últimos estrenos, servicios de
+                    suscripción premium y una serie de canales temáticos gratis, como
+                    Movies, Euronews, Kids TV, Viki, Documentaries y Rakuten Stories, un
+                    canal que incorpora el contenido original y exclusivo de Rakuten TV.
+                </p>
+            </div>
+            <div class="info__tools">
+                <div class="tools__howitworks">
+                    <img src="https://prod1-kraken-cloudfront.rakuten.tv/images/footer/howitworks-555729f452.svg" />
+                    <p>Cómo funciona</p>
+                    <span>Rakuten TV es compatible con la gran mayoría de dispositivos
+                        conectados.</span>
+                </div>
+                <div class="tools__pay">
+                    <img src="https://prod3-kraken-cloudfront.rakuten.tv/images/footer/payments-ec797a77da.svg" />
+                    <p>Más formas de pago</p>
+                    <span>Rakuten TV es compatible con PayPal y con tarjetas de crédito
+                        Visa y Mastercard.</span>
+                </div>
+                <div class="tools__help">
+                    <img src="https://prod1-kraken-cloudfront.rakuten.tv/images/footer/support-cd17a5040b.svg" />
+                    <p>Ayuda y soporte</p>
+                    <span>¿Tienes problemas con nuestro servicio? Ponte en contacto con
+                        nuestro equipo de soporte</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content__mobile">
+            <div class="mobile__contact">
+                <div class="contact__content">
+                    <div class="content__logo"></div>
+                    <div class="content__company">
+                        <span>Acerca de Rakuten</span>
+                        <span>Quiénes somos</span>
+                        <span>Condiciones de uso</span>
+                        <span>Política de privacidad y cookies</span>
+                        <span>Trabaja con nosotros</span>
+                    </div>
+                </div>
+                <div class="content__info">
+                    <span>2009 - 2020 &copy; Rakuten TV Europe, S.L.U. - v1.838.0</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/e5fa61ddd0.js" crossorigin="anonymous"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="Rakuten.js"></script>
 </body>
 </html>
