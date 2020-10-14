@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js –runInBand",
     "test": "jest"
   },
   "keywords": [],
