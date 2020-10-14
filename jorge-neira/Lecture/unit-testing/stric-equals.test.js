@@ -1,6 +1,6 @@
 const strictEquals = require('./stric-equals');
 
-describe('Strict Equals comparison', () => {
+xdescribe('Strict Equals comparison', () => {
 	// This is the way to write it!!!
 	test('should compare 1 and 1', () => {
 		//arrange
