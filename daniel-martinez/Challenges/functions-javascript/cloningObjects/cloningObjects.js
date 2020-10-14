@@ -10,3 +10,5 @@ function cloningObjects(object) {
 	}
 	return cloningObject;
 }
+
+module.exports = cloningObjects;

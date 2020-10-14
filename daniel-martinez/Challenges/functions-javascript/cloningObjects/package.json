@@ -1,0 +1,16 @@
+{
+	"name": "cloningObjects",
+	"version": "1.0.0",
+	"description": "",
+	"main": "cloningObjects.js",
+	"dependencies": {
+		"jest": "^26.5.3"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"test": "jest"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}
