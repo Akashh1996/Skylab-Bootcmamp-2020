@@ -1,0 +1,69 @@
+.flex {
+	display: flex;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.space-around {
+	justify-content: space-around;
+}
+
+.square {
+	width: 30%;
+}
+
+.heading-block {
+	width: 70%;
+	padding: 10px;
+}
+
+.square {
+	background-color: #333;
+	width: 100px;
+	padding-top: 100%;
+	height: 0;
+}
+.button1 {
+	border-radius: 50%;
+	background-color: brown;
+}
+.button2 {
+	border-radius: 50%;
+	background-color: lightcoral;
+}
+.button3 {
+	border-radius: 50%;
+	background-color: black;
+}
+.button {
+	border: none;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	margin: 4px 2px;
+}
+
+h1 {
+	margin: 0px;
+}
+h2 {
+	margin: 0px;
+}
+.circle {
+	height: 50px;
+	width: 50px;
+	background-color: rgb(150, 62, 62);
+	border-radius: 50%;
+}
+.triangle {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid rgb(150, 62, 62);
+}

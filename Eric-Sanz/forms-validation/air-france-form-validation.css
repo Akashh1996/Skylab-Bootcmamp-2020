@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&display=swap');
+
+input {
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 2px solid black;
+}
+
+body {
+	margin: 5% 20% 20% 20%;
+	/* background: lemonchiffon; */
+	background: url(background.jpg);
+	background-position: center center;
+}
+
+.form-style {
+	display: flex;
+	background: snow;
+}
+
+.header-form {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	background: snow;
+	border-bottom: 3px solid black;
+	border-right: 1.5px solid black;
+	border-left: 1.5px solid black;
+	border-top: 1.5px solid black;
+	padding-left: 10%;
+	color: black;
+	font-size: 20px;
+}
+
+.header-p {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin-left: 2%;
+	margin-right: 7%;
+	width: 50%;
+}
+.red-line {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 1%;
+	width: 50%;
+	border-bottom: 4px solid red;
+}
+
+.form-name {
+	display: flex;
+	flex-direction: column;
+	margin: 2%;
+	margin-left: 5%;
+	width: 100%;
+}
+
+p {
+	font-weight: bold;
+}
+
+.more-passengers {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 10px;
+}
+
+.name-information {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.surnames {
+	margin-left: 20px;
+}
+
+.client-information {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 2%;
+}
+
+.phone {
+	margin-left: 2%;
+}
+
+.fligth-options {
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 2%;
+}
+
+.destinations {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-top: 3%;
+}
+
+.departures-place {
+	display: flex;
+	width: 35%;
+	justify-content: flex-start;
+}
+
+.arrives-place {
+	width: 65%;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.date {
+	display: flex;
+	align-items: center;
+	width: 70%;
+	margin-top: 3%;
+}
+
+.description-space {
+	display: flex;
+	width: 50%;
+	justify-content: flex-end;
+	margin-left: 5%;
+}
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 20px;
+	margin-right: 2%;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: '';
+	height: 14px;
+	width: 14px;
+	left: 5px;
+	bottom: 3.5px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+.switch-position {
+	display: flex;
+	align-items: center;
+	width: 60%;
+}
+
+.buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 2%;
+}
+
+.search-button {
+	background-color: red;
+	color: snow;
+	font-weight: bold;
+	border-radius: 5%;
+	min-height: 40px;
+}
+
+select {
+	border-top: 0px;
+	border-right: 0px;
+	border-left: 0px;
+	border-bottom: 2px solid black;
+}
+.new-font-bold {
+	font-family: 'merriweather';
+	font-weight: bold;
+}
+
+.new-font {
+	font-family: 'merriweather';
+	font-weight: 400;
+}

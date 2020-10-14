@@ -1,0 +1,12 @@
+nav{
+    display: center;
+
+}
+.center
+{
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+}
+

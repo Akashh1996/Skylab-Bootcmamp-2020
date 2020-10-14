@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<p><strong>RESERVAR UN VUELO</strong></p>
+			</nav>
+		</header>
+		<main>
+			<a href="#">Book for 10+ passengers</a>
+			<form id="form" action="">
+				<div class="select">
+					<div class="select-item">
+						<label for="viaje">Viaje</label>
+						<select name="viaje" id="viaje">
+							<option value="Ida y vuelta">Ida y vuelta</option>
+							<option value="Solo ida">Solo ida</option>
+							<option value="Destinos múltiples">Destinos múltiples</option>
+						</select>
+					</div>
+					<div class="select-item">
+						<label for="pasajeros">Pasajeros *</label>
+						<select name="pasajeros" id="pasajeros" required>
+							<option value="Ida y vuelta">Adulto</option>
+							<option value="Niño">Niño (2 - 11 años)</option>
+							<option value="Bebé">Bebé (0 - 23 meses)</option>
+							<option value="Joven">Joven (18 - 24 años)</option>
+							<option value="Senior">Senior (65 años o más)</option>
+							<option value="Estudiante">
+								Estudiante nivel superior (18 - 29 años)
+							</option>
+						</select>
+					</div>
+					<div class="select-item">
+						<label for="clase">Clase</label>
+						<select name="clase" id="clase">
+							<option value="ECONOMY">ECONOMY</option>
+							<option value="PREMIUM ECONOMY">PREMIUM ECONOMY</option>
+							<option value="BUSINESS">BUSINESS</option>
+							<option value="LA PREMIÈRE">LA PREMIÈRE</option>
+						</select>
+					</div>
+				</div>
+				<div class="text-input">
+					<input type="text" placeholder="Salida de *" required />
+					<input type="text" placeholder="Llegada a *" required />
+				</div>
+				<div>
+					<input
+						type="date"
+						placeholder="Fecha de viaje *"
+						value=""
+						onChange="this.setAttribute('value', this.value)"
+						required
+						min="2020-10-08"
+					/>
+				</div>
+				<div>
+					<label class="switch">
+						<input type="checkbox" />
+						<span class="slider round"></span>
+					</label>
+					<span>Viaje profesional</span>
+				</div>
+				<div>
+					<input type="text" placeholder="Nombre y apellidos *" />
+				</div>
+				<div>
+					<textarea
+						id="description"
+						name="description"
+						cols="30"
+						rows="10"
+						placeholder="Descripción"
+					></textarea>
+				</div>
+				<div>
+					<input
+						type="email"
+						placeholder="Email *"
+						required
+						pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+					/>
+				</div>
+				<div>
+					<input
+						type="tel"
+						placeholder="Número de teléfono *"
+						required
+						pattern="[0-9]{9}"
+						maxlength="9"
+					/>
+				</div>
+				<div class="to-the-right">
+					<input class="button" type="submit" value="Buscar vuelos" />
+				</div>
+			</form>
+		</main>
+	</body>
+</html>
