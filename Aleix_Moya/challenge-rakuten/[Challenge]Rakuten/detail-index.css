@@ -377,34 +377,21 @@ body {
 }
 #Pin:hover{
     top: 36%;
-    left: 60.5%;
+    left: 62%;
     position: absolute;
-    width: 6%;
-    height: 12%;
-    display: none;
+    width: 10%;
+    height: 11%;
+	background-image: url("Hover.svg");
+	background-repeat: no-repeat;
 }
 #Pin{
+	position: absolute;
     top: 36%;
-    left: 60.5%;   
-    width: 6%;
-    height: 12%;
-    background-image: url("Pin.png");
-}
-#PinYellow:hover{
-    top: 36%;
-    left: 60.5%;
-    position: absolute;
-    width: 6%;
-    height: 12%;
-    background-image: url("PinHover.png");
-}
-#PinYellow{
-    display:none;
-    top: 36%;
-    left: 60.5%;   
-    width: 6%;
-    height: 12%;
-    background-image: url("PinHover.png");
+    margin-left: 61%;   
+    width: 10%;
+    height: 11%;
+	background-image: url("1274860.svg");
+	background-repeat: no-repeat;
 }
 
 #bigCircle {
@@ -535,30 +522,21 @@ body {
 	}	
 	#Pin:hover{
 		top: 36%;
-		left: 60.5%;
+		left: 62%;
 		position: absolute;
-		width: 6%;
-		height: 12%;
-		display: none;
-		z-index: 100;
+		width: 10%;
+		height: 11%;
+		background-image: url("Hover.svg");
+		background-repeat: no-repeat;
 	}
-	#PinYellow:hover{
-		top: 36%;
-		left: 60.5%;
+	#Pin{
 		position: absolute;
-		width: 6%;
-		height: 12%;
-		background-image: url("PinHover.png");
-		z-index: 100;
-	}
-	#PinYellow{
-		display:none;
 		top: 36%;
-		left: 60.5%;   
-		width: 6%;
-		height: 12%;
-		background-image: url("PinHover.png");
-		z-index: 100;
+		margin-left: 61%;   
+		width: 10%;
+		height: 11%;
+		background-image: url("1274860.svg");
+		background-repeat: no-repeat;
 	}
     .Back {
         height: 40%;
@@ -572,15 +550,6 @@ body {
         margin-left: 10%;
         background-position: center top; 
     }
-    #Pin{
-        top: 36%;
-        left: 60.5%;
-        position: absolute;
-        width: 3%;
-        height: 6%;
-        background-image: url("Pin.png");
-		z-index: 100;
-	}
 	.iconPlay{
 		position: absolute;
 	}
@@ -590,37 +559,6 @@ body {
 		left:75%;
 		height: 100%;
 		width: 25%;   
-	}
-	#Pin:hover{
-		top: 36%;
-		left: 60.5%;
-		position: absolute;
-		width: 6%;
-		height: 12%;
-		display: none;
-	}
-	#Pin{
-		top: 36%;
-		left: 62.5%;   
-		width: 8%;
-		height: 16%;
-		background-image: url("Pin.png");
-	}
-	#PinYellow:hover{
-		top: 36%;
-		left: 60.5%;
-		position: absolute;
-		width: 6%;
-		height: 12%;
-		background-image: url("PinHover.png");
-	}
-	#PinYellow{
-		display:none;
-		top: 36%;
-		left: 60.5%;   
-		width: 6%;
-		height: 12%;
-		background-image: url("PinHover.png");
 	}
 	#FontIcons{
 		position: absolute;
@@ -692,6 +630,13 @@ body {
 		left:25%;
 		top: 50%;
 	}
+	.item{
+		min-width: 5%
+	}
+	.pad15{
+		max-width: 75%
+	}
+
 }
 #buttonRight{
 	top:25%;
@@ -705,4 +650,9 @@ body {
         .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
     .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
     .MultiCarousel .leftLst { left:0; }
-    .MultiCarousel .rightLst { right:0; }
+	.MultiCarousel .rightLst { right:0; }
+
+	.item{
+		min-width: 5%
+	}
+	
