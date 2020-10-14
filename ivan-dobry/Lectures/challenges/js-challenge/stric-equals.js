@@ -9,4 +9,5 @@ function strictEquals (a, b) {
     }
 }
 
+module.exports = strictEquals;
 
