@@ -1,10 +1,10 @@
-const cloneObject = (myObject, any) => {
-    any = {
-        ...myObject
+const cloneObject = (original) => {
+    if (!original) {
+        return original
+    } else {
+        const copiedObj = JSON.parse(JSON.stringify(original));
+        return copiedObj
     }
-    /*     any.student = "akash"
-     */
-    return any
 }
 
 module.exports = cloneObject;
