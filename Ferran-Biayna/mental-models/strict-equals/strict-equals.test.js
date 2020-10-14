@@ -14,7 +14,7 @@ describe('Strict Equals', () => {
     expect(response).toBe(true)
 
     })
-
+    debugger
     test('should NaN strict equal NaN is false', () => {
     // arrange
     let a=NaN
