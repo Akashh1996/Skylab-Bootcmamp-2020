@@ -11,7 +11,7 @@ function strictEquals (a, b) {
         return Object.is(a, b)
     }
 }
-module.exports = strictEquals;
+//module.exports = strictEquals;
 
 
 /* Suma function*/
@@ -22,10 +22,25 @@ function sum (a, b){
 
 
 /* Object function*/
-let x={id:10,name:'Eric',adress:300}
-function noMutate (a) {
+/* let x={id:10,name:'Eric',adress:300}
+function deepClone (a) {
 let b = Object.assign({},a);
 return b;
 }
-let y= noMutate(x);
-x.adress = 500
+let y= deepClone(x);
+x.adress = 500 */
+
+function deepClone (original){
+    if(!original){
+        return original;
+    }else{
+        if(typeof original === 'object') {
+
+        }else {
+            return {...original};
+        }
+        return original;
+    }
+}
+
+module.exports = deepClone;
