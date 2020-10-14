@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Validation</title>
+    <link rel="stylesheet" href="./FormsValidation.css" />
+</head>
+
+<body>
+    <div id="Header">
+        <checkbox class="button1">
+            <h2>Reservar un vuelo</h2>
+        </checkbox>
+        <checkbox class="button1">
+            <h2>Reservar un vuelo con millas</h2>
+        </checkbox>
+    </div>
+    <fieldset>
+        <form action="/action_page.php">
+            <legend></legend>
+            <div id="fila1">
+                <div id="elemento">
+                    <label for="Viaje">Viaje</label></br>
+                    <select style="border: none" name="Viaje" id="Viaje" placeholder="..." required>
+                        <option value="Ida">Ida</option>
+                        <option value="Ida y Vuelta">Ida y Vuelta</option>
+                    </select>
+                </div>
+                <div id="elemento">
+                    <label for="Pasajeros">Pasajeros*</label></br>
+                    <form action="welcome.php" method="post"></form>
+                    <input style="border: none" id="Pasajeros" name="Pasajeros" type="text" required>
+                    </input>
+                </div>
+                <div id="elemento">
+                    <label for="Clase">Clase</label></br>
+                    <select style="border: none" name="Clase" id="Clase" placeholder="..." required>
+                        <option value="Tourist">TOURIST</option>
+                        <option value="Economy">ECONOMY</option>
+                        <option value="Bussines">BUSSINES</option>
+                    </select>
+                </div>
+            </div>
+            </br>
+            <div id="fila2">
+                <div id="elemento">
+                    <label for="Salida"></label></br>
+                    <input style="border: none" id="Salida" name="Salida" type="text" placeholder="Salida de *"
+                        required>
+                </div>
+                <div id="elemento">
+                    <label for="Llegada"></label></br>
+                    <input style="border: none" id="Llegada" name="Llegada" type="text" placeholder="Llegada a *"
+                        required>
+                </div>
+            </div>
+            </br>
+            </br>
+            <div id="fila3">
+                <div id="elemento">
+                    <label for="Name"></label>
+                    <input style="border: none" id="Name" name="Name" type="text" placeholder="Nombre y Apellido *"
+                        required>
+                    </input>
+                </div>
+                <div id="elemento">
+                    <label for="Telef"></label>
+                    <input style="border: none" id="Telef" name="Telef" type="text" placeholder="Numero de Telefono *"
+                        required>
+                    </input>
+                </div>
+                <div id="elemento">
+                    <label for="Email"></label>
+                    <input style="border: none" id="Email" name="Email" type="text" placeholder="Correo electrónico *"
+                        required>
+                    </input>
+                </div>
+            </div>
+            <br>
+            <div id="fila4">
+                <div>
+                    <label for="Fechas"></label></br>
+                    <button class="elemento9" onclick="myFunction()">Fechas</button>
+                </div>
+                <br>
+                <div id="elemento10">
+                    <label for="description"></label>
+                    <textarea name="description" id="description" type="description"
+                        placeholder="Description"></textarea>
+                </div>
+                <br>
+                <div id="elemento11">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>Viaje Profesional
+                </div>
+            </div>
+            <br><br>
+            <div>
+                <label for="Buscar Vuelos"></label></br>
+                <button class="elemento12" onclick="allRight()">Buscar Ahora</button>
+            </div>
+        </form>
+    </fieldset>
+
+    <script>
+        function myFunction() {
+            window.open("https://www.google.com/calendar/about/");
+        }
+        function othername() {
+            var input = document.getElementById("userInput").value;
+            alert(input);
+        }
+        function allRight() {
+
+
+        }
+    </script>
+</body>
+
+</html>

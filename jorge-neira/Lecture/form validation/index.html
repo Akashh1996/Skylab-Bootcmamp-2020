@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <h1>Forms Validation</h1>
+    <label for="search">Search</label>
+    <input
+      type="text"
+      name=""
+      id="search"
+      placeholder="Search Here..."
+      required
+    />
+
+    <br />
+    <br />
+
+    <label for="description">Description</label>
+    <textarea
+      type="text"
+      name=""
+      id="description"
+      cols="50"
+      rows="5"
+      placeholder="adfasdfasdf"
+    >
+    </textarea>
+
+    <br />
+    <br />
+
+    <label for="age"></label>
+    <select name="age" id="age">
+      <option value="1">Uno</option>
+      <option value="2">Dos</option>
+      <option value="3">Tres</option>
+    </select>
+
+    <br />
+    <br />
+
+    <label for="checkbox">Checkbox</label>
+    <input type="checkbox" name="checkbox" id="" />
+
+    <br />
+    <br />
+
+    <fieldset>
+      <legend>Framework</legend>
+      <label for="angular">Angular.js</label>
+      <input value="angular" type="checkbox" name="gitlover" id="angular" />
+      <label for="react">React.js</label>
+      <input value="react" type="checkbox" name="gitlover" id="react" />
+      <label for="vue">Vue.js</label>
+      <input value="vue" type="checkbox" name="gitlover" id="vue" />
+    </fieldset>
+    <br />
+    <br />
+
+    <fieldset>
+      <legend>Me Gusta Git!</legend>
+      <label for="gitlover">True</label>
+      <input value="true" type="radio" name="gitlover" id="radio" />
+      <label for="gitlover">False</label>
+      <input value="false" type="radio" name="gitlover" id="radio" />
+    </fieldset>
+  </body>
+</html>

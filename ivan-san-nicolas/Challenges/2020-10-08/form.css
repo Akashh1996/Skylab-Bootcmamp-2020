@@ -1,0 +1,134 @@
+body {
+    background-color: rgb(226, 235, 255);
+    font-weight: bolder;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 80px;
+    margin: 20px auto;
+}
+
+
+.main {
+    background-color: white;
+    border-radius: 4%;
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.formulary {
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.user,
+.travel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.travel {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.user__input,
+.travel__input {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+#user__input_phone {
+    justify-self: flex-start;
+}
+
+#travel__input.professional {
+    text-align: center;
+}
+
+.submit {
+    width: auto;
+    margin: 30px auto;
+    margin-bottom: 60px;
+}
+
+.button {
+    width: 180px;
+    height: 40px;
+    background-color: rgb(64, 224, 208);
+    border: 2px solid rgb(43, 156, 144);
+    border-radius: 6px;
+    color: white;
+    font-weight: bolder;
+}
+
+.button:hover {
+    background-color: rgb(60, 215, 199);
+    border: 4px solid rgb(64, 224, 208);
+    cursor: pointer;
+}
+
+input {
+    height: 20px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+select {
+    width: 150px;
+}
+
+#input__professional {
+    width: 40%;
+}
+
+.bottom {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.dots {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 50px;
+    width: 30%;
+    margin: 0 auto;
+    box-shadow: 10px 10px 5px #aaaaaa;
+
+}
+
+.dots__circles {
+    display: flex;
+    height: 50%;
+    padding-top: 4px;
+    width: 100%;
+}
+
+.dots__options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 50%;
+    width: 100%;
+}
+
+input:valid {
+    border: 2px solid greenyellow;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
