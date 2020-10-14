@@ -1,18 +1,22 @@
 
 
-function strictEquals(a,b){
-    if( ((a == 0 && b == -0) || (a == -0 && b == 0)) && (typeof(a) == 'number' && typeof(b) == 'number') ){
-        return true;
-    }
-    if(isNaN(a) && isNaN(b) && typeof(a) == 'number' && typeof(b) == 'number'){
-        return false;
-    }
-    return Object.is(a,b);
+function strictEquals(a, b) {
+  if (((a == 0 && b == -0) || (a == -0 && b == 0)) && (typeof (a) == 'number' && typeof (b) == 'number')) {
+    return true;
+  }
+  if (isNaN(a) && isNaN(b) && typeof (a) == 'number' && typeof (b) == 'number') {
+    return false;
+  }
+  let c = Object.is(a, b);
+  return c;
 }
 
 
-console.log(strictEquals(1,"hola"));
 
+
+console.log(strictEquals(1, "hola"));
+
+module.exports = strictEquals
 
 /*
 function strictEquals(a, b) {
