@@ -22,4 +22,15 @@ describe('cloningObjects', () => {
 		//assert
 		expect(response).toHaveProperty('address', { city: 'NYC' });
 	});
+
+	test('should equal objects', () => {
+		// arrange
+		const a = { name: 'John', address: { city: 'NYC' } };
+
+		// act
+		const response = cloningObjects(a);
+
+		//assert
+		expect(response).toEqual(a);
+	});
 });
