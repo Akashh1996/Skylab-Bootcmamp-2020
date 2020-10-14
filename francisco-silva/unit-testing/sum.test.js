@@ -1,6 +1,6 @@
 const sum = require("./sum")
 
-describe("Sum", () => {
+xdescribe("Sum", () => {
     test("should sum 1 + 2 equals 3", () => {
         expect(sum(1, 2)).toBe(3);
     })
