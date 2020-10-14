@@ -4,7 +4,8 @@
 	"description": "Function that simulates strict equality without using it.",
 	"main": "index.js",
 	"scripts": {
-		"test": "jest"
+		"test": "jest",
+		"test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand"
 	},
 	"keywords": [],
 	"author": "",
