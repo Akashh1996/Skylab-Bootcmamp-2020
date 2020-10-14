@@ -1,13 +1,4 @@
 const strictEquals = (a, b) => {
-	// if (Object.is(a, NaN)) return false;
-	// if (
-	// 	(Object.is(a, 0) && Object.is(0, b)) ||
-	// 	(Object.is(a, -0) && Object.is(-0, b))
-	// )
-	// 	return true;
-	// if (Object.is(a, b)) {
-	// 	return;
-	// }
 	if (Object.is(a, b)) {
 		if (Object.is(a, NaN)) return false;
 		else return true;
@@ -34,25 +25,21 @@ console.log(strictEquals(true, false)); //false
 console.log(strictEquals(false, false)); //true
 console.log(strictEquals('Water', 'Oil')); //false
 
-const objectClone = (object) => {
-	let x = Object.assign({}, object);
-	return x;
-};
+////////////////////////////////////////////////////////////////
 
-// function deepCloning(object) {
-// 	let newObject = {};
-// 	for (const props in object) {
-
-// 		console.log(typeof object[props]);
-// 		console.log(object[props]);
-// 	}
-// }
-
-const deepCloning = (object) => {
-	return Object.assign({}, object);
-};
-
-let person = { name: 'jamon', age: 56 };
-
-console.log(deepCloning(person));
-// console.log(person);
+function deepCopy(original) {
+	let newOriginal = {};
+	if (!original) {
+		return original;
+	} else {
+		for (const props in original) {
+			debugger;
+			if (typeof original[props] === 'object') {
+				newOriginal[props] = deepCopy(original[props]);
+			} else {
+				newOriginal[props] = original[props];
+			}
+		}
+		return newOriginal;
+	}
+}
