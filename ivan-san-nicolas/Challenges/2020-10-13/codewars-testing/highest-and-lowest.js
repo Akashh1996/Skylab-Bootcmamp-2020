@@ -12,18 +12,17 @@ Output string must be two numbers separated by a single space,
 and highest number is first.
 //////////////////////*/
 
-function highAndLow(numbers) {
-    debugger;
+function highAndLow(num) {
     let newStr = '';
-    let maxNum = 0;
-    let minNum = 0;
+    let maxNum = +num[0];
+    let minNum = +num[0];
     let actualNum = '';
-    for (let i in numbers) {
-        if (numbers[i] !== ' ') actualNum += numbers[i];
-        else if (numbers[i] === ' ' && actualNum !== '') {
+    for (let i = 0; i < num.length; i++) {
+        if (num[i] !== ' ') actualNum += num[i];
+        if ((num[i] === ' ' && actualNum !== '') || (i === num.length - 1 && actualNum !== '')) {
             actualNum = +actualNum;
             if (actualNum > maxNum) maxNum = actualNum;
-            else if (actualNum < minNum) minNum = actualNum;
+            if (actualNum < minNum) minNum = actualNum;
             actualNum = '';
         }
     }
