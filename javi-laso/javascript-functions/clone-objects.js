@@ -9,17 +9,3 @@ function cloneObject (obj) {
 
     return newObject;
 }
-
-const objeto1 = {altura: 10, anchura: 20};
-const objetoCopia = cloneObject(objeto1);
-console.log(objeto1);
-console.log(objetoCopia);
-console.log('');
-objeto1.altura = 50;
-console.log(objeto1);
-console.log(objetoCopia);
-console.log('');
-objetoCopia.anchura = 300;
-console.log(objeto1);
-console.log(objetoCopia);
-console.log('');
