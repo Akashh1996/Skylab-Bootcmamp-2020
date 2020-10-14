@@ -8,7 +8,7 @@ const sum =require('./sum');
 // });
 
 describe('Sum',    () => {
-    testEquals('should sum 1+2 equals 3', ()=>{
-        expect(sum(8,10).toBe(18))
+    test('should sum 1+2 equals 3', ()=>{
+        expect(sum(8,10)).toBe(18)
     })
 })
