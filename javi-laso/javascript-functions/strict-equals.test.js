@@ -1,8 +1,18 @@
+const { debug } = require('console');
 const strictEquals = require('./strict-equals');
 
 describe('Strict equals', () => {
     test('1 and 1 to be true', () => {
-        expect(strictEquals(1, 1)).toBe(true);
+        //arrange
+        const a = 1;
+        const b = 1;
+
+        //act
+
+        const response = strictEquals(a, b);
+
+        //assert
+        expect(response).toBe(true);
     });
 
     test('NaN and NaN to be false', () => {
@@ -11,6 +21,7 @@ describe('Strict equals', () => {
 
     test('0 and -0 to be true', () => {
         expect(strictEquals(0, -0)).toBe(true);
+        debugger;
     });
 
     test('-0 and 0 to be true', () => {
