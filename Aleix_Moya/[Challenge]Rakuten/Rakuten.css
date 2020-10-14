@@ -4,13 +4,14 @@
 
 /* Slideshow container */
 .slideshow-container {
+
 	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .title__body {
-	display: none;
+  display: none;
 }
 
 /* Hide the images by default */
@@ -112,6 +113,30 @@
 @media screen and (min-width: 812px) {
 	.slideshow-container {
 		max-width: 100%;
+#MultiCarro{
+	max-width: 300px;
+}
+.container{
+	max-width: 310px;
+	margin-left: 2px;
+	margin-right: 0px;
+}
+#passButtonVideoLeft {
+	left: 17.5%;
+}
+@media screen and (min-width: 812px) {
+	body{
+		max-width: 100%;
+	}
+	.container{
+		margin-left: 1%;
+		margin-right: 0px;
+	}
+	#MultiCarro{
+		width: 112%;
+	}
+	.slideshow-container {
+    	max-width: 100%;
 		position: relative;
 		margin: auto;
 	}
@@ -122,6 +147,9 @@
 		width: 100%;
 	}
 	#passButtonVideo {
+		display: none;
+	}
+	#passButtonVideoLeft {
 		display: none;
 	}
 	#filas {
@@ -171,7 +199,6 @@
 	margin: 10px;
 	background: #f1f1f1;
 	color: #666;
-	
 }
 .MultiCarousel .leftLst,
 .MultiCarousel .rightLst {
@@ -196,7 +223,6 @@
 	color: grey;
 	background-color: white;
 }
-
 .desktop-header {
 	display: none;
 }
@@ -204,6 +230,7 @@
 .mini__rakuten-logo {
 	position: absolute;
 	left: 0;
+
 	top: 1.1%;
 	z-index: 900;
 }
@@ -330,6 +357,7 @@
 }
 
 .footer-content__info {
+
 	display: none;
 	font-family: 'Noto Sans', sans-serif;
 }
@@ -511,7 +539,7 @@ body {
 		border-bottom-left-radius: 5%;
 		cursor: pointer;
 	}
-
+  
 	.desktop-header__search button:hover {
 		color:grey;
 	}
