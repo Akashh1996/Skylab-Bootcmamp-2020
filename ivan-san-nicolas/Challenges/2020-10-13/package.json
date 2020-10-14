@@ -1,0 +1,16 @@
+{
+  "name": "2020-10-13",
+  "version": "1.0.0",
+  "description": "",
+  "main": "equals.js",
+  "scripts": {
+    "test": "jest",
+    "test_debug": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.5.3"
+  }
+}
