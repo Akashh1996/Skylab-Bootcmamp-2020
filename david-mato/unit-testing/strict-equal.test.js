@@ -2,7 +2,41 @@ const strictEquality = require('./strict-equal');
 
 describe('strictEquality', () => {
 	test('should return true', () => {
-		expect(strictEquality(null, null)).toBe(true);
+		// arrange
+		const a = 0;
+		const b = -0;
+
+		// act
+		const response = strictEquality(a, b);
+
+		// assert
+		expect(response).toBe(true);
+	});
+
+	test('should return true', () => {
+		// arrange
+		const a = -0;
+		const b = 0;
+
+		// act
+		const response = strictEquality(a, b);
+
+		// assert
+		expect(response).toBe(true);
+	});
+
+	test('should return true', () => {
+		// arrange
+		const a = 1;
+
+		// act
+		const response = strictEquality(a, a);
+
+		// assert
+		expect(response).toBe(true);
+	});
+
+	test('should return true', () => {
 		expect(strictEquality(1, 1)).toBe(true);
 		expect(strictEquality(0, -0)).toBe(true);
 		expect(strictEquality(-0, 0)).toBe(true);
