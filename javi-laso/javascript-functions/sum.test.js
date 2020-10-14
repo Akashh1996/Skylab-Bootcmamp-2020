@@ -1,4 +1,3 @@
-const { describe } = require('yargs');
 const sum = require('./index');
 
 describe('Sum', () => {
