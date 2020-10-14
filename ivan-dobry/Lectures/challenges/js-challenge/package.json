@@ -4,7 +4,7 @@
   "description": "> [Agile Manifesto](https://agilemanifesto.org/):\r > We are uncovering better ways of developing software by doing it and helping others do it.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",

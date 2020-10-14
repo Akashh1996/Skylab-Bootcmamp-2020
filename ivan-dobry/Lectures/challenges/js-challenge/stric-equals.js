@@ -10,7 +10,3 @@ function strictEquals (a, b) {
 }
 
 
-function cloneObj (obj) {
-    let copyObj = {...obj};
-    return copyObj;
-}
