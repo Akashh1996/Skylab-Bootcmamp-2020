@@ -4,7 +4,7 @@
   "description": "testing function strict equals",
   "main": "testing.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll"
   },
   "keywords": [],
   "author": "",
