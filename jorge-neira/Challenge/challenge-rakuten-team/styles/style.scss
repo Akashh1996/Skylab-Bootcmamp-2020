@@ -422,6 +422,9 @@ input {
 						}
 					}
 				}
+				.card-rating__title {
+					
+				}
 				.content-card__gender {
 					margin-bottom: 30px;
 					.card-gender__title {
@@ -891,6 +894,7 @@ input {
 			}
 			.detail-content__main {
 				width: 75%;
+				margin-left: 20px;
 				.main-content__card {
 					padding: 15px;
 					.content-card__info {
@@ -991,3 +995,5 @@ input {
 		}
 	}
 }
+
+

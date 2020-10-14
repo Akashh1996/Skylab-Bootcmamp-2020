@@ -1061,6 +1061,7 @@ input {
   }
   .detail .detail-content__wrapper .detail-content__main {
     width: 75%;
+    margin-left: 20px;
   }
   .detail .detail-content__wrapper .detail-content__main .main-content__card {
     padding: 15px;
