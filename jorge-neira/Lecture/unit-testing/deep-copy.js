@@ -1,16 +1,17 @@
 function deepCopy(original) {
+	let newOriginal = {};
 	if (!original) {
 		return original;
 	} else {
-		let newOriginal = {};
 		for (const props in original) {
-			if (original[props] === 'object') {
-				return deepCopy(original[props]);
+			debugger;
+			if (typeof original[props] === 'object') {
+				newOriginal[props] = deepCopy(original[props]);
 			} else {
-				newOriginal = newOriginal.original[props];
+				newOriginal[props] = original[props];
 			}
-			return newOriginal;
 		}
+		return newOriginal;
 	}
 }
 

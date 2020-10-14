@@ -5,7 +5,7 @@ describe('deepClone', () => {
 		// arrange
 		const original = null;
 		// act
-		const copy = deepClone(original);
+		const copy = deepCopy(original);
 		// assert
 		expect(copy).toBe(original);
 	});
@@ -13,7 +13,7 @@ describe('deepClone', () => {
 		// arrange
 		const original = undefined;
 		// act
-		const copy = deepClone(original);
+		const copy = deepCopy(original);
 		// assert
 		expect(copy).toBe(original);
 	});
@@ -21,7 +21,7 @@ describe('deepClone', () => {
 		// arrange
 		const original = {};
 		// act
-		const copy = deepClone(original);
+		const copy = deepCopy(original);
 		// assert
 		expect(copy).toMatchObject(original);
 	});
@@ -29,7 +29,7 @@ describe('deepClone', () => {
 		// arrange
 		const original = { name: 'Gilbe', age: 34 };
 		// act
-		const copy = deepClone(original);
+		const copy = deepCopy(original);
 		// assert
 		expect(copy).toMatchObject(original);
 	});
@@ -44,7 +44,7 @@ describe('deepClone', () => {
 			}
 		};
 		// act
-		const copy = deepClone(original);
+		const copy = deepCopy(original);
 		// assert
 		expect(
 			copy.skills !== original.skills && copy.skills.js === original.skills.js
@@ -61,7 +61,7 @@ describe('deepClone', () => {
 			}
 		};
 		// act
-		const copy = deepClone(original);
+		const copy = deepCopy(original);
 		// assert
 		expect(
 			copy.skills !== original.skills &&
