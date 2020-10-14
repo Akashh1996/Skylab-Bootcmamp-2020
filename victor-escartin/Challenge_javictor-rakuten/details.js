@@ -10,6 +10,9 @@ const nextBtnCast=document.querySelector('#nextBtnCast');
 const prevBtnAnother=document.querySelector('#prevBtnAnother');
 const nextBtnAnother=document.querySelector('#nextBtnAnother');
 
+const searchBtn = document.getElementById('searchBtn');
+const closeBtn = document.getElementById('closeBtn');
+
 let windowWidth = window.innerWidth;
 let containerCastWidth = document.getElementById('film-i').clientWidth;
 window.addEventListener('resize', () => {
@@ -19,6 +22,20 @@ window.addEventListener('resize', () => {
     carouselSlideCast.style.transform = 'translateX(0px)';
     counterAnother = 1;
     carouselSlideAnother.style.transform = 'translateX(0px)';
+});
+
+// Search button
+
+searchBtn.addEventListener('click', () => {
+    document.getElementById('searchBox').style.display = 'flex';
+    // document.getElementById('searchBox').style.transition = '0.7s ease';
+    document.getElementById('search-bar-input-details').autofocus = true;
+});
+
+// Close search button
+
+closeBtn.addEventListener('click', () => {
+    document.getElementById('searchBox').style.display = 'none';
 });
 
 // CAROUSEL CAST
