@@ -1,5 +1,4 @@
- checkStrictEquality(a, b) {
-     return (typeof (a) == typeof (b) && a == b)
- }
+ const checkStrictEquality = (a, b) => (typeof (a) == typeof (b) && a == b)
+
 
  module.exports = checkStrictEquality;
