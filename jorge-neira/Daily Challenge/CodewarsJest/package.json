@@ -1,7 +1,6 @@
 {
   "name": "codewarsjest",
   "version": "1.0.0",
-  "description": "",
   "main": "disemvowel-trolls.js",
   "dependencies": {
     "jest": "^26.5.3"
@@ -13,5 +12,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }
