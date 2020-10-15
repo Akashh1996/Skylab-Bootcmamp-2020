@@ -118,5 +118,3 @@ console.log(danielArray.some((x) => x > 1, danielArray));
 
 console.log('.reduce((a,b) => a+b) >>> ');
 console.log(danielArray.reduce((a, b) => a + b, danielArray));
-
-module.exports = skylabArray;
