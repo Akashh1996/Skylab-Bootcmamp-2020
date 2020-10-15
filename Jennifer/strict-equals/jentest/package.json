@@ -1,0 +1,16 @@
+{
+  "name": "jentest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch",
+    "jtest": "./node_modules/.bin/jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.5.3"
+  }
+}
