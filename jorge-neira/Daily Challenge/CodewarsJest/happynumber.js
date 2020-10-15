@@ -1,10 +1,16 @@
+let countArray = [];
 function isHappy(n, pow) {
-	let countArray = [];
 	let nums = n.toString().split('');
-	let sumNums = nums.reduce((acc, cur) => cur ** pow + acc, 0);
-	countArray.push(sumNums);
-	if (countArray[countArray.length - 1] === countArray) return countArray;
-	return isHappy(sumNums, pow);
+	countArray.push(n);
+	if (countArray[countArray.length - 1] === 1) {
+		return countArray.map(function (array) {
+			return array;
+		});
+	} else {
+		let sumNums = nums.reduce((acc, cur) => cur ** pow + acc, 0);
+		isHappy(sumNums, pow);
+	}
+	return countArray;
 }
 
-module.exports(isHappy);
+module.exports = isHappy;
