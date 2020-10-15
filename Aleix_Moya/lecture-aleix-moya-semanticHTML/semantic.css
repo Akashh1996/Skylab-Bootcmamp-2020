@@ -1,0 +1,74 @@
+
+ .square {
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 150px;
+    max-height: 150px;
+    border-style: solid;
+    border-width: thin;
+    border-color: black 2px;
+    background: lightgray;
+    margin-top: 22px;
+    margin-left: 50px;
+    display: absolute;
+  }
+  .circle {
+    margin-top: 28px;
+    max-width: 75px;
+    max-height: 75px;
+    min-width: 75px;
+    border-color: black 2px;
+    min-height: 75px;
+    background: lightgray;
+    border-radius: 50%
+  }
+  .triangle-up {
+    
+    min-width: 0;
+    border-color: black 2px;
+    min-height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid lightgray;
+  }
+  #Head{
+      display: flex;
+      flex-direction: row;
+      justify-items: space-around;
+  }
+  #Introduction{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+  }
+  #Titulos{
+    display: flex;
+    flex-direction: row;
+  }
+  #columnas{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+  }
+  #tirangulos{
+    display: flex;
+    text-align: center;
+    flex-direction: column; 
+    justify-content: center;
+  }
+  #subtitles{
+      color:lightgray;
+
+  }
+  @media screen and (max-width: 550px){
+    #Head{
+        display: flex;
+        flex-direction: column;
+        justify-items: space-around;
+    }
+    #columnas{
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-around;
+    }
+  }

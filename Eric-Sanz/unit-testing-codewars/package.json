@@ -1,0 +1,16 @@
+{
+  "name": "unit-testing-codewars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "disemvowel-trolls.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^26.5.3"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
