@@ -17,8 +17,8 @@ describe('copyObject', () => {
 		const copy = copyObject(original);
 		// assert
 		expect(copy).toBe(original);
-    });
-    
+	});
+		
 	test('should clone an empty object', () => {
 		// arrange
 		const original = {};
