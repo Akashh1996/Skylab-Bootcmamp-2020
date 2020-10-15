@@ -1,7 +1,6 @@
 const myArray = {};
 
 function myFind(obj, callback) {
-    let newObj = {}
     let objArray = Object.values(obj);
     for (let i = 0; i < objArray.length; i++) {
         if (callback(objArray[i])) return objArray[i];
