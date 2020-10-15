@@ -88,14 +88,15 @@ const skylabObject = {
 		}
 		return true;
 	},
-	// No acabada
+
 	reduce: (object, fn, rest = 0) => {
 		let accumulator = 0;
 		!rest ? (accumulator = 0) : (accumulator = rest);
 		let array = Object.entries(object);
-		for (let i = 0; i < array.length - 2; i++) {
-			accumulator += fn(array[i][1], array[i + 1][1]);
+		for (let i = 0; i < array.length - 1; i++) {
+			accumulator = fn(accumulator, array[i][1]);
 		}
+		return accumulator
 	}
 };
 
