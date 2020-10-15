@@ -43,10 +43,10 @@ const arrayMethods = {
 		return arr;
 	},
 	copyWithin: function (
+		arr,
 		target,
 		start = 0,
-		end = Object.entries(arr).length,
-		arr
+		end = Object.entries(arr).length
 	) {
 		if (target >= Object.entries(arr).length) {
 			return;
