@@ -11,7 +11,7 @@ function mySecondMap(object, callback) {
         if (property[0] === 'length') {
             return returnObject;
         }else{
-        returnObject[property[0]] = callback(property[1]);
+        	returnObject[property[0]] = callback(property[1]);
         }
 	});
 	return returnObject;
