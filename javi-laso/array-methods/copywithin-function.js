@@ -25,7 +25,7 @@ const skylabArray = {0:  'a', 1: 'b', 2:'c', 3:'d', 4: 'e', 5:'f', length: 6};
 const arr = ['a', 'b', 'c', 'd', 'e', 'f'];
 console.log(skylabArray);
 console.log(arr);
-skylabArray.copywithinFunction(-2); //[ 'a', 'd', 'e', 'f', 'e', 'f' ]
+skylabArray.copywithinFunction(-2);
 arr.copyWithin(-2);
 console.log('After change');
 console.log(skylabArray);

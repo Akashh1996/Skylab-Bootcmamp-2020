@@ -4,7 +4,7 @@ Object.prototype.findIndexFunction = function(callback) {
     
     for (let i = 0; i < this.length; i++) {
         if (callback(values[i])) {
-            return keys[i];
+            return keys[i]*1;
         }
     }
 
