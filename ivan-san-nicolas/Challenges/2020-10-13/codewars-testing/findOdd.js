@@ -7,18 +7,20 @@ that appears an odd number of times.
 ///////////////////////////////*/
 
 function findOdd(A) {
-    let newArray = [];
+    debugger;
+    let totalArray = [];
+    let actualNum = A[0];
     for (let i in A) {
-        for (let k in newArray) {
-            let alreadyIn = false;
-            if (A[i] === newArray[K]) {
-                alreadyIn = true;
+        if (A[i] === actualNum) totalArray.push(A[i]);
+    }
+    if (totalArray.length % 2 === 0) {
+        while (A.includes(totalArray[0])) {
+            for (let i in A) {
+                if (A[i] === totalArray[0]) A.splice(i, 1);
             }
         }
-        if (!alreadyIn) newArray.push(A[i]);
-        else newArray.splice(indexOf(A[i], 1));
-    }
-    return newArray[0];
+        return findOdd(A);
+    } else return totalArray[0];
 }
 
 module.exports = findOdd;
