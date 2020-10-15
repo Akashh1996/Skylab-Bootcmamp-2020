@@ -27,6 +27,6 @@ const personClone = {
     ...person
 }
 
-// merge first nd second argument
+// merge firstc second argument
 
 const personClone2 = Object.assign({}, person);
