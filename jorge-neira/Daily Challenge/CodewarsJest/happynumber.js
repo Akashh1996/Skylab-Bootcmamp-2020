@@ -1,6 +1,6 @@
 function isHappy(n, pow) {
 	let countArray = [];
-	if (n !== 1) {
+	if (n.length === 1) {
 		let nums = n.toString().split('');
 		let sumNums = nums.reduce((acc, cur) => cur ** pow + acc, 0);
 		countArray.push(sumNums);
