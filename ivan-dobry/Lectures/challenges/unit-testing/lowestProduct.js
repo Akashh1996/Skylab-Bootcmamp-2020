@@ -5,7 +5,7 @@ function lowestProduct(num) {
       return "Number is too small";
   } else {
     let newArr = num.split('').map(x=>+x);
-    
+
     return total;
   }
 }
