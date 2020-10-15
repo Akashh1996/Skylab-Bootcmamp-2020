@@ -79,16 +79,3 @@ function largestRectangleInGrid(matrix) {
 }
 
 module.exports = largestRectangleInGrid;
-
-const matrix = [
-    [1,0,1,1,1],
-    [0,1,1,0,1],
-    [0,1,1,0,1],
-    [0,1,1,0,1]
-];
-
-// row 1: 1 0 1 1 1, maxarea = 3
-
-// row 2: 0 1 1 0 2, maxarea = 2
-// row 3: 0 2 2 0 3, maxarea = 4
-// row 4: 0 3 3 0 4, maxarea = 6
