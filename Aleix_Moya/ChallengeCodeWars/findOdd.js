@@ -23,5 +23,6 @@ function findOdd(A) {
    
    return A[index]
     
-  
   }
+  
+module.exports = findOdd;
