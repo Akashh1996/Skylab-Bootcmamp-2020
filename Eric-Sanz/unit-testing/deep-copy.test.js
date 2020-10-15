@@ -12,7 +12,6 @@ describe ('deepClone', () => {
 
         //assert
         expect(copy).toBe(original);
-        // expect(copy).toEqual(cityCountries);
     });
 
     test('should clone an undefined', () => {
@@ -24,7 +23,6 @@ describe ('deepClone', () => {
 
         //assert
         expect(copy).toBe(original);
-        // expect(copy).toEqual(cityCountries);
     });
 
     test('should clone one level object', () => {
@@ -36,7 +34,6 @@ describe ('deepClone', () => {
 
         //assert
         expect(copy).toEqual(original);
-        // expect(copy).toEqual(cityCountries);
     });
 
     test('should clone two levels object', () => {
@@ -72,7 +69,6 @@ describe ('deepClone', () => {
 
         //assert
         expect(copy.skills !== original.skills && copy.skills.js !== original.skills.js && copy.skills.js.min === original.skills.js.min).toBe(true);
-        // expect(copy).toEqual(cityCountries);
     });
 
     test('should clone an empty object', () => {
@@ -84,7 +80,6 @@ describe ('deepClone', () => {
 
         //assert
         expect(copy).toMatchObject(original);
-        // expect(copy).toEqual(cityCountries);
     });
 });
 
