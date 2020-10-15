@@ -1,0 +1,147 @@
+html,
+body {
+	height: 100%;
+	margin: 0;
+	color: white;
+}
+
+#wrapper {
+	min-height: 100%;
+	height: 100%;
+}
+.line {
+	width: 35px;
+	height: 5px;
+	background-color: orange;
+	margin: 6px 0;
+}
+.left-bar {
+	display: flex;
+	justify-content: center;
+	color: black;
+}
+.right-icons {
+	display: flex;
+	justify-content: flex-end;
+}
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.header {
+	display: flex;
+	flex-direction: column;
+}
+.head {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.pagina {
+	display: flex;
+	background-color: #f8f8f8;
+	flex-direction: column;
+}
+.sub-header {
+	display: flex;
+	align-content: space-between;
+}
+.zero {
+	background-color: red;
+}
+.cart {
+	background-color: white;
+	color: black;
+}
+.search {
+	background-color: grey;
+}
+.material-icon {
+	color: black;
+}
+.sub-header {
+	border-bottom: 0;
+	border-top: 0;
+}
+.main-header {
+	display: flex;
+	justify-content: center;
+	padding: 50px;
+}
+.main-photo {
+	width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
+	display: block;
+	margin: 0px;
+}
+.photo_1 {
+	width: 100%;
+}
+.photo_2 {
+	width: 200px;
+	height: 150px;
+	padding: 25px;
+}
+.second-phase {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	height: auto;
+}
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.sticky + .content {
+	padding-top: 102px;
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	border-top: black;
+	border-bottom: black;
+}
+.utensilios {
+	color: black;
+}
+.moldes {
+	width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
+	display: block;
+	margin: 0px;
+}
+.molde_uno {
+	width: 360px;
+	height: 200px;
+	margin: 8px;
+	margin-right: 8px;
+}
+.main-imagenes-utensilios > img,
+.main-imagenes-ingredientes > img,
+.main-imagenes-fiestas > img {
+	object-fit: cover;
+	object-position: 50% 0;
+	width: 70%;
+	height: 160px;
+	padding: 6px 45px;
+}
+
+.bloque {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.button {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	width: auto;
+	height: 60px;
+}

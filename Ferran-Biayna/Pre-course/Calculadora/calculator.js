@@ -34,11 +34,13 @@ function calculadora(num1, num2 = undefined) {
 	}
 }
 function entero(num) {
+	let b = null;
 	if (num % 1 == 0) {
-		return true;
+		b = true;
 	} else {
-		return false;
+		b = false;
 	}
+	return b;
 }
 
 console.log('\t-- CALCULADORA --\t');

@@ -16,11 +16,13 @@ function calc(array1) {
 }
 
 function entero(a) {
+	let b = null;
 	if (a % 1 == 0) {
-		return true;
+		b = true;
 	} else {
-		return false;
+		b = false;
 	}
+	return b;
 }
 
 function newNumber() {

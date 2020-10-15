@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>AirFrance Form</title>
+  </head>
+  <body>
+    <section class="main-container">
+      <form class="form-container flex-column">
+        <div class="d-flex mt-3">
+          <div class="d-flex flex-column mr-2">
+            <label for="viaje">Viaje</label>
+            <select name="viajes" id="viaje">
+              <option value="1" selected>Ida y vuelta</option>
+              <option value="2">Sólo ida</option>
+              <option value="3">Destinos múltiples</option>
+            </select>
+          </div>
+          <div class="d-flex flex-column mr-2">
+            <label for="pasajero" class="required">Pasajeros</label>
+            <select name="Pasajeros" id="pasajero">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+          </div>
+          <div class="d-flex flex-column">
+            <label for="clase">Clase</label>
+            <select name="Clases" id="clase">
+              <option value="1" selected>Economy</option>
+              <option value="2">Premium Economy</option>
+              <option value="3">Business</option>
+              <option value="4">La Premiere</option>
+            </select>
+          </div>
+        </div>
+        <div class="d-flex mt-3">
+          <div>
+            <div class="mr-2">
+              <label for="salida"
+                ><span class="fas fa-plane-departure"></span
+              ></label>
+              <select name="salida" id="salida">
+                <option value="">
+                  <span>Salida de</span>
+                </option>
+                <option value="">A Coruña, A Coruna Airport</option>
+                <option value="">Aalborg, Aalborg</option>
+                <option value="">Abbotsford, Abbotsfor</option>
+                <option value="">Aberdeen, Dyce</option>
+                <option value="">Aberdeen, SD, Municipal Airport</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <div class="">
+              <label for="llegada"
+                ><span class="fas fa-plane-arrival"></span
+              ></label>
+              <select name="llegada" id="llegada" class="flighs__select--width">
+                <option value="">Llegada a</option>
+                <option value="">A Coruña, A Coruna Airport</option>
+                <option value="">Aalborg, Aalborg</option>
+                <option value="">Abbotsford, Abbotsfor</option>
+                <option value="">Aberdeen, Dyce</option>
+                <option value="">Aberdeen, SD, Municipal Airport</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-3 justify-content-space-between">
+          <div class="pr-3">
+            <div>
+              <div class="icono"></div>
+              <input type="date" />
+            </div>
+            <div class="d-flex align-items-center">
+              <label for="" class="mr-05">Viaje profesional</label>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+          <div class="d-flex flex-column">
+            <div class="d-flex">
+              <label class="mr-2">Rate</label>
+              <div class="d-flex custom-star-box justify-content-space-around">
+                <button class="p-rating-star">☆</button>
+                <button class="p-rating-star">☆</button>
+                <button class="p-rating-star">☆</button>
+                <button class="p-rating-star">☆</button>
+                <button class="p-rating-star">☆</button>
+              </div>
+            </div>
+            <div class="d-flex flex-column">
+              <label for=""></label>
+              <textarea
+                name=""
+                id=""
+                cols="35"
+                rows="3"
+                placeholder="Deja tu comentario"
+                class="text-area-container textarea--padding"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-3">
+          <fieldset class="login d-flex flex-column" id="userLogin">
+            <div class="d-flex">
+              <label for="user" class="label--width">Usuario</label>
+              <input
+                type="text"
+                name="user"
+                id="user"
+                class="input--border"
+                required
+              />
+            </div>
+            <br />
+            <div class="d-flex">
+              <label for="password" class="label--width">Contraseña</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="input--border"
+                required
+              />
+            </div>
+            <br />
+            <div class="d-flex">
+              <label for="email" class="label--width">Email</label>
+              <input
+                type="email"
+                name="Email"
+                id="email"
+                class="input--border"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                required
+              />
+            </div>
+            <br />
+            <div class="align-self-end">
+              <input
+                type="submit"
+                name="send"
+                id="submit"
+                class="input--submit"
+              />
+            </div>
+          </fieldset>
+        </div>
+      </form>
+    </section>
+    <script
+      src="https://kit.fontawesome.com/8619792f44.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

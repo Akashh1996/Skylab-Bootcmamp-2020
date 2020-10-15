@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="box">
+			<h1>Reservar un vuelo</h1>
+			<form class="form">
+				<div class="viaje-pasajeros-clase">
+					<div class="viaje-pasajeros">
+						<section class="viaje-label-select">
+							<label for="viaje">Viaje</label>
+							<select name="viaje" id="viaje">
+								<option value="ida-vuelta">Ida y vuelta</option>
+								<option value="ida">Solo ida</option>
+								<option value="multiples">Destinos múltiples</option>
+							</select>
+						</section>
+						<section class="pasajeros-label-select">
+							<label for="pasajeros">Pasajeros *</label>
+							<select name="pasajeros" id="pasajeros" required>
+								<option value="1">1 pasajero</option>
+								<option value="2">2 pasajeros</option>
+								<option value="3">3 pasajeros</option>
+								<option value="4">4 pasajeros</option>
+								<option value="5">5 pasajeros</option>
+								<option value="6">6 pasajeros</option>
+								<option value="7">7 pasajeros</option>
+								<option value="8">8 pasajeros</option>
+								<option value="9">9 pasajeros</option>
+							</select>
+						</section>
+					</div>
+					<section class="clase-label-select">
+						<label for="clase">Clase</label>
+						<select name="clase" id="clase">
+							<option value="Economy">ECONOMY</option>
+							<option value="premium-economy">PREMIUM ECONOMY</option>
+							<option value="business">BUSINESS</option>
+							<option value="premiere">LA PREMIÈRE</option>
+						</select>
+					</section>
+				</div>
+				<section class="salida-llegada">
+					<input type="text" placeholder="Salida de*" class="salida" required />
+					<input
+						type="text"
+						placeholder="Llegada a*"
+						class="llegada"
+						required
+					/>
+				</section>
+				<section class="dates-with-label">
+					<label for="date-start">Fechas de viaje *</label>
+					<div class="dates">
+						<input
+							type="date"
+							name="date-start"
+							id="date-start"
+							min="2020-10-08"
+							max="2021-10-07"
+							required
+						/>
+						<input
+							type="date"
+							name="date-end"
+							id="date-end"
+							min="2020-10-08"
+							max="2021-10-07"
+							required
+						/>
+					</div>
+				</section>
+				<section class="blue-button">
+					<label class="switch">
+						<input type="checkbox" checked />
+						<span class="slider round"></span>
+					</label>
+					<label id="viaje-profesional" for="switch">Viaje profesional</label>
+				</section>
+				<section class="name">
+					<input id="name-input" type="text" placeholder="Nombre *" required />
+				</section>
+				<section class="description">
+					<textarea
+						name="description-input"
+						id="description-input"
+						placeholder="Descripción"
+						cols="22"
+						rows="3"
+					></textarea>
+				</section>
+				<section class="email">
+					<input
+						id="email-input"
+						type="email"
+						placeholder="Email *"
+						pattern="[a-z0-9A-Z._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+						required
+					/>
+				</section>
+				<section class="phone">
+					<input
+						id="phone-input"
+						type="tel"
+						placeholder="Número de teléfono *"
+						pattern="[0-9]{9}"
+						maxlength="9"
+						required
+					/>
+				</section>
+				<section class="submit-button">
+					<input id="submit" type="submit" value="Buscar vuelos" />
+				</section>
+			</form>
+		</div>
+	</body>
+</html>
