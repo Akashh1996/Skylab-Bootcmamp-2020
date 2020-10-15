@@ -3,6 +3,6 @@ function highAndLow(numbers){
     let max = Math.max(...newArr).toString();
     let min = Math.min(...newArr).toString();
     return max + ' '+ min
-  }
+}
 
   module.exports = highAndLow;
