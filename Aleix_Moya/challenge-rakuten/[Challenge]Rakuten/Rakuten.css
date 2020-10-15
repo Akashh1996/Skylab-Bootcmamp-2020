@@ -4,14 +4,13 @@
 
 /* Slideshow container */
 .slideshow-container {
-
 	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .title__body {
-  display: none;
+	display: none;
 }
 
 /* Hide the images by default */
@@ -113,30 +112,6 @@
 @media screen and (min-width: 812px) {
 	.slideshow-container {
 		max-width: 100%;
-#MultiCarro{
-	max-width: 300px;
-}
-.container{
-	max-width: 310px;
-	margin-left: 2px;
-	margin-right: 0px;
-}
-#passButtonVideoLeft {
-	left: 17.5%;
-}
-@media screen and (min-width: 812px) {
-	body{
-		max-width: 100%;
-	}
-	.container{
-		margin-left: 1%;
-		margin-right: 0px;
-	}
-	#MultiCarro{
-		width: 112%;
-	}
-	.slideshow-container {
-    	max-width: 100%;
 		position: relative;
 		margin: auto;
 	}
@@ -147,9 +122,6 @@
 		width: 100%;
 	}
 	#passButtonVideo {
-		display: none;
-	}
-	#passButtonVideoLeft {
 		display: none;
 	}
 	#filas {
@@ -199,6 +171,7 @@
 	margin: 10px;
 	background: #f1f1f1;
 	color: #666;
+	
 }
 .MultiCarousel .leftLst,
 .MultiCarousel .rightLst {
@@ -223,6 +196,7 @@
 	color: grey;
 	background-color: white;
 }
+
 .desktop-header {
 	display: none;
 }
@@ -230,7 +204,6 @@
 .mini__rakuten-logo {
 	position: absolute;
 	left: 0;
-
 	top: 1.1%;
 	z-index: 900;
 }
@@ -356,8 +329,58 @@
 	background-image: url('mobile-icon/login2.jpg');
 }
 
-.footer-content__info {
+.interstellar {
+	padding: 15px;
+}
 
+.gender-text {
+	font-family: 'Noto Sans', sans-serif;
+	color: white;
+	font-weight: 700;
+	font-size: 20px;
+	margin-top: px;
+	padding-left: 25px;
+}
+
+.gender-scroll {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	overflow-x: auto;
+	width: 100%;
+}
+
+.gender-scroll::-webkit-scrollbar {
+	display: none;
+}
+
+.gender-scroll__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	border: none;
+	padding: 20px;
+	cursor: pointer;
+}
+
+.gender-scroll__item p {
+    color: #fff;
+    font-size: 15px;
+    padding-top: 2px;
+}
+
+.item__gender {
+	display: block;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-size: 130%;
+	background-position: center;
+	background-color: transparent;
+}
+
+.footer-content__info {
 	display: none;
 	font-family: 'Noto Sans', sans-serif;
 }
@@ -496,6 +519,7 @@ body {
 		background-color: black;
 		color: white;
 		border: 1px;
+		outline: none;
 		font-weight: 700;
 		font-family: 'Noto Sans', sans-serif;
 		font-size: 14px;
@@ -539,7 +563,7 @@ body {
 		border-bottom-left-radius: 5%;
 		cursor: pointer;
 	}
-  
+
 	.desktop-header__search button:hover {
 		color:grey;
 	}
