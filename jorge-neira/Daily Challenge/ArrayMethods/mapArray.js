@@ -1,9 +1,10 @@
 const skylabArray = { 0: 5, 1: 10, 2: 15, length: 3 };
 
-const mySecondMap = (object, callback) => {
+const myObjectMap = function (object, callback) {
 	const myNewObject = {};
 	for (const props in object) {
 		if (props === 'length') {
+			myNewObject[props] = object[props];
 			return myNewObject;
 		} else {
 			myNewObject[props] = callback(object[props]);
@@ -12,10 +13,16 @@ const mySecondMap = (object, callback) => {
 	return myNewObject;
 };
 
-Object.prototype.myPoopMap = mySecondMap;
+Object.prototype.myMap = myObjectMap;
 
-const double = (double) => {
+const myLog = skylabArray.myMap(skylabArray, (double) => {
 	return double * 2;
-};
+});
 
-console.log(skylabArray.myPoopMap(skylabArray, double));
+// console.log(myLog);
+console.log(Object.prototype.myMap);
+// console.log(
+// 	skylabArray.myMap((double) => {
+// 		return double * 2;
+// 	})
+// );
