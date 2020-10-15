@@ -1,6 +1,6 @@
 const lowestProduct = require('./lowest-product');
 
-describe('Find odd times number', () => {
+describe('Lowest product of 4 consecutive numbers', () => {
     test('should return 24', () => {
         //assign
             const str = "123456789";

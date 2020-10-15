@@ -1,6 +1,6 @@
 const isHappy = require('./is-happy');
 
-describe('Find odd times number', () => {
+describe('Is a happy number', () => {
     test('should return [1]', () => {
         //assign
             const n = 7;

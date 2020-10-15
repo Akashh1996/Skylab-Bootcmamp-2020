@@ -6,7 +6,7 @@ function lowestProduct(input) {
     const products = [];
 
     for (let i = 0; i < input.length - 3; i++) {
-        products.push(parseInt(input[i]) * parseInt(input[i + 1]) * parseInt(input[i + 2]) * parseInt(input[i + 3]));
+        products.push(input[i] * input[i + 1] * input[i + 2] * input[i + 3] * 1);
     }
 
     return Math.min(...products);
