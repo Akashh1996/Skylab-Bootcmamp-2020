@@ -1,19 +1,22 @@
-const { debug } = require("console");
-
 Object.prototype.copywithinFunction = function(target, start = 0, end = this.length) {
     const keys = Object.keys(this);
     const values = Object.values(this);
     const tempObject = {};
     let tempVar = start;
 
+    target = target < 0 ? target + this.length : target;
+    start = start < 0 ? start + this.length : start;
+    end = end < 0 ? end + this.length : end;
+
     for (start; start < end; start++) {
         tempObject[keys[start]] = values[start];
     }
 
-    for (let i = 0; i < tempObject.length; i++) {
-        this[keys[target]*1] = tempObject[tempVar];
-        debugger;
+    for (let i = 0; i < Object.keys(tempObject).length; i++) {
+        this[keys[target]] = tempObject[tempVar];
+        target++;
         tempVar++;
+        if (target >= this.length) {break;}
     }
 }
 
@@ -22,8 +25,8 @@ const skylabArray = {0:  'a', 1: 'b', 2:'c', 3:'d', 4: 'e', 5:'f', length: 6};
 const arr = ['a', 'b', 'c', 'd', 'e', 'f'];
 console.log(skylabArray);
 console.log(arr);
-skylabArray.copywithinFunction(1, 3); //[ 'a', 'd', 'e', 'f', 'e', 'f' ]
-arr.copyWithin(1, 3);
+skylabArray.copywithinFunction(-2); //[ 'a', 'd', 'e', 'f', 'e', 'f' ]
+arr.copyWithin(-2);
 console.log('After change');
 console.log(skylabArray);
 console.log(arr);
