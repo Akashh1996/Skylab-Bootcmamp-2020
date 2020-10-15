@@ -1,6 +1,6 @@
 function lowestProduct(input) {
-    let numbersSplited = input.split(' ')
-    let lowestNumberInArray = [],
+    let numbersSplited = input.split('').map(number => parseInt(number))
+    let lowestNumberInArray = [];
     if (input.length < 4) {
         return 'Number is too small'
     } else {
@@ -9,7 +9,6 @@ function lowestProduct(input) {
         }
     }
     return lowestNumberInArray.sort((a, b) => a - b)[0]
-
 }
 
 module.exports = lowestProduct
