@@ -1,7 +1,7 @@
 const myJestTest = require('./ownArrayMethods');
 
 describe('Test ArrayMethods using __proto__', () => {
-	test('The should return double', () => {
+	test('Should return doubles', () => {
 		//arrange
 		const a = {
 			0: 25,
@@ -25,6 +25,68 @@ describe('Test ArrayMethods using __proto__', () => {
 			4: 180,
 			5: 72,
 			length: 6
+		});
+	});
+	test('Should return all the elements that pass the condition', () => {
+		//arrange
+		const a = {
+			0: 'spray',
+			1: 'limit',
+			2: 'elite',
+			3: 'exuberant',
+			4: 'destruction',
+			5: 'present',
+			length: 6
+		};
+		//act
+		const response = myJestTest.myFilter(a, (word) => word.length > 6);
+		//assert
+		expect(response).toStrictEqual({
+			0: 'exuberant',
+			1: 'destruction',
+			2: 'present',
+			length: 3
+		});
+	});
+	test('Should return the first element that satisfies the provided test', () => {
+		//arrange
+		const a = {
+			0: 'spray',
+			1: 'limit',
+			2: 'elite',
+			3: 'exuberant',
+			4: 'destruction',
+			5: 'present',
+			length: 6
+		};
+		//act
+		const response = myJestTest.myFilter(
+			a,
+			(element) => element === 'destruction'
+		);
+		//assert
+		expect(response).toStrictEqual({
+			0: 'destruction',
+			length: 1
+		});
+	});
+	xtest('Should return undefined since there is no match', () => {
+		//arrange
+		const a = {
+			0: 'spray',
+			1: 'limit',
+			2: 'elite',
+			3: 'exuberant',
+			4: 'destruction',
+			5: 'present',
+			length: 6
+		};
+		//act
+		const response = myJestTest.myFilter(a, (element) => element === 'nomatch');
+		//assert
+		expect(response).toBe({
+			0: 'undefined',
+			length: 1
 		});
 	});
 });
