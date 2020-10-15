@@ -3,4 +3,4 @@ function highAndLow(numbers) {
 	return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
 }
 
-export default highAndLow;
+module.exports = highAndLow;
