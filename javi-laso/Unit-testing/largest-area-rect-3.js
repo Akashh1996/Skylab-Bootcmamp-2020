@@ -15,7 +15,6 @@ function largestRectangleInGrid(matrix) {
     let maxArea = 0;
     let actualArea = 0;
     let areaCounter = 0;
-    debugger;
     //Máxima área de la primera fila
     for (let mCol = 0; mCol < matrix[0].length; mCol++) {
         //Comprobar que no sea cero, si lo es, siguiente número y el máximo valor queda como área máxima de la fila
