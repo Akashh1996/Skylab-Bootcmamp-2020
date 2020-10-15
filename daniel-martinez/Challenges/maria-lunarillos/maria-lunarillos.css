@@ -240,6 +240,11 @@
 	line-height: 18px;
 	background-color: rgba(248, 248, 248, 0.8);
 }
+
+.description-text {
+	display: none;
+}
+
 .ver-mas {
 	display: flex;
 	justify-content: center;
@@ -613,7 +618,6 @@
 
 	.logo-big {
 		display: block;
-		max-width: 250px;
 		margin: 80px 0 30px;
 	}
 
