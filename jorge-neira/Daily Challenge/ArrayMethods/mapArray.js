@@ -26,3 +26,10 @@ console.log(Object.prototype.myMap);
 // 		return double * 2;
 // 	})
 // );
+Object.prototype.newMap = this.map;
+
+console.log(
+	skylabArray.newMap((double) => {
+		return double * 2;
+	})
+);
