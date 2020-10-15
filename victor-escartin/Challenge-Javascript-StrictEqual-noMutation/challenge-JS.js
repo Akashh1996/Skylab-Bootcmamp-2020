@@ -23,10 +23,10 @@ function noMutate (a) {
     return b;
 }
 
-let obj={id:10,name:3,adress:3}
+let obj={id:'Carlos',age:34}
 let newObj= noMutate(obj);
 
-obj={id:1,name:3,adress:3}
+obj={id:'Carlos',age:35}
 
 console.log(obj);
 console.log(newObj);
