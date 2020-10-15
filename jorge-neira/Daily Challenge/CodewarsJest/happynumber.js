@@ -7,4 +7,4 @@ function isHappy(n, pow) {
 	return isHappy(sumNums, pow);
 }
 
-export default isHappy;
+module.exports(isHappy);
