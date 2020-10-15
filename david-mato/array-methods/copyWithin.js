@@ -1,10 +1,4 @@
-function copyWithin(target, start, end, arr) {
-	if (!start) {
-		start = 0;
-	}
-	if (!end) {
-		end = Object.entries(arr).length;
-	}
+function copyWithin(target, start = 0, end = Object.entries(arr).length, arr) {
 	if (target >= Object.entries(arr).length) {
 		return;
 	}

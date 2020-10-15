@@ -31,25 +31,23 @@ const arrayMethods = {
 		}
 		return -1;
 	},
-	fill: function (arr, value, startIndex, finalIndex) {
-		if (!startIndex) {
-			startIndex = 0;
-		}
-		if (!finalIndex) {
-			finalIndex = Object.entries(arr).length;
-		}
+	fill: function (
+		arr,
+		value,
+		startIndex = 0,
+		finalIndex = Object.entries(arr).length
+	) {
 		for (let i = startIndex; i < finalIndex; i++) {
 			arr[i] = value;
 		}
 		return arr;
 	},
-	copyWithin: function (target, start, end, arr) {
-		if (!start) {
-			start = 0;
-		}
-		if (!end) {
-			end = Object.entries(arr).length;
-		}
+	copyWithin: function (
+		target,
+		start = 0,
+		end = Object.entries(arr).length,
+		arr
+	) {
 		if (target >= Object.entries(arr).length) {
 			return;
 		}
@@ -87,8 +85,12 @@ const arrayMethods = {
 	reduce: function (callback, arr) {
 		let acc = 0;
 		let curr = 0;
-		for (let i = 0; i < Object.entries(arr).length; i++) {
+		for (let i = 1; i < Object.entries(arr).length; i++) {
+			if (!acc) {
+				acc = Object.entries(arr)[i - 1][1];
+			}
 			curr = Object.entries(arr)[i][1];
+
 			acc = callback(acc, curr);
 		}
 		return acc;
