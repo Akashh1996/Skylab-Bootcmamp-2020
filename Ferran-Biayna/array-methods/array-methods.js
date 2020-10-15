@@ -101,7 +101,4 @@ const skylabObject = {
 
 const ferranObject = { __proto__: skylabObject, 0: 1, 1: 1, 2: 3, length: 3 };
 
-console.log(ferranObject.every(ferranObject, (x) => x < 2));
-console.log(ferranObject.reduce(ferranObject, (x, y) => x + y));
-
 module.exports = skylabObject;
