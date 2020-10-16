@@ -1,23 +1,25 @@
-const copyObject = require('./happy-number.test')
-
-describe("isHappy",() =>{
-    test("",() =>{
-        //arange
-        
-        //act
-       
-        //assert
-        expect().toBe();
-    });
-});
+const isHappy = require('./happy-number')
 
 describe("isHappy",() =>{
     test("should return 1 if is a happy number'",() =>{
         //arange
-        let str = "This website is for losers LOL!"
+        let numb = 16;
+        let pow = 2;
         //act
-        let provisionalStr = disemvowel(str);
+        const copyObject = isHappy(numb,pow);
         //assert
-        expect(provisionalStr).toBe("Ths wbst s fr lsrs LL!");
+        expect(copyObject).toBe(false);
+    });
+
+    test("should return 1 if is a happy number'",() =>{
+        //arange
+        let numb = 7;
+        let pow = 2;
+        //act
+        const copyObject = isHappy(numb,pow);
+        //assert
+        expect(copyObject).toBe(true);
     });
 });
+
+

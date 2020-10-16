@@ -1,5 +1,4 @@
 const disemvowel = require('./codewars-trolls');
-const copyObject = require('./codewars-trolls')
 
 describe("disemvowel",() =>{
     test("should return a string -> 'The wbst s fr lsrs LL!'",() =>{

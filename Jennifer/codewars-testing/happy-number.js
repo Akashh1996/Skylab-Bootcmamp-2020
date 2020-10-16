@@ -19,10 +19,10 @@ function isHappy(n, pow) {
         return arrayResultado;
       }
       if(resultadoSuma === 1){
-        return [1];
+        return 1;
       }
     }
   }
 
-
-  mmodule.exports = isHappy
+  isHappy(7,2);
+  module.exports = isHappy
