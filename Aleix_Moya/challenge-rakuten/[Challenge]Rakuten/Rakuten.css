@@ -99,24 +99,44 @@
 	animation-name: fade;
 	animation-duration: 5s;
 }
+.item{
+	max-width:80%;
+}
 #imagesVideo {
-	width: 90%;
+	max-width: 80%;
 }
 #imagesFilms {
-	width: 90%;
+	max-width: 80%;
 }
 .container:hover #imagesFilms {
 	border-color: yellow;
 }
 
-@media screen and (min-width: 812px) {
+@media screen and (min-width: 812px) {	
+	.gender-scroll {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		overflow-x: auto;
+		width: 100%;
+	}
 	.slideshow-container {
 		max-width: 100%;
 		position: relative;
 		margin: auto;
 	}
+	#imagesVideo:hover{
+		max-width: 100%;
+		outline:2px solid yellow;
+		outline-offset: 2px;
+	}
 	#imagesVideo {
-		width: 110%;
+		max-width: 100%;
+	}
+	#imagesFilms:hover{
+		max-width: 100%;
+		outline:2px solid yellow;
+		outline-offset: 2px;
 	}
 	#imagesFilms {
 		width: 100%;
@@ -347,7 +367,7 @@
 	flex-direction: row;
 	justify-content: flex-start;
 	overflow-x: auto;
-	width: 100%;
+	width: 90%;
 }
 
 .gender-scroll::-webkit-scrollbar {
