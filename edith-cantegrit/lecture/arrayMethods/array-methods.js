@@ -7,9 +7,18 @@ const SkylabArray =  {
            __proto__: SkylabArray
        };
     },
-    filter: () => {
-        console.log('push method underconstruction');
-    },
+    filter: (callback, original) => {
+        newObject = {}
+        newObject.id
+        for (property in original) {
+           if(callback(original[property]))
+        }
+        return {
+         newObject =
+
+        }
+    }
+    
     map: () => {
         console.log('push method underconstruction');
     }
@@ -19,7 +28,9 @@ const customArray = {
     length: 0,
     __proto__: SkylabArray,
 }
+const isMoreThanFive = number => number > 5;
 
 customArray = customArray.push(customArray, 'skylab');
+customArray = customArray.filter(isMoreThanFive, customArray)
 
 module.exports = {SkylabArray, customArray}
