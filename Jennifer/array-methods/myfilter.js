@@ -1,39 +1,40 @@
-const skylabArray = {
+const mySkylabMethods = {
+  myFilter: (object, callback) => {
+    const returnObject = {};
+    let contador = 0;
+    for (const property in object) {
+        const elementPassTest = callback(object[property]);
+        if(elementPassTest){
+            contador++
+            returnObject[property]=object[property]
+        }
+    }
+    if(contador === 0 ){
+            return undefined;
+    }else{
+            returnObject.length = contador;
+            return returnObject;
+    }  
+}  
+}
+
+ const skylabArray = {
     0: 5,
     1: 10,
     2: 3,
-    length: 3
+    length: 3,
+    __proto__: mySkylabMethods
 };
-
-
-
-const myFilter = function (object, callback){
-    const returnObject = {};
-    let contador = 0;
-    Object.entries(object).forEach((property)=>{
-        const elementPassTest = callback(property[1]);
-        if(elementPassTest){
-            returnObject[property[0]]=property[1]
-            contador++;
-        }
-        returnObject["length"] = contador;
-    })
-
-    return returnObject;
-}
-
-
-const result = myFilter(skylabArray, (property) => {
+ 
+ result = skylabArray.myFilter(skylabArray, (property) => {
     if(property > 3){
         return true;
+    }else{
+        return false;
     }
 });
 
-Object.prototype.myFilterConNombreMio = myFilter;
 
+// Object.prototype.myFilter = myFilter;
 
-const result2 = Object.prototype.myFilterConNombreMio(skylabArray, (value) => {
-    return value > 3;
-})
-
-console.log(result2);
+console.log(result);
