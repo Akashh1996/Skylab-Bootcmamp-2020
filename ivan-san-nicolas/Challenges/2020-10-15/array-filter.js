@@ -2,10 +2,9 @@ const myArray = {};
 
 function myFilter(obj, callback) {
     let newObj = {}
-    let objArray = Object.values(obj);
-    for (let i = 0; i < objArray.length; i++) {
-        if (callback(objArray[i])) {
-            newObj[i] = objArray[i];
+    for (let i in obj) {
+        if (callback(obj[i])) {
+            newObj[i] = obj[i];
         }
     }
     return newObj;
