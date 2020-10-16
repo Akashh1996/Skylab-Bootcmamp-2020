@@ -233,12 +233,15 @@
 }
 
 .description {
-	color: rgb(102, 99, 95);
 	width: 40%;
 	padding: 20px 20px 20px 20px;
+	background-color: rgba(248, 248, 248, 0.8);
+}
+
+.description-title {
+	color: rgb(102, 99, 95) !important;
 	font-size: 18px;
 	line-height: 18px;
-	background-color: rgba(248, 248, 248, 0.8);
 }
 
 .description-text {
@@ -818,15 +821,22 @@
 		margin-bottom: 100px;
 	}
 
-	.triangle {
-		content: '';
-		display: inline-block;
-		width: 0;
-		height: 0;
-		border-bottom: 150px solid rgba(255, 255, 255, 0.8);
-		border-right: 100px solid transparent;
-		position: absolute;
-		right: -100px;
-		top: 0;
+	/* triangle */
+
+	.description {
+		width: 200px;
+		padding: 20px 20px 20px 20px;
+		background-color: rgba(248, 248, 248, 0.8);
+	}
+
+	.description-title {
+		color: rgb(102, 99, 95) !important;
+		font-size: 18px;
+		line-height: 18px;
+	}
+
+	.description-text {
+		display: block;
+		color: rgb(102, 99, 95);
 	}
 }
