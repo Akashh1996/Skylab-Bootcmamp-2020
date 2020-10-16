@@ -60,7 +60,7 @@ describe('Test ArrayMethods using __proto__', () => {
 			length: 6
 		};
 		//act
-		const response = myJestTest.myFilter(
+		const response = myJestTest.myFind(
 			a,
 			(element) => element === 'destruction'
 		);
@@ -70,7 +70,7 @@ describe('Test ArrayMethods using __proto__', () => {
 			length: 1
 		});
 	});
-	xtest('Should return undefined since there is no match', () => {
+	test('Should return undefined since there is no match', () => {
 		//arrange
 		const a = {
 			0: 'spray',
@@ -82,11 +82,24 @@ describe('Test ArrayMethods using __proto__', () => {
 			length: 6
 		};
 		//act
-		const response = myJestTest.myFilter(a, (element) => element === 'nomatch');
+		const response = myJestTest.myFind(a, (element) => element === 'nomatch');
 		//assert
-		expect(response).toBe({
-			0: 'undefined',
-			length: 1
-		});
+		expect(response).toBeUndefined();
+	});
+	test('Should return the index of the first match ', () => {
+		//arrange
+		const a = {
+			0: '25',
+			1: '41',
+			2: '10',
+			3: '5',
+			4: '34',
+			5: '70',
+			length: 6
+		};
+		//act
+		const response = myJestTest.myFindIndex(a, (element) => element > 41);
+		//assert
+		expect(response).toStrictEqual({ 0: 5, length: 1 });
 	});
 });
