@@ -3,7 +3,7 @@ const myArray = {};
 function myFindIndex(obj, callback) {
     let objArray = Object.values(obj);
     for (let i = 0; i < objArray.length; i++) {
-        if (callback(objArray[i])) return true;
+        if (callback(objArray[i])) return i;
     }
     return false;
 };
