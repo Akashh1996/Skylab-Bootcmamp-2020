@@ -376,12 +376,12 @@ body {
     width: 25%;   
 }
 #Pin:hover{
+	position: absolute;
     top: 36%;
-    left: 62%;
-    position: absolute;
+    margin-left: 61%;   
     width: 10%;
     height: 11%;
-	background-image: url("Hover.svg");
+	background-image: url("hover.svg");
 	background-repeat: no-repeat;
 }
 #Pin{
@@ -482,7 +482,7 @@ body {
   .title{
 	display: none;
   }
-@media screen and (max-width: 375px){
+@media screen and (max-width: 812px){
 	.description {
 	margin-top:50%;
 	display: flex;
@@ -521,20 +521,22 @@ body {
 		font-size: medium;
 	}	
 	#Pin:hover{
-		top: 36%;
-		left: 62%;
 		position: absolute;
+		top: 33%;
+		margin-left: 62%;   
 		width: 10%;
-		height: 11%;
-		background-image: url("Hover.svg");
+		height: 25%;
+		z-index: 100;
+		background-image: url("hover.svg");
 		background-repeat: no-repeat;
 	}
 	#Pin{
 		position: absolute;
-		top: 36%;
-		margin-left: 61%;   
+		top: 33%;
+		margin-left: 62%;   
 		width: 10%;
-		height: 11%;
+		height: 25%;
+		z-index: 100;
 		background-image: url("1274860.svg");
 		background-repeat: no-repeat;
 	}
