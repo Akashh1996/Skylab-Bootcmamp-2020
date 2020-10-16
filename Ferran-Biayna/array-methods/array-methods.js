@@ -92,9 +92,9 @@ const skylabObject = {
 	reduce: (object, fn, rest = 0) => {
 		let accumulator = 0;
 		!rest ? (accumulator = 0) : (accumulator = rest);
-		let array = Object.entries(object);
-		for (let i = 0; i < array.length - 1; i++) {
-			accumulator = fn(accumulator, array[i][1]);
+		for (property in object) {
+			if (object.hasOwnProperty(property) && property!=="length")
+			accumulator = fn(accumulator, object[property]);
 		}
 		return accumulator
 	}
