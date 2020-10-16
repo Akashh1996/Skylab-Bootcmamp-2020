@@ -1,25 +1,29 @@
-const myArray = {};
-
-function myMap(obj, callback) {
-    let newObj = {}
-    let objArray = Object.values(obj);
-    for (let i = 0; i < objArray.length; i++) {
-        newObj[i] = callback(objArray[i]);
+let proto = {
+    myMap: (obj, callback) => {
+        let newObj = {}
+        for (let i in obj) {
+            if (obj.hasOwnProperty(i)) {
+                newObj[i] = callback(obj[i]);
+            }
+        }
+        return newObj;
     }
-    obj[Object.keys(newObj).length] = Object.keys(obj).length;
-    return newObj;
-};
+}
 
 let obj = {
     0: 'hola',
     1: 'adios',
     2: 'adios',
     3: 'adios',
-    length: 4
+    length: 4,
+    __proto__: proto
 };
 
-const result = myMap(obj, (value) => {
+const result = obj.myMap(obj, (value) => {
     return value + ' los callbacks son guais';
 });
 
-console.log(result);
+module.exports = {
+    proto,
+    obj
+}
