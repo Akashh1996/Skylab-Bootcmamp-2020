@@ -8,13 +8,16 @@ let obj = {
 
 function mySecondMap(object, callback) {
 	const returnObject = {};
-	Object.entries(object).forEach((property) => {
-		returnObject[property[0]] = callback(property[1]);
-	});
-	return returnObject;
+	for (const prop in object) {
+		if (prop === 'length') {
+			return returnObject;
+		} else {
+			returnObject[prop] = callback(object[prop]);
+		}
+	}
 }
 const result = mySecondMap(obj, (value) => {
-	return value + 'los callbacks son guais';
+	return value + ' los callbacks son guais';
 });
 
 console.log(result);
