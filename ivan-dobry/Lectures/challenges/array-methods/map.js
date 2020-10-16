@@ -20,4 +20,3 @@ const result = mySecondMap(obj, (value) => {
 	return value + 'los callbacks son guais';
 });
 console.log(result);
-module.exports = obj;
