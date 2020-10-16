@@ -12,7 +12,7 @@ const mySkylabMethods = {
     if(contador === 0 ){
             return undefined;
     }else{
-            returnObject.length = contador;
+            //returnObject.length = contador;
             return returnObject;
     }  
 }  
@@ -26,7 +26,7 @@ const mySkylabMethods = {
     __proto__: mySkylabMethods
 };
  
- result = skylabArray.myFilter(skylabArray, (property) => {
+ let result = skylabArray.myFilter(skylabArray, (property) => {
     if(property > 3){
         return true;
     }else{

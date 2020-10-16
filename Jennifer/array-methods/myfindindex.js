@@ -1,9 +1,13 @@
+const strictEquals = require('./challenge-igualdad-estricta')
+
+
 const mySkylabMethod = {
-    myFind: (object, callback) => {
-       for (const property in object) {
+    myFindIndex: (object, callback) => {
+
+        for (const property in object) {
             const elementPassTest = callback(object[property]);
             if(elementPassTest){
-                return object[property]
+                return property 
             }
         }
         return undefined
@@ -19,7 +23,7 @@ const skylabArray = {
 };
 
 
-result = skylabArray.myFind(skylabArray, (property) => {
+result = skylabArray.myFindIndex(skylabArray, (property) => {
     if(property === 3){
         return true;
     }else{
@@ -30,4 +34,3 @@ result = skylabArray.myFind(skylabArray, (property) => {
 console.log(result);
 
 
-module.exports = mySkylabMethod
