@@ -35,7 +35,7 @@ let skylabArray = {
 	findIndex: (fn, object) => {
 		for (let property in object) {
 			if (fn(object[property])) {
-				return property;
+				return Number(property);
 			}
 		}
 		return -1;
@@ -61,6 +61,24 @@ let skylabArray = {
 		}
 		return newObj;
 	},
+	copyWithin: (object, target, start=0, end=object.length) => {
+		if (target >= object.length) {
+			return;
+		}
+		let values = {};
+		for (let i = start; i < end; i++) {
+			if (object[i] !== 'length'){
+				values[i] = Object.entries(object)[i][1];
+			}
+		}
+		for (let i = 0; i < object.length; i++) {
+			if (!object[target + i]) {
+				return object;
+			}
+			object[target + i] = Object.entries(values)[i][1];
+		}
+		return object;
+	},
 	some: (fn, object) => {
 		for (let property in object) {
 			if (fn(object[property]) && object.hasOwnProperty(property)) {
@@ -81,7 +99,15 @@ let skylabArray = {
 		}
 		return true;
 	},
-	reduce: () => {}
+	reduce: (object, fn, rest = 0) => {
+        let accumulator = 0;
+        !rest ? (accumulator = 0) : (accumulator = rest);
+        for (property in object) {
+            if (object.hasOwnProperty(property) && property!=="length")
+            accumulator = fn(accumulator, object[property]);
+        }
+        return accumulator
+    }
 };
 
 let danielArray = {
@@ -92,29 +118,5 @@ let danielArray = {
 	__proto__: skylabArray
 };
 
-console.log('Initial array:');
-console.log(danielArray);
 
-console.log('.map(x => x*2) >>> ');
-console.log(danielArray.map((x) => x * 2, danielArray));
-
-console.log('.length >>> ');
-console.log(danielArray.length);
-
-console.log('.filter(x => x > 1) >>> ');
-console.log(danielArray.filter((x) => x > 1, danielArray));
-
-console.log('.find(x => x > 1) >>> ');
-console.log(danielArray.find((x) => x > 1, danielArray));
-
-console.log('.findIndex(x => x > 1) >>> ');
-console.log(danielArray.findIndex((x) => x > 1, danielArray));
-
-console.log('.fill(1,1,2) >>> ');
-console.log(danielArray.fill(danielArray, 1, 1, 2));
-
-console.log('.some(x => x > 1) >>> ');
-console.log(danielArray.some((x) => x > 1, danielArray));
-
-console.log('.reduce((a,b) => a+b) >>> ');
-console.log(danielArray.reduce((a, b) => a + b, danielArray));
+module.exports = {danielArray, skylabArray};
