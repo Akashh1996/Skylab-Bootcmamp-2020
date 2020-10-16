@@ -6,10 +6,10 @@ const myProtos = {
 				newObject[property] = callback(object[property]);
 			} else {
 				newObject[property] = object[property];
+				newObject.__proto__ = myProtos;
 				return newObject;
 			}
 		}
-		return newObject;
 	},
 	myFilter: (object, callback) => {
 		const newObject = {};
@@ -26,7 +26,8 @@ const myProtos = {
 						break;
 				}
 			} else {
-				newObject[property] = objectCounter;
+				newObject.length = objectCounter;
+				newObject.__proto__ = myProtos;
 			}
 		}
 		return newObject;
@@ -36,31 +37,30 @@ const myProtos = {
 		for (const property in object) {
 			if (callback(object[property])) {
 				newObject['0'] = object[property];
-				newObject['length'] = 1;
-				break;
+				newObject.length = 1;
+				newObject.__proto__ = myProtos;
+				return newObject;
 			}
 			if (property === 'length') {
 				return undefined;
 			}
 		}
-		return newObject;
 	},
 	myFindIndex: (object, callback) => {
 		const newObject = {};
 		for (const property in object) {
-			const callResult = callback(object[property]);
-			switch (callResult) {
-				case true:
-					newObject[0] = property;
+			if (property !== 'length') {
+				const callResult = callback(object[property]);
+				if (callResult) {
+					newObject['0'] = object[property];
 					newObject['length'] = 1;
-					return;
-				default:
-					break;
+					return newObject;
+				}
+			} else {
+				return -1;
 			}
-			return newObject;
 		}
 	}
 };
 
-const customProtos = Object.create(myProtos);
-module.exports = customProtos;
+module.exports = { myProtos };
