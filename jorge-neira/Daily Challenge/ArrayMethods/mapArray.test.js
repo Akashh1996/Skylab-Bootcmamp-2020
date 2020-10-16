@@ -121,4 +121,72 @@ describe('Test ArrayMethods using __proto__', () => {
 		//assert
 		expect(response).toStrictEqual('-1');
 	});
+	test('Should return -1 since index of condition is not met ', () => {
+		//arrange
+		const a = {
+			0: 1,
+			1: 2,
+			2: 3,
+			length: 3,
+			__proto__: myProtos
+		};
+		//act
+		const response1 = a.myFill(a, 4);
+		const response2 = a.myFill(a, 4, 1);
+		const response3 = a.myFill(a, 4, 1, 2);
+		const response4 = a.myFill(a, 4, 1, 1);
+		const response5 = a.myFill(a, 4, 3, 3);
+		const response6 = a.myFill(a, 4, -3, -2);
+		const response7 = a.myFill(a, NaN, NaN);
+		const response8 = a.myFill(a, 3, 5);
+		//assert
+		expect(response1).toBe({
+			0: 4,
+			1: 4,
+			2: 4,
+			length: 3
+		});
+		expect(response2).toBe({
+			0: 1,
+			1: 4,
+			2: 4,
+			length: 3
+		});
+		expect(response3).toBe({
+			0: 1,
+			1: 4,
+			2: 3,
+			length: 3
+		});
+		expect(response4).toBe({
+			0: 1,
+			1: 2,
+			2: 3,
+			length: 3
+		});
+		expect(response5).toBe({
+			0: 1,
+			1: 2,
+			2: 3,
+			length: 3
+		});
+		expect(response6).toBe({
+			0: 4,
+			1: 2,
+			2: 3,
+			length: 3
+		});
+		expect(response7).toBe({
+			0: 1,
+			1: 2,
+			2: 3,
+			length: 3
+		});
+		expect(response8).toBe({
+			0: 1,
+			1: 2,
+			2: 3,
+			length: 3
+		});
+	});
 });

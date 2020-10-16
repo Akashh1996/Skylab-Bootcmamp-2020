@@ -58,8 +58,14 @@ const myProtos = {
 			}
 		}
 	},
-	myFill: (object, callback) => {
+	myFill: (object, value, start, end) => {
+		if (Math.sign(start) === -1) start = object.length + start;
+		if (Math.sign(end) === -1) end = object.length + end;
 		
+		for (const property in object) {
+			if (object.hasOwnProperty()) {
+			}
+		}
 	}
 };
 
