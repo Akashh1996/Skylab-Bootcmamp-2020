@@ -15,7 +15,6 @@ const skylabArray = {
         }
     },
     find: (object, callback) => {
-        const someValues = {}
         let cont = 0
         for (let i in object) {
             if (object.hasOwnProperty(i) && i !== 'length') {
@@ -23,7 +22,51 @@ const skylabArray = {
                     cont++
                     return {
                         __proto__: skylabArray,
-                        [(Number(i))]: object[i],
+                        [(i)]: object[i],
+                        length: cont,
+
+
+                    }
+                }
+
+            } else return false
+        }
+
+    },
+    some: (object, callback) => {
+        for (let i in object) {
+            if (object.hasOwnProperty(i) && i !== 'length') {
+                if (callback(object[i])) {
+                    return true
+                }
+
+            }
+        }
+        return false
+
+    },
+    every: (object, callback) => {
+
+        for (let i in object) {
+            if (object.hasOwnProperty(i) && i !== 'length') {
+                if (!callback(object[i])) {
+                    return false
+                }
+
+            }
+        }
+        return true
+
+    },
+    findIndex: (object, callback) => {
+        let cont = 0
+        for (let i in object) {
+            if (object.hasOwnProperty(i) && i !== 'length') {
+                if (callback(object[i])) {
+                    cont++
+                    return {
+                        __proto__: skylabArray,
+                        index: i,
                         length: cont,
 
 
@@ -32,22 +75,51 @@ const skylabArray = {
 
             }
         }
+        return false
 
+    },
+    every: (object, callback) => {
+        let cont = 0
+        const everyValues = {}
+        for (let i in object) {
+            if (object.hasOwnProperty(i) && i !== 'length') {
+                if (callback(object[i])) {
+                    cont++
+                    everyValues[i] = object[i]
+                }
+
+            }
+        }
+        return {
+            ...everyValues,
+            __proto__: skylabArray,
+            length: cont
+        }
+    },
+    fill: (original, value, start, end) => {
+        for (let i = start; i < end; i++) {
+            if (original.hasOwnProperty(i)) {
+                original[i] = value
+            }
+
+        }
+        return {
+            ...original,
+            __proto__: skylabArray
+        }
     }
+
 }
 
 
 let customArray = {
     __proto__: skylabArray,
-    0: 1,
-    1: 4,
-    2: 7,
-    3: 8,
+    0: "skylab",
+    1: "james",
+    2: "akash",
+    3: "fghjk",
     length: 4
 }
 
-customArray = customArray.find(customArray, (value) => {
-    return value > 2
-})
-
+customArray = customArray.fill(customArray, "sklb", 2, 6)
 console.log(customArray);
