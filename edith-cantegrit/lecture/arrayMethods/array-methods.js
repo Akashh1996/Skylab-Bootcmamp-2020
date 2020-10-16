@@ -18,7 +18,7 @@ const SkylabArray =  {
 
         }
     }
-    
+
     map: () => {
         console.log('push method underconstruction');
     }
