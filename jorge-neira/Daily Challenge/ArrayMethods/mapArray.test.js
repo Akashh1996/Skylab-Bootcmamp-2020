@@ -70,7 +70,7 @@ describe('Test ArrayMethods using __proto__', () => {
 			length: 1
 		});
 	});
-	xtest('Should return undefined since there is no match', () => {
+	test('Should return undefined since there is no match', () => {
 		//arrange
 		const a = {
 			0: 'spray',
@@ -79,14 +79,15 @@ describe('Test ArrayMethods using __proto__', () => {
 			3: 'exuberant',
 			4: 'destruction',
 			5: 'present',
-			length: 6
+			length: 6,
+			__proto__: myProtos
 		};
 		//act
-		const response = myJestTest.myFind(a, (element) => element === 'nomatch');
+		const response = a.myFind(a, (element) => element === 'nomatch');
 		//assert
 		expect(response).toBeUndefined();
 	});
-	xtest('Should return the index of the first match ', () => {
+	test('Should return the index of the first match ', () => {
 		//arrange
 		const a = {
 			0: '25',
@@ -95,11 +96,29 @@ describe('Test ArrayMethods using __proto__', () => {
 			3: '5',
 			4: '34',
 			5: '70',
-			length: 6
+			length: 6,
+			__proto__: myProtos
 		};
 		//act
-		const response = myJestTest.myFindIndex(a, (element) => element > 41);
+		const response = a.myFindIndex(a, (element) => element > 41);
 		//assert
-		expect(response).toStrictEqual({ 0: 5, length: 1 });
+		expect(response).toStrictEqual('5');
+	});
+	test('Should return -1 since index of condition is not met ', () => {
+		//arrange
+		const a = {
+			0: '25',
+			1: '41',
+			2: '10',
+			3: '5',
+			4: '34',
+			5: '70',
+			length: 6,
+			__proto__: myProtos
+		};
+		//act
+		const response = a.myFindIndex(a, (element) => element > 421);
+		//assert
+		expect(response).toStrictEqual('-1');
 	});
 });

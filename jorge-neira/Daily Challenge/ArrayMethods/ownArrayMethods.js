@@ -47,19 +47,19 @@ const myProtos = {
 		}
 	},
 	myFindIndex: (object, callback) => {
-		const newObject = {};
 		for (const property in object) {
 			if (property !== 'length') {
 				const callResult = callback(object[property]);
 				if (callResult) {
-					newObject['0'] = object[property];
-					newObject['length'] = 1;
-					return newObject;
+					return property;
 				}
 			} else {
-				return -1;
+				return '-1';
 			}
 		}
+	},
+	myFill: (object, callback) => {
+		
 	}
 };
 
