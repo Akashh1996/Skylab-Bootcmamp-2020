@@ -65,7 +65,24 @@ const skylabObject = {
 		return newObj;
 	},
 
-	copyWithin: () => {},
+	copyWithin: (object, value, start=0, end=object.length) => {
+		let end = object.length
+		if (value >= end) {
+			return;
+		}
+		let newObj = {};
+		for (let i = start; i < end; i++) {
+			values[i] = Object.entries(arr)[i][1];
+		}
+		for (let i = 0; i < Object.entries(values).length; i++) {
+			if (!arr[target + i]) {
+				return arr;
+			}
+			arr[target + i] = Object.entries(values)[i][1];
+		}
+		return arr;
+
+	},
 
 	some: (object, fn) => {
 		for (let property in object) {
