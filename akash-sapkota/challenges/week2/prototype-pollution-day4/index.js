@@ -1,4 +1,4 @@
-/* const protoMap = function (object, double) {
+const protoMap = function (object, double) {
     const newObject = {}
     Object.entries(object).forEach(property => {
         newObject[property[0]] = double(property[1]);
@@ -15,13 +15,12 @@ let obj = {
     3: 9
 }
 
-const result = Object.prototype.myMap(obj, function double(value) {
+const resultMap = Object.prototype.myMap(obj, function double(value) {
     return value * 2
 })
 
-console.log(result); */
 
-/* const protosome = function (object, callback) {
+const protosome = function (object, callback) {
     let values = Object.entries(object)
     for (let index = 0; index < values.length; index++) {
         if (callback(values[index][1])) {
@@ -33,20 +32,13 @@ console.log(result); */
 
 Object.prototype.mysome = protosome
 
-let obj = {
-    0: 2,
-    1: 5,
-    2: 9,
-    3: 2,
-}
-
-const result = Object.prototype.mysome(obj, (value) => {
+const resultSome = Object.prototype.mysome(obj, (value) => {
     return value === 2
 
 })
 
-console.log(result); */
-/* const protoevery = function (object, equals) {
+
+const protoevery = function (object, equals) {
     let values = Object.entries(object)
     for (let index = 0; index < values.length; index++) {
         if (!equals(values[index][1])) {
@@ -58,24 +50,16 @@ console.log(result); */
 
 Object.prototype.myevery = protoevery
 
-let obj = {
-    0: 2,
-    1: 2,
-    2: 2,
-}
-
-
-const result = Object.prototype.myevery(obj, function equals(value) {
+const resultEvery = Object.prototype.myevery(obj, function equals(value) {
     return value === 2
 
 })
 
-console.log(result);
- */
+console.log(resultEvery);
 
 
 
-/* const protofind = function (object, greater) {
+const protofind = function (object, greater) {
     let values = Object.entries(object)
     for (let index = 0; index < values.length; index++) {
         if (greater(values[index][1])) {
@@ -87,21 +71,16 @@ console.log(result);
 
 Object.prototype.myfind = protofind
 
-let obj = {
-    0: 6,
-    1: 3,
-    2: 4,
-}
 
 
-const result = Object.prototype.myfind(obj, function greater(value) {
+const resultFind = Object.prototype.myfind(obj, function greater(value) {
     return value > 2
 
 })
 
-console.log(result); */
+console.log(resultFind);
 
-/* const protofilter = function (object, greater) {
+const protofilter = function (object, greater) {
     const newObject = {}
     Object.entries(object).forEach(property => {
         if (greater(property[1])) {
@@ -115,45 +94,12 @@ console.log(result); */
 
 Object.prototype.myfilter = protofilter
 
-let obj = {
-    0: 1,
-    1: 2,
-    2: 3,
-}
-
-
-const result = Object.prototype.myfilter(obj, function greater(value) {
+const resultFilter = Object.prototype.myfilter(obj, function greater(value) {
     return value > 2
 
 })
 
-console.log(result); */
-
-/* const protofindIndex = function (object, callback) {
-    let values = Object.entries(object)
-    for (let index = 0; index < values.length; index++) {
-        if (callback(values[index][1])) {
-            return index
-        }
-    }
-}
-
-Object.prototype.myfindIndex = protofindIndex
-
-let obj = {
-    0: 2,
-    1: 5,
-    2: 1,
-    3: 2,
-}
-
-const result = Object.prototype.myfindIndex(obj, (value) => {
-    return value === 1
-
-})
-
-console.log(result); */
-
+console.log(resultFilter);
 
 const protofindIndex = function (object, callback) {
     let values = Object.entries(object)
@@ -166,16 +112,12 @@ const protofindIndex = function (object, callback) {
 
 Object.prototype.myfindIndex = protofindIndex
 
-let obj = {
-    0: 2,
-    1: 5,
-    2: 1,
-    3: 2,
-}
 
-const result = Object.prototype.myfindIndex(obj, (value) => {
+const resultFindex = Object.prototype.myfindIndex(obj, (value) => {
     return value === 1
 
 })
 
-console.log(result);
+console.log(resultMap);
+console.log(resultSome);
+console.log(resultFindex);
