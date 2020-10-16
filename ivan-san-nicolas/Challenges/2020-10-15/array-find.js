@@ -1,14 +1,13 @@
 const myArray = {};
 
 function myFind(obj, callback) {
-    let objArray = Object.values(obj);
-    for (let i = 0; i < objArray.length; i++) {
-        if (callback(objArray[i])) return objArray[i];
+    for (let i in obj) {
+        if (callback(obj[i])) return obj[i];
     }
 };
 
 let obj = {
-    0: 100,
+    0: 1,
     1: 2,
     2: 3,
     3: 15,
