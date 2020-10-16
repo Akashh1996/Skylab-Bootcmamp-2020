@@ -131,21 +131,21 @@ describe('Test ArrayMethods using __proto__', () => {
 			__proto__: myProtos
 		};
 		//act
-		// const response1 = a.myFill(a, 4);
+		const response1 = a.myFill(a, 4);
 		const response2 = a.myFill(a, 4, 1);
-		// const response3 = a.myFill(a, 4, 1, 2);
-		// const response4 = a.myFill(a, 4, 1, 1);
-		// const response5 = a.myFill(a, 4, 3, 3);
-		// const response6 = a.myFill(a, 4, -3, -2);
+		const response3 = a.myFill(a, 4, 1, 2);
+		const response4 = a.myFill(a, 4, 1, 1);
+		const response5 = a.myFill(a, 4, 3, 3);
+		const response6 = a.myFill(a, 4, -3, -2);
 		// const response7 = a.myFill(a, NaN, NaN);
 		// const response8 = a.myFill(a, 3, 5);
 		//assert
-		// expect(response1).toBe({
-		// 	0: 4,
-		// 	1: 4,
-		// 	2: 4,
-		// 	length: 3
-		// });
+		expect(response1).toBe({
+			0: 4,
+			1: 4,
+			2: 4,
+			length: 3
+		});
 		expect(response2).toBe({
 			0: 1,
 			1: 4,
