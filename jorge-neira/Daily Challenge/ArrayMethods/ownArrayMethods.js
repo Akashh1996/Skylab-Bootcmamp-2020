@@ -61,11 +61,12 @@ const myProtos = {
 	myFill: (object, value, start, end) => {
 		if (Math.sign(start) === -1) start = object.length + start;
 		if (Math.sign(end) === -1) end = object.length + end;
-		
-		for (const property in object) {
-			if (object.hasOwnProperty()) {
+		for (let i = start; i < end; i++) {
+			if (object.hasOwnProperty(i)) {
+				object[i] = value;
 			}
 		}
+		return { ...object, __proto__: myProtos };
 	}
 };
 
