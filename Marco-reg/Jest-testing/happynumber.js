@@ -1,13 +1,28 @@
- let numberArray;
-function isHappy(n) {
+function isHappy(n){
+    let result = n.toString();
+    let saftyCounter = 0;
+    
+    while(result != 1 && saftyCounter<1000){
+        result = happyStep(result)
+        saftyCounter++
+        console.log (result)
+    }
 
-    numberArray=n.split('');
-    numberArray.forEach(element => function(element){
-       let signleNum = parseInt(element)
-        return signleNum*signleNum;
-    });
+    
+}
+
+function happyStep(n) {
+    let arrayNumbers = n.split('');
+    
+    let result = 0;
+    for (let i = 0 ; i<arrayNumbers.length;i++){
+        arrayNumbers[i] = parseInt(arrayNumbers[i]);
+        result += arrayNumbers[i]*arrayNumbers[i]
+        
+    }
+    console.log(result)
+    return result.toString();
 
 }
-isHappy('7');
-console.log(numberArray);
+console.log(isHappy("11"))
 module.exports = isHappy;

@@ -9,7 +9,7 @@ describe('A happy number is one where if you repeatedly square its digits and ad
 	
 		expect(response).toBe([1]);
 	});
-	xtest('Should return the array of numbers if is not a happy number', () => {
+	test('Should return the array of numbers if is not a happy number', () => {
 		
 		const a = (49, 2);
 		
