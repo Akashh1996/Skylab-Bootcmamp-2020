@@ -80,4 +80,14 @@ describe('Array-methods.test', () => {
 		// assert
 		expect(response).toBe(5);
 	});
+
+	test('"ferranObject.copyWithin(ferranObject, 0, 1, 3) should return "{ 0: 1, 1: 3, 2: 3, length: 3 }"', () => {
+		// arrange
+
+		// act
+		let response = ferranObject.copyWithin(ferranObject, 0, 1, 3);
+
+		// assert
+		expect(response).toEqual({ '0': 1, '1': 3, '2': 3, length: 3 });
+	});
 });

@@ -65,25 +65,6 @@ const skylabObject = {
 		return newObj;
 	},
 
-	copyWithin: (object, value, start=0, end=object.length) => {
-		let end = object.length
-		if (value >= end) {
-			return;
-		}
-		let newObj = {};
-		for (let i = start; i < end; i++) {
-			values[i] = Object.entries(arr)[i][1];
-		}
-		for (let i = 0; i < Object.entries(values).length; i++) {
-			if (!arr[target + i]) {
-				return arr;
-			}
-			arr[target + i] = Object.entries(values)[i][1];
-		}
-		return arr;
-
-	},
-
 	some: (object, fn) => {
 		for (let property in object) {
 			if (fn(object[property]) && object.hasOwnProperty(property)) {
@@ -110,11 +91,33 @@ const skylabObject = {
 		let accumulator = 0;
 		!rest ? (accumulator = 0) : (accumulator = rest);
 		for (property in object) {
-			if (object.hasOwnProperty(property) && property!=="length")
-			accumulator = fn(accumulator, object[property]);
+			if (object.hasOwnProperty(property) && property !== 'length')
+				accumulator = fn(accumulator, object[property]);
 		}
-		return accumulator
-	}
+		return accumulator;
+	},
+
+	copyWithin: function (
+		object,
+		value,
+		start = 0,
+		end = Object.entries(object).length
+	) {
+		if (value >= Object.entries(object).length) {
+			return;
+		}
+		let newObj = {};
+		for (let i = start; i < end; i++) {
+			newObj[i] = Object.entries(object)[i][1];
+		}
+		for (let i = 0; i < Object.entries(newObj).length; i++) {
+			if (!object[value + i]) {
+				return arr;
+			}
+			object[value + i] = Object.entries(newObj)[i][1];
+		}
+		return object;
+	},
 };
 
 const ferranObject = { __proto__: skylabObject, 0: 1, 1: 1, 2: 3, length: 3 };
