@@ -59,6 +59,7 @@ const myProtos = {
 		}
 	},
 	myFill: (object, value, start, end) => {
+		debugger;
 		if (Math.sign(start) === -1) start = object.length + start;
 		if (Math.sign(end) === -1) end = object.length + end;
 		for (let i = start; i < end; i++) {
