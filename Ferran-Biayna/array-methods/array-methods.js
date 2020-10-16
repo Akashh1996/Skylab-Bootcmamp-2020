@@ -102,4 +102,4 @@ const skylabObject = {
 
 const ferranObject = { __proto__: skylabObject, 0: 1, 1: 1, 2: 3, length: 3 };
 
-module.exports = skylabObject;
+module.exports = ferranObject;
