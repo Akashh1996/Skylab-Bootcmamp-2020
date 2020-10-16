@@ -1,0 +1,17 @@
+{
+  "name": "Unit-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "disemvowels-trolls.js",
+  "scripts": {
+    "test": "jest",
+    "test-w": "jest --watch",
+    "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.5.3"
+  }
+}
