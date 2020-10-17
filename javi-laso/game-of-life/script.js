@@ -107,16 +107,6 @@ function startGame() {
     game = window.setInterval(playing, 200);
 }
 
-function resetGame() {
-    stopGame();
-    container.innerHTML = '';
-    rows = document.getElementById('set-grid-height').value;    
-    cols = document.getElementById('set-grid-width').value;
-    matrix = createEmptyMatrix(rows, cols);
-    makeHTMLmatrix(matrix);
-    document.querySelectorAll('.cell').forEach(element => {element.addEventListener('click', changeCellColor, false);});
-}
-
 let matrix = createEmptyMatrix(rows, cols);
 makeHTMLmatrix(matrix);
 gridWidthInput.value = cols;
