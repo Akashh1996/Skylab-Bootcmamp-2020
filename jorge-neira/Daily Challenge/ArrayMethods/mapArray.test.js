@@ -213,22 +213,22 @@ describe('Test ArrayMethods using __proto__', () => {
 			length: 3
 		});
 	});
-	xtest('myCopyWithin Should ', () => {
+	test('myCopyWithin Should return shallow copies parts of my array ', () => {
 		//arrange
-		const a = {
-			0: 'spray',
-			1: 'limit',
-			2: 'elite',
-			3: 'exuberant',
-			4: 'destruction',
-			5: 'present',
-			length: 6,
-			__proto__: myProtos
-		};
+		const a = { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, length: 5, __proto__: myProtos };
+		const b = { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, length: 5, __proto__: myProtos };
+		const c = { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, length: 5, __proto__: myProtos };
+		const d = { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, length: 5, __proto__: myProtos };
 		//act
-		const response = a.myFind(a, (element) => element === 'nomatch');
+		const response1 = a.myCopyWithin(a, -2);
+		const response2 = b.myCopyWithin(b, 0, 3);
+		const response3 = c.myCopyWithin(c, 0, 3, 4);
+		const response4 = d.myCopyWithin(d, -2, -3 - 1);
 		//assert
-		expect(response).toBeUndefined();
+		expect(response1).toBe({ 0: 1, 1: 2, 2: 3, 3: 1, 4: 2, length: 5 });
+		expect(response2).toBe({ 0: 4, 1: 5, 2: 3, 3: 4, 4: 5, length: 5 });
+		expect(response3).toBe({ 0: 4, 1: 2, 2: 3, 3: 4, 4: 5, length: 5 });
+		expect(response4).toBe({ 0: 1, 1: 2, 2: 3, 3: 3, 4: 4, length: 5 });
 	});
 	test('mySome Should return true or false if one items match with the function', () => {
 		//arrange

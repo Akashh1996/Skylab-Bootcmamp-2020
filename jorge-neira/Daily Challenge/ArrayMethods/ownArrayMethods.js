@@ -73,9 +73,22 @@ const myProtos = {
 		}
 		return { ...object, __proto__: myProtos };
 	},
-	myCopyWithin: (object, target, start, end) => {
-		if (Math.sign(target) === -1) target = object.length - 1 + target;
-		
+	myCopyWithin: (object, target, start = 0, end = object.length) => {
+		if (target >= object.length) return
+		if ()
+		// let values = {};
+		// for (let i = start; i < end; i++) {
+		// 	if (object[i] !== 'length') {
+		// 		values[i] = Object.entries(object)[i][1];
+		// 	}
+		// }
+		// for (let i = 0; i < object.length; i++) {
+		// 	if (!object[target + i]) {
+		// 		return object;
+		// 	}
+		// 	object[target + i] = Object.entries(values)[i][1];
+		// }
+		// return object;
 	},
 	mySome: (object, callback) => {
 		for (const property in object) {
