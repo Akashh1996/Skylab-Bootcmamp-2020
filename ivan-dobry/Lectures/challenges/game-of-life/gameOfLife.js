@@ -1,4 +1,4 @@
-const blinker = [
+let blinker = [
     [0, 0, 0, 0, 0],
     [0, 0, 1, 0, 0],
     [0, 0, 1, 0, 0],
@@ -6,10 +6,10 @@ const blinker = [
     [0, 0, 0, 0, 0]
 ]
 
-const blinkerFinalState = [
+let blinkerFinalState = [
     [0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0],
-    [0, 1, 1, 1, 0],
+    [0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0]
 ]
@@ -20,15 +20,25 @@ function life (array) {
         for (let j = 0; j < array[i].length; j++){
             //Calculo vecinos de esa celda
             neigbours = countNeigbours(i, j);
-            console.log(neigbours);
-            debugger;
+            console.log(neigbours)
            // Aplico reglas segun los vecinos
+           if (array[i][j] === 0 && neigbours >= 3) {
+                blinkerFinalState[i][j] = 1;
+           } else if (array[i][j] === 1 && neigbours >= 2) {
+                blinkerFinalState[i][j] = 1;
+           } else if (array[i][j] === 1 && neigbours < 2){
+                 blinkerFinalState[i][j] = 0;
+           } else {
+                blinkerFinalState[i][j] = 0;
+           }
 
            // Si reglas es true hago algo sino otra cosa
 
-
         }
     }
+    blinker = blinkerFinalState
+    console.log(blinker)
+    console.log(blinkerFinalState)
 }
 
 function countNeigbours (i, j) {
@@ -159,7 +169,8 @@ function countNeigbours (i, j) {
     }
     if (blinker [i][j -1] === 1) {
         neigbours ++;
-    }if (blinker [i][j +1] === 1) {
+    }
+    if (blinker [i][j +1] === 1) {
         neigbours ++;
     }
     if (blinker [i +1][j -1] === 1) {
@@ -174,9 +185,19 @@ function countNeigbours (i, j) {
     return neigbours;
 }
 
+// function lifeRules(neigbours) {
+//     if (neigbours >= 2) {
+//         return true;
+//     }else {
+//         return false;
+//     }
+    
+// }
+
 life(blinker);
 
 module.exports = life;
+module.exports = countNeigbours;
 
 // 1- itero array
 // 2- funcion calcular vecinos de celdas

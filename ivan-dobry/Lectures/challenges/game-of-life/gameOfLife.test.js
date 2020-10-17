@@ -1,4 +1,4 @@
-const deepClone = require ('./gameOfLife')
+const gameOfLife = require ('./gameOfLife')
 
 describe('Game Of Life', () => {
 	test('should change state', () => {
@@ -11,7 +11,7 @@ describe('Game Of Life', () => {
             [0, 0, 0, 0, 0]
         ];
 		// act
-		const finalState = life(blinker);
+		const finalState = gameOfLife(blinker);
 		// assert
 		expect(finalState).toBe([
             [0, 0, 0, 0, 0],
