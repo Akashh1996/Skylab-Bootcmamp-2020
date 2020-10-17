@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of life</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="flex-spacer1"></div>
+            <label for="set-grid-width">Width:</label>
+            <input id="set-grid-width" class="header-inputs" type="text">
+            <label for="set-grid-height">Height:</label>
+            <input id="set-grid-height" class="header-inputs" type="text">
+            <button id="set-button">Set</button>
+            <button id="reset-button">Reset</button>
+            <div class="flex-spacer2"></div>
+            <button id="start-button" class="material-icons game-buttons">play_circle_filled</button>
+            <button id="pause-button" class="material-icons game-buttons">pause_circle_filled</button>
+            <div class="flex-spacer1"></div>
+        </div>
+    </header>
+    <main>
+        <div id="grid-container"></div>
+    </main>
+
+
+    
+    <script  src="script.js"></script>
+</body>
+</html>
