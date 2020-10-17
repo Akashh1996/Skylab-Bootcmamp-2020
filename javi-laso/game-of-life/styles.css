@@ -1,5 +1,5 @@
 body {
-	background-color: rgb(173, 173, 173);
+	background-color: rgb(219, 221, 186);
 	margin: 0px;
 	padding: 0px;
 	width: 100vw;
@@ -50,10 +50,10 @@ main {
 	flex: 3;
 }
 
-#set-button {
+#reset-button {
 	margin: 0px 10px;
 	height: 31px;
-	width: 55px;
+	width: auto;
 	font-size: 20px;
 }
 
@@ -79,7 +79,8 @@ main {
 #grid-container {
 	width: auto;
 	height: auto;
-	border: black solid 1px;
+	border: gray solid 8px;
+	outline: black solid 1px;
 	margin-top: 120px;
 	display: grid;
 	grid-template-rows: repeat(var(--grid-rows), 25px);

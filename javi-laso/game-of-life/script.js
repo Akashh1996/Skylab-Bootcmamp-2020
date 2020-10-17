@@ -5,11 +5,12 @@ const gridWidthInput = document.getElementById('set-grid-width');
 const gridHeightInput = document.getElementById('set-grid-height');
 const setBtn = document.getElementById('set-button');
 const resetBtn = document.getElementById('reset-button');
-let rows = 20;
-let cols = 30;
+let rows = 30;
+let cols = 40;
 let game;
+let matrix;
 
-function aliveOrDie (x, y, matrix, matrixFinalState) {
+function aliveOrDie (x, y, matrix) {
     let aliveNeightbours = 0;
     let neighbours = [];
 
@@ -27,22 +28,29 @@ function aliveOrDie (x, y, matrix, matrixFinalState) {
 
     // Any live cell with two or three live neighbours survives.
     if ((aliveNeightbours === 2 || aliveNeightbours === 3) && matrix[x][y] === 1) {
-        matrixFinalState[x][y] = 1;
+        return true;
     // Any dead cell with three live neighbours becomes a live cell.
     } else if (aliveNeightbours === 3 && matrix[x][y] === 0) {
-        matrixFinalState[x][y] = 1;
+        return true;
     // All other live cells die in the next generation. Similarly, all other dead cells stay dead.
-    } else {        
-        matrixFinalState[x][y] = 0;
-    }    
+    } 
+    
+    return false;
 }
 
 function newCycle(matrix) {
     const matrixFinalState = matrix.map(element => element.slice());
 
-    for (let i = 0; i < matrix.length; i++) {
-        for (let j = 0; j < matrix[0].length; j++) {
-            aliveOrDie(i, j, matrix, matrixFinalState);
+    for (let row = 0; row < matrix.length; row++) {
+        for (let col = 0; col < matrix[0].length; col++) {
+            let cell = document.getElementById(`${row}-${col}`);
+            if (aliveOrDie(row, col, matrix, matrixFinalState)) {
+                matrixFinalState[row][col] = 1;
+                cell.style.backgroundColor = 'rgb(0, 0, 0)';
+            } else {
+                matrixFinalState[row][col] = 0;
+                cell.style.backgroundColor = 'rgb(173, 173, 173)';
+            }
         }
     }
 
@@ -70,26 +78,23 @@ function makeHTMLmatrix(matrix) {
         for (let col = 0; col < matrix[0].length; col++) {
             let cell = document.createElement("div");
             container.appendChild(cell).className = "cell";
-            cell.setAttribute('row-value', `${row}`);
-            cell.setAttribute('col-value', `${col}`);
-            cell.setAttribute('value', `${matrix[row][col]}`);
+            cell.setAttribute('id', `${row}-${col}`);
             cell.style.backgroundColor = cell.getAttribute('value')*1 === 0 ? 'rgb(173, 173, 173)' : 'rgb(0, 0, 0)';
         }
     }
 };
 
 function changeCellColor() {
-    const rowValue = this.getAttribute('row-value');
-    const colValue = this.getAttribute('col-value');
+    const id = this.id.split('-');
+    const rowValue = id[0];
+    const colValue = id[1];
     
     if (this.style.backgroundColor === 'rgb(173, 173, 173)') {
         this.style.backgroundColor = 'rgb(0, 0, 0)';
         matrix[rowValue][colValue] = 1;
-        this.setAttribute('value', 1);
     } else if (this.style.backgroundColor === 'rgb(0, 0, 0)') {
         this.style.backgroundColor = 'rgb(173, 173, 173)';
         matrix[rowValue][colValue] = 0;
-        this.setAttribute('value', 0);
     }
 }
 
@@ -99,21 +104,27 @@ function stopGame () {
 
 function playing() {
     matrix = newCycle(matrix);
-    container.innerHTML = '';
-    makeHTMLmatrix(matrix);
 }
 
 function startGame() {
     game = window.setInterval(playing, 200);
 }
 
-let matrix = createEmptyMatrix(rows, cols);
-makeHTMLmatrix(matrix);
+function resetGame() {
+    stopGame();
+    container.innerHTML = '';
+    rows = document.getElementById('set-grid-height').value;    
+    cols = document.getElementById('set-grid-width').value;
+    matrix = createEmptyMatrix(rows, cols);
+    makeHTMLmatrix(matrix);
+    document.querySelectorAll('.cell').forEach(element => {element.addEventListener('click', changeCellColor, false);});
+    gridWidthInput.value = cols;
+    gridHeightInput.value = rows;
+}
+
 gridWidthInput.value = cols;
 gridHeightInput.value = rows;
-
-let cells = document.querySelectorAll('.cell');
-cells.forEach(element => {element.addEventListener('click', changeCellColor, false);});
+resetGame();
 
 startBtn.addEventListener('click', startGame, false);
 pauseBtn.addEventListener('click', stopGame, false);
