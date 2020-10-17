@@ -1,4 +1,7 @@
+const { describe } = require('yargs')
 const skyLabArray = require('./script.refactor')
+
+describe
 test('Should return object values multiplied by 2', () => {
     let obj = {
         0: 1,
