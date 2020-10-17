@@ -11,11 +11,29 @@
     <header>
         <div class="header-container">
             <div class="flex-spacer1"></div>
+            <div class="options">
+                <button class="material-icons">reorder</button>
+                <ul class="aditional-options">
+                    <div class="options-container">
+                        <li>
+                            <label for="border-checker">Border:</label>
+                            <input id="border-checker" type="checkbox" checked>
+                        </li>
+                        <li>
+                            <label for="speed-input">Speed</label>
+                            <input type="text" name="" id="speed-input">
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <div class="flex-spacer1"></div>
             <label for="set-grid-width">Width:</label>
             <input id="set-grid-width" class="header-inputs" type="text">
             <label for="set-grid-height">Height:</label>
             <input id="set-grid-height" class="header-inputs" type="text">
             <button id="reset-button">Reset</button>
+            <span class="generation-tag">Generations: </span>
+            <span id="generations" class="generation-tag"></span>
             <div class="flex-spacer2"></div>
             <button id="start-button" class="material-icons game-buttons">play_circle_filled</button>
             <button id="pause-button" class="material-icons game-buttons">pause_circle_filled</button>

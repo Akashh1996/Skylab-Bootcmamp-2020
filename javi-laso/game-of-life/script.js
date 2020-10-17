@@ -5,6 +5,8 @@ const gridWidthInput = document.getElementById('set-grid-width');
 const gridHeightInput = document.getElementById('set-grid-height');
 const setBtn = document.getElementById('set-button');
 const resetBtn = document.getElementById('reset-button');
+const generationCounter = document.getElementById('generations');
+const borderCheckerBtn = document.getElementById('border-checker');
 let rows = 30;
 let cols = 40;
 let game;
@@ -54,6 +56,7 @@ function newCycle(matrix) {
         }
     }
 
+    generationCounter.innerHTML++;
     return matrixFinalState;
 }
 
@@ -107,7 +110,7 @@ function playing() {
 }
 
 function startGame() {
-    game = window.setInterval(playing, 200);
+    game = window.setInterval(playing, 100);
 }
 
 function resetGame() {
@@ -120,6 +123,15 @@ function resetGame() {
     document.querySelectorAll('.cell').forEach(element => {element.addEventListener('click', changeCellColor, false);});
     gridWidthInput.value = cols;
     gridHeightInput.value = rows;
+    generationCounter.innerHTML = 0;
+}
+
+function borderChecker() {
+    if (borderCheckerBtn.checked === true) {
+        document.querySelectorAll('.cell').forEach(element => {element.style.border = ' rgb(0, 0, 0) solid 1px';});
+    } else {
+        document.querySelectorAll('.cell').forEach(element => {element.style.border = 'none';});
+    }
 }
 
 gridWidthInput.value = cols;
@@ -129,5 +141,6 @@ resetGame();
 startBtn.addEventListener('click', startGame, false);
 pauseBtn.addEventListener('click', stopGame, false);
 resetBtn.addEventListener('click', resetGame, false);
+borderCheckerBtn.addEventListener('click', borderChecker, false);
 
 // module.exports = newCycle;
