@@ -1,8 +1,8 @@
 let blinker = [
     [0, 0, 0, 0, 0],
-    [0, 0, 1, 0, 0],
-    [0, 0, 1, 0, 0],
-    [0, 0, 1, 0, 0],
+    [0, 0, 1, 1, 0],
+    [0, 1, 0, 0, 1],
+    [0, 0, 1, 1, 0],
     [0, 0, 0, 0, 0]
 ]
 
@@ -22,23 +22,28 @@ function life (array) {
             neigbours = countNeigbours(i, j);
             console.log(neigbours)
            // Aplico reglas segun los vecinos
-           if (array[i][j] === 0 && neigbours >= 3) {
+           if (array[i][j] === 0 && neigbours === 3) {
                 blinkerFinalState[i][j] = 1;
-           } else if (array[i][j] === 1 && neigbours >= 2) {
-                blinkerFinalState[i][j] = 1;
-           } else if (array[i][j] === 1 && neigbours < 2){
+           } else if (array[i][j] === 1 && neigbours > 3) {
+                blinkerFinalState[i][j] = 0;
+           } else if (array[i][j] === 1 && neigbours < 2) {
                  blinkerFinalState[i][j] = 0;
+           } else if (array[i][j] === 1 && neigbours === 2 || array[i][j] === 1 && neigbours === 3) {
+                blinkerFinalState[i][j] = 1;
            } else {
                 blinkerFinalState[i][j] = 0;
            }
+           
 
            // Si reglas es true hago algo sino otra cosa
 
         }
     }
+    
     blinker = blinkerFinalState
-    console.log(blinker)
-    console.log(blinkerFinalState)
+    reInitializeFinal ();
+    console.log(blinker);
+    console.log(blinkerFinalState);
 }
 
 function countNeigbours (i, j) {
@@ -183,6 +188,16 @@ function countNeigbours (i, j) {
         neigbours ++;
     }
     return neigbours;
+}
+
+function reInitializeFinal () {
+    blinkerFinalState = [
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0]
+    ]
 }
 
 // function lifeRules(neigbours) {
