@@ -14,6 +14,10 @@
 	z-index: 1000;
 }
 
+.header__flex-spacer {
+	display: none;
+}
+
 .page {
 	position: relative;
 	top: 50px;
@@ -27,6 +31,10 @@
 	background: url(MariaLunarillosMedia/burger_menu.png) no-repeat center left;
 	top: 0;
 	left: 0;
+}
+
+.mainicons {
+	display: none;
 }
 
 .red-block {
@@ -52,6 +60,15 @@
 	height: 27px;
 	background: url(MariaLunarillosMedia/sprite.svg) 0 0 no-repeat;
 }
+
+.user-entry {
+	display: none;
+}
+
+.social-media-header {
+	display: none;
+}
+
 .search {
 	width: 50px;
 	height: 50px;
@@ -616,14 +633,167 @@ footer {
 }
 
 @media screen and (min-width: 1020px) {
+	.header {
+		height: 60px;
+		width: 100%;
+		position: fixed;
+		z-index: 1000;
+	}
+
+	.mainicons {
+		display: flex;
+		flex-direction: row;
+		position: absolute;
+		left: 200px;
+	}
+
+	.red-rectangle {
+		height: 130px;
+		width: 70px;
+		background: url(./MariaLunarillosMedia/maria-lunarillos.png) #ff5959 bottom
+			center no-repeat;
+		margin-right: 5px;
+	}
+
+	.blue-rectangle {
+		height: 130px;
+		width: 70px;
+		background: url(./MariaLunarillosMedia/cucute.png) #6199af bottom center
+			no-repeat;
+		margin-right: 5px;
+	}
+
+	.yellow-rectangle {
+		height: 130px;
+		width: 70px;
+		background: url(./MariaLunarillosMedia/mumuchu.png) #f6b436 bottom center
+			no-repeat;
+	}
+
+	.blue-rectangle,
+	.yellow-rectangle {
+		position: relative;
+		top: -50px;
+	}
+
+	.blue-rectangle:hover,
+	.yellow-rectangle:hover {
+		top: 0px;
+	}
+
+	.header__flex-spacer {
+		display: block;
+		flex: 1;
+	}
+
+	.user {
+		margin-right: 10px;
+		margin-top: 15px;
+	}
+
+	.search {
+		display: none;
+	}
+
+	.social-media-header {
+		display: flex;
+		margin: 0 40px 0 20px;
+		margin-top: 5px;
+	}
+
+	.cart {
+		background-color: rgb(248, 248, 248);
+		align-self: center;
+	}
+
+	.cart:hover {
+		border-top: 10px solid #ff5959;
+	}
+
+	.zero {
+		align-self: center;
+		height: 60px;
+	}
+
+	.smheader-icon {
+		width: 25px;
+		height: 20px;
+		margin: 15px 7px 0;
+		background: url(./MariaLunarillosMedia/sprite.svg) transparent 0 0 no-repeat;
+	}
+
+	.social-media-header > .facebook {
+		background-position: -4px -540px;
+	}
+
+	.social-media-header > .facebook:hover {
+		background-position: -4px -500px;
+	}
+
+	.social-media-header > .twitter {
+		background-position: -40px -540px;
+	}
+
+	.social-media-header > .twitter:hover {
+		background-position: -40px -500px;
+	}
+
+	.social-media-header > .instagram {
+		background-position: -75px -540px;
+	}
+
+	.social-media-header > .instagram:hover {
+		background-position: -75px -500px;
+	}
+
+	.social-media-header > .pinterest {
+		background-position: -110px -540px;
+	}
+
+	.social-media-header > .pinterest:hover {
+		background-position: -110px -500px;
+	}
+
+	.social-media-header > .youtube {
+		background-position: -180px -540px;
+	}
+
+	.social-media-header > .youtube:hover {
+		background-position: -180px -500px;
+	}
+
+	.zero {
+		margin-right: 50px;
+	}
+
+	.user-entry {
+		display: block;
+		align-self: center;
+		margin-right: 20px;
+	}
+
+	.user-entry:hover {
+		color: #ff5959;
+	}
+
+	.cart:hover {
+		background: #ff5959 url(MariaLunarillosMedia/sprite.svg) -105px 10px no-repeat;
+	}
+
 	.burgermenu {
 		display: none;
+	}
+
+	.title-container-block {
+		display: flex;
+		justify-content: center;
 	}
 
 	.title-container {
 		display: flex;
 		flex-direction: row;
-		margin: 0 60px;
+		justify-content: center;
+		width: 70%;
 	}
 
 	.flex-spacer {
@@ -650,7 +820,7 @@ footer {
 		display: flex;
 		flex-direction: column;
 		max-width: 570px;
-		padding: 50px 0 0;
+		padding: 50px 0 0 10px;
 	}
 
 	.flex-spacer {
@@ -801,10 +971,6 @@ footer {
 		background-size: 800px;
 	}
 
-	.top-container {
-		margin: 20px 174px;
-	}
-
 	.triple-block {
 		display: flex;
 		flex-direction: row;
@@ -839,23 +1005,36 @@ footer {
 		margin-bottom: 100px;
 	}
 
-	/* triangle */
-
 	.description {
 		width: 200px;
+		height: 110px;
 		padding: 20px 20px 20px 20px;
-		background-color: rgba(248, 248, 248, 0.8);
+		background-color: rgba(255, 255, 255, 0.8);
+		position: relative;
 	}
 
 	.description-title {
 		color: rgb(102, 99, 95) !important;
 		font-size: 18px;
 		line-height: 18px;
+		margin-bottom: 10px;
 	}
 
 	.description-text {
 		display: block;
 		color: rgb(102, 99, 95);
+	}
+
+	.description:after {
+		content: '';
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-bottom: 150px solid rgba(255, 255, 255, 0.8);
+		border-right: 100px solid transparent;
+		position: absolute;
+		right: -100px;
+		top: 0;
 	}
 
 	.wrapper-container-icons {
