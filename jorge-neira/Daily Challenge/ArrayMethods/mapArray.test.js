@@ -268,4 +268,44 @@ describe('Test ArrayMethods using __proto__', () => {
 		//assert
 		expect(response).toBeFalsy();
 	});
+	test('myReduce Should return the sum off all index', () => {
+		//arrange
+		const reducer = (acc, cur) => acc + cur;
+		const a = {
+			0: 28,
+			1: 8,
+			2: 22,
+			3: 34,
+			4: 12,
+			5: 56,
+			6: 75,
+			7: 10,
+			length: 8,
+			__proto__: myProtos
+		};
+		//act
+		const response = a.myReduce(a, reducer);
+		//assert
+		expect(response).toBe(245);
+	});
+	test('myReduce Should return the sum off all index + de initial value', () => {
+		//arrange
+		const reducer = (acc, cur) => acc + cur;
+		const a = {
+			0: 28,
+			1: 8,
+			2: 22,
+			3: 34,
+			4: 12,
+			5: 56,
+			6: 75,
+			7: 10,
+			length: 8,
+			__proto__: myProtos
+		};
+		//act
+		const response = a.myReduce(a, reducer, 100);
+		//assert
+		expect(response).toBe(345);
+	});
 });

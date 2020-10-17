@@ -61,7 +61,6 @@ const myProtos = {
 		}
 	},
 	myFill: (object, value, start, end) => {
-		debugger;
 		if (start === undefined) start = 0;
 		if (end === undefined) end = object.length;
 		if (start === end) return { ...object, __proto__: myProtos };
@@ -76,6 +75,7 @@ const myProtos = {
 	},
 	myCopyWithin: (object, target, start, end) => {
 		if (Math.sign(target) === -1) target = object.length - 1 + target;
+		
 	},
 	mySome: (object, callback) => {
 		for (const property in object) {
@@ -88,11 +88,20 @@ const myProtos = {
 		return false;
 	},
 	myEvery: (object, callback) => {
-		debugger;
 		for (const property in object) {
 			if (property === 'length') return true;
 			const callResult = callback(object[property]);
 			if (!callResult) return false;
+		}
+	},
+	myReduce: (object, callback, initVal) => {
+		let acc = 0;
+		let cur = 0;
+		if (typeof initVal !== 'undefined') acc = initVal;
+		for (const property in object) {
+			if (property === 'length') return acc;
+			cur = object[property];
+			acc = callback(acc, cur);
 		}
 	}
 };
