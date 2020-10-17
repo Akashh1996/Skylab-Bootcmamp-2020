@@ -34,28 +34,28 @@
 // console.log(mappedOBj) // ed_Mapped
 
 
-Object.prototype.filter = function(obj, func) {
-    newObject = {};
-    debugger;
-    for(const property in obj) {
-        if(obj[property] === func(filterLessthanSix) { 
-            newObject.property = func(item)
-        }
+Object.prototype.filter = function(callback, original) {
+    newObject = {}
+    newObject.id
+    for (property in original) {
+       if(callback(original[property]) === true) {
+           newObject.id = original[property]
+       }
     }
-    return newObject;
+    return {
+     newObject
+    };
 }
 
-let objtofilter = {
+let ObjToFilter = {
     propertyOne: 8,
     propertyTwo: 4,
     propertyThree: 5
 }
 
-let filterOBj = objtofilter.filter(objtofilter, filterLessthanSix)
+const isMoreThanFive = number => number > 2;
 
-const filterLessthanSix = num => num < 6;
-
-console.log(filterOBj) // 4 and 5
+ObjToFilter.filter(isMoreThanFive, ObjToFilter)
 
 
 
