@@ -3,7 +3,7 @@
 const { myProtos } = require('./ownArrayMethods');
 
 describe('Test ArrayMethods using __proto__', () => {
-	test('Should return doubles', () => {
+	test('myMap Should return doubles', () => {
 		//arrange
 		const a = {
 			0: 25,
@@ -30,7 +30,7 @@ describe('Test ArrayMethods using __proto__', () => {
 			length: 6
 		});
 	});
-	test('Should return all the elements that pass the condition', () => {
+	test('myFilter Should return all the elements that pass the condition', () => {
 		//arrange
 		const a = {
 			0: 'spray',
@@ -52,7 +52,7 @@ describe('Test ArrayMethods using __proto__', () => {
 			length: 3
 		});
 	});
-	test('Should return the first element that satisfies the provided test', () => {
+	test('myFind Should return the first element that satisfies the provided test', () => {
 		//arrange
 		const a = {
 			0: 'spray',
@@ -72,7 +72,7 @@ describe('Test ArrayMethods using __proto__', () => {
 			length: 1
 		});
 	});
-	test('Should return undefined since there is no match', () => {
+	test('myFind Should return undefined since there is no match', () => {
 		//arrange
 		const a = {
 			0: 'spray',
@@ -89,7 +89,7 @@ describe('Test ArrayMethods using __proto__', () => {
 		//assert
 		expect(response).toBeUndefined();
 	});
-	test('Should return the index of the first match ', () => {
+	test('myFindIndex Should return the index of the first match ', () => {
 		//arrange
 		const a = {
 			0: '25',
@@ -106,7 +106,7 @@ describe('Test ArrayMethods using __proto__', () => {
 		//assert
 		expect(response).toStrictEqual('5');
 	});
-	test('Should return -1 since index of condition is not met ', () => {
+	test('myFindIndex Should return -1 since index of condition is not met ', () => {
 		//arrange
 		const a = {
 			0: '25',
@@ -123,7 +123,7 @@ describe('Test ArrayMethods using __proto__', () => {
 		//assert
 		expect(response).toStrictEqual('-1');
 	});
-	test('Should fill the array with the cur value ', () => {
+	test('myFill Should fill the array with the cur value ', () => {
 		//arrange
 		const a = {
 			0: 1,
@@ -160,12 +160,20 @@ describe('Test ArrayMethods using __proto__', () => {
 			length: 3,
 			__proto__: myProtos
 		};
+		const f = {
+			0: 1,
+			1: 2,
+			2: 3,
+			length: 3,
+			__proto__: myProtos
+		};
 		//act
 		const response1 = a.myFill(a, 4, 1, 2);
 		const response2 = b.myFill(b, 4, 1, 1);
 		const response3 = c.myFill(c, 4, 3, 3);
 		const response4 = d.myFill(d, 4, -3, -2);
 		const response5 = e.myFill(e, 4);
+		const response6 = f.myFill(f, 4, 1);
 		//assert
 		expect(response1).toStrictEqual({
 			0: 1,
@@ -198,5 +206,66 @@ describe('Test ArrayMethods using __proto__', () => {
 			2: 4,
 			length: 3
 		});
+		expect(response6).toStrictEqual({
+			0: 1,
+			1: 4,
+			2: 4,
+			length: 3
+		});
+	});
+	xtest('myCopyWithin Should ', () => {
+		//arrange
+		const a = {
+			0: 'spray',
+			1: 'limit',
+			2: 'elite',
+			3: 'exuberant',
+			4: 'destruction',
+			5: 'present',
+			length: 6,
+			__proto__: myProtos
+		};
+		//act
+		const response = a.myFind(a, (element) => element === 'nomatch');
+		//assert
+		expect(response).toBeUndefined();
+	});
+	test('mySome Should return true or false if one items match with the function', () => {
+		//arrange
+		const a = {
+			0: 28,
+			1: 8,
+			2: 22,
+			3: 34,
+			4: 12,
+			5: 56,
+			6: 75,
+			7: 9,
+			length: 8,
+			__proto__: myProtos
+		};
+		//act
+		const response = a.mySome(a, (element) => element > 50);
+		//assert
+		expect(response).toBeTruthy();
+	});
+	test('myEvery Should return false since not all items pass the condition ', () => {
+		//arrange
+		const a = {
+			0: 28,
+			1: 8,
+			2: 22,
+			3: 34,
+			4: 12,
+			5: 56,
+			6: 75,
+			7: 9,
+			length: 8,
+			__proto__: myProtos
+		};
+		//act
+		const response = a.myEvery(a, (element) => element > 99);
+		//assert
+		expect(response).toBeFalsy();
 	});
 });
