@@ -204,20 +204,5 @@ function makeRows(rows, cols) {
   };
 };
 
-makeRows(40, 40)
+makeRows(60, 60);
 
-function makeGrid (){
-    let input = document.getElementById('input__box').value;
-
-    makeRows(input, input);
-}
-
-
-
-module.exports = life;
-module.exports = countNeigbours;
-
-// 1- itero array
-// 2- funcion calcular vecinos de celdas
-// 3- aplico reglas
-// 4- pintar
