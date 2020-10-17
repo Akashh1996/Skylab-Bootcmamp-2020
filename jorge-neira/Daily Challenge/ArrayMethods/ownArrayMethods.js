@@ -60,9 +60,7 @@ const myProtos = {
 			}
 		}
 	},
-	myFill: (object, value, start, end) => {
-		if (start === undefined) start = 0;
-		if (end === undefined) end = object.length;
+	myFill: (object, value, start = 0, end = object.length) => {
 		if (start === end) return { ...object, __proto__: myProtos };
 		if (Math.sign(start) === -1) start = object.length + start;
 		if (Math.sign(end) === -1) end = object.length + end;
@@ -74,21 +72,29 @@ const myProtos = {
 		return { ...object, __proto__: myProtos };
 	},
 	myCopyWithin: (object, target, start = 0, end = object.length) => {
-		if (target >= object.length) return
-		if ()
-		// let values = {};
-		// for (let i = start; i < end; i++) {
-		// 	if (object[i] !== 'length') {
-		// 		values[i] = Object.entries(object)[i][1];
-		// 	}
-		// }
-		// for (let i = 0; i < object.length; i++) {
-		// 	if (!object[target + i]) {
-		// 		return object;
-		// 	}
-		// 	object[target + i] = Object.entries(values)[i][1];
-		// }
-		// return object;
+		if (target >= object.length) return;
+		if (Math.sign(target) === -1) target = object.length + target;
+		if (Math.sign(start) === -1) start = object.length + start;
+		if (Math.sign(end) === -1) end = object.length + end;
+		const copy = {};
+		let i = start;
+		for (const property in object) {
+			if (object[property] === object[end]) break;
+			if (object[property] === object[i]) {
+				copy[i] = object[i];
+				i++;
+			}
+		}
+		let o = start;
+		for (const property in object) {
+			if (!copy.hasOwnProperty(o)) break;
+			if (object[property] === object[target]) {
+				object[property] = copy[o];
+				target++;
+				o++;
+			}
+		}
+		return object;
 	},
 	mySome: (object, callback) => {
 		for (const property in object) {

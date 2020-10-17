@@ -223,12 +223,40 @@ describe('Test ArrayMethods using __proto__', () => {
 		const response1 = a.myCopyWithin(a, -2);
 		const response2 = b.myCopyWithin(b, 0, 3);
 		const response3 = c.myCopyWithin(c, 0, 3, 4);
-		const response4 = d.myCopyWithin(d, -2, -3 - 1);
+		const response4 = d.myCopyWithin(d, -2, -3, -1);
 		//assert
-		expect(response1).toBe({ 0: 1, 1: 2, 2: 3, 3: 1, 4: 2, length: 5 });
-		expect(response2).toBe({ 0: 4, 1: 5, 2: 3, 3: 4, 4: 5, length: 5 });
-		expect(response3).toBe({ 0: 4, 1: 2, 2: 3, 3: 4, 4: 5, length: 5 });
-		expect(response4).toBe({ 0: 1, 1: 2, 2: 3, 3: 3, 4: 4, length: 5 });
+		expect(response1).toStrictEqual({
+			0: 1,
+			1: 2,
+			2: 3,
+			3: 1,
+			4: 2,
+			length: 5
+		});
+		expect(response2).toStrictEqual({
+			0: 4,
+			1: 5,
+			2: 3,
+			3: 4,
+			4: 5,
+			length: 5
+		});
+		expect(response3).toStrictEqual({
+			0: 4,
+			1: 2,
+			2: 3,
+			3: 4,
+			4: 5,
+			length: 5
+		});
+		expect(response4).toStrictEqual({
+			0: 1,
+			1: 2,
+			2: 3,
+			3: 3,
+			4: 4,
+			length: 5
+		});
 	});
 	test('mySome Should return true or false if one items match with the function', () => {
 		//arrange
