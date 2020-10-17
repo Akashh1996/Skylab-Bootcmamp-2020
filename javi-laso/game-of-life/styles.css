@@ -17,11 +17,6 @@ ul {
 	margin: 0;
 }
 
-:root {
-	--grid-cols: 1;
-	--grid-rows: 1;
-}
-
 .header-container {
 	display: flex;
 	justify-content: center;
@@ -120,10 +115,12 @@ ul {
 }
 
 .aditional-options li {
+	display: flex;
+	align-items: center;
 	list-style-type: none;
-	margin: 12px 0px;
+	margin: 0px 0px;
 	padding: 0px 12px;
-	height: 100%;
+	height: 35px;
 }
 
 .aditional-options li:hover {
@@ -141,4 +138,11 @@ ul {
 	background: none;
 	border: none;
 	background-color: rgb(54, 101, 163);
+}
+
+#speed-input {
+	margin-left: 8px;
+	width: 70px;
+	border: none;
+	outline: none;
 }

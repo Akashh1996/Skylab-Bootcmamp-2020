@@ -46,7 +46,7 @@ function newCycle(matrix) {
     for (let row = 0; row < matrix.length; row++) {
         for (let col = 0; col < matrix[0].length; col++) {
             let cell = document.getElementById(`${row}-${col}`);
-            if (aliveOrDie(row, col, matrix, matrixFinalState)) {
+            if (aliveOrDie(row, col, matrix)) {
                 matrixFinalState[row][col] = 1;
                 cell.style.backgroundColor = 'rgb(0, 0, 0)';
             } else {
