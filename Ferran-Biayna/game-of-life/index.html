@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Of Life</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Game of Life</h1>
+    <header>
+        <nav>
+            <h2>Menú - Game of Life</h2>
+            <div class="header-container">
+                <div class="header-size">
+                    <div class="container-logo">
+                        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Game_of_life_blinker.gif">
+                        <span>GAME OF LIFE</span>
+                    </div>
+                    <div class="container-size">
+                        <i class="fas fa-border-all grid"></i>
+                        <input type="range" id="sizeCuadros" value="20" min="5" max="100">
+                    </div>
+                    <!-- <div class="container-speed">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <input type="range" id="speed" value="20" min="5" max="100">
+                    </div> -->
+                    <div class="instructions">
+                        <button>Instrucciones</button>
+                    </div>
+                    <div class="container-play">
+                        <button>START!</button>
+                    </div>
+                    <div class="container-stop">
+                        <button>STOP!</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="container-game">
+        <div id="game-grid">
+          <canvas id="grid" width="600" height="420"></canvas>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/e5fa61ddd0.js" crossorigin="anonymous"></script>
+    <script src="game-of-life.js"></script>
+</body>
+</html>
