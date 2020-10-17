@@ -207,9 +207,10 @@ function makeRows(rows, cols) {
 makeRows(40, 40)
 
 function makeGrid (){
+    debugger;
     let input = document.getElementById('input__box').value;
-
-    makeRows(input, input);
+    $( ".grid-item" ).remove();
+    makeRows(+input, +input);
 }
 
 
