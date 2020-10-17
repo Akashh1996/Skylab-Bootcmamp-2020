@@ -1,11 +1,10 @@
 function largestRectangleInGrid(matrix) {
+	let r = matrix.length;
+	let c = matrix[0].length;
 
-    let r=matrix.length
-    let c=matrix[0].length
+	let maxArea = [c][r];
 
-    let maxArea = [c][r]
+	console.log(maxArea);
+}
 
-    console.log(maxArea)
-
-  }
-
+module.exports = largestRectangleInGrid;
