@@ -1,0 +1,17 @@
+{
+	"name": "cloning-objects",
+	"version": "1.0.0",
+	"description": "",
+	"main": "cloningObjects.js",
+	"dependencies": {
+		"jest": "^26.5.3"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"test": "jest",
+		"test-debug": "node --inspect-brk ./node_modules/jest/bin/jest.js –runInBand"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}
