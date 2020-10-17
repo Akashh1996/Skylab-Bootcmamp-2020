@@ -57,31 +57,18 @@ const skyLabArray = {
         return true
     },
 
-    /*     fill: (object, currentValue, start, end) => {
-            for (property in object) {
-    
-    
-    
+    fill: (object, currentValue, start, end) => {
+        for (let i = start; i < end; i++) {
+            if (object.hasOwnProperty(i)) {
+                object[i] = currentValue
             }
-        } */
+        }
+        return {
+            ...object,
+            __ptoto__: skyLabArray
+        }
+    }
 }
 
 
-let obj = {
-    0: 1,
-    1: 4,
-    2: 6,
-    length: 3,
-    __proto__: skyLabArray
-}
-
-/* obj = obj.fill(obj, currentValue, start, end)
-console.log(obj)
- */
-
-
-obj = obj.every(obj, value => {
-    return value > 8
-})
-
-console.log(obj)
+module.exports = skyLabArray;
