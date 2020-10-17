@@ -1,3 +1,5 @@
+'use strict';
+
 const { myProtos } = require('./ownArrayMethods');
 
 describe('Test ArrayMethods using __proto__', () => {
@@ -130,11 +132,40 @@ describe('Test ArrayMethods using __proto__', () => {
 			length: 3,
 			__proto__: myProtos
 		};
+		const b = {
+			0: 1,
+			1: 2,
+			2: 3,
+			length: 3,
+			__proto__: myProtos
+		};
+		const c = {
+			0: 1,
+			1: 2,
+			2: 3,
+			length: 3,
+			__proto__: myProtos
+		};
+		const d = {
+			0: 1,
+			1: 2,
+			2: 3,
+			length: 3,
+			__proto__: myProtos
+		};
+		const e = {
+			0: 1,
+			1: 2,
+			2: 3,
+			length: 3,
+			__proto__: myProtos
+		};
 		//act
 		const response1 = a.myFill(a, 4, 1, 2);
-		const response2 = a.myFill(a, 4, 1, 1);
-		const response3 = a.myFill(a, 4, 3, 3);
-		const response4 = a.myFill(a, 4, -3, -2);
+		const response2 = b.myFill(b, 4, 1, 1);
+		const response3 = c.myFill(c, 4, 3, 3);
+		const response4 = d.myFill(d, 4, -3, -2);
+		const response5 = e.myFill(e, 4);
 		//assert
 		expect(response1).toStrictEqual({
 			0: 1,
@@ -158,6 +189,13 @@ describe('Test ArrayMethods using __proto__', () => {
 			0: 4,
 			1: 2,
 			2: 3,
+			length: 3
+		});
+
+		expect(response5).toStrictEqual({
+			0: 4,
+			1: 4,
+			2: 4,
 			length: 3
 		});
 	});

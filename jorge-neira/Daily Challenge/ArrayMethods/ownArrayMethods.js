@@ -1,3 +1,5 @@
+'use strict';
+
 const myProtos = {
 	myMap: (object, callback) => {
 		const newObject = {};
@@ -59,7 +61,11 @@ const myProtos = {
 		}
 	},
 	myFill: (object, value, start, end) => {
-		debugger;
+		if (start === undefined && end === undefined) {
+			start = 0;
+			end = object.length;
+		}
+		if (start === end) return { ...object, __proto__: myProtos };
 		if (Math.sign(start) === -1) start = object.length + start;
 		if (Math.sign(end) === -1) end = object.length + end;
 		for (let i = start; i < end; i++) {
@@ -67,7 +73,7 @@ const myProtos = {
 				object[i] = value;
 			}
 		}
-		return { ...object };
+		return { ...object, __proto__: myProtos };
 	}
 };
 
