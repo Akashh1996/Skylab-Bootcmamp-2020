@@ -8,29 +8,43 @@
 	padding: 0;
 }
 
+html,
 body {
-	height: 100vh;
+	height: 100%;
+}
+
+body {
 	font-family: 'Bangers', cursive;
 	background-color: black;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 button {
 	font-family: 'Bangers', cursive;
+	display: flex;
 }
 
-.game__grid {
+.gameBtn {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	.grid__table {
+	.btn {
+		border-radius: 20px 20px 0 0;
+		cursor: pointer;
+		background-color: black;
+		color: white;
+		padding: 10px 30px;
+		outline: none;
+		border: none;
+		font-size: 30px;
+		margin-right: 10px;
+	}
+	.btn:hover {
 		background-color: white;
-		border-collapse: collapse;
-		.grid__rows {
-			.grid__cols {
-				height: 20px;
-				width: 20px;
-				border: 1px solid black;
-			}
-		}
+		color: black;
 	}
 }

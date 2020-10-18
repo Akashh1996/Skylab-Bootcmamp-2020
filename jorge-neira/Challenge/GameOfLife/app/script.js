@@ -1,56 +1,99 @@
-//////////////////////////////////////////////
-const gridContainer = document.querySelector('.game__grid');
-
-// const full_w = window.innerWidth;
-// const full_h = window.innerHeight;
-
-const resolution = 20;
-const cols = 600 / resolution;
-const rows = 600 / resolution;
-const createTable = document.createElement('table');
-createTable.className = 'grid__table';
-
-const gridTable = createTableGrid(cols, rows);
-
-function createTableGrid(col, row) {
-	for (let x = 0; x < col; x++) {
-		const create_tr = document.createElement('tr');
-		create_tr.className = 'grid__rows';
-		createTable.appendChild(create_tr);
-		for (let z = 0; z < row; z++) {
-			const create_td = document.createElement('td');
-			create_td.className = 'grid__cols';
-			create_td.setAttribute('data-status', '0');
-			create_tr.appendChild(create_td);
-		}
-	}
-	gridContainer.appendChild(createTable);
-}
-
-const gridCol = document.querySelectorAll('.grid__cols');
-const gridRow = document.querySelectorAll('.grid__rows');
-
-gridCol.forEach((element) => {
-	element.addEventListener('click', function () {
-		if (element.dataset.status === '0') {
-			element.style.backgroundColor = 'black';
-			element.setAttribute('data-status', '1');
-		} else {
-			element.style.backgroundColor = 'white';
-			element.setAttribute('data-status', '0');
-		}
-	});
+const startBtn = document.querySelector('.start-btn');
+const pauseBtn = document.querySelector('.pause-btn');
+const speedBtn = document.querySelector('#speed');
+const randomBtn = document.querySelector('.random-btn');
+let curSpeed = parseFloat(speedBtn.value);
+speedBtn.addEventListener('change', function () {
+	curSpeed = parseFloat(speedBtn.value);
 });
 
-function newGame() {
-	for (let x = 0; x < gridRow.length; x++) {
-		for (let y = 0; y < gridRow[x].cells.length; y++) {
-			console.log(gridRow[x].cells[y].dataset.status);
-			
+let gameStatus = false;
+
+let grid;
+let cols;
+let rows;
+let resolution = 20;
+
+function draw() {
+	frameRate(curSpeed);
+	if (gameStatus) drawGame();
+}
+
+function setup() {
+	let cnv = createCanvas(1000, 600);
+	cnv.style('display', 'block');
+	cols = width / resolution;
+	rows = height / resolution;
+
+	grid = create2dArray(cols, rows);
+	for (let i = 0; i < cols; i++) {
+		for (let j = 0; j < rows; j++) {
+			grid[i][j] = floor(random(2));
 		}
 	}
 }
+function create2dArray(cols, rows) {
+	let arr = new Array(cols);
+	for (let i = 0; i < arr.length; i++) {
+		arr[i] = new Array(rows);
+	}
+	return arr;
+}
 
-function countNeighbours() {}
+function drawGame() {
+	background(0);
+	for (let i = 0; i < cols; i++) {
+		for (let j = 0; j < rows; j++) {
+			let x = i * resolution;
+			let y = j * resolution;
+			if (grid[i][j] == 1) {
+				fill(0);
+				stroke(255, 204, 0);
+				strokeWeight(1);
+				rect(x, y, resolution - 1, resolution - 1);
+			}
+		}
+	}
 
-// gridRow[0].cells[0].dataset.status;
+	let next = create2dArray(cols, rows);
+
+	for (let i = 0; i < cols; i++) {
+		for (let j = 0; j < rows; j++) {
+			let state = grid[i][j];
+			let neighbors = countNeighbors(grid, i, j);
+
+			if (state == 0 && neighbors == 3) {
+				next[i][j] = 1;
+			} else if (state == 1 && (neighbors < 2 || neighbors > 3)) {
+				next[i][j] = 0;
+			} else {
+				next[i][j] = state;
+			}
+		}
+	}
+	grid = next;
+}
+
+function countNeighbors(grid, x, y) {
+	let sum = 0;
+	for (let i = -1; i < 2; i++) {
+		for (let j = -1; j < 2; j++) {
+			let col = (x + i + cols) % cols;
+			let row = (y + j + rows) % rows;
+			sum += grid[col][row];
+		}
+	}
+	sum -= grid[x][y];
+	return sum;
+}
+
+startBtn.addEventListener('click', function () {
+	gameStatus = true;
+});
+pauseBtn.addEventListener('click', function () {
+	gameStatus = false;
+});
+randomBtn.addEventListener('click', function () {
+	gameStatus = false;
+	setup();
+});
