@@ -1,4 +1,4 @@
-const strictEquals = require('./myfind')
+const myfindIndex = require('./myfind')
 
 describe('devuelve el indice de la coicidencia o undefined', () => {
     test("devuelve undefined si no encuentra coincidencias",() =>{
@@ -10,11 +10,13 @@ describe('devuelve el indice de la coicidencia o undefined', () => {
             length: 3,
             __proto__: mySkylabMethod
         };
+
         //act
-        resultado = newResult();
+
+        resultado =myfindIndex(skylabArray,callback);
             
 
         //asert
-          expect(resultado).toBe(undefined);
+          expect(result).toBe(2);
       });
 });

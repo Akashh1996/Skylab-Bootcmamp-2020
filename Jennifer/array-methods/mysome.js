@@ -1,5 +1,5 @@
 const mySkylabMethod = {
-    myFindIndex: (object, callback) => {
+    xmyFindIndex: (object, callback) => {
         debugger;
         let somedifferent = false;
         for (const property in object) {

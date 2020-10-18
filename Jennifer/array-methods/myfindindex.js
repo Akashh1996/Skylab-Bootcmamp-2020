@@ -1,4 +1,4 @@
-const strictEquals = require('./challenge-igualdad-estricta')
+const myFindIndex = require('./challenge-igualdad-estricta')
 
 
 const mySkylabMethod = {
@@ -7,7 +7,7 @@ const mySkylabMethod = {
         for (const property in object) {
             const elementPassTest = callback(object[property]);
             if(elementPassTest){
-                return property 
+                return property;
             }
         }
         return undefined

@@ -31,3 +31,4 @@ console.log(result);
 
 
 module.exports = mySkylabMethod
+module.exports = this.myFind

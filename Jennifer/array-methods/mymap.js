@@ -1,6 +1,6 @@
 
 
-const myMap = function (object, callback) {
+const xmyMap = function (object, callback) {
     const newObject = {}
     Object.entries(object).forEach(property => {
         if(property !== "length"){

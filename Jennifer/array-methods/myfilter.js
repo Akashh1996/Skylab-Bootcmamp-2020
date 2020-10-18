@@ -1,5 +1,5 @@
 const mySkylabMethods = {
-  myFilter: (object, callback) => {
+  xmyFilter: (object, callback) => {
     const returnObject = {};
     let contador = 0;
     for (const property in object) {
