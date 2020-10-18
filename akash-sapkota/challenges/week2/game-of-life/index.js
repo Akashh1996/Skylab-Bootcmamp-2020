@@ -2,7 +2,17 @@ const canvas = document.querySelector('.main');
 const ctx1 = canvas.getContext('2d');
 let generationNumber = document.querySelector(".generationNumber")
 
-const resolution = 30;
+let resolution = 10;
+
+let input = document.querySelector("input")
+
+input.addEventListener("keyup", function (e) {
+    if (e.keyCode === 13) {
+        if (input.value >= 10 && input.value <= 35)
+            resolution = input.value
+    }
+    render(grid)
+})
 canvas.width = 800;
 canvas.height = 800;
 
@@ -83,6 +93,7 @@ function updateLife() {
     render(grid);
 }
 
+
 let text = "録人紀液角京件罠績陸独極志。Λορεμ ιπσθμ δολορ σιτ αμετ, εξ μπλεcτιτθρ, qθι οφφενδιτ ρεπθ清使今街大報田五題属企術石高小 LOADING...。熱情当加湯身必性別住全強。✔️ 사항은 법률로 정한다. 대통령은 내란 또는 SECURITY BREACHING... 외환의 죄를 범한 경우를 제외하고는 재직중 형사상의 소추를 받지 아니한다. ENCRYPTING... 민주평화통일자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. =/ ta = त, Ta = ट, tha = थ, Tha = ठ, da = द, Da = ड, dha = ध, Dha = ढ, $:- na = न, Na = ण, sha = श, Sha = ष.  יד נס אף על לך זן הם. תבואת כלבבי ממעש הבן מוח כאל. וְאָכוֹל אִם גלי הכל זכה זקן כפר כִּפְנֵי מטר יָחֹגּוּ. וכל הוא חבר ירד קדח. חיי כוח במוחו וחוסר קיבלו מֶה שכיבד מפי שהם. רק זן גל הר בו...  בת הַ. לכי סלח שבע כוח אחז. פה לך מן זן עץ לא. חֲלוֹמוֹת ובהשתערות רְכוּשׁוֹ כְּחוֹטֵא וָאֲמַהֵר טַרְפָּהּ. ||||||||||||||||"
 let myText = document.querySelector(".myText")
 let myText2 = document.querySelector(".myText2")
@@ -121,8 +132,19 @@ stop.addEventListener("click", function () {
 })
 document.querySelector(".new").addEventListener("click", function () {
     document.querySelector("ul").style.display = "none"
-
+    clearInterval(startGame)
     grid = buildGrid(COLS, ROWS);
-    startGame = setInterval(updateLife, 200)
+
+    for (let col = 0; col < grid.length; col++) {
+        for (let row = 0; row < grid[col].length; row++) {
+            const cell = grid[col][row];
+            ctx1.beginPath();
+            ctx1.rect(col * resolution, row * resolution, 40, 40);
+            ctx1.fillStyle = "yellowgreen"
+
+            ctx1.fill();
+            ctx1.stroke()
+        }
+    }
 
 })
