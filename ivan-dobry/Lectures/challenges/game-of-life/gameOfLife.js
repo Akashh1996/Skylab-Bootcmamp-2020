@@ -2,178 +2,175 @@ let startingArray = [];
 let finalArray = [];
 let arrGrid;
 
-let blinkerFinalState = [
-    [0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0]
-]
+
 
 function life (array) {
     let neigbours = 0;
+    debugger
     for (let i = 0; i < array.length; i++) {
         for (let j = 0; j < array[i].length; j++){
             neigbours = countNeigbours(i, j);
             console.log(neigbours)
            if (array[i][j] === 0 && neigbours === 3) {
-                blinkerFinalState[i][j] = 1;
+                finalArray[i][j] = 1;
            } else if (array[i][j] === 1 && neigbours > 3) {
-                blinkerFinalState[i][j] = 0;
+                finalArray[i][j] = 0;
            } else if (array[i][j] === 1 && neigbours < 2) {
-                 blinkerFinalState[i][j] = 0;
+                 finalArray[i][j] = 0;
            } else if (array[i][j] === 1 && neigbours === 2 || array[i][j] === 1 && neigbours === 3) {
-                blinkerFinalState[i][j] = 1;
+                finalArray[i][j] = 1;
            } else {
-                blinkerFinalState[i][j] = 0;
+                finalArray[i][j] = 0;
            }
         }
     }
-    blinker = blinkerFinalState
+    console.log(startingArray);
+    console.log(finalArray);
+    copyArray();
+    updateGridArray ();
+    displayGrid ();
     reInitializeFinal ();
-    console.log(blinker);
-    console.log(blinkerFinalState);
 }
 
 function countNeigbours (i, j) {
     let neigbours = 0;
     if (i === 0 && j === 0) {
-        if (blinker [i][j +1] === 1) {
+        if (startingArray [i][j +1] === 1) {
             neigbours ++;
         }
-        if (blinker [i +1][j] === 1) {
+        if (startingArray [i +1][j] === 1) {
             neigbours ++;
-        }if (blinker [i +1][j +1] === 1) {
+        }if (startingArray [i +1][j +1] === 1) {
             neigbours ++;
         }
         return neigbours;
     }
-    if (i === 0 && j === blinker.length -1) {
-        if (blinker [i][j -1] === 1) {
+    if (i === 0 && j === startingArray.length -1) {
+        if (startingArray [i][j -1] === 1) {
             neigbours ++;
         }
-        if (blinker [i +1][j -1] === 1) {
+        if (startingArray [i +1][j -1] === 1) {
             neigbours ++;
-        }if (blinker [i +1][j] === 1) {
+        }if (startingArray [i +1][j] === 1) {
             neigbours ++;
         }
         return neigbours;
     }
     if (i === 0) {
-        if (blinker [i][j -1] === 1) {
+        if (startingArray [i][j -1] === 1) {
             neigbours ++;
-        }if (blinker [i][j +1] === 1) {
-            neigbours ++;
-        }
-        if (blinker [i +1][j -1] === 1) {
+        }if (startingArray [i][j +1] === 1) {
             neigbours ++;
         }
-        if (blinker [i +1][j] === 1) {
+        if (startingArray [i +1][j -1] === 1) {
             neigbours ++;
         }
-        if (blinker [i +1][j +1] === 1) {
+        if (startingArray [i +1][j] === 1) {
+            neigbours ++;
+        }
+        if (startingArray [i +1][j +1] === 1) {
             neigbours ++;
         }
         return neigbours;
     }
-    if (i === blinker.length -1 && j === 0) {
-        if (blinker [i-1][j] === 1) {
+    if (i === startingArray.length -1 && j === 0) {
+        if (startingArray [i-1][j] === 1) {
             neigbours ++;
         }
-        if (blinker [i -1][j+1] === 1) {
+        if (startingArray [i -1][j+1] === 1) {
             neigbours ++;
-        }if (blinker [i][j +1] === 1) {
+        }if (startingArray [i][j +1] === 1) {
             neigbours ++;
         }
         return neigbours;
     }
 
-    if (i === blinker.length -1 && j === blinker.length -1) {
-        if (blinker [i][j-1] === 1) {
+    if (i === startingArray.length -1 && j === startingArray.length -1) {
+        if (startingArray [i][j-1] === 1) {
             neigbours ++;
         }
-        if (blinker [i -1][j-1] === 1) {
+        if (startingArray [i -1][j-1] === 1) {
             neigbours ++;
-        }if (blinker [i-1][j] === 1) {
+        }if (startingArray [i-1][j] === 1) {
             neigbours ++;
         }
         return neigbours;
     }
     if (j === 0) {
-        if (blinker [i-1][j] === 1) {
+        if (startingArray [i-1][j] === 1) {
             neigbours ++;
-        }if (blinker [i -1][j +1] === 1) {
-            neigbours ++;
-        }
-        if (blinker [i][j +1] === 1) {
+        }if (startingArray [i -1][j +1] === 1) {
             neigbours ++;
         }
-        if (blinker [i +1][j +1] === 1) {
+        if (startingArray [i][j +1] === 1) {
             neigbours ++;
         }
-        if (blinker [i +1][j] === 1) {
+        if (startingArray [i +1][j +1] === 1) {
             neigbours ++;
         }
-        return neigbours;
-    }
-    if (i === blinker.length -1) {
-        if (blinker [i][j -1] === 1) {
-            neigbours ++;
-        }if (blinker [i -1][j -1] === 1) {
-            neigbours ++;
-        }
-        if (blinker [i -1][j] === 1) {
-            neigbours ++;
-        }
-        if (blinker [i -1][j +1] === 1) {
-            neigbours ++;
-        }
-        if (blinker [i][j +1] === 1) {
+        if (startingArray [i +1][j] === 1) {
             neigbours ++;
         }
         return neigbours;
     }
-    if (j === blinker.length -1) {
-        if (blinker [i -1][j] === 1) {
+    if (i === startingArray.length -1) {
+        if (startingArray [i][j -1] === 1) {
             neigbours ++;
-        }if (blinker [i -1][j -1] === 1) {
-            neigbours ++;
-        }
-        if (blinker [i][j-1] === 1) {
+        }if (startingArray [i -1][j -1] === 1) {
             neigbours ++;
         }
-        if (blinker [i +1][j -1] === 1) {
+        if (startingArray [i -1][j] === 1) {
             neigbours ++;
         }
-        if (blinker [i +1][j] === 1) {
+        if (startingArray [i -1][j +1] === 1) {
+            neigbours ++;
+        }
+        if (startingArray [i][j +1] === 1) {
+            neigbours ++;
+        }
+        return neigbours;
+    }
+    if (j === startingArray.length -1) {
+        if (startingArray [i -1][j] === 1) {
+            neigbours ++;
+        }if (startingArray [i -1][j -1] === 1) {
+            neigbours ++;
+        }
+        if (startingArray [i][j-1] === 1) {
+            neigbours ++;
+        }
+        if (startingArray [i +1][j -1] === 1) {
+            neigbours ++;
+        }
+        if (startingArray [i +1][j] === 1) {
             neigbours ++;
         }
         return neigbours;
     }
 
 
-    if (blinker [i -1][j -1] === 1) {
+    if (startingArray [i -1][j -1] === 1) {
         neigbours ++;
     }
-    if (blinker [i -1][j] === 1) {
+    if (startingArray [i -1][j] === 1) {
         neigbours ++;
     }
-    if (blinker [i -1][j +1] === 1) {
+    if (startingArray [i -1][j +1] === 1) {
         neigbours ++;
     }
-    if (blinker [i][j -1] === 1) {
+    if (startingArray [i][j -1] === 1) {
         neigbours ++;
     }
-    if (blinker [i][j +1] === 1) {
+    if (startingArray [i][j +1] === 1) {
         neigbours ++;
     }
-    if (blinker [i +1][j -1] === 1) {
+    if (startingArray [i +1][j -1] === 1) {
         neigbours ++;
     }
-    if (blinker [i +1][j] === 1) {
+    if (startingArray [i +1][j] === 1) {
         neigbours ++;
     }
-    if (blinker [i +1][j +1] === 1) {
+    if (startingArray [i +1][j +1] === 1) {
         neigbours ++;
     }
     return neigbours;
@@ -224,7 +221,17 @@ function makeArrays (input) {
     }
     startingArray.push(data);
     }
-    console.log (startingArray)
+    
+    for (let i=0;i<input;i++)
+    {
+    let data = [];
+    for (var j=0;j<input;j++)
+    {
+        data.push(arrGrid[k].value);
+    }
+    finalArray.push(data);
+    }
+    console.log (finalArray)
 
 }
 
@@ -246,6 +253,23 @@ keys.addEventListener('click', (event) => {
     }
 });
 
+// setInterval(function updateArray () {
+//     let k = 0;
+//     for (let i = 0; i < startingArray.length; i++ ) {
+//         for (let j = 0; j < startingArray[i].length; j++) {
+//             if (arrGrid[k].value === 1) {
+//                 startingArray[i][j] = 1;
+//             }
+//             if (arrGrid[k].value === 0) {
+//                 startingArray[i][j] = 0;
+//             }
+//             k++;
+//         }
+//     }
+//     life(startingArray);
+//     console.log(startingArray);
+// }, 500)
+
 function updateArray () {
     let k = 0;
     for (let i = 0; i < startingArray.length; i++ ) {
@@ -259,8 +283,38 @@ function updateArray () {
             k++;
         }
     }
+    life(startingArray);
     console.log(startingArray);
 }
+
+function copyArray () {
+    for (let i = 0; i < startingArray.length; i++ ) {
+        for (let j = 0; j < startingArray[i].length; j++) {
+            startingArray[i][j] = finalArray[i][j];
+        }
+    }
+}
+
+function updateGridArray () {
+    let k = 0;
+    for (let i = 0; i < startingArray.length; i++ ) {
+        for (let j = 0; j < startingArray[i].length; j++) {
+            arrGrid[k].value = startingArray[i][j];
+            k++;
+        }
+    }
+}
+
+function displayGrid () {
+    for (let i = 0; i <arrGrid.length; i++) {
+        if (arrGrid[i].value === 1) {
+            arrGrid[i].style.backgroundColor = 'black';
+        } else {
+            arrGrid[i].style.backgroundColor = 'white';
+        }
+    }
+}
+
 
 
 // 1- itero array
