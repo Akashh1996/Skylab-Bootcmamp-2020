@@ -7,6 +7,29 @@ const generationCounter = document.getElementById('generations');
 const borderCheckerBtn = document.getElementById('border-checker');
 const speedInput = document.getElementById('speed-input');
 const sizeRange = document.getElementById('size-range');
+const gliderBtn = document.getElementById('glider-button');
+const spaceShipSBtn = document.getElementById('spaceshipS-button');
+const spaceShipSDownBtn = document.getElementById('spaceshipS-down-button');
+const randomBtn = document.getElementById('random-button');
+const gliderPattern = [
+    [0, 1, 0],
+    [0, 0, 1],
+    [1, 1, 1]
+];
+const spaceShipSPattern = [
+    [1, 0, 0, 1, 0],
+    [0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1],
+    [0, 1, 1, 1, 1]
+];
+const spaceShipSDownPattern = [
+    [0, 1, 0, 1],
+    [1, 0, 0, 0],
+    [1, 0, 0, 0],
+    [1, 0, 0, 1],
+    [1, 1, 1, 0]
+];
+
 let rows = 30;
 let cols = 40;
 let generationSpeed = 100;
@@ -75,7 +98,22 @@ function createEmptyMatrix(rows, cols) {
     return matrix;
 }
 
+function createRandomMatrix(rows, cols) {
+    //Alberto Gomez idea
+    const matrix = [];
+
+    for (let rowValue = 0; rowValue < rows; rowValue++) {
+        matrix.push([]);
+        for (let colValue = 0; colValue < cols; colValue++) {
+            matrix[rowValue].push(Math.round(Math.random() - 0.25));
+        }
+    }
+
+    return matrix;
+}
+
 function makeHTMLmatrix(matrix) {
+    container.innerHTML = '';
     container.style.setProperty('--grid-rows', matrix.length);
     container.style.setProperty('--grid-cols', matrix[0].length); 
     let cellSize = 25;   
@@ -87,7 +125,8 @@ function makeHTMLmatrix(matrix) {
             let cell = document.createElement('div');
             container.appendChild(cell).className = 'cell';
             cell.setAttribute('id', `${row}-${col}`);
-            cell.style.backgroundColor = 'rgb(173, 173, 173)';
+            cell.style.backgroundColor = matrix[row][col] === 1 ? `rgb(0, 0, ${Math.floor(Math.random() * (255 - 120 + 1) + 120)})` : 'rgb(173, 173, 173)';
+            cell.addEventListener('click', changeCellColor, false);
         }
     }
 
@@ -134,12 +173,10 @@ function startGame() {
 function resetGame() {
     stopGame();
     setSpeed();
-    container.innerHTML = '';
-    cols = sizeRange.value;    
-    rows = cols < 30 ? cols : Math.floor(sizeRange.value * 0.7);
+    cols = sizeRange.value*1;    
+    rows = cols < 30 ? cols : Math.floor(sizeRange.value * 0.6);
     matrix = createEmptyMatrix(rows, cols);
     makeHTMLmatrix(matrix);
-    document.querySelectorAll('.cell').forEach(element => {element.addEventListener('click', changeCellColor, false);});
     generationCounter.innerHTML = 0;
     speedInput.value = Math.floor(1000 / generationSpeed);
 }
@@ -156,6 +193,41 @@ function setSpeed() {
     generationSpeed = Math.floor(1000 / speedInput.value);
 }
 
+function random() {
+    resetGame();
+    matrix = createRandomMatrix(rows, cols);
+    makeHTMLmatrix(matrix);
+}
+
+function drawPattern(pattern) {
+    position = {startRow: 2, startCol: 2};
+    size = {rows: pattern.length, cols: pattern[0].length};
+
+    submatrixX = 0;
+    let submatrixY;
+    for (let i = position.startRow; i < position.startRow + size.rows; i++) {
+        submatrixY = 0;
+        for (let j = position.startCol; j < position.startCol + size.cols; j++) {
+            matrix[i][j] = pattern[submatrixX][submatrixY];
+            document.getElementById(`${i}-${j}`).style.backgroundColor = matrix[i][j] === 0 ? 'rgb(173, 173, 173)' :`rgb(0, 0, ${Math.floor(Math.random() * (255 - 120 + 1) + 120)})`;
+            submatrixY++;
+        }
+        submatrixX++;
+    }
+}
+
+function createGlider() {
+    drawPattern(gliderPattern);
+}
+
+function createSpaceShipS() {
+    drawPattern(spaceShipSPattern);
+}
+
+function createSpaceShipSDown() {
+    drawPattern(spaceShipSDownPattern);
+}
+
 speedInput.value = Math.floor(1000 / generationSpeed);
 resetGame();
 
@@ -165,6 +237,9 @@ resetBtn.addEventListener('click', resetGame, false);
 borderCheckerBtn.addEventListener('click', borderChecker, false);
 speedInput.addEventListener('input', setSpeed);
 sizeRange.addEventListener('input', resetGame);
-
+gliderBtn.addEventListener('click', createGlider, false);
+spaceShipSBtn.addEventListener('click', createSpaceShipS, false);
+spaceShipSDownBtn.addEventListener('click', createSpaceShipSDown, false);
+randomBtn.addEventListener('click', random, false);
 
 // module.exports = newCycle;

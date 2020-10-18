@@ -42,7 +42,7 @@ ul {
 	flex: 3;
 }
 
-#reset-button {
+.header-buttons {
 	margin: 0px 10px;
 	height: 31px;
 	width: auto;
@@ -107,20 +107,19 @@ ul {
 	position: relative;
 }
 
-.aditional-options li {
+.aditional-options .options-list {
 	display: flex;
 	align-items: center;
 	list-style-type: none;
-	margin: 7px 0px;
-	padding: 0px 12px;
-	height: 35px;
+	padding: 7px 12px;
+	height: 45px;
 }
 
-.aditional-options li:hover {
+.aditional-options .options-list:hover {
 	background-color: rgb(54, 101, 163);
 }
 
-.show-options {
+#show-options {
 	background: none;
 	outline: none;
 	border: none;
@@ -128,7 +127,7 @@ ul {
 	width: 50px;
 }
 
-.show-options:hover {
+#show-options:hover {
 	background: none;
 	border: none;
 	background-color: rgb(54, 101, 163);
@@ -149,6 +148,42 @@ ul {
 	outline: none;
 	height: 25px;
 	font-size: 20px;
+}
+
+.patterns-label::after {
+	content: '       →';
+}
+
+.patterns-container {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	background-color: rgb(69, 125, 199);
+	position: absolute;
+	width: 120px;
+	top: -500px;
+	left: 219px;
+}
+
+.patterns-label:hover .patterns-container,
+.patterns-container:hover {
+	top: 118px;
+}
+
+.patterns-container .patterns-li {
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+	padding: 7px 12px;
+	height: 58px;
+}
+
+.patterns-container .patterns-li:hover {
+	background-color: rgb(54, 101, 163);
+	width: 120px;
 }
 
 #size-range {

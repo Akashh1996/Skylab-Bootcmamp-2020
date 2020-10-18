@@ -12,20 +12,31 @@
         <div class="header-container">
             <div class="flex-spacer1"></div>
             <div class="options">
-                <button class="material-icons show-options">reorder</button>
+                <button id="show-options" class="material-icons">reorder</button>
                 <ul class="aditional-options">
                     <div class="options-container">
-                        <li>
+                        <li class="options-list">
                             <label for="border-checker">Border:</label>
                             <input id="border-checker" type="checkbox" checked>
                         </li>
-                        <li>
+                        <li class="options-list">
                             <div class="speed-label">
                                 <label for="speed-input">Speed:</label>
                                 <span>(generations/sec)</span>
                             </div>
                             <input type="text" name="" id="speed-input">
                         </li>
+                        <li class="patterns-label options-list">
+                            <span>Patterns</span>
+                            <div class="patterns-container">
+                                <ul>
+                                    <li id="glider-button" class="patterns-li">Glider</li>
+                                    <li id="spaceshipS-button" class="patterns-li">Space-ship S</li>
+                                    <li id="spaceshipS-down-button" class="patterns-li">Space-ship S down</li>
+                                </ul>
+                            </div>
+                        </li>
+                        
                     </div>
                 </ul>
             </div>
@@ -41,10 +52,12 @@
                 <option value="205">
             </datalist>
             <div class="flex-spacer1"></div>
-            <button id="reset-button">Reset</button>
             <span class="generation-tag">Generations: </span>
             <span id="generations" class="generation-tag"></span>
             <div class="flex-spacer2"></div>
+            <button id="reset-button" class="header-buttons">Reset</button>
+            <button id="random-button" class="header-buttons">Random grid</button>
+            <div class="flex-spacer1"></div>
             <button id="start-button" class="material-icons game-buttons">play_circle_filled</button>
             <button id="pause-button" class="material-icons game-buttons">pause_circle_filled</button>
             <div class="flex-spacer1"></div>
