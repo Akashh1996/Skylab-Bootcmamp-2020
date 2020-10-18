@@ -180,13 +180,11 @@ function countNeigbours (i, j) {
 }
 
 function reInitializeFinal () {
-    blinkerFinalState = [
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0]
-    ]
+    for (let i= 0; i < finalArray.length; i++){
+        for (let j = 0; j < finalArray[i].length; j++){
+            finalArray[i][j] = 0;
+        }
+    }
 }
 
 const container = document.getElementById("container");
