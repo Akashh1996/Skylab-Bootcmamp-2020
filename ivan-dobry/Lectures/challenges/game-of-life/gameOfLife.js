@@ -201,6 +201,7 @@ function makeRows(rows, cols) {
   for (i = 0; i < (rows * cols); i++) {
     let cell = document.createElement("div");
     container.appendChild(cell).className = "grid-item";
+    cell.value = 0;
   };
 };
 
@@ -210,35 +211,50 @@ function makeGrid (){
     let input = document.getElementById('input__box').value;
     $( ".grid-item" ).remove();
     makeRows(+input, +input);
-    makeArrays();
+    makeArrays(input);
 }
 
-function makeArrays () {
+function makeArrays (input) {
+    let k = 0;
     let gridItems = document.getElementsByClassName('grid-item');
-    let arrFinal = jQuery.makeArray( gridItems );
-    console.log(arrFinal);
+    let arrGrid = jQuery.makeArray( gridItems );
+    console.log(arrGrid);
+
+    let startingArray =[];
+
+    for (let i=0;i<input;i++)
+    {
+    let data = [];
+    for (var j=0;j<input;j++)
+    {
+        data.push(arrGrid[k].value);
+    }
+    startingArray.push(data);
+    }
+    console.log (startingArray)
+
 }
 
-// test event listener
+//Event listener
 
 const keys = document.querySelector('.grid-game');
 keys.addEventListener('click', (event) => {
 
     if (event.target.className === 'grid-item' && event.target.style.backgroundColor === "black") {
         event.target.style.backgroundColor = "white";
+        event.target.value = 0;
+        console.log(event.target.value);
 		return;
 	}
 
 	if (event.target.className === 'grid-item' ) {
         event.target.style.backgroundColor = "black";
+        event.target.value = 1;
+        console.log(event.target.value);
 		return;
     }
 });
 
-
-
-module.exports = life;
-module.exports = countNeigbours;
 
 // 1- itero array
 // 2- funcion calcular vecinos de celdas

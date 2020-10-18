@@ -1,5 +1,6 @@
 body {
 	font-family: sans-serif;
+	background-color: grey;
 }
 
 .header__container {
@@ -41,6 +42,7 @@ body {
 	width: 100%;
 	min-width: 100%;
 	height: 660px;
+	margin-bottom: 2px;
 }
 
 .grid-game {
