@@ -11,17 +11,26 @@
 body {
 	height: 100vh;
 	font-family: 'Bangers', cursive;
-	// background-color: black;
+	background-color: black;
 }
 
 button {
 	font-family: 'Bangers', cursive;
 }
 
-// #gameWrapper {
-// 	// display: flex;
-// 	// flex-direction: column;
-// 	// background-color: white;
-// 	// .button_wrap {
-// 	// }
-// }
+.game__grid {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.grid__table {
+		background-color: white;
+		border-collapse: collapse;
+		.grid__rows {
+			.grid__cols {
+				height: 20px;
+				width: 20px;
+				border: 1px solid black;
+			}
+		}
+	}
+}
