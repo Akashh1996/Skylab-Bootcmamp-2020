@@ -1,1 +1,0 @@
-const highAndLow = require('./mymap')
