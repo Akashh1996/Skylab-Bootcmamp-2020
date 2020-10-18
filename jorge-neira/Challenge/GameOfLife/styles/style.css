@@ -11,48 +11,9 @@
 body {
   height: 100vh;
   font-family: 'Bangers', cursive;
-  background-color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 button {
   font-family: 'Bangers', cursive;
-}
-
-#gameWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: white;
-}
-
-#gameWrapper .button_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-#gameWrapper .button_wrap .btn {
-  background: none;
-  font-size: x-large;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  padding: 10px 30px;
-  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */
