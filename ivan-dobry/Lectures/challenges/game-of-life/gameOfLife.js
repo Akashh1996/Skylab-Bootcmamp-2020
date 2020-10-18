@@ -1,10 +1,6 @@
-let blinker = [
-    [0, 0, 0, 0, 0],
-    [0, 0, 1, 1, 0],
-    [0, 1, 0, 0, 1],
-    [0, 0, 1, 1, 0],
-    [0, 0, 0, 0, 0]
-]
+let startingArray = [];
+let finalArray = [];
+let arrGrid;
 
 let blinkerFinalState = [
     [0, 0, 0, 0, 0],
@@ -217,11 +213,10 @@ function makeGrid (){
 function makeArrays (input) {
     let k = 0;
     let gridItems = document.getElementsByClassName('grid-item');
-    let arrGrid = jQuery.makeArray( gridItems );
+    arrGrid = jQuery.makeArray( gridItems );
     console.log(arrGrid);
 
-    let startingArray =[];
-
+    startingArray = [];
     for (let i=0;i<input;i++)
     {
     let data = [];
@@ -243,17 +238,31 @@ keys.addEventListener('click', (event) => {
     if (event.target.className === 'grid-item' && event.target.style.backgroundColor === "black") {
         event.target.style.backgroundColor = "white";
         event.target.value = 0;
-        console.log(event.target.value);
 		return;
 	}
 
 	if (event.target.className === 'grid-item' ) {
         event.target.style.backgroundColor = "black";
         event.target.value = 1;
-        console.log(event.target.value);
 		return;
     }
 });
+
+function updateArray () {
+    let k = 0;
+    for (let i = 0; i < startingArray.length; i++ ) {
+        for (let j = 0; j < startingArray[i].length; j++) {
+            if (arrGrid[k].value === 1) {
+                startingArray[i][j] = 1;
+            }
+            if (arrGrid[k].value === 0) {
+                startingArray[i][j] = 0;
+            }
+            k++;
+        }
+    }
+    console.log(startingArray);
+}
 
 
 // 1- itero array
