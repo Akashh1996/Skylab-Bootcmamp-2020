@@ -207,11 +207,33 @@ function makeRows(rows, cols) {
 makeRows(40, 40)
 
 function makeGrid (){
-    debugger;
     let input = document.getElementById('input__box').value;
     $( ".grid-item" ).remove();
     makeRows(+input, +input);
+    makeArrays();
 }
+
+function makeArrays () {
+    let gridItems = document.getElementsByClassName('grid-item');
+    let arrFinal = jQuery.makeArray( gridItems );
+    console.log(arrFinal);
+}
+
+// test event listener
+
+const keys = document.querySelector('.grid-game');
+keys.addEventListener('click', (event) => {
+
+    if (event.target.className === 'grid-item' && event.target.style.backgroundColor === "black") {
+        event.target.style.backgroundColor = "white";
+		return;
+	}
+
+	if (event.target.className === 'grid-item' ) {
+        event.target.style.backgroundColor = "black";
+		return;
+    }
+});
 
 
 
