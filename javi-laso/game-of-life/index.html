@@ -12,7 +12,7 @@
         <div class="header-container">
             <div class="flex-spacer1"></div>
             <div class="options">
-                <button class="material-icons">reorder</button>
+                <button class="material-icons show-options">reorder</button>
                 <ul class="aditional-options">
                     <div class="options-container">
                         <li>
@@ -20,17 +20,27 @@
                             <input id="border-checker" type="checkbox" checked>
                         </li>
                         <li>
-                            <label for="speed-input">Speed</label>
+                            <div class="speed-label">
+                                <label for="speed-input">Speed:</label>
+                                <span>(generations/sec)</span>
+                            </div>
                             <input type="text" name="" id="speed-input">
                         </li>
                     </div>
                 </ul>
             </div>
             <div class="flex-spacer1"></div>
-            <label for="set-grid-width">Width:</label>
-            <input id="set-grid-width" class="header-inputs" type="text">
-            <label for="set-grid-height">Height:</label>
-            <input id="set-grid-height" class="header-inputs" type="text">
+            <label for="size-range">Size:</label>
+            <input type="range" id="size-range" min="5" max="205" step="40" value="45" list="sizes">
+            <datalist id="sizes">
+                <option value="5">
+                <option value="45">
+                <option value="85">
+                <option value="125">
+                <option value="165">
+                <option value="205">
+            </datalist>
+            <div class="flex-spacer1"></div>
             <button id="reset-button">Reset</button>
             <span class="generation-tag">Generations: </span>
             <span id="generations" class="generation-tag"></span>
