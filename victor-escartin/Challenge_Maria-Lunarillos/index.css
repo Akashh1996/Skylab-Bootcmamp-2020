@@ -213,6 +213,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: center;
 }
 .logo {
   margin-top: 70px;
@@ -228,6 +229,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: auto;
 }
 
 img {
@@ -550,5 +552,199 @@ aside {
 
   #item__post-1 {
     padding: 2%;
+  }
+
+  .bigFlex {
+    display: flex;
+    flex-direction: row;
+    max-width: 80%;
+    margin: auto;
+  }
+  .smallFlex {
+    display: flex;
+    flex-direction: column;
+  }
+  .ingredients__images--big {
+    max-height: none;
+    height: 100%;
+    width: 100%;
+  }
+
+  .ingredients__images--small {
+    max-height: none;
+    height: 100%;
+    width: 100%;
+  }
+
+  .smallW {
+    max-height: none;
+    min-height: 1px;
+    float: left;
+    padding: 7.5px;
+    margin: 0;
+    float: left;
+  }
+
+  .bigW {
+    max-height: none;
+    min-height: 1px;
+    float: left;
+    padding: 7.5px;
+    margin: 0;
+    float: left;
+  }
+
+  .smallW img {
+    height: 100%;
+  }
+
+  .recipes__examples img {
+    max-height: 100%;
+  }
+
+  .ingredients__images--text::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-bottom: 150px solid rgba(255, 255, 255, 0.8);
+    border-right: 100px solid transparent;
+    position: absolute;
+    right: -100px;
+    top: 0;
+  }
+  .changeSize {
+    font-size: 10px;
+  }
+
+  .subheaderlog {
+    display: none;
+  }
+  .subheader {
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+  }
+  .subheaderleft {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .empty {
+    display: flex;
+    flex: 1;
+  }
+  .subheaderight {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .subheaderSearch {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: flex-end;
+    margin: 20px 0px;
+  }
+  .searchNovedades {
+    display: flex;
+    flex: 1;
+    margin: 0 2px;
+  }
+  .searchOfertas {
+    display: flex;
+    flex: 1;
+    margin: 0 2px;
+  }
+  .searchBar {
+    display: flex;
+    justify-content: flex-end;
+    flex: 2;
+    height: 100%;
+    border: 1px;
+    border-style: solid;
+    border-color: #bbb8b6;
+  }
+  .inputbar {
+    width: 100%;
+    border: none;
+  }
+  .buttonov {
+    display: flex;
+    background-color: #9faa4d;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: none;
+  }
+  .buttonof {
+    display: flex;
+    background-color: #8e789d;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: none;
+  }
+  .subheaderMenu {
+    display: flex;
+    flex-direction: row;
+  }
+  .boxicons {
+    display: flex;
+    background-color: #f1f1f1;
+    height: 70px;
+    width: 70px;
+    padding: 15px;
+  }
+  .boxicons:hover {
+    background-color: #ff5959;
+    color: white;
+  }
+  .searchNovedades {
+    display: flex;
+  }
+  .lettersLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 9px;
+    padding: 0 1px;
+  }
+  .lettersLogoBlog {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    font-size: 9px;
+    padding: 0 1px;
+  }
+  .boxiconsBlog {
+    display: flex;
+    background-color: #ff5959;
+    height: 70px;
+    width: 70px;
+    padding: 15px;
+  }
+  .boxiconsBlog:hover {
+    background-color: #f1f1f1;
+  }
+  .subheaderButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .searchButton {
+    border: 2px;
+    padding: 0px 10px;
+    border-color: #bbb8b6;
+    background-color: #bbb8b6;
+  }
+  .logo1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
