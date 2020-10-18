@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#gameWrapper {
+	display: flex;
+	flex-direction: column;
+	.button__wrap {
+		.btn {
+			background-color: white;
+			cursor: pointer;
+			outline: none;
+			border: none;
+			padding: 30px;
+			text-transform: uppercase;
+		}
+	}
+}
