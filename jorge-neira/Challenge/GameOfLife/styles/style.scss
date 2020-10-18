@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
 *,
 *::before,
 *::after {
@@ -8,22 +10,31 @@
 
 body {
 	height: 100vh;
+	font-family: 'Bangers', cursive;
 	background-color: black;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
+button {
+	font-family: 'Bangers', cursive;
+}
+
 #gameWrapper {
 	display: flex;
 	flex-direction: column;
-	.button__wrap {
+	background-color: white;
+	.button_wrap {
+		display: flex;
+		justify-content: space-around;
 		.btn {
-			background-color: white;
+			background: none;
+			font-size: x-large;
 			cursor: pointer;
 			outline: none;
 			border: none;
-			padding: 30px;
+			padding: 10px 30px;
 			text-transform: uppercase;
 		}
 	}
