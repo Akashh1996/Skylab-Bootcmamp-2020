@@ -130,9 +130,16 @@ describe('Life', function () {
 		});
 	});
 
-	describe('convertToMatrix', () => {
-		test('', () => {
-			
+	describe('setInitialState', () => {
+		test('should return an 2d array with 1/0 values', () => {
+			//arrange
+			let lifeForm = document.createElement("form");
+
+			//act
+			const response = serInitialState();
+
+			//assert
+			expect(response).toEqual();
 		});
 	});
 });

@@ -1,4 +1,4 @@
-function Life(playButton, stopButton, clearButton) {
+function Life(playButton, stopButton, clearButton, lifeForm) {
 	let isPlaying;
 	const rowColumSeparator = '--';
 
@@ -53,8 +53,6 @@ function Life(playButton, stopButton, clearButton) {
 
 	function setInitialState() {
 		let currentState = [];
-		const lifeForm = document.forms[0];
-		debugger;
 		if (lifeForm) {
 			for (let i = 0; i < lifeForm.length; i++) {
 				const position = splitId(lifeForm[i]);
@@ -64,7 +62,7 @@ function Life(playButton, stopButton, clearButton) {
 				];
 			}
 
-			return currentState.reduce(convertToMatrix(accumulator, current), []);
+			return currentState.reduce(convertToMatrix, []);
 		} else {
 			return [];
 		}
@@ -106,7 +104,7 @@ function Life(playButton, stopButton, clearButton) {
 		const inputElement = document.getElementById(
 			`cell--${row}--${column}`
 		);
-		if (inputElement) element.checked = !!isChecked;
+		if (inputElement) inputElement.checked = !!isChecked;
 	}
 
 	function countNeighbours({ row, column }, state) {
@@ -128,7 +126,7 @@ function Life(playButton, stopButton, clearButton) {
 		return neighbours;
 	}
 
-	return { next, play, stop, clear, isPlaying, splitId };
+	return { next, play, stop, clear, isPlaying, splitId, setInitialState };
 }
 
 module.exports = Life;
