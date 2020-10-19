@@ -1,0 +1,16 @@
+{
+  "name": "array-methods",
+  "version": "1.0.0",
+  "description": "",
+  "main": "some.js",
+  "scripts": {
+    "test": "jest",
+    "test-w": "jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.5.3"
+  }
+}
