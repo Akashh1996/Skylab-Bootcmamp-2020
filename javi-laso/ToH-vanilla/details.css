@@ -2,3 +2,54 @@ ul {
 	margin: 0;
 	padding: 0;
 }
+
+.header-buttons {
+	text-decoration: none;
+	background-color: #eeeeee;
+	color: #547485;
+	padding: 10px;
+	margin: 0px 10px;
+}
+
+.powerstats-container {
+	display: flex;
+	justify-content: flex-start;
+	width: 300px;
+}
+
+.powerstats {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.powerstats-container svg {
+	position: relative;
+	width: 100px;
+	height: 100px;
+}
+
+.powerstats-container svg circle {
+	width: 100px;
+	height: 100px;
+	fill: none;
+	stroke-width: 9;
+	stroke: lightgreen;
+	stroke-dashoffset: 233;
+	stroke-dasharray: 233 233;
+	transform: rotate(-90deg);
+	transform-origin: 50% 50%;
+}
+
+.powerstats-container svg circle:nth-child(1) {
+	stroke-dasharray: 0;
+	stroke-dashoffset: 0;
+	stroke: #d9d9d9;
+}
+
+.powerstats__number {
+	position: absolute;
+	top: 32px;
+	font-size: 30px;
+}

@@ -431,10 +431,11 @@ class Store {
         for (let i = 0; i < heroList.length; i++) {
             let listElement = document.createElement('li');
             list.appendChild(listElement);
-            let heroButton = document.createElement('button');
-            listElement.appendChild(heroButton);
-            heroButton.setAttribute('id', `${heroList[i].slug}`);
-            heroButton.innerHTML = `${heroList[i].name}`;
+            let heroAnchor = document.createElement('a');
+            listElement.appendChild(heroAnchor);
+            heroAnchor.setAttribute('href', `details.html?id=${heroList[i].id}`)
+            heroAnchor.setAttribute('id', `${heroList[i].slug}`);
+            heroAnchor.innerHTML = `${heroList[i].name}`;
         }
     }
 
@@ -461,6 +462,22 @@ class Store {
             anchorId.innerHTML = `${heroList[i].id}`;
             anchorName.innerHTML = `${heroList[i].name}`;
         }
+    }
+
+    getIdFromUrl(searchUrl) {
+      return searchUrl.split('=')[1];
+    }
+
+    getDashOffSetfromPercent(circle, percent) {
+      let radius = circle.getAttribute('r');
+      let circumference = Math.PI * radius * 2;
+      percent = percent < 0 ? 0 : percent > 100 ? 100 : percent;
+      let dashOffSet = circumference - percent / 100 * circumference;
+      return dashOffSet;
+    }
+
+    setstrokeDashoffsetInCircle(circle, percent) {
+      circle.style.strokeDashoffset = this.getDashOffSetfromPercent(circle, percent);
     }
 }
 

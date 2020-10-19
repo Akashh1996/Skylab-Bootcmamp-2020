@@ -3,6 +3,14 @@ ul {
 	padding: 0;
 }
 
+.header-buttons {
+	text-decoration: none;
+	background-color: #eeeeee;
+	color: #547485;
+	padding: 10px;
+	margin: 0px 10px;
+}
+
 #heroes-list {
 	list-style-type: none;
 }

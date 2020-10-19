@@ -3,12 +3,20 @@ ul {
 	padding: 0;
 }
 
+.header-buttons {
+	text-decoration: none;
+	background-color: #eeeeee;
+	color: #547485;
+	padding: 10px;
+	margin: 0px 10px;
+}
+
 #dashboard-list {
 	display: flex;
 	list-style-type: none;
 }
 
-#dashboard-list button {
+#dashboard-list li {
 	width: 100px;
 	height: 100px;
 	margin: 20px;
@@ -16,4 +24,14 @@ ul {
 	border: none;
 	background-color: #607d8b;
 	cursor: pointer;
+}
+
+#dashboard-list li a {
+	width: 100px;
+	height: 100px;
+	text-decoration: none;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
