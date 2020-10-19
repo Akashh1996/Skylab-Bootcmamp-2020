@@ -8,7 +8,6 @@ function life (array) {
     for (let i = 0; i < array.length; i++) {
         for (let j = 0; j < array[i].length; j++){
             neigbours = countNeigbours(i, j);
-            console.log(neigbours)
            if (array[i][j] === 0 && neigbours === 3) {
                 finalArray[i][j] = 1;
            } else if (array[i][j] === 1 && neigbours > 3) {
@@ -22,8 +21,6 @@ function life (array) {
            }
         }
     }
-    console.log(startingArray);
-    console.log(finalArray);
     copyArray();
     updateGridArray ();
     displayGrid ();
@@ -207,7 +204,6 @@ function makeArrays (input) {
     let k = 0;
     let gridItems = document.getElementsByClassName('grid-item');
     arrGrid = jQuery.makeArray( gridItems );
-    console.log(arrGrid);
 
     startingArray = [];
     for (let i=0;i<input;i++)
@@ -229,8 +225,6 @@ function makeArrays (input) {
     }
     finalArray.push(data);
     }
-    console.log (finalArray)
-
 }
 
 //Event listener
@@ -265,7 +259,6 @@ function updateArray () {
         }
     }
     life(startingArray);
-    console.log(startingArray);
 }
 
 function copyArray () {
@@ -311,7 +304,6 @@ function startInterval () {
             }
         }
         life(startingArray);
-        console.log(startingArray);
     }, 200)
 }
 
