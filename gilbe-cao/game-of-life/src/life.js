@@ -56,7 +56,13 @@ function Life(playButton, stopButton, clearButton) {
 
 	function setInitialState() {
 		let currentState = [];
-		const lifeForm = document.forms[0];
+		const lifeForm = document.forms[0]; <<
+		<< << < HEAD
+			===
+			=== =
+
+			>>>
+			>>> > bf16f6913211ac1827c5dc4a1e49b0a77935cbfa
 		if (lifeForm) {
 			for (let i = 0; i < lifeForm.length; i++) {
 				const position = splitId(lifeForm[i]);
@@ -113,10 +119,8 @@ function Life(playButton, stopButton, clearButton) {
 		column,
 		isChecked
 	}) {
-		const inputElement = document.getinputElementById(
-			`cell--${row}--${column}`
-		);
-		if (inputElement) element.checked = !!isChecked;
+		const inputElement = document.getElementById(`cell--${row}--${column}`);
+		if (inputElement) inputElement.checked = !!isChecked;
 	}
 
 	function countNeighbours({
