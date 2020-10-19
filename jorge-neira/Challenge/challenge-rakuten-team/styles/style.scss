@@ -422,9 +422,6 @@ input {
 						}
 					}
 				}
-				.card-rating__title {
-					
-				}
 				.content-card__gender {
 					margin-bottom: 30px;
 					.card-gender__title {
@@ -471,6 +468,12 @@ input {
 				}
 			}
 		}
+	}
+}
+.detail-carru {
+	.detail-movies {
+		display: flex;
+		overflow: hidden;
 	}
 }
 //////////////////////////////////////////////////////////////
@@ -995,5 +998,3 @@ input {
 		}
 	}
 }
-
-
