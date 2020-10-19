@@ -89,3 +89,6 @@ test('it has more then 3 lives', () => {
 
     expect(gameOfLife(initialStatus)).toEqual(finalStatus)
 })
+
+
+
