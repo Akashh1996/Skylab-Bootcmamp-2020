@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of life</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="flex-spacer1"></div>
+            <div class="options">
+                <button id="show-options" class="material-icons">reorder</button>
+                <ul class="aditional-options">
+                    <div class="options-container">
+                        <li class="options-list">
+                            <label for="border-checker">Border:</label>
+                            <input id="border-checker" type="checkbox" checked>
+                        </li>
+                        <li class="options-list">
+                            <div class="speed-label">
+                                <label for="speed-input">Speed:</label>
+                                <span>(generations/sec)</span>
+                            </div>
+                            <input type="text" name="" id="speed-input">
+                        </li>
+                        <li class="patterns-label options-list">
+                            <span>Patterns</span>
+                            <div class="patterns-container">
+                                <ul>
+                                    <li id="glider-button" class="patterns-li">Glider</li>
+                                    <li id="spaceshipS-button" class="patterns-li">Space-ship S</li>
+                                    <li id="spaceshipS-down-button" class="patterns-li">Space-ship S down</li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                    </div>
+                </ul>
+            </div>
+            <div class="flex-spacer1"></div>
+            <label for="size-range">Size:</label>
+            <input type="range" id="size-range" min="5" max="205" step="40" value="45" list="sizes">
+            <datalist id="sizes">
+                <option value="5">
+                <option value="45">
+                <option value="85">
+                <option value="125">
+                <option value="165">
+                <option value="205">
+            </datalist>
+            <div class="flex-spacer1"></div>
+            <span class="generation-tag">Generations: </span>
+            <span id="generations" class="generation-tag"></span>
+            <div class="flex-spacer2"></div>
+            <button id="reset-button" class="header-buttons">Reset</button>
+            <button id="random-button" class="header-buttons">Random grid</button>
+            <div class="flex-spacer1"></div>
+            <button id="start-button" class="material-icons game-buttons">play_circle_filled</button>
+            <button id="pause-button" class="material-icons game-buttons">pause_circle_filled</button>
+            <div class="flex-spacer1"></div>
+        </div>
+    </header>
+    <main>
+        <div id="grid-container"></div>
+    </main>
+    <script  src="script.js"></script>
+</body>
+</html>
