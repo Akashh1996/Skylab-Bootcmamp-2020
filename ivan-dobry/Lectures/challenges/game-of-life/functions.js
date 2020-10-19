@@ -253,23 +253,6 @@ keys.addEventListener('click', (event) => {
     }
 });
 
-// setInterval(function updateArray () {
-//     let k = 0;
-//     for (let i = 0; i < startingArray.length; i++ ) {
-//         for (let j = 0; j < startingArray[i].length; j++) {
-//             if (arrGrid[k].value === 1) {
-//                 startingArray[i][j] = 1;
-//             }
-//             if (arrGrid[k].value === 0) {
-//                 startingArray[i][j] = 0;
-//             }
-//             k++;
-//         }
-//     }
-//     life(startingArray);
-//     console.log(startingArray);
-// }, 500)
-
 function updateArray () {
     let k = 0;
     for (let i = 0; i < startingArray.length; i++ ) {
@@ -314,10 +297,3 @@ function displayGrid () {
         }
     }
 }
-
-
-
-// 1- itero array
-// 2- funcion calcular vecinos de celdas
-// 3- aplico reglas
-// 4- pintar

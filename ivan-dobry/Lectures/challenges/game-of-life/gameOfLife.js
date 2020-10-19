@@ -309,5 +309,7 @@ function startInterval () {
 
 function stopInterval() {
     clearInterval(interval);
-  }
+}
+
+module.exports = life;
 
