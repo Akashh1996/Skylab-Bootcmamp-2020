@@ -4,10 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    <script src="index.js"></script>
 </head>
 <body>
-
+    <section class="buttonsHeader">
+    <button id="startGame" class="styleBtn startAndstop" onclick="gameOfLife.startGame()">START</button>
+    <section class="titleSect">
+    <img width='50' height='50' src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRB8kW_wc-7C-5mMcUEsF87beeWAZ92Rnuwgg&usqp=CAU'/>
+    <h2>Game Of Life</h2>
+    <div>
+        <button id="lessSpeedBtn" class="styleBtn" onclick="gameOfLife.decreaseSpeed()">-</button>
+        <text class="gameText">Speed</text>
+        <button id="moreSpeedBtn" class="styleBtn" onclick="gameOfLife.incrementSpeed()">+</button>
+    </div>
+    </section>
+    <button id="stopButton" class="styleBtn startAndstop" onclick="gameOfLife.stop()">STOP</button>
+    </section>  
+    <hr>    
+    <hr> 
 </body>
+<script src="index.js"></script>
 </html>

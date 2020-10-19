@@ -1,0 +1,63 @@
+body{
+    background-color: #000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+table {
+    border-collapse: collapse;
+    border: none
+}
+button{
+    border: none
+}
+td {
+    border:0px;
+    border-collapse:collapse;
+    border-spacing:0px;
+}
+.liveColor{
+    background-color: cyan;
+    color: cyan;
+}
+.deadColor{
+    background-color: #000;
+    color: #000;
+}
+
+.gameText {
+    color: white;
+}
+
+.buttonsHeader {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.styleBtn {
+    font-size: 15px;
+    color: red;
+    background-color: black;
+    border: 4px solid red;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.startAndstop {
+    height: 60px;
+    width: 90px;
+}
+
+h2 {
+    color: red;
+    font-size: 60px;
+}
+
+.titleSect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
