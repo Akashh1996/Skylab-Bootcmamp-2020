@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Of Life</title>
+    <link href="https://fonts.googleapis.com/css2?family=Codystar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+    <div class="background-gradient">
+        <h1>Game of Stars</h1>
+        <section class="section__buttons">
+            <div class="buttons__group buttons__left">
+                <div class="button size" onclick="changeSize(1)">Mediano</div>
+                <div class="button size" onclick="changeSize(2)">Grande</div>
+            </div>
+            <div class="buttons__group">
+                <div class="button" id="playPause" onclick="playStop()">Play / Stop</div>
+            </div>
+            <div class="buttons__group buttons__right">
+                <div class="button velocity" onclick="changeVelocity(500)">x1</div>
+                <div class="button velocity" onclick="changeVelocity(250)">x2</div>
+                <div class="button velocity" onclick="changeVelocity(100)">x4</div>
+                <div class="button velocity" onclick="changeVelocity(50)">x8</div>
+            </div>
+        </section>
+        <section id="rules">
+            <span class="rules__text">
+                <span class="rules" id="rule1">1. Any live cell with two or three live neighbours survives.
+                </span>
+                <span class="rules" id="rule1">2. Any dead cell with three live neighbours becomes a live cell.
+                </span>
+                <span class="rules" id="rule1">3. Any dead cell with three live neighbours becomes a live cell.
+                </span>
+            </span>
+        </section>
+        <canvas id="canvas"></canvas>
+        <section class="satellite">
+            <img src="https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5f8ca3762d880e826095631f/b86527bd25fb180a811b146429668797/ClipartKey_1802777.png"
+                alt="sattelite" class="satellite__img satellite__small flipped">
+            <img src="https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5f8ca3762d880e826095631f/b86527bd25fb180a811b146429668797/ClipartKey_1802777.png"
+                alt="sattelite" class="satellite__img">
+        </section>
+    </div>
+    <section class="landscape">
+        <div class="landscape__blur">
+            <img src="https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5f8ca3762d880e826095631f/73d97c1239f58906d3d44be05b14bf0e/New_Project_(2).png"
+                alt="landscape-blur" class="landscape__blur">
+        </div>
+        <!--Two url in case one is down-->
+        <img src="https://pierluigiscotolati.com/wp-content/media/SL_venezia01.svg" alt="landscape" id="landscape-img">
+        <!--<img src="https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5f8ca3762d880e826095631f/fefb42f9f7547f644fd235c7c0b034d2/SL_venezia01.svg" alt="landscape" id="landscape-img"> -->
+    </section>
+    <script src="app-variables.js" type="text/javascript"></script>
+    <script src="app-security-copy.js" type="text/javascript"></script>
+</body>
+
+</html>
