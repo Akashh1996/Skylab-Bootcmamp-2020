@@ -1,0 +1,263 @@
+body{
+    background-image: url(images/pattern.png);
+}
+
+.navimg{
+    display: flex;
+    align-content: center;
+    margin-left: 30px;
+}
+
+nav{
+    display: flex;
+    align-content: center;
+    background-color: rgb(143, 93, 143);
+    height: 60px;
+    padding-bottom: 30px;
+}
+
+nav a{
+    display: flex;
+    align-content: center;
+    font-weight: bold;
+    padding-left: 20px;
+    font-size: 25px;
+    color: white;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-options{
+    margin-bottom: 2px;
+}
+
+@media (max-width: 599px) {
+	.listContainer{
+        margin-top: 20px;
+        margin-left: 150px;
+        display: flex;
+        align-content: center;
+    }
+
+    .products{
+        margin-top: 30px;
+        background-color: rgb(216, 79, 79);
+        width: 200px;
+        color: white;
+        list-style:none;
+        margin-left: auto;
+        margin-right: auto;
+        align-content: center;
+        border: 2px solid white;
+    }
+
+    .menu-options{
+        margin-bottom: 2px;
+    }
+
+    .logo{
+        margin-top: 50px;
+        height: 150px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .option{
+        margin-left: 20px;
+        margin-top: 20px;
+        font-size: 20px;
+        align-content: center;
+    }
+
+    .title2{
+        margin-left: 40px;
+        font-weight: bold;
+        font-size: 45px;
+        color: rgb(116, 80, 116);
+    }
+
+    .bethany-img{
+        width: 400px;
+        margin-left: 100px;
+    }
+
+    .img-footer{
+        margin-top: 2px;
+        margin-left: 100px;
+        font-size: 25px;
+    }
+
+    h1{
+        font-size: 20px;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .history{
+        margin-left: 100px;
+    }
+
+    .history-text{
+        margin-left: 100px;
+        margin-right: 70px;
+    }
+
+    .promotions{
+        margin-left: 100px;
+        margin-right: 70px;
+        background: white;
+        border-radius: 37px 37px 37px 37px;
+        -moz-border-radius: 37px 37px 37px 37px;
+        -webkit-border-radius: 37px 37px 37px 37px;
+        border: 0px solid #000000;
+    }
+
+    .section-title{
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+    .section-subtitle{
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+    .section-price{
+        margin-top: 20px;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .img-promotions{
+        margin-left: 20px;
+        width: 370px;
+        margin-bottom: 10px;
+    }
+
+    footer{
+        text-align: center;
+    }
+}
+
+@media (min-width: 600px) {
+	.listContainer{
+        margin-top: 20px;
+        margin-left: 50px;
+        display: flex;
+        align-content: center;
+    }
+
+    .asideTitle{
+        margin-left: 140px;
+    }
+
+    .container{
+        flex-direction: row;
+    }
+
+    .logo{
+        margin-top: 50px;
+        height: 300px;
+        display: block;
+        margin-left: 80px;
+    }
+
+    h1{
+        font-size: 20px;
+        margin-top: 30px;
+        text-align: left;
+        margin-left: 150px;
+    }
+    .menu-options{
+        margin-left: 100px;
+    }
+
+    .products{
+        margin-top: 30px;
+        background-color: rgb(216, 79, 79);
+        width: 200px;
+        color: white;
+        list-style:none;
+        margin-left: 100px;
+    }
+    
+    .option{
+        margin-left: 10px;
+        margin-top: 20px;
+        font-size: 20px;
+        align-content: center;
+    }
+
+    .title2{
+        margin-left: 100px;
+        font-weight: bold;
+        font-size: 45px;
+        color: rgb(116, 80, 116);
+    }
+
+    .bethany-img{
+        width: 400px;
+        margin-left: 100px;
+    }
+
+    .img-footer{
+        margin-top: 2px;
+        margin-left: 100px;
+        font-size: 25px;
+    }
+
+
+    .history{
+        margin-left: 100px;
+    }
+
+    .history-text{
+        margin-left: 100px;
+        margin-right: 70px;
+    }
+
+    .promotions{
+        margin-left: 80px;
+        margin-right: 70px;
+    }
+
+    .section-title{
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+    .section-subtitle{
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+    .section-price{
+        margin-top: 20px;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .img-promotions{
+        margin-left: 20px;
+        width: 500px;
+        margin-bottom: 10px;
+    }
+
+    footer{
+        text-align: left;
+        margin-top: 100px;
+        margin-left: 100px;
+    }
+}

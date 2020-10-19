@@ -1,0 +1,257 @@
+$labelLetterSize: 15px;
+$labelLetterColor: rgb(179, 179, 179);
+$inputLetterSize: 25px;
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+label {
+  color: $labelLetterColor;
+  font-size: $labelLetterSize;
+}
+
+input,
+select {
+  font-size: $inputLetterSize;
+}
+
+input,
+input:focus,
+textarea,
+select,
+select:focus,
+fieldset {
+  border: none;
+  outline: none;
+}
+
+input,
+textarea,
+select {
+  border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+::placeholder {
+  font-size: $labelLetterSize;
+  color: $labelLetterColor;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mr-05 {
+  margin-right: 0.5rem;
+}
+
+.mr-2 {
+  margin-right: 2rem;
+}
+
+.ml-2 {
+  margin-left: 2rem;
+}
+.custom-star-box {
+  width: 80px;
+}
+
+.custom-star {
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  background: none;
+}
+.label--width {
+  width: 90px;
+}
+
+.pr-3 {
+  padding-right: 3rem;
+}
+
+.flighs__select--width {
+  width: 210px;
+}
+
+.main-container {
+  height: 100vh;
+  display: flex;
+}
+
+.form-container {
+  margin: auto;
+  display: flex;
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.text-area-container {
+  border-top: 1px solid rgb(153, 153, 153);
+  border-left: 1px solid rgb(153, 153, 153);
+}
+
+.textarea--padding {
+  padding: 0.4rem 0 0 0.4rem;
+}
+
+.input--border {
+  border-bottom: 2px solid rgb(153, 153, 153);
+}
+
+.input--border:focus {
+  border-bottom: 2px solid rgb(153, 153, 153);
+}
+
+.required:after {
+  content: " *";
+  color: rgb(212, 40, 40);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-self-end {
+  align-self: flex-end;
+}
+
+.input--submit {
+  background: none;
+  cursor: pointer;
+}
+
+.input--submit:hover {
+  color: #2196f3;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.p-rating .p-rating-star:hover,
+.p-rating .p-rating-star:hover ~ .p-rating-star {
+  color: transparent;
+}
+
+/*
+Make all previous stars selected when hover on a star
+Note that we use `flex-direction: row-reverse` on the container
+*/
+.p-rating .p-rating-star:hover:before,
+.p-rating .p-rating-star:hover ~ .p-rating-star:before {
+  color: #00449e;
+  content: "\2605";
+  left: 0;
+  position: absolute;
+}
+
+.p-rating-star {
+  /* Reset styles for button */
+  background-color: transparent;
+  border: transparent;
+  margin: 0 2px;
+  padding: 0;
+  font-size: 20px;
+
+  /* Used to position the hover state */
+  position: relative;
+}

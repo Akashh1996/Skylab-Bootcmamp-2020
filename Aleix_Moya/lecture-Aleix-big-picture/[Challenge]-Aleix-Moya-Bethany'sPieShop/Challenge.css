@@ -1,0 +1,159 @@
+@media screen and (min-width: 1000px){
+    #navbar{
+        background-color: blueviolet;
+    }
+    #piepos{
+        margin-left: 50px;
+    }
+    #navlet{
+        color: white;
+        margin-top:10px;
+        font-size: 20px;
+        text-align: center;
+    }
+    body{
+        background-image:url("pattern.png");
+    }
+    #logo{
+        margin-top: 30px;
+        margin-left: 50px;
+    }
+    #title{
+        color: blueviolet;
+        margin-top: 10px;
+        margin-left: 350px;
+    }
+    #leftbutton{
+    background-color:chocolate;
+    border: none;
+    color: white;
+    margin-left: 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+    #Browse{
+    margin-left: 100px !important; 
+    font-weight: bold;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+    .mainTitle {
+        margin-top: 30px;
+        margin-left: 400px; 
+        color: blueviolet;
+    }
+    #main{
+        margin-top: 10px;
+        margin-left: 450px;
+    }
+    .sidenav {
+        position: absolute;
+        z-index: 1;
+        top: 60px;
+        left: 0;
+        overflow-x: hidden;
+    }
+    #subtitle{
+        font-weight:bold;
+        margin-left: 400px;
+        
+    }
+    #paragraph{
+        letter-spacing: 1px;
+        margin-left: 400px;
+    }
+    #paragraph2{
+        letter-spacing: 0px;
+        margin-left: 60px;
+    }
+}
+@media screen and (max-width: 1000px){
+    #navbar{
+        background-color: blueviolet;
+    }
+    #piepos{
+        margin-left: 10px;
+    }
+    #navlet{
+        float: right;
+        color: white;
+        margin-top:0px;
+        font-size: 15px;
+    }
+    body{
+        background-image:url("pattern.png");
+    }
+    #logo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #title{
+        color: blueviolet;
+        top: 50%;
+        left: 50%;
+    }
+    #leftbutton{
+    background-color:chocolate;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    #Browse{ 
+    display: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+    .mainTitle {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        color: blueviolet;
+    }
+    #main{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .sidenav {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #subtitle{
+        font-weight:bold;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    #paragraph{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #paragraph2{
+        letter-spacing: 0px;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+}

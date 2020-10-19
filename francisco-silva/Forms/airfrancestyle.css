@@ -1,0 +1,116 @@
+* {
+	font-family: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+	color: #011627;
+	padding: 1px;
+	margin: 1px;
+}
+
+.name-email,
+.return-from,
+.passengers-description {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+textarea {
+	resize: none;
+	width: 300px;
+	height: 15px;
+}
+.description {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+button {
+	width: 100px;
+	height: 30px;
+}
+
+#body {
+	display: flex;
+	justify-content: center;
+}
+
+.form-reserve {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+html {
+	background: url(image.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.background {
+	background-color: rgba(65, 234, 212, 0.45);
+	border-radius: 10%;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	min-width: 440px;
+}
+
+:root {
+	--bg: #1a1e24;
+	--color: #eee;
+	--font: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.wrapper {
+	padding: 1.5rem 0;
+	filter: url('#goo');
+}
+
+.button {
+	display: inline-block;
+	text-align: center;
+	background: var(--color);
+	color: var(--bg);
+	font-weight: bold;
+	padding: 1.18em 1.32em 1.03em;
+	line-height: 1;
+	border-radius: 1em;
+	position: relative;
+	min-width: 8.23em;
+	text-decoration: none;
+	font-family: var(--font);
+	font-size: 1.25rem;
+}
+
+.button:before,
+.button:after {
+	width: 4.4em;
+	height: 2.95em;
+	position: absolute;
+	content: '';
+	display: inline-block;
+	background: var(--color);
+	border-radius: 50%;
+	transition: transform 0.5s ease;
+	transform: scale(0);
+	z-index: -1;
+}
+
+.button:before {
+	top: -25%;
+	left: 20%;
+}
+
+.button:after {
+	bottom: -25%;
+	right: 20%;
+}
+
+.button:hover:before,
+.button:hover:after {
+	transform: none;
+}

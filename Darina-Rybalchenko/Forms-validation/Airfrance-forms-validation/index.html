@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="heading">
+        <div class="wrapper-header">
+            <h1>AirFrance</h1>
+        </div>
+    </header>
+
+    <main class="name">
+
+        <div class="all-elements-wrapper">
+            <form>
+
+                <div class="first-element-wrapper">
+                    <div class="first-elements">
+                        <div class="element-travel">
+
+                            <label for="Viaje">Viaje</label> <br>
+                            <select name="viaje" id="viaje">
+                                <option value="">Ida y Vuelta</option>
+                                <option value="">Solo Ida</option>
+                                <option value="">Multiples destinos</option>
+                            </select>
+
+                        </div>
+
+                        <div class="element-passanger-age">
+
+                            <legend> Passanger</legend>
+                            <label for="radio">Adult</label>
+                            <input type="radio" name="checkbox" id="radio" placeholder="checkbox">
+                            <label for="radio">Child</label>
+                            <input type="radio" name="checkbox" id="radio" placeholder="checkbox">
+
+
+                        </div>
+
+                        <div class="element-passanger-num">
+
+                            <label for="number-of-assangers">Passanger</label>
+                            <select name="number-ofpassager" id="number-of-passanger">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+
+                            </select>
+
+
+                        </div>
+                        <div class="element-class">
+
+                            <label for="class">Passanger</label>
+                            <select name="class" id="class">
+                                <option value="">Economy</option>
+                                <option value="">Premium</option>
+                                <option value="">Business</option>
+
+                            </select>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="second-element-wrapper">
+                    <div class="second-elements">
+                        <div class="element-departFrom">
+
+                            <label for="departingFrom">Departing from* <br> </label>
+                            <select name="departingFrom" id="departingFrom">
+                                <option value="">Barcelona</option>
+                                <option value="">Paris</option>
+                                <option value="">Roma</option>
+
+                            </select>
+
+                        </div>
+                        <div class="element-departAt">
+
+                            <label for="departingAt">Deaprting at* <br> </label>
+                            <select name="departingAt" id="departingAt">
+                                <option value="">Barcelona</option>
+                                <option value="">Paris</option>
+                                <option value="">Roma</option>
+
+                            </select>
+
+                        </div>
+                        <div class="firstName">
+
+                            <label for="name">Name</label>
+                            <input id="name" type="text" name="name" placeholder="Please, type your first name"
+                                required>
+
+                        </div>
+                        <div class="lastName">
+
+                            <label for="lastname">Last name</label>
+                            <input id="lasname" type="text" name="lastname" placeholder="Please, type your last name"
+                                required>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="third-element-wrapper">
+                    <div class="third-elements">
+                        <div class="travel-date-outbound-element">
+
+                            <label for="start">Outbound <br> </label>
+
+                            <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01"
+                                max="2018-12-31">
+
+                            <!-- <label for="dateOutbound">Outbound: <br> </label>
+                            <input id="dateOutbound" type="dateOutbound" name="dateOutbound" placeholder="DD/MM/YYYY"
+                                required> -->
+
+                        </div>
+
+                        <div class="travel-date-return-element">
+
+                            <label for="start">Return <br> </label>
+
+                            <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01"
+                                max="2018-12-31">
+
+                            <!-- 
+                            <label for="dateReturn">Return <br> </label>
+                            <input id="dateReturn" type="dateReturn" name="dateReturn" placeholder="DD/MM/YYYY"
+                                required>
+ -->
+                        </div>
+
+                        <div class="phoneNumber">
+
+                            <label for="phoneNumber">Enter your phone number:</label>
+                            <input id="phoneNumber" type="tel" name=" phoneNumber"
+                                placeholder="Please, type phone number" required maxlength="9"><br><br>
+
+
+                        </div>
+
+                        <div class="email-element">
+
+                            <label for="email">Enter your email address:</label>
+                            <input id="email" type="text" name="text" placeholder="Email" pattern=".+@globex.com"
+                                required>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="fourth-element-wrapper">
+                    <div class="fourth-elements">
+                        <input class="submit" type="submit">
+                        <!--  <div class="search-flights-contenter">
+                            <div class="search">
+                                <input type="submit"> -->
+                    </div>
+
+                </div>
+
+
+            </form>
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>

@@ -37,7 +37,7 @@ bingoGame.printButton = function() {
     var body = document.getElementsByTagName('body')[0];
     var srtBtn = document.createElement('button');
     var txtBtn = document.createTextNode("Sort a number");
-    srtBtn.setAttribute("onclick", "bingoGame.ballSort()");
+    srtBtn.setAttribute("onclick", bingoGame.ballSort);
     srtBtn.appendChild(txtBtn);
     body.appendChild(srtBtn);
 }

@@ -1,0 +1,303 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Helvetica, sans-serif;
+}
+
+.menu__lines {
+	width: 35px;
+	height: 5px;
+	background-color: #ff595a;
+	margin: 4px 0;
+	display: flex;
+	align-self: center;
+}
+
+.menu__button {
+	margin-top: 23px;
+}
+
+.header {
+	display: flex;
+	flex: row;
+	justify-content: space-around;
+	background-color: #f8f8f8;
+	min-height: 80px;
+	margin-bottom: -10px;
+}
+.sign-in {
+	display: flex;
+	align-self: center;
+}
+
+.shop-search {
+	display: flex;
+	flex: row;
+	justify-content: space-between;
+}
+#search {
+	background-color: #bcb8b6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 70px;
+	min-height: 70px;
+	max-width: 70px;
+	max-height: 70px;
+}
+
+#number0 {
+	background-color: #ff595a;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 70px;
+	min-height: 70px;
+	max-width: 70px;
+	max-height: 70px;
+}
+#shopping-cart {
+	display: flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 70px;
+	min-height: 70px;
+	max-width: 70px;
+	max-height: 70px;
+}
+
+.logo {
+	max-width: 150px;
+	max-height: 150px;
+	background-color: #ffffff;
+}
+.header-logo {
+	background-color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.top-image {
+	width: 100%;
+	height: auto;
+	width: auto\9;
+	display: block;
+	margin: 0px;
+}
+.section-top-image {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.white-spot {
+	max-height: 350px;
+	min-height: 150px;
+	display: flex;
+}
+.utensilios {
+	background-color: #f8f8f8;
+}
+.utensilios-logo {
+	padding: 0;
+	height: 130px;
+	border: 0;
+	position: relative;
+	margin-top: -50px;
+}
+.utensilios,
+.ingredientes,
+.fiestas {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.title {
+	font-weight: bold;
+	font-size: 140%;
+}
+
+.line {
+	border-bottom: 3px solid black;
+}
+.line1 {
+	margin-top: 20px;
+}
+.line2 {
+	margin-bottom: 50px;
+}
+.main-images-utensilios,
+.ingredientes,
+.main-images-ingredientes,
+.main-images-fiestas,
+.fiestas,
+.balon-blog {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #f8f8f8;
+}
+
+.main-images-utensilios > img,
+.main-images-ingredientes > img,
+.main-images-fiestas > img {
+	object-fit: cover;
+	object-position: 50% 0;
+	width: 70%;
+	height: 160px;
+	padding: 6px 150px 6px 150px;
+}
+
+.ultimas-entradas-image {
+	object-fit: cover;
+	object-position: 50% 0;
+	width: 60%;
+	height: 60%;
+}
+.ultimas-entradas {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.main-image1-utensilios {
+	margin-top: 0px !important;
+}
+
+.ver-mas-div {
+	background-color: #ff595a;
+	width: 140px;
+	height: 60px;
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.ultimas-entradas-div {
+	background-color: #ff595a;
+	width: 350px;
+	height: 60px;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ver-mas {
+	color: white;
+}
+
+.ingredientes-logo,
+.fiestas-logo,
+.blog-logo {
+	padding: 0;
+	height: 130px;
+	border: 0;
+	position: relative;
+	margin-top: -50px;
+	align-content: center;
+}
+.magdalena-ingredientes,
+.tarta-fiestas,
+.balon-blog {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.autor {
+	background-color: white;
+	width: 60%;
+}
+.balon-blog {
+	background-color: #f8f8f8;
+}
+
+.tarta-de-lima {
+	color: #67625f;
+	font-size: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.ultimas-entradas-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#raul-texto {
+	display: flex;
+	flex-direction: row;
+}
+.info__icons {
+	background-color: #f8f8f8;
+}
+
+.shipping__orders,
+.devolutions__credit {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.info__icons-images {
+	opacity: 0.5;
+}
+
+.shipping,
+.orders,
+.devolutions,
+.credit {
+	margin-top: 50px;
+}
+
+.shipping,
+.devolutions {
+	margin-left: 40px;
+}
+
+.orders,
+.credit {
+	margin-right: 40px;
+}
+
+.info__icons-text {
+	font-size: 12px;
+	color: #67635f;
+	display: flex;
+	justify-content: center;
+}
+
+.info__icons-title {
+	font-size: 15px;
+	color: #67625f;
+	margin: 2px;
+	display: flex;
+	justify-content: center;
+}
+
+.shipping,
+.orders,
+.devolutions,
+.credit {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.devolutions__credit {
+	margin-right: 40px;
+}
+
+.social-network-icons-wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+.social-network-icons {
+	fill: red;
+}
