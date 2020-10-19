@@ -1,10 +1,10 @@
 {
-  "name": "jentest",
+  "name": "game-of-life",
   "version": "1.0.0",
   "description": "",
-  "main": "challenge-igualdad-estricta.js",
+  "main": "gameoflife.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watch"
   },
   "keywords": [],
   "author": "",
