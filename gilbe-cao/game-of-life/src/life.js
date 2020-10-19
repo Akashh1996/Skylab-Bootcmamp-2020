@@ -48,19 +48,24 @@ function Life(playButton, stopButton, clearButton) {
 
 	function splitId(element) {
 		const [, row, column] = element.id.split(rowColumSeparator);
-		return { row, column };
+		return {
+			row,
+			column
+		};
 	}
 
 	function setInitialState() {
 		let currentState = [];
 		const lifeForm = document.forms[0];
-		debugger;
 		if (lifeForm) {
 			for (let i = 0; i < lifeForm.length; i++) {
 				const position = splitId(lifeForm[i]);
 				currentState = [
 					...currentState,
-					{ ...position, value: +lifeForm[i].checked }
+					{
+						...position,
+						value: +lifeForm[i].checked
+					}
 				];
 			}
 
@@ -77,12 +82,13 @@ function Life(playButton, stopButton, clearButton) {
 		for (let rowIndex = 0; rowIndex < initialState.length; rowIndex++) {
 			nextState = [...nextState, [...initialState[rowIndex]]];
 			for (
-				let columnIndex = 0;
-				columnIndex < initialState.length;
-				columnIndex++
+				let columnIndex = 0; columnIndex < initialState.length; columnIndex++
 			) {
 				const isAlife = !!initialState[rowIndex][columnIndex];
-				const position = { row: rowIndex, column: columnIndex };
+				const position = {
+					row: rowIndex,
+					column: columnIndex
+				};
 				const neighbours = countNeighbours(position, initialState);
 				if (isAlife) {
 					nextState[rowIndex][columnIndex] =
@@ -102,21 +108,27 @@ function Life(playButton, stopButton, clearButton) {
 		return nextState;
 	}
 
-	function updateView({ row, column, isChecked }) {
+	function updateView({
+		row,
+		column,
+		isChecked
+	}) {
 		const inputElement = document.getinputElementById(
 			`cell--${row}--${column}`
 		);
 		if (inputElement) element.checked = !!isChecked;
 	}
 
-	function countNeighbours({ row, column }, state) {
+	function countNeighbours({
+		row,
+		column
+	}, state) {
 		const previousRow = state[row - 1] || [];
 		const nextRow = state[row + 1] || [];
 		const previousColumn = column - 1;
 		const nextColumn = column + 1;
 
-		let neighbours =
-			+!!previousRow[previousColumn] +
+		let neighbours = +!!previousRow[previousColumn] +
 			+!!previousRow[column] +
 			+!!previousRow[nextColumn] +
 			+!!state[row][previousColumn] +
@@ -128,7 +140,14 @@ function Life(playButton, stopButton, clearButton) {
 		return neighbours;
 	}
 
-	return { next, play, stop, clear, isPlaying, splitId };
+	return {
+		next,
+		play,
+		stop,
+		clear,
+		isPlaying,
+		splitId
+	};
 }
 
 module.exports = Life;
