@@ -1,6 +1,6 @@
 'use strict';
 
-const { myProtos } = require('./ownArrayMethods');
+const { myProtos } = require('./ArrayMethods');
 
 describe('Test ArrayMethods using __proto__', () => {
 	test('myMap Should return doubles', () => {
