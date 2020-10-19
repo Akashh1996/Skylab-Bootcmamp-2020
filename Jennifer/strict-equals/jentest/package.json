@@ -2,10 +2,9 @@
   "name": "jentest",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "challenge-igualdad-estricta.js",
   "scripts": {
-    "test": "jest --watch",
-    "jtest": "./node_modules/.bin/jest"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
