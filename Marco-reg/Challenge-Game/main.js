@@ -85,7 +85,7 @@ function anim() {
   });
 
   cells.forEach((cell, i) => {
-    if (cell.get("isAlive") == cell.get("willLive")) { return };
+    if (cell.get("isAlive") === cell.get("willLive")) { return };
 
     cell.set("isAlive", cell.get("willLive"));
 
