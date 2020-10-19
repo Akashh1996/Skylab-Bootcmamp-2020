@@ -28,7 +28,7 @@ h1 {
 }
 .navButton {
 	border: none;
-	margin-right: 10px;
+	margin: 0 10px;
 	padding: 5px 10px;
 	color: #6d8896;
 	background-color: #eeeeee;
@@ -48,9 +48,24 @@ h2 {
 }
 .top__heroe__link {
 	display: flex;
-
+	justify-content: center;
+	align-items: center;
 	flex-direction: row;
 	background-color: #5f7d8c;
 	width: 90px;
 	height: 90px;
+}
+a.heroe__name {
+	color: white;
+	text-decoration: none;
+}
+.detail {
+	background-color: white;
+	width: 300px;
+	height: 400px;
+}
+.detail > h2 {
+	display: flex;
+	justify-content: flex-start;
+	margin: 10px;
 }
