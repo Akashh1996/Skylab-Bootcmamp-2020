@@ -28,9 +28,11 @@ td {
 }
 
 .buttonsHeader {
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: row; 
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
 }
