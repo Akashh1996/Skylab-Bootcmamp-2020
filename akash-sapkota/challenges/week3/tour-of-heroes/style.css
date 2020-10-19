@@ -1,0 +1,44 @@
+body{
+    background-color: #EBEBEB;
+    padding: 0;
+    margin: 0;
+    color: #989898;
+    box-sizing: border-box;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    background-color: #FFFFFF;
+    width: 50%;
+    border-radius: 2px solid  #989898;
+    padding: 10px 40px;
+    margin: 80px auto;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    
+}
+
+.heroes{
+    display: flex;
+    justify-content: space-between;
+}
+.heroes>div{
+    text-align: center;
+    border-radius: 2px ;
+}
+
+.heroes_name{
+    display: flex;
+    width: 80px;
+    height: 80px;
+    background-color: #5F7D8C;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}   
+
