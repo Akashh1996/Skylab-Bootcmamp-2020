@@ -1,41 +1,43 @@
 * {
-  outline: none;
-  margin: 0;
-  padding: 0;
+	outline: none;
+	margin: 0;
+	padding: 0;
 }
 body {
-  background-color: black;
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
 }
 
 h1 {
-  font-size: 50px;
-  margin-top: 20px;
-  text-align: center;
-  color: yellow;
+	font-size: 50px;
+	margin-top: 20px;
+	text-align: center;
+	color: yellow;
 }
 
 #buttons {
-  padding: 30px;
-  text-align: center;
+	padding: 30px;
+	text-align: center;
 }
 
 button {
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 5px;
-  border: none;
-  background-color: yellow;
-  font-size: 15px;
-  margin: 0px 40px;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 5px;
+	border: none;
+	background-color: yellow;
+	font-size: 15px;
+	margin: 0px 40px;
 }
 
 button:hover {
-  background-color: yellowgreen;
+	background-color: yellowgreen;
 }
 
 #canvas {
-  text-align: center;
-  width: auto;
-  height: auto;
-  padding: 0 3%;
+	text-align: center;
+	width: auto;
+	height: auto;
+	padding: 0 3%;
 }
