@@ -21,10 +21,20 @@ class Store {
 	}
 
 	getTopHeroes() {
-		return this.getHeroes().slice(1, 5);
+		return this.getHeroes().slice(0, 4);
 	}
 }
 
 const store = new Store();
+
+function topHeroes(dashboard) {
+	const topHeroesDash = document.querySelectorAll('.hero-name');
+	const topHeroes = dashboard.getTopHeroes();
+	topHeroes.forEach((hero, index) => {
+		topHeroesDash[index].innerText = `${hero.name}`;
+	});
+}
+
+topHeroes(store);
 
 module.exports = store;

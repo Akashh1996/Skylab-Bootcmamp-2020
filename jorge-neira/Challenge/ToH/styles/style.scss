@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a:visited,
+a:active,
+a:link {
+	color: black;
+}
+
+body {
+	font-family: 'Teko', sans-serif;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.dashboard {
+	height: 300px;
+	width: 700px;
+	border: 1px solid rgba(189, 177, 177, 0.842);
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	header {
+		width: 100%;
+		height: 100%;
+		.nav {
+			margin: 20px;
+			.tour-of-heroes__title {
+				font-size: x-large;
+			}
+			.dash-btn {
+				outline: none;
+				border: none;
+				border-radius: 10px;
+				padding: 10px 15px;
+				.dash-link-name {
+					text-decoration: none;
+					color: black;
+					padding: 12px;
+					font-size: 18px;
+				}
+			}
+			.dash-btn:hover {
+				background-color: rgb(194, 193, 193);
+			}
+		}
+	}
+	.top-heroes {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.top-heroes__title {
+			font-size: xx-large;
+		}
+		.top-heroes-profile {
+			display: flex;
+			justify-content: space-around;
+			padding: 15px;
+			width: 100%;
+			.hero-profile {
+				height: 100px;
+				width: 130px;
+				background-color: rgb(108, 118, 158);
+				border-radius: 7px;
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				.hero-name {
+					font-size: 25px;
+					color: white;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

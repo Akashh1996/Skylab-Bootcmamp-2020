@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap");
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a:visited,
+a:active,
+a:link {
+  color: black;
+}
+
+body {
+  font-family: 'Teko', sans-serif;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dashboard {
+  height: 300px;
+  width: 700px;
+  border: 1px solid rgba(189, 177, 177, 0.842);
+  -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard header {
+  width: 100%;
+  height: 100%;
+}
+
+.dashboard header .nav {
+  margin: 20px;
+}
+
+.dashboard header .nav .tour-of-heroes__title {
+  font-size: x-large;
+}
+
+.dashboard header .nav .dash-btn {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.dashboard header .nav .dash-btn .dash-link-name {
+  text-decoration: none;
+  color: black;
+  padding: 12px;
+  font-size: 18px;
+}
+
+.dashboard header .nav .dash-btn:hover {
+  background-color: #c2c1c1;
+}
+
+.dashboard .top-heroes {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard .top-heroes .top-heroes__title {
+  font-size: xx-large;
+}
+
+.dashboard .top-heroes .top-heroes-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 15px;
+  width: 100%;
+}
+
+.dashboard .top-heroes .top-heroes-profile .hero-profile {
+  height: 100px;
+  width: 130px;
+  background-color: #6c769e;
+  border-radius: 7px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard .top-heroes .top-heroes-profile .hero-profile .hero-name {
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */
