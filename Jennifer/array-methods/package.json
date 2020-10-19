@@ -1,8 +1,7 @@
 {
-  "name": "jentest",
+  "name": "array-methods",
   "version": "1.0.0",
-  "description": "",
-  "main": "challenge-igualdad-estricta.js",
+  "main": "array.methods.js",
   "scripts": {
     "test": "jest"
   },
@@ -11,5 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^26.5.3"
-  }
+  },
+  "dependencies": {},
+  "description": ""
 }
