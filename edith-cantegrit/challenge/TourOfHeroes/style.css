@@ -1,0 +1,62 @@
+.heroesDash {
+    border-style: none;
+    color: rgb(86, 119, 138);
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.heroesDash:hover {
+    color: rgb(80, 150, 194);
+    background-color: rgb(221, 213, 213);
+}
+
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(170, 165, 165);
+}
+
+.titleSection {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: grey;
+}
+
+.sectionDiv{
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ padding-top: 10px;
+}
+
+.boxHero {
+    height: auto;
+    width: auto;
+    font-family: sans-serif;
+    padding: 20px;
+    margin-inline-end: 15px;
+    background-color: rgb(85, 139, 145);
+    color: white;
+    border-style: none
+}
+
+.boxHero:hover {
+    height: auto;
+    width: auto;
+    font-family: sans-serif;
+    padding: 20px;
+    margin-inline-end: 15px;
+    background-color: whitesmoke;
+    color: rgb(85, 139, 145);
+    border-style: none
+}
+
+.listElement {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40%;
+    margin-bottom: 10px;
+}
