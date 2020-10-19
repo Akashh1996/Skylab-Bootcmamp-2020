@@ -28,8 +28,6 @@ input[type=text], select {
     background-color: #f2f2f2;
     padding: 20px;
   }
-
-
 .column {
     float: left;
     width: 33.33%;
@@ -45,17 +43,31 @@ input[type=text], select {
     color: white;
   }
   
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Closable button inside the image */
-  .closebtn {
-    float: right;
-    color: white;
-    font-size: 35px;
-    cursor: pointer;
-  }
+#grid{
+    display: none;
+}
+#world {
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#mainMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+table {
+    background-color: whitesmoke;
+}
+td.dead {
+    background-color: transparent;
+}
+td.alive {
+    background-color:blue;
+}
+td {
+    border: 1px solid darkgray;
+    width: 10px;
+    height: 10px;
+}
