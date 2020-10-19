@@ -6,7 +6,6 @@
     <title>Game of Life</title>
     <link rel="stylesheet" href="./game-of-life.css">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Courgette&display=swap" rel="stylesheet">
-    <script src="./game-of-life.js"></script>
 </head>
 <body>
     <header class="header-block">
@@ -14,23 +13,24 @@
         <h1 class="game-of-life-title">Game of Life</h1>
     </header>
     <main>
-        <div class="Contenedor">
-            <div class="contenedorCanvas">
-              <canvas id="canvas1" width="1000" height="600">
+      <div id="herramientas">
+        <button class="start-button" id="start">► START</button>
+        <button class="stop-button">◼ STOP</button>
+        <label for="sizeGrid" id="size-label">Size:</label>
+        <div id="etiqueta"></div>
+        <input type="range" name="sizeGrid" id="sizeGrid" min="100" max="1000" step="100">
+    </div>
+        <div class="container">
+          <div class="canvas-container">
+              <canvas id="canvas" width="1000" height="600">
                 Tu navegador no soporta canvas
               </canvas>
-            </div>
-            <div id="herramientas">
-                <button class="start-button">► START</button>
-                <button class="stop-button">◼ STOP</button>
-              Color: <input type="color" id="color" value="#FF0000" onchange="cambiarColor()"/>
-         
-              Tamaño: <input type="range" id="sizeCuadros" value="20" min="5" max="100">
             </div>
           </div>
     </main>
     <footer>
         <div></div>
     </footer>
+    <script src="./game-of-life.js"></script>
 </body>
 </html>

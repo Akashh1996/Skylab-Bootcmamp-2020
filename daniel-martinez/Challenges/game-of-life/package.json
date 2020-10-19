@@ -4,7 +4,8 @@
   "description": "",
   "main": "game-of-life.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watch",
+    "test:coverage": "jest --collect-coverage --watchAll"
   },
   "keywords": [],
   "author": "",

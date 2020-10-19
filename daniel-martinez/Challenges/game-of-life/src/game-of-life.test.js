@@ -51,4 +51,23 @@ describe('game-of-life', ()=>{
             [0,0,1,1,0,0]
         ]) 
     });
+
+    test('toad 2 periods', ()=>{
+        //arrange
+        const initialState = [
+            [0,0,0,0,0,0],
+            [0,0,1,1,1,0],
+            [0,1,1,1,0,0],
+            [0,0,0,0,0,0]
+        ];
+        //act
+        response = game(initialState, 4, 6);
+        //assert
+        expect(response).toEqual([
+            [0,0,0,1,0,0],
+            [0,1,0,0,1,0],
+            [0,1,0,0,1,0],
+            [0,0,1,0,0,0]
+        ]) 
+    });
 });
