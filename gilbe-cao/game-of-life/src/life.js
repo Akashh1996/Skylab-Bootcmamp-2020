@@ -150,4 +150,4 @@ function Life(playButton, stopButton, clearButton) {
 	};
 }
 
-/* module.exports = Life; */
+module.exports = Life;
