@@ -1,28 +1,32 @@
-/*function isHappy(n){
-    let result = n.toString();
-    let saftyCounter = 0;
-    
-    while(result != 1 && saftyCounter<1000){
-        result = happyStep(result)
-        saftyCounter++
-        console.log (result)
-    }
 
+
+function isHappy(n){
+
+    let happyArray = [];
+    const HAPPY_ARRAY_ONE = [1]
     
+    happyArray.push(n)
+    let counter = 100
+    let loopCondition = true
+    while(loopCondition){
+    
+        if (happyArray.includes(n.toString().split('').map(n  => n*n).reduce((a,v)=>a+v))){
+            happyArray.push(n.toString().split('').map(n  => n*n).reduce((a,v)=>a+v));
+            break;
+        }else if(n.toString().split('').map(n  => n*n).reduce((a,v)=>a+v)==1){
+            
+            happyArray = HAPPY_ARRAY_ONE;
+            break;
+        }else{
+            happyArray.push(n.toString().split('').map(n  => n*n).reduce((a,v)=>a+v))
+            n = n.toString().split('').map(n  => n*n).reduce((a,v)=>a+v);
+        }
+    }
+    
+    console.log(happyArray);
+    return happyArray
 }
 
-function happyStep(n) {
-    let arrayNumbers = n.split('');
-    
-    let result = 0;
-    for (let i = 0 ; i<arrayNumbers.length;i++){
-        arrayNumbers[i] = parseInt(arrayNumbers[i]);
-        result += arrayNumbers[i]*arrayNumbers[i]
-        
-    }
-    console.log(result)
-    return result.toString();
 
-}
-console.log(isHappy("11"))
+
 module.exports = isHappy;

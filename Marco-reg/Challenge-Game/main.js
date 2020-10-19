@@ -9,7 +9,7 @@ let cells = [];
 let colors = new Map();
 colors.set("alive", ["#1bbd06", "#b7ff1c"]);
 colors.set("dead", "#011627");
-colors.set("haveBeenAlive", ["#AEE4FA",]);
+colors.set("haveBeenAlive", ["#AEE4FA"]);
 const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 function init() {
@@ -45,7 +45,7 @@ function init() {
 
   
 
-  for (let i = 0; i < 750; i++) {
+  for (let i = 0; i < 650; i++) {
     const cell = cells[randomInt(0, cells.length - 1)];
     cell.set("isAlive", true);
     ctx.fillStyle = colors.get("alive")[randomInt(0, 1)];
