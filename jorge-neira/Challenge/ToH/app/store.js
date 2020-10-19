@@ -1,3 +1,4 @@
+// const
 const _heroes = [
 	{ id: 11, name: 'Dr Nice' },
 	{ id: 12, name: 'Narco' },
@@ -34,6 +35,8 @@ function topHeroes(dashboard) {
 		topHeroesDash[index].innerText = `${hero.name}`;
 	});
 }
+
+function goHeroes() {}
 
 topHeroes(store);
 
