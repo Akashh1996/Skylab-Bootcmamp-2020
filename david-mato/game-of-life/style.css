@@ -1,0 +1,226 @@
+:root {
+  --switchbackground: url(imgs/day-mode.png) no-repeat 0 0;
+  --h1background: linear-gradient(
+    65deg,
+    rgb(230, 162, 110),
+    rgba(224, 115, 31, 0.9)
+  );
+  --cellsbackground: rgb(161, 149, 149);
+}
+
+body {
+  background: linear-gradient(95deg, rgb(219, 126, 126), rgb(206, 98, 98));
+}
+
+.title-wrapper {
+  height: 100px;
+}
+
+.title-container {
+  position: relative;
+  top: 100%;
+  transform: translate(0, -240%);
+  box-shadow: 0 1.5px 5px black;
+  text-align: center;
+}
+
+.h1 {
+  font-size: 75px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background-image: url(imgs/game-of-life.jpg);
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 2px black;
+}
+
+.h1:after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: var(--h1background);
+}
+
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 45px;
+  height: 20px;
+  top: 19.9%;
+  right: 5%;
+  opacity: 0;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: not-allowed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  float: left;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: var(--switchbackground);
+  background-size: 100%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(25px);
+  -ms-transform: translateX(25px);
+  transform: translateX(25px);
+}
+
+.slider.round {
+  border-radius: 24px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+main {
+  height: calc(100vh - 100px);
+}
+
+#grid-container {
+  position: relative;
+  opacity: 0;
+  height: 400px;
+  width: 1150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(161, 149, 149);
+  box-shadow: 0 0 5px black;
+  border-collapse: separate;
+  border-spacing: 1px;
+}
+
+.cell {
+  background-color: rgb(253, 248, 248);
+  border-radius: 20%;
+}
+
+.cell:hover {
+  background: var(--cellsbackground);
+}
+
+#grid-size {
+  position: absolute;
+  transform: rotate(-90deg);
+  right: -95px;
+  top: 350px;
+  width: 250px;
+  cursor: not-allowed;
+  opacity: 0;
+}
+
+#grid-size:focus {
+  outline: none;
+}
+
+.start-button {
+  width: 250px;
+  background: rgba(71, 173, 131, 0.3);
+  top: 36.1%;
+  color: rgba(46, 77, 124, 0.315);
+}
+
+.instructions-button {
+  width: 550px;
+  background: rgba(166, 173, 71, 0.3);
+  top: 58.4%;
+  color: rgba(124, 80, 46, 0.315);
+}
+
+.start-button,
+.instructions-button {
+  height: 80px;
+  position: absolute;
+  text-align: center;
+  font-size: 60px;
+  text-transform: uppercase;
+  line-height: 80px;
+  font-weight: 600;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-text-stroke: 2px black;
+  border-radius: 10%;
+  cursor: pointer;
+  letter-spacing: 4px;
+  border: 1.5px solid rgba(0, 0, 0, 0.411);
+  box-shadow: 0px 0px 3px black;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.start-button:hover {
+  background: rgba(110, 71, 173, 0.3);
+  color: rgba(124, 46, 101, 0.315);
+}
+
+.instructions-button:hover {
+  background: rgba(173, 71, 156, 0.3);
+  color: rgba(124, 46, 91, 0.315);
+}
+
+.start-button:hover,
+.instructions-button:hover {
+  border: 1.5px solid rgba(0, 0, 0, 0.712);
+  box-shadow: 0px 0px 5px black;
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.856);
+}
+
+.start-button:active,
+.instructions-button:active {
+  background: rgba(173, 71, 79, 0.714);
+  color: rgba(124, 46, 46, 0.728);
+}
+
+.instructions-list {
+  position: absolute;
+  font-size: 18px;
+  line-height: 30px;
+  z-index: 1;
+  background: linear-gradient(
+    45deg,
+    rgb(84, 175, 236),
+    rgba(203, 227, 247, 0.639)
+  );
+  background: linear-gradient(45deg, rgb(84, 175, 236), rgb(181, 217, 247));
+  color: rgb(25, 32, 30);
+  -webkit-text-stroke: 0.4px rgba(0, 0, 0, 0.856);
+  text-align: justify;
+  border-radius: 20px;
+  padding: 20px 50px 25px 50px;
+  top: 18.6%;
+  left: 6.65%;
+  max-width: 470px;
+  list-style: decimal;
+  border: 1px solid rgba(0, 0, 0, 0.644);
+  box-shadow: 0 0 3px black;
+  visibility: hidden;
+  opacity: 0;
+}
