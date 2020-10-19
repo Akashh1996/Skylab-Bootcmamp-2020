@@ -1,4 +1,4 @@
-const gameOfLife = require('./game-of-life');
+const gameOfLife = require('./game-of-life-testing');
 
 describe('gameOfLife', () => {
 	test('gameOfLife(matrix) should return "newMatrix"', () => {
