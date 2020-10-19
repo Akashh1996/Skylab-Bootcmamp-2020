@@ -56,13 +56,7 @@ function Life(playButton, stopButton, clearButton) {
 
 	function setInitialState() {
 		let currentState = [];
-		const lifeForm = document.forms[0]; <<
-		<< << < HEAD
-			===
-			=== =
-
-			>>>
-			>>> > bf16f6913211ac1827c5dc4a1e49b0a77935cbfa
+		const lifeForm = document.forms[0];
 		if (lifeForm) {
 			for (let i = 0; i < lifeForm.length; i++) {
 				const position = splitId(lifeForm[i]);
