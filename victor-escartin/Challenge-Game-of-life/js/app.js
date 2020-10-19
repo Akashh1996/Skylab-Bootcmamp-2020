@@ -144,6 +144,7 @@ function newGeneration() {
 }
 
 
+module.exports=newGeneration;
 
 
 
