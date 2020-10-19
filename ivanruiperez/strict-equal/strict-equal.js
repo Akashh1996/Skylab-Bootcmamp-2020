@@ -12,11 +12,3 @@ function strictEquals(a, b) {
 }
 
 module.exports = strictEquals;
-//strictEquals(1, 1); //true
-//strictEquals(NaN ,NaN);//false // Rule Exception
-//strictEquals(0 ,-0);//true // Rule Exception
-//strictEquals(-0 ,0);//true // Rule Exception
-//strictEquals(1 ,'1');//false
-//strictEquals(true ,false);//false
-//strictEquals(false ,false);//true
-//strictEquals('water' ,'oil');//false
