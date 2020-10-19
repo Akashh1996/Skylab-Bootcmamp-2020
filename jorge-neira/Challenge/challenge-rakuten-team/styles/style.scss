@@ -470,6 +470,12 @@ input {
 		}
 	}
 }
+.detail-carru {
+	.detail-movies {
+		display: flex;
+		overflow: hidden;
+	}
+}
 //////////////////////////////////////////////////////////////
 .movie-gallery {
 	background-color: #171717;
@@ -891,6 +897,7 @@ input {
 			}
 			.detail-content__main {
 				width: 75%;
+				margin-left: 20px;
 				.main-content__card {
 					padding: 15px;
 					.content-card__info {
