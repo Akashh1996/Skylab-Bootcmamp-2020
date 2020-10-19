@@ -1,0 +1,85 @@
+body {
+	background-color: rgb(233, 229, 229);
+	font-family:'Game Over';
+    padding: 0;
+    margin: 0;
+}
+
+.header-container {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+	top: 0;
+	left: 0;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #e0dfdf;
+}
+
+.header-size {
+    display: flex;
+    justify-content: space-around;
+    width: 700px;
+}
+
+.container-logo {
+    display: flex;
+}
+
+.container-logo span {
+    margin-left: 5px;
+    letter-spacing: 2px;
+	color: #2b2828;
+	font-family: 'Game Over';
+	font-size: 40px;
+	font-weight: 700;
+}
+
+.container-color input{
+	height: 18px;
+}
+
+.logo {
+    height: 25px;
+}
+
+h1, h2 {
+    display: none;
+}
+
+p {
+	margin: 0px 0px 6px 0px;
+	padding: 0px;
+}
+
+h1:hover {
+	animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+#container-game {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 100px;
+}
+
+canvas {
+	background-color: #fff;
+	border: 3px solid rgb(27, 99, 255);
+	border-radius: 2px;
+}
+
+@font-face {
+    font-family: 'Game Over';
+    src: url('Game-Over.eot');
+    src: url('Game-Over.eot?#iefix') format('embedded-opentype'),
+        url('Game-Over.woff2') format('woff2'),
+        url('Game-Over.woff') format('woff'),
+        url('Game-Over.ttf') format('truetype'),
+        url('Game-Over.svg#Game-Over') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
