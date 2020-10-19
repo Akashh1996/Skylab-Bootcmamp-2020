@@ -53,4 +53,5 @@ const lifeStateList = {
 	]
 };
 
-module.exports = lifeStateList;
+/* module.exports = lifeStateList;
+ */
