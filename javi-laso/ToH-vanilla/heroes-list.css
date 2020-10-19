@@ -1,0 +1,29 @@
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+#heroes-list {
+	list-style-type: none;
+}
+
+.hero-list-element {
+	display: flex;
+	cursor: pointer;
+	text-decoration: none;
+	color: #afafaf;
+	background-color: #eeeeee;
+	width: 400px;
+	margin: 15px;
+	border-radius: 10px;
+}
+
+.hero-list-element div {
+	padding: 20px;
+}
+
+.a-id {
+	background-color: #607d8b;
+	width: 20px;
+	text-align: center;
+}

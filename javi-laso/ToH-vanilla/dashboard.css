@@ -1,0 +1,19 @@
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+#dashboard-list {
+	display: flex;
+	list-style-type: none;
+}
+
+#dashboard-list button {
+	width: 100px;
+	height: 100px;
+	margin: 20px;
+	outline: none;
+	border: none;
+	background-color: #607d8b;
+	cursor: pointer;
+}
