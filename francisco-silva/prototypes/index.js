@@ -1,6 +1,5 @@
 //map
-
-/*function myMap(obj, callback) {
+function myMap(obj, callback) {
     let myObj= {};
     debugger;
     for(let property in obj) {
@@ -16,7 +15,7 @@ function modifier(x){
 let newObj = {1: "skylab", 2: "aaasas", 3: "pizza"}
 
 
-console.log(myMap(newObj, modifier));*/
+console.log(myMap(newObj, modifier));
 
 //filter
 const method = {
