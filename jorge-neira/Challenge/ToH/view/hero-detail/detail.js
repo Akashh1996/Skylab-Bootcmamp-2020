@@ -21,42 +21,14 @@ class DetailComponent {
 		createImage.style.cursor = 'pointer';
 		imgProfileElement.appendChild(createImage);
 	}
+	createProfileHeroPropsBtn(heroProps) {
+		let arr = [];
+		heroProps.forEach((element) => {
+			arr.push(element);
+		});
 
-	
-
+		return arr;
+	}
 }
-
-const heroId = getHeroId(location);
-const hero = store.getHeroById(heroId);
-let detailComponent = new DetailComponent(hero);
-if (hero) {
-	let idElement = document.querySelector('.detail-title');
-	detailComponent.updateHtmlValue(
-		idElement,
-		'innerHTML',
-		detailComponent.hero.name
-	);
-
-	idElement = document.querySelector('.hero-id__value');
-	detailComponent.updateHtmlValue(
-		idElement,
-		'innerHTML',
-		detailComponent.hero.id
-	);
-	idElement = document.querySelector('.hero-slug__value');
-	detailComponent.updateHtmlValue(
-		idElement,
-		'innerHTML',
-		detailComponent.hero.slug
-	);
-
-	nameElement = document.querySelector('.hero-name__input');
-	detailComponent.updateHtmlValue(
-		nameElement,
-		'value',
-		detailComponent.hero.name
-	);
-}
-detailComponent.getProfileImage();
 
 module.exports = DetailComponent;
