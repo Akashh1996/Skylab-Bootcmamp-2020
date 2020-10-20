@@ -4,6 +4,5 @@ function getTopHeroes(store) {
 	topHeroes.forEach((hero, index) => {
 		topHeroesDash[index].innerText = `${hero.name}`;
 	});
-	console.log(topHeroesDash);
 }
 getTopHeroes(store);
