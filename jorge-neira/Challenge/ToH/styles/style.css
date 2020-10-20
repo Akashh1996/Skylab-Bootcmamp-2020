@@ -142,6 +142,12 @@ body {
   font-size: x-large;
 }
 
+.dashboard .hero-list .ul-heroes {
+  margin-bottom: 30px;
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
 .dashboard .hero-list .ul-heroes .list-item {
   padding: 15px 30px 15px 0;
   font-size: 25px;
@@ -167,5 +173,9 @@ body {
 
 .dashboard .hero-list .ul-heroes .list-item:hover {
   background-color: #929292;
+}
+
+.dashboard .hero-list .ul-heroes::-webkit-scrollbar {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

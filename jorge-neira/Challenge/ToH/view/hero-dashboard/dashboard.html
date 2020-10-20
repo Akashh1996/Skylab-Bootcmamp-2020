@@ -30,12 +30,4 @@
 	<script src="../../app/herodata.js"></script>
 	<script src="../../app/store.js"></script>
 	<script src="./dashboard.js"></script>
-	<script>
-		const heroes = store.getTopHeroes();
-		const dashbaordComponent = new DashboardComponent(heroes);
-		if (heroes) {
-			const element = document.querySelector('.top-heroes-profile');
-			dashbaordComponent.updateHtmlHeroList(element);
-		}
-	</script>
 </html>

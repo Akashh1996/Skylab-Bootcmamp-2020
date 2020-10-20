@@ -98,6 +98,10 @@ body {
 			font-size: x-large;
 		}
 		.ul-heroes {
+			margin-bottom: 30px;
+			max-height: 600px;
+			overflow-y: scroll;
+
 			.list-item {
 				padding: 15px 30px 15px 0;
 				font-size: 25px;
@@ -121,6 +125,9 @@ body {
 			.list-item:hover {
 				background-color: rgb(146, 146, 146);
 			}
+		}
+		.ul-heroes::-webkit-scrollbar {
+			display: none;
 		}
 	}
 }

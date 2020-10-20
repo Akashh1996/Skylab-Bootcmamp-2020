@@ -4,7 +4,7 @@ class HeroListComponent {
 	}
 	generateList(element) {
 		const createUlList = document.createElement('ul');
-		createUlList.className = 'ul-heroes'
+		createUlList.className = 'ul-heroes';
 		element.appendChild(createUlList);
 		this.heroes.forEach((hero) => {
 			const listItem = document.createElement('li');
@@ -16,7 +16,7 @@ class HeroListComponent {
 			const nameSpanItem = document.createElement('span');
 			nameSpanItem.className = 'hero-name';
 			const anchorItem = document.createElement('a');
-			anchorItem.className = 'hero-link'
+			anchorItem.className = 'hero-link';
 			anchorItem.setAttribute(
 				'href',
 				`../hero-detail/detail.html?heroId=${hero.id}`
@@ -28,3 +28,8 @@ class HeroListComponent {
 		});
 	}
 }
+
+const heroList = store.getHeroes();
+const heroListComponent = new HeroListComponent(heroList);
+const heroListContainer = document.querySelector('.hero-list');
+heroListComponent.generateList(heroListContainer);

@@ -31,10 +31,4 @@
 	<script src="../../app/herodata.js"></script>
 	<script src="../../app/store.js"></script>
 	<script src="./herolist.js"></script>
-	<script>
-		const heroList = store.getHeroes();
-		const heroListComponent = new HeroListComponent(heroList);
-		const heroListContainer = document.querySelector('.hero-list');
-		heroListComponent.generateList(heroListContainer);
-	</script>
 </html>
