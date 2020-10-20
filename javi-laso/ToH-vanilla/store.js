@@ -407,13 +407,13 @@ let _heroes = [
 class Store {
 
     getHeroes() {
-        return _heroes;
+        return heroes;
     }
 
     getHeroById(heroId) {
-        for (let i = 0; i < _heroes.length; i++) {
-            if (_heroes[i]['id']*1 === heroId*1) {
-                return _heroes[i];
+        for (let i = 0; i < heroes.length; i++) {
+            if (heroes[i]['id']*1 === heroId*1) {
+                return heroes[i];
             }
         }
     }
@@ -482,6 +482,4 @@ class Store {
 }
 
 const store = new Store();
-// const heroesList = document.getElementById('heroes-list');
-// store.printHeroesList(heroesList);
 // module.exports = store;
