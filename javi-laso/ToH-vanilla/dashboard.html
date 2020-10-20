@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
-    <script type="module" src="superheroes.js"></script>
 </head>
 <body>
     <header>
@@ -17,7 +16,9 @@
         <h2>Top Heroes</h2>
     </header>
     <main>
-        <div id="dashboard"></div>
+        <div id="dashboard">
+            <ul id="dashboard-list"></ul>
+        </div>
     </main>
     <script src="api/herodata.js"></script>
     <script src="store.js"></script>

@@ -25805,3 +25805,4 @@ let heroes = [
     }
   ]
   
+module.exports = heroes;

@@ -13,8 +13,14 @@ ul {
 
 .powerstats-container {
 	display: flex;
+	flex-direction: column;
 	justify-content: flex-start;
 	width: 300px;
+}
+
+.powerstats-separator {
+	display: flex;
+	justify-content: flex-start;
 }
 
 .powerstats {
@@ -52,4 +58,13 @@ ul {
 	position: absolute;
 	top: 32px;
 	font-size: 30px;
+}
+
+.appearance-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.characteristic__name {
+	font-size: 20px;
 }

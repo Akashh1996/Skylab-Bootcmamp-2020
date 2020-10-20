@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --watch",
     "test-debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
-     "test-coverage": "jest --collect-coverage --watchAll"
+    "test-coverage": "jest --collect-coverage --watchAll"
   },
   "keywords": [],
   "author": "",

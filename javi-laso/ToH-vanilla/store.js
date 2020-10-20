@@ -406,14 +406,18 @@ let _heroes = [
 
 class Store {
 
+    constructor(herolist) {
+        this.heroes = herolist;
+    }
+
     getHeroes() {
-        return heroes;
+        return this.heroes;
     }
 
     getHeroById(heroId) {
-        for (let i = 0; i < heroes.length; i++) {
-            if (heroes[i]['id']*1 === heroId*1) {
-                return heroes[i];
+        for (let i = 0; i < this.heroes.length; i++) {
+            if (this.heroes[i]['id']*1 === heroId*1) {
+                return this.heroes[i];
             }
         }
     }
@@ -422,64 +426,68 @@ class Store {
         return this.getHeroes().slice(0, 4);
     }
 
-    printHeroesDashboard(dashboard) {
-        let heroList = this.getTopHeroes();
-        let list = document.createElement('ul')
-        list.setAttribute('id', 'dashboard-list');
-        dashboard.appendChild(list);
+    createDashboardElement(parentElement, heroList, index){
+        let listElement = document.createElement('li');
+        parentElement.appendChild(listElement);
+        let heroAnchor = document.createElement('a');
+        listElement.appendChild(heroAnchor);
+        heroAnchor.setAttribute('href', `details.html?id=${heroList[index].id}`)
+        heroAnchor.setAttribute('id', `${heroList[index].slug}`);
+        heroAnchor.innerHTML = `${heroList[index].name}`;
+    }
 
-        for (let i = 0; i < heroList.length; i++) {
-            let listElement = document.createElement('li');
-            list.appendChild(listElement);
-            let heroAnchor = document.createElement('a');
-            listElement.appendChild(heroAnchor);
-            heroAnchor.setAttribute('href', `details.html?id=${heroList[i].id}`)
-            heroAnchor.setAttribute('id', `${heroList[i].slug}`);
-            heroAnchor.innerHTML = `${heroList[i].name}`;
+    printHeroesDashboard(container) {
+        let heroList = this.getTopHeroes();
+        for (let index = 0; index < heroList.length; index++) {
+            this.createDashboardElement(container, heroList, index);
         }
     }
 
-    printHeroesList(heroesListContainer) {
-        let heroList = this.getHeroes();
-        let list = document.createElement('ul')
-        list.setAttribute('id', 'heroes-list');
-        heroesListContainer.appendChild(list);
-
-        for (let i = 0; i < heroList.length; i++) {
+    createListElement(parentElement, heroList, index) {
             let listElement = document.createElement('li');
-            list.appendChild(listElement);
+            parentElement.appendChild(listElement);
             let heroAnchor = document.createElement('a');
             listElement.appendChild(heroAnchor);
-            heroAnchor.setAttribute('id', `${heroList[i].slug}`);
+            heroAnchor.setAttribute('id', `${heroList[index].slug}`);
             heroAnchor.setAttribute('class', 'hero-list-element');
-            heroAnchor.setAttribute('href', `details.html?id=${heroList[i].id}`)
+            heroAnchor.setAttribute('href', `details.html?id=${heroList[index].id}`)
             let anchorId = document.createElement('div');
             let anchorName = document.createElement('div');
             heroAnchor.appendChild(anchorId);
             heroAnchor.appendChild(anchorName);
             anchorId.setAttribute('class', 'a-id');
             anchorName.setAttribute('class', 'a-name');
-            anchorId.innerHTML = `${heroList[i].id}`;
-            anchorName.innerHTML = `${heroList[i].name}`;
+            anchorId.innerHTML = `${heroList[index].id}`;
+            anchorName.innerHTML = `${heroList[index].name}`;
+    }
+
+    printHeroesList(ListContainer) {
+        let heroList = this.getHeroes();
+
+        for (let index = 0; index < heroList.length; index++) {
+            this.createListElement(ListContainer, heroList, index);
         }
     }
 
-    getIdFromUrl(searchUrl) {
-      return searchUrl.split('=')[1];
+    getIdFromLocation(location) {
+        return location.search.split('=')[1];
     }
 
     getDashOffSetfromPercent(circle, percent) {
-      let radius = circle.getAttribute('r');
-      let circumference = Math.PI * radius * 2;
-      percent = percent < 0 ? 0 : percent > 100 ? 100 : percent;
-      let dashOffSet = circumference - percent / 100 * circumference;
-      return dashOffSet;
+        let radius = circle.getAttribute('r');
+        let circumference = Math.PI * radius * 2;
+        percent = percent < 0 ? 0 : percent > 100 ? 100 : percent;
+        let dashOffSet = circumference - percent / 100 * circumference;
+        return dashOffSet;
     }
 
     setstrokeDashoffsetInCircle(circle, percent) {
-      circle.style.strokeDashoffset = this.getDashOffSetfromPercent(circle, percent);
+        circle.style.strokeDashoffset = this.getDashOffSetfromPercent(circle, percent);
+    }
+
+    updateValueHtml(element, property, value) {
+        element[property] = value;
     }
 }
 
-const store = new Store();
-// module.exports = store;
+module.exports = Store;
