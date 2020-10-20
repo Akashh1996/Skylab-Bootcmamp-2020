@@ -1,3 +1,21 @@
+[class*='col-'] {
+	float: left;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+[class*='col-']:last-of-type {
+	padding-right: 0;
+}
+a {
+	text-decoration: none;
+}
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 body {
 	background-color: #ebebeb;
 	height: 100vh;
