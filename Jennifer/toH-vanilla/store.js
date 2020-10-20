@@ -26,6 +26,7 @@ class Store {
 }
 
 const store = new Store();
+module.exports = store;
 /*
 function topheroes(store) {
 	const heroes = store.getTopHeroes();

@@ -7,18 +7,45 @@
     <link rel="stylesheet" href="detailheroe.css">
 </head>
 <body>
-    <section class="detail-heroe">
-        <header class="header-tour-heroes">
-            <h2>Tour of heroes</h2>
-            <button class="dash-btn"><a class="font-btn" href="">DASHBOARD<a></button>
-            <button class="dash-btn"><a class="font-btn" href="">HEROES<a></button>
-        </header>
-        <section class="heroe">
-            <h1 class="name-heroe"></h1>
-            <p class="id-heroe">Id:</p>
-            <p class="id-name">Name:</p>
+    <div class="heroe">
+        <section class="detail-heroe">
+            <header class="header-tour-heroes">
+                <h2>Tour of heroes</h2>
+                <button class="dash-btn"><a class="font-btn" href="">DASHBOARD<a></button>
+                <button class="dash-btn"><a class="font-btn" href="">HEROES<a></button>
+            </header>
+            <h1>Narco details</h1>
+            <div>
+                <span>id:</span>
+                <span id="hero-id__value"></span>
+            </div>
+                 <label
+                     >name:
+                     <input id="hero-name__input" placeholder="name"/>
+                 </label>
+            </div>
         </section>
-    </section>
+    
     <script src="detailheroe.js"></script>
+    <scripts src="./detail.js"></scripts>
+    <script>
+        const heroId = getHeroId(location);
+        const hero = store.getHeroById(12);
+        let detailComponent = new DetailComponent(hero);
+
+        const idElement = document.getElementById('hero-id__Value');
+        detailComponent.updateHtmltValue(
+	        idElement,
+	        'innerHTML',
+	        detailComponent.hero.id
+        );
+
+        const nameElement = document.getElementById('hero-name__input');
+        detailComponent.updateHtmlValue(
+	        nameElement,
+	        'value',
+	        detailComponent.hero.name
+        );
+    </script>
 </body>
 </html>
