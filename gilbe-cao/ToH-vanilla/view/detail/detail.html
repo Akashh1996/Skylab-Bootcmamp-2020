@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tour of Heroes</title>
+		<link rel="stylesheet" href="../../styles.css" />
+	</head>
+	<body>
+		<nav>
+			<a href="../dashboard/dashboard.html">Dashboard</a>
+		</nav>
+		<main>
+			<h2><span id="detail-title"></span> Details</h2>
+			<div>
+				<span>id: </span>
+				<span id="hero-id__value"></span>
+			</div>
+			<div>
+				<label
+					>name:
+					<input id="hero-name__input" placeholder="name" />
+				</label>
+			</div>
+		</main>
+		<script src="../../utils/get-hero-id.js"></script>
+		<script src="../../store.js"></script>
+		<script src="./detail.js"></script>
+		<script>
+			const heroId = getHeroId(location);
+			const hero = store.getHeroById(heroId);
+			let detailComponent = new DetailComponent(hero);
+
+			if (hero) {
+				let idElement = document.getElementById('detail-title');
+				detailComponent.updateHtmlValue(
+					idElement,
+					'innerHTML',
+					detailComponent.hero.name
+				);
+
+				idElement = document.getElementById('hero-id__value');
+				detailComponent.updateHtmlValue(
+					idElement,
+					'innerHTML',
+					detailComponent.hero.id
+				);
+
+				nameElement = document.getElementById('hero-name__input');
+				detailComponent.updateHtmlValue(
+					nameElement,
+					'value',
+					detailComponent.hero.name
+				);
+			}
+		</script>
+	</body>
+</html>
