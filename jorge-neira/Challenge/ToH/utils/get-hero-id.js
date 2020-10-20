@@ -1,9 +1,6 @@
 function getHeroId(location) {
-	let search = location.search;
-	search = search.slice(1, search.length);
-	const andSplitted = search.split('&');
-	const query = andSplitted.find((value) => value.includes('heroId'));
-	const result = query && query.split('=');
-	return result && +result[1];
+	const params = new URLSearchParams(location.search.substring(1));
+	const getId = parseInt(params.get('heroId'));
+	return getId;
 }
 module.exports = getHeroId;

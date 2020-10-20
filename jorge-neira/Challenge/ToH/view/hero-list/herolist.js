@@ -33,3 +33,5 @@ const heroList = store.getHeroes();
 const heroListComponent = new HeroListComponent(heroList);
 const heroListContainer = document.querySelector('.hero-list');
 heroListComponent.generateList(heroListContainer);
+
+module.exports = HeroListComponent;
