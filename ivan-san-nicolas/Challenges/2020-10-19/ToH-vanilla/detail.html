@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of Heroes - Dashboard</title>
+    <link rel="stylesheet" href="detail-style.css">
+</head>
+
+<body>
+    <section class="hero-detail">
+        <header class="hero-detail__header">
+            <h2>Tour of Heroes</h2>
+            <nav class="hero-detail__header__nav">
+                <a class="hero-detail__button" href="dashboard.html">Dashboard</a>
+                <a class="hero-detail__button" href="aside.html">Heroes</a>
+            </nav>
+        </header>
+        <section class="hero-detail__topHeroes">
+            <h2 class="hero-detail-title" id="hero-detail-title">Magneta details!</h2>
+            <section class="hero-detail__info">
+                <div class="hero-detail__info__block">
+                    <span class="hero-detail__info__block__property-name">id</span>
+                    <span class="hero-detail__info__block__property-value" id="hero-detail-id">15</span>
+                </div>
+                <div class="hero-detail__info__block">
+                    <span class="hero-detail__info__block__property-name">name:</span>
+                    <input class="hero-detail__info__block__property-value" id="hero-detail-name"
+                        placeholder="Magneta"></input>
+                </div>
+                <section class="hero-detail__info__block hero-properties" id="hero-detail-powerstats">
+                    <span class="hero-detail__info__block__property-group">Powerstats:</span>
+                    <div class="hero-detail__info__block__group">
+                        <span class="hero-detail__info__block__property-name">int</span>
+                        <span class="hero-detail__info__block__property-value" id="hero-detail-intelligence">38</span>
+                    </div>
+                    <div class="hero-detail__info__block__group">
+                        <span class="hero-detail__info__block__property-name">str</span>
+                        <span class="hero-detail__info__block__property-value" id="hero-detail-strength">100</span>
+                    </div>
+                    <div class="hero-detail__info__block__group">
+                        <span class="hero-detail__info__block__property-name">speed</span>
+                        <span class="hero-detail__info__block__property-value" id="hero-detail-speed">17</span>
+                    </div>
+                    <div class="hero-detail__info__block__group">
+                        <span class="hero-detail__info__block__property-name">dur</span>
+                        <span class="hero-detail__info__block__property-value" id="hero-detail-durability">65</span>
+                    </div>
+                </section>
+            </section>
+        </section>
+        <a class="back-button" href="dashboard.html">Back</a>
+    </section>
+    <script src=" store.js"></script>
+    <script src="detail.js"></script>
+</body>
+
+</html>
