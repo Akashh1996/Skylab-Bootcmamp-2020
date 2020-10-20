@@ -1,0 +1,73 @@
+* {
+	font-family: Helvetica, sans-serif;
+}
+section {
+	border: solid rgba(128, 128, 128, 0.5) 1px;
+	margin: 10px;
+	padding: 10px;
+}
+.title {
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+.dashboard__button {
+	margin-top: 10px;
+}
+
+button {
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: #008cba;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.hero__details {
+	font-size: 30px;
+	margin-top: 20px;
+}
+
+.hero__id {
+	margin-top: 20px;
+}
+
+.details__button {
+	border: none;
+	color: white;
+	padding: 8px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: rgba(128, 128, 128, 0.666);
+	margin-top: 10px;
+}
+
+.heroes__title {
+	font-size: 20px;
+	margin-left: 5px;
+	margin-top: 20px;
+}
+
+.heroes__list {
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+}
+
+#id__my__hero {
+	font-size: 20px;
+}
