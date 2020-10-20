@@ -26,11 +26,21 @@ ul {
 	list-style-type: none;
 }
 
-li {
+.header__button a:hover {
+	color: #0c9de9;
+}
+
+.heroes__list {
+	display: flex;
 	background-color: #eeeeee;
 	width: 150px;
 	margin: 10px;
 	padding: 10px;
 	border-radius: 5px;
 	background: linear-gradient(90deg, #5f7d8c 16%, #eeeeee 11%, #eeeeee 11%);
+	color: black;
+}
+
+a:link {
+	text-decoration: none;
 }

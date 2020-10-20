@@ -17,3 +17,7 @@
 a:link {
 	text-decoration: none;
 }
+
+.header__button a:hover {
+	color: #0c9de9;
+}
