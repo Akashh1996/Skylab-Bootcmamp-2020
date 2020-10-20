@@ -549,10 +549,11 @@ class Store {
 		return this.getHeroes().find(hero => hero.id === heroId);
 	}
 	getTopHeroes() {
-		return this.getHeroes().slice(0, 12);
+		return this.getHeroes().slice(0, 2);
 	}
 }
 
 const store = new Store();
+console.log(store.getTopHeroes());
 
-module.exports = store, heroesList;
+module.exports = store;

@@ -1,9 +1,8 @@
 function asideHeroes(store) {
     const asideHeroes = store.getTopHeroes();
-    debugger;
     const heroesBlock = document.getElementById('aside-heroes-block');
     if (asideHeroes) {
-        for (let index = 0; index < 11; index++) {
+        for (let index = 0; index < 9; index++) {
             let element = document.createElement('a');
             element.innerHTML = `
             <a class="topHeroes-block" href="detail.html?id=${index + 1}">
@@ -15,6 +14,7 @@ function asideHeroes(store) {
             document.getElementById(`aside__heroe-${index}-name`).innerHTML = asideHeroes[index].name;
         }
     }
+    return element.innerHTML;
 }
 
 asideHeroes(store);
