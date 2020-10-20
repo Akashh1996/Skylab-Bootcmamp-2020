@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Bangers', cursive;
+  background-color: black;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button {
+  font-family: 'Bangers', cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gameBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gameBtn .btn {
+  border-radius: 20px 20px 0 0;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  padding: 10px 30px;
+  outline: none;
+  border: none;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.gameBtn .btn:hover {
+  background-color: white;
+  color: black;
+}
+/*# sourceMappingURL=style.css.map */
