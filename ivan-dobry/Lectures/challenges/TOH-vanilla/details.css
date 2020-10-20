@@ -21,3 +21,12 @@ a:link {
 .header__button a:hover {
 	color: #0c9de9;
 }
+
+.section__powerstats {
+	display: flex;
+	flex-direction: column;
+}
+
+.powerstat {
+	margin: 10px;
+}
