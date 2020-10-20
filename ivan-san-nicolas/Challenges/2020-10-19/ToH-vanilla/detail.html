@@ -20,38 +20,14 @@
         <section class="hero-detail__topHeroes">
             <h2 class="hero-detail-title" id="hero-detail-title"></h2>
             <section class="hero-detail__info" id="hero-detail__info">
-                <div class="hero-detail__info__block">
-                    <span class="hero-detail__info__block__property-name">id</span>
-                    <span class="hero-detail__info__block__property-value" id="hero-detail-id"></span>
-                </div>
-                <div class="hero-detail__info__block">
-                    <span class="hero-detail__info__block__property-name">name:</span>
-                    <input class="hero-detail__info__block__property-value" id="hero-detail-name"
-                        placeholder="Name..."></input>
-                </div>
-                <section class="hero-detail__info__block hero-properties" id="hero-detail-powerstats">
-                    <span class="hero-detail__info__block__property-group">Powerstats:</span>
-                    <div class="hero-detail__info__block__group">
-                        <span class="hero-detail__info__block__property-name">int</span>
-                        <span class="hero-detail__info__block__property-value" id="hero-detail-intelligence"></span>
-                    </div>
-                    <div class="hero-detail__info__block__group">
-                        <span class="hero-detail__info__block__property-name">str</span>
-                        <span class="hero-detail__info__block__property-value" id="hero-detail-strength"></span>
-                    </div>
-                    <div class="hero-detail__info__block__group">
-                        <span class="hero-detail__info__block__property-name">speed</span>
-                        <span class="hero-detail__info__block__property-value" id="hero-detail-speed"></span>
-                    </div>
-                    <div class="hero-detail__info__block__group">
-                        <span class="hero-detail__info__block__property-name">dur</span>
-                        <span class="hero-detail__info__block__property-value" id="hero-detail-durability"></span>
-                    </div>
-                </section>
             </section>
         </section>
         <a class="back-button" href="dashboard.html">Back</a>
     </section>
+
+    <script>
+        const heroDetail = document.getElementById('hero-detail__info');
+    </script>
     <script src=" store.js"></script>
     <script src="detail.js"></script>
 </body>
