@@ -1,113 +1,153 @@
-[class*='col-'] {
-	float: left;
-	padding-right: 20px;
-	padding-bottom: 20px;
-}
-[class*='col-']:last-of-type {
-	padding-right: 0;
-}
-a {
-	text-decoration: none;
-}
-*,
-*:after,
-*:before {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
 body {
-	background-color: #ebebeb;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  background-color: #ebebeb;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 h1 {
-	color: #9d9d9d;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	margin-top: 0px;
+  color: #9d9d9d;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 0px;
+}
+h4 {
+  color: white;
+}
+a {
+  text-decoration: none;
 }
 .dashboard {
-	background-color: white;
-	display: flex;
-	flex-direction: column;
-	width: 600px;
-	height: 260px;
-	padding: 10px;
-	margin-bottom: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 260px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .tour__of__heroes {
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  margin: 0 10px;
 }
 .navButton {
-	border: none;
-	margin: 0 10px;
-	padding: 5px 10px;
-	color: #6d8896;
-	background-color: #eeeeee;
+  border: none;
+  margin-right: 10px;
+  padding: 5px 10px;
+  color: #6d8896;
+  background-color: #eeeeee;
 }
 .navButton:hover {
-	color: #059ce8;
+  color: #059ce8;
 }
 h2 {
-	text-align: center;
-	color: #9d9d9d;
+  text-align: center;
+  color: #9d9d9d;
 }
 .top__heroes__buttons {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin: 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 10px;
 }
 .top__heroe__link {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	background-color: #5f7d8c;
-	width: 90px;
-	height: 90px;
-}
-a.heroe__name {
-	color: white;
-	text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #5f7d8c;
+  width: 90px;
+  height: 90px;
 }
 .detail {
-	background-color: white;
-	width: 300px;
-	height: 400px;
+  background-color: white;
+  width: 300px;
+  height: 400px;
+}
+.dashboard > h1 {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px;
 }
 .detail > h2 {
-	display: flex;
-	justify-content: flex-start;
-	margin: 10px;
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px;
 }
-.detail__heore {
-	display: flex;
-	justify-content: flex-start;
-	margin: 15px;
-	font-size: 25px;
+.detail__heroe__large {
+  display: flex;
+  flex-direction: row;
+}
+.detail__heroe,
+.detail__heroe__details {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 15px;
+  margin-top: 15px;
+  font-size: 25px;
 }
 .detail__heroe__push {
-	display: flex;
-	flex-direction: row;
-	margin: 15px;
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
 }
 .detail__heore__param {
-	display: flex;
-	flex: 1;
-	color: #688492;
+  display: flex;
+  flex: 1;
+  color: #688492;
 }
 .detail__heroe__id {
-	display: flex;
-	flex: 5;
+  display: flex;
+  flex: 5;
 }
 .detail__heroe__name {
-	display: flex;
-	flex: 5;
+  display: flex;
+  flex: 5;
+}
+.list__tittle {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 25px;
+  margin: 12px;
+}
+.list__of__heroes {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+  width: 200px;
+  margin: 10px;
+}
+.list__of__heroes__detail {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  width: 200px;
+}
+.list__id__heroe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5f7d8c;
+  flex: 2;
+  color: white;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.list__name__heroe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 100%;
+  flex: 6;
+  background-color: #eeeeee;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.list__name__heroe:hover {
+  background-color: #d0d8dc;
+  color: white;
 }

@@ -1,11 +1,11 @@
 class DetailComponent {
-	constructor(hero) {
-		this.hero = hero;
-	}
+  constructor(hero) {
+    this.hero = hero;
+  }
 
-	updateHtmlValue(element, property, value) {
-		element[property] = value;
-	}
+  updateHtmlValue(element, property, value) {
+    element[property] = value;
+  }
 }
 
 module.exports = DetailComponent;
