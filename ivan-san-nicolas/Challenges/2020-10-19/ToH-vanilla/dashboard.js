@@ -1,6 +1,5 @@
 function topHeroes(store) {
     const topHeroes = store.getTopHeroes();
-    debugger;
     const dashboardHeroes = document.getElementById('dashboard-heroes');
     if (topHeroes) {
         for (let index = 0; index < 4; index++) {
