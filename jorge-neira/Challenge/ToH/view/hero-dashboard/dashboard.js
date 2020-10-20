@@ -1,12 +1,24 @@
 class DashboardComponent {
-	constructor(hero) {
-		this.hero = hero;
+	constructor(heroes) {
+		this.heroes = heroes;
 	}
-	topHeroes(dashboard) {
-		const topHeroesDash = document.querySelectorAll('.hero-name');
-		const topHeroes = dashboard.getTopHeroes();
-		topHeroes.forEach((hero, index) => {
-			topHeroesDash[index].innerText = `${hero.name}`;
+
+	updateHtmlHeroList(element) {
+		element.innerHTML = '';
+		this.heroes.forEach((hero) => {
+			const heroProfile = document.createElement('div');
+			heroProfile.className = 'hero-profile';
+			element.appendChild(heroProfile);
+			const heroName = document.createElement('a');
+			heroName.className = 'hero-name';
+			heroName.setAttribute(
+				'href',
+				`../hero-detail/detail.html?heroId=${hero.id}`
+			);
+			heroName.textContent = `${hero.name}`;
+			heroProfile.appendChild(heroName);
 		});
 	}
 }
+
+module.exports = DashboardComponent;

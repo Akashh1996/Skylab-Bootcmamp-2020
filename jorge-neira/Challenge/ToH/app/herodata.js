@@ -1,4 +1,4 @@
-let heroes = [
+let superHeroes = [
 	{
 		id: 1,
 		name: 'A-Bomb',

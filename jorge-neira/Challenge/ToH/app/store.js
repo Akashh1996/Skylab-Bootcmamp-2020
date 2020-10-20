@@ -26,10 +26,6 @@ class Store {
 	}
 }
 
-function test() {
-	console.log('test');
-}
-
 const store = new Store();
 
 module.exports = store;
