@@ -79,8 +79,17 @@ a.heroe__name {
 	display: flex;
 	flex-direction: row;
 	margin: 15px;
-	width: 50px;
 }
 .detail__heore__param {
+	display: flex;
+	flex: 1;
 	color: #688492;
+}
+.detail__heroe__id {
+	display: flex;
+	flex: 5;
+}
+.detail__heroe__name {
+	display: flex;
+	flex: 5;
 }
