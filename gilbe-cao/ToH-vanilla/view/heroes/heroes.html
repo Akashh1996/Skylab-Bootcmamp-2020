@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Tour of Heroes</title>
 		<link rel="stylesheet" href="../../styles.css" />
-		<link rel="stylesheet" href="./dashboard.css" />
+		<link rel="stylesheet" href="./heroes.css" />
 	</head>
 	<body>
 		<h1>Tour of Heroes</h1>
@@ -13,24 +13,28 @@
 			<a href="../dashboard/dashboard.html">Dashboard</a>
 			<a href="../heroes/heroes.html">Heroes</a>
 		</nav>
-		<h3>Top Heroes</h3>
-		<div class="grid grid-pad" id="top-heroes__list">
-			<a href="">
-				<div class="module hero">
-					<h4></h4>
-				</div>
-			</a>
-		</div>
+		<main>
+			<h2>My Heroes</h2>
+
+			<div>
+				<label
+					>Hero name:
+					<input id="hero-name__input" />
+				</label>
+			</div>
+
+			<ul class="heroes" id="heroes"></ul>
+		</main>
 
 		<script src="../../store.js"></script>
-		<script src="./dashboard.js"></script>
+		<script src="./heroes.js"></script>
 		<script>
 			debugger;
-			const heroes = store.getTopHeroes();
-			const dashbaordComponent = new DashboardComponent(heroes);
+			const heroes = store.getHeroes();
+			const heroesComponent = new HeroesComponent(heroes);
 			if (heroes) {
-				let element = document.getElementById('top-heroes__list');
-				dashbaordComponent.updateHtmlHeroList(element);
+				let element = document.getElementById('heroes');
+				heroesComponent.updateHtmlHeroList(element);
 			}
 		</script>
 	</body>
