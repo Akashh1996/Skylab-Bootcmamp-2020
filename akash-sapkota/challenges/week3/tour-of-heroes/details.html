@@ -9,21 +9,22 @@
 <body>
 
     <nav>
-        <div class="wrapper">
+        <div class="wrapper wrapper-details">
             <div class="nav-title"> <h3>Tour of Heroes</h3> </div>
-            <div class="nav-bar">
+            <div class="nav-bar nav-bar-detail">
                     <div><a href="dashboard.html">Dashboard</a></div>
                     <div><a href="tour-heroes.html">heroes</a></div>
             </div>
             <div class="heroes_box">
-                    <div><div class="heroes_title"><h3>Top Heroes</h3></div>
-                    <div class="heroes">
-                        <div class="heroes_name" ><a href="" id="heroes_name0" ></a > </div>
-                        <div class="heroes_name" ><a href="" id="heroes_name1"></a ></div>
-                        <div class="heroes_name" ><a href="" id="heroes_name2"></a></div>
-                        <div class="heroes_name" ><a href="" id="heroes_name3"></a></div>
+                    <div><div class="heroes_title"><h3 id="heading_name_detail"></h3></div>
+                    <div class="heroes heroes-detail">
+                        <div class="info"><span>id:</span><span id="id_detail" ></span></div>
+                        <div class="info"><span>Name</span><span id="name_detail">Magneta</span></div>
+                    
+
                     </div>
             </div>
+            <button>Back</button>
         </div>
 
     </nav>
@@ -31,6 +32,7 @@
 
     <script src="store.js"></script>
     <script src="dashboard.js"></script>
+    <script src="detail.js"></script>
 
     
 </body>

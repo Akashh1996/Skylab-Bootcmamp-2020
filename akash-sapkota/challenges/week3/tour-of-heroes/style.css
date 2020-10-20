@@ -5,6 +5,10 @@ body{
     color: #989898;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+    color: #46B2EA;
+}
 .wrapper{
     display: flex;
     flex-direction: column;
@@ -20,6 +24,12 @@ body{
     display: flex;
     justify-content: space-between;
     width: 40%;
+
+    
+}
+.nav-bar>div{
+    background-color: #EEEEEE;
+    padding: 10px;
     
 }
 
@@ -41,4 +51,33 @@ body{
     justify-content: center;
     color: white;
 }   
-
+.wrapper-details{
+    width: 30%;
+}
+.nav-bar-detail{
+    width: 60%;
+}
+.heroes-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+button{
+    border: none;
+    margin-top: 10px;
+}
+.heroes_name_id {
+    background-color: #EEEEEE;
+    margin: 5px;
+    padding: 3px;
+}
+.id{
+    width: 25px;
+    height: 20px;
+    background-color: #405061;
+}
