@@ -1,16 +1,16 @@
 {
   "name": "testing-codewars",
   "version": "1.0.0",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "jest": "^26.5.3"
-  },
+  "description": "",
+  "main": "disemvowel-trolls.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+
+  "devDependencies": {
+    "jest": "^26.5.3"
+  }
 }

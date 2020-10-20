@@ -10,4 +10,5 @@ Object.prototype.mapFunction = function(callback) {
     return newObject;
 };
 
-// El método map() crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
+// El método map() crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno 
+// de sus elementos.
