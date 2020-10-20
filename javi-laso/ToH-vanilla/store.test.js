@@ -330,7 +330,7 @@ describe('Store', () => {
         test('should assign dashoffset of aprox 144.136 to a circle with radius 37 and percent 38', () => {
             //arrange          
             //act
-            store.setstrokeDashoffsetInCircle(circle, 38);
+            store.setStrokeDashoffsetInCircle(circle, 38);
             response = +circle.style.strokeDashoffset;
             //assert          
             expect(response).toBeCloseTo(144.136);
@@ -339,18 +339,30 @@ describe('Store', () => {
         test('should assign dashoffset of 0 to a circle if percent >100', () => {
             //arrange          
             //act
-            store.setstrokeDashoffsetInCircle(circle, 110);
+            store.setStrokeDashoffsetInCircle(circle, 110);
             response = +circle.style.strokeDashoffset;
             //assert          
             expect(response).toBe(0);
         });
         
-        test('should assign dashoffset of more than circumference to a circle if percent <0', () => {
+        test('should assign dashoffset of almost equal than circumference to a circle if percent <0', () => {
             //arrange
             const circumference = Math.PI * 2 * circle.getAttribute('r');
             //act
-            store.setstrokeDashoffsetInCircle(circle, -10);
+            store.setStrokeDashoffsetInCircle(circle, -10);
             response = +circle.style.strokeDashoffset;
+            //assert          
+            expect(response).toBeCloseTo(circumference);
+        });
+    });
+
+    describe('setStrokeDasharrayInCircle', () => {
+        test('should assign dasharray of almost equal than circumference of the circle', () => {
+            //arrange
+            const circumference = Math.PI * 2 * circle.getAttribute('r');
+            //act
+            store.setStrokeDasharrayInCircle(circle, 38);
+            response = +circle.style.strokeDasharray;
             //assert          
             expect(response).toBeCloseTo(circumference);
         });
@@ -379,6 +391,14 @@ describe('Store', () => {
             store.updateValueHtml(element, 'max', 80);
             //assert          
             expect(element.max).toBe(80);
+        });
+
+        test('should assign "-" if value is null', () => {
+            //arrange
+            //act
+            store.updateValueHtml(element, 'max', null);
+            //assert          
+            expect(element.max).toBe('-');
         });
     });
 });
