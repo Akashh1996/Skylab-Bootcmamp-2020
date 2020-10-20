@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Heroes</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class = 'th-list-container'>
+        <p class = 'title-list'>Tour of Heroes</p>
+        <div class = 'tab-container'>
+            <button class = 'tab-button' onclick="window.location.href='./dashboard.html'">Dashboard</button>
+            <button class = 'tab-button color-right'>Heroes</button>
+        </div>
+        <div class = 'my-heroes-container'>
+            <p class = 'p-heroes'>My Heroes</p>
+            <div id = 'list-heroes-container'>
+            </div>
+        </div>
+    </div>
+    <script src="store.js"></script>
+    <script src="detail1.js"></script>
+    <!-- <script src="get-hero-id.js"></script> -->
+    <script>
+        setListOfHeroes(store.getHeroes());
+    </script>
+</body>
+</html>

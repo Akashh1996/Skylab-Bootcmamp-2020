@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class = 'details-container'>
+        <h1>Tour of Heroes</h1>
+        <div class = tab-container>
+            <button class = 'tab-button'>Dashboard</button>
+            <button class = 'tab-button'>Heroes</button>
+        </div>
+        <p>Magneta Details!</p>
+        <div class = 'heroe-detail-container' id = 'detail-heroes-container'>
+            <!-- <label for="id-heroe">id:</label>
+            <p id = 'id-heroe'></p>
+            <label for="name">name:</label>
+            <input type="text" id = 'name-hero'> -->
+        </div>
+        <button class = 'back-button'>Back</button>
+    </div> 
+</body>
+    <script src="store.js"></script>
+    <script src="detail1.js"></script>
+
+    <script>
+        superHeroDetail(store.getHeroes());
+    </script>
+</html>
