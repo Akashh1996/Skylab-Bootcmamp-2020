@@ -685,7 +685,7 @@ describe('getHeroById', ()=> {
 })
 
 describe('getTopHeroes', ()=> {
-    test('should call getTopHeroes and return ', () => {
+    test('should call getTopHeroes and return first 4 heroes', () => {
         expect(store.getTopHeroes()).toEqual([
             {
                 "id": 1,
@@ -864,4 +864,33 @@ describe('getTopHeroes', ()=> {
                 }
             }]);
     })
+})
+
+describe('setDashboard', ()=> {
+    test('should call setDashboard and return first 4 heroes', () => {
+        expect(store.setDashboard()).toEqual(
+            `<a href="./view/detail.html?id=1"><li class="demoClass">A-Bomb</li></a><a href="./view/detail.html?id=2"><li class="demoClass">Abe Sapien</li></a><a href="./view/detail.html?id=3"><li class="demoClass">Abin Sur</li></a><a href="./view/detail.html?id=4"><li class="demoClass">Abomination</li></a>`
+        )})
+})
+
+describe('anchorListOfHeroes', ()=> {
+    test('should call anchorListOfHeroes and return first 4 heroes', () => {
+        expect(store.anchorListOfHeroes()).toEqual(
+            `<li class="demoClass"><a href="./view/detail.html?id=1">A-Bomb</a></li><li class="demoClass"><a href="./view/detail.html?id=2">Abe Sapien</a></li><li class="demoClass"><a href="./view/detail.html?id=3">Abin Sur</a></li><li class="demoClass"><a href="./view/detail.html?id=4">Abomination</a></li><li class="demoClass"><a href="./view/detail.html?id=5">Abraxas</a></li><li class="demoClass"><a href="./view/detail.html?id=6">Absorbing Man</a></li><li class="demoClass"><a href="./view/detail.html?id=7">Adam Monroe</a></li><li class="demoClass"><a href="./view/detail.html?id=8">Adam Strange</a></li><li class="demoClass"><a href="./view/detail.html?id=10">Agent Bob</a></li><li class="demoClass"><a href="./view/detail.html?id=11">Agent Zero</a></li><li class="demoClass"><a href="./view/detail.html?id=12">Air-Walker</a></li><li class="demoClass"><a href="./view/detail.html?id=13">Ajax</a></li><li class="demoClass"><a href="./view/detail.html?id=14">Alan Scott</a></li><li class="demoClass"><a href="./view/detail.html?id=15">Alex Mercer</a></li>`
+        )})
+})
+
+describe('heroTitle', ()=> {
+    test('should call heroTitle and return heroName Details', () => {
+        const id = 1;
+        expect(store.heroTitle(id)).toEqual('A-Bomb details')})
+})
+
+describe('updateHtmlValue', ()=> {
+    test("should call updateHtmlValue and change the value of an element's value", () => {
+        const element = {'id': 2};
+        const property = 'id';
+        const value = 3;
+        store.updateHtmlValue(element, property, value);
+        expect(element[property]).toBe(3)})
 })

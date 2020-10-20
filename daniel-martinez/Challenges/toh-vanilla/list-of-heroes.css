@@ -4,6 +4,10 @@
 	margin: 10px;
 }
 
+body {
+	border: 1px solid rgb(41, 41, 41);
+}
+
 .navigation {
 	position: relative;
 	display: flex;
@@ -20,22 +24,35 @@
 }
 
 .nav-button:hover {
-	color: rgb(0, 92, 212);
+	color: rgb(65, 141, 241);
 }
 
-li {
+a > li {
+	background-color: rgb(65, 141, 241);
+	padding: 20px 10px;
+	list-style-type: none;
 	width: 150px;
-	border: 1px solid black;
 	border-radius: 50px;
 	padding: 7px 10px;
 	list-style-type: none;
+	border: 1px solid transparent;
+	margin: 0;
 }
 
-li > a {
+ul > a {
+	width: 150px;
+	display: flex;
+	align-self: center;
 	text-decoration: none;
-	color: black;
+	color: white;
+	border: 1px solid transparent;
 }
 
-li > a:hover {
-	color: rgb(0, 92, 212);
+li:hover {
+	background-color: white;
+	border: 1px solid rgb(65, 141, 241);
+}
+
+a > li:hover {
+	color: rgb(65, 141, 241);
 }
