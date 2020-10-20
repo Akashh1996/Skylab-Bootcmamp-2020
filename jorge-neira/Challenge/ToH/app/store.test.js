@@ -28,10 +28,10 @@ describe('store', () => {
 	describe('getTopHeroes', () => {
 		test('shoud get top 5 heroes of the list', () => {
 			expect(store.getTopHeroes()).toEqual([
+				{ id: 11, name: 'Dr Nice' },
 				{ id: 12, name: 'Narco' },
 				{ id: 13, name: 'Bombasto' },
-				{ id: 14, name: 'Celeritas' },
-				{ id: 15, name: 'Magneta' }
+				{ id: 14, name: 'Celeritas' }
 			]);
 		});
 	});

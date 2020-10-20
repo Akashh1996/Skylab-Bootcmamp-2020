@@ -17,13 +17,17 @@ class Store {
 		return _heroes;
 	}
 
-	getheroById(heroId) {
+	getHeroById(heroId) {
 		return this.getHeroes().find((hero) => hero.id === heroId);
 	}
 
 	getTopHeroes() {
 		return this.getHeroes().slice(0, 4);
 	}
+}
+
+function test() {
+	console.log('test');
 }
 
 const store = new Store();

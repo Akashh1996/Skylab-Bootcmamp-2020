@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./styles/style.css" />
+		<link rel="stylesheet" href="../../styles/style.css" />
 		<title>Tour of Heroes</title>
 	</head>
-	<body onload="topHeroes(store)">
+	<body>
 		<section class="dashboard">
 			<header>
 				<nav class="nav">
@@ -22,15 +22,41 @@
 			<section class="top-heroes">
 				<h2 class="top-heroes__title">Top Heroes</h2>
 				<section class="top-heroes-profile">
-					<div class="hero-profile"><a href="#" class="hero-name"></a></div>
-					<div class="hero-profile"><a href="#" class="hero-name"></a></div>
-					<div class="hero-profile"><a href="#" class="hero-name"></a></div>
-					<div class="hero-profile"><a href="#" class="hero-name"></a></div>
+					<div class="hero-profile">
+						<a
+							href="../hero-detail/detail.html?heroId=11"
+							class="hero-name"
+						></a>
+					</div>
+					<div class="hero-profile">
+						<a
+							href="../hero-detail/detail.html?heroId=12"
+							class="hero-name"
+						></a>
+					</div>
+					<div class="hero-profile">
+						<a
+							href="../hero-detail/detail.html?heroId=13"
+							class="hero-name"
+						></a>
+					</div>
+					<div class="hero-profile">
+						<a
+							href="../hero-detail/detail.html?heroId=14"
+							class="hero-name"
+						></a>
+					</div>
 				</section>
 			</section>
 		</section>
 	</body>
-	<script src="./app/herodata.js"></script>
-	<script src="./app/store.js"></script>
-	<script src="./app/dashboard.js"></script>
+	<script src="../../utils/get-hero-id.js"></script>
+	<script src="../../app/herodata.js"></script>
+	<script src="../../app/store.js"></script>
+	<script src="./dashboard.js"></script>
+	<script>
+		const topHeros = topHeroes(hero);
+
+		let dashboardComponent = new DashboardComponent();
+	</script>
 </html>
