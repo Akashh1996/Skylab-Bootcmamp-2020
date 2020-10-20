@@ -69,3 +69,18 @@ a.heroe__name {
 	justify-content: flex-start;
 	margin: 10px;
 }
+.detail__heore {
+	display: flex;
+	justify-content: flex-start;
+	margin: 15px;
+	font-size: 25px;
+}
+.detail__heroe__push {
+	display: flex;
+	flex-direction: row;
+	margin: 15px;
+	width: 50px;
+}
+.detail__heore__param {
+	color: #688492;
+}

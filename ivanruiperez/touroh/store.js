@@ -1,3 +1,15 @@
+let heroes = [
+	{ id: 11, name: 'Dr Nice' },
+	{ id: 12, name: 'Narco' },
+	{ id: 13, name: 'Bombasto' },
+	{ id: 14, name: 'Celeritas' },
+	{ id: 15, name: 'Magneta' },
+	{ id: 16, name: 'RubberMan' },
+	{ id: 17, name: 'Dynama' },
+	{ id: 18, name: 'Dr IQ' },
+	{ id: 19, name: 'Magma' },
+	{ id: 20, name: 'Tornado' }
+];
 class Store {
 	getHeroes() {
 		return heroes;
@@ -13,16 +25,5 @@ class Store {
 }
 
 const store = new Store();
-
-function getTopHeroes(store) {
-	console.log(store);
-	const topHeroesDash = document.querySelectorAll('.heroe__name');
-	const topHeroes = store.getTopHeroes();
-	topHeroes.forEach((hero, index) => {
-		topHeroesDash[index].innerText = `${hero.name}`;
-	});
-	console.log(topHeroesDash);
-}
-getTopHeroes(store);
 
 //module.exports = store;

@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="style.css" />
 		<title>Tour of heroes</title>
 	</head>
-	<body>
+	<body onload="getTopHeroes(store)">
 		<section class="dashboard">
 			<h1>Tour of Heroes</h1>
 			<nav class="tour__of__heroes">
@@ -29,7 +29,8 @@
 				</div>
 			</section>
 		</section>
-		<script src="herodata.js"></script>
+
+		<script src="dashboard.js"></script>
 		<script src="store.js"></script>
 	</body>
 </html>

@@ -4,7 +4,7 @@ describe('store', () => {
 	test('should create', () => {
 		expect(store).toBeDefined();
 	});
-	/*describe('getHeroes', () => {
+	describe('getHeroes', () => {
 		test('', () => {
 			expect(store.getHeroes()).toEqual();
 		});
@@ -18,5 +18,5 @@ describe('store', () => {
 		test('', () => {
 			expect(store.getTopHeroes()).toEqual();
 		});
-	});*/
+	});
 });
