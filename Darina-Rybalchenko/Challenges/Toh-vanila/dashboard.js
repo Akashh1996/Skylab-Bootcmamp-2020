@@ -12,7 +12,7 @@ function createHeroCard(heroDetail) {
     hero.className = 'hero__card'
     const link = document.createElement('a')
     link.className = 'hero__link'
-    link.href = `detail.html?id=${heroDetail}`
+    link.href = `detail.html?id=${heroDetail.id}`
     link.innerHTML = heroDetail.name
     hero.appendChild(link)
 

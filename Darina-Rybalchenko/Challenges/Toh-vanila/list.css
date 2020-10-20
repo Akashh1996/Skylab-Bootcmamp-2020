@@ -6,7 +6,7 @@ body {
 
 .heroes-list-container {
     width: 20%;
-    height: 550px;
+    height: 400px;
     background-color: white;
     margin: auto;
 }
@@ -24,7 +24,8 @@ nav {
 }
 
 button {
-    font-size: 15px;
+    font-size: 18px;
+    border: none;
 }
 
 .dashboard__link {
@@ -67,11 +68,15 @@ ul li+li {
     margin-top: 8px;
 }
 
-/* 
-.hero__list__element__id {
-    background: rgb(89, 125, 142)
+.hero__link {
+    color: gray;
+    text-decoration: none;
 }
 
-.hero__list__element__name {
+.hero__list__element__id {
+    margin-right: 10px;
+}
+
+/* .hero__list__element__name {
     background: rgb(238, 238, 238)
-} */
+}  */

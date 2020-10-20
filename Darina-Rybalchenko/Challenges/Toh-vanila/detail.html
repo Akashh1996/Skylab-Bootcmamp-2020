@@ -9,29 +9,131 @@
 </head>
 
 <body>
+    <main></main>
+
+    <header class="header">
+        <h1>Tour of Heroes</h1>
+        <nav>
+            <button><a class="dashboard__link" href="dashboard.html">Dashboard</a></button>
+            <button><a class="list__link" href="list.html">Heroes</a></button>
+        </nav>
+    </header>
+
     <section class="detail-container">
+        <div class="detail-id__elements">
+            <h2><span id="detail-title"></span> Details</h2>
+            <div>
+                <span class="hero-id__element">id: </span>
+                <span class="hero-id__num" id="hero-id__value"></span>
+            </div>
+            <div>
+                <label class="hero-id__element">name:
+                    <input id="hero-name__input" placeholder="name" />
+                </label>
+            </div>
 
-        <header class="header">
-            <h1>Tour of Heroes</h1>
-            <nav>
-                <button><a class="dashboard__link" href="dashboard.html">Dashboard</a></button>
-                <button><a class="list__link" href="list.html">Heroes</a></button>
-            </nav>
-        </header>
-
-        <h2><span id="detail-title"></span> Details</h2>
-        <div>
-            <span>id: </span>
-            <span id="hero-id__value"></span>
-        </div>
-        <div>
-            <label>name:
-                <input id="hero-name__input" placeholder="name" />
-            </label>
+            <div class="images"> <img id="photo" src="" alt=""></div>
         </div>
 
+        <div class="appereance-container">
+            <div class="appereance-container__element">
+                <span class="appereance__element">Gender: </span>
+                <span class="apperence__value"></span>
+            </div>
+            <div class="appereance-container__element">
+                <span class="appereance__element">Race: </span>
+                <span class="apperence__value"></span>
+            </div>
+            <div class="appereance-container__element">
+                <span class="appereance__element">Height: </span>
+                <span class="apperence__value"></span>
+            </div>
+            <div class="appereance-container__element">
+                <span class="appereance__element">Weight: </span>
+                <span class="apperence__value"></span>
+            </div>
+            <div class="appereance-container__element">
+                <span class="appereance__element">Eye color: </span>
+                <span class="apperence__value"></span>
+            </div>
+            <div class="appereance-container__element">
+                <span class="appereance__element">Hair color: </span>
+                <span class="apperence__value"></span>
+            </div>
+        </div>
 
+        <div class="biography-container">
+            <div class="biography-container__element">
+                <span class="biography__element">Full Name: </span>
+                <span class="biography__value"></span>
+            </div>
+            <div class="biography-container__element">
+                <span class="biography__element">Alter Egos: </span>
+                <span class="biography__value"></span>
+            </div>
+            <div class="biography-container__element">
+                <span class="biography__element">Aliases: </span>
+                <span class="biography__value"></span>
+            </div>
+            <div class="biography-container__element">
+                <span class="biography__element">Place of birth: </span>
+                <span class="biography__value"></span>
+            </div>
+            <div class="biography-container__element">
+                <span class="biography__element">First appereance: </span>
+                <span class="biography__value"></span>
+            </div>
+            <div class="biography-container__element">
+                <span class="biography__element">Publisher: </span>
+                <span class="biography__value"></span>
+            </div>
+            <div class="biography-container__element">
+                <span class="biography__element">Alignment: </span>
+                <span class="biography__value"></span>
+            </div>
+        </div>
+
+        <div class="work-container">
+            <div class="work-container__element">
+                <span class="work__element">Ocupation: </span>
+                <span class="work__value"></span>
+            </div>
+
+            <div class="work-container__element">
+                <span class="work__element">Base: </span>
+                <span class="work__value"></span>
+            </div>
+
+        </div>
     </section>
+
+    <div class="powerstats-container">
+        <div class="powerstats__element">
+            <span class="powerstats__element">Intelligence: </span>
+            <span class="powerstats__value"></span>
+        </div>
+        <div class="powerstats__element">
+            <span class="powerstats__element">Strength: </span>
+            <span class="powerstats__value"></span>
+        </div>
+        <div class="powerstats__element">
+            <span class="powerstats__element">Speed: </span>
+            <span class="powerstats__value"></span>
+        </div>
+        <div class="powerstats__element">
+            <span class="powerstats__element">Durability: </span>
+            <span class="powerstats__value"></span>
+        </div>
+        <div class="powerstats__element">
+            <span class="powerstats__element">Power: </span>
+            <span class="powerstats__value"></span>
+        </div>
+        <div class="powerstats__element">
+            <span class="powerstats__element">Combat: </span>
+            <span class="powerstats__value"></span>
+        </div>
+    </div>
+
 
     <script src="store.js"></script>
     <script src="detail.js"></script>

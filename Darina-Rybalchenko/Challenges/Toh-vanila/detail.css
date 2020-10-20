@@ -5,10 +5,13 @@ body {
 }
 
 .detail-container {
-    width: 30%;
-    height: 250px;
-    background-color: white;
-    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.detail-id__elements {
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -24,15 +27,40 @@ nav {
 }
 
 button {
-    font-size: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10%;
+}
+
+h2 {
+    color: rgb(54, 54, 54);
+    margin-left: 20px;
 }
 
 .dashboard__link {
-    color: rgb(0, 144, 240);
+    color: rgb(110, 140, 156);
     text-decoration: none;
 }
 
 .list__link {
     color: rgb(110, 140, 156);
     text-decoration: none;
+}
+
+.hero-id__element {
+    color: rgb(110, 140, 156);
+}
+
+.hero-id__num {
+    color: gray
+}
+
+div {
+    margin-left: 20px;
+}
+
+input {
+    border: 1px solid rgb(182, 180, 180);
+    width: 150px;
+    height: 30px;
 }
