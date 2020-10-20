@@ -1,1 +1,3 @@
-const heroes = store.getHeroById(heroId)
+/* 
+const heroId = getHeroId(location); */
+const hero = store.getHeroById(heroId);
