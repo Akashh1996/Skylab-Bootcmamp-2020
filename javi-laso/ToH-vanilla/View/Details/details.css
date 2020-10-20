@@ -43,7 +43,7 @@ ul {
 	stroke-width: 9;
 	stroke: lightgreen;
 	stroke-dashoffset: 233;
-	stroke-dasharray: 233 233;
+	stroke-dasharray: 233;
 	transform: rotate(-90deg);
 	transform-origin: 50% 50%;
 }
@@ -60,11 +60,33 @@ ul {
 	font-size: 30px;
 }
 
-.appearance-container {
+.horizontal-properties {
+	display: flex;
+}
+
+.appearance-container,
+.biography-container,
+.work-container,
+.connections-container {
 	display: flex;
 	flex-direction: column;
 }
 
-.characteristic__name {
+.appearances,
+.biographies,
+.work,
+.connections {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 7px 15px 7px 7px;
+}
+
+.appearances__name,
+.biographies__name,
+.work__name,
+.connections__name {
 	font-size: 20px;
+	margin: 3px 0px;
+	color: lightslategray;
 }

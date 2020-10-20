@@ -25,12 +25,12 @@ class Store {
         parentElement.appendChild(listElement);
         let heroAnchor = document.createElement('a');
         listElement.appendChild(heroAnchor);
-        heroAnchor.setAttribute('href', `details.html?id=${heroList[index].id}`)
+        heroAnchor.setAttribute('href', `../Details/details.html?id=${heroList[index].id}`)
         heroAnchor.setAttribute('id', `${heroList[index].slug}`);
         heroAnchor.innerHTML = `${heroList[index].name}`;
     }
 
-    printHeroesDashboard(container) {
+    updateHTMLHeroesDashboard(container) {
         let heroList = this.getTopHeroes();
         for (let index = 0; index < heroList.length; index++) {
             this.createDashboardElement(container, heroList, index);
@@ -44,7 +44,7 @@ class Store {
             listElement.appendChild(heroAnchor);
             heroAnchor.setAttribute('id', `${heroList[index].slug}`);
             heroAnchor.setAttribute('class', 'hero-list-element');
-            heroAnchor.setAttribute('href', `details.html?id=${heroList[index].id}`)
+            heroAnchor.setAttribute('href', `../Details/details.html?id=${heroList[index].id}`)
             let anchorId = document.createElement('div');
             let anchorName = document.createElement('div');
             heroAnchor.appendChild(anchorId);
@@ -55,7 +55,7 @@ class Store {
             anchorName.innerHTML = `${heroList[index].name}`;
     }
 
-    printHeroesList(ListContainer) {
+    updateHTMLHeroesList(ListContainer) {
         let heroList = this.getHeroes();
 
         for (let index = 0; index < heroList.length; index++) {

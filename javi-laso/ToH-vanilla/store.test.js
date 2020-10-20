@@ -288,11 +288,11 @@ describe('Store', () => {
     });
     
 
-    describe('printHeroesDashboard', () => {
+    describe('updateHTMLHeroesDashboard', () => {
         test('the dashboard should have four childs', () => {
             //arrange          
             //act
-            store.printHeroesDashboard(element);
+            store.updateHTMLHeroesDashboard(element);
             //assert          
             expect(element.childNodes.length).toBe(4);
         });
@@ -316,11 +316,11 @@ describe('Store', () => {
         });
     });
 
-    describe('printHeroesList', () => {
+    describe('updateHTMLHeroesList', () => {
         test('the dashboard should have four childs', () => {
             //arrange          
             //act
-            store.printHeroesList(element);
+            store.updateHTMLHeroesList(element);
             //assert          
             expect(element.childNodes.length).toBe(563);
         });
@@ -335,9 +335,7 @@ describe('Store', () => {
             //assert          
             expect(response).toBeCloseTo(144.136);
         });
-    });
-
-    describe('setstrokeDashoffsetInCircle', () => {
+        
         test('should assign dashoffset of 0 to a circle if percent >100', () => {
             //arrange          
             //act
@@ -346,9 +344,7 @@ describe('Store', () => {
             //assert          
             expect(response).toBe(0);
         });
-    });
-
-    describe('setstrokeDashoffsetInCircle', () => {
+        
         test('should assign dashoffset of more than circumference to a circle if percent <0', () => {
             //arrange
             const circumference = Math.PI * 2 * circle.getAttribute('r');
@@ -375,6 +371,14 @@ describe('Store', () => {
             store.updateValueHtml(element, 'value', 20);
             //assert          
             expect(element.value).toBe(20);
+        });
+
+        test('should change max from an element', () => {
+            //arrange
+            //act
+            store.updateValueHtml(element, 'max', 80);
+            //assert          
+            expect(element.max).toBe(80);
         });
     });
 });
