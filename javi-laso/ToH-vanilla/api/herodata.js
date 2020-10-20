@@ -2037,7 +2037,7 @@ let heroes = [
       },
       "connections": {
         "groupAffiliation": "Order of St. Dumas; formerly Gotham City Police Department; Three Ghosts of Batman",
-        "relatives": "Mitchell Lane (father; deceased), Barbara Lane (mother; deceased), Marion Lane (brother; deceased), Gwendolyn Lane (sister; deceased), Chante Coles (wife; deceased), Henry Mitchell Lane (son; deceased), Jenny Lane (Sister-in-law)"
+        "relatives": "Mitchell Lane (father: deceased); Barbara Lane (mother: deceased); Marion Lane (brother: deceased); Gwendolyn Lane (sister: deceased); Chante Coles (wife: deceased); Henry Mitchell Lane (son: deceased); Jenny Lane (Sister-in-law)"
       },
       "images": {
         "xs": "https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/xs/58-azrael.jpg",

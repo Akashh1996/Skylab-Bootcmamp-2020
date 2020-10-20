@@ -72,15 +72,20 @@ class Store {
         let circumference = Math.PI * radius * 2;
         percent = percent < 0 ? 0 : percent > 100 ? 100 : percent;
         let dashOffSet = circumference - percent / 100 * circumference;
-        return dashOffSet;
+        let dashArray = circumference;
+        return [dashOffSet, dashArray];
     }
 
-    setstrokeDashoffsetInCircle(circle, percent) {
-        circle.style.strokeDashoffset = this.getDashOffSetfromPercent(circle, percent);
+    setStrokeDashoffsetInCircle(circle, percent) {
+        circle.style.strokeDashoffset = this.getDashOffSetfromPercent(circle, percent)[0];
+    }
+
+    setStrokeDasharrayInCircle (circle, percent) {
+        circle.style.strokeDasharray = this.getDashOffSetfromPercent(circle, percent)[1];
     }
 
     updateValueHtml(element, property, value) {
-        element[property] = value;
+        element[property] = !!value ? value : '-';
     }
 }
 

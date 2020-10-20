@@ -1,6 +1,15 @@
+body {
+	font-family: sans-serif;
+	margin: 25px;
+}
+
 ul {
 	margin: 0;
 	padding: 0;
+}
+
+h1 {
+	color: #969696;
 }
 
 .header-buttons {
@@ -8,7 +17,7 @@ ul {
 	background-color: #eeeeee;
 	color: #547485;
 	padding: 10px;
-	margin: 0px 10px;
+	margin-right: 15px;
 }
 
 #dashboard-list {

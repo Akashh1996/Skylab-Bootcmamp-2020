@@ -1,6 +1,15 @@
+body {
+	font-family: sans-serif;
+	margin: 25px;
+}
+
 ul {
 	margin: 0;
 	padding: 0;
+}
+
+h1 {
+	color: #969696;
 }
 
 .header-buttons {
@@ -8,11 +17,15 @@ ul {
 	background-color: #eeeeee;
 	color: #547485;
 	padding: 10px;
-	margin: 0px 10px;
+	margin-right: 15px;
 }
 
 #heroes-list {
 	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: none;
+	height: 79vh;
 }
 
 .hero-list-element {
@@ -21,8 +34,8 @@ ul {
 	text-decoration: none;
 	color: #afafaf;
 	background-color: #eeeeee;
-	width: 400px;
-	margin: 15px;
+	width: 70vw;
+	margin: 7px 15px 7px 0px;
 	border-radius: 10px;
 }
 
@@ -34,4 +47,19 @@ ul {
 	background-color: #607d8b;
 	width: 20px;
 	text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+	#heroes-list {
+		flex-wrap: wrap;
+	}
+	.hero-list-element {
+		width: 45vw;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.hero-list-element {
+		width: 30vw;
+	}
 }
