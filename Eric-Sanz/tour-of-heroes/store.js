@@ -414,27 +414,56 @@ class Store {
         return this.getHeroes().find((hero) => hero.id === heroId);
     };
 
-    getHeroBySlug(heroSlug) {
+    getHeroBy(heroSlug) {
         return this.getHeroes().find((hero) => hero.slug === heroSlug);
     };
 
     getTopHeroes() {
         return this.getHeroes().slice(1,5);
     };
+
+    powerHeroStats(id) {
+      let newArray = Object.entries(store.getHeroById(id).powerstats);
+      console.log(newArray)
+      const infoContainer = document.querySelector('.info-container')
+      const createUl = document.createElement('ul')
+      createUl.getAttribute('class', 'ul-stats-container')
+      infoContainer.appendChild(createUl)
+      for (let index = 0; index < newArray.length; index++ ) {
+        const createli = document.createElement('p')
+        createli.getAttribute('class', 'li-stats-heroes');
+        createli.innerHTML = `<svg>
+        <circle cx="45" cy="45" r="37"></circle>
+        <circle cx="45" cy="45" r="37"></circle>
+        </svg>
+        <p class = 'p-instat'>${newArray[index][1]}</p>
+        <p class = 'p-instat'>${newArray[index][0]}</p>`
+        let circleStat = document.getElementById('circle-stat');
+        createUl.appendChild(createli)
+      }
+    };
+
+    // powerHeroStats() {
+    //   let newArray = Object.entries(store.getHeroById(id).powerstats);
+    //   let powerHeroesContainer = document.getElementById('info-container');
+    //   for (let i = 0; i < newArray.length; i++) {
+
+    //   }
+    // }
+
 };
 
 function heroesSelection(superheroes) {
-    let topheroes = document.getElementById('top-heroes-container');
-    let listHeroes = document.createElement('ul');
-    listHeroes.createAttribute('class');
-    listHeroes.value = 'list-heroes';
+    let topHeroes = document.getElementById('top-heroes');
     for (let i = 0; i < superheroes.length; i++) {
-        topheroes.appendChild(listHeroes);
-        let elementListHeroes = document.createElement('li');
-        listHeroes.appendChild(elementListHeroes);
-        let anchorHeroes = document.createElement('a');
-        elementListHeroes.appendChild(anchorHeroes);
-        anchorHeroes.setAttribute('href', `detail/.html?q=${superheroes.id[i]}`);
+        let divTopHeroes = document.createElement('div');
+        topHeroes.appendChild(divTopHeroes);
+        divTopHeroes.setAttribute('class', 'div-top-hero');
+        let topHeroesAnchor = document.createElement('a');
+        divTopHeroes.appendChild(topHeroesAnchor);
+        topHeroesAnchor.setAttribute('class', 'a-top-hero');
+        topHeroesAnchor.innerHTML = superheroes[i].name;
+        topHeroesAnchor.setAttribute('href', `./detail1.html?HeroId=${superheroes[i].id*1}`);
     };
 };
 

@@ -14,7 +14,7 @@ body {
 .dashboard-container {
 	margin: 10% 25%;
 	background: snow;
-	width: 50%;
+	width: 700px;
 	height: 400px;
 	padding: 20px;
 }
@@ -30,11 +30,11 @@ h1 {
 }
 
 /* DETAIL */
-git status .details-container {
-	margin: 10% 25%;
+.details-container {
+	margin: 10% 10%;
 	background: snow;
-	width: 30%;
-	height: 300px;
+	width: 1000px;
+	height: 600px;
 	padding: 20px;
 }
 
@@ -89,6 +89,12 @@ git status .details-container {
 	text-decoration: none;
 }
 
+#hero-title {
+	color: black;
+	width: 50px;
+	height: 20px;
+}
+
 .title-list {
 	padding-left: 10px;
 	font-size: 17px;
@@ -129,4 +135,70 @@ git status .details-container {
 	font-size: 20px;
 	font-weight: bold;
 	text-decoration: none;
+}
+
+.top-heroes {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 30px;
+	width: 700px;
+	height: 200px;
+}
+
+.div-top-hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 20px;
+	width: 130px;
+	height: 120px;
+	background: rgba(30, 70, 107, 0.7);
+	text-align: center;
+}
+
+.a-top-hero {
+	color: snow;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#hero-detail-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+svg {
+	margin: 20px;
+	display: flex;
+}
+
+.info-container > ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.info-container > ul > p {
+	width: 160px;
+}
+
+.info-container > ul > p > svg {
+	stroke-dashoffset: 0;
+	transition: stroke-dashoffset 1s linear;
+	stroke: rgba(129, 187, 214, 0.7);
+	stroke-width: 10px;
+	height: 90px;
+	width: 90px;
+	stroke: #fca83b;
+}
+
+.info-container > ul > p > p {
+	display: inline-flex;
+}
+
+.p-instat {
+	display: flex;
+	width: 130px;
+	justify-content: center;
 }

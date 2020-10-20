@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="detail.css">
 </head>
 <body>
     <div class = 'dashboard-container'>
@@ -15,29 +16,15 @@
         </div>
         <div class = 'top-heroes-container' id = 'top-heroes-container'>
             <p>Top Heroes</p>
-            <!-- <div class = 'top-heroes'>
-                <button class = 'heroe'>Narco</button>
-                <button class = 'heroe'>Bombasto</button>
-                <button class = 'heroe'>Celeritas</button>
-                <button class = 'heroe'>Magneta</button>
-            </div> -->
+            <div class = 'top-heroes' id = 'top-heroes'>
+            </div>
         </div>
     </div>
+    <script src="dashboard.js"></script>
     <script src="store.js"></script>
     <script src="detail1.js"></script>
 </body>
     <script>
         heroesSelection(store.getTopHeroes());
-    </script>
-    <script>
-        // const heroId = getHeroId(location);
-        // const hero = store.getHeroById(heroId);
-        // const idElement = document.getElementById('id-hero');
-        // const nameElement = document.getElementById('name-hero');
-        // detailComponent.updateHtmlId(idElement,detailComponent.superhero.id);
-        // detailComponent.updateHtmlName(nameElement,detailComponent.superhero.name);
-        // let id = +window.location.search.replace('?id=','')
-        // superheroDetailName(superhero);
-        // superheroDetailId(superhero);
     </script>
 </html>

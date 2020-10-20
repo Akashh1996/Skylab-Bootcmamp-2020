@@ -13,20 +13,24 @@
             <button class = 'tab-button'>Dashboard</button>
             <button class = 'tab-button'>Heroes</button>
         </div>
-        <p>Magneta Details!</p>
+        <p><span id = 'hero-title'></span> Details</p>
         <div class = 'heroe-detail-container' id = 'detail-heroes-container'>
-            <!-- <label for="id-heroe">id:</label>
-            <p id = 'id-heroe'></p>
+            <label for="id-hero">id:</label>
+            <span id = 'id-hero'></span>
             <label for="name">name:</label>
-            <input type="text" id = 'name-hero'> -->
+            <input type="text" id = 'name-hero'>
         </div>
-        <button class = 'back-button'>Back</button>
+       <div class="info-container"></div>
+       <button class = 'back-button'>Back</button>
     </div> 
 </body>
     <script src="store.js"></script>
-    <script src="detail1.js"></script>
 
     <script>
-        superHeroDetail(store.getHeroes());
+        let id = +window.location.search.replace('?HeroId=','')
+        document.getElementById("id-hero").innerHTML = id;
+        document.getElementById("name-hero").value = store.getHeroById(id).name;
+        document.getElementById('hero-title').innerHTML = store.getHeroById(id).name;
+        document.getElementById('info-container').value = store.powerHeroStats(id).powerstats;
     </script>
 </html>
