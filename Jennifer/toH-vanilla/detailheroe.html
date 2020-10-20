@@ -11,12 +11,13 @@
         <section class="detail-heroe">
             <header class="header-tour-heroes">
                 <h2>Tour of heroes</h2>
-                <button class="dash-btn"><a class="font-btn" href="">DASHBOARD<a></button>
-                <button class="dash-btn"><a class="font-btn" href="">HEROES<a></button>
+                <button class="dash-btn"><a class="font-btn" href="dashboard.html">DASHBOARD<a></button>
+                <button class="dash-btn"><a class="font-btn" href="list.html">HEROES<a></button>
             </header>
-            <h1>Narco details</h1>
-            <div>
+            <h1 id="name-hero"></h1>
+            <div class="hero-properties">
                 <span>id:</span>
+                
                 <span id="hero-id__value"></span>
             </div>
                  <label
@@ -25,27 +26,38 @@
                  </label>
             </div>
         </section>
-    
-    <script src="detailheroe.js"></script>
-    <scripts src="./detail.js"></scripts>
-    <script>
-        const heroId = getHeroId(location);
-        const hero = store.getHeroById(12);
-        let detailComponent = new DetailComponent(hero);
 
-        const idElement = document.getElementById('hero-id__Value');
-        detailComponent.updateHtmltValue(
-	        idElement,
-	        'innerHTML',
-	        detailComponent.hero.id
-        );
+        
+        <script src="store.js"></script>
+        <script src="detailheroe.js"></script>
 
-        const nameElement = document.getElementById('hero-name__input');
-        detailComponent.updateHtmlValue(
-	        nameElement,
-	        'value',
-	        detailComponent.hero.name
-        );
-    </script>
+        <script>
+            /*
+            const heroId = getHeroId(location);
+            const hero = store.getHeroById(heroId);
+            let detailComponent = new DetailComponent(hero);
+            if (hero) {
+              let idElement = document.querySelector(".NOMBRE DE TU CLASE");
+              detailComponent.updateHtmlValue(
+                idElement,
+                "innerHTML",
+                detailComponent.hero.name
+              );
+              idElement = document.querySelector(".NOMBRE DE TU CLASE");
+              detailComponent.updateHtmlValue(
+                idElement,
+                "innerHTML",
+                detailComponent.hero.id
+              );
+              nameElement = document.querySelector(".NOMBRE DE TU CLASE");
+              detailComponent.updateHtmlValue(
+                nameElement,
+                "value",
+                detailComponent.hero.name
+              );
+            }*/
+          </script>
 </body>
 </html>
+
+
