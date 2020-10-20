@@ -1,4 +1,4 @@
-const heroesList = store.getHeroes();
+/* const heroesList = store.getHeroes(); */
 
 function heroesInHTML(heroes) {
 	const listOfHeroes = document.getElementById('top-heroes');
@@ -17,4 +17,4 @@ function heroesInHTML(heroes) {
 	}
 }
 
-heroesInHTML(heroesList);
+module.exports = heroesInHTML;

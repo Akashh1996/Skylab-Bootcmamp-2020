@@ -1,14 +1,15 @@
-const heroesList = store.getHeroes();
+/* const getIdFromUrlParams = require('../../hero-location');
+ */
+function heroesInDetail() {
+	let locationId = getIdFromUrlParams(location.search);
+	let hero = store.getHeroById(locationId);
+	let detailTitle = document.getElementById('hero-name');
+	let idElement = document.getElementById('id-number');
+	let nameElement = document.getElementById('hero-name-input');
 
-function heroesInDetail(heroes) {
-	const heroNameTitle = document.getElementById('hero-name');
-	const heroIdTitle = document.getElementById('id-number');
-	const heroNameValue = document.getElementById('hero-name-input');
-	for (i = 0; i < heroes.length; i++) {
-		heroNameTitle.innerHTML = `${heroes[i].name}`;
-		heroIdTitle.innerHTML = `${heroes[i].id}`;
-		heroNameValue.setAttribute('value', `${heroes[i].name}`);
-	}
+	detailTitle.innerHTML = hero.name;
+	idElement.innerHTML = hero.id;
+	nameElement.setAttribute('value', hero.name);
 }
 
-heroesInDetail(heroesList);
+heroesInDetail();
