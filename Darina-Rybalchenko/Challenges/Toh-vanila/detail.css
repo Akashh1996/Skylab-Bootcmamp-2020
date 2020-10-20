@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    background-color: rgb(235, 235, 235);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.detail-container {
+    width: 30%;
+    height: 250px;
+    background-color: white;
+    margin: auto;
+}
+
+h1 {
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: start;
+    color: gray;
+    padding-top: 15px;
+}
+
+nav {
+    margin-left: 20px;
+}
+
+button {
+    font-size: 15px;
+}
+
+.dashboard__link {
+    color: rgb(0, 144, 240);
+    text-decoration: none;
+}
+
+.list__link {
+    color: rgb(110, 140, 156);
+    text-decoration: none;
+}
