@@ -549,7 +549,7 @@ class Store {
 		return this.getHeroes().find(hero => hero.id === heroId);
 	}
 	getTopHeroes() {
-		return this.getHeroes().slice(1, 12);
+		return this.getHeroes().slice(0, 12);
 	}
 }
 

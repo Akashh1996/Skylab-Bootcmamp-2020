@@ -1,4 +1,12 @@
-function heroesInfo(store, id) {
+function getIdfromURL(location) {
+    const locationSearch = location.search;
+    let locationIdAndValue = locationSearch.slice(1, locationSearch.length);
+    let separatedId = locationIdAndValue.split('=');
+    let id = +separatedId[1];
+    return heroesInfo(id, store);
+}
+
+function heroesInfo(id, store) {
     const actualHero = store.getHeroeById(id);
     document.getElementById('hero-detail-id').innerHTML = actualHero.id;
     document.getElementById('hero-detail-title').innerHTML = `${actualHero.name} details!`;
@@ -9,4 +17,4 @@ function heroesInfo(store, id) {
     document.getElementById('hero-detail-durability').innerHTML = actualHero.powerstats.durability;
 }
 
-heroesInfo(store, 2);
+getIdfromURL(location);
