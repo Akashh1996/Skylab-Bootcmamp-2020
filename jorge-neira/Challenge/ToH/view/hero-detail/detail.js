@@ -5,6 +5,14 @@ class DetailComponent {
 	updateHtmlValue(element, property, value) {
 		element[property] = value;
 	}
+	getPowerStats() {
+		console.log(hero.powerstats);
+	}
+	getProfileImage() {
+		console.log(hero.images.md);
+		const imgProfileElement = document.getElementById('hero-profile__img');
+		imgProfileElement.style.backgroundImage = `url(${hero.images.lg})`;
+	}
 }
 
 const heroId = getHeroId(location);
@@ -32,5 +40,6 @@ if (hero) {
 		detailComponent.hero.name
 	);
 }
+detailComponent.getProfileImage();
 
 module.exports = DetailComponent;
