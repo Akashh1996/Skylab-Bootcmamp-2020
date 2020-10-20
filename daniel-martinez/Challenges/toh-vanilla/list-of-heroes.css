@@ -1,0 +1,41 @@
+* {
+	font-family: Tahoma, sans-serif;
+	background-color: rgb(245, 243, 243);
+	margin: 10px;
+}
+
+.navigation {
+	position: relative;
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.nav-button {
+	border-radius: 5px;
+	padding: 7px 10px;
+	background-color: rgb(197, 197, 197);
+	color: rgb(59, 59, 59);
+	text-decoration: none;
+	margin-right: 5px;
+}
+
+.nav-button:hover {
+	color: rgb(0, 92, 212);
+}
+
+li {
+	width: 150px;
+	border: 1px solid black;
+	border-radius: 50px;
+	padding: 7px 10px;
+	list-style-type: none;
+}
+
+li > a {
+	text-decoration: none;
+	color: black;
+}
+
+li > a:hover {
+	color: rgb(0, 92, 212);
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="stylesheet" href="./detail.css">
+</head>
+<body>
+    <h1>Tour of Heroes</h1>
+        <nav class="navigation">
+            <a href="../dashbord.html" class="nav-button">Dashboard</a>
+            <a href="../list-of-heroes.html" class="nav-button">Heroes</a>
+        </nav>
+    </header>
+    <main>
+        <h2 id="hero-title"></h2>
+        <div class="details-container">
+            <div class="id">
+                <label for="id-text" class="id-label">id:</label>
+                <p id="id-text"></p>
+            </div>
+            <div class="name">
+                <label for="name-input" class="id-label">name:</label>
+                <input type="text" class="name-input" id="name-input"></input>
+            </div>
+        </div>
+        <a href="../list-of-heroes.html" class="nav-button">Back</a>
+    </main>
+    <script src="../store.js"></script>
+    <script>
+        let id = +window.location.search.replace('?id=','');
+        document.getElementById('hero-title').innerHTML = store.heroTitle(id);
+        document.getElementById('id-text').innerHTML = id;
+        const nameInput = document.getElementById('name-input');
+        store.updateHtmlValue(nameInput, "value", store.getHeroById(id)["name"]);
+    </script>
+<!--     <script>
+        const detailComponent = new DetailComponent(store, heroId);
+
+        const idElement = document.getElementById('hero-id__value');
+        detailComponent.updateHtmlValue(idElement, "innerHTML", detailComponent.hero.id);
+
+        const nameElement = document.getElementById('hero-id__value');
+        detailComponent.updateHtmlValue(nameElement, "value", detailComponent.hero.name);
+    </script> -->
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./dashbord.css">
+</head>
+<body>
+    <header>
+        <h1>Tour of Heroes</h1>
+        <nav class="navigation">
+            <a href="./dashbord.html" class="nav-button">Dashboard</a>
+            <a href="./list-of-heroes.html" class="nav-button">Heroes</a>
+        </nav>
+    </header>
+    <main>
+        <h2 class="top-heroes-title">Top of Heroes</h2>
+        <div id="top-heroes-container">
+        </div>
+    </main>
+    <script src="./store.js"></script>
+    <script>
+    document.getElementById('top-heroes-container').innerHTML = store.setDashboard();
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Of Heroes</title>
+    <link rel="stylesheet" href="./list-of-heroes.css">
+</head>
+<body>
+    <header>
+        <h1>Tour of Heroes</h1>
+        <nav class="navigation">
+            <a href="./dashbord.html" class="nav-button">Dashboard</a>
+            <a href="./list-of-heroes.html" class="nav-button">Heroes</a>
+        </nav>
+    </header>
+    <main>
+        <h2 class="list-heroes-title">List of Heroes</h2>
+        <div id="list-heroes-container">
+        </div>
+    </main>
+    <script src="./store.js">
+    </script>
+    <script>
+    document.getElementById('list-heroes-container').innerHTML = store.anchorListOfHeroes();
+    </script>
+</body>
+</html>
