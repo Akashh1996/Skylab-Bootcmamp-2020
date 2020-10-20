@@ -8,10 +8,16 @@
   padding: 0;
 }
 
+a,
 a:visited,
 a:active,
 a:link {
   color: black;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 body {
@@ -134,5 +140,32 @@ body {
 
 .dashboard .hero-list .myHero__title {
   font-size: x-large;
+}
+
+.dashboard .hero-list .ul-heroes .list-item {
+  padding: 15px 30px 15px 0;
+  font-size: 25px;
+  background-color: rgba(204, 197, 197, 0.568);
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.dashboard .hero-list .ul-heroes .list-item .hero-id {
+  margin-right: 15px;
+  padding: 15px 20px;
+  border-radius: 6px 0 0 6px;
+  background-color: #929292;
+}
+
+.dashboard .hero-list .ul-heroes .list-item .hero-name {
+  font-weight: 600;
+}
+
+.dashboard .hero-list .ul-heroes .list-item .hero-link {
+  padding: 15px 30px 15px 0;
+}
+
+.dashboard .hero-list .ul-heroes .list-item:hover {
+  background-color: #929292;
 }
 /*# sourceMappingURL=style.css.map */

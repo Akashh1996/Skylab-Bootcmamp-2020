@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
 
-
 *,
 *::after,
 *::before {
@@ -9,10 +8,16 @@
 	padding: 0;
 }
 
+a,
 a:visited,
 a:active,
 a:link {
 	color: black;
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
 }
 
 body {
@@ -91,6 +96,31 @@ body {
 	.hero-list {
 		.myHero__title {
 			font-size: x-large;
+		}
+		.ul-heroes {
+			.list-item {
+				padding: 15px 30px 15px 0;
+				font-size: 25px;
+				background-color: rgba(204, 197, 197, 0.568);
+				border-radius: 6px;
+				margin-bottom: 10px;
+
+				.hero-id {
+					margin-right: 15px;
+					padding: 15px 20px;
+					border-radius: 6px 0 0 6px;
+					background-color: rgb(146, 146, 146);
+				}
+				.hero-name {
+					font-weight: 600;
+				}
+				.hero-link {
+					padding: 15px 30px 15px 0;
+				}
+			}
+			.list-item:hover {
+				background-color: rgb(146, 146, 146);
+			}
 		}
 	}
 }
