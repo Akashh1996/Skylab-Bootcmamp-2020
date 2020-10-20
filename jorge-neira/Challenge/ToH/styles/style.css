@@ -29,7 +29,6 @@ body {
 }
 
 .dashboard {
-  height: 300px;
   width: 700px;
   border: 1px solid rgba(189, 177, 177, 0.842);
   -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -48,6 +47,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 20px;
 }
 
 .dashboard header {
@@ -130,5 +130,9 @@ body {
   font-size: 25px;
   color: white;
   text-decoration: none;
+}
+
+.dashboard .hero-list .myHero__title {
+  font-size: x-large;
 }
 /*# sourceMappingURL=style.css.map */

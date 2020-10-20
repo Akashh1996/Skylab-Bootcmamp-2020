@@ -23,7 +23,6 @@ body {
 }
 
 .dashboard {
-	height: 300px;
 	width: 700px;
 	border: 1px solid rgba(189, 177, 177, 0.842);
 	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -32,6 +31,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 20px;
 	header {
 		width: 100%;
 		height: 100%;
@@ -85,6 +85,11 @@ body {
 					text-decoration: none;
 				}
 			}
+		}
+	}
+	.hero-list {
+		.myHero__title {
+			font-size: x-large;
 		}
 	}
 }
