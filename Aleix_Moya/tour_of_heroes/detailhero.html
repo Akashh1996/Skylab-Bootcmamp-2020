@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detailedhero</title>
+</head>
+<h1>He is <span id="myText"></span></h1>
+<a href="main.html">Go to main</a>
+<script src="superheroes.js"></script>
+
+<body>
+
+    <ul id="Property1"></ul>
+    <ul id="Property2"></ul>
+    <ul id="Property3"></ul>
+    <ul id="Property4"></ul>
+    <li id="Property4.1"></li>
+    <li id="Property4.2"></li>
+    <li id="Property4.3"></li>
+    <li id="Property4.4"></li>
+    <li id="Property4.5"></li>
+    <li id="Property4.6"></li>
+    <ul id="Property5"></ul>
+    <li id="Property5.1"></li>
+    <li id="Property5.2"></li>
+    <li id="Property5.3"></li>
+    <li id="Property5.4"></li>
+    <li id="Property5.5"></li>
+    <li id="Property5.6"></li>
+    <ul id="Property6"></ul>
+    <li id="Property6.1"></li>
+    <li id="Property6.2"></li>
+    <li id="Property6.3"></li>
+    <li id="Property6.4"></li>
+    <li id="Property6.5"></li>
+    <li id="Property6.6"></li>
+    <li id="Property6.7"></li>
+    <ul id="Property7"></ul>
+    <li id="Property7.1"></li>
+    <li id="Property7.2"></li>
+    <ul id="Property8"></ul>
+    <li id="Property8.1"></li>
+    <li id="Property8.2"></li>
+    <script>
+        var text = window.location.hash.substring(1)
+        index = parseInt(text);
+        seletedHeroInfoDisplay(index);
+        var x = superHeroes[index];
+        document.getElementById("SuperMario").innerHTML = x;
+    </script>
+</body>
+
+</html>
