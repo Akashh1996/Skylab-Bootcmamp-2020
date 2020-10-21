@@ -1,77 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Tour of heroes</title>
-  </head>
-  <body>
-    <section class="detail">
-      <h2>Tour of Heroes</h2>
-      <div class="tour__of__heroes">
-        <a href="./dashboard.html"
-          ><button class="navButton">Dashboard</button></a
-        ><a href="./list.html"> <button class="navButton">Heroes</button></a>
-      </div>
-      <div class="detail__heroe__large">
-        <span class="detail__heroe"></span>
-        <span class="detail__heroe__details">details!</span>
-      </div>
-      <div class="detail__heroe__push">
-        <div class="detail__heore__param">id:</div>
-        <div class="detail__heroe__id"></div>
-      </div>
-      <div class="detail__heroe__push">
-        <div class="detail__heore__param">name:</div>
-        <div class="detail__heroe__name">
-          <input type="text" class="detail__heroe__input" />
-        </div>
-      </div>
-      <div class="detail__heroes__buttons">
-        <input type="button" class="navButton" value="powerstats" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Tour of heroes</title>
+	</head>
+	<body>
+		<section class="detail">
+			<h2>Tour of Heroes</h2>
+			<div class="tour__of__heroes">
+				<a href="./dashboard.html"
+					><button class="navButton">Dashboard</button></a
+				><a href="./list.html"> <button class="navButton">Heroes</button></a>
+			</div>
+			<div class="detail__heroe__large">
+				<span class="detail__heroe"></span>
+				<span class="detail__heroe__details">details!</span>
+			</div>
+			<div class="detail__heroe__push">
+				<div class="detail__heore__param">id:</div>
+				<div class="detail__heroe__id"></div>
+			</div>
+			<div class="detail__heroe__push">
+				<div class="detail__heore__param">name:</div>
+				<div class="detail__heroe__name">
+					<input type="text" class="detail__heroe__input" />
+				</div>
+			</div>
+			<div class="detail__heroes__buttons">
+				<input type="button" class="navButton" value="powerstats" />
 
-        <input type="button" class="navButton" value="appearance" />
+				<input type="button" class="navButton" value="appearance" />
 
-        <input type="button" class="navButton" value="biography" />
-      </div>
-    </section>
+				<input type="button" class="navButton" value="biography" />
+			</div>
+		</section>
 
-    <script src="store.js"></script>
-    <script src="get_hero_id.js"></script>
-    <script src="detail.js"></script>
-    <script>
-      const heroId = getHeroId(location);
-      const hero = store.getHeroById(heroId);
-      let detailComponent = new DetailComponent(hero);
+		<script src="store.js"></script>
+		<script src="get_hero_id.js"></script>
+		<script src="detail.js"></script>
+		<script>
+			store.loadHeroes().then(() => {
+				const heroId = getHeroId(location);
+				const hero = store.getHeroById(heroId);
+				let detailComponent = new DetailComponent(hero);
 
-      function logData(data) {
-        console.log(data);
-      }
-      detailComponent.loadHeroes("./api/superHeroData.json", "json", logData);
+				function logData(data) {
+					console.log(data);
+				}
+				detailComponent.loadHeroes('./api/superHeroData.json', 'json', logData);
 
-      if (hero) {
-        let idElement = document.querySelector(".detail__heroe");
-        detailComponent.updateHtmlValue(
-          idElement,
-          "innerHTML",
-          detailComponent.hero.name
-        );
+				if (hero) {
+					let idElement = document.querySelector('.detail__heroe');
+					detailComponent.updateHtmlValue(
+						idElement,
+						'innerHTML',
+						detailComponent.hero.name
+					);
 
-        idElement = document.querySelector(".detail__heroe__id");
-        detailComponent.updateHtmlValue(
-          idElement,
-          "innerHTML",
-          detailComponent.hero.id
-        );
+					idElement = document.querySelector('.detail__heroe__id');
+					detailComponent.updateHtmlValue(
+						idElement,
+						'innerHTML',
+						detailComponent.hero.id
+					);
 
-        nameElement = document.querySelector(".detail__heroe__input");
-        detailComponent.updateHtmlValue(
-          nameElement,
-          "value",
-          detailComponent.hero.name
-        );
-      }
-    </script>
-  </body>
+					nameElement = document.querySelector('.detail__heroe__input');
+					detailComponent.updateHtmlValue(
+						nameElement,
+						'value',
+						detailComponent.hero.name
+					);
+				}
+			});
+		</script>
+	</body>
 </html>

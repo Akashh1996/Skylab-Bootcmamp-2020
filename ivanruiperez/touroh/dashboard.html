@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Tour of heroes</title>
-  </head>
-  <body>
-    <section class="dashboard">
-      <h1>Tour of Heroes</h1>
-      <nav class="tour__of__heroes">
-        <button class="navButton">Dashboard</button>
-        <a href="./list.html">
-          <button class="navButton">Heroes</button>
-        </a>
-      </nav>
-      <h2>Top Heroes</h2>
-      <section class="top__heroes__buttons" id="top-heroes__list"></section>
-    </section>
-    <script src="store.js"></script>
-    <script src="dashboard.js"></script>
-    <script>
-      const heroes = store.getTopHeroes();
-      const dashbaordComponent = new DashboardComponent(heroes);
-      if (heroes) {
-        let element = document.getElementById("top-heroes__list");
-        dashbaordComponent.updateHtmlHeroList(element);
-      }
-    </script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Tour of heroes</title>
+	</head>
+	<body>
+		<section class="dashboard">
+			<h1>Tour of Heroes</h1>
+			<nav class="tour__of__heroes">
+				<button class="navButton">Dashboard</button>
+				<a href="./list.html">
+					<button class="navButton">Heroes</button>
+				</a>
+			</nav>
+			<h2>Top Heroes</h2>
+			<section class="top__heroes__buttons" id="top-heroes__list"></section>
+		</section>
+		<script src="store.js"></script>
+		<script src="dashboard.js"></script>
+		<script>
+			store.loadHeroes().then(() => {
+				const heroes = store.getTopHeroes();
+				const dashbaordComponent = new DashboardComponent(heroes);
+				if (heroes) {
+					let element = document.getElementById('top-heroes__list');
+					dashbaordComponent.updateHtmlHeroList(element);
+				}
+			});
+		</script>
+	</body>
 </html>

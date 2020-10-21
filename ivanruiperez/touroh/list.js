@@ -1,14 +1,14 @@
 class ListComponent {
-  constructor(heroes) {
-    this.heroes = heroes;
-  }
+	constructor(heroes) {
+		this.heroes = heroes;
+	}
 
-  updateHtmlHeroList(element_list) {
-    element_list.innerHTML = "";
-    this.heroes.forEach((hero) => {
-      element_list.innerHTML =
-        element_list.innerHTML +
-        `
+	updateHtmlHeroList(element_list) {
+		element_list.innerHTML = '';
+		this.heroes.forEach((hero) => {
+			element_list.innerHTML =
+				element_list.innerHTML +
+				`
   <div class="list__of__heroes">
         <div class="list__of__heroes__detail">
           <span class="list__id__heroe">${hero.id}</span>
@@ -19,6 +19,6 @@ class ListComponent {
       </div>
   
   `;
-    });
-  }
+		});
+	}
 }

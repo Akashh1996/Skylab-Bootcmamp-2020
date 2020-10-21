@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Tour of heroes</title>
-  </head>
-  <body>
-    <section class="detail">
-      <h2>Tour of Heroes</h2>
-      <div class="tour__of__heroes">
-        <a href="./dashboard.html">
-          <button class="navButton">Dashboard</button>
-        </a>
-        <button class="navButton">Heroes</button>
-      </div>
-      <span class="list__tittle">My heroes</span>
-      <div class="list__of__heroes">
-        <div class="list__created"></div>
-      </div>
-    </section>
-    <script src="store.js"></script>
-    <script src="get_hero_id.js"></script>
-    <script src="list.js"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Tour of heroes</title>
+	</head>
+	<body>
+		<section class="detail">
+			<h2>Tour of Heroes</h2>
+			<div class="tour__of__heroes">
+				<a href="./dashboard.html">
+					<button class="navButton">Dashboard</button>
+				</a>
+				<button class="navButton">Heroes</button>
+			</div>
+			<span class="list__tittle">My heroes</span>
+			<div class="list__of__heroes">
+				<div class="list__created"></div>
+			</div>
+		</section>
+		<script src="store.js"></script>
+		<script src="get_hero_id.js"></script>
+		<script src="list.js"></script>
 
-    <script>
-      const heroes = store.getHeroes();
-      const listComponent = new ListComponent(heroes);
+		<script>
+			store.loadHeroes().then(() => {
+				const heroes = store.getHeroes();
+				const listComponent = new ListComponent(heroes);
 
-      if (heroes) {
-        let element_list = document.querySelector(".list__created");
-        listComponent.updateHtmlHeroList(element_list);
-      }
-    </script>
-  </body>
+				if (heroes) {
+					let element_list = document.querySelector('.list__created');
+					listComponent.updateHtmlHeroList(element_list);
+				}
+			});
+		</script>
+	</body>
 </html>
