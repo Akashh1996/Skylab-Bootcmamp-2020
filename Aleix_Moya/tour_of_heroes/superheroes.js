@@ -1,3 +1,4 @@
+
 var superHeroes = [
     {
       "id": 1,
@@ -11,6 +12,7 @@ var superHeroes = [
         "power": 24,
         "combat": 64
       },
+
       "appearance": {
         "gender": "Male",
         "race": "Human",
