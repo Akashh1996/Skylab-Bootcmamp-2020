@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tour of Heroes</title>
+		
+		<link rel="stylesheet" href="./dashboard.css" />
+	</head>
+	<body>
+		<h1>Tour of Heroes</h1>
+		<nav>
+			<a href="../dashboard/dashboard.html">Dashboard</a>
+			<a href="../heroes/heroes.html">Heroes</a>
+		</nav>
+		<main>
+			<h3>Top Heroes</h3>
+			<div class="grid grid-pad" id="top-heroes__list"></div>
+		</main>
+
+		<script src="../../store.js"></script>
+		<script src="./dashboard.js"></script>
+		<script>
+			const heroes = store.getTopHeroes();
+			const dashbaordComponent = new DashboardComponent(heroes);
+			if (heroes) {
+				let element = document.getElementById('top-heroes__list');
+				dashbaordComponent.updateHtmlHeroList(element);
+			}
+		</script>
+	</body>
+</html>

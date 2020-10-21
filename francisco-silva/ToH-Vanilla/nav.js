@@ -7,7 +7,7 @@ function topTwelve(store){
 
 topTwelve(store);
   
-function myFunction() {
+function displayHero() {
     const heroesList=store.getHeroes(); 
     for(i in heroesList) {
     let x = document.getElementById(`list_top_${i}`).textContent;
