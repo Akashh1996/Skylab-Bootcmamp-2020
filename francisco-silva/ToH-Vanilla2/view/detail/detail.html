@@ -19,10 +19,7 @@
 				<span id="hero-id__value"></span>
 			</div>
 			<div>
-				<label
-					>name:
-					<input id="hero-name__input" placeholder="name" />
-				</label>
+				<label>name:<p id="hero-name__input"></p></label>
 			</div>
 		</main>
 		<script src="../../utils/get-hero-id.js"></script>
@@ -32,6 +29,24 @@
 			const heroId = getHeroId(location);
 			const hero = store.getHeroById(heroId);
 			let detailComponent = new DetailComponent(hero);
+
+			function logData(data) {
+				console.log(data);
+			}
+			
+			function loadHeroes(url, type, callback) {
+				let xhr = new XMLHttpRequest();
+				xhr.open("GET", url);
+				xhr.responseType = type;
+
+				xhr.onload = function() {
+					callback(xhr.response);
+				};
+
+				xhr.send();
+			}
+
+			store.loadHeroes("../../api/super-hero.json", "json", store.logData);
 
 			if (hero) {
 				let idElement = document.getElementById('detail-title');
@@ -51,7 +66,7 @@
 				nameElement = document.getElementById('hero-name__input');
 				detailComponent.updateHtmlValue(
 					nameElement,
-					'value',
+					'innerHTML',
 					detailComponent.hero.name
 				);
 			}
