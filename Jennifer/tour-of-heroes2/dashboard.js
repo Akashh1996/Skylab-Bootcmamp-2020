@@ -13,5 +13,8 @@ function topheroes(store) {
 	}
 }
 
-topheroes(store);
+store.loadHeroes().then(() => {
+	topheroes(store);
+});
+
 module.exports = topheroes;

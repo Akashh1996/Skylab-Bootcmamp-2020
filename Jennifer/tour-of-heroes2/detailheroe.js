@@ -35,4 +35,6 @@ function showProperties(heroProfile) {
 	}
 }
 
-detailComponent(store);
+store.loadHeroes().then(() => {
+	detailComponent(store);
+});

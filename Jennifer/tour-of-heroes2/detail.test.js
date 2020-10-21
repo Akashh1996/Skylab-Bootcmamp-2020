@@ -1,6 +1,6 @@
 const DetailComponent = require('./detailheroe')
 
-describe('details',()=> {
+xdescribe('details',()=> {
     let detailComponent;
 
     test('should create', () =>{

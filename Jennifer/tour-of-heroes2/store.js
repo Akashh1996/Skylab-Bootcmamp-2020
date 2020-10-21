@@ -1,4 +1,4 @@
-let superHeroes = [
+/*let superHeroes = [
 	{
 		id: 1,
 		name: 'A-Bomb',
@@ -196,10 +196,25 @@ let superHeroes = [
 		}
 	}
 ];
+*/
+let _heroes;
 
 class Store {
+	loadHeroes() {
+		return fetch('./api/superHeroData.json')
+			.then((response) => {
+				debugger;
+				return response.json();
+			})
+			.then((heroes) => {
+				_heroes = heroes;
+				console.log(_heroes);
+				return _heroes;
+			});
+	}
+
 	getHeroes() {
-		return superHeroes;
+		return _heroes;
 	}
 
 	getheroById(heroId) {
@@ -207,9 +222,10 @@ class Store {
 	}
 
 	getTopHeroes() {
-		return this.getHeroes().slice(0, 5);
+		return this.getHeroes().slice(0, 4);
 	}
 }
 
 const store = new Store();
-module.export = store;
+
+module.exports = store;

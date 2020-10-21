@@ -1,6 +1,6 @@
 const topheroes = require('./dashboard');
 
-describe('dashboard', () => {
+xdescribe('dashboard', () => {
 	test('should call topheroes and print the names', () => {
 		const element = {};
 		const result = `

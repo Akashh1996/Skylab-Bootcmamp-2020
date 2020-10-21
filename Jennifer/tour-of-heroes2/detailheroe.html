@@ -38,28 +38,5 @@
 
 		<script src="store.js"></script>
 		<script src="detailheroe.js"></script>
-
-		<script>
-			debugger;
-			function loadHeroes(url, type, callback) {
-				let xhr = new XMLHttpRequest();
-				xhr.open('GET', url);
-				xhr.responseType = type;
-
-				xhr.onload = function () {
-					callback(xhr.response);
-				};
-
-				xhr.send();
-			}
-
-			function logData(data) {
-				console.log(data);
-			}
-
-			loadHeroes('./api/superHeroData.json', 'json', logData);
-
-			module.exports = DetailComponent;
-		</script>
 	</body>
 </html>

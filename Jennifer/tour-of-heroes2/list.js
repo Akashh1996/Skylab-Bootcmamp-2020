@@ -10,4 +10,6 @@ function listHeroes(store) {
 	}
 }
 
-listHeroes(store);
+store.loadHeroes().then(() => {
+	listHeroes(store);
+});
