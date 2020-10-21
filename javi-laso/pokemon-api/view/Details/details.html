@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="details.css">
+</head>
+<body>
+    <main>
+        <section class="id-container">
+            <label for="id-input" id="id-label">Id:</label>
+            <span id="id-input"></span>
+        </section>
+        <section class="name-container">
+            <label for="name-input" id="name-label">Name:</label>
+            <span id="name-input" class="capitalize" type="text" placeholder="" value=""></span>
+        </section>
+        <section class="weight-container">
+            <label for="weight-input" id="weight-label">Weight:</label>
+            <span id="weight-input" type="text" placeholder="" value=""></span>
+        </section>
+        <section class="abilities-container">
+            <label for="ability-input" id="ability-label">Abilities:</label>
+            <div class="abilities">
+                <div class="ability-name"></div>
+            </div>
+        </section>
+    </main>
+    <script src="../../store.js"></script>
+    <script>
+        const idInput = document.getElementById('id-input');
+        const nameInput = document.getElementById('name-input');
+        const weight = document.getElementById('weight-input');
+
+        const url = window.location.search;
+        const name = store.getNamefromSearch(url);
+
+        const pok = store.loadPokemonByName(name).then(() => {
+            let pokemon = store.getPokemon();
+            idInput.innerHTML = pokemon.id;
+            weight.innerHTML = pokemon.weight;
+            nameInput.innerHTML = name;
+        });
+    </script>
+</body>
+</html>

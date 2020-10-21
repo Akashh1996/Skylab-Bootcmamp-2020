@@ -1,0 +1,23 @@
+#pokemon-list {
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: none;
+	height: 79vh;
+}
+
+.pokemon-list-element {
+	display: flex;
+	cursor: pointer;
+	text-decoration: none;
+	color: #afafaf;
+	background-color: #eeeeee;
+	width: 180px;
+	margin: 7px 15px 7px 0px;
+	border-radius: 10px;
+	text-transform: capitalize;
+}
+
+.pokemon-list-element div {
+	padding: 20px;
+}

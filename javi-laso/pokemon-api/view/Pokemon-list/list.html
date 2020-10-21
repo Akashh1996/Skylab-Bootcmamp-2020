@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="list.css">
+</head>
+<body>
+    <main>
+        <div id="pokemon-container">
+            <ul id="pokemon-list"></ul>
+        </div>
+    </main>
+    <script src="../../store.js"></script>
+    <script>
+        const listContainer = document.getElementById('pokemon-list');
+        store.loadPokedex(150).then(() => {
+            pokedex = store.getPokemonList();
+            console.log(pokedex);
+            for (let index = 0; index < pokedex.results.length; index++) {
+                store.createListElement(listContainer, pokedex.results, index);
+            }
+        });
+    </script>
+</body>
+</html>
