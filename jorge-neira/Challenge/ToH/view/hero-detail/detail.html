@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./modal.css" />
 		<link rel="stylesheet" href="../../styles/style.css" />
 		<title>Detail Hero</title>
 	</head>
@@ -38,6 +39,24 @@
 						<span class="hero-name f-weight">Name:</span>
 						<input type="text" class="hero-name__input" placeholder="name" />
 					</div>
+					<div class="container">
+						<div class="interior">
+							<a class="btn" href="#open-modal">More Info</a>
+						</div>
+					</div>
+					<div id="open-modal" class="modal-window">
+					<div class="modal-container">
+						<a href="#" title="Close" class="modal-close">Close</a>
+						<h3>Hero Details!</h3>
+						<div class="hero-powerstats">
+							<h5>PowerStats</h5>
+							
+						</div>
+						<div class="hero-appearance"></div>
+						<div class="hero-biography"></div>
+						<div class="hero-work"></div>
+					</div>
+
 				</section>
 				<section class="additional-info__block">
 					<span id="hero-profile-img__block"></span>
@@ -53,8 +72,8 @@
 		const heroId = getHeroId(location);
 		const hero = store.getHeroById(heroId);
 		let detailComponent = new DetailComponent(hero);
+		detailComponent.getProfileImage();
 		if (hero) {
-			detailComponent.getProfileImage();
 			let idElement = document.querySelector('.detail-title');
 			detailComponent.updateHtmlValue(
 				idElement,

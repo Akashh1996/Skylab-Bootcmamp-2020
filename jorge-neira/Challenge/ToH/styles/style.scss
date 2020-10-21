@@ -38,7 +38,7 @@ body {
 .dashboard {
 	width: 700px;
 	border: 1px solid rgba(189, 177, 177, 0.842);
-	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 5px 5px 5px 2.5px rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
 	display: flex;
 	flex-direction: column;
@@ -91,6 +91,7 @@ body {
 				font-weight: 600;
 				font-size: 22px;
 				margin-left: 10px;
+				background: none;
 			}
 		}
 	}

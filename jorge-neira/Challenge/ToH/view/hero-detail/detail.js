@@ -21,13 +21,26 @@ class DetailComponent {
 		createImage.style.cursor = 'pointer';
 		imgProfileElement.appendChild(createImage);
 	}
-	createProfileHeroPropsBtn(heroProps) {
-		let arr = [];
-		heroProps.forEach((element) => {
-			arr.push(element);
-		});
-
-		return arr;
+	addDetailHeroInfo() {
+		const modalBlock = document.querySelector('.modal-container');
+		const heroPowerstats = document.querySelector('.hero-powerstats');
+		const heroAppearance = document.querySelector('.hero-appearance');
+		const heroBiography = document.querySelector('.hero-biography');
+		const heroWork = document.querySelector('.hero-work');
+		const heroProperties = ['powerstats', 'appearance', 'biography', 'work'];
+		const powerStats = hero.powerstats;
+		for (const property in powerStats) {
+			if (powerStats.hasOwnProperty(property)) {
+				const createDiv = document.createElement('div');
+				const createSpan = document.createElement('span');
+				createSpan.style.fontSize = '20px';
+				createSpan.textContent = `${property.toUpperCase()}: ${
+					powerStats[property]
+				}`;
+				createDiv.appendChild(createSpan);
+				heroPowerstats.appendChild(createDiv);
+			}
+		}
 	}
 }
 

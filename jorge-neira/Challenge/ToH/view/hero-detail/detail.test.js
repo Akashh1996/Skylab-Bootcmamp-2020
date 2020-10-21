@@ -29,7 +29,27 @@ describe('details', () => {
 		// assert
 		expect(element.value).toEqual('Narco');
 	});
-	test('should create button if hero hasOwnProperty From Array', () => {
+	xtest('should return same array of elements', () => {
+		//arrange
+		const heroProperties = [
+			'appearance',
+			'biography',
+			'work',
+			'connections',
+			'relatives'
+		];
+		//act
+		const response = detailComponent.createProfileHeroPropsBtn(heroProperties);
+		//assert
+		expect(response).toEqual([
+			'appearance',
+			'biography',
+			'work',
+			'connections',
+			'relatives'
+		]);
+	});
+	xtest('should create button if hero hasOwnProperty From Array', () => {
 		//arrange
 		const heroProperties = [
 			'appearance',
