@@ -50,7 +50,7 @@
 
 						<div id="detail-heroes__first__appearance"></div>
 						<div id="detail-heroes__publisher"></div>
-						<div id="detail-heroes__connection"></div>
+						<div id="detail-heroes__connection">data</div>
 					</div>
 
 					<div class="detail-image">
@@ -64,11 +64,14 @@
 		<script src="../../store.js"></script>
 		<script src="./detail.js"></script>
 		<script>
+
+		store.loadHeroes().then(()=>{
+			
 			const heroId = getHeroId(location);
 			const hero = store.getHeroById(heroId);
 			let detailComponent = new DetailComponent(hero);
  
-		 	function laodHeroes(url, type, callback){
+		 	/* function laodHeroes(url, type, callback){
 
         	let xhr = new XMLHttpRequest() 
         	xhr.open("GET",url)
@@ -84,7 +87,7 @@
 				console.log(data);
 			}
 
-			laodHeroes("../../apil/superHeroData.json", "json", loadData)  
+			laodHeroes("../../apil/superHeroData.json", "json", loadData)   */
 
 
 			if (hero) {
@@ -171,6 +174,9 @@
 				
 			
 			}
+		})			
+
+
 		</script>
 	</body>
 </html>

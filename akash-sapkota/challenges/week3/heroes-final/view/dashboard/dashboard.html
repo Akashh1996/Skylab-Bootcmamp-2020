@@ -21,13 +21,15 @@
 		<script src="../../store.js"></script>
 		<script src="./dashboard.js"></script>
 		<script>
-            
-            const heroes = store.getTopHeroes()
+			 store.loadHeroes().then(()=>{
+				const heroes = store.getTopHeroes()
             const dashboardComponent = new DashboardComponent(heroes) 
             if(heroes){
                 let element = document.getElementById("top-heroes__list")
                 dashboardComponent.updateHtmlHeroList(element)
             }
+            
+			 })
             
 		</script>
 	</body>

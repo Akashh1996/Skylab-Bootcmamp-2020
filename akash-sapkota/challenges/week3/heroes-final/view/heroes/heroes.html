@@ -29,12 +29,15 @@
 		<script src="../../store.js"></script>
 		<script src="./heroes.js"></script>
 		<script>
+
+		store.loadHeroes().then(()=>{
+
             let heroes = store.getHeroes()
             let heroComponent = new HeroesComponent(heroes)
             if(heroes){
                 let element = document.getElementById("heroes")
                 heroComponent.updateHtmlHeroList(element)
-            }
+            }})
 		</script>
 	</body>
 </html>
