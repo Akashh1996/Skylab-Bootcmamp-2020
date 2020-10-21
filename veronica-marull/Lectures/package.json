@@ -1,0 +1,16 @@
+{
+  "name": "Lectures",
+  "version": "1.0.0",
+  "main": "lecture1510.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.5.3"
+  },
+  "dependencies": {},
+  "description": ""
+}
