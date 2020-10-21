@@ -50,7 +50,7 @@
 						<h3>Hero Details!</h3>
 						<div class="hero-powerstats">
 							<h5>PowerStats</h5>
-							
+
 						</div>
 						<div class="hero-appearance"></div>
 						<div class="hero-biography"></div>
@@ -73,6 +73,7 @@
 		const hero = store.getHeroById(heroId);
 		let detailComponent = new DetailComponent(hero);
 		detailComponent.getProfileImage();
+		detailComponent.addDetailHeroInfo()
 		if (hero) {
 			let idElement = document.querySelector('.detail-title');
 			detailComponent.updateHtmlValue(
