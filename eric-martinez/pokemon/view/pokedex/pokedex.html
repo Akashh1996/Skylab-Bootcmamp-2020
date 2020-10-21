@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex</title>
+    <link rel="stylesheet" href="pokedex.css">
 </head>
 <body>
     <h1>Pokédex</h1>
@@ -18,18 +19,13 @@
 
     <script>
         store.loadPokedex().then(() => {
-            console.log(store.getPokemon());
+            const pokemons = store.getPokemon();
+            const pokedexComponent = new PokedexComponent(pokemons);
+            if (pokemons) {
+                let element = document.getElementById('pokemons');
+                pokedexComponent.updateHtmlPokemonList(element);
+            }
         });
-
-
-        /* const pokemons = store.getPokemon();
-        const pokedexComponent = new PokedexComponent(pokemons);
-        
-
-        if (pokemons) {
-				let element = document.getElementById('pokemons');
-				pokedexComponent.updateHtmlPokemonList(element);
-			} */
     </script>
 </body>
 </html>

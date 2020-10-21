@@ -10,10 +10,12 @@ class PokedexComponent {
 				element.innerHTML +
 				`
 <li>
-<span id="hero-name">${pokemon.name}</span>
-</a>
+	<a href="../details/details.html?pokemonName=${pokemon.name}">
+		<span id="pokemons">${pokemon.name}</span>
+	</a>
 </li>
 `;
 		});
 	}
 }
+

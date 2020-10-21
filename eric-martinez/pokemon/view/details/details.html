@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="details.css">
+    <title>Pokémon</title>
+</head>
+<body>
+
+    <h2><span id="pokemon-title"></span></h2>
+
+    <nav>
+        <a href="../pokedex/pokedex.html">Pokédex</a>
+    </nav>
+
+    <div id="pokemon_details">
+        <label>
+            Type:
+            <input id="input_Type"/>
+        </label>
+
+        <label>
+            Ability:
+            <input id="input_Ability"/>
+        </label>
+    </div>
+
+    <script src="../../store.js"></script>
+    <script src="../pokedex/pokedex.js"></script>
+    <script src="./details.js"></script>
+
+    <script>
+        const url = window.location.search;
+        const getName = store.getName(url);
+        let detailComponent = new DetailComponent(getName);
+
+        store.getDetails(getName).then(() => {
+            const pokemon_details = _detail;
+            console.log(pokemon_details);
+
+            if (pokemon_details){
+                let idElement = document.getElementById('pokemon-title');
+                detailComponent.updateHtmlValue(
+                    idElement,
+                    'innerHTML',
+					getName.toUpperCase()
+                );
+                idElement = document.getElementById('input_Type');
+                detailComponent.updateHtmlValue(
+                    idElement,
+                    'value',
+					_detail.types[0]["type"].name
+                );
+                idElement = document.getElementById('input_Ability');
+                detailComponent.updateHtmlValue(
+                    idElement,
+                    'value',
+					_detail.abilities[0].ability.name
+                );
+            }
+        });
+
+    </script>
+
+</body>
+</html>
