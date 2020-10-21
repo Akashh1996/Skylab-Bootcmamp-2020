@@ -122,7 +122,6 @@ describe('Life', function () {
 		test('should return an object with id and column values', () => {
 			const id = 'cell--4--5';
 			const element = { id };
-			debugger;
 			life = new Life(null, null, null);
 			const response = life.splitId(element);
 

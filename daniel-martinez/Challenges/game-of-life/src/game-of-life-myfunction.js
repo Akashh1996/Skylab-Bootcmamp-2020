@@ -70,7 +70,6 @@ function newArray (initialState){
 
 function game (initialState, rows, columns){
     let newState = newArray(initialState);
-    debugger;
     for (let i = 0; i < rows; i++){
         for (let j = 0; j < columns; j++){
             let numOfNeig = countNeighbors(i,j,rows,columns, initialState);
