@@ -19,8 +19,7 @@ if (input) {
     }, false);
   }
 }
-// Grid size
-// new Grid
+
 inputNewGrid.addEventListener('change', function () {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   canvas.width = this.value;
@@ -51,7 +50,7 @@ function render(grid) {
         }
     }
 }
-// GAME
+
 start.addEventListener('click', () => {
     requestAnimationFrame(update);
     function update() {
