@@ -2,7 +2,8 @@
     border-style: none;
     color: rgb(86, 119, 138);
     font-weight: bold;
-    margin-left: 10px;
+    margin-left: 5px;
+    text-decoration: none;
 }
 
 .heroesDash:hover {
@@ -32,12 +33,18 @@
  padding-top: 10px;
 }
 
+.listElement {
+    display: flex;
+    flex-direction: column;
+}
+
 .boxHero {
     height: auto;
     width: auto;
+    align-content: center;
     font-family: sans-serif;
     padding: 20px;
-    margin-inline-end: 15px;
+    margin: 20px;
     background-color: rgb(85, 139, 145);
     color: white;
     border-style: none
@@ -47,16 +54,13 @@
     height: auto;
     width: auto;
     font-family: sans-serif;
-    padding: 20px;
-    margin-inline-end: 15px;
     background-color: whitesmoke;
     color: rgb(85, 139, 145);
-    border-style: none
+    border-style: none;
+    font-weight: bold;
 }
 
-.listElement {
-    display: flex;
-    flex-direction: column;
-    margin-left: 40%;
-    margin-bottom: 10px;
+.anchors {
+    text-decoration: none;
+    color: inherit;
 }
