@@ -1,0 +1,25 @@
+h1 {
+	text-align: center;
+	color: #63b939;
+	font-size: 60px;
+}
+
+body {
+	background-color: black;
+}
+td {
+	border: 0;
+	background-color: #e3562d;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+}
+.live {
+	color: #e3562d;
+	background-color: #e3562d;
+}
+
+.dead {
+	color: black;
+	background-color: black;
+}
