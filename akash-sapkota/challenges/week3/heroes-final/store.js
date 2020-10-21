@@ -271,7 +271,10 @@ let _heroes = [{
     }
 ]
 
+
 class Store {
+
+
     getHeroes() {
         return _heroes;
     }
