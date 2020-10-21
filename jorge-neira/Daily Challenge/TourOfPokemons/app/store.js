@@ -1,30 +1,30 @@
 let _pokemons;
+let _pokemonsDetail;
+
 class Store {
-	async loadPokemonList() {
+	async loadPokemonList(curPokemons) {
 		const pokemonsList = await fetch(
-			'https://pokeapi.co/api/v2/pokemon?limit=100&offset=200'
+			'https://pokeapi.co/api/v2/pokemon?limit=10&offset=0'
 		);
 		const pokemonListJson = await pokemonsList.json();
 		return (_pokemons = pokemonListJson);
 	}
 	async loadPokemonDetail(pokemon) {
-		const pokemonDetail = fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+		const pokemonDetail = await fetch(
+			`https://pokeapi.co/api/v2/pokemon/${pokemon}`
+		);
 		const pokemonStats = await pokemonDetail.json();
-		return pokemonStats
+		return (_pokemonsDetail = pokemonStats);
+	}
+	getTopPokemons() {
+		return _pokemons.results.slice(0, 4);
 	}
 
-	getTopPokemons () {
-		
-	}
-
-	getPokemons() {
-		return _pokemons;
+	getPokemonList() {
+		return _pokemons.results;
 	}
 }
 
 const store = new Store();
-store.loadPokemonList().then(() => {
-	console.log(_pokemons);
-});
 
 // module.exports = store;
