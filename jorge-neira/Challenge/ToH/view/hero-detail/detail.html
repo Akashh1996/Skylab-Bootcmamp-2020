@@ -52,13 +52,11 @@
 						<select name="heroDetails" id="hero-additional-info" onchange="detailComponent.getStats(this.value)">
 							<option value="option" selected>See more Details</option>
 							<option value="powerstats">Powerstats</option>
-							debugger;
 							<option value="appearance">Appearance</option>
 							<option value="biography">Biography</option>
 							<option value="work">Work</option>
 						</select>
 						<div class="hero-powerstats">
-							<h5 class="stat-title">PowerStats</h5>
 							<div class="hero-stats"></div>
 						</div>
 					</div>
@@ -71,41 +69,6 @@
 		</section>
 	</body>
 	<script src="../../utils/get-hero-id.js"></script>
-	<script src="../../app/herodata.js"></script>
 	<script src="../../app/store.js"></script>
 	<script src="./detail.js"></script>
-	<script>
-		const heroId = getHeroId(location);
-		const hero = store.getHeroById(heroId);
-		let detailComponent = new DetailComponent(hero);
-		detailComponent.getProfileImage();
-		if (hero) {
-			let idElement = document.querySelector('.detail-title');
-			detailComponent.updateHtmlValue(
-				idElement,
-				'innerHTML',
-				detailComponent.hero.name
-			);
-
-			idElement = document.querySelector('.hero-id__value');
-			detailComponent.updateHtmlValue(
-				idElement,
-				'innerHTML',
-				detailComponent.hero.id
-			);
-			idElement = document.querySelector('.hero-slug__value');
-			detailComponent.updateHtmlValue(
-				idElement,
-				'innerHTML',
-				detailComponent.hero.slug
-			);
-
-			nameElement = document.querySelector('.hero-name__input');
-			detailComponent.updateHtmlValue(
-				nameElement,
-				'value',
-				detailComponent.hero.name
-			);
-		}
-	</script>
 </html>

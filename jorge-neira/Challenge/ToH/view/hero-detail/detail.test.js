@@ -9,7 +9,7 @@ describe('details', () => {
 		detailComponent = new DetailComponent(hero);
 	});
 
-	xtest('should create', () => {
+	test('should create', () => {
 		expect(detailComponent).toBeDefined();
 	});
 
@@ -17,7 +17,7 @@ describe('details', () => {
 		expect(detailComponent.hero).toEqual({ name: 'Narco', id: 12 });
 	});
 
-	xtest('should call updateHtmlValue', () => {
+	test('should call updateHtmlValue', () => {
 		// arrange
 		const element = {};
 		const property = 'value';
@@ -29,27 +29,7 @@ describe('details', () => {
 		// assert
 		expect(element.value).toEqual('Narco');
 	});
-	xtest('should return same array of elements', () => {
-		//arrange
-		const heroProperties = [
-			'appearance',
-			'biography',
-			'work',
-			'connections',
-			'relatives'
-		];
-		//act
-		const response = detailComponent.createProfileHeroPropsBtn(heroProperties);
-		//assert
-		expect(response).toEqual([
-			'appearance',
-			'biography',
-			'work',
-			'connections',
-			'relatives'
-		]);
-	});
-	xtest('should create button if hero hasOwnProperty From Array', () => {
+	test('should return same array of elements', () => {
 		//arrange
 		const heroProperties = [
 			'appearance',

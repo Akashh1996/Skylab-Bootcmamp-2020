@@ -21,11 +21,13 @@ class DashboardComponent {
 	}
 }
 
-const heroes = store.getTopHeroes();
-const dashbaordComponent = new DashboardComponent(heroes);
-if (heroes) {
-	const element = document.querySelector('.top-heroes-profile');
-	dashbaordComponent.updateHtmlHeroList(element);
-}
+store.loadSuperHeroes().then(() => {
+	const heroes = store.getTopHeroes();
+	const dashbaordComponent = new DashboardComponent(heroes);
+	if (heroes) {
+		const element = document.querySelector('.top-heroes-profile');
+		dashbaordComponent.updateHtmlHeroList(element);
+	}
+});
 
 module.exports = DashboardComponent;

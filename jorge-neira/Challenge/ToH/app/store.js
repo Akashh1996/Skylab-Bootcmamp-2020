@@ -1,4 +1,16 @@
+let _heroes;
+
 class Store {
+	loadSuperHeroes() {
+		return fetch('../api/superHeroData.json')
+			.then((response) => {
+				debugger;
+				response.json();
+			})
+			.then((value) => {
+				_heroes = value;
+			});
+	}
 	getHeroes() {
 		return _heroes;
 	}

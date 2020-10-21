@@ -21,6 +21,7 @@ class DetailComponent {
 		createImage.style.cursor = 'pointer';
 		imgProfileElement.appendChild(createImage);
 	}
+
 	getStats(selectedStat) {
 		const heroPowerstats = document.querySelector('.hero-stats');
 		const titleStat = document.querySelector('stat-title');
@@ -39,7 +40,42 @@ class DetailComponent {
 			}
 		}
 	}
-	
 }
+
+store.loadSuperHeroes().then(() => {
+	let detailComponent = new DetailComponent(hero);
+	const heroId = getHeroId(location);
+	const hero = store.getHeroById(heroId);
+	detailComponent.getProfileImage();
+
+	if (hero) {
+		let idElement = document.querySelector('.detail-title');
+		detailComponent.updateHtmlValue(
+			idElement,
+			'innerHTML',
+			detailComponent.hero.name
+		);
+
+		idElement = document.querySelector('.hero-id__value');
+		detailComponent.updateHtmlValue(
+			idElement,
+			'innerHTML',
+			detailComponent.hero.id
+		);
+		idElement = document.querySelector('.hero-slug__value');
+		detailComponent.updateHtmlValue(
+			idElement,
+			'innerHTML',
+			detailComponent.hero.slug
+		);
+
+		nameElement = document.querySelector('.hero-name__input');
+		detailComponent.updateHtmlValue(
+			nameElement,
+			'value',
+			detailComponent.hero.name
+		);
+	}
+});
 
 module.exports = DetailComponent;
