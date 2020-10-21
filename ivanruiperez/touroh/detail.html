@@ -28,6 +28,13 @@
           <input type="text" class="detail__heroe__input" />
         </div>
       </div>
+      <div class="detail__heroes__buttons">
+        <input type="button" class="navButton" value="powerstats" />
+
+        <input type="button" class="navButton" value="appearance" />
+
+        <input type="button" class="navButton" value="biography" />
+      </div>
     </section>
 
     <script src="store.js"></script>
@@ -37,6 +44,11 @@
       const heroId = getHeroId(location);
       const hero = store.getHeroById(heroId);
       let detailComponent = new DetailComponent(hero);
+
+      function logData(data) {
+        console.log(data);
+      }
+      detailComponent.loadHeroes("./api/superHeroData.json", "json", logData);
 
       if (hero) {
         let idElement = document.querySelector(".detail__heroe");

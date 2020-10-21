@@ -64,8 +64,8 @@ h2 {
 }
 .detail {
   background-color: white;
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 500px;
 }
 .dashboard > h1 {
   display: flex;
@@ -150,4 +150,9 @@ h2 {
 .list__name__heroe:hover {
   background-color: #d0d8dc;
   color: white;
+}
+.detail__heroes__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }

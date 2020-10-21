@@ -4,7 +4,6 @@ class ListComponent {
   }
 
   updateHtmlHeroList(element_list) {
-    debugger;
     element_list.innerHTML = "";
     this.heroes.forEach((hero) => {
       element_list.innerHTML =

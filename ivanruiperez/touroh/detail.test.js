@@ -1,5 +1,5 @@
 const DetailComponent = require("./detail");
-const store = require("../../store");
+const store = require("./store");
 
 describe("details", () => {
   let detailComponent;
