@@ -21,7 +21,6 @@ class DetailComponent {
 	}
 
 	getStats(selectedStat) {
-		debugger;
 		const heroPropArr = [, 'powerstats', 'appearance', 'biography', 'work'];
 		const heroPowerstats = document.querySelector('.hero-stats');
 		const curStats = this.hero[heroPropArr[selectedStat]];
