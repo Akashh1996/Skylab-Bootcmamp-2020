@@ -414,40 +414,64 @@ class Store {
         return this.getHeroes().find((hero) => hero.id === heroId);
     };
 
-    getHeroBy(heroSlug) {
-        return this.getHeroes().find((hero) => hero.slug === heroSlug);
-    };
-
     getTopHeroes() {
         return this.getHeroes().slice(1,5);
     };
 
     powerHeroStats(id) {
       let newArray = Object.entries(store.getHeroById(id).powerstats);
-      console.log(newArray)
       const infoContainer = document.querySelector('.info-container')
-      const createUl = document.createElement('ul')
-      createUl.getAttribute('class', 'ul-stats-container')
-      infoContainer.appendChild(createUl)
+      const createUl = document.createElement('ul');
+      createUl.getAttribute('class', 'ul-stats-container');
+      infoContainer.appendChild(createUl);
       for (let index = 0; index < newArray.length; index++ ) {
-        const createli = document.createElement('p')
-        createli.getAttribute('class', 'li-stats-heroes');
-        createli.innerHTML = `<svg>
+        const createP = document.createElement('p');
+        createP.getAttribute('class', 'li-stats-heroes');
+        createP.innerHTML = `<svg>
         <circle cx="45" cy="45" r="37"></circle>
         <circle cx="45" cy="45" r="37"></circle>
         </svg>
         <p class = 'p-instat'>${newArray[index][1]}</p>
         <p class = 'p-instat'>${newArray[index][0]}</p>`
-        let circleStat = document.getElementById('circle-stat');
-        createUl.appendChild(createli)
+        createUl.appendChild(createP);
       }
     };
 
-    // powerHeroStats() {
-    //   let newArray = Object.entries(store.getHeroById(id).powerstats);
-    //   let powerHeroesContainer = document.getElementById('info-container');
-    //   for (let i = 0; i < newArray.length; i++) {
+    loadHeroes(url, type, callback) {
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', url);
+      xhr.responseType = type;
 
+      xhr.onload = function() {
+        callback(xhr.response);
+
+      };
+
+      xhr.send();
+    }
+
+    logData(data) {
+      console.log(data);
+    }
+
+    loadHeroesWithFetch() {
+      return fetch('superHeroData.json').then((response) => {
+        console.log('2');
+        return response.json(); 
+      }).then((value) => {
+        console.log('3');
+        superheroes = value;
+      })
+    }
+
+
+
+    // heroesAppearance(id){
+    //   let newArray = Object.entries(store.getHeroById(id).appearance);
+    //   const appearanceList = document.getElementById('appearance-list');
+    //   for (let index = 0; index < newArray.length; index++) {
+    //     const 
+    //     appearanceStat.innerHTML = `${newArray[index].appearance}`;
     //   }
     // }
 

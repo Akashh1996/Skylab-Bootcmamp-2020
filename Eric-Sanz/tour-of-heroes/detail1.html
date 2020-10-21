@@ -21,16 +21,23 @@
             <input type="text" id = 'name-hero'>
         </div>
        <div class="info-container"></div>
+       <div id = 'appearance-stat'>
+           <ul id="appearance-list">
+        </ul>
+       </div>
        <button class = 'back-button'>Back</button>
     </div> 
 </body>
     <script src="store.js"></script>
 
     <script>
-        let id = +window.location.search.replace('?HeroId=','')
+        //const url = ''; y poner la url en el superHeroData.json.
+        // store.loadHeroes('superHeroData.json', 'json', store.logData);
+        let id = +window.location.search.replace('?HeroId=','');
         document.getElementById("id-hero").innerHTML = id;
         document.getElementById("name-hero").value = store.getHeroById(id).name;
         document.getElementById('hero-title').innerHTML = store.getHeroById(id).name;
-        document.getElementById('info-container').value = store.powerHeroStats(id).powerstats;
+        document.getElementById('info-container').innerHTML = store.powerHeroStats(id);
+        document.getElementById('appearance-stat').innerText = store.heroesAppearance(id).appearance;
     </script>
 </html>
