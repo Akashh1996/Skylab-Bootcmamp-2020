@@ -1,5 +1,3 @@
-/* const heroesList = store.getHeroes(); */
-
 function heroesInHTML(heroes) {
 	const listOfHeroes = document.getElementById('top-heroes');
 	for (i = 0; i < heroes.length; i++) {
@@ -12,9 +10,13 @@ function heroesInHTML(heroes) {
 		heroAnchor.textContent = `${heroes[i].name}`;
 		heroAnchor.setAttribute(
 			'href',
-			`/view/detail/detail.html?heroId=${heroes[i].id}`
+			`../detail/detail.html?heroId=${heroes[i].id}`
 		);
 	}
 }
+
+store.loadHeroes().then(() => {
+	heroesInHTML(store.getTopHeroes());
+});
 
 module.exports = heroesInHTML;

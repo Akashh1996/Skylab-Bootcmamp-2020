@@ -9,7 +9,7 @@ function addItemsToList(heroes) {
 		heroLi.appendChild(heroAnchor);
 		heroAnchor.setAttribute(
 			'href',
-			`/view/detail/detail.html?heroId=${heroes[i].id}`
+			`/challenges/tour-of-superheroes/view/detail/detail.html?heroId=${heroes[i].id}`
 		);
 		let heroSpanId = document.createElement('span');
 		let heroSpanName = document.createElement('span');
@@ -21,5 +21,9 @@ function addItemsToList(heroes) {
 		heroSpanName.setAttribute('class', 'name-span');
 	}
 }
+
+store.loadHeroes().then(() => {
+	addItemsToList(store.getHeroes());
+});
 
 module.exports = addItemsToList;

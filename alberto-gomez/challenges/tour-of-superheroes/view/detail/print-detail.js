@@ -10,4 +10,8 @@ function heroesInDetail() {
 	nameElement.setAttribute('value', hero.name);
 }
 
-heroesInDetail();
+store.loadHeroes().then(() => {
+	heroesInDetail();
+});
+
+module.exports = heroesInDetail;
