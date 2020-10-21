@@ -1,5 +1,3 @@
-const store = new Store();
-
 let url = window.location;
 let nameTitle = document.getElementById('name-title');
 let idInput = document.getElementById('id-input');
