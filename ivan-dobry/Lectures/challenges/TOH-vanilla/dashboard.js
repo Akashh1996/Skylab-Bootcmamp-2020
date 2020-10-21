@@ -1,3 +1,5 @@
+store.loadHeroes().then(() => {
+
 let topHeroes = store.getTopHeroes();
 
 const topButtonHeroes = document.getElementById("buttons");
@@ -12,3 +14,5 @@ function makeTopHeroes(array) {
 };
 
 makeTopHeroes(topHeroes);
+
+});
