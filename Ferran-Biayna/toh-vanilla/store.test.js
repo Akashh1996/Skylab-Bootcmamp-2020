@@ -287,34 +287,10 @@ describe('store', () => {
 		});
 	});
 
-	describe('appearanceHero', () => {
-		test('should call appearanceHero and return a string', () => {
-			expect(store.appearanceHero(1)).toBe(
+	describe('descriptionHero', () => {
+		test('should call descriptionHero - appearance and return a string', () => {
+			expect(store.descriptionHero(1, 'appearance')).toBe(
 				"<li>gender: Male<li><li>race: Human<li><li>height: 6'8,203 cm<li><li>weight: 980 lb,441 kg<li><li>eyeColor: Yellow<li><li>hairColor: No Hair<li>"
-			);
-		});
-	});
-
-	describe('biographyHero', () => {
-		test('should call biographyHero and return an array with the four top heroes', () => {
-			expect(store.biographyHero(1)).toBe(
-				"<li>fullName: Richard Milhouse Jones<li><li>alterEgos: No alter egos found.<li><li>aliases: Rick Jones<li><li>placeOfBirth: Scarsdale, Arizona<li><li>firstAppearance: Hulk Vol 2 #2 (April, 2008) (as A-Bomb)<li><li>publisher: Marvel Comics<li><li>alignment: good<li>"
-			);
-		});
-	});
-
-	describe('workHero', () => {
-		test('should call workHero and return an array with the four top heroes', () => {
-			expect(store.workHero(1)).toBe(
-				"<li>occupation: Musician, adventurer, author; formerly talk show host<li>"
-			);
-		});
-	});
-
-	describe('connectionsHero', () => {
-		test('should call connectionsHero and return an array with the four top heroes', () => {
-			expect(store.connectionsHero(1)).toBe(
-				"<li>groupAffiliation: Hulk Family; Excelsior (sponsor), Avengers (honorary member); formerly partner of the Hulk, Captain America and Captain Marvel; Teen Brigade; ally of Rom<li><li>relatives: Marlo Chandler-Jones (wife); Polly (aunt); Mrs. Chandler (mother-in-law); Keith Chandler, Ray Chandler, three unidentified others (brothers-in-law); unidentified father (deceased); Jackie Shorr (alleged mother; unconfirmed)<li>"
 			);
 		});
 	});

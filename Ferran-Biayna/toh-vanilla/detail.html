@@ -49,10 +49,10 @@
         document.getElementById('id-text').innerHTML = id;
         document.getElementById('name-text').value = store.getHeroById(id).name;
         document.getElementById('box-all').innerHTML = store.powerHero(id)
-        document.getElementById('appearance').innerHTML = store.appearanceHero(id)
-        document.getElementById('biography').innerHTML = store.biographyHero(id)
-        document.getElementById('work').innerHTML = store.workHero(id)
-        document.getElementById('connections').innerHTML = store.connectionsHero(id)
+        document.getElementById('appearance').innerHTML = store.descriptionHero(id,'appearance')
+        document.getElementById('biography').innerHTML = store.descriptionHero(id,'biography')
+        document.getElementById('work').innerHTML = store.descriptionHero(id,'work')
+        document.getElementById('connections').innerHTML = store.descriptionHero(id,'connections')
         document.getElementById('hero').src = Object.entries(store.getHeroById(id).images)[1][1]
     </script>
 </body>

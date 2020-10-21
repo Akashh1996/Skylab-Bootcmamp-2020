@@ -877,8 +877,8 @@ class Store {
 		return li;
 	}
 
-	appearanceHero(heroId) {
-		let newArray = Object.entries(store.getHeroById(heroId).appearance);
+	descriptionHero(heroId, description) {
+		let newArray = Object.entries(store.getHeroById(heroId)[description]);
 		var li = '';
 		for (var index = 0; index < newArray.length; index++) {
 			if (
@@ -887,59 +887,12 @@ class Store {
 				newArray[index][1] !== '-' &&
 				newArray[index][1] !== ''
 			) {
-				li += `<li>${newArray[index][0]}: ${newArray[index][1]}<li>`;
+				li += `<li>${newArray[index][0].toLowerCase()}: ${newArray[index][1]}<li>`;
 			}
 		}
 		return li;
 	}
 
-	biographyHero(heroId) {
-		let newArray = Object.entries(store.getHeroById(heroId).biography);
-		var li = '';
-		for (var index = 0; index < newArray.length; index++) {
-			if (
-				newArray[index][1] !== null &&
-				newArray[index][1] !== undefined &&
-				newArray[index][1] !== '-' &&
-				newArray[index][1] !== ''
-			) {
-				li += `<li>${newArray[index][0]}: ${newArray[index][1]}<li>`;
-			}
-		}
-		return li;
-	}
-
-	workHero(heroId) {
-		let newArray = Object.entries(store.getHeroById(heroId).work);
-		var li = '';
-		for (var index = 0; index < newArray.length; index++) {
-			if (
-				newArray[index][1] !== null &&
-				newArray[index][1] !== undefined &&
-				newArray[index][1] !== '-' &&
-				newArray[index][1] !== ''
-			) {
-				li += `<li>${newArray[index][0]}: ${newArray[index][1]}<li>`;
-			}
-		}
-		return li;
-	}
-
-	connectionsHero(heroId) {
-		let newArray = Object.entries(store.getHeroById(heroId).connections);
-		var li = '';
-		for (var index = 0; index < newArray.length; index++) {
-			if (
-				newArray[index][1] !== null &&
-				newArray[index][1] !== undefined &&
-				newArray[index][1] !== '-' &&
-				newArray[index][1] !== ''
-			) {
-				li += `<li>${newArray[index][0]}: ${newArray[index][1]}<li>`;
-			}
-		}
-		return li;
-	}
 }
 
 const store = new Store();
