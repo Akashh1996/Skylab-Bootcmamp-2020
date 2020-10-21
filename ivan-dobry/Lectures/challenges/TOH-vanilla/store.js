@@ -9,7 +9,8 @@ class Store {
 			return response.json();
 		})
 		.then((value) => {
-			_heroes = value;
+            _heroes = value.results;
+            console.log(_heroes);
 		});
 
 	}
