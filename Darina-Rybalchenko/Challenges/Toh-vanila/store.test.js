@@ -42,3 +42,27 @@ describe('getTopHeroes', () => {
 
     })
 })
+
+describe('loadheroes', () => {
+    test.only('should return promise', () => {
+        global.fetch = jest.fn().mockImplementationOnce(() => Promise.resolve({ jason: jest.fn().mockReturnValueOnce([{ id: 12, name: 'Narco' }]) }))
+        return store.loadHeroes.then((response) => {
+            expect(response).toEqual([{ id: 12, name: 'Narco' }])
+        })
+    })
+})
+
+describe('should update heroes', () => {
+    test.only('should return one promise', () => {
+        //arrange
+        global.fetch = jest.fn().mockImplementationOnce(() => Promise.resolve({ jason: jest.fn().mockReturnValueOnce([]) }))
+
+        // act
+
+        //assert
+
+        return store.loadHeroes.then((response) => {
+            expect(store.getHeroes()).toEqual([response])
+        })
+    })
+})

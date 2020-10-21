@@ -54,6 +54,8 @@ ul {
     margin: 0;
     padding: 8px;
     display: inline-block;
+    height: 100%;
+    overflow: auto;
 }
 
 ul li {

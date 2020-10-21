@@ -1,3 +1,7 @@
+store.loadHeroes().then(() => {
+    createHeroList()
+})
+
 function createHeroList() {
     const heroes = store.getTopHeroes();
     const heroList = document.getElementById('heroes')
@@ -18,7 +22,7 @@ function createHeroCard(heroDetail) {
 
     return hero
 }
-createHeroList()
+
 
 
 

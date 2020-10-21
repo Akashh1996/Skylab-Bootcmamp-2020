@@ -24,4 +24,7 @@ function createHeroCard(heroId, heroName) {
 
     return hero
 }
-createHeroList()
+
+store.loadHeroes().then(() => {
+    createHeroList()
+})
