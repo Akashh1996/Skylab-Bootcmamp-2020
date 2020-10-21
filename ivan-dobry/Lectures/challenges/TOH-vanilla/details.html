@@ -14,57 +14,32 @@
 			</button>
 			<button class="header__button"><a href="heroes.html">Heroes</a></button>
 		</header>
-		<main>
-			<h2><span id="detail-title"></span> Details</h2>
-			<div>
-				<span>id: </span>
-				<span id="hero-id__value"></span>
-			</div>
-			<div>
-				<label
-					>name:
-					<input id="hero-name__input" placeholder="name" />
-				</label>
-			</div>
-			<section class="section__powerstats">
-				<span class="powerstat" id="intelligence">intelligence: </span>
-				<span class="powerstat" id="strength">strength: </span>
-				<span class="powerstat" id="speed">speed: </span>
-				<span class="powerstat" id="durability">durability: </span>
-				<span class="powerstat" id="power">power: </span>
-				<span class="powerstat" id="combat">combat: </span>
-			</section>
-		</main>
+		<div class="flex__main">
+			<main>
+				<section class="section__hero">
+					<div class="hero__image" id="hero__image">
+						<h2><span id="detail-title"></span> Details</h2>
+					</div>
+					<div>
+						<span>id: </span>
+						<span id="hero-id__value"></span>
+					</div>
+					<div>
+						<label
+							>name:
+							<input id="hero-name__input" placeholder="name" />
+						</label>
+					</div>
+				</section>
+				<section class="section__powerstats">
+					<div id="powerstats__value"></div>
+					<div class="rating__power" id="rating__power"></div>
+				</section>
+			</main>
+		</div>
 		<script src="get-hero-id.js"></script>
 		<script src="store.js"></script>
 		<script src="details.js"></script>
-		<script>
-			const heroId = getHeroId(location);
-			const hero = store.getHeroById(heroId);
-			let detailComponent = new DetailComponent(hero);
-
-			if (hero) {
-				let idElement = document.getElementById('detail-title');
-				detailComponent.updateHtmlValue(
-					idElement,
-					'innerHTML',
-					detailComponent.hero.name
-				);
-
-				idElement = document.getElementById('hero-id__value');
-				detailComponent.updateHtmlValue(
-					idElement,
-					'innerHTML',
-					detailComponent.hero.id
-				);
-
-				nameElement = document.getElementById('hero-name__input');
-				detailComponent.updateHtmlValue(
-					nameElement,
-					'value',
-					detailComponent.hero.name
-				);
-			}
-		</script>
+		<script></script>
 	</body>
 </html>
