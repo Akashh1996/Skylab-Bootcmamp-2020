@@ -40,6 +40,12 @@
 		<script src="get-hero-id.js"></script>
 		<script src="store.js"></script>
 		<script src="details.js"></script>
-		<script></script>
+		<script>
+			function logData(data) {
+				console.log(data);
+			}
+
+			detailComponent.loadHeroes('api/superHeroData.json', 'json', logData);
+		</script>
 	</body>
 </html>
