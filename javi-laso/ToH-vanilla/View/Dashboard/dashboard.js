@@ -1,6 +1,6 @@
-const store = new Store(heroes);
+const store = new Store();
 
 const dashboard = document.getElementById('dashboard-list');
-store.updateHTMLHeroesDashboard(dashboard);
-
-store.loadHeroes('../../api/superHeroData.json', 'json', store.logData);
+store.loadHeroes().then(() => {
+    store.updateHTMLHeroesDashboard(dashboard);
+});

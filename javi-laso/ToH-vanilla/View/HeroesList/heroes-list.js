@@ -1,4 +1,6 @@
-const store = new Store(heroes);
+const store = new Store();
 
 const heroesList = document.getElementById('heroes-list');
-store.updateHTMLHeroesList(heroesList);
+store.loadHeroes().then(() => {
+    store.updateHTMLHeroesList(heroesList);
+});
