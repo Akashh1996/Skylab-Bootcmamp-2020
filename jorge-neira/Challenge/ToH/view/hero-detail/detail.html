@@ -39,6 +39,7 @@
 						<span class="hero-name f-weight">Name:</span>
 						<input type="text" class="hero-name__input" placeholder="name" />
 					</div>
+					<!-- /////////////MODAL////////////// -->
 					<div class="container">
 						<div class="interior">
 							<a class="btn" href="#open-modal">More Info</a>
@@ -48,15 +49,20 @@
 					<div class="modal-container">
 						<a href="#" title="Close" class="modal-close">Close</a>
 						<h3>Hero Details!</h3>
+						<select name="heroDetails" id="hero-additional-info" onchange="detailComponent.getStats(this.value)">
+							<option value="option" selected>See more Details</option>
+							<option value="powerstats">Powerstats</option>
+							debugger;
+							<option value="appearance">Appearance</option>
+							<option value="biography">Biography</option>
+							<option value="work">Work</option>
+						</select>
 						<div class="hero-powerstats">
-							<h5>PowerStats</h5>
-
+							<h5 class="stat-title">PowerStats</h5>
+							<div class="hero-stats"></div>
 						</div>
-						<div class="hero-appearance"></div>
-						<div class="hero-biography"></div>
-						<div class="hero-work"></div>
 					</div>
-
+					<!-- /////////////MODAL////////////// -->
 				</section>
 				<section class="additional-info__block">
 					<span id="hero-profile-img__block"></span>
@@ -73,7 +79,6 @@
 		const hero = store.getHeroById(heroId);
 		let detailComponent = new DetailComponent(hero);
 		detailComponent.getProfileImage();
-		detailComponent.addDetailHeroInfo()
 		if (hero) {
 			let idElement = document.querySelector('.detail-title');
 			detailComponent.updateHtmlValue(

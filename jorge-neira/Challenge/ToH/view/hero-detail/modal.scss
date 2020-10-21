@@ -22,7 +22,8 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		padding: 2em;
-		background: #ffffff;
+		background-color: rgb(199, 199, 199);
+		border-radius: 10px;
 	}
 	header {
 		font-weight: bold;
@@ -44,8 +45,8 @@
 	}
 }
 .btn {
-	background-color: #fff;
+	background-color: rgb(199, 199, 199);
 	padding: 10px;
-	border-radius: 3px;
+	border-radius: 5px;
 	text-decoration: none;
 }

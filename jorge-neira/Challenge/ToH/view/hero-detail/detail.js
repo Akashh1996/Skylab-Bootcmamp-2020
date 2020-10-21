@@ -21,27 +21,25 @@ class DetailComponent {
 		createImage.style.cursor = 'pointer';
 		imgProfileElement.appendChild(createImage);
 	}
-	addDetailHeroInfo() {
-		// const modalBlock = document.querySelector('.modal-container');
-		const heroPowerstats = document.querySelector('.hero-powerstats');
-		// const heroAppearance = document.querySelector('.hero-appearance');
-		// const heroBiography = document.querySelector('.hero-biography');
-		// const heroWork = document.querySelector('.hero-work');
-		// const heroProperties = ['powerstats', 'appearance', 'biography', 'work'];
-		const powerStats = hero.powerstats;
-		for (const property in powerStats) {
-			if (powerStats.hasOwnProperty(property)) {
+	getStats(selectedStat) {
+		const heroPowerstats = document.querySelector('.hero-stats');
+		const titleStat = document.querySelector('stat-title');
+		const curStats = hero[selectedStat];
+		heroPowerstats.innerHTML = '';
+		for (const property in curStats) {
+			if (curStats.hasOwnProperty(property)) {
 				const createDiv = document.createElement('div');
 				const createSpan = document.createElement('span');
 				createSpan.style.fontSize = '20px';
 				createSpan.textContent = `${property.toUpperCase()}: ${
-					powerStats[property]
+					curStats[property]
 				}`;
 				createDiv.appendChild(createSpan);
 				heroPowerstats.appendChild(createDiv);
 			}
 		}
 	}
+	
 }
 
 module.exports = DetailComponent;

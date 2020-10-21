@@ -27,7 +27,8 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   padding: 2em;
-  background: #ffffff;
+  background-color: #c7c7c7;
+  border-radius: 10px;
 }
 
 .modal-window header {
@@ -51,9 +52,9 @@
 }
 
 .btn {
-  background-color: #fff;
+  background-color: #c7c7c7;
   padding: 10px;
-  border-radius: 3px;
+  border-radius: 5px;
   text-decoration: none;
 }
 /*# sourceMappingURL=modal.css.map */
