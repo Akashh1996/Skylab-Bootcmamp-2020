@@ -1,0 +1,257 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+.nav-mobile {
+	background-color: #f8f8f8;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.numItems,
+.nav-login-shop .material-icons {
+	width: 60px;
+	height: 40px;
+	position: relative;
+	padding-top: 20px;
+}
+
+.nav-login-shop {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.search-shop-button {
+	border: 1px solid #bbb8b6;
+	height: 30px;
+	background-color: #bbb8b6;
+	color: white;
+}
+.shop--button {
+	color: black;
+	background-color: white;
+	border-color: white;
+}
+.items--button {
+	background-color: #ea5357;
+	border-color: #ea5357;
+	height: 40px;
+}
+.numItems,
+.material-icons {
+	text-align: center;
+}
+.numItems {
+	font-size: 18px;
+}
+
+.login-button {
+	margin-left: 40px;
+	margin-right: 40px;
+	position: relative;
+}
+
+.head-logo-mobile {
+	display: flex;
+	justify-content: center;
+}
+.small-logo {
+	padding-top: 30px;
+	padding-bottom: 60px;
+}
+
+.slide-image {
+	position: relative;
+	width: 620px;
+	height: 570px;
+	overflow: hidden;
+}
+.slide {
+	padding-bottom: 50px;
+}
+
+.main-container {
+	background-color: #f8f8f8;
+}
+
+.head-main {
+	height: 70px;
+}
+.logo-utensillos-image {
+	width: 120px;
+	height: 120px;
+	display: block;
+	margin: auto;
+}
+
+.utensillos {
+	font-family: Verdana, sans-serif;
+	font-size: 30px;
+	text-align: center;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	width: 280px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	display: block;
+	margin: auto;
+}
+.main-container-utensillos img {
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+.utensillos-basicos-text {
+	color: #67635f;
+	font-size: 30px;
+	position: absolute;
+	top: 20%;
+	padding: 24px 24px;
+
+	background-color: rgba(255, 255, 255, 0.7);
+}
+.electrodomestico-text {
+	color: #67635f;
+	font-size: 30px;
+	position: absolute;
+	top: 53%;
+	padding: 24px 24px;
+
+	background-color: rgba(255, 255, 255, 0.7);
+}
+.magdalenas-text {
+	color: #67635f;
+	font-size: 30px;
+	position: absolute;
+	top: 87%;
+	padding: 24px 24px;
+
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.main-container-utensillos {
+	position: relative;
+	display: inline-block;
+	text-align: left;
+}
+
+.more-text {
+	color: white;
+	background-color: #ea5357;
+	text-align: center;
+	font-size: 12px;
+	width: 80px;
+	height: 30px;
+	display: block;
+	margin: auto;
+	padding-top: 12px;
+}
+
+.bg-white {
+	background-color: white;
+}
+.icons-container {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+.icons-container .material-icons {
+	color: white;
+	background-color: #ea5357;
+	padding: 15px 15px;
+	border-radius: 50%;
+}
+
+.icons-container p {
+	color: #ea5357;
+}
+
+.icons-container div {
+	margin-bottom: 20px;
+}
+
+.nav-footer {
+	background-color: #ea5357;
+	color: white;
+	height: 40px;
+}
+.nav-footer p {
+	text-align: center;
+	padding-top: 8px;
+}
+
+.head-logo-desktop {
+	display: none;
+}
+
+@media screen and (min-width: 600px) {
+	.burgerButton,
+	.small-logo,
+	#search-button,
+	.slide {
+		display: none;
+	}
+	#head-main-desktop {
+		height: 300px;
+	}
+
+	.logo-utensillos {
+		display: none;
+	}
+	.ma {
+		width: 80px;
+		height: 200px;
+		border: 1px solid #ea5357;
+		background-color: #ea5357;
+		padding-bottom: 70px;
+	}
+	.cu {
+		width: 80px;
+		height: 200px;
+		border: 1px solid #6199af;
+		background-color: #6199af;
+		border-left-color: white;
+		border-left-width: 4px;
+	}
+	.mu {
+		width: 80px;
+		height: 200px;
+		border: 1px solid #f6b439;
+		background-color: #f6b439;
+		border-left-width: 4px;
+		border-left-color: white;
+	}
+	.mainicons {
+		display: flex;
+		margin-left: 120px;
+	}
+	/*.nav-mobile {
+		justify-content: flex-start;
+	}*/
+	.text-login {
+		font-size: 12px;
+	}
+	.nav-login-shop {
+		display: flex;
+		margin-left: 350px;
+	}
+	#mall {
+		position: absolute;
+		top: 8%;
+		left: 20%;
+	}
+	#much {
+		background-color: black;
+		top: 40%;
+		left: 80%;
+	}
+	.head-logo-desktop img {
+		margin-left: 280px;
+		top: 20%;
+	}
+	.head-logo-desktop {
+		display: block;
+	}
+}
