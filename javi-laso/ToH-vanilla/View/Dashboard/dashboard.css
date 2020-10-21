@@ -1,0 +1,46 @@
+body {
+	font-family: sans-serif;
+	margin: 25px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color: #969696;
+}
+
+.header-buttons {
+	text-decoration: none;
+	background-color: #eeeeee;
+	color: #547485;
+	padding: 10px;
+	margin-right: 15px;
+}
+
+#dashboard-list {
+	display: flex;
+	list-style-type: none;
+}
+
+#dashboard-list li {
+	width: 100px;
+	height: 100px;
+	margin: 20px;
+	outline: none;
+	border: none;
+	background-color: #607d8b;
+	cursor: pointer;
+}
+
+#dashboard-list li a {
+	width: 100px;
+	height: 100px;
+	text-decoration: none;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
