@@ -1,0 +1,29 @@
+a:link,
+a:visited,
+a:active {
+	text-decoration: none;
+}
+* {
+	font-family: Verdana, sans-serif;
+}
+
+body {
+	background-color: rgb(223, 221, 222);
+}
+
+nav a {
+	color: black;
+}
+.main-container {
+	display: flex;
+}
+
+.main-container > div {
+	margin-left: 30px;
+}
+
+.power-bio,
+.appe-work-conect {
+	margin-top: 50px;
+	margin-left: 20px;
+}

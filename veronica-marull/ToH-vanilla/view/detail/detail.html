@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tour of Heroes</title>
+		<link rel="stylesheet" href="detail.css" />
+	</head>
+	<body>
+		<nav>
+			<a href="../dashboard/dashboard.html">Dashboard</a>
+		</nav>
+		<main>
+			<div class="main-container">
+				<div class= "name-foto">
+					<h1><span id="detail-title"></span></h1>
+
+					<div><img id="image"></div>
+
+					<div>
+						<span><b>ID:</b> </span>
+						<span id="hero-id__value"></span>
+					</div>
+					<div>
+						<label><b>Name:</b>
+							<input id="hero-name__input" placeholder="name" />
+						</label>
+					</div>
+					<div >
+						<span><b>Slug:</b> </span>
+						<span id="slug"></span>
+					</div>
+				</div>
+				<div class="power-bio">
+					<div><span><b><h3>Powerstats<h3><b></span></div>
+					<div>
+						<span>Intelligence: </span>
+						<span id="intelligence"></span>
+					</div>	
+					<div>
+						<span>Strength:</span>
+						<span id="strength"></span>
+					</div>	
+					<div>
+						<span>Speed: </span>
+						<span id="speed"></span>
+					</div>	
+					<div>
+						<span>Durability:</span>
+						<span id="durability"></span>
+					</div>
+					<div>
+						<span>Power:</span>
+						<span id="power"></span>
+					</div>
+					<div>
+						<span>Combat:</span>
+						<span id="combat"></span>
+					</div>
+
+					<div><span><b><h3>Biography<h3><b></span></div>
+						<div>
+							<span>FullName:</span>
+							<span id="fullName"></span>
+						</div>	
+						<div>
+							<span>AlterEgos:</span>
+							<span id="alterEgos"></span>
+						</div>	
+						<div>
+							<span>Aliases:</span>
+							<span id="aliases"></span>
+						</div>	
+						<div>
+							<span>PlaceOfBirth:</span>
+							<span id="placeOfBirth"></span>
+						</div>	
+						<div>
+							<span>FirstAppearance:</span>
+							<span id="firstAppearance"></span>
+						</div>
+						<div>
+							<span>Publisher:</span>
+							<span id="publisher"></span>
+						</div>	
+						<div>
+							<span>Alignment:</span>
+							<span id="alignment"></span>
+						</div>
+
+				</div>	
+					
+				<div class="appe-work-conect">
+
+					<div><span><b><h3>Appearance<h3><b></span></div>
+						<div>
+							<span>Gender:</span>
+							<span id="gender"></span>
+						</div>	
+						<div>
+							<span>Race:</span>
+							<span id="race"></span>
+						</div>	
+						<div>
+							<span>Height:</span>
+							<span id="height"></span>
+						</div>	
+						<div>
+							<span>Weight:</span>
+							<span id="weight"></span>
+						</div>	
+						<div>
+							<span>Eye Color:</span>
+							<span id="eyeColor"></span>
+						</div>
+						<div>
+							<span>Hair Color:</span>
+							<span id="hairColor"></span>
+						</div>	
+						<div><span><b><h3>Work<h3><b></span></div>
+							<div>
+								<span>Occupation:</span>
+								<span id="occupation"></span>
+							</div>	
+							<div>
+								<span>Base:</span>
+								<span id="base"></span>
+							</div>	
+						<div><span><b><h3>Connections<h3><b></span></div>
+							<div>
+								<span>GroupAffiliation:</span>
+								<span id="groupAffiliation"></span>
+							</div>	
+							<div>
+								<span>Relatives:</span>
+								<span id="relatives"></span>
+							</div>	
+
+				</div>
+			</div>
+
+		</main>
+		<script src="../../utils/get-hero-id.js"></script>
+		<script src="../../store.js"></script>
+		<script src="./detail.js"></script>
+		<script>
+			const heroId = getHeroId(location);
+			const hero = store.getHeroById(heroId);
+			let detailComponent = new DetailComponent(hero);
+
+			if (hero) {
+				let idElement = document.getElementById('detail-title');
+				detailComponent.updateHtmlValue(
+					idElement,
+					'innerHTML',
+					detailComponent.hero.name
+				);
+
+				idElement = document.getElementById('hero-id__value');
+				detailComponent.updateHtmlValue(
+					idElement,
+					'innerHTML',
+					detailComponent.hero.id
+				);
+
+				nameElement = document.getElementById('hero-name__input');
+				detailComponent.updateHtmlValue(
+					nameElement,
+					'value',
+					detailComponent.hero.name
+				);
+
+				imageElement = document.getElementById('image');
+				detailComponent.updateHtmlValue(
+					imageElement,
+					'src',
+					detailComponent.hero.images.md
+				);
+				slugElement = document.getElementById('slug');
+				detailComponent.updateHtmlValue(
+					slugElement,
+					'innerHTML',
+					detailComponent.hero.slug
+				);
+				powerstatsElement = document.getElementById('intelligence');
+				detailComponent.updateHtmlValue(
+					powerstatsElement,
+					'innerHTML',
+					detailComponent.hero.powerstats.intelligence
+				);
+				strengthElement = document.getElementById('strength');
+				detailComponent.updateHtmlValue(
+					strengthElement,
+					'innerHTML',
+					detailComponent.hero.powerstats.strength
+				);
+				
+				speedElement = document.getElementById('speed');
+				detailComponent.updateHtmlValue(
+					speedElement,
+					'innerHTML',
+					detailComponent.hero.powerstats.speed
+				);
+
+				durabilityElement = document.getElementById('durability');
+				detailComponent.updateHtmlValue(
+					durabilityElement,
+					'innerHTML',
+					detailComponent.hero.powerstats.durability
+				);
+				powerElement = document.getElementById('power');
+				detailComponent.updateHtmlValue(
+					powerElement,
+					'innerHTML',
+					detailComponent.hero.powerstats.power
+				);
+				combatElement = document.getElementById('combat');
+				detailComponent.updateHtmlValue(
+					combatElement,
+					'innerHTML',
+					detailComponent.hero.powerstats.combat
+				);
+
+				// fullNameElement = document.getElementById('fullName');
+				// detailComponent.updateHtmlValue(
+				// 	fullNameElement,
+				// 	'innerHTML',
+				// 	detailComponent.hero.biography.fullName
+				// );
+				// alterEgosElement = document.getElementById('alterEgos');
+				// detailComponent.updateHtmlValue(
+				// 	alterEgosElement,
+				// 	'innerHTML',
+				// 	detailComponent.hero.biography.alterEgos
+				// );
+				// aliasesElement = document.getElementById('aliases');
+				// detailComponent.updateHtmlValue(
+				// 	aliasesElement,
+				// 	'innerHTML',
+				// 	detailComponent.hero.biography.aliases
+				// );
+				// placeOfBirthElement = document.getElementById('placeOfBirth');
+				// detailComponent.updateHtmlValue(
+				// 	placeOfBirthElement,
+				// 	'innerHTML',
+				// 	detailComponent.hero.biography.placeOfBirth
+				// );
+				// firstAppearanceElement = document.getElementById('firstAppearance');
+				// detailComponent.updateHtmlValue(
+				// 	firstAppearanceElement,
+				// 	'innerHTML',
+				// 	detailComponent.hero.biography.firstAppearance
+				// );
+				// publisherElement = document.getElementById('publisher');
+				// detailComponent.updateHtmlValue(
+				// 	publisherElement,
+				// 	'innerHTML',
+				// 	detailComponent.hero.biography.publisher
+				// );
+				// alignmentElement = document.getElementById('alignment');
+				// detailComponent.updateHtmlValue(
+				// 	alignmentElement,
+				// 	'innerHTML',
+				// 	detailComponent.hero.biography.alignment
+				// );
+
+				detailComponent.updateHTMLValueWithHeroProperty("biography");
+				detailComponent.updateHTMLValueWithHeroProperty("appearance")
+				detailComponent.updateHTMLValueWithHeroProperty("work")
+				detailComponent.updateHTMLValueWithHeroProperty("connections")
+			}
+		</script>
+	</body>
+</html>

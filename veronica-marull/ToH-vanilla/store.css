@@ -1,0 +1,38 @@
+h3 {
+	text-align: center;
+}
+
+/*.top-heroes,*/
+.container1 {
+	display: flex;
+	justify-content: center;
+}
+.top-heroes {
+	display: flex;
+}
+
+.top-hero-btn {
+	padding: 20px;
+	background-color: #3f525c;
+	margin: 10px;
+	width: 80px;
+	height: 80px;
+	color: white;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.top-hero-btn:hover {
+	background-color: #cfd8dc;
+}
+
+a {
+	cursor: pointer;
+	cursor: hand;
+}
+.buttons {
+	display: flex;
+}
+.button {
+	padding: 10px;
+}

@@ -1,0 +1,26 @@
+ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+}
+
+li {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: 1px solid black;
+	width: 130px;
+	text-align: center;
+	background-color: cornflowerblue;
+	color: white;
+	font-size: 20px;
+}
+
+h3 {
+	margin-left: 30px;
+}
+
+a:link,
+a:visited,
+a:active {
+	text-decoration: none;
+}
