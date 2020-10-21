@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail</title>
+    <title id="tab-title"></title>
     <link rel="stylesheet" href="./detail.css">
     <link rel="shortcut icon" id="tabImage" href="" type="image/x-icon">
 </head>
@@ -11,8 +11,8 @@
     <header>
     <h1>Tour of Heroes</h1>
         <nav class="navigation">
-            <a href="../dashbord.html" class="nav-button">Dashboard</a>
-            <a href="../list-of-heroes.html" class="nav-button">Heroes</a>
+            <a href="./dashbord.html" class="nav-button">Dashboard</a>
+            <a href="./list-of-heroes.html" class="nav-button">Heroes</a>
         </nav>
     </header>
     <main>
@@ -29,8 +29,8 @@
                         <input type="text" class="name-input" id="name-input"></input>
                     </div>
                 </div>
-                <div id="head-info__image">
-                </div>
+                <div id="head-info__image"></div>
+                <div class="flex-spacer"></div>
             </div>
             <section id="powerstats">
                 <h3 class="powerstats__title">Power Stats</h3>
@@ -102,22 +102,25 @@
                 </section>
             </section>
         </div>
-        <a href="../list-of-heroes.html" class="nav-button">Back</a>
+        <a href="./list-of-heroes.html" class="nav-button">Back</a>
     </main>
     <script src="../store.js"></script>
     <script>
-        let id = +window.location.search.replace('?id=','');
-        document.getElementById('hero-title').innerHTML = store.heroTitle(id);
-        document.getElementById('id-text').innerHTML = id;
-        document.getElementById('head-info__image').innerHTML = store.setImage(id);
-        const nameInput = document.getElementById('name-input');
-        store.updateHtmlValue(nameInput, "value", store.getHeroById(id)["name"]);
-        store.drawPowerStats(id);
-        document.getElementById('appearance__items').innerHTML = store.setAppearance(id);
-        document.getElementById('biography__items').innerHTML = store.setBiography(id);
-        document.getElementById('work__items').innerHTML = store.setWork(id);
-        document.getElementById('connections__items').innerHTML = store.setConnections(id);
-        document.getElementById('tabImage').href = store.imageTab(id);
+        store.loadHeroes().then(()=>{
+            let id = +window.location.search.replace('?id=','');
+            document.getElementById('hero-title').innerHTML = store.heroTitle(id);
+            document.getElementById('tab-title').innerHTML = store.heroTitle(id);
+            document.getElementById('tabImage').href = store.imageTab(id);
+            document.getElementById('id-text').innerHTML = id;
+            document.getElementById('head-info__image').innerHTML = store.setImage(id);
+            const nameInput = document.getElementById('name-input');
+            store.updateHtmlValue(nameInput, "value", store.getHeroById(id)["name"]);
+            store.drawPowerStats(id);
+            document.getElementById('appearance__items').innerHTML = store.setAppearance(id);
+            document.getElementById('biography__items').innerHTML = store.setBiography(id);
+            document.getElementById('work__items').innerHTML = store.setWork(id);
+            document.getElementById('connections__items').innerHTML = store.setConnections(id);
+        });
     </script>
 </body>
 </html>

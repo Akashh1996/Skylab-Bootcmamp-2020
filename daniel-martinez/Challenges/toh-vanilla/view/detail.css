@@ -46,8 +46,13 @@ a:hover {
 .details-container__head-info {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 	flex-wrap: wrap-reverse;
+}
+
+.head-info__id-and-name,
+#head-info__image,
+.flex-spacer {
+	flex: 1;
 }
 
 .details-container {
@@ -137,24 +142,20 @@ svg {
 #biography__items,
 #work__items,
 #connections__items {
-	padding-left: 30px;
+	padding-left: 10px;
 	text-transform: capitalize;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
 	#image-sm {
 		display: block;
-	}
-}
-
-@media screen and (min-width: 500px) and (max-width: 900px) {
-	#image-sm {
-		display: block;
+		border: 1px solid black;
 	}
 }
 
 @media screen and (min-width: 900px) {
 	#image-md {
 		display: block;
+		border: 1px solid black;
 	}
 }

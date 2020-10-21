@@ -19,10 +19,12 @@
         <ul id="list-heroes-container">
         </ul>
     </main>
-    <script src="./store.js">
+    <script src="../store.js">
     </script>
     <script>
-    document.getElementById('list-heroes-container').innerHTML = store.anchorListOfHeroes();
+        store.loadHeroes().then(()=>{
+            document.getElementById('list-heroes-container').innerHTML = store.anchorListOfHeroes();
+        });
     </script>
 </body>
 </html>

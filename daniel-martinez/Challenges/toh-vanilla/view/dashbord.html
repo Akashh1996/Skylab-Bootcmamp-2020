@@ -19,9 +19,11 @@
         <div id="top-heroes-container">
         </div>
     </main>
-    <script src="./store.js"></script>
+    <script src="../store.js"></script>
     <script>
-    document.getElementById('top-heroes-container').innerHTML = store.setDashboard();
+    store.loadHeroes().then(()=>{
+        document.getElementById('top-heroes-container').innerHTML = store.setDashboard();
+    });
     </script>
 </body>
 </html>
