@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../style/list.css" />
+		<title>List</title>
+	</head>
+	<body>
+		<div id="general-container">
+			<div id="main-container" class="container">
+				<header>
+					<div class="title">POKEMONS API</div>
+					<div class="options">
+						<div id="option-dashboard">
+							<a href="../dashboard/dashboard.html">Dashboard</a>
+						</div>
+						<div id="option-heroes"><a href="#">Pokemons</a></div>
+					</div>
+				</header>
+				<main>
+					<div class="list-container">
+						<div class="title-list">My Pokemons</div>
+						<div id="list-pokemons" class="list-ranking"></div>
+					</div>
+				</main>
+			</div>
+		</div>
+
+		<script src="../../store.js"></script>
+		<script src="../list/list.js"></script>
+		<script>
+			store.loadPokemonsList().then(() => {
+				// debugger;
+				let pokemons = store.getPokemons();
+
+				console.log(pokemons);
+
+				const pokemonsComponent = new PokemonsComponent(pokemons);
+				if (pokemons) {
+					let element = document.getElementById('list-pokemons');
+					pokemonsComponent.updateHtmlPokemonList(element);
+				}
+			});
+		</script>
+	</body>
+</html>
