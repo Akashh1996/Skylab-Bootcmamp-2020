@@ -25804,22 +25804,26 @@ var superHeroes = [
       }
     }
   ];
-var selected; 
-function addElement(){
+  
+  function addElement(){
     for(let i = 0; i < 10; i++){
         const newA = document.createElement("a");
         const lis = document.createElement("li");
         const br = document.createElement("br");
+        const br2 = document.createElement("br");
         heroWeb = 'detailhero.html' + '#' + (i)
         newA.setAttribute('href',heroWeb);
         newA.setAttribute("id","SuperheroeList");
         newA.addEventListener("click", getTheId, false);
         const brs = document.createTextNode("");
-        const newContent = document.createTextNode((i+1)+"." + superHeroes[i].name);
+        const brs2 = document.createTextNode("");
+        const newContent = document.createTextNode((i+1)+ " " + superHeroes[i].name);
+        br2.appendChild(brs2);
         br.appendChild(brs);
         newA.appendChild(newContent);
         lis.appendChild(newA);
         const currentEl = document.getElementById("End");
+        document.body.insertBefore(br2,currentEl);
         document.body.insertBefore(br,currentEl);
         document.body.insertBefore(newA,currentEl);
     }
@@ -25836,14 +25840,14 @@ function seletedHeroInfoDisplay(index){
                 document.getElementById("Property1").innerHTML = property + ": " + superHeroes[index][property];
             }
             if(property === "name"){
+                document.getElementById("Property0").innerHTML =superHeroes[index][property];
                 document.getElementById("Property2").innerHTML = property + ": " + superHeroes[index][property];
             }
             if(property === "slug"){
                 document.getElementById("Property3").innerHTML = property + ": " + superHeroes[index][property];
             }
-            console.log(`${property}: ${superHeroes[index][property]}`);
             if(property === "powerstats"){
-                document.getElementById("Property4").innerHTML = property + ":";
+                document.getElementById("Property4").innerHTML = "Powerstats";
                 for (var property2 in superHeroes[index].powerstats) {
                     if (Object.prototype.hasOwnProperty.call(superHeroes[index].powerstats, property2)) {
                         if(property2 === "intelligence"){
@@ -25870,24 +25874,24 @@ function seletedHeroInfoDisplay(index){
             if(property === "appearance"){
                 for (var property2 in superHeroes[index].appearance) {
                     if (Object.prototype.hasOwnProperty.call(superHeroes[index].appearance, property2)) {
-                        document.getElementById("Property5").innerHTML = property + ":";
+                        document.getElementById("Property5").innerHTML = "Apperance";
                         if(property2 === "gender"){
-                            document.getElementById("Property5.1").innerHTML = property2 + ": " + superHeroes[index].powerstats[property2];
+                            document.getElementById("Property5.1").innerHTML = property2 + ": " + superHeroes[index].appearance[property2];
                         }
                         if(property2 === "race"){
-                            document.getElementById("Property5.2").innerHTML = property2 + ": " + superHeroes[index].powerstats[property2];
+                            document.getElementById("Property5.2").innerHTML = property2 + ": " + superHeroes[index].appearance[property2];
                         }
                         if(property2 === "height"){
-                            document.getElementById("Property5.3").innerHTML = property2 + ": " + superHeroes[index].powerstats[property2];
+                            document.getElementById("Property5.3").innerHTML = property2 + ": " + superHeroes[index].appearance[property2];
                         }
                         if(property2 === "weight"){
-                            document.getElementById("Property5.4").innerHTML = property2 + ": " + superHeroes[index].powerstats[property2];
+                            document.getElementById("Property5.4").innerHTML = property2 + ": " + superHeroes[index].appearance[property2];
                         }
                         if(property2 === "eyeColor"){
-                            document.getElementById("Property5.5").innerHTML = "eye Color: " + superHeroes[index].powerstats[property2];
+                            document.getElementById("Property5.5").innerHTML = "eye Color: " + superHeroes[index].appearance[property2];
                         }
                         if(property2 === "hairColor"){
-                            document.getElementById("Property5.6").innerHTML = "hair Color: " + superHeroes[index].powerstats[property2];
+                            document.getElementById("Property5.6").innerHTML = "hair Color: " + superHeroes[index].appearance[property2];
                         }
                     }
                 }
@@ -25895,27 +25899,27 @@ function seletedHeroInfoDisplay(index){
             if(property === "biography"){
                 for (var property2 in superHeroes[index].biography) {
                     if (Object.prototype.hasOwnProperty.call(superHeroes[index].biography, property2)) {
-                        document.getElementById("Property6").innerHTML = property + ":";
+                        document.getElementById("Property6").innerHTML = "Biography";
                         if(property2 === "fullName"){
-                            document.getElementById("Property6.1").innerHTML = "full name: " + superHeroes[index].powerstats[property2];
+                            document.getElementById("Property6.1").innerHTML = "full name: " + superHeroes[index].biography[property2];
                         }
                         if(property2 === "alterEgos"){
-                            document.getElementById("Property6.2").innerHTML = "alter egos: " + superHeroes[index].powerstats[property2];
+                            document.getElementById("Property6.2").innerHTML = "alter egos: " + superHeroes[index].biography[property2];
                         }
                         if(property2 === "aliases"){
-                            document.getElementById("Property6.3").innerHTML = property2 + ": " + superHeroes[index].powerstats[property2];
+                            document.getElementById("Property6.3").innerHTML = property2 + ": " + superHeroes[index].biography[property2];
                         }
                         if(property2 === "placeOfBirth"){
-                            document.getElementById("Property6.4").innerHTML = "place of Birth: " + superHeroes[index].powerstats[property2];
+                            document.getElementById("Property6.4").innerHTML = "place of Birth: " + superHeroes[index].biography[property2];
                         }
                         if(property2 === "firstAppearance"){
-                            document.getElementById("Property6.5").innerHTML = "first appearance: " + superHeroes[index].powerstats[property2];
+                            document.getElementById("Property6.5").innerHTML = "first appearance: " + superHeroes[index].biography[property2];
                         }
                         if(property2 === "publisher"){
-                            document.getElementById("Property6.6").innerHTML = "publisher: " + superHeroes[index].powerstats[property2];
+                            document.getElementById("Property6.6").innerHTML = "publisher: " + superHeroes[index].biography[property2];
                         }
                         if(property2 === "alignment"){
-                            document.getElementById("Property6.7").innerHTML = "alignment:  " + superHeroes[index].powerstats[property2];
+                            document.getElementById("Property6.7").innerHTML = "alignment:  " + superHeroes[index].biography[property2];
                         }
                     }
                 }
@@ -25923,12 +25927,12 @@ function seletedHeroInfoDisplay(index){
             if(property === "work"){
                 for (var property2 in superHeroes[index].work) {
                     if (Object.prototype.hasOwnProperty.call(superHeroes[index].work, property2)) {
-                        document.getElementById("Property7").innerHTML = property + ":";
+                        document.getElementById("Property7").innerHTML = "Work";
                         if(property2 === "occupation"){
-                            document.getElementById("Property7.1").innerHTML = property2 + ": " + superHeroes[index].powerstats[property2];
+                            document.getElementById("Property7.1").innerHTML = property2 + ": " + superHeroes[index].work[property2];
                         }
                         if(property2 === "base"){
-                            document.getElementById("Property7.2").innerHTML = property2 + ": " + superHeroes[index].powerstats[property2];
+                            document.getElementById("Property7.2").innerHTML = property2 + ": " + superHeroes[index].work[property2];
                         }
                     }
                 }
@@ -25936,12 +25940,12 @@ function seletedHeroInfoDisplay(index){
             if(property === "connections"){
                 for (var property2 in superHeroes[index].connections) {
                     if (Object.prototype.hasOwnProperty.call(superHeroes[index].connections, property2)) {
-                        document.getElementById("Property8").innerHTML = property + ":";
+                        document.getElementById("Property8").innerHTML = "Connections";
                         if(property2 === "groupAffiliation"){
-                            document.getElementById("Property8.1").innerHTML = "group affiliation: " + superHeroes[index].powerstats[property2];
+                            document.getElementById("Property8.1").innerHTML = "group affiliation: " + superHeroes[index].connections[property2];
                         }
                         if(property2 === "relatives"){
-                            document.getElementById("Property8.2").innerHTML = property2 + ": " + superHeroes[index].powerstats[property2];
+                            document.getElementById("Property8.2").innerHTML = property2 + ": " + superHeroes[index].connections[property2];
                         }
                     }
                 }
@@ -25949,13 +25953,15 @@ function seletedHeroInfoDisplay(index){
             if(property === "images"){
                 for (var property2 in superHeroes[index].images) {
                     if (Object.prototype.hasOwnProperty.call(superHeroes[index].images, property2)) {
-                        console.log(`${property2}: ${superHeroes[index].images[property2]}`);
-                        
+                      if(property2 === "sm"){
+                        document.getElementById("Imagen").src = superHeroes[index].images[property2];
+                      }
                     }
                 }
             }
         }
     }
 }
+
 //seletedHeroInfoDisplay(index);
 //module.export = superHeroes;
