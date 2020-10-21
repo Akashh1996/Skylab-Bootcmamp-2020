@@ -65,5 +65,4 @@ class Store {
 
 const store = new Store();
 
-
 module.exports = store;
