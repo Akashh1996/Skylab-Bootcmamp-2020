@@ -1,7 +1,12 @@
 {
-  "name": "toh-marco",
+  "name": "Pokemon",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
+  "dependencies": {
+    "jest": "^26.6.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "jest --watch",
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
@@ -9,10 +14,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "jest": "^26.6.0"
-  },
-  "dependencies": {},
-  "description": ""
+  "license": "ISC"
 }
