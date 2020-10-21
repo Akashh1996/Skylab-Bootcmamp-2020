@@ -3,19 +3,27 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Tour of Heroes</title>
+		<title>Pokemon list</title>
 		<link rel="stylesheet" href="../../styles.css" />
-		<link rel="stylesheet" href="./dashboard.css" />
+		<link rel="stylesheet" href="./heroes.css" />
 	</head>
 	<body>
-		<h1>Pokemon</h1>
+		<h1>Pokemon list</h1>
 		<nav>
 			<a href="../dashboard/dashboard.html">Dashboard</a>
-			<a href="../heroes/heroes.html">Pokemon</a>
+			<a href="../pokemon-list/pokemon.html">Pokemon</a>
 		</nav>
 		<main>
-			<h3>Pokemon</h3>
-			<div class="grid grid-pad" id="top-pokemon__list"></div>
+			<h2>My Pokemon</h2>
+
+			<div>
+				<label
+					>Hero name:
+					<input id="hero-name__input" />
+				</label>
+			</div>
+
+			<ul class="heroes" id="heroes"></ul>
 		</main>
 	</body>
 </html>
