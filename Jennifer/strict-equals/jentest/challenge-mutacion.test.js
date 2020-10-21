@@ -1,4 +1,3 @@
-const copyObject = require('./challenge-mutacion')
 
 describe('copyObject', () => {
 	test('should clone null', () => {
