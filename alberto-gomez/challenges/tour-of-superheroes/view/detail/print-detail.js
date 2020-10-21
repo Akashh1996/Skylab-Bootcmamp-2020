@@ -1,5 +1,3 @@
-/* const getIdFromUrlParams = require('../../hero-location');
- */
 function heroesInDetail() {
 	let locationId = getIdFromUrlParams(location.search);
 	let hero = store.getHeroById(locationId);

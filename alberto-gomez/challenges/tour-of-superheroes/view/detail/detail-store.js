@@ -205,8 +205,6 @@ class Store {
 	getHeroById(heroId) {
 		return this.getHeroes().find((hero) => hero.id === heroId);
 	}
-
-	// FUNCION TOP HEROES LIST
 }
 
 const store = new Store();
