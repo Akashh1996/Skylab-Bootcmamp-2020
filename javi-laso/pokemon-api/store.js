@@ -36,29 +36,54 @@ class Store {
     createListElement(parentElement, pokemonList, index) {
             let divElement = document.createElement('div');
             parentElement.appendChild(divElement);
-            divElement.setAttribute('class', 'abilities');
-            let anchorName = document.createElement('a');
-            divElement.appendChild(anchorName);
-            divElement.setAttribute('class', 'ability-name');
-
-
             let pokemonAnchor = document.createElement('a');
-            listElement.appendChild(pokemonAnchor);
+            divElement.appendChild(pokemonAnchor);
             pokemonAnchor.setAttribute('class', 'pokemon-list-element');
-            pokemonAnchor.setAttribute('href', `../Details/details.html?name=${pokemonList[index].name}`)
-            let anchorName = document.createElement('div');
+            pokemonAnchor.setAttribute('href', `../Details/details.html?name=${pokemonList[index].name}`);
+            let anchorName = document.createElement('span');
             pokemonAnchor.appendChild(anchorName);
             anchorName.setAttribute('class', 'pokemon-name');
             anchorName.innerHTML = `${pokemonList[index].name}`;
     }
 
-    getNamefromSearch(search) {
-        const searchArray = search.split('=');
-        return searchArray[1];
+    getNameFromSearch(search) {
+        const searchArray = search.split('?')[1].split('&').map(element => element.split('='));
+        const nameArray = searchArray.find(value => value.includes("name"));
+        return nameArray[1];
     }
 
-    createAbilityElement(parentElement, pokemon, index){
+    createAbilityElement(parentElement, pokemonList, groupName, index){
+        let listElement = document.createElement('li');
+        parentElement.appendChild(listElement);
+        listElement.setAttribute('class', 'capitalize');
+        let pokemonAnchor = document.createElement('a');
+        listElement.appendChild(pokemonAnchor);
+        pokemonAnchor.setAttribute('class', `${groupName}-list-element`);
+        let anchorName = document.createElement('span');
+        pokemonAnchor.appendChild(anchorName);
+        anchorName.setAttribute('class', `${groupName}-name`);
+        anchorName.innerHTML = `${pokemonList[index][groupName].name}`;
+    }
 
+    getDashOffSetfromPercent(circle, percent) {
+        let radius = circle.getAttribute('r');
+        let circumference = Math.PI * radius * 2;
+        percent = percent < 0 ? 0 : percent > 200 ? 200 : percent;
+        let dashOffSet = circumference - percent / 200 * circumference;
+        let dashArray = circumference;
+        return [dashOffSet, dashArray];
+    }
+
+    setStrokeDashoffsetInCircle(circle, percent) {
+        circle.style.strokeDashoffset = this.getDashOffSetfromPercent(circle, percent)[0];
+    }
+
+    setStrokeDasharrayInCircle (circle, percent) {
+        circle.style.strokeDasharray = this.getDashOffSetfromPercent(circle, percent)[1];
+    }
+
+    updateValueHtml(element, property, value) {
+        element[property] = !!value ? value : '-';
     }
 }
 

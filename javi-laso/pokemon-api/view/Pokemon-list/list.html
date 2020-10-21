@@ -8,20 +8,13 @@
 </head>
 <body>
     <main>
+        <button id="previous" class="top-buttons">Previous</button>
+        <button id="next" class="top-buttons">Next</button>
         <div id="pokemon-container">
             <ul id="pokemon-list"></ul>
         </div>
     </main>
     <script src="../../store.js"></script>
-    <script>
-        const listContainer = document.getElementById('pokemon-list');
-        store.loadPokedex(150).then(() => {
-            pokedex = store.getPokemonList();
-            console.log(pokedex);
-            for (let index = 0; index < pokedex.results.length; index++) {
-                store.createListElement(listContainer, pokedex.results, index);
-            }
-        });
-    </script>
+    <script src="list.js"></script>
 </body>
 </html>

@@ -8,40 +8,83 @@
 </head>
 <body>
     <main>
-        <section class="id-container">
-            <label for="id-input" id="id-label">Id:</label>
+        <button id="back">Back</button>
+        <h1 id="name-input" class="capitalize"></h1>
+        <section class="id-container horizontal-containers">
+            <h3 id="id-label">Id:</h3>
             <span id="id-input"></span>
+            <img id="pokemon-img" src="" alt="">
         </section>
-        <section class="name-container">
-            <label for="name-input" id="name-label">Name:</label>
-            <span id="name-input" class="capitalize" type="text" placeholder="" value=""></span>
+        <section class="weight-container horizontal-containers">
+            <h3 id="weight-label">Weight:</h3>
+            <span id="weight-input"></span>
         </section>
-        <section class="weight-container">
-            <label for="weight-input" id="weight-label">Weight:</label>
-            <span id="weight-input" type="text" placeholder="" value=""></span>
+        <section class="types-container vertical-containers">
+            <h3 id="types-label">Types:</h3>
+            <ul id="types"></ul>
         </section>
-        <section class="abilities-container">
-            <label for="ability-input" id="ability-label">Abilities:</label>
-            <div class="abilities">
-                <div class="ability-name"></div>
-            </div>
+        <section class="abilities-container vertical-containers">
+            <h3 id="ability-label">Abilities:</h3>
+            <ul id="abilities"></ul>
         </section>
+        <div class="horizontal-containers">
+            <section class="moves-container vertical-containers">
+                <h3 id="moves-label">Possible moves:</h3>
+                <ul id="moves"></ul>
+            </section>
+            <section class="stats-container horizontal-containers">
+                <div id="hp" class="stats">
+                    <svg height="100" width="100">
+                        <circle cx="50" cy="50" r="37"></circle>
+                        <circle class="circle" cx="50" cy="50" r="37"></circle>
+                    </svg>
+                    <span class="stats__name">Hit Points</span>
+                    <span id="hp-number" class="stats__number">50</span>
+                </div>
+                <div id="attack" class="stats">
+                    <svg height="100" width="100">
+                        <circle cx="50" cy="50" r="37"></circle>
+                        <circle class="circle" cx="50" cy="50" r="37"></circle>
+                    </svg>
+                    <span class="stats__name">Attack</span>
+                    <span id="attack-number" class="stats__number">50</span>
+                </div>
+                <div id="defense" class="stats">
+                    <svg height="100" width="100">
+                        <circle cx="50" cy="50" r="37"></circle>
+                        <circle class="circle" cx="50" cy="50" r="37"></circle>
+                    </svg>
+                    <span class="stats__name">Defense</span>
+                    <span id="defense-number" class="stats__number">50</span>
+                </div>
+                <div id="sp-attack" class="stats">
+                    <svg height="100" width="100">
+                        <circle cx="50" cy="50" r="37"></circle>
+                        <circle class="circle" cx="50" cy="50" r="37"></circle>
+                    </svg>
+                    <span class="stats__name">Special Attack</span>
+                    <span id="sp-attack-number" class="stats__number">50</span>
+                </div>
+                <div id="sp-defense" class="stats">
+                    <svg height="100" width="100">
+                        <circle cx="50" cy="50" r="37"></circle>
+                        <circle class="circle" cx="50" cy="50" r="37"></circle>
+                    </svg>
+                    <span class="stats__name">Special Defense</span>
+                    <span id="sp-defense-number" class="stats__number">50</span>
+                </div>
+                <div id="speed" class="stats">
+                    <svg height="100" width="100">
+                        <circle cx="50" cy="50" r="37"></circle>
+                        <circle class="circle" cx="50" cy="50" r="37"></circle>
+                    </svg>
+                    <span class="stats__name">Speed</span>
+                    <span id="speed-number" class="stats__number">50</span>
+                </div>
+            </section>
+        </div>
     </main>
     <script src="../../store.js"></script>
-    <script>
-        const idInput = document.getElementById('id-input');
-        const nameInput = document.getElementById('name-input');
-        const weight = document.getElementById('weight-input');
-
-        const url = window.location.search;
-        const name = store.getNamefromSearch(url);
-
-        const pok = store.loadPokemonByName(name).then(() => {
-            let pokemon = store.getPokemon();
-            idInput.innerHTML = pokemon.id;
-            weight.innerHTML = pokemon.weight;
-            nameInput.innerHTML = name;
-        });
-    </script>
+    <script src="details.js"></script>
 </body>
 </html>

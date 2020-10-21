@@ -1,3 +1,99 @@
+body * {
+	margin: 0;
+	padding: 0;
+}
+
 .capitalize {
 	text-transform: capitalize;
+}
+
+h1 {
+	margin: 30px;
+}
+
+section {
+	margin: 20px 30px;
+}
+
+.horizontal-containers {
+	display: flex;
+}
+
+.vertical-containers {
+	display: flex;
+	flex-direction: column;
+}
+
+#back {
+	margin: 20px 30px 0px;
+	width: 60px;
+	height: 30px;
+}
+
+#pokemon-img {
+	position: absolute;
+	left: 400px;
+	top: 50px;
+	object-fit: contain;
+	width: auto;
+	height: 300px;
+}
+
+#abilities li,
+#moves li,
+#types li {
+	margin: 10px 0px;
+	list-style-type: none;
+}
+
+#abilities a,
+#moves a,
+#types a {
+	cursor: pointer;
+}
+
+.id-container h3,
+.weight-container h3,
+.moves-container h3 {
+	margin-right: 10px;
+}
+
+.id-container span,
+.weight-container span {
+	font-size: 20px;
+}
+
+.stats {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.stats svg {
+	position: relative;
+	width: 100px;
+	height: 100px;
+}
+
+.stats svg circle {
+	width: 100px;
+	height: 100px;
+	fill: none;
+	stroke-width: 9;
+	stroke: rgb(102, 116, 243);
+	transform: rotate(-90deg);
+	transform-origin: 50% 50%;
+}
+
+.stats svg circle:nth-child(1) {
+	stroke-dasharray: 0;
+	stroke-dashoffset: 0;
+	stroke: #969696;
+}
+
+.stats__number {
+	position: absolute;
+	top: 32px;
+	font-size: 30px;
 }
