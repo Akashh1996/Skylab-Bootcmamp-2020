@@ -2,14 +2,9 @@ let _heroes;
 
 class Store {
 	loadSuperHeroes() {
-		return fetch('../api/superHeroData.json')
-			.then((response) => {
-				debugger;
-				response.json();
-			})
-			.then((value) => {
-				_heroes = value;
-			});
+		return fetch('../../api/superHeroData.json').then((response) =>
+			response.json().then((value) => (_heroes = value))
+		);
 	}
 	getHeroes() {
 		return _heroes;
@@ -23,6 +18,7 @@ class Store {
 		return this.getHeroes().slice(0, 4);
 	}
 }
+
 const store = new Store();
 
 module.exports = store;

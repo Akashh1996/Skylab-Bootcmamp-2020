@@ -5,15 +5,13 @@ class DetailComponent {
 	updateHtmlValue(element, property, value) {
 		element[property] = value;
 	}
-	getPowerStats() {
-		console.log(hero.powerstats);
-	}
+
 	getProfileImage() {
 		const imgProfileElement = document.getElementById(
 			'hero-profile-img__block'
 		);
 		const createImage = document.createElement('img');
-		createImage.setAttribute('src', `${hero.images.md}`);
+		createImage.setAttribute('src', `${this.hero.images.md}`);
 		createImage.style.width = '100%';
 		createImage.style.borderRadius = '10px';
 		createImage.style.boxShadow = '0px 0px 33px -1px rgba(54, 10, 54, 0.56)';
@@ -23,9 +21,10 @@ class DetailComponent {
 	}
 
 	getStats(selectedStat) {
+		debugger;
+		const heroPropArr = [, 'powerstats', 'appearance', 'biography', 'work'];
 		const heroPowerstats = document.querySelector('.hero-stats');
-		const titleStat = document.querySelector('stat-title');
-		const curStats = hero[selectedStat];
+		const curStats = this.hero[heroPropArr[selectedStat]];
 		heroPowerstats.innerHTML = '';
 		for (const property in curStats) {
 			if (curStats.hasOwnProperty(property)) {
@@ -43,9 +42,9 @@ class DetailComponent {
 }
 
 store.loadSuperHeroes().then(() => {
-	let detailComponent = new DetailComponent(hero);
 	const heroId = getHeroId(location);
 	const hero = store.getHeroById(heroId);
+	let detailComponent = new DetailComponent(hero);
 	detailComponent.getProfileImage();
 
 	if (hero) {
@@ -76,6 +75,11 @@ store.loadSuperHeroes().then(() => {
 			detailComponent.hero.name
 		);
 	}
+
+	const selectedHeroStat = document.getElementById('hero-additional-info');
+	selectedHeroStat.addEventListener('change', function (event) {
+		detailComponent.getStats(event.target.selectedIndex);
+	});
 });
 
 module.exports = DetailComponent;
