@@ -4,7 +4,7 @@ describe('loadPokemon', () => {
 	test('should update pokemon', () => {
 		global.fetch = jest.fn().mockImplementationOnce(() =>
 			Promise.resolve({
-				json: jest.fn().mockReturnValueOnce([{ id: 5, name: 'Charizard' }])
+				json: jest.fn().mockReturnValueOnce()
 			})
 		);
 

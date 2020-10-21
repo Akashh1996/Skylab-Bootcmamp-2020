@@ -3,7 +3,7 @@ let pokemonList;
 
 class Store {
 	loadPokemon() {
-		return fetch('https://pokeapi.co/api/v2/pokemon?limit=150&offset=0')
+		return fetch('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0')
 			.then((response) => response.json())
 			.then((getPokemon) => {
 				pokemonList = getPokemon;
