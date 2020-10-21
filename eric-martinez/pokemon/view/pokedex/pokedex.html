@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+</head>
+<body>
+    <h1>Pokédex</h1>
+
+    <main>
+        <ul class="pokemons" id="pokemons"></ul>
+    </main>
+
+
+    <script src="../../store.js"></script>
+    <script src="./pokedex.js"></script>
+
+    <script>
+        store.loadPokedex().then(() => {
+            console.log(store.getPokemon());
+        });
+
+
+        /* const pokemons = store.getPokemon();
+        const pokedexComponent = new PokedexComponent(pokemons);
+        
+
+        if (pokemons) {
+				let element = document.getElementById('pokemons');
+				pokedexComponent.updateHtmlPokemonList(element);
+			} */
+    </script>
+</body>
+</html>
