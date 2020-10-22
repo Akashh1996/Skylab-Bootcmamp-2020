@@ -15,6 +15,7 @@
             </div>
             <nav class="navigation">
                 <a href="./list.html" class="nav-button">List of Pokémon</a>
+                <a href="" class="nav-button" id="back-button">Back to Pokémon</a>
             </nav>
         </header>
         <main>
@@ -32,32 +33,28 @@
                     </div>
                 </div>
             </div>
-            <div class="description">
-                <h2 class="top-heroes-title">Base Stats</h2>
-                <div id="box-all"></div>
-                <h2 class="top-heroes-title">Types</h2>
-                <ul id="types"></ul>
-                <h2 class="top-heroes-title">Abilities</h2>
-                <ul id="abilities"></ul>
-                <h2 class="top-heroes-title">Moves</h2>
-                <ul id="moves"></ul>
+            <div class="description-ability">
+                <h2 class="top-heroes-title" id="abilityName"></h2>
+                <ul id="ability"></ul>
             </div>
         </main>
     </div>
     <script src="store.js"></script>
     <script>
 
-        let id = +window.location.search.replace('?id=','')
-        
+        let id = +window.location.search.split('&')[0].split('=')[1]
         document.getElementById('id-text').innerHTML = id;
+        document.getElementById('back-button').href=`./detail.html?id=${id}`
 
         store.loadPokemon(id).then((pokemon) => {
             document.getElementById('name-text').value = pokemon.name;
             document.getElementById('hero').src = pokemon.sprites.front_default
-            document.getElementById('box-all').innerHTML = store.statsPokemon(pokemon)
-            document.getElementById('types').innerHTML = store.descriptionPokemon(pokemon,'types','type')
-            document.getElementById('abilities').innerHTML = store.abilityAnchorPokemon(id,pokemon,'abilities','ability')
-            document.getElementById('moves').innerHTML = store.descriptionPokemon(pokemon,'moves','move')
+        })
+
+        let abilityId = +window.location.search.split('&')[1].split('=')[1].split('/')[0]
+        store.loadAbilityPokemon(abilityId).then((ability) => {
+            document.getElementById('ability').innerHTML = store.languageAbility(ability)    
+            document.getElementById('abilityName').innerHTML = `Ability - ${ability.name}`     
         })
 
     </script>
