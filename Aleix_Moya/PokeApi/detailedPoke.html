@@ -24,8 +24,10 @@
                 document.getElementById("type").innerHTML = "type: " + thisPokemon.types[0].type.name + "/" + thisPokemon.types[1].type.name;
                 const currentEl = document.getElementById("End");
 
-                const title = document.createElement("h4");
+                const title = document.createElement("a");
                 const newContent = document.createTextNode("Abilities:");
+                const abilityWeb = 'ability.html' + '#' + (name);
+                title.setAttribute('href', abilityWeb);
                 title.appendChild(newContent);
                 document.body.insertBefore(title, currentEl);
                 for (let i = 0; i < thisPokemon.abilities.length; i++) {

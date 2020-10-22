@@ -1,16 +1,29 @@
 let _pokemon;
+let items;
 let link;
 let linkHtml;
 let thisPokemon;
 class Pokedex{  
-    loadPokedex(){
-        return fetch('https://pokeapi.co/api/v2/pokemon?limit=100&offset=200')
+    loadPokedex(limit, set){
+        debugger;
+        let lista ="https://pokeapi.co/api/v2/pokemon?limit="+ limit +"offset="+ set;
+        return fetch(list);
         .then((response) => {
             return response.json();
         })
         .then((pokemons) =>{
             _pokemon = pokemons;
             return pokemons;
+        });
+    }
+    loadPag(pagUrl){
+        return fetch(pagUrl)
+        .then((response) => {
+            return response.json();
+        })
+        .then((vavayagga) =>{
+            items = vavayagga;
+            return vavayagga;
         });
     }
     getPokedex(){

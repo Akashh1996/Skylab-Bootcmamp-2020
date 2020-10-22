@@ -10,15 +10,30 @@
 
 <body>
     <script src="Pokemon.js"></script>
-    <label for="fname">Busca tu pokemon:</label>
-    <input type="text" id="searchBar" name="fname"><button type="button" onclick="search()">Search</button>
+    <label for="fname" style="margin-right: 7px">Busca tu pokemon:</label>
+    <input type="text" id="searchBar" name="fname"><button type="button" style="margin-bottom: 20px; margin-left: 2px"
+        onclick="search()">Search</button><br>
+    <label for="fname">Longitud de la lista : </label>
+    <input type="text" id="longList" name="fname"><button type="button"
+        style="visibility: hidden; margin-bottom: 5px;"></button><br>
+    <label for="fname">Empieza en numero:</label>
+    <input type="text" id="empNum" name="fname"><button type="button" style="margin-left: 2px" onclick="getList()">Make
+        list</button>
     <p id="check"></p>
     <script>
+        var limit;
+        var set;
+        function getList() {
+            debugger;
+            limit = document.getElementById("longList").value;
+            set = document.getElementById("empNum").value;
+            document.getElementById("check").innerHTML = "list created!"
+        }
         function search() {
             var flag = 0;
             nombre = document.getElementById("searchBar").value;
             gameFreak.getName(nombre).then(() => {
-                gameFreak.loadPokedex().then(() => {
+                gameFreak.loadPokedex(limit, set).then(() => {
                     let propert1 = gameFreak.getPokedex();
                     for (let i = 0; i < _pokemon.results.length; i++) {
                         if (_pokemon.results[i].name === nombre) {
