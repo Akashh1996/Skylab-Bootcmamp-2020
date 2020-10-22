@@ -28,9 +28,26 @@ describe('store', () => {
         });
 
         test('should call getBaseExperience and return 7', () => {
-            store.setPokemon({base_experience: 7})
+            store.setPokemon({base_experience: 7});
             const result = store.getBaseExperience();
             expect(result).toBe(7);
         })
     })
+    
+    describe('loadPokemonsFromAPIById', () => {
+        beforeEach(() => {
+			global.fetch = jest.fn().mockImplementationOnce(() =>
+				Promise.resolve({
+					json: jest.fn().mockReturnValueOnce({ability: []})
+				})
+			);
+        });
+
+        test('should update _pokemons', () => {
+            return store.loadPokemonsFromAPIById().then(() => {
+                expect(store.getPokemon()).toEqual({ability: []})
+            })
+        });
+    });
+    
 });
