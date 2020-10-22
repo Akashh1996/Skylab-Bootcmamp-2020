@@ -21,14 +21,19 @@ describe('Pokemon', () => {
 		beforeEach(() => {
 			global.fetch = jest.fn().mockImplementationOnce(() =>
 				Promise.resolve({
-					json: jest.fn().mockReturnValueOnce([{ id: 12, name: 'Narco' }])
+					json: jest.fn().mockReturnValueOnce(pokemonList)
 				})
 			);
 		});
 
-		test('should update _heroes', () => {
+		test('should return an array of objects', () => {
 			return store.loadPokedex().then(() => {
-				expect(store.getPokemonList()).toEqual([{ id: 12, name: 'Narco' }]);
+				expect(store.getPokemonList()).toEqual([
+                    {test: {name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/"}},
+                    {test: {name: "ivysaur", url: "https://pokeapi.co/api/v2/pokemon/2/"}},
+                    {test: {name: "venusaur", url: "https://pokeapi.co/api/v2/pokemon/3/"}},
+                    {test: {name: "charmander", url: "https://pokeapi.co/api/v2/pokemon/4/"}}
+                ]);
 			});
 		});
     });

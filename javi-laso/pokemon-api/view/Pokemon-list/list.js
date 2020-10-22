@@ -1,5 +1,5 @@
 let startNumber = 0;
-let quantity = 10;
+let quantity = 30;
 
 const listContainer = document.getElementById('pokemon-list');
 const previousBtn = document.getElementById('previous');
@@ -26,7 +26,7 @@ previousBtn.addEventListener('click', () => {
 })
 
 nextBtn.addEventListener('click', () => {
-    startNumber = startNumber + quantity;
+    startNumber = startNumber + quantity > 1050 ? 1050 : startNumber + quantity;
 
     store.loadPokedex(quantity, startNumber).then(() => {
         listContainer.innerHTML = '';

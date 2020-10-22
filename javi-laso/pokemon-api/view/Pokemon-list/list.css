@@ -7,25 +7,30 @@ body * {
 	list-style-type: none;
 	display: flex;
 	flex-direction: column;
-	flex-wrap: none;
+	align-items: flex-start;
+	flex-wrap: wrap;
 	height: 79vh;
 	margin: 30px 25px;
 }
 
+#pokemon-list > div {
+	width: 220px;
+}
+
 .pokemon-list-element {
 	display: flex;
+	justify-content: center;
 	cursor: pointer;
 	text-decoration: none;
 	color: #afafaf;
 	background-color: #eeeeee;
-	width: 180px;
 	margin: 7px 15px 7px 0px;
 	border-radius: 10px;
 	text-transform: capitalize;
 }
 
 .pokemon-list-element span {
-	padding: 20px;
+	padding: 20px 60px;
 }
 
 .top-buttons {
