@@ -4,7 +4,7 @@ class DetailComponent {
     }
 
     loadPhoto(element, property, value) {
-        element[property] = `<img src="${value}" />`;
+        element[property] = `<img src="${value}" class="poke-img"/>`;
     }
 
     updateHtmlValue(element, property, value) {

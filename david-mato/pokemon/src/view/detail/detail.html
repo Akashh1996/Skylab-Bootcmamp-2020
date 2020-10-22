@@ -11,24 +11,28 @@
         <img class="pokemon-title" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="Pokemon title">
     </header>
     <main>
-        <h2 id="poke-name"></h2>
-        <div id="poke-img"></div>
-        <div>
-            <span>Base experience: </span>
-            <span id="poke-base-experience"></span>
-        </div>
-        <div>
-            <span>Abilities: </span>
-            <ul id="poke-abilities"></ul>
-        </div>
-        <div>
-            <span>Height: </span>
-            <span id="poke-height"></span>
-        </div>
-        <div>
-            <span>Weight: </span>
-            <span id="poke-weight"></span>
-        </div>
+        <article class="pokemon-detail-wrapper">
+            <div class="pokemon-detail">
+                <h2 id="poke-name"></h2>
+                <div id="poke-img"></div>
+                <div>
+                    <span class="pokemon-characteristic">Base experience: </span>
+                    <span id="poke-base-experience" class="pokemon-characteristic"></span>
+                </div>
+                <div>
+                    <span class="pokemon-characteristic">Abilities: </span>
+                    <ul id="poke-abilities" class="pokemon-characteristic"></ul>
+                </div>
+                <div>
+                    <span class="pokemon-characteristic">Height: </span>
+                    <span id="poke-height" class="pokemon-characteristic"></span>
+                </div>
+                <div>
+                    <span class="pokemon-characteristic" class="pokemon-characteristic">Weight: </span>
+                    <span id="poke-weight" class="pokemon-characteristic"></span>
+                </div>
+            </div>
+        </article>
     </main>
     <script src="../../store/store.js"></script>
     <script src="detail.js"></script>

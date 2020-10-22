@@ -19,22 +19,49 @@ header {
 	transform: translate(-50%);
 }
 
-.pokemon-list-wrapper {
+.pokemon-list-wrapper,
+.pokemon-detail-wrapper,
+.ability-wrapper {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-bottom: 50px;
 }
 
-.pokemon-list-title {
+.ability-container {
+	width: 70%;
+}
+
+.pokemon-list-title,
+#poke-name,
+#poke-ability-name {
 	font-size: 55px;
 	margin: 50px 0 45px;
+}
+
+#poke-name,
+#poke-ability-name {
+	text-transform: uppercase;
+	margin-top: 60px;
+	text-align: center;
 }
 
 #pokemon-list {
 	display: flex;
 	flex-direction: column;
 	width: fit-content;
-	margin-bottom: 50px;
+}
+
+#ability-explanation,
+.pokemon-characteristic {
+	text-align: justify;
+	font-size: 19px;
+	line-height: 30px;
+}
+
+.poke-img {
+	margin-bottom: 40px;
+	width: 320px;
 }
 
 .pokemon-btn {
