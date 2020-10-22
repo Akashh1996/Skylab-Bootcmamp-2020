@@ -1,27 +1,36 @@
-class PokemonsComponent {
-	constructor(pokemons) {
-		this.pokemons = store.getPokemons();
-	}
+class PokemonComponent {
+    constructor(pokemon) {
+        this.pokemon = pokemon;
+    }
 
-	updateHtmlPokemonList(element) {
-		element.innerHTML = '';
-		this.pokemons.results.forEach((pokemon) => {
-
-			element.innerHTML =
-				element.innerHTML +
-				`
-				<div id="p${pokemon.results}" class="list-item">
-				<div id="p${pokemon.results}-number" class="box-position">1</div>
+    updatePokemonList(element) {
+        let x = 1;
+        element.innerHTML = '';
+        this.pokemon.forEach((eachPokemon) => {
+            element.innerHTML =
+                element.innerHTML +
+                `
+                <div class="list-item">
+				<div class="box-position">${x++}</div>
 				<a
-					id="p${pokemon.results}-name"
 					class="name-position"
-					href="${pokemon.url}"
-					>${pokemon.name}</a
+					href="../details/details.html?pokemonName=${eachPokemon.name}"
+					>${eachPokemon.name}</a
 				>
 			</div>
-`;
-		});
-	}
+
+                `;
+        });
+    }
 }
 
-module.exports = PokemonsComponent;
+module.exports = PokemonComponent;
+
+                // <li>
+
+                // <a href="../details/details.html?pokemonName=${eachPokemon.name}">
+                // <span>${x++}</span> - <span> ${eachPokemon.name}</span>
+
+                // </a>
+
+                // </li>

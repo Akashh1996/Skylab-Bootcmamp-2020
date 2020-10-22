@@ -1,40 +1,36 @@
-let _pokemons;
-
-
+let _pokemonList;
+let _pokemonDetail;
 
 class Store {
 
-	loadPokemonsList() {
-		return fetch('https://pokeapi.co/api/v2/pokemon?limit=100&offset=200').then((response)=>
-		
-		{return response.json();
-		})
-		.then((pokemons)=>{
-			_pokemons=pokemons;
-		})
+    getPokemonData() {
+        return fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0')
+            .then((response) => response.json())
+            .then((pokemon) => {
+                _pokemonList = pokemon.results;
+            });
+    }
+
+    getPokemonList() {
+        return _pokemonList;
+    }
+    
+    getPokemonDetail(name) {
+        return fetch(`https://pokeapi.co/api/v2/pokemon/${name}/`)
+            .then((response) => response.json())
+            .then((pokemon) => {
+                _pokemonDetail = pokemon;
+            });
 	}
+	
+    pokemonDetail() {
+        return _pokemonDetail;
+    }
 
-	// loadPokemonsItem() {
-	// 	return fetch('https://pokeapi.co/api/v2/pokemon?limit=100&offset=200').then((response)=>
-	// 	{return response.json();
-	// 	})
-	// 	.then((pokemons)=>{
-	// 		pokemons=pokemons;
-	// 	})
-	// }
+    getTenPokemons(list) {
+		return this.getPokemonList(list).slice(1, 11);
+    }
 
-
-	getPokemons() {
-		return _pokemons;
-	}
-
-	getPokemonById(pokemonId) {
-		return this.getPokemon().find((poke) => poke.id === pokemonId);
-	}
-
-	getTopPokemons() {
-		return this.getPokemons().slice(1, 20);
-	}
 }
 
 const store = new Store();

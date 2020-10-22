@@ -4,42 +4,50 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../../style/list.css" />
-		<title>List</title>
+		<title>POKEMON LIST</title>
 	</head>
 	<body>
-		<div id="general-container">
-			<div id="main-container" class="container">
-				<header>
-					<div class="title">POKEMONS API</div>
-					<div class="options">
-						<div id="option-dashboard">
-							<a href="../dashboard/dashboard.html">Dashboard</a>
-						</div>
-						<div id="option-heroes"><a href="#">Pokemons</a></div>
-					</div>
-				</header>
-				<main>
-					<div class="list-container">
-						<div class="title-list">My Pokemons</div>
-						<div id="list-pokemons" class="list-ranking"></div>
-					</div>
-				</main>
+		<div class="container">
+			<header>
+				<div class="title">POKEMON'S LIST</div>
+				<div class="subtitle">Gotta catch'em All</div>
+			</header>
+			<div class="pokebol">
+				<img
+					src="../../style/pokeball_PNG25.png"
+					width="300px"
+					height="300px"
+				/>
+			</div>
+			<div id="pokemon-list"></div>
+
+			<div id="main-btns">
+				<input
+					class="main-btn"
+					type="button"
+					onclick="history.back()"
+					name="back return"
+					value="BACK"
+				/>
+				<input
+					class="main-btn"
+					type="button"
+					onclick=""
+					name="back return"
+					value="NEXT"
+				/>
 			</div>
 		</div>
-
 		<script src="../../store.js"></script>
-		<script src="../list/list.js"></script>
+		<script src="./list.js"></script>
 		<script>
-			store.loadPokemonsList().then(() => {
-				// debugger;
-				let pokemons = store.getPokemons();
-
-				console.log(pokemons);
-
-				const pokemonsComponent = new PokemonsComponent(pokemons);
-				if (pokemons) {
-					let element = document.getElementById('list-pokemons');
-					pokemonsComponent.updateHtmlPokemonList(element);
+			store.getPokemonData().then(() => {
+				const pokemonList = store.getTenPokemons();
+				console.log(pokemonList);
+				const pokemonComponent = new PokemonComponent(pokemonList);
+				if (pokemonList) {
+					let element = document.getElementById('pokemon-list');
+					pokemonComponent.updatePokemonList(element);
 				}
 			});
 		</script>
