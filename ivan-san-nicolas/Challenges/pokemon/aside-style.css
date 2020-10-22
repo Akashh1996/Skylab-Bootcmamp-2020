@@ -62,7 +62,7 @@ a:visited {
     cursor: pointer;
 }
 
-.heroes-button {
+.pokemon-button {
     color: #329CE8;
     font-weight: 600;
 }
@@ -115,6 +115,7 @@ a:visited {
     align-items: center;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    text-transform: capitalize;
 }
 
 .topPokemon-block__name:hover {

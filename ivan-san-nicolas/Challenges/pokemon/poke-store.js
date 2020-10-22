@@ -11,22 +11,18 @@ class PokeStore {
         return _pokemon;
     }
 
-    loadPokemonsFromAPI() {
+    async loadPokemonsFromAPI() {
         let url = 'https://pokeapi.co/api/v2/pokemon?limit=100&offset=200';
-        return fetch(url)
-            .then(response => response.json())
-            .then((pokemons) => {
-                _pokemons = pokemons.results;
-            });
+        const response = await fetch(url);
+        const pokemons = await response.json();
+        _pokemons = pokemons.results;
     }
 
-    loadPokemonFromAPIByName(name) {
+    async loadPokemonFromAPIByName(name) {
         let url = `https://pokeapi.co/api/v2/pokemon/${name}`;
-        return fetch(url)
-            .then(response => response.json())
-            .then((pokemon) => {
-                _pokemon = pokemon;
-            });
+        const response = await fetch(url);
+        const pokemon = await response.json();
+        _pokemon = pokemon.results;
     }
 
 }
