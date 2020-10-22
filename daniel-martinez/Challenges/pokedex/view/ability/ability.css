@@ -49,12 +49,3 @@ body {
 .info-block {
 	display: flex;
 }
-
-#info-block__abilities {
-	margin: 40px;
-	background-color: rgb(146, 146, 146);
-	height: 100px;
-	width: 80%;
-	padding: 10px;
-	border-radius: 2px;
-}

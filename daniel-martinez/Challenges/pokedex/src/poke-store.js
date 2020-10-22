@@ -52,6 +52,20 @@ class Pokedex {
     pokemonDetailTitle(pokemonId, pokemonName){
         return `#${pokemonId}: ${pokemonName}`
     }
+
+    setPokemonImage() {
+        return `<img src="${_pokemon["sprites"]["other"]["official-artwork"]["front_default"]}" alt="pokemon-image-img">`
+    }
+
+    setAbilitiesList(){
+        let liElem = '';
+        let array = _pokemon['abilities'];
+        for (let index = 0; index < array.length; index++){
+            liElem+= `<a href="./../ability/ability.html?ability=${array[index].ability.name}">
+            <li class="abilityLi">${array[index].ability.name}</li></a>`;
+        }
+        return liElem;
+    }
 }
 
 let _pokedex = new Pokedex;
