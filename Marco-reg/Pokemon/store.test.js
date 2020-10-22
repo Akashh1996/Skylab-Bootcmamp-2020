@@ -1,35 +1,39 @@
+const store = require('./store');
 
-const PokeStore = require('./store');
-
-describe('poke Store',(()=>{
-	let store;
-	beforeEach(()=>{
-		store= new PokeStore();
-	});
-	test('should be defined',()=>{
+describe('store', () => {
+	test('should create', () => {
 		expect(store).toBeDefined();
 	});
-	test('should return a array of pokemons',()=>{
-		expect(store.getPokemons()).toEqual([]);
-	});
-	test('should return single pokemon',()=>{
-		expect(store.getPokemon()).toEqual(undefined);
-	});
-	test('should load pokemons from api',()=>{
-		const response={
-			json:jest.fn().mockReturnValueOnce([{id:12,name:'Narco'}])};
-		global.fetch=jest
-		.fn().mockImplementationOnce(()=> Promise.resolve(response));
-		return store.loadPokemonsFromAPI().then(()=>{
-			expect(store.getPokemons()).toEqual([{id:12,name:'Narco'}]);
+
+	describe('getPokemon', () => {
+		test('should call getPokemon and return an array of pokemons', () => {
+			expect(store.getPokemon()).toEqual([
+				{ id: 11, name: 'Dr Nice' },
+				{ id: 12, name: 'Narco' },
+				{ id: 13, name: 'Bombasto' },
+				{ id: 14, name: 'Celeritas' },
+				{ id: 15, name: 'Magneta' },
+				{ id: 16, name: 'RubberMan' },
+				{ id: 17, name: 'Dynama' },
+				{ id: 18, name: 'Dr IQ' },
+				{ id: 19, name: 'Magma' },
+				{ id: 20, name: 'Tornado' }
+			]);
 		});
 	});
-	test('should load one pokemons details from api',()=>{
-		const json=jest.fn().mockReturnValueOnce({id:12,name:'Narco'})
-		const fetchImplementation=()=>Promise.resolve({json:json})
-		global.fetch=jest.fn().mockImplementationOnce(fetchImplementation)
-		return store.loadPokemonsFromAPIbyId(12).then(()=>{
-			expect(store.getPokemon()).toEqual({id:12,name:'Narco'})
+	describe('getPokemonById', () => {
+		test('should call getPokemonById and return one pokemon', () => {
+			expect(store.getPokemonById(12)).toEqual({ id: 12, name: 'Narco' });
 		});
 	});
-})
+	describe('getTopPokemon', () => {
+		test('should call getTopPokemon and return ', () => {
+			expect(store.getTopPokemon()).toEqual([
+				{ id: 12, name: 'Narco' },
+				{ id: 13, name: 'Bombasto' },
+				{ id: 14, name: 'Celeritas' },
+				{ id: 15, name: 'Magneta' }
+			]);
+		});
+	});
+});

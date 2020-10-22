@@ -1,61 +1,56 @@
-let _pokemons=[];
-let _pokemon;
-let _abilities;
-let _definition;
-
-class PokeStore{
-    getPokemons(){
-        return _pokemons;
-
+let _pokeMonList;
+let pokeDetail;
+let descriptions;
+class Store {
+    getDescription(){
+        return descriptions;
     }
-    getPokemon(){
-        return _pokemon;
-
-    }
-    getAbility(){
-        return _abilities;
-    }
-    getDefinition(){
-        return _definition;
-    }
-    getPokemonAbility(pokemonAbility){
-        let url=`https://pokeapi.co/api/v2/ability/${pokemonAbility}`
+    getAbilityDescription(description){
+        let url=`https://pokeapi.co/api/v2/ability/${description}`
         return fetch(url)
         .then((response)=>response.json())
-        .then((pokemonAbilities)=>{
-            _abilities=pokemonAbilities;
+        .then((description)=>{
+            descriptions=description;
         })
+
+    }
+    getpokemon() {
+        return fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0')
+            .then((response) => response.json())
+            .then((pokemon) => {
+                _pokeMonList = pokemon.results;
+            });
+    }
+
+    getpokemonList() {
+        return _pokeMonList;
+    }
+    getPokeMonDetail(name) {
+        return fetch(`https://pokeapi.co/api/v2/pokemon/${name}/`)
+            .then((response) => response.json())
+            .then((pokemon) => {
+                pokeDetail = pokemon;
+            });
+    }
+    pokeMonDetail() {
+        return pokeDetail;
+    }
+    getPokemonName(location) {
         
-
+        const params = new URLSearchParams(location.search.substring(1));
+        const getName = params.get('pokemonName');
+        
+        return getName;
     }
-    getDefinition(abilityDefinition){
-        let url=`https://pokeapi.co/api/v2/ability/${abilityDefinition}`
-        return fetch(url)
-        .then((response)=>response.json())
-        .then((abilityDefinition)=>{
-            _definition=abilityDefinition;
-        })
-
-    }
-    loadPokemonsFromAPI(){
-        let url="https://pokeapi.co/api/v2/pokemon?limit=100&offset=200"
-        return fetch(url)
-        .then((response)=> response.json())
-        .then((pokemons)=>{
-            _pokemons=pokemons;
-        });
-
-
-
-    }
-    loadPokemonsFromAPIById(pokemonId){
-        const url=`https://pokeapi.co/api/v2/pokemon/${pokemonId}`
-        return fetch(url)
-        .then((response)=>response.json())
-        .then((pokemonDetailObject)=>{
-            _pokemon=pokemonDetailObject;
-        })
-
+    getPokemonAbility(location) {
+        
+        const params = new URLSearchParams(location.search.substring(1));
+        const getAbility = params.get('pokemonAbility');
+        
+        return getAbility;
     }
 }
-module.exports=PokeStore;
+
+const store = new Store();
+
+module.exports = store;

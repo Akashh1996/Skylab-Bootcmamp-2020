@@ -11,7 +11,7 @@ class PokemonComponent {
                 `
 <li>
 
-<a href="../detail/detail.html?pokemonName=${eachPokeMon.name}">
+<a class="pokemon__list__button" href="../detail/detail.html?pokemonName=${eachPokeMon.name}">
 <span>${eachPokeMon.name}</span>
 
 </a>

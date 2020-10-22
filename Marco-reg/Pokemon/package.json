@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "jest": "^26.6.0"
-  },
-  "devDependencies": {},
   "scripts": {
+    "test": "jest --watch",
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
-    "test": "jest --collect-coverage --watchAll"
+    "test:coverage": "jest --collect-coverage --watchAll"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.0"
+  }
 }
