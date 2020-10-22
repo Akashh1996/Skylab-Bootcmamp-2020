@@ -4,9 +4,11 @@ let element;
 let pokemonList;
 let circle;
 let store;
+let pokemon;
 
 describe('Pokemon', () => {
     beforeEach(() => {
+        pokemon = {name: 'testName'};
         store = new Store();
         element = document.createElement('div');
         pokemonList = [
@@ -87,45 +89,53 @@ describe('Pokemon', () => {
         });
     });
 
-    describe('getNameFromSearch', () => {
-        test('should return "bulbasaur" from search "?name=bulbasaur"', () => {
+    describe('getElementFromSearch', () => {
+        test('should return "bulbasaur" from search "?name=bulbasaur" with name', () => {
             //arrange
             const search = '?name=bulbasaur';
             //act
             //arrange
-            expect(store.getNameFromSearch(search)).toBe('bulbasaur');
+            expect(store.getElementFromSearch(search, 'name')).toBe('bulbasaur');
         })
 
-        test('should return "bulbasaur" from search "?id=1&name=bulbasaur"', () => {
+        test('should return "1" from search "?id=1&name=bulbasaur" with id' , () => {
             //arrange
             const search = '?id=1&name=bulbasaur';
             //act
             //arrange
-            expect(store.getNameFromSearch(search)).toBe('bulbasaur');
+            expect(store.getElementFromSearch(search, 'id')).toBe('1');
         })
 
-        test('should return "bulbasaur" from search "?id=1&name=bulbasaur&weight=69"', () => {
+        test('should return "bulbasaur" from search "?id=1&name=bulbasaur&weight=69" with name', () => {
             //arrange
             const search = '?id=1&name=bulbasaur&weight=69';
             //act
             //arrange
-            expect(store.getNameFromSearch(search)).toBe('bulbasaur');
+            expect(store.getElementFromSearch(search, 'name')).toBe('bulbasaur');
+        })
+
+        test('should return "69" from search "?id=1&name=bulbasaur&weight=69" with weight', () => {
+            //arrange
+            const search = '?id=1&name=bulbasaur&weight=69';
+            //act
+            //arrange
+            expect(store.getElementFromSearch(search, 'weight')).toBe('69');
         })
     });
 
     describe('createGroupElement', () => {
         test('should append an element in the parent element', () => {
-            //arrange          
+            //arrange
             //act
-            store.createGroupElement(element, pokemonList, 'test', 2);
+            store.createGroupElement(element, pokemon, pokemonList, 'test', 2);
             //assert          
             expect(element.hasChildNodes()).toBe(true);
         });
         
         test('the list element has to have an element', () => {
-            //arrange          
+            //arrange
             //act
-            store.createGroupElement(element, pokemonList, 'test', 2);
+            store.createGroupElement(element, pokemon, pokemonList, 'test', 2);
             //assert          
             expect(element.firstChild.hasChildNodes()).toBe(true);
         });
@@ -206,4 +216,51 @@ describe('Pokemon', () => {
             expect(element.max).toBe('-');
         });
     });
+
+    describe('getPokemonAbility', () => {
+        test('should return the object ability of a pokemon', () => {
+            //arrange
+            store.setPokemonAbility({effect_entries: []})
+            //act
+            //assert          
+            expect(store.getPokemonAbility()).toEqual({effect_entries: []});
+        });
+    });
+
+    describe('getPokemonAbility', () => {
+		beforeEach(() => {
+            json = jest.fn().mockReturnValueOnce({effect_changes: {}, effect_entries: {}})
+            global.fetch = jest.fn().mockImplementationOnce(response => {
+                return Promise.resolve({json});
+            })
+        });
+        test('should return an object of objects', () => {
+            return store.loadPokemonAbilityByName('overgrow').then(() => {
+                expect(store.getPokemonAbility()).toEqual({effect_changes: {}, effect_entries: {}});
+            })
+        });
+    });
+
+    describe('getDescriptionAbilityByLanguage', () => {
+        test('should return the test in english', () => {
+            //arrange
+            store.setPokemonAbility({effect_entries: [
+                {effect: 'Deutch test', language: {name: 'de'}},
+                {effect: 'English test', language: {name: 'en'}}
+            ]});
+            //act
+            const response = store.getDescriptionAbilityByLanguage('en');
+            //assert
+            expect(response).toBe('English test');
+        });
+
+        test('should return undefined if no ability', () => {
+            //arrange
+            store.setPokemonAbility(undefined);
+            //act
+            const response = store.getDescriptionAbilityByLanguage('en');
+            //assert
+            expect(response).toBe(undefined);
+        });
+    })
 })

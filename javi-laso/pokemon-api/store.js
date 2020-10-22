@@ -1,5 +1,6 @@
 let pokemonList = [];
 let pokemon;
+let _pokemonAbility;
 
 class Store {
 
@@ -46,23 +47,24 @@ class Store {
             anchorName.innerHTML = `${pokemonList[index].name}`;
     }
 
-    getNameFromSearch(search) {
+    getElementFromSearch(search, element) {
         const searchArray = search.split('?')[1].split('&').map(element => element.split('='));
-        const nameArray = searchArray.find(value => value.includes("name"));
+        const nameArray = searchArray.find(value => value.includes(element));
         return nameArray[1];
     }
 
-    createGroupElement(parentElement, pokemonList, groupName, index){
+    createGroupElement(parentElement, pokemon, pokemonList, groupName, index){
         let listElement = document.createElement('li');
         parentElement.appendChild(listElement);
         listElement.setAttribute('class', 'capitalize');
         let pokemonAnchor = document.createElement('a');
         listElement.appendChild(pokemonAnchor);
         pokemonAnchor.setAttribute('class', `${groupName}-list-element`);
+        pokemonAnchor.setAttribute('href', `../${groupName}/${groupName}.html?pokemonName=${pokemon.name}&name=${pokemonList[index][groupName].name}`);
         let anchorName = document.createElement('span');
         pokemonAnchor.appendChild(anchorName);
         anchorName.setAttribute('class', `${groupName}-name`);
-        anchorName.innerHTML = `${pokemonList[index][groupName].name}`;
+        this.updateValueHtml(anchorName, 'innerHTML', `${pokemonList[index][groupName].name}`);
     }
 
     getDashValuesFromPercent(circle, percent, maxValue) {
@@ -84,6 +86,32 @@ class Store {
 
     updateValueHtml(element, property, value) {
         element[property] = !!value ? value : '-';
+    }
+
+    setPokemonAbility(ability) {
+        _pokemonAbility = ability;
+    }
+
+    getPokemonAbility() {
+        return _pokemonAbility;
+    }
+
+    loadPokemonAbilityByName(abilityName) {
+        const url = `https://pokeapi.co/api/v2/ability/${abilityName}`;
+
+        return fetch(url)
+        .then(response => response.json())
+        .then(ability => {
+            _pokemonAbility = ability;
+            return ability;
+        })
+    }
+
+    getDescriptionAbilityByLanguage(lang) {
+        if (_pokemonAbility) {
+            const effectDescription = _pokemonAbility.effect_entries.find(element => element.language.name === lang);
+            return effectDescription.effect;
+        }
     }
 }
 
