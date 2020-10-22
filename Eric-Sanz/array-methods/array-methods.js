@@ -54,6 +54,15 @@ const skylabArray = {
         }
         return true;
     },
+
+    map: (object,callback) => {
+        const newObject = {};
+        Object.entries(object).forEach((element) => {
+            newObject[element[0]] = callback(element[1]);
+        });
+        
+        return newObject;
+    };
     
 };
 
@@ -71,8 +80,6 @@ let filterArray = {
 const resultFilterArray = filterArray.filter(filterArray, (element => element.length > 7));
 console.log(resultFilterArray);
 
-const resultFilterArray = filterArray.filter(filterArray, (element => element.length > 7));
-console.log(resultFilterArray);
 
 const result = myFilter(obj, (value) => {
     return value==='Rojo';
