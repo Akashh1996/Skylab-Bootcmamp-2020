@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="Pokemon.css">
+</head>
+
+<body>
+    <script src="Pokemon.js"></script>
+    <label for="fname">Busca tu pokemon:</label>
+    <input type="text" id="searchBar" name="fname"><button type="button" onclick="search()">Search</button>
+    <p id="check"></p>
+    <script>
+        function search() {
+            var flag = 0;
+            nombre = document.getElementById("searchBar").value;
+            gameFreak.getName(nombre).then(() => {
+                gameFreak.loadPokedex().then(() => {
+                    let propert1 = gameFreak.getPokedex();
+                    for (let i = 0; i < _pokemon.results.length; i++) {
+                        if (_pokemon.results[i].name === nombre) {
+                            window.location.href = linkHtml;
+                            flag = 1;
+                        }
+                    }
+                    if (flag === 0) {
+                        document.getElementById("check").innerHTML = "This pokemon is not in this list";
+                    }
+
+                })
+            })
+        }
+
+    </script>
+</body>
+
+</html>
