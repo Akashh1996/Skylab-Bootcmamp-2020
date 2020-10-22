@@ -10,21 +10,24 @@
     <div class = 'details-container'>
         <h1>Tour of Heroes</h1>
         <div class = tab-container>
-            <button class = 'tab-button'>Dashboard</button>
-            <button class = 'tab-button'>Heroes</button>
+            <a href="dashboard.html" class = 'a-button'>Dashboard</a>
+            <a href="list-heroes.html" class = 'a-button'>Heroes</a>
         </div>
-        <p><span id = 'hero-title'></span> Details</p>
+        <p class = 'title-p'><span id = 'hero-title'></span> Details</p>
         <div class = 'heroe-detail-container' id = 'detail-heroes-container'>
             <label for="id-hero">id:</label>
             <span id = 'id-hero'></span>
             <label for="name">name:</label>
             <input type="text" id = 'name-hero'>
         </div>
-       <div class="info-container"></div>
-       <div id = 'appearance-stat'>
-           <ul id="appearance-list">
-        </ul>
-       </div>
+        <div class = 'info'>
+            <div class="info-container" id= 'info-container'>
+                <p class = 'powerstats-title'>PowerStats:</p>
+            </div >
+            <div class = 'appearance' id = 'appearance-stat'>
+                <p class = 'powerstats-title'>Appearance:</p>
+            </div>  
+        </div>
        <button class = 'back-button'>Back</button>
     </div> 
 </body>
@@ -37,7 +40,7 @@
         document.getElementById("id-hero").innerHTML = id;
         document.getElementById("name-hero").value = store.getHeroById(id).name;
         document.getElementById('hero-title').innerHTML = store.getHeroById(id).name;
-        document.getElementById('info-container').innerHTML = store.powerHeroStats(id);
-        document.getElementById('appearance-stat').innerText = store.heroesAppearance(id).appearance;
+        document.getElementById('info-container').innerHTML = store.powerHeroStats(id).powerstats;
+        document.getElementById('appearance-stat').innerHTML = store.appearanceStat(id).appearance;
     </script>
 </html>

@@ -15,7 +15,7 @@ body {
 	margin: 10% 25%;
 	background: snow;
 	width: 700px;
-	height: 400px;
+	height: 320px;
 	padding: 20px;
 }
 
@@ -45,7 +45,7 @@ h1 {
 	border: grey;
 	margin: 5% 43%;
 	background: snow;
-	width: 14%;
+	width: 200px;
 	height: 550px;
 	padding: 20px;
 }
@@ -95,6 +95,14 @@ h1 {
 	height: 20px;
 }
 
+.title-p {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
 .title-list {
 	padding-left: 10px;
 	font-size: 17px;
@@ -104,8 +112,9 @@ h1 {
 
 .tab-container {
 	display: flex;
-	justify-content: center;
-	margin-top: 10px;
+	justify-content: flex-start;
+	margin-top: 20px;
+	margin-bottom: -10px;
 }
 
 .tab-button {
@@ -130,7 +139,7 @@ h1 {
 }
 
 .p-heroes {
-	margin-top: 10px;
+	margin-top: 20px;
 	color: rgb(61, 61, 61);
 	font-size: 20px;
 	font-weight: bold;
@@ -142,6 +151,7 @@ h1 {
 	justify-content: space-around;
 	align-items: center;
 	margin-top: 30px;
+	margin-left: -10px;
 	width: 700px;
 	height: 200px;
 }
@@ -176,25 +186,36 @@ svg {
 
 .info-container > ul {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
+	width: 180px;
+	height: 200px;
+	border-radius: 20px;
+	padding-top: 10px;
+	font-weight: bold;
+	background: rgb(177, 189, 199);
 }
 
 .info-container > ul > p {
 	width: 160px;
+	margin-top: 10px;
 }
 
-.info-container > ul > p > svg {
+.info {
+	display: flex;
+}
+/* .info-container > ul > p > svg {
 	stroke-dashoffset: 0;
 	transition: stroke-dashoffset 1s linear;
 	stroke: rgba(129, 187, 214, 0.7);
-	stroke-width: 10px;
+	stroke-width: 5px;
 	height: 90px;
 	width: 90px;
 	stroke: #fca83b;
-}
+} */
 
 .info-container > ul > p > p {
 	display: inline-flex;
+	margin-left: 15px;
 }
 
 .p-instat {
@@ -207,4 +228,48 @@ svg {
 	width: 300px;
 	height: 300px;
 	color: black;
+}
+
+.tab-container > a {
+	text-decoration: none;
+}
+
+.a-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	width: 120px;
+	margin-left: 5px;
+	height: 30px;
+	border-radius: 6px;
+	border: none;
+	outline: none;
+	color: rgb(132, 137, 143);
+	background: #ecebebdc;
+	cursor: pointer;
+}
+
+.a-button:hover {
+	color: snow;
+	background: rgb(178, 184, 189);
+}
+
+.top-heroes-container > p {
+	display: flex;
+	margin-top: 60px;
+	margin-bottom: -50px;
+	font-weight: bold;
+	font-size: 20px;
+	justify-content: center;
+	color: rgb(87, 99, 99);
+}
+
+.a-button:active {
+	color: rgb(26, 176, 202);
+}
+
+.powerstats-title {
+	margin-top: 10px;
+	font-weight: bold;
 }

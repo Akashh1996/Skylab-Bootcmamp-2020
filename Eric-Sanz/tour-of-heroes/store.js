@@ -418,53 +418,24 @@ class Store {
         return this.getHeroes().slice(1,5);
     };
 
-    powerHeroStats(id) {
-      let newArray = Object.entries(store.getHeroById(id).powerstats);
-      const infoContainer = document.querySelector('.info-container')
-      const createUl = document.createElement('ul');
-      createUl.getAttribute('class', 'ul-stats-container');
-      infoContainer.appendChild(createUl);
+    appearanceStat(id) {
+      debugger;
+      let newArray = Object.entries(store.getHeroById(id).appearance);
+      const appearanceContainer = document.querySelector('.appearance')
+      const createU1 = document.createElement('ul');
+      createU3.getAttribute('class', 'ul-stats-container');
+      appearanceContainer.appendChild(createU1);
       for (let index = 0; index < newArray.length; index++ ) {
-        const createP = document.createElement('p');
-        createP.getAttribute('class', 'li-stats-heroes');
-        createP.innerHTML = `<svg>
-        <circle cx="45" cy="45" r="37"></circle>
-        <circle cx="45" cy="45" r="37"></circle>
-        </svg>
-        <p class = 'p-instat'>${newArray[index][1]}</p>
-        <p class = 'p-instat'>${newArray[index][0]}</p>`
-        createUl.appendChild(createP);
+        const createP3 = document.createElement('p');
+        createP3.getAttribute('class', 'li-stats-heroes');
+        createP3.innerHTML = newArray[index][1];
+        const createP4 = document.createElement('p');
+        createP4.getAttribute('class', 'li-stats-heroes');
+        createP4.innerHTML = newArray[index][0];
+        createUl.appendChild(createP3);
+        createP.appendChild(createP4);
       }
     };
-
-    loadHeroes(url, type, callback) {
-      let xhr = new XMLHttpRequest();
-      xhr.open('GET', url);
-      xhr.responseType = type;
-
-      xhr.onload = function() {
-        callback(xhr.response);
-
-      };
-
-      xhr.send();
-    }
-
-    logData(data) {
-      console.log(data);
-    }
-
-    loadHeroesWithFetch() {
-      return fetch('superHeroData.json').then((response) => {
-        console.log('2');
-        return response.json(); 
-      }).then((value) => {
-        console.log('3');
-        superheroes = value;
-      })
-    }
-
-
 
     // heroesAppearance(id){
     //   let newArray = Object.entries(store.getHeroById(id).appearance);
@@ -510,6 +481,25 @@ function setListOfHeroes(superheroes) {
         anchorHeroe.setAttribute('href', `./detail1.html?HeroId=${superheroes[i].id*1}`);
     }
 }
+
+function powerHeroStats(id) {
+  heroPowerstats.innerHTML = '';
+  let newArray = Object.entries(store.getHeroById(id).powerstats);
+  const infoContainer = document.querySelector('.info-container')
+  const createUl = document.createElement('ul');
+  createUl.getAttribute('class', 'ul-stats-container');
+  infoContainer.appendChild(createUl);
+  for (let index = 0; index < newArray.length; index++ ) {
+    const createP = document.createElement('p');
+    createP.getAttribute('class', 'li-stats-heroes');
+    createP.innerHTML = newArray[index][1];
+    const createP2 = document.createElement('p');
+    createP2.getAttribute('class', 'li-stats-heroes');
+    createP2.innerHTML = newArray[index][0];
+    createUl.appendChild(createP);
+    createP.appendChild(createP2);
+  }
+};
 
 
 const store = new Store();
