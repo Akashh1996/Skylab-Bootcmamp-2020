@@ -62,7 +62,7 @@ describe('Pokemon', () => {
             name = 'bulbasaur';
 		});
 
-		test('should update _heroes', () => {
+		test('should return ab object with a weight property', () => {
 			return store.loadPokemonByName(name).then(() => {
 				expect(store.getPokemon().weight).toBe(69);
 			});
@@ -71,7 +71,7 @@ describe('Pokemon', () => {
 
     describe('createListElement', () => {
         test('should append an element in the parent element', () => {
-            //arrange          
+            //arrange
             //act
             store.createListElement(element, pokemonList, 2);
             //assert          

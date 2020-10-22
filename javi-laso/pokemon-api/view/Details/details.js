@@ -2,7 +2,7 @@ const backBtn = document.getElementById('back');
 const idInput = document.getElementById('id-input');
 const pokemonImg = document.getElementById('pokemon-img');
 const nameInput = document.getElementById('name-input');
-const weight = document.getElementById('weight-input');
+const weightInput = document.getElementById('weight-input');
 const typesContainer = document.getElementById('types');
 const abilitiesContainer = document.getElementById('abilities');
 const movesContainer = document.getElementById('moves');
@@ -19,9 +19,9 @@ backBtn.addEventListener('click', () => {
 const pok = store.loadPokemonByName(name).then(() => {
     let pokemon = store.getPokemon();
     pokemonImg.setAttribute('src', `${pokemon.sprites.other.dream_world.front_default}`);
-    idInput.innerHTML = pokemon.id;
-    weight.innerHTML = `${pokemon.weight} kg`;
-    nameInput.innerHTML = name;
+    store.updateValueHtml(idInput, 'innerHTML', pokemon.id);
+    store.updateValueHtml(weightInput, 'innerHTML', `${pokemon.weight} kg`);
+    store.updateValueHtml(nameInput, 'innerHTML', pokemon.name);
 
     for (let index = 0; index < pokemon.types.length; index++){
         store.createGroupElement(typesContainer, pokemon.types, 'type',index);
