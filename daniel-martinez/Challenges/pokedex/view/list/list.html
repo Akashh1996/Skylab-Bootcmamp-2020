@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="./list.css">
+    <link rel="shortcut icon" id="tabImage" href="https://cdn2.iconfinder.com/data/icons/pokemon-filledoutline/64/pokeball-people-pokemon-nintendo-video-game-gaming-gartoon-ball-512.png" type="image/x-icon">
+    <link href="//db.onlinewebfonts.com/c/51ba22ae06790efd464bde752a2cd9d1?family=Flexo" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <header>
+        <figure class="pokedex-logo">
+            <img src="https://cdn.bulbagarden.net/upload/4/4b/Pok%C3%A9dex_logo.png" alt="pokedex" id="pokedex-logo__image">
+        </figure>
+    </header>
+    <main>
+    <section id="list-block">
+        <h2 id="list-block__title">List of Pokémon</h2>
+        <ul id="list-block__ul"></ul>
+    </section>
+    <div id="back-next-buttons">
+    </div>
+    </main>
+    <script src="./list.js"></script>
+    <script>
+        let page = +window.location.search.replace('?page=','');
+        pokemonList.loadPokemons(page).then(() =>{
+            document.getElementById("list-block__ul").innerHTML = pokemonList.setListOfPokemons();
+            document.getElementById("back-next-buttons").innerHTML = pokemonList.backAndNextButtons(page);
+        });
+    </script>
+</body>
+</html>
