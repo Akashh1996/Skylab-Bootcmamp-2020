@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of Heroes - Dashboard</title>
+    <link rel="stylesheet" href="detail-style.css">
+</head>
+
+<body>
+    <section class="hero-detail">
+        <header class="hero-detail__header">
+            <h2>Tour of Heroes</h2>
+            <nav class="hero-detail__header__nav">
+                <a class="hero-detail__button" href="dashboard.html">Dashboard</a>
+                <a class="hero-detail__button" href="aside.html">Heroes</a>
+            </nav>
+        </header>
+        <section class="hero-detail__topHeroes">
+            <h2 class="hero-detail-title" id="hero-detail-title"></h2>
+            <section class="hero__detail__info" id="hero__detail__info">
+                <section class="hero__detail__info__stats" id="hero__detail__info__stats"></section>
+            </section>
+            <section class="hero-detail__info" id="hero-detail__properties">
+            </section>
+        </section>
+        <a class="back-button" href="dashboard.html">Back</a>
+    </section>
+
+    <script>
+        const heroDetail = document.getElementById('hero-detail__info');
+    </script>
+    <script src=" store.js"></script>
+    <script src="detail.js"></script>
+</body>
+
+</html>
