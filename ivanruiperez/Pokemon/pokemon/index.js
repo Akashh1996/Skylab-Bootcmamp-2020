@@ -4,7 +4,6 @@ class PokemonComponent {
 	}
 
 	updateHtmlPokemonList(element) {
-		debugger;
 		element.innerHTML = '';
 		this.pokemon.results.forEach((poke) => {
 			element.innerHTML =

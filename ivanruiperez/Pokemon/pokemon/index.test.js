@@ -2,7 +2,13 @@ const PokemonComponent = require('./index');
 
 describe('pokemon', () => {
 	let pokemonComponent;
-	const pokemon = [{ id: 6, name: 'Charizard' }];
+	let pokemon = {
+		id: 6,
+		name: 'Charizard',
+		results: [
+			{ name: 'charizard', url: 'https://pokeapi.co/api/v2/pokemon/6/' }
+		]
+	};
 
 	beforeEach(() => {
 		pokemonComponent = new PokemonComponent(pokemon);
@@ -16,8 +22,8 @@ describe('pokemon', () => {
 		const element = {};
 		const markup = `
 <li>
-<a href="https://pokeapi.co/api/v2/pokemon/Charizard">
-<span id="pokemon-name">Charizard</span>
+<a href="https://pokeapi.co/api/v2/pokemon/charizard">
+<span id="pokemon-name">charizard</span>
 </a>
 </li>
 `;
