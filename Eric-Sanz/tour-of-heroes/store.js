@@ -419,7 +419,6 @@ class Store {
     };
 
     appearanceStat(id) {
-      debugger;
       let newArray = Object.entries(store.getHeroById(id).appearance);
       const appearanceContainer = document.querySelector('.appearance')
       const createU1 = document.createElement('ul');
@@ -436,6 +435,40 @@ class Store {
         createP.appendChild(createP4);
       }
     };
+
+    powerHeroStats(id) {
+      let newArray = Object.entries(store.getHeroById(id).powerstats);
+      const infoContainer = document.querySelector('.info-container')
+      const createUl = document.createElement('ul');
+      createUl.getAttribute('class', 'ul-stats-container');
+      infoContainer.appendChild(createUl);
+      for (let index = 0; index < newArray.length; index++ ) {
+        const createP = document.createElement('p');
+        createP.getAttribute('class', 'li-stats-heroes');
+        createP.innerHTML = newArray[index][1];
+        const createP2 = document.createElement('p');
+        createP2.getAttribute('class', 'li-stats-heroes');
+        createP2.innerHTML = newArray[index][0];
+        createUl.appendChild(createP);
+        createP.appendChild(createP2);
+      }
+    };
+
+    descriptionHero(heroId, description) {
+      let newArray = Object.entries(store.getHeroById(heroId)[description]);
+      var li = '';
+      for (var index = 0; index < newArray.length; index++) {
+          if (
+              newArray[index][1] !== null &&
+              newArray[index][1] !== undefined &&
+              newArray[index][1] !== '-' &&
+              newArray[index][1] !== ''
+          ) {
+              li += `<li>${newArray[index][0].toLowerCase()}: ${newArray[index][1]}<li>`;
+          }
+      }
+      return li;
+  }
 
     // heroesAppearance(id){
     //   let newArray = Object.entries(store.getHeroById(id).appearance);
