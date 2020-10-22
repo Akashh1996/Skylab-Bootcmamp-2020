@@ -19,11 +19,9 @@
             Type:
             <input id="input_Type"/>
         </label>
-
-        <label>
-            Ability:
-            <input id="input_Ability"/>
-        </label>
+        Abilities:
+        <div id='pokemon-abilities'>
+        </div>
     </div>
 
     <script src="../../store.js"></script>
@@ -35,9 +33,23 @@
         const getName = store.getName(url);
         let detailComponent = new DetailComponent(getName);
 
+        function generateAbilitiesElements(pokemonAbilities){
+            pokemonAbilities.forEach((ability)=>{
+                const url = ability.ability.url;
+                const urlArray = url.split('/');
+                const idAbility = urlArray[urlArray.length-2];
+                
+                const anchorElement = document.createElement('a');
+                anchorElement.innerHTML = ability.ability.name
+                anchorElement.href = `../abilities/abilities.html?abilityId=${idAbility}`
+                const abilitiesContainerElement = document.getElementById('pokemon-abilities');
+                abilitiesContainerElement.appendChild(anchorElement)
+
+            })
+        }
+
         store.getDetails(getName).then(() => {
-            const pokemon_details = _detail;
-            console.log(pokemon_details);
+            const pokemon_details = _detail.abilities;
 
             if (pokemon_details){
                 let idElement = document.getElementById('pokemon-title');
@@ -52,12 +64,8 @@
                     'value',
 					_detail.types[0]["type"].name
                 );
-                idElement = document.getElementById('input_Ability');
-                detailComponent.updateHtmlValue(
-                    idElement,
-                    'value',
-					_detail.abilities[0].ability.name
-                );
+
+                generateAbilitiesElements(pokemon_details);
             }
         });
 

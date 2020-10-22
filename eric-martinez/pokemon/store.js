@@ -1,5 +1,6 @@
 let _pokemon;
 let _detail;
+let _abilities;
 
 class Store {
     loadPokedex() {
@@ -21,13 +22,22 @@ class Store {
             return _detail;
         })
     }
-
     getName(url){
         const search = url.split('=');
         const name = search[1];
         return name;
     }
 
+    getAbilities(getId){
+        return fetch(`https://pokeapi.co/api/v2/ability/${getId}`)
+        .then((response) => response.json())
+        .then((value) => {
+            _abilities = value;
+            return _abilities;
+        })
+    }
 }
 
 const store = new Store();
+
+module.exports = Store;

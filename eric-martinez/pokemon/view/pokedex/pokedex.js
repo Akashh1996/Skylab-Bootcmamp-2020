@@ -10,12 +10,14 @@ class PokedexComponent {
 				element.innerHTML +
 				`
 <li>
-	<a href="../details/details.html?pokemonName=${pokemon.name}">
-		<span id="pokemons">${pokemon.name}</span>
-	</a>
+<a href="../details/details.html?pokemonName=${pokemon.name}">
+<span id="pokemons">${pokemon.name}</span>
+</a>
 </li>
 `;
 		});
 	}
 }
+
+module.exports = PokedexComponent;
 

@@ -7,4 +7,4 @@ class DetailComponent {
 		element[property] = value;
 	}
 }
-
+module.exports = DetailComponent;
