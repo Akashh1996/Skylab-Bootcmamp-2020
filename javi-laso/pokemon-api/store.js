@@ -8,7 +8,14 @@ class Store {
         return pokemonList;
     }
 
-    loadPokedex(number = 150, startFrom = 0) {
+    async loadPokedex(number = 150, startFrom = 0) {
+        const url = `https://pokeapi.co/api/v2/pokemon/?offset=${startFrom}&limit=${number}`;
+        const response = await fetch(url);
+        const pokedex = await response.json();
+        pokemonList = pokedex;
+    }
+
+    loadPokedexOld(number = 150, startFrom = 0) {
         const url = `https://pokeapi.co/api/v2/pokemon/?offset=${startFrom}&limit=${number}`;
         const promise = fetch(url).then(response => {
             return response.json();
@@ -23,7 +30,14 @@ class Store {
         return pokemon;
     }
 
-    loadPokemonByName(pokemonName) {
+    async loadPokemonByName(pokemonName) {
+        const url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
+        const promise = await fetch(url);
+        const pokemonObject = await promise.json();
+        pokemon = pokemonObject;
+    }
+
+    loadPokemonByNameOld(pokemonName) {
         const url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
         const promise = fetch(url).then(response => {
             return response.json();
@@ -100,7 +114,14 @@ class Store {
         return _pokemonAbility;
     }
 
-    loadPokemonAbilityByName(abilityName) {
+    async loadPokemonAbilityByName(abilityName) {
+        const url = `https://pokeapi.co/api/v2/ability/${abilityName}`;
+        const response = await fetch(url);
+        const pokemonAbility = await response.json();
+        _pokemonAbility = pokemonAbility;
+    }
+
+    loadPokemonAbilityByNameOld(abilityName) {
         const url = `https://pokeapi.co/api/v2/ability/${abilityName}`;
 
         return fetch(url)

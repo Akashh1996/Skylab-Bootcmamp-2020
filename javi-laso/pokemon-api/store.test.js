@@ -53,6 +53,27 @@ describe('Pokemon', () => {
 			});
 		});
     });
+
+	describe('getPokemonList', () => {
+		beforeEach(() => {
+			global.fetch = jest.fn().mockImplementationOnce(() =>
+				Promise.resolve({
+					json: jest.fn().mockReturnValueOnce(pokemonList)
+				})
+			);
+		});
+
+		test('should return an array of objects', () => {
+			return store.loadPokedexOld().then(() => {
+				expect(store.getPokemonList()).toEqual([
+                    {test: {name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/"}},
+                    {test: {name: "ivysaur", url: "https://pokeapi.co/api/v2/pokemon/2/"}},
+                    {test: {name: "venusaur", url: "https://pokeapi.co/api/v2/pokemon/3/"}},
+                    {test: {name: "charmander", url: "https://pokeapi.co/api/v2/pokemon/4/"}}
+                ]);
+			});
+		});
+    });
     
 	describe('getPokemon', () => {
 		beforeEach(() => {
@@ -66,6 +87,23 @@ describe('Pokemon', () => {
 
 		test('should return ab object with a weight property', () => {
 			return store.loadPokemonByName(name).then(() => {
+				expect(store.getPokemon().weight).toBe(69);
+			});
+		});
+    });
+    
+	describe('getPokemon', () => {
+		beforeEach(() => {
+			global.fetch = jest.fn().mockImplementationOnce(() =>
+				Promise.resolve({
+					json: jest.fn().mockReturnValueOnce({ weight: 69 })
+				})
+            );
+            name = 'bulbasaur';
+		});
+
+		test('should return ab object with a weight property', () => {
+			return store.loadPokemonByNameOld(name).then(() => {
 				expect(store.getPokemon().weight).toBe(69);
 			});
 		});
@@ -241,6 +279,20 @@ describe('Pokemon', () => {
         });
     });
 
+    describe('getPokemonAbility', () => {
+		beforeEach(() => {
+            json = jest.fn().mockReturnValueOnce({effect_changes: {}, effect_entries: {}})
+            global.fetch = jest.fn().mockImplementationOnce(response => {
+                return Promise.resolve({json});
+            })
+        });
+        test('should return an object of objects', () => {
+            return store.loadPokemonAbilityByNameOld('overgrow').then(() => {
+                expect(store.getPokemonAbility()).toEqual({effect_changes: {}, effect_entries: {}});
+            })
+        });
+    });
+
     describe('getDescriptionAbilityByLanguage', () => {
         test('should return the test in english', () => {
             //arrange
@@ -263,4 +315,23 @@ describe('Pokemon', () => {
             expect(response).toBe(undefined);
         });
     })
+
+    describe('addToInnerHtml', () => {
+        test('should change innerHTML from an element', () => {
+            //arrange
+            //act
+            store.addToInnerHtml(element, 'hola');
+            //assert          
+            expect(element.innerHTML).toBe('hola');
+        });
+        
+        test('should change innerHTML from an element', () => {
+            //arrange
+            //act
+            store.addToInnerHtml(element, 'hola');
+            store.addToInnerHtml(element, 'hola');
+            //assert          
+            expect(element.innerHTML).toBe('holahola');
+        });
+    });
 })
