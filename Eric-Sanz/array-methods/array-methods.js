@@ -62,7 +62,7 @@ const skylabArray = {
         });
         
         return newObject;
-    };
+    }
     
 };
 
