@@ -2,7 +2,7 @@ const backBtn = document.getElementById('back');
 const nameTitle = document.getElementById('name-title');
 const idInput = document.getElementById('id-input');
 const descriptionInput = document.getElementById('description-input');
-const pokemonsContainer = document.getElementById('pokemons-container');
+const pokemonsContainer = document.getElementById('pokemon-list');
 
 const url = window.location.search;
 const name = store.getElementFromSearch(url, 'abilityName');
@@ -20,7 +20,7 @@ store.loadPokemonAbilityByName(name).then(() => {
     for (let index = 0; index < ability.pokemon.length; index++) {
         store.addToInnerHtml(
             pokemonsContainer,
-            `<a href="" class="capitalize">${ability.pokemon[index].pokemon.name}</a>`
+            `<li><a href="../Details/details.html?pokemonName=${ability.pokemon[index].pokemon.name}" class="capitalize">${ability.pokemon[index].pokemon.name}</a></li>`
         );
     }
     
