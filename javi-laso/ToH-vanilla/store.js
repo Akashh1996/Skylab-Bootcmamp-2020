@@ -2,13 +2,21 @@ let _heroes;
 
 class Store {
 
-    loadHeroes() {
+    loadHeroesX() {
         return fetch('../../api/superHeroData.json').then(response => {
             return response.json();
         }).then(heroes => {
             _heroes = heroes;
             return heroes;
         });
+    }
+
+    async loadHeroes() {
+        const url = '../../api/superHeroData.json';
+        const response = await fetch(url);
+        const heroes = await response.json();
+        debugger;
+        _heroes = heroes;
     }
 
     getHeroes() {

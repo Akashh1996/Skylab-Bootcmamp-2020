@@ -29,6 +29,7 @@ describe('Store', () => {
     });
 
     describe('loadHeroes', () => {
+
 		beforeEach(() => {
 			global.fetch = jest.fn().mockImplementationOnce(() =>
 				Promise.resolve({
@@ -36,14 +37,14 @@ describe('Store', () => {
 				})
 			);
 		});
-        test('should ', () => {
+        test('should update _heroes', () => {
             return store.loadHeroes().then(() => {
-                test('should update _heroes', () => {
-                    return store.loadHeroes().then(() => {
-                        expect(store.getHeroes()).toEqual([{ id: 12, name: 'Narco' }]);
-                    });
-                });
+                expect(store.getHeroes()).toEqual([{ id: 12, name: 'Narco' }]);
             });
+        });
+        test('should return an array of heroes', async () => {
+            const response = await store.loadHeroes();
+            expect(store.getHeroes()).toEqual([{ id: 12, name: 'Narco' }]);
         });
     });
 
