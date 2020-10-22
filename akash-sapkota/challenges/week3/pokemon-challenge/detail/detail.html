@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="detail.css">
+</head>
+<body>
+    
+    <main>
+        <div class="header">Im pokemon</div>
+        <button id="next">Next</button>
+
+        <button><a href="../list/list.html">Back</a></button>
+        <div class="detail-wrapper">
+            <div class="detail_card1">
+
+                <div class="detail_header">
+                    <div><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png" id="image"></div>
+                    <div ><h2 id="pokemon-name">"venusaur"</h2></div>
+                </div>
+
+                <div class="primary-details">
+                        <div><span>Order:</span><span id="order"></span></div>
+                        <div><span>Height:</span><span detail-value id="height"></span></div>
+                        <div><span>Weight:</span><span detail-value id="weight"></span></div>
+                        <div><span>Experience:</span><span detail-value id="experience"></span></div>
+                        <div><span>Abilities:</span><span detail-value id="ability"></span></div>
+                        <div><span>Type:</span><span detail-value id="type"></span></div>
+                </div>
+             </div>
+
+            <div class="detail_card2">
+                <div class="detail-stats">
+                    <div><span>Stats:</span> <span id="stats"></span>  <span id="stat-number"></span> </div>
+                </div>
+    
+                <div class="detail-algo">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+
+                
+    </main>
+
+
+<!--     <div> <span id="abilities"></span></div>
+ -->
+
+    <script src="../store.js"></script>
+    <script src="../util/location.js"></script>
+    <script src="../detail/detail.js"></script>
+    <script>
+
+    const name = getPokemonName(location);
+
+
+
+
+    
+    store.getPokeMonDetail(name).then(() => {
+                const pokDetail = store.pokeMonDetail()
+                let detailComponent = new DetailComponent(pokDetail);
+                console.log(detailComponent);
+				if (pokDetail) {
+					
+					let image = document.getElementById('image');
+					detailComponent.updateHtmlValue(
+						image,
+						'src',
+						detailComponent.pokemon.sprites.front_shiny 
+                    );
+                    let height = document.getElementById('height');
+					detailComponent.updateHtmlValue(
+						height,
+						'innerHTML',
+						detailComponent.pokemon.order
+					); 
+                    let order = document.getElementById('order');
+					detailComponent.updateHtmlValue(
+						order,
+						'innerHTML',
+						detailComponent.pokemon.height
+					); 
+                    let weight = document.getElementById('weight');
+					detailComponent.updateHtmlValue(
+						weight,
+						'innerHTML',
+						detailComponent.pokemon.weight
+					); 
+                    let experience = document.getElementById('experience');
+					detailComponent.updateHtmlValue(
+						experience,
+						'innerHTML',
+						detailComponent.pokemon.base_experience
+                    ); 
+                    
+                    let ability = document.getElementById('ability');
+					detailComponent.updateHtmlValue(
+						ability,
+                        'innerHTML',
+						detailComponent.pokemon.abilities.map((eachAbility)=>{
+                            return eachAbility.ability.name
+                        })
+					); 
+                    let type = document.getElementById('type');
+					detailComponent.updateHtmlValue(
+						type,
+                        'innerHTML',
+						detailComponent.pokemon.types.map((eachType)=>{
+                            return eachType.type.name
+                        })
+                    ); 
+                    let pokemonName = document.getElementById('pokemon-name');
+					detailComponent.updateHtmlValue(
+						pokemonName,
+						'innerHTML',
+						detailComponent.pokemon.name
+                    ); 
+                    let stats = document.getElementById('stats');
+					detailComponent.updateHtmlValue(
+						stats,
+                        'innerHTML',
+						detailComponent.pokemon.stats.map((eachstats)=>{
+                            return eachstats.stat.name 
+                        })
+					); 
+                    
+                    let statNumber = document.getElementById('stat-number');
+					detailComponent.updateHtmlValue(
+						statNumber,
+                        'innerHTML',
+						detailComponent.pokemon.stats.map((eachstatNumber)=>{
+                            console.log(eachstatNumber.base_stat);
+                            return eachstatNumber.base_stat
+                        })
+					); 
+                    
+					
+				}
+			});
+            
+    </script>
+</body>
+</html>
