@@ -4,11 +4,10 @@ class Store {
     loadPokemons () {
 
         return fetch('https://pokeapi.co/api/v2/pokemon?limit=100&offset=0')
-        .then ((response) => {
-            return response.json();
-        })
-        .then ((value) => {
-            _pokemons = value.results;
+        .then((response) => response.json())
+        .then((pokemons) => {
+            _pokemons = pokemons.results;
+            return _pokemons
         })
     }
 
@@ -18,3 +17,5 @@ class Store {
 }
 
 const store = new Store();
+
+module.exports = store;
