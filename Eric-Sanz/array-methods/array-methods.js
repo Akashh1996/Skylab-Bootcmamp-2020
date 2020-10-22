@@ -35,7 +35,17 @@ const skylabArray = {
 			}
 		}
 		return false;
-	},
+    },
+    
+    findIndex: (original, element) {
+        let objArray = Object.values(original);
+        for (let i = 0; i < objArray.length; i++) {
+            if (element(objArray[i])) {
+                return i;   
+            };
+            return false
+        };
+    },
 
 };
 
