@@ -54,5 +54,10 @@ describe('store', () => {
                 expect(store.getPokemonAbility()).toEqual([])
             })
         });
+
+        test('should return pokemon ability', () => {
+            store.getPokemonAbility({ability: []})
+                expect(store.getPokemonAbility()).toEqual([])
+        });
     });  
 });
