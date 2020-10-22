@@ -10,15 +10,27 @@ describe('store', () => {
         beforeEach(() => {
 			global.fetch = jest.fn().mockImplementationOnce(() =>
 				Promise.resolve({
-					json: jest.fn().mockReturnValueOnce({results: []})
+					json: jest.fn().mockReturnValueOnce({results: [{id: 12, name: 'bulbasour'}]})
 				})
 			);
 		});
 
         test('should update _pokemons', () => {
             return store.loadPokemons().then(() => {
-                expect(store.getPokemons()).toEqual([])
+                expect(store.getPokemons()).toEqual([{id: 12, name: 'bulbasour'}])
             })
         });
+
+        test('should return pokemon id', () => {
+            store.setPokemon({id: 12})
+            const result = store.getPokemonId();
+            expect(result).toBe(12)
+        });
+
+        test('should call getBaseExperience and return 7', () => {
+            store.setPokemon({base_experience: 7})
+            const result = store.getBaseExperience();
+            expect(result).toBe(7);
+        })
     })
 });

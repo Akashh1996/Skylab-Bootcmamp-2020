@@ -6,7 +6,6 @@ store.loadPokemons().then(() => {
     
   
       function makeList(array) {
-        debugger
         for (let i = 0; i < array.length; i++) {
           let cell = document.createElement("a");
           pokemonList.appendChild(cell).className = "pokemons__list";
@@ -19,3 +18,4 @@ store.loadPokemons().then(() => {
       makeList(pokemons);
     
 })
+
