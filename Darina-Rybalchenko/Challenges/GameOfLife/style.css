@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    background: rgb(197, 224, 155);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background: linear-gradient(to bottom, black, transparent);
+    justify-content: space-between;
+}
+
+h2 {
+    margin-left: 20px;
+}
+
+.button-wraper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 40px;
+}
+
+button {
+    background-color: rgba(127, 170, 66, 0.8);
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 2px;
+    font-weight: bold;
+    outline: none;
+}
+
+button:hover {
+    background-color: rgb(93, 131, 35)
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+.table {
+    display: flex;
+    flex-direction: row;
+}
+
+.table__cell {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+}
