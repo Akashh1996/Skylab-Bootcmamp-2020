@@ -135,7 +135,7 @@ describe('Pokemon', () => {
         test('should assign dashoffset of aprox 144.136 to a circle with radius 37 and percent 38', () => {
             //arrange          
             //act
-            store.setStrokeDashoffsetInCircle(circle, 38);
+            store.setStrokeDashoffsetInCircle(circle, 38, 200);
             response = +circle.style.strokeDashoffset;
             //assert          
             expect(response).toBeCloseTo(188.307);
@@ -144,7 +144,7 @@ describe('Pokemon', () => {
         test('should assign dashoffset of 0 to a circle if property value >200', () => {
             //arrange          
             //act
-            store.setStrokeDashoffsetInCircle(circle, 210);
+            store.setStrokeDashoffsetInCircle(circle, 210, 200);
             response = +circle.style.strokeDashoffset;
             //assert          
             expect(response).toBe(0);
@@ -154,7 +154,7 @@ describe('Pokemon', () => {
             //arrange
             const circumference = Math.PI * 2 * circle.getAttribute('r');
             //act
-            store.setStrokeDashoffsetInCircle(circle, -10);
+            store.setStrokeDashoffsetInCircle(circle, -10, 200);
             response = +circle.style.strokeDashoffset;
             //assert          
             expect(response).toBeCloseTo(circumference);
@@ -166,7 +166,7 @@ describe('Pokemon', () => {
             //arrange
             const circumference = Math.PI * 2 * circle.getAttribute('r');
             //act
-            store.setStrokeDasharrayInCircle(circle, 38);
+            store.setStrokeDasharrayInCircle(circle, 38, 200);
             response = +circle.style.strokeDasharray;
             //assert          
             expect(response).toBeCloseTo(circumference);

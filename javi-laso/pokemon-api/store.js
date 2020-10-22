@@ -66,21 +66,21 @@ class Store {
         anchorName.innerHTML = `${pokemonList[index][groupName].name}`;
     }
 
-    getDashValuesFromPercent(circle, percent) {
+    getDashValuesFromPercent(circle, percent, maxValue) {
         let radius = circle.getAttribute('r');
         let circumference = Math.PI * radius * 2;
-        percent = percent < 0 ? 0 : percent > 200 ? 200 : percent;
-        let dashOffSet = circumference - percent / 200 * circumference;
+        percent = percent < 0 ? 0 : percent > maxValue ? maxValue : percent;
+        let dashOffSet = circumference - percent / maxValue * circumference;
         let dashArray = circumference;
         return [dashOffSet, dashArray];
     }
 
-    setStrokeDashoffsetInCircle(circle, percent) {
-        circle.style.strokeDashoffset = this.getDashValuesFromPercent(circle, percent)[0];
+    setStrokeDashoffsetInCircle(circle, percent, maxValue) {
+        circle.style.strokeDashoffset = this.getDashValuesFromPercent(circle, percent, maxValue)[0];
     }
 
-    setStrokeDasharrayInCircle (circle, percent) {
-        circle.style.strokeDasharray = this.getDashValuesFromPercent(circle, percent)[1];
+    setStrokeDasharrayInCircle (circle, percent, maxValue) {
+        circle.style.strokeDasharray = this.getDashValuesFromPercent(circle, percent, maxValue)[1];
     }
 
     updateValueHtml(element, property, value) {
