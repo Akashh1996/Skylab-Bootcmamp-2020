@@ -1,36 +1,61 @@
-let _pokeMonList;
-let pokeDetail
-class Store {
-    getpokemon() {
-        return fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0')
-            .then((response) => response.json())
-            .then((pokemon) => {
-                _pokeMonList = pokemon.results;
+let _pokemons=[];
+let _pokemon;
+let _abilities;
+let _definition;
 
-            });
-    }
+class PokeStore{
+    getPokemons(){
+        return _pokemons;
 
-    getpokemonList() {
-        return _pokeMonList;
     }
-    getPokeMonDetail(name) {
-        return fetch(`https://pokeapi.co/api/v2/pokemon/${name}/`)
-            .then((response) => response.json())
-            .then((pokemon) => {
-                pokeDetail = pokemon;
-            });
+    getPokemon(){
+        return _pokemon;
+
     }
-    pokeMonDetail() {
-        return pokeDetail;
+    getAbility(){
+        return _abilities;
     }
-    getPokemonName(location) {
-        const params = new URLSearchParams(location.search.substring(1));
-        const getName = params.get('pokemonName');
-        console.log(getName);
-        return getName;
+    getDefinition(){
+        return _definition;
+    }
+    getPokemonAbility(pokemonAbility){
+        let url=`https://pokeapi.co/api/v2/ability/${pokemonAbility}`
+        return fetch(url)
+        .then((response)=>response.json())
+        .then((pokemonAbilities)=>{
+            _abilities=pokemonAbilities;
+        })
+        
+
+    }
+    getDefinition(abilityDefinition){
+        let url=`https://pokeapi.co/api/v2/ability/${abilityDefinition}`
+        return fetch(url)
+        .then((response)=>response.json())
+        .then((abilityDefinition)=>{
+            _definition=abilityDefinition;
+        })
+
+    }
+    loadPokemonsFromAPI(){
+        let url="https://pokeapi.co/api/v2/pokemon?limit=100&offset=200"
+        return fetch(url)
+        .then((response)=> response.json())
+        .then((pokemons)=>{
+            _pokemons=pokemons;
+        });
+
+
+
+    }
+    loadPokemonsFromAPIById(pokemonId){
+        const url=`https://pokeapi.co/api/v2/pokemon/${pokemonId}`
+        return fetch(url)
+        .then((response)=>response.json())
+        .then((pokemonDetailObject)=>{
+            _pokemon=pokemonDetailObject;
+        })
+
     }
 }
-
-const store = new Store();
-
-module.exports = store;
+module.exports=PokeStore;
