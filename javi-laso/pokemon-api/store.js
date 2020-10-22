@@ -88,6 +88,10 @@ class Store {
         element[property] = !!value ? value : '-';
     }
 
+    addToInnerHtml(element, value) {
+        element.innerHTML += value;
+    }
+
     setPokemonAbility(ability) {
         _pokemonAbility = ability;
     }

@@ -43,3 +43,7 @@ section {
 	margin-top: 8px;
 	font-size: 15px;
 }
+
+#pokemons-container span {
+	margin: 8px 0px;
+}
