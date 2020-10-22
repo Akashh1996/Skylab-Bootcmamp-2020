@@ -15,10 +15,6 @@ store.loadPokemonsfromApiById(locationId).then(() => {
         detailAbilities.appendChild(link)
 
     }
-
-
-
-
     console.log(store.getPokemon())
 })
 
