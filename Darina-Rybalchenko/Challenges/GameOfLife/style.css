@@ -2,6 +2,7 @@ body {
     margin: 0;
     background: rgb(197, 224, 155);
     font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 .header-container {
@@ -39,7 +40,7 @@ button:hover {
     background-color: rgb(93, 131, 35)
 }
 
-.container {
+.table-container {
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -48,13 +49,20 @@ button:hover {
 
 .table {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .table__cell {
-    display: flex;
-    flex-direction: column;
+    float: left;
     border: 1px solid black;
     width: 20px;
     height: 20px;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.white {
+    background-color: white;
 }

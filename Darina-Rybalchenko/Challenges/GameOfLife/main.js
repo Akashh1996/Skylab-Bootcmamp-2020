@@ -1,29 +1,57 @@
-
-const grid = [
-    [, , , , , , , , ,],
-    [, , , , , , , , ,],
-    [, , , , , , , , ,],
-    [, , , , , , , , ,],
-    [, , , , , , , , ,],
-    [, , , , , , , , ,],
-    [, , , , , , , , ,],
-    [, , , , , , , , ,],
-    [, , , , , , , , ,],
-    [, , , , , , , , ,]
+const gridState = [
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 ]
 
-for (let i = 0; i < grid.length; i++) {
-    for (let j = 0; j < grid[i].length; j++) {
-        grid[i][j] = Math.round(Math.random())
+
+function createTable() {
+    const table = document.createElement('div')
+    table.className = 'table'
+
+    for (let i = 0; i < gridState.length; i++) {
+        const row = gridState[i]
+
+        const tableRow = document.createElement('div')
+        tableRow.className = 'table__row'
+
+        for (let j = 0; j < row.length; j++) {
+            const cell = row[j]
+            const tableCell = document.createElement('div')
+            tableCell.dataset.row = i
+            tableCell.dataset.cell = j
+            cell === 1 ? tableCell.className = 'table__cell gray' : tableCell.className = 'table__cell white'
+            tableCell.addEventListener('click', toggleCell)
+            tableRow.appendChild(tableCell)
+        }
+        table.appendChild(tableRow)
+    }
+    return table
+}
+
+function toggleCell(event) {
+    const row = event.target.dataset.row
+    const cell = event.target.dataset.cell
+
+    if (gridState[row][cell] === 0) {
+        gridState[row][cell] = 1
+        event.target.className = 'table__cell gray'
+    } else {
+        gridState[row][cell] = 0
+        event.target.className = 'table__cell white'
     }
 }
 
+document.getElementById('table-container').appendChild(createTable())
 
 function gameOfLife(cell) {
-
-
-    let nodeCell = document.querySelectorAll('.table__cell')
-    console.log(nodeCell)
 
     for (let line = 0; line < cell.length; line++) {
         for (let position = 0; position < cell[line].length; position++) {
@@ -61,7 +89,7 @@ function gameOfLife(cell) {
 
 }
 
-gameOfLife(grid)
+gameOfLife(gridState)
 
 
 
