@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link rel="stylesheet" href="details.css">
+</head>
+<body>
+    <div id="principal-container">
+        <header>
+            <h1>Tour of Heroes</h1>
+            <div>
+                <a href="../Dashboard/dashboard.html" class="header-buttons">Dashboard</a>
+                <a href="../HeroesList/heroes-list.html" class="header-buttons">Heroes</a>
+            </div>
+            <h2 id="name-title">details!</h2>
+        </header>
+        <main>
+            <div id="details-container">
+                <div class="title-powerstats-photo">
+                    <div class="title-powerstats">
+                        <section class="id-container">
+                            <label for="id-input" id="id-label">id:</label>
+                            <span id="id-input">id</span>
+                        </section>
+                        <section class="name-container">
+                            <label for="name-input" id="name-label">name:</label>
+                            <input id="name-input" type="text" placeholder="" value=""></input>
+                        </section>
+                        <section class="powerstats-container">
+                            <h3>Powerstats</h3>
+                            <div class="powerstats-separator">
+                                <div id="intelligence" class="powerstats">
+                                    <svg height="100" width="100">
+                                        <circle cx="50" cy="50" r="37"></circle>
+                                        <circle class="circle" cx="50" cy="50" r="37"></circle>
+                                    </svg>
+                                    <span class="powerstats__name">Intelligence</span>
+                                    <span id="intelligence-number" class="powerstats__number">50</span>
+                                </div>
+                                <div id="strength" class="powerstats">
+                                    <svg height="100" width="100">
+                                        <circle cx="50" cy="50" r="37"></circle>
+                                        <circle class="circle" cx="50" cy="50" r="37"></circle>
+                                    </svg>
+                                    <span class="powerstats__name">Strength</span>
+                                    <span id="strength-number" class="powerstats__number"></span>
+                                </div>
+                                <div id="speed" class="powerstats">
+                                    <svg height="100" width="100">
+                                        <circle cx="50" cy="50" r="37"></circle>
+                                        <circle class="circle" cx="50" cy="50" r="37"></circle>
+                                    </svg>
+                                    <span class="powerstats__name">Speed</span>
+                                    <span id="speed-number" class="powerstats__number"></span>
+                                </div>
+                                <div id="durability" class="powerstats">
+                                    <svg height="100" width="100">
+                                        <circle cx="50" cy="50" r="37"></circle>
+                                        <circle class="circle" cx="50" cy="50" r="37"></circle>
+                                    </svg>
+                                    <span class="powerstats__name">Durability</span>
+                                    <span id="durability-number" class="powerstats__number"></span>
+                                </div>
+                                <div id="power" class="powerstats">
+                                    <svg height="100" width="100">
+                                        <circle cx="50" cy="50" r="37"></circle>
+                                        <circle class="circle" cx="50" cy="50" r="37"></circle>
+                                    </svg>
+                                    <span class="powerstats__name">Power</span>
+                                    <span id="power-number" class="powerstats__number"></span>
+                                </div>
+                                <div id="combat" class="powerstats">
+                                    <svg height="100" width="100">
+                                        <circle cx="50" cy="50" r="37"></circle>
+                                        <circle class="circle" cx="50" cy="50" r="37"></circle>
+                                    </svg>
+                                    <span class="powerstats__name">Combat</span>
+                                    <span id="combat-number" class="powerstats__number"></span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <section class="photographies-container">
+                        <figure>
+                            <img id="photography" src="" alt="">
+                        </figure>
+                    </section>
+                </div>
+                <div class="horizontal-properties">
+                    <section id="appearance-container" class="horizontal-properties__containers">
+                        <h3>Appearance</h3>
+                        <div class="appearances">
+                            <span class="appearances__name">Gender</span>
+                            <span class="appearances__value"></span>
+                        </div>
+                        <div class="appearances">
+                            <span class="appearances__name">Race</span>
+                            <span class="appearances__value"></span>
+                        </div>
+                        <div class="appearances">
+                            <span class="appearances__name">Height</span>
+                            <span class="appearances__value"></span>
+                        </div>
+                        <div class="appearances">
+                            <span class="appearances__name">Weigth</span>
+                            <span class="appearances__value"></span>
+                        </div>
+                        <div class="appearances">
+                            <span class="appearances__name">Eye color</span>
+                            <span class="appearances__value"></span>
+                        </div>
+                        <div class="appearances">
+                            <span class="appearances__name">Hair Color</span>
+                            <span class="appearances__value"></span>
+                        </div>
+                    </section>
+                    <section id="biography-container" class="horizontal-properties__containers">
+                        <h3>Biography</h3>
+                        <div class="biographies">
+                            <span class="biographies__name">Full name</span>
+                            <span class="biographies__value"></span>
+                        </div>
+                        <div class="biographies">
+                            <span class="biographies__name">Alter egos</span>
+                            <span class="biographies__value"></span>
+                        </div>
+                        <div class="biographies">
+                            <span class="biographies__name">Aliases</span>
+                            <span class="biographies__value"></span>
+                        </div>
+                        <div class="biographies">
+                            <span class="biographies__name">Place of Birth</span>
+                            <span class="biographies__value"></span>
+                        </div>
+                        <div class="biographies">
+                            <span class="biographies__name">First appearance</span>
+                            <span class="biographies__value"></span>
+                        </div>
+                        <div class="biographies">
+                            <span class="biographies__name">Publisher</span>
+                            <span class="biographies__value"></span>
+                        </div>
+                        <div class="appearances">
+                            <span class="biographies__name">Alignment</span>
+                            <span class="biographies__value"></span>
+                        </div>
+                    </section>
+                    <section id="work-container" class="horizontal-properties__containers">
+                        <h3>Work</h3>
+                        <div class="work">
+                            <span class="work__name">Occupation</span>
+                            <span class="work__value"></span>
+                        </div>
+                        <div class="work">
+                            <span class="work__name">Base</span>
+                            <span class="work__value"></span>
+                        </div>
+                    </section>
+                    <section id="connections-container" class="horizontal-properties__containers">
+                        <h3>Connections</h3>
+                        <div class="connections">
+                            <span class="connections__name">Group affiliation</span>
+                            <span class="connections__value"></span>
+                        </div>
+                        <div class="connections">
+                            <span class="connections__name">Relatives</span>
+                            <span class="connections__value"></span>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../api/herodata.js"></script>
+    <script src="../../store.js"></script>
+    <script src="details.js"></script>
+</body>
+</html>

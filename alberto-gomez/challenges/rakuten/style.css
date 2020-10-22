@@ -1,0 +1,600 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #0d0d0d;
+}
+
+.cinema-top-scifi-movies {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: #171717;
+}
+
+.cinema-top-scifi-movies-text {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.cinema-top-scifi-movies-text > h3 {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+}
+
+.cinema-top-scifi-movies-text > p {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.cinema-top-scifi-movies-films {
+	height: 360px;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	white-space: nowrap;
+	padding-top: 5px;
+}
+
+.cinema-top-scifi-movies-films::-webkit-scrollbar {
+	width: 0;
+}
+
+.cinema-top-scifi-movies-films a {
+	width: 100px;
+	height: auto;
+	margin: 0 3px;
+}
+
+.cinema-top-scifi-movies-films img {
+	position: relative;
+}
+
+.cinema-top-scifi-movies-films img:hover {
+	outline: 5px solid yellow;
+}
+
+.cinema-documentaries {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: #171717;
+}
+
+.cinema-documentaries-text {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.cinema-documentaries-text > h3 {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+}
+
+.cinema-documentaries-text > p {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.cinema-documentaries-films {
+	height: 360px;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	white-space: nowrap;
+	padding-top: 5px;
+}
+
+.cinema-documentaries-films::-webkit-scrollbar {
+	width: 0;
+}
+
+.cinema-documentaries-films a {
+	width: 100px;
+	height: auto;
+	margin: 0 3px;
+}
+
+.cinema-documentaries-films img:hover {
+	outline: 5px solid yellow;
+}
+
+.starzplay {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background-color: #171717
+}
+
+.starzplay-text {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 10px
+}
+
+.starzplay-text h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	font-size: 20px;
+}
+
+.starzplay-text p {
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.flex-spacer {
+	flex: 1;
+}
+
+.starzplay-films {
+	height: 360px;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	white-space: nowrap;
+	padding-top: 5px;
+}
+
+.starzplay-films::-webkit-scrollbar {
+	width: 0;
+}
+
+.starzplay-films a {
+	width: 100px;
+	height: auto;
+	margin: 0 3px;
+}
+
+.starzplay-films img:hover {
+	outline: 5px solid yellow;
+}
+
+.genre-box {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #171717;
+}
+
+.genre-box h3 {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	margin: 0 0 20px 20px;
+}
+
+.genre-slide {
+	display: flex;
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding: 0 10px;
+}
+
+.genre-slide::-webkit-scrollbar {
+	width: 0;
+}
+
+.all-icon {
+	width: 100px;
+	height: 100px;
+}
+
+.genre-slide > a {
+	min-width: 110px;
+	height: 150px;
+	margin-right: 10px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.genre-slide p {
+	text-align: center;
+	margin-top: 10px;
+}
+
+/* FOOTER */
+
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.footer__rakuten-logo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 30px;
+}
+
+.rakuten-logo {
+	width: 150px;
+	height: auto;
+}
+
+.footer__pages {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	width: 90%;
+	line-height: 5px;
+}
+
+.footer__pages > p {
+	color: rgb(153, 153, 153);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	margin: 30px 10px 0 10px;
+	cursor: pointer;
+}
+
+.footer__pages-text:hover {
+	color: white;
+}
+
+.footer-links {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.footer__copyright {
+	margin: 40px;
+	color: rgb(153, 153, 153);
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: lighter;
+	font-size: 12px;
+	text-align: center;
+}
+
+.footer__nav-bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 100px;
+	background-color: black;
+	border-top: 1px solid rgb(30, 30, 30);
+}
+
+.footer__nav-bar > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.footer__nav-bar p {
+	color: #999;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bolder;
+	font-size: 12px;
+	margin-top: 6px;
+}
+
+.nav-bar__icon {
+	color: #999;
+}
+
+.footer-info {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	background-color: #212121;
+}
+
+.footer-info h4, p {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-info p {
+	text-align: center;
+	font-size: 12px;
+	margin: 10px 0;
+	line-height: 20px;
+}
+
+.rakuten-cinema-tv {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	margin-bottom: 40px;
+	padding-top: 40px;
+}
+
+.rakuten-cinema-tv h4 {
+	font-size: 20px;
+}
+
+.rakuten-cinema-tv p {
+	font-size: 14px;
+	font-weight: lighter;
+}
+
+.device-payment-support {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-bottom: 50px;
+}
+
+.device-payment-support h4 {
+	font-size: 20px;
+}
+
+.device-payment-support p {
+	font-size: 14px
+}
+
+.functionality {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.payment {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 30%;
+}
+
+.support {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 30%;
+}
+
+.devices {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 30%;
+}
+
+.devices-icon {
+	width: 30%;
+	height: auto;
+}
+
+.functionality-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.payment-icons {
+	width: 100%;
+	height: auto;
+}
+
+.info-icon {
+	width: 30%;
+	height: auto;
+}
+
+
+@media screen and (min-width: 1024px) {
+	.footer-info {
+		display: flex;
+	}
+
+	.rakuten-pages-desktop {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		width: 95%;
+		align-items: flex-start;
+	}
+
+	.footer__pages {
+		width: auto;
+	}
+
+	.footer__copyright {
+		margin: 5px 0 0 8px;
+		padding-bottom: 50px;
+	}
+
+	.footer__nav-bar {
+		display: none;
+	}
+
+	.footer-links {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+}
+
+/* AKASH */
+
+
+.top-nav {
+    background-color: black;
+    position: fixed; 
+    width: 100%;
+    top: 0px;
+}
+
+.nav-items {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    height: 60px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+
+
+}
+
+.nav-logo {
+    width: 140px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-items-menu,
+.nav-items-user {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-items-menu>div,
+.nav-items-user>div {
+    margin: 0 10px;
+}
+
+.nav-search{
+    display: flex;
+    background-color: #333333;
+    flex-direction: row;
+    height: 40px;
+    align-items: center;
+    color: #999;
+    border-radius: 2px;
+}
+
+input{
+    background-color: #333333;
+    height: -webkit-fill-available;
+    border: none;
+    width: 270px;
+    font-size: 16px;
+}
+.nav-search>div{
+    height: 40px;
+    padding-left: 10px;
+}
+.search-icon{
+    padding-top: 8px;
+}
+.nav-option{
+    display: flex;
+}
+.nav-option>div{
+    margin: 0 4px;
+}
+.nav-register{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: #ffe300;
+    color: black;
+    border-radius: 2px;
+    padding: 12px;
+}
+div.slider-wrapper{
+    background-color: black;
+}
+
+
+.main-image img{
+    height: auto;
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.mobile{
+    display: none;
+} 
+
+.boxes img{
+    width: 230px;
+    height: auto;
+    
+} 
+.movies-row-fixed{
+    display: flex;
+    background-color: black;
+    overflow-x: auto;
+}
+
+.movies-row-fixed a {
+    text-align: center;
+    margin: 0 10px;
+}
+
+ header{
+     width: 100%;
+ }
+
+ .movies-row-fixed::-webkit-scrollbar{
+    width: 0;
+   
+}
+input:focus{
+    outline: none;
+  
+}
+.nav-hover:hover{
+    color: yellow;
+    cursor: pointer;
+   
+}
+.search-hover:hover{
+    background-color: white;
+}
+
+@media only screen and (max-width: 1240px) {
+    .nav-help{
+        display: none;
+
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .nav-option,.nav-search, .nav-help, .nav-signin, .nav-register{
+        display: none;
+        
+    }
+    .mobile{
+        display: block;
+    }
+    .top-nav{
+        position: absolute;
+        background: linear-gradient(to bottom, black, transparent);
+    }
+    .movies-row-fixed{
+        display: flex;
+        overflow-x: auto;
+       
+    }
+    .movies-row-fixed::-webkit-scrollbar{
+        width: 0;
+       
+    }
+    .movies-row-fixed a {
+        text-align: center;
+        min-width: 225px;
+        line-height: 20px;
+        margin-right: 0 0px;
+    
+    }
+    .main-image img{
+    margin-top: 0;
+    margin-bottom: 10px;
+    }
+}

@@ -1,291 +1,708 @@
 .description {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 10px;
+	padding-top: 50px;
 }
 
 .description__social {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    text-align: center;
-    background-color: #f1f1f1;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	text-align: center;
+	background-color: #f1f1f1;
 }
 
 .social__button {
-    margin-right: 3px;
-    margin-left: 3px;
-    height: 50px;
-    width: 50px;
-    background-color: white;
-    border: 1px solid #dfdfdf;
-    border-radius: 100%;
-    box-shadow: none;
-    outline: none;
-    cursor: pointer;
+	margin-right: 3px;
+	margin-left: 3px;
+	height: 50px;
+	width: 50px;
+	background-color: white;
+	border: 1px solid #dfdfdf;
+	border-radius: 100%;
+	box-shadow: none;
+	outline: none;
+	cursor: pointer;
 }
 
-.button__twitter {
-    width: 50%;
-}
-
-.button__facebook {
-    width: 50%;
-}
-
-.button__pinterest {
-    width: 50%;
+.social__button {
+	display: flex;
+	color: black;
+	align-items: center;
+	justify-content: center;
 }
 
 .social__button:hover {
-    color: grey
+	color: grey;
+}
+
+.social__button:active {
+	color: white;
+	background-color: black;
 }
 
 .desktop__text {
-    display: none;
+	display: none;
 }
 
 .description__body {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 25px 15px;
-    width: auto;
-    border: 1px solid #dfdfdf;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding: 25px 15px;
+	width: auto;
+	border: 1px solid #dfdfdf;
 }
 
 .body__title {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 .title__details {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .details__text {
-    display: inline-block;
-    margin-right: 15px;
-    margin-bottom: 3px;
-    font-size: 14px;
-    font-weight: 700;
-    color: #252525;
+	display: inline-block;
+	margin-right: 15px;
+	margin-bottom: 3px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #252525;
 }
 
 .title__details > .material-icons {
-    padding-bottom: 6px;
-    padding-right: 4px;
+	padding-bottom: 6px;
+	padding-right: 4px;
 }
 
 .body__text {
-    color: #252525;
-    font-size: 16px;
-    line-height: 180%;
-    margin-bottom: 30px;
+	color: #252525;
+	font-size: 16px;
+	line-height: 180%;
+	margin-bottom: 30px;
 }
 
 .bodylang__title {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	margin-bottom: 30px;
 }
 
 .title__lang {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding-right: 20px;
-    padding-top: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	padding-right: 20px;
+	padding-top: 5px;
+}
+
+.title__cast-scroll {
+	display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+	width: 100%;
+	overflow-x: auto;
+}
+
+.title__cast-scroll::-webkit-scrollbar {
+	display: none;
+}
+
+.scroll__item {
+    text-align: center;
+    padding: 5px;
+}
+
+.scroll__item p {
+    font-size: 12px;
+    padding-top: 2px;
+}
+
+.denis__director {
+    margin-top: -10px;
+    font-weight: 700;
+}
+
+#item__denis {
+	width: 80px;
+}
+
+#item__manuela {
+	width: 82px;
+}
+
+#item__maggie {
+	width: 80px;
+}
+#item__emma {
+	width: 80px;
+}
+#item__alain {
+	width: 80px;
+}
+#item__claudia {
+	width: 80px;
+}
+#item__david {
+	width: 80px;
+}
+#item__marta {
+	width: 80px;
 }
 
 .lang__sound {
-    margin-right: 15px;
-    margin-bottom: 3px;
-    font-size: 14px;
-    font-weight: 700;
-    color: #252525;
+	margin-right: 15px;
+	margin-bottom: 3px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #252525;
 }
 
 .lang__text {
-    margin-right: 15px;
-    margin-bottom: 3px;
-    font-size: 14px;
-    color: #a6a6a6
+	margin-right: 15px;
+	margin-bottom: 3px;
+	font-size: 14px;
+	color: #a6a6a6;
 }
 
 .title__score-gender {
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
 .score-gender__score {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .score__pages {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-right: 40px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding-right: 40px;
 }
 
 .score__round {
-    position: relative;
-    display: inline-block;
-    margin-right: 15px;
-    margin-bottom: 50px;
-    width: 80px;
-    height: 80px;
-    color: #252525;
-    background-color: #d9d9d9;
-    border-radius: 50%;
-    transition: color .1s ease;
+	position: relative;
+	display: inline-block;
+	margin-right: 15px;
+	margin-bottom: 50px;
+	width: 80px;
+	height: 80px;
+	color: #252525;
+	background-color: #d9d9d9;
+	border-radius: 50%;
+	transition: color 0.1s ease;
 }
 
 .round__content {
-    background-color: #ffe300;
-    clip: rect(0,40px,80px,0); 
+	background-color: #ffe300;
+	clip: rect(0, 40px, 80px, 0);
 }
 
 .box {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
 }
 
 .box .percent {
-    position: relative;
-    width: 100px;
-    height: 100px;
+	position: relative;
+	width: 100px;
+	height: 100px;
 }
 
 .box .percent svg {
-    position: relative;
-    width: 100px;
-    height: 100px;
+	position: relative;
+	width: 100px;
+	height: 100px;
 }
 
 .box .percent svg circle {
-    width: 100px;
-    height: 100px;
-    fill: none;
-    stroke-width: 7;
-    stroke: #ffe300;
-    transform: translate(5px,5px);
-    stroke-dasharray: 130;
-    stroke-dashoffset: 85;
+	width: 100px;
+	height: 100px;
+	fill: none;
+	stroke-width: 7;
+	stroke: #ffe300;
+	transform: translate(5px, 5px);
+	stroke-dasharray: 130;
+	stroke-dashoffset: 85;
 }
 
 .box .percent svg circle:nth-child(1) {
-    stroke-dasharray: 0;
-    stroke-dashoffset: 0;
-    stroke: #d9d9d9;
+	stroke-dasharray: 0;
+	stroke-dashoffset: 0;
+	stroke: #d9d9d9;
 }
 
 .box .percent .number {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .box .percent .number span {
-    color: #252525;
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: -2px;
+	color: #252525;
+	font-size: 28px;
+	font-weight: 700;
+	letter-spacing: -2px;
 }
 
 .box > span {
-    font-size: 12px;
+	font-size: 12px;
 }
 
 .score-gender__score {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .details__mask {
-    width: 10%;
-    padding-right: 5px;
+	width: 10%;
+	padding-right: 5px;
 }
 
 .gender__terror {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    width: 95px;
-    height: 95px;
-    background-color: #d9d9d9;
-    background-size: 100%;
-    border-radius: 50%;
-    box-shadow: inset 0 0 0 7px white;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+	width: 95px;
+	height: 95px;
+	background-color: #d9d9d9;
+	background-size: 100%;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 7px white;
 }
 
 .gender__terror img {
-    position: relative;
-    width: 100%;
+	position: relative;
+	width: 100%;
 }
 
 .gender__terror > span {
-    font-size: 12px;
+	font-size: 12px;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Noto Sans', sans-serif;
+	padding: 0;
+	margin: 0;
+	font-family: 'Noto Sans', sans-serif;
 }
 
 @media screen and (min-width: 909px) {
-    .description {
-        display: flex;
-        flex-direction: row-reverse;
-        padding-left: 20px;
-        background-color: #f1f1f1;
-    }
+	.description {
+		display: flex;
+		flex-direction: row-reverse;
+		padding-left: 20px;
+		background-color: #f1f1f1;
+	}
 
-    .description__social {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
+	.description__social {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
 
-    .social__button {
-        margin-left: 30px;
-        margin-bottom: 7px;
-    }
+	.social__button {
+		margin-left: 30px;
+		margin-bottom: 7px;
+	}
 
-    .desktop-option {
-        display: flex;
-        align-items: center;
-    }
+	.desktop-option {
+		display: flex;
+		align-items: center;
+	}
 
-    .desktop__text {
-        display: block;
-        padding-left: 10px;
-    }
+	.desktop__text {
+		display: block;
+		padding-left: 10px;
+	}
 
-    .description__body {
-        flex: 2.25;
-        background-color: white;
-    }
+	.description__body {
+		flex: 2.25;
+		background-color: white;
+	}
 }
+
+
+.Back {
+    position: relative;
+    height: calc(100vh - 50px);
+    min-height: 100%;
+    background-image: url("Back.jpg");
+    background-color: #000;
+    background-position: center top;
+    background-size: 215%;
+    transition: height .1s linear,background-image .2s ease;
+    will-change: background-position;
+    z-index: 1;
+}
+#picture {
+    max-width: 100%;
+    position: block;
+    background-position: center top; 
+    max-height: 100%;
+}
+.iconPlay{
+    position: absolute;
+}
+.squareGradient{
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.027), rgba(0, 0, 0, 0.918), rgba(0, 0, 0, 0.027));position: absolute; 
+    z-index: 99;
+    left:75%;
+    height: 100%;
+    width: 25%;   
+}
+#Pin:hover{
+    top: 36%;
+    left: 60.5%;
+    position: absolute;
+    width: 6%;
+    height: 12%;
+    display: none;
+}
+#Pin{
+    top: 36%;
+    left: 60.5%;   
+    width: 6%;
+    height: 12%;
+    background-image: url("Pin.png");
+}
+#PinYellow:hover{
+    top: 36%;
+    left: 60.5%;
+    position: absolute;
+    width: 6%;
+    height: 12%;
+    background-image: url("PinHover.png");
+}
+#PinYellow{
+    display:none;
+    top: 36%;
+    left: 60.5%;   
+    width: 6%;
+    height: 12%;
+    background-image: url("PinHover.png");
+}
+
+#bigCircle {
+    top: 30%;
+    left: 38%;
+    width: 150px;
+    height: 150px;
+    background: black;
+    border-radius: 50%
+}
+#bigCircle2 {
+    top: 30%;
+    left: 58%;
+    width: 150px;
+    height: 150px;
+    background: black;
+    border-radius: 50%
+}
+#circle {
+    top: 27%;
+    left: 27%;
+    width: 70px;
+    height: 70px;
+    background: white;
+    border-radius: 50%
+}
+#circle:hover {
+    background: yellow;
+}
+#FontIcons{
+    position: absolute;
+    top: 100%;
+	color: white;
+	left: 30%;
+}
+
+#FontPoints{
+    position: absolute;
+    font-size: large;
+    color: yellow;
+    z-index: 99;
+    top: 60%;
+    left: 52%;
+}
+#FontButtons{
+    position: absolute;
+    color: white;
+    z-index: 99;
+}
+
+#FontCupon{
+    left:25%;
+    top: 50%;
+}
+#triangle-right {
+    top: 30%;
+    left: 35%;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-left: 30px solid black;
+    border-bottom: 15px solid transparent;
+  }
+  .rectangle {
+	background-color: yellow;
+    position: absolute; 
+    z-index: 99;
+    height: 10%;
+	width: 20%;
+	top: 74%;
+	left: 32%;
+	display: flex; 
+	flex-direction: row;
+	justify-content: space-around;
+  }
+  .rectangle1 {
+    position: absolute; 
+    z-index: 99;
+    height: 10%;
+	width: 20%;
+	top: 74%;
+	left: 54%;
+	border:5px solid yellow; 
+	display: flex; 
+	flex-direction: row;
+	justify-content: center;
+  }
+  .title{
+	display: none;
+  }
+@media screen and (max-width: 375px){
+	.description {
+	margin-top:50%;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 10px;
+	padding-top: 50px;
+}
+	.title{
+		color: white;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-content: center;
+	}
+	.backgroundTitle{
+		background-color: black;
+		position: absolute;
+		top: 23%;
+    	height: 29.5%;
+		width: 100%;
+	}
+	.rectangleTitle{
+		background-color: #ffe300;
+		position: absolute; 
+		z-index: 99;
+		top: 40%;
+    	height: 20%;
+		width: 70%;
+	}
+	.subtitle{
+		color: black;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-content: center;
+		font-size: medium;
+	}	
+	#Pin:hover{
+		top: 36%;
+		left: 60.5%;
+		position: absolute;
+		width: 6%;
+		height: 12%;
+		display: none;
+		z-index: 100;
+	}
+	#PinYellow:hover{
+		top: 36%;
+		left: 60.5%;
+		position: absolute;
+		width: 6%;
+		height: 12%;
+		background-image: url("PinHover.png");
+		z-index: 100;
+	}
+	#PinYellow{
+		display:none;
+		top: 36%;
+		left: 60.5%;   
+		width: 6%;
+		height: 12%;
+		background-image: url("PinHover.png");
+		z-index: 100;
+	}
+    .Back {
+        height: 40%;
+        max-width: 100%;
+        background-size: cover;
+    }
+    #picture {
+        height: 40%;
+        width: 90%;
+        position: relative;
+        margin-left: 10%;
+        background-position: center top; 
+    }
+    #Pin{
+        top: 36%;
+        left: 60.5%;
+        position: absolute;
+        width: 3%;
+        height: 6%;
+        background-image: url("Pin.png");
+		z-index: 100;
+	}
+	.iconPlay{
+		position: absolute;
+	}
+	.squareGradient{
+		background-image: linear-gradient(to right,rgba(0, 0, 0, 0.027), rgba(0, 0, 0, 0.918), rgba(0, 0, 0, 0.027));position: absolute; 
+		z-index: 99;
+		left:75%;
+		height: 100%;
+		width: 25%;   
+	}
+	#Pin:hover{
+		top: 36%;
+		left: 60.5%;
+		position: absolute;
+		width: 6%;
+		height: 12%;
+		display: none;
+	}
+	#Pin{
+		top: 36%;
+		left: 62.5%;   
+		width: 8%;
+		height: 16%;
+		background-image: url("Pin.png");
+	}
+	#PinYellow:hover{
+		top: 36%;
+		left: 60.5%;
+		position: absolute;
+		width: 6%;
+		height: 12%;
+		background-image: url("PinHover.png");
+	}
+	#PinYellow{
+		display:none;
+		top: 36%;
+		left: 60.5%;   
+		width: 6%;
+		height: 12%;
+		background-image: url("PinHover.png");
+	}
+	#FontIcons{
+		position: absolute;
+		font-size: x-small;
+		top: 100%;
+		color: white;
+		left: 20%;
+	}
+	#bigCircle {
+		position:absolute;
+		left: 30%;
+		width: 60px;
+		height: 60px;
+		background: black;
+		border-radius: 50%;
+		z-index: 98;
+	}
+	#bigCircle2 {
+		position: absolute;
+		left: 58%;
+		width: 60px;
+		height: 60px;
+		background: black;
+		border-radius: 50%;
+		z-index: 98;
+	}
+	#circle {
+		top: 18%;
+		left: 19%;
+		width: 40px;
+		height: 40px;
+		background: white;
+		border-radius: 50%
+	}
+	#triangle-right {
+		top: 30%;
+		left: 37%;
+		width: 0;
+		height: 0;
+		border-top: 7px solid transparent;
+		border-left: 14px solid black;
+		border-bottom: 7px solid transparent;
+	  }
+	.squareGradient{
+		background-image: linear-gradient(to left,rgba(0, 0, 0, 0.027), rgba(0, 0, 0, 0.918), rgba(0, 0, 0, 0.027));position: absolute; 
+		z-index: 99;
+		left:5%;
+		height: 100%;
+		width: 10%;   
+	}
+	#circle:hover {
+		background: yellow;
+	}
+	#FontPoints{
+		display: none;
+	}
+	#FontButtons{	
+		display: none;
+	}
+	.rectangle {
+		display: none;
+	}
+	.rectangle1{
+		display:none;
+	}
+	#FontCupon{
+		display: none;
+		font-size: small;
+		left:25%;
+		top: 50%;
+	}
+}
+#buttonRight{
+	top:25%;
+}
+#buttonLeft{
+	top:25%;
+}
+.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
+    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+        .MultiCarousel .MultiCarousel-inner .item { float: left;}
+        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
+    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
+    .MultiCarousel .leftLst { left:0; }
+    .MultiCarousel .rightLst { right:0; }
