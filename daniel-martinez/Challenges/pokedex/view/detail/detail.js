@@ -1,9 +1,4 @@
-class Pokemon {
-    constructor(){
-    }
-    
-    pokemonTitle(pokemonNum){
+class PokemonDetail {
+    constructor(pokemon){
     }
 }
-
-const pokemon = new Pokemon;

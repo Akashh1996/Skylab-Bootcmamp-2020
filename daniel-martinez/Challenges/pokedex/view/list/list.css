@@ -18,8 +18,23 @@ main {
 	margin: 30px 10px 20px;
 }
 
-#list-block__title {
+.list-block__title {
+	display: flex;
+	flex-direction: row;
 	margin: 40px 0 20px 40px;
+}
+
+#pokeball-title {
+	display: inline-block;
+	height: 20px;
+}
+
+#pokeball-title {
+	margin: 5px 10px 0 0;
+}
+
+#title__text {
+	font-size: 28px;
 }
 
 #list-block__ul {

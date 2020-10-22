@@ -6,6 +6,7 @@
     <title>Detail</title>
     <link rel="stylesheet" href="detail.css">
     <link rel="shortcut icon" id="tabImage" href="https://cdn2.iconfinder.com/data/icons/pokemon-filledoutline/64/pokeball-people-pokemon-nintendo-video-game-gaming-gartoon-ball-512.png" type="image/x-icon">
+    <link href="//db.onlinewebfonts.com/c/51ba22ae06790efd464bde752a2cd9d1?family=Flexo" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <header>
@@ -19,11 +20,13 @@
     
 
 <script src="./../list/list.js"></script>
+<script src="./../../src/poke-store.js"></script>
 <script src="./detail.js"></script>
 <script>
-    pokemonList.loadPokemons().then(() =>{
-        const pokemonNum = +window.location.search.replace('?n=','');
-        document.getElementById('pokemon-title').innerHTML = pokemon.pokemonTitle(pokemonNum);
+    const pokemonId = +window.location.search.slice(3,window.location.search.indexOf('&'));
+    const pokemonName = window.location.search.slice(window.location.search.indexOf('e=')+2);
+    pokedex.loadPokemonsFromAPIById(pokemonId).then(() =>{
+        document.getElementById('pokemon-title').innerHTML = pokedex.pokemonDetailTitle(pokemonId, pokemonName);
     })
 </script>
 </body>

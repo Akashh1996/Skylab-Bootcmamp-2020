@@ -16,18 +16,24 @@
     </header>
     <main>
     <section id="list-block">
-        <h2 id="list-block__title">List of Pokémon</h2>
+        <div class="list-block__title">
+            <img src="https://cdn2.iconfinder.com/data/icons/pokemon-filledoutline/64/pokeball-people-pokemon-nintendo-video-game-gaming-gartoon-ball-512.png" alt="pokeball-title" id="pokeball-title">
+            <h2 id="title__text">List of Pokémon</h2>
+        </div>
         <ul id="list-block__ul"></ul>
     </section>
     <div id="back-next-buttons">
     </div>
     </main>
+    <script src="./../../src/poke-store.js"></script>
     <script src="./list.js"></script>
     <script>
         let page = +window.location.search.replace('?page=','');
-        pokemonList.loadPokemons(page).then(() =>{
-            document.getElementById("list-block__ul").innerHTML = pokemonList.setListOfPokemons();
-            document.getElementById("back-next-buttons").innerHTML = pokemonList.backAndNextButtons(page);
+        pokedex.loadPokemons(page).then(() =>{
+            const pokemons = pokedex.getPokemons();
+            const pokemonList = new PokemonList(pokemons);
+            document.getElementById("list-block__ul").innerHTML = pokedex.setListOfPokemons();
+            document.getElementById("back-next-buttons").innerHTML = pokedex.backAndNextButtons(page);
         });
     </script>
 </body>

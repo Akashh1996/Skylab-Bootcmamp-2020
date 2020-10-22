@@ -1,17 +1,27 @@
 * {
 	margin: 0;
+	font-family: 'Flexo';
 }
 
 body {
 	background-color: rgb(195, 44, 51);
 }
 
+main {
+	margin: 40px;
+}
+
 .pokedex-logo {
 	display: flex;
 	justify-content: flex-start;
-	margin: 30px 10px 20px;
+	margin: 10px 10px 20px;
 }
 
 #pokedex-logo__image {
 	width: 200px;
+}
+
+#pokemon-title {
+	text-transform: capitalize;
+	color: rgb(32, 32, 32);
 }
