@@ -16,19 +16,27 @@ const skylabArray = {
 		};
     },
 
-    filter: (original, element) => {
+    filter: (original, object) => {
         let newObject = {};
         newObject.length = 0;
-        for (let property in original) {
-            if (original.hasOwnProperty(property) !== 'length') {
-                if (element(original[property]) && original.hasOwnProperty(property)) {
-                    newObject[property] = original[property];
-                    newObject.length++;
-                };
+        for (let property in object) {
+            if (original(object[property]) && property !== 'length' && object.hasOwnProperty(property)) {
+                newObject[property] = object[property];
+                newObject.length++;
             };
-        return newObject;
         };
+        return newObject;
     },
+
+    some: (fn, object) => {
+		for (let property in object) {
+			if (fn(object[property]) && object.hasOwnProperty(property)) {
+				return true;
+			}
+		}
+		return false;
+	},
+
 };
 
 let filterArray = {
