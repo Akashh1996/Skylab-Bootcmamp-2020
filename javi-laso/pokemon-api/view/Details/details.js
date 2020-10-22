@@ -24,20 +24,20 @@ const pok = store.loadPokemonByName(name).then(() => {
     nameInput.innerHTML = name;
 
     for (let index = 0; index < pokemon.types.length; index++){
-        store.createAbilityElement(typesContainer, pokemon.types, 'type',index);
+        store.createGroupElement(typesContainer, pokemon.types, 'type',index);
     }
 
     for (let index = 0; index < pokemon.abilities.length; index++){
-        store.createAbilityElement(abilitiesContainer, pokemon.abilities, 'ability',index);
+        store.createGroupElement(abilitiesContainer, pokemon.abilities, 'ability',index);
     }
 
     for (let index = 0; index < pokemon.moves.length; index++) {
-        store.createAbilityElement(movesContainer, pokemon.moves, 'move', index);
+        store.createGroupElement(movesContainer, pokemon.moves, 'move', index);
     } 
     
     for (let circleIndex = 0; circleIndex < circles.length; circleIndex++) {
         store.updateValueHtml(statsNumber[circleIndex], 'innerHTML', pokemon.stats[circleIndex]['base_stat']);
-        store.setStrokeDashoffsetInCircle(circles[circleIndex], pokemon.stats[circleIndex]['base_stat']);
-        store.setStrokeDasharrayInCircle(circles[circleIndex], pokemon.stats[circleIndex]['base_stat']);
+        store.setStrokeDashoffsetInCircle(circles[circleIndex], pokemon.stats[circleIndex]['base_stat'], 200);
+        store.setStrokeDasharrayInCircle(circles[circleIndex], pokemon.stats[circleIndex]['base_stat'], 200);
     }
 });

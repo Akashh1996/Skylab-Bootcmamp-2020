@@ -1,3 +1,7 @@
+body {
+	background-color: #ef5350;
+}
+
 body * {
 	margin: 0;
 	padding: 0;
@@ -22,7 +26,8 @@ body * {
 	justify-content: center;
 	cursor: pointer;
 	text-decoration: none;
-	color: #afafaf;
+	color: black;
+	border: black 1px solid;
 	background-color: #eeeeee;
 	margin: 7px 15px 7px 0px;
 	border-radius: 10px;

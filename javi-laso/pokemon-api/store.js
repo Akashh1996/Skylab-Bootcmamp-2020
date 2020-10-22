@@ -4,7 +4,6 @@ let pokemon;
 class Store {
 
     getPokemonList(){
-        debugger;
         return pokemonList;
     }
 
@@ -53,7 +52,7 @@ class Store {
         return nameArray[1];
     }
 
-    createAbilityElement(parentElement, pokemonList, groupName, index){
+    createGroupElement(parentElement, pokemonList, groupName, index){
         let listElement = document.createElement('li');
         parentElement.appendChild(listElement);
         listElement.setAttribute('class', 'capitalize');

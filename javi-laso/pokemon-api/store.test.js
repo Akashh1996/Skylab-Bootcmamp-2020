@@ -113,11 +113,11 @@ describe('Pokemon', () => {
         })
     });
 
-    describe('createAbilityElement', () => {
+    describe('createGroupElement', () => {
         test('should append an element in the parent element', () => {
             //arrange          
             //act
-            store.createAbilityElement(element, pokemonList, 'test', 2);
+            store.createGroupElement(element, pokemonList, 'test', 2);
             //assert          
             expect(element.hasChildNodes()).toBe(true);
         });
@@ -125,7 +125,7 @@ describe('Pokemon', () => {
         test('the list element has to have an element', () => {
             //arrange          
             //act
-            store.createAbilityElement(element, pokemonList, 'test', 2);
+            store.createGroupElement(element, pokemonList, 'test', 2);
             //assert          
             expect(element.firstChild.hasChildNodes()).toBe(true);
         });
