@@ -3,7 +3,7 @@ let pokeDetail
 let pokemonAbility
 class Store {
     getpokemonData() {
-        return fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0')
+        return fetch('https://pokeapi.co/api/v2/pokemon?limit=100&offset=0')
             .then((response) => response.json())
             .then((pokemon) => {
                 _pokeMonList = pokemon.results;

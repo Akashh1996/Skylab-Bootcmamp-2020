@@ -5,9 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="ability.css">
+    <link rel="stylesheet" href="../detail/detail.css">
 </head>
 <body>
+    <nav>
+        <div class="nav">
+            <div class="nav_logo" style="width: 15%;">
+                <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" width="100%" alt=""></a>
+            </div>
+           
+        </div>
 
+    </nav>
+    
+
+    <div class="buttons">
+        <button id="english">English</button>
+        <button id="german">German</button>
+    </div>
+    <h4 id="ability-english"></h4>
+    <h4 id="ability-german"></h4>
+
+    <div class="buttons">
+        <button id="home"><a href="../list/list.html">List</a></button>
+    </div>
+   
     <script src="../store.js"></script>
     <script src="../util/location.js"></script>
  
@@ -18,16 +40,26 @@
         store.getPokemonAbility(name).then(() => {
             let pokDetail = store.pokeMonDetailAbility()
             console.log(pokDetail);
+            document.getElementById("ability-english").innerHTML = `${pokDetail.effect_entries[1].effect}`
+            document.getElementById("ability-german").innerHTML = `${pokDetail.effect_entries[0].effect}`
 
-            document.body.innerHTML = `<h1>${pokDetail.effect_entries[1].effect}` 
-            
+
+       
+        })
+        document.getElementById("english").addEventListener("click",() =>{
+            document.getElementById("ability-german").style.display = "none"
+            document.getElementById("ability-english").style.display = "block"
+        })
+        document.getElementById("german").addEventListener("click",() =>{
+            document.getElementById("ability-english").style.display = "none"
+            document.getElementById("ability-german").style.display = "block"
         })
 
 
 
 
 
+
     </script>
-     -->
 </body>
 </html>

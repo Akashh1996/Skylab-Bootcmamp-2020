@@ -12,15 +12,17 @@ class PokemonComponent {
                 `
 <li>
 
-<a href="../detail/detail.html?pokemonName=${eachPokeMon.name}">
-<span>${x++}</span> <span> ${eachPokeMon.name}</span>
+<a href="../detail/detail.html?pokemonName=${x}">
+<span>${x}.</span> <span> ${eachPokeMon.name}</span>
 
 </a>
 
 </li>
 `;
+            x++
         });
     }
+
 }
 
 /* module.exports = PokemonComponent; */

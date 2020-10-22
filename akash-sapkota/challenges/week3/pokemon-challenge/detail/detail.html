@@ -8,17 +8,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <nav>
+        <div class="nav">
+            <div class="nav_logo" style="width: 15%;">
+                <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" width="100%" alt=""></a>
+            </div>
+           
+        </div>
+
+    </nav>
     
     <main>
-        <div class="header">Im pokemon</div>
-        <button id="next">Next</button>
-
-        <button><a href="../list/list.html">Back</a></button>
+      
         <div class="detail-wrapper">
+            <div id="next" class="button">Next</div>
+
             <div class="detail_card1">
 
                 <div class="detail_header">
-                    <div><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png" id="image"></div>
+                    <div><img src="https://lh3.googleusercontent.com/proxy/if9zseTktuUQcKapVsfrSRXl-7MNHp66hMUJ6-MPAo51TmFjM1rV9YKgNpv-Y-g7ke9bIyUKyp_yTXgefKDKDad4HiejGR3SBnF6fkzYfJpMFMq0EujgbDUv36Wxml3PLw" id="image" width="100px"></div>
                     <div ><h2 id="pokemon-name">"venusaur"</h2></div>
                 </div>
 
@@ -32,23 +41,32 @@
                 </div>
              </div>
 
-            <div class="detail_card2">
-                <div class="detail-stats">
-                    <div><span>Stats:</span> <span id="stats"></span>  <span id="stat-number"></span> </div>
-                </div>
+             
+
+            <div class="buttons">
+                <div id="previous" class="button">Prev</div>
+
+            </div> 
+
+       
     
-                <div class="detail-algo">
-                    <div></div>
-                </div>
-            </div>
+    
+
+
         </div>
+
+        <div class="detail_card2">
+            <div class="detail-stats">
+                <div><span>Stats:</span> <span id="stats"></span>  <span id="stat-number"></span> </div>
+            </div>
+
+        </div>
+
+        <div class="list"><a href="../list/list.html">List</a></div>
 
                 
     </main>
 
-
-<!--     <div> <span id="abilities"></span></div>
- -->
 
     <script src="../store.js"></script>
     <script src="../util/location.js"></script>
@@ -56,7 +74,7 @@
     <script>
 
 
-    const name = getPokemonName(location);
+    let name = getPokemonName(location);
 
 
         
@@ -106,15 +124,6 @@
 						'innerHTML',
 						detailComponent.pokemon.base_experience
                     ); 
-                   /*  
-                    let ability = document.getElementById('ability');
-					detailComponent.updateHtmlValue(
-						ability,
-                        'innerHTML',
-						detailComponent.pokemon.abilities.map((eachAbility)=>{
-                            return eachAbility.ability.name
-                        })
-                    );  */
                     let type = document.getElementById('type');
 					detailComponent.updateHtmlValue(
 						type,
@@ -143,15 +152,28 @@
 						statNumber,
                         'innerHTML',
 						detailComponent.pokemon.stats.map((eachstatNumber)=>{
-                            console.log(eachstatNumber.base_stat);
                             return eachstatNumber.base_stat
                         })
 					); 
                     
 					
-				}
-			});
-            
+                }
+                
+                
+                
+            });
+      
+            document.getElementById("next").addEventListener("click",()=>{
+                console.log(name++);
+                window.location.search = `?pokemonName=${name++}`
+            })
+             
+            document.getElementById("previous").addEventListener("click",()=>{
+                console.log(name++);
+                window.location.search = `?pokemonName=${name--}`
+            })
+             
     </script>
 </body>
 </html>
+
