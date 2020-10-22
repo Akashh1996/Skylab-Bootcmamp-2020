@@ -1,10 +1,12 @@
 {
-  "name": "Pokemon",
+  "name": "pokemon",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "test --watch",
+    "test:coverage": "jest --collect-coverage --watchAll",
+    "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand"
   },
   "keywords": [],
   "author": "",

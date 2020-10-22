@@ -4,7 +4,7 @@ store.loadPokemons().then(() => {
         const pokemonList = document.createElement('li')
         const link = document.createElement('a')
         link.className = 'pokemon-link'
-        link.href = pokemon.url
+        link.href = `../detail/detail.html?=${pokemon.name}`
         link.textContent = pokemon.name
         pokemonList.appendChild(link)
         pokemonListContainer.appendChild(pokemonList)
