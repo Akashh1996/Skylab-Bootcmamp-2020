@@ -1,7 +1,6 @@
 {
   "name": "pokemon",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
@@ -13,5 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^26.6.0"
-  }
+  },
+  "dependencies": {},
+  "description": ""
 }

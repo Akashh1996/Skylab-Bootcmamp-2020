@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abilities</title>
-    <link rel="stylesheet" href="abilities.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-</head>
-<body>
-    
-    <script src="../store.js"></script>
-    <script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Abilities</title>
+		<link rel="stylesheet" href="abilities.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<script src="../store.js"></script>
+		<script>
+			function getPokemonName(location) {
+				const params = new URLSearchParams(location.search.substring(1));
+				const getName = params.get('pokemonName');
+				return getName;
+			}
 
+			let name = getPokemonName(location);
 
-
-
-
-    let ability = store.getPokemonAbility(location)
-    console.log(ability);
-    </script>
-</body>
+			store.getAbilityDescription(name).then(() => {
+				const pokDetail = store.getDescription();
+				console.log(pokDetail);
+				document.body.innerHTML = pokDetail.effect_entries[1].effect;
+			});
+		</script>
+	</body>
 </html>

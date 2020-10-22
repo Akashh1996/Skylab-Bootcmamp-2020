@@ -24,11 +24,15 @@
 			</div>
 			<div class="abilities__wrapper1">
 				<span>ability 1: </span>
-				<a class="anchor__abilities" href=""><span id="abilities1"></span></a>
+				<a class="anchor__abilities" href="" id="first-ability"
+					><span id="abilities1"></span
+				></a>
 			</div>
 			<div class="abilities__wrapper2" id="abilities2__display">
 				<span>ability 2: </span>
-				<a class="anchor__abilities" href=""><span id="abilities2"></span></a>
+				<a class="anchor__abilities" href="" id="second-ability"
+					><span id="abilities2"></span
+				></a>
 			</div>
 			<div class="moves__wrapper">
 				<span>moves: </span>
@@ -54,7 +58,20 @@
 
 			store.getPokeMonDetail(name).then(() => {
 				const pokDetail = store.pokeMonDetail();
-				console.log(pokDetail);
+				document.getElementById(
+					'first-ability'
+				).href = `../abilities/abilities.html?pokemonName=${pokDetail.abilities[1].ability.name}`;
+				document.getElementById(
+					'second-ability'
+				).innerHTML = `${pokDetail.abilities[1].ability.name}`;
+
+				document.getElementById(
+					'second-ability'
+				).href = `../abilities/abilities.html?pokemonName=${pokDetail.abilities[1].ability.name}`;
+				document.getElementById(
+					'second-ability'
+				).innerHTML = `${pokDetail.abilities[1].ability.name}`;
+
 				document.querySelector('#pokemon__image').src =
 					pokDetail.sprites.front_default;
 				document.querySelector('#abilities1').innerHTML =
@@ -73,11 +90,6 @@
 					pokDetail.moves[0].move.name;
 				document.querySelector('#types').innerHTML =
 					pokDetail.types[0].type.name;
-			});
-			store.getAbilityDescription(description).then(() => {
-				debugger;
-				const PokDescription = store.getDescription();
-				console.log(PokDescription);
 			});
 		</script>
 	</body>
