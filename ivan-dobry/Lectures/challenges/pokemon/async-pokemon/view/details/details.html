@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>POKEMON DETAILS</title>
+		<link rel="stylesheet" href="../../style/details.css" />
+	</head>
+	<body>
+		<main>
+			<div id="pokeName" class="header">Im pokemon</div>
+			<div class="detail">
+				<div class="detail_header">
+					<div><img src="" id="image" /></div>
+					<div>ability</div>
+					<div id="pokemon__ability"></div>
+				</div>
+				<div class="detail_all">
+					<div><span>Weight:</span>59<span></span></div>
+				</div>
+			</div>
+		</main>
+
+		<script src="../../store.js"></script>
+		<script src="../../util/location.js"></script>
+		<script src="../details/details.js"></script>
+		<script>
+			const location1 = location;
+			const name = getPokemonName(location1);
+			store.getPokemonDetail(name).then(() => {
+				const pokemonDetail = store.pokemonDetail();
+				let detailComponent = new DetailComponent(pokemonDetail);
+				console.log(detailComponent);
+				if (pokemonDetail) {
+					document.getElementById('pokeName').innerHTML = name;
+					let image = document.getElementById('image');
+					detailComponent.updateHtmlValue(
+						image,
+						'src',
+						detailComponent.pokemon.sprites.front_shiny
+					);
+					document.getElementById('pokeName');
+
+					let ability = store.getPokemonAbilityId();
+					store.getPokemonAbility(ability).then(() => {
+						document.getElementById(
+							'pokemon__ability'
+						).innerHTML = _pokemonAbility;
+					});
+				}
+			});
+			debugger;
+		</script>
+	</body>
+</html>
