@@ -1,12 +1,15 @@
 store.loadPokemons().then(() => {
-    console.log(_pokemons);
     _pokemons.forEach((pokemon) => {
-        let pokeLink = pokemon.url
-        let btn = document.createElement('button');
-        let anchorbtn = document.createElement('a')
-        anchorbtn.textContent = pokemon.name;
-        anchorbtn.setAttribute('href', pokeLink);
-        document.body.appendChild(btn);
-        btn.appendChild(anchorbtn);
+        const pokemonListContainer = document.getElementById('pokemons-list__container')
+        const pokemonList = document.createElement('li')
+        const link = document.createElement('a')
+        link.className = 'pokemon-link'
+        link.href = pokemon.url
+        link.textContent = pokemon.name
+        pokemonList.appendChild(link)
+        pokemonListContainer.appendChild(pokemonList)
     })
+
 })
+
+
