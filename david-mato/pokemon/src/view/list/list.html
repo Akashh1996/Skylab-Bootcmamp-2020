@@ -18,9 +18,10 @@
 
     </main>
 </body>
-<script src="../store.js"></script>
+<script src="../../store/store.js"></script>
 <script src="list.js"></script>
 <script>
+    const store = new Store();
     store.loadPokemons().then(() => {
         const listComponent = new ListComponent(_pokemons);
         const pokemonList = document.getElementById('pokemon-list');

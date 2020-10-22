@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <img class="pokemon-title" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="Pokemon title">
+    </header>
+    <main>
+        <h2 id="poke-name"></h2>
+        <div>
+            <span id="poke-ability"></span>
+        </div>
+    </main>
+    <script src="../../store/store.js"></script>
+    <script src="detail.js"></script>
+    <script>
+        const store = new Store();
+        store.loadPokemons().then(() => {
+            const params = new URLSearchParams(location.search.substring(1));
+            const getId = params.get('pokeId');
+            store.getPokemonById(getId).then(() => {
+                pokemon = store.getPokemon();
+                const detailComponent = new DetailComponent(pokemon);
+                if (pokemon) {
+                    let idElement = document.getElementById('poke-name');
+				    detailComponent.updateHtmlValue(
+					idElement,
+					'innerHTML',
+					detailComponent.pokemon.name
+                    );
+
+                    idElement = document.getElementById('poke-ability');
+				    detailComponent.updateHtmlValueToButton(
+					idElement,
+					'innerHTML',
+					detailComponent.pokemon.abilities[0].ability.name
+				    );
+                }
+            });
+        })
+    </script>
+</body>
+</html>
