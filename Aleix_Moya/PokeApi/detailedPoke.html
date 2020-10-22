@@ -18,7 +18,6 @@
         gameFreak.getName(name).then(() => {
             gameFreak.loadPokemon(link).then(() => {
                 actualPokemon = gameFreak.getPokedex();
-                console.log(thisPokemon);
                 document.getElementById("titulo").innerHTML = thisPokemon.name;
                 document.getElementById("subtitulo").innerHTML = "id: " + thisPokemon.id;
                 document.getElementById("subtitulo2").innerHTML = "order: " + thisPokemon.order;
