@@ -7,14 +7,14 @@ class Store {
 			`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${offset}`
 		);
 		const pokemonListJson = await pokemonsList.json();
-		return (_pokemons = pokemonListJson);
+		_pokemons = pokemonListJson;
 	}
 	async loadPokemonDetail(pokemon) {
 		const pokemonDetail = await fetch(
 			`https://pokeapi.co/api/v2/pokemon/${pokemon}`
 		);
 		const pokemonStats = await pokemonDetail.json();
-		return (_pokemonsDetail = pokemonStats);
+		_pokemonsDetail = pokemonStats;
 	}
 	getTopPokemons() {
 		return _pokemons.results.slice(0, 4);

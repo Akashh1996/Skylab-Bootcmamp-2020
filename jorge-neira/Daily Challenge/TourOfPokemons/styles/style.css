@@ -98,4 +98,17 @@ button {
 .pokemonDetail .detail-box .pokemon-title {
   font-size: 50px;
 }
+
+.pokemonDetail .detail-box .pokemonStat {
+  font-size: 30px;
+}
+
+.pokemonDetail .detail-box .pokeStyle {
+  color: red;
+}
+
+.pokemonDetail .detail-box .seeAbilities {
+  font-size: 30px;
+  padding: 10px;
+}
 /*# sourceMappingURL=style.css.map */

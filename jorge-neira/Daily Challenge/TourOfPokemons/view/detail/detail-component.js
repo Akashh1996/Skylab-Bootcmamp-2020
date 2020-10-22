@@ -13,7 +13,7 @@ class PokemonDetail {
 		const pokeTitle = document.querySelector('.pokemon-title');
 		const pokeId = document.querySelector('.pokeId');
 		const pokeBaseExperience = document.querySelector('.pokeBaseExperience');
-		pokeTitle.textContent = `${pokemonLocationName}`;
+		pokeTitle.textContent = `${pokeName}`;
 		pokeId.textContent = `${id}`;
 		pokeBaseExperience.textContent = `${baseExperience}`;
 	}
@@ -21,11 +21,12 @@ class PokemonDetail {
 
 const curUrlSearch = location;
 const pokemonLocationName = getPokemonUrlName(curUrlSearch);
-store.loadPokemonDetail(pokemonLocationName).then(() => {
-	const pokemonDetail = new PokemonDetail(_pokemonsDetail);
+(async () {
+const pokemonDetail = new PokemonDetail(_pokemonsDetail);
 	pokemonDetail.createDetailView(
 		pokemonLocationName,
 		pokemonDetail.getPokeId(),
 		pokemonDetail.getPokeBaseExperience()
 	);
-});
+}) ()
+
