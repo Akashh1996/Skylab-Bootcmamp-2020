@@ -31,7 +31,6 @@
         let page = +window.location.search.replace('?page=','');
         pokedex.loadPokemons(page).then(() =>{
             const pokemons = pokedex.getPokemons();
-            const pokemonList = new PokemonList(pokemons);
             document.getElementById("list-block__ul").innerHTML = pokedex.setListOfPokemons();
             document.getElementById("back-next-buttons").innerHTML = pokedex.backAndNextButtons(page);
         });

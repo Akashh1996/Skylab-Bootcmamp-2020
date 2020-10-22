@@ -1,5 +1,5 @@
-let _pokemons;
-let _pokemon;
+let _pokemons = {results: [{name: "", url:""}]};
+let _pokemon = {sprites: {other: {"official-artwork": {front_default: "..."}}}, abilities:[{ability: {name: ''}}]};
 
 class Pokedex {
     loadPokemons(page){
@@ -8,10 +8,11 @@ class Pokedex {
             return response.json();
         }).then((value) => {
             _pokemons = value;
+            return _pokemons;
         })
     }
 
-    getPokemons(page){ 
+    getPokemons(){ 
         return _pokemons["results"];
     }
 
@@ -61,8 +62,7 @@ class Pokedex {
         let liElem = '';
         let array = _pokemon['abilities'];
         for (let index = 0; index < array.length; index++){
-            liElem+= `<a href="./../ability/ability.html?ability=${array[index].ability.name}">
-            <li class="abilityLi">${array[index].ability.name.replace('-',' ')}</li></a>`;
+            liElem+= `<a href="./../ability/ability.html?ability=${array[index].ability.name}"><li class="abilityLi">${array[index].ability.name.replace('-',' ')}</li></a>`;
         }
         return liElem;
     }

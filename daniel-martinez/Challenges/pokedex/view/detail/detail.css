@@ -3,6 +3,10 @@
 	font-family: 'Flexo';
 }
 
+#head-title {
+	text-transform: capitalize;
+}
+
 body {
 	background-color: rgb(195, 44, 51);
 }
