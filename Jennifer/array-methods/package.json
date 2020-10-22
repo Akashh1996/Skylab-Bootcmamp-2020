@@ -1,0 +1,16 @@
+{
+  "name": "array-methods",
+  "version": "1.0.0",
+  "main": "array.methods.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.5.3"
+  },
+  "dependencies": {},
+  "description": ""
+}
