@@ -71,4 +71,31 @@ button {
   margin: 50px;
   padding: 15px 20px;
 }
+
+.pokemonDetail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.pokemonDetail .detail-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pokemonDetail .detail-box .pokemon-title {
+  font-size: 50px;
+}
 /*# sourceMappingURL=style.css.map */

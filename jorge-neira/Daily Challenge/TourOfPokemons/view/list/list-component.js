@@ -10,14 +10,13 @@ class PokemonList {
 			const createAnchor = document.createElement('a');
 			createAnchor.setAttribute(
 				'href',
-				`00/list/list-component.html?pokemonName=${name.name}`
+				`../detail/detail-component.html?pokemonName=${name.name}`
 			);
 			createAnchor.innerText = `${name.name}`;
 			createLi.appendChild(createAnchor);
 			pokemonTopList.appendChild(createLi);
 		});
 	}
-	showNextPokemons() {}
 }
 
 store.loadPokemonList().then(() => {
@@ -31,7 +30,7 @@ store.loadPokemonList().then(() => {
 		const nextPokemons = _pokemons.next;
 		if (nextPokemons === null) return;
 		const offsetLimitArr = getOffsetLimit(nextPokemons);
-		await store.loadPokemonList(offsetLimitArr[0]);
+		await store.loadPokemonList(offsetLimitArr);
 		pokemons = store.getPokemonList();
 		pokemonList = new PokemonList(pokemons);
 		pokemonList.createPokemonList();
@@ -40,7 +39,7 @@ store.loadPokemonList().then(() => {
 		const previousPokemons = _pokemons.previous;
 		if (previousPokemons === null) return;
 		const offsetLimitArr = getOffsetLimit(previousPokemons);
-		await store.loadPokemonList(offsetLimitArr[0]);
+		await store.loadPokemonList(offsetLimitArr);
 		pokemons = store.getPokemonList();
 		pokemonList = new PokemonList(pokemons);
 		pokemonList.createPokemonList();

@@ -8,8 +8,7 @@ function getOffsetLimit(offsetLimit) {
 	const url = new URL(offsetLimit);
 	const params = new URLSearchParams(url.search);
 	const getOffset = parseInt(params.get('offset'));
-	const getLimit = parseInt(params.get('limit'));
-	return [getOffset, getLimit];
+	return getOffset;
 }
 
 module.exports = getPokemonUrlName;

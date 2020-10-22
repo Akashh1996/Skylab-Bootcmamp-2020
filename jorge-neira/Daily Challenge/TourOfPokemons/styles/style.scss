@@ -51,3 +51,18 @@ button {
 		padding: 15px 20px;
 	}
 }
+
+.pokemonDetail {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	.detail-box {
+		display: flex;
+		flex-direction: column;
+		.pokemon-title {
+			font-size: 50px;
+		}
+		.
+	}
+}
