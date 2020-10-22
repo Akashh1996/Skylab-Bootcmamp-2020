@@ -469,16 +469,6 @@ class Store {
       }
       return li;
   }
-
-    // heroesAppearance(id){
-    //   let newArray = Object.entries(store.getHeroById(id).appearance);
-    //   const appearanceList = document.getElementById('appearance-list');
-    //   for (let index = 0; index < newArray.length; index++) {
-    //     const 
-    //     appearanceStat.innerHTML = `${newArray[index].appearance}`;
-    //   }
-    // }
-
 };
 
 function heroesSelection(superheroes) {
@@ -514,26 +504,6 @@ function setListOfHeroes(superheroes) {
         anchorHeroe.setAttribute('href', `./detail1.html?HeroId=${superheroes[i].id*1}`);
     }
 }
-
-function powerHeroStats(id) {
-  heroPowerstats.innerHTML = '';
-  let newArray = Object.entries(store.getHeroById(id).powerstats);
-  const infoContainer = document.querySelector('.info-container')
-  const createUl = document.createElement('ul');
-  createUl.getAttribute('class', 'ul-stats-container');
-  infoContainer.appendChild(createUl);
-  for (let index = 0; index < newArray.length; index++ ) {
-    const createP = document.createElement('p');
-    createP.getAttribute('class', 'li-stats-heroes');
-    createP.innerHTML = newArray[index][1];
-    const createP2 = document.createElement('p');
-    createP2.getAttribute('class', 'li-stats-heroes');
-    createP2.innerHTML = newArray[index][0];
-    createUl.appendChild(createP);
-    createP.appendChild(createP2);
-  }
-};
-
 
 const store = new Store();
 
