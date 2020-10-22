@@ -19,7 +19,8 @@ class PokemonList {
 	}
 }
 
-store.loadPokemonList().then(() => {
+(async () => {
+	await store.loadPokemonList();
 	let pokemons = store.getPokemonList();
 	let pokemonList = new PokemonList(pokemons);
 	pokemonList.createPokemonList();
@@ -44,4 +45,5 @@ store.loadPokemonList().then(() => {
 		pokemonList = new PokemonList(pokemons);
 		pokemonList.createPokemonList();
 	});
-});
+	console.log(_pokemons);
+})();

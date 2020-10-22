@@ -7,18 +7,26 @@
 		<title>Pokemons!</title>
 	</head>
 	<body>
-		<section class="pokemonNav">
-			<button>DashBoard</button>
-			<button>Pokemon Detail</button>
-		</section>
-		<section class="pokemonList__block">
-			<h1 class="pokemonList__title">Pokemon List</h1>
-			<div class="pokemonList__wrapper">
-				<button class="previous pageBtn">previous</button>
-				<ul class="pokemonList__items"></ul>
-				<button class="next pageBtn">Next</button>
-			</div>
-		</section>
+		<div class="wrapper">
+			<section class="pokemonNav">
+				<button class="navBtn">
+					<a href="../list/list-component.html">Pokemon List</a>
+				</button>
+				<button class="navBtn">
+					<a href="../detail/detail-component.html?pokemonName=bulbasaur"
+						>Pokemon Detail</a
+					>
+				</button>
+			</section>
+			<section class="pokemonList__block">
+				<h1 class="pokemonList__title">Pokemon List</h1>
+				<div class="pokemonList__wrapper">
+					<button class="previous pageBtn">previous</button>
+					<ul class="pokemonList__items"></ul>
+					<button class="next pageBtn">Next</button>
+				</div>
+			</section>
+		</div>
 	</body>
 	<script src="../../utils/getUrlParam.js"></script>
 	<script src="../../app/store.js"></script>

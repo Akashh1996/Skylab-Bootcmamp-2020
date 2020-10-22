@@ -1,5 +1,6 @@
 let _pokemons;
 let _pokemonsDetail;
+let _pokemonAbilities;
 
 class Store {
 	async loadPokemonList(offset = 0) {
@@ -16,8 +17,10 @@ class Store {
 		const pokemonStats = await pokemonDetail.json();
 		_pokemonsDetail = pokemonStats;
 	}
-	getTopPokemons() {
-		return _pokemons.results.slice(0, 4);
+	async loadPokemonAbilities(url) {
+		const response = await fetch(url);
+		const pokemonAbilities = await response.json();
+		_pokemonAbilities = pokemonAbilities;
 	}
 
 	getPokemonList() {
@@ -26,5 +29,4 @@ class Store {
 }
 
 const store = new Store();
-
 module.exports = store;

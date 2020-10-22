@@ -10,6 +10,9 @@
 
 body {
 	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 li {
@@ -25,6 +28,21 @@ button {
 	border-radius: 10px;
 	background-color: rgb(136, 136, 136);
 	cursor: pointer;
+}
+
+.wrapper {
+	width: 100%;
+}
+
+.pokemonNav {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+	.navBtn {
+		margin: 0 10px;
+		font-size: 30px;
+		padding: 10px;
+	}
 }
 
 .pokemonList__block {

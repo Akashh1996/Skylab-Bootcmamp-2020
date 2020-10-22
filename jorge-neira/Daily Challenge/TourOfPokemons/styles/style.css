@@ -11,6 +11,15 @@
 
 body {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 li {
@@ -28,6 +37,26 @@ button {
   border-radius: 10px;
   background-color: #888888;
   cursor: pointer;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.pokemonNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+
+.pokemonNav .navBtn {
+  margin: 0 10px;
+  font-size: 30px;
+  padding: 10px;
 }
 
 .pokemonList__block {

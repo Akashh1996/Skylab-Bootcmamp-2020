@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pokemon Dashboard</title>
-</head>
-<body>
-  
-</body>
-<script src="../../app/store.js"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../styles/style.css" />
+		<title>Pokemon Abilities</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<section class="pokemonNav">
+				<button class="navBtn">
+					<a href="../list/list-component.html">Pokemon List</a>
+				</button>
+				<button class="navBtn">
+					<a href="../detail/detail-component.html?pokemonName=bulbasaur"
+						>Pokemon Detail</a
+					>
+				</button>
+			</section>
+			<section class="pokemonAbilities">
+				<div>
+					<div>
+						<img src="" alt="" />
+          </div>
+          <div>
+            <span class="pokemon"></span>
+            <span class="pokemonAbility-name"></span>
+          </div>
+        </div>
+        <div>
+
+        </div>
+			</section>
+		</div>
+	</body>
+	<script src="../../utils/getUrlParam.js"></script>
+	<script src="../../app/store.js"></script>
+	<script src="./dashboard-component.js"></script>
 </html>

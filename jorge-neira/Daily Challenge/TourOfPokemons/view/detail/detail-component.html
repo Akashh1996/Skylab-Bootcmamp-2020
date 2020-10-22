@@ -7,18 +7,33 @@
 		<title>Pokemons!</title>
 	</head>
 	<body>
-		<section class="pokemonDetail">
-			<div class="detail-box">
-				<h1 class="pokemon-title"></h1>
-				<span class="pokemonStat"
-					>Pokemon ID: <span class="pokeStyle pokeId"></span
-				></span>
-				<span class="pokemonStat"
-					>Base Experience: <span class="pokeStyle pokeBaseExperience"></span
-				></span>
-				<button class="seeAbilities">More Abilities</button>
-			</div>
-		</section>
+		<div class="wrapper">
+			<section class="pokemonNav">
+				<button class="navBtn">
+					<a href="../list/list-component.html">Pokemon List</a>
+				</button>
+				<button class="navBtn">
+					<a href="../detail/detail-component.html?pokemonName=bulbasaur"
+						>Pokemon Detail</a
+					>
+				</button>
+			</section>
+			<section class="pokemonDetail">
+				<div class="detail-box">
+					<h1 class="pokemon-title"></h1>
+					<span class="pokemonStat"
+						>Pokemon ID: <span class="pokeStyle pokeId"></span
+					></span>
+					<span class="pokemonStat"
+						>Base Experience: <span class="pokeStyle pokeBaseExperience"></span
+					></span>
+					<button class="seeAbilities">
+						<a class="pokemonMoreAbilities">More Abilities</a>
+					</button>
+				</div>
+			</section>
+		</div>
+
 		<script src="../../utils/getUrlParam.js"></script>
 		<script src="../../app/store.js"></script>
 		<script src="./detail-component.js"></script>
