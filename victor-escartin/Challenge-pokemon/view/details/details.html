@@ -20,9 +20,6 @@
 			</div>
 		</main>
 
-		<!--     <div> <span id="abilities"></span></div>
- -->
-
 		<script src="../../store.js"></script>
 		<script src="../../util/location.js"></script>
 		<script src="../details/details.js"></script>
@@ -35,12 +32,6 @@
 				console.log(detailComponent);
 				if (pokemonDetail) {
 					document.getElementById('pokeName').innerHTML = name;
-					/* let idElement = document.getElementById('abilities');
-					detailComponent.updateHtmlValue(
-						idElement,
-						'innerHTML',
-						detailComponent.pokemon.abilities[0].ability.name 
-					); */
 					let image = document.getElementById('image');
 					detailComponent.updateHtmlValue(
 						image,
