@@ -15,7 +15,10 @@ body {
 li {
 	list-style: none;
 }
-
+a {
+	text-decoration: none;
+	color: black;
+}
 button {
 	outline: none;
 	border: none;
@@ -33,16 +36,13 @@ button {
 	.pokemonList__title {
 		font-size: 50px;
 	}
-	.previous {
-	}
 	.pokemonList__wrapper {
 		display: flex;
 		align-items: center;
 		.pokemonList__items {
+			margin-top: 30px;
 			font-size: 30px;
 		}
-	}
-	.next {
 	}
 	.pageBtn {
 		text-align: center;

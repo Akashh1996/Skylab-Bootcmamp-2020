@@ -17,6 +17,11 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 button {
   outline: none;
   border: none;
@@ -56,6 +61,7 @@ button {
 }
 
 .pokemonList__block .pokemonList__wrapper .pokemonList__items {
+  margin-top: 30px;
   font-size: 30px;
 }
 
