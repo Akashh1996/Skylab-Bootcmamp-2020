@@ -12,26 +12,27 @@
     </header>
     <main>
         <h2 id="poke-ability-name"></h2>
+        <div>
+            <p id="ability-explanation"></p>
+        </div>
     </main>
     <script src="../../store/store.js"></script>
+    <script src="ability-detail.js"></script>
     <script>
         const store = new Store();
         store.loadPokemons().then(() => {
             const params = new URLSearchParams(location.search.substring(1));
             const abilityName = params.get('abilityName');
             store.loadPokeAbilityByName(abilityName).then(() => {
-                console.log(getPokeAbility());
+                const ability = store.getPokeAbility();
+                console.log(ability)
+                const abilityComponent = new AbilityComponent(ability);
+                const abilityName = document.getElementById('poke-ability-name');
+                abilityComponent.updateHtmlElement(abilityName, ability.name);
+                const abilityExplanation = document.getElementById('ability-explanation');
+                abilityComponent.updateHtmlElement(abilityExplanation, ability.effect_entries[1].effect);
             })
         })
-    //     const store = new Store();
-    //     store.loadPokemons().then(() => {
-    //         const params = new URLSearchParams(location.search.substring(1));
-    //         const getId = params.get('pokeId');
-    //         store.getPokemonById(getId).then(() => {
-    //         const abilityComponent = new AbilityComponent(_pokemons);
-    //         const pokemonList = document.getElementById('pokemon-list');
-    //         listComponent.updateHtmlPokemonList(pokemonList);
-    // 
     </script>
 </body>
 </html>

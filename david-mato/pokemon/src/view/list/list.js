@@ -6,7 +6,8 @@ class ListComponent {
     updateHtmlPokemonList(element) {
         element.innerHTML = "";
         this.pokemons.forEach(pokemon => {
-            element.innerHTML += `<a class="pokemon-btn" href="../detail/detail.html?pokeId=${pokemon.id}">${pokemon.name}</a>` 
+            console.log(pokemon.name)
+            element.innerHTML += `<a class="pokemon-btn" href="../detail/detail.html?pokeId=${pokemon.name}">${pokemon.name}</a>` 
         })
     }
 }

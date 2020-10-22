@@ -3,7 +3,7 @@ class AbilityComponent {
         this.ability = ability;
     }
 
-    updateHtmlPokemonAbility() {
-        
+    updateHtmlElement(element, value) {
+        element.innerHTML = value;
     }
 }
