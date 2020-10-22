@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Poke Details</title>
+	</head>
+	<body>
+		<script src="../store/poke-store.js"></script>
+		<script>
+			const pokeId = 2;
+
+			pokeStore.loadPokemonsFromAPIById(pokeId).then(() => {
+				// pinto el base XP
+				document.body.innerHTML = `<p>Experiencia base ----> ${pokeStore.getBaseExperience()}</p>
+                    <p>Este bicho es ----> ${pokeStore.getSpecie()}</p>`;
+			});
+		</script>
+	</body>
+</html>
