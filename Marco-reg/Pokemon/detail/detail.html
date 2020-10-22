@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Pokemon List</title>
-	</head>
-	<body>
-		<h1>Pokemon</h1>
-		<nav>
-			<a href="../dashboard/dashboard.html">Dashboard</a>
-			<a href="../pokemon-list/pokemon.html">Pokemon</a>
-		</nav>
-		<main>
-			<h2><span id="detail-title"></span> Details</h2>
-			<div>
-				<span>id: </span>
-				<span id="pokemon-id__value"></span>
-			</div>
-			<div>
-				<label
-					>name:
-					<input id="pokemon-name__input" placeholder="name" />
-				</label>
-			</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div> <span id="abilities"></span></div>
 
-			<img src="" alt="" id="images" />
-		</main>
-	</body>
+
+    <script src="../store.js"></script>
+    <script>
+
+
+                // let name = window.location.search.slice(13)
+                // console.log(name);
+                
+                let name = store.getPokemonName(location)
+                console.log(location);
+                store.getPokeMonDetail(name).then(() => {
+
+                const pokDetail = store.pokeMonDetail();
+                console.log(pokDetail);
+                document.querySelector("#abilities").innerHTML = pokDetail.abilities[0].ability.name
+ 
+            });
+    </script>
+</body>
 </html>

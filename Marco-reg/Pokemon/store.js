@@ -1,29 +1,36 @@
-let pokemon;
+let _pokeMonList;
+let pokeDetail
 class Store {
-    
-	loadPokemon(){
-        
-        fetch('https://pokeapi.co/api/v2/pokemon?limit=100&offset=200')
-        .then(response => response.json())
-        .then(data => console.log(data));
-        
-            
-        
-	}
-	getPokemon() {
-		return _Pokemon;
-	}
+    getpokemon() {
+        return fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0')
+            .then((response) => response.json())
+            .then((pokemon) => {
+                _pokeMonList = pokemon.results;
 
-	getHeroById(pokemonId) {
-		return this.getPokemon().find((pokemon) => pokemon.id === pokemonId);
-	}
+            });
+    }
 
-	getTopPokemon() {
-		return this.getPokemon().slice(0, 6);
-	}
+    getpokemonList() {
+        return _pokeMonList;
+    }
+    getPokeMonDetail(name) {
+        return fetch(`https://pokeapi.co/api/v2/pokemon/${name}/`)
+            .then((response) => response.json())
+            .then((pokemon) => {
+                pokeDetail = pokemon;
+            });
+    }
+    pokeMonDetail() {
+        return pokeDetail;
+    }
+    getPokemonName(location) {
+        const params = new URLSearchParams(location.search.substring(1));
+        const getName = params.get('pokemonName');
+        console.log(getName);
+        return getName;
+    }
 }
 
 const store = new Store();
-store.loadPokemon();
 
 module.exports = store;
