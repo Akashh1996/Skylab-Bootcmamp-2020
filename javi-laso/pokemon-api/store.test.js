@@ -1,11 +1,13 @@
-const store = require('./store');
+const Store = require('./store');
 let name;
 let element;
 let pokemonList;
 let circle;
+let store;
 
 describe('Pokemon', () => {
     beforeEach(() => {
+        store = new Store();
         element = document.createElement('div');
         pokemonList = [
             {test: {name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/"}},
@@ -19,6 +21,14 @@ describe('Pokemon', () => {
 
     test('should be defined', () => {
         expect(store).toBeDefined();
+    });
+
+    test('getPokemonList should return an array', () => {
+        expect(store.getPokemonList()).toEqual([]);
+    });
+
+    test('getPokemon should return undefined', () => {
+        expect(store.getPokemon()).toEqual(undefined);
     });
 
 	describe('getPokemonList', () => {

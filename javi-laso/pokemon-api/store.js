@@ -1,9 +1,10 @@
-let pokemonList;
+let pokemonList = [];
 let pokemon;
 
 class Store {
 
     getPokemonList(){
+        debugger;
         return pokemonList;
     }
 
@@ -89,4 +90,4 @@ class Store {
 
 const store = new Store();
 
-module.exports = store;
+module.exports = Store;
