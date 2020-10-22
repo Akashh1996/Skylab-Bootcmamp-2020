@@ -1,6 +1,6 @@
 store.loadPokemons().then(() => {
 
-    let pokemons = store.getPokemons();
+    let pokemons = store.getPokemons().results;
     
     const pokemonList = document.getElementById("pokemons-list");
     
