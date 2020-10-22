@@ -4,6 +4,7 @@ class PokemonList {
 	}
 	createPokemonList() {
 		const pokemonTopList = document.querySelector('.pokemonList__items');
+		pokemonTopList.innerHTML = '';
 		this.pokemons.forEach((name) => {
 			const createLi = document.createElement('li');
 			const createAnchor = document.createElement('a');
@@ -20,20 +21,28 @@ class PokemonList {
 }
 
 store.loadPokemonList().then(() => {
-	const pokemons = store.getPokemonList();
-	const pokemonList = new PokemonList(pokemons);
+	let pokemons = store.getPokemonList();
+	let pokemonList = new PokemonList(pokemons);
+	pokemonList.createPokemonList();
 	const nextBtn = document.querySelector('.next');
 	const previousBtn = document.querySelector('.previous');
-	pokemonList.createPokemonList();
 
-	nextBtn.addEventListener('click', function () {
+	nextBtn.addEventListener('click', async function () {
 		const nextPokemons = _pokemons.next;
+		if (nextPokemons === null) return;
 		const offsetLimitArr = getOffsetLimit(nextPokemons);
-		store.loadPokemonList(offsetLimitArr[0], offsetLimitArr[1]).then(() => {
-			pokemonList.createPokemonList();
-		});
+		await store.loadPokemonList(offsetLimitArr[0]);
+		pokemons = store.getPokemonList();
+		pokemonList = new PokemonList(pokemons);
+		pokemonList.createPokemonList();
 	});
-	previousBtn.addEventListener('click', function () {
+	previousBtn.addEventListener('click', async function () {
 		const previousPokemons = _pokemons.previous;
+		if (previousPokemons === null) return;
+		const offsetLimitArr = getOffsetLimit(previousPokemons);
+		await store.loadPokemonList(offsetLimitArr[0]);
+		pokemons = store.getPokemonList();
+		pokemonList = new PokemonList(pokemons);
+		pokemonList.createPokemonList();
 	});
 });

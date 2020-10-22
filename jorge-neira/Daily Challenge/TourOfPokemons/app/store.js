@@ -2,9 +2,9 @@ let _pokemons;
 let _pokemonsDetail;
 
 class Store {
-	async loadPokemonList(offset = 0, limit = 10) {
+	async loadPokemonList(offset = 0) {
 		const pokemonsList = await fetch(
-			`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`
+			`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${offset}`
 		);
 		const pokemonListJson = await pokemonsList.json();
 		return (_pokemons = pokemonListJson);
