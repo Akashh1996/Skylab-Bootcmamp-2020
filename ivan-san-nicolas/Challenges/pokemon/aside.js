@@ -1,4 +1,5 @@
 async function asidePokemon(pokeStore) {
+    debugger;
     await pokeStore.loadPokemonsFromAPI();
     const pokemonList = await pokeStore.getPokemons();
     const pokemonBlock = document.getElementById('aside-pokemon-block');

@@ -9,7 +9,7 @@ function firstsPokemons() {
             element.innerHTML = `<div class="topPokemon-block" id="${pokemons[index].name}">${pokemons[index].name}</div>`;
             dashboard.appendChild(element);
             element.addEventListener('click', () => {
-                window.location = `http://127.0.0.1:5500/ivan-san-nicolas/challenges/pokemon/habilidad.html?pokemon=${pokemons[index].name}`;
+                window.location = `http://127.0.0.1:5500/ivan-san-nicolas/challenges/pokemon/detail.html?pokemon=${pokemons[index].name}`;
             })
         }
     })

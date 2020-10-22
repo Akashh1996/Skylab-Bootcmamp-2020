@@ -22,7 +22,7 @@ class PokeStore {
         let url = `https://pokeapi.co/api/v2/pokemon/${name}`;
         const response = await fetch(url);
         const pokemon = await response.json();
-        _pokemon = pokemon.results;
+        _pokemon = pokemon;
     }
 
 }

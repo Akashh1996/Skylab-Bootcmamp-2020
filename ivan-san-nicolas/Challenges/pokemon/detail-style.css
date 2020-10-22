@@ -4,7 +4,7 @@ body {
     letter-spacing: 1px;
 }
 
-.hero-detail {
+.pokemon-detail {
     display: flex;
     flex-direction: column;
     width: 30%;
@@ -28,16 +28,16 @@ a {
     text-decoration: none;
 }
 
-.hero-detail__header {
+.pokemon-detail__header {
     display: flex;
     flex-direction: column;
 }
 
-.hero-detail__header__nav {
+.pokemon-detail__header__nav {
     display: flex;
 }
 
-.hero-detail__button {
+.pokemon-detail__button {
     margin: 10px 0;
     width: 100px;
     height: 25px;
@@ -50,23 +50,23 @@ a {
     border-radius: 5px;
 }
 
-.hero-detail__button:hover {
+.pokemon-detail__button:hover {
     background-color: #cdcccc;
     cursor: pointer;
 }
 
-.hero-detail__topHeroes {
+.pokemon-detail__topHeroes {
     display: flex;
     flex-direction: column;
     margin: 15px 0;
 }
 
-.hero-detail-title {
+.pokemon-detail-title {
     color: #3A3A3A;
     text-align: center;
 }
 
-.hero-detail__info {
+.pokemon-detail__info {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -76,8 +76,8 @@ a {
     height: auto;
 }
 
-.hero-detail__info__block,
-.hero-detail__info__block__group {
+.pokemon-detail__info__block,
+.pokemon-detail__info__block__group {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -86,7 +86,7 @@ a {
     overflow: hidden;
 }
 
-.hero-properties {
+.pokemon-properties {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -99,11 +99,11 @@ a {
     text-transform: capitalize;
 }
 
-.hero-detail__info__block>input {
+.pokemon-detail__info__block>input {
     width: 150px;
 }
 
-.hero-detail__info__block__property-name {
+.pokemon-detail__info__block__property-name {
     padding: 0 10px;
     width: auto;
     color: #597888;
@@ -111,7 +111,7 @@ a {
     font-size: 20px;
 }
 
-.hero-detail__info__block__property-group {
+.pokemon-detail__info__block__property-group {
     padding: 15px 0;
     padding-bottom: 10px;
     width: 50px;
@@ -133,11 +133,11 @@ a {
     color: white;
 }
 
-.hero-detail__info__block__group {
+.pokemon-detail__info__block__group {
     padding: 5px 0;
 }
 
-.hero-detail__info__block__property-value {
+.pokemon-detail__info__block__property-value {
     color: #848484;
     font-weight: 400;
     font-size: 20px;
