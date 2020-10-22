@@ -40,7 +40,7 @@ class Store {
             let pokemonAnchor = document.createElement('a');
             divElement.appendChild(pokemonAnchor);
             pokemonAnchor.setAttribute('class', 'pokemon-list-element');
-            pokemonAnchor.setAttribute('href', `../Details/details.html?name=${pokemonList[index].name}`);
+            pokemonAnchor.setAttribute('href', `../Details/details.html?pokemonName=${pokemonList[index].name}`);
             let anchorName = document.createElement('span');
             pokemonAnchor.appendChild(anchorName);
             anchorName.setAttribute('class', 'pokemon-name');
@@ -60,7 +60,7 @@ class Store {
         let pokemonAnchor = document.createElement('a');
         listElement.appendChild(pokemonAnchor);
         pokemonAnchor.setAttribute('class', `${groupName}-list-element`);
-        pokemonAnchor.setAttribute('href', `../${groupName}/${groupName}.html?pokemonName=${pokemon.name}&name=${pokemonList[index][groupName].name}`);
+        pokemonAnchor.setAttribute('href', `../${groupName}/${groupName}.html?pokemonName=${pokemon.name}&${groupName}Name=${pokemonList[index][groupName].name}`);
         let anchorName = document.createElement('span');
         pokemonAnchor.appendChild(anchorName);
         anchorName.setAttribute('class', `${groupName}-name`);

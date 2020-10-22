@@ -4,10 +4,10 @@ const idInput = document.getElementById('id-input');
 const descriptionInput = document.getElementById('description-input');
 
 const url = window.location.search;
-const name = store.getNameFromSearch(url);
+const name = store.getElementFromSearch(url, 'abilityName');
 
 backBtn.addEventListener('click', () => {
-    window.location = `../Details/details.html?name=${store.getElementFromSearch(url, 'pokemonName')}`;
+    window.location = `../Details/details.html?pokemonName=${store.getElementFromSearch(url, 'pokemonName')}`;
 })
 
 store.loadPokemonAbilityByName(name).then(() => {

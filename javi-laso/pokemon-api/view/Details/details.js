@@ -10,7 +10,7 @@ const statsNumber = document.querySelectorAll('.stats__number');
 const circles = document.querySelectorAll('.circle');
 
 const url = window.location.search;
-const name = store.getElementFromSearch(url, 'name');
+const name = store.getElementFromSearch(url, 'pokemonName');
 
 backBtn.addEventListener('click', () => {
     window.location = '../Pokemon-list/list.html';

@@ -63,6 +63,13 @@ section {
 	font-size: 20px;
 }
 
+.ability-list-element,
+.type-list-element,
+.move-list-element {
+	text-decoration: none;
+	color: black;
+}
+
 .stats {
 	display: flex;
 	flex-direction: column;
