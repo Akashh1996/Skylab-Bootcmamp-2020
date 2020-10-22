@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -23,11 +24,11 @@
 
                 <div class="primary-details">
                         <div><span>Order:</span><span id="order"></span></div>
-                        <div><span>Height:</span><span detail-value id="height"></span></div>
-                        <div><span>Weight:</span><span detail-value id="weight"></span></div>
-                        <div><span>Experience:</span><span detail-value id="experience"></span></div>
-                        <div><span>Abilities:</span><span detail-value id="ability"></span></div>
-                        <div><span>Type:</span><span detail-value id="type"></span></div>
+                        <div><span>Height:</span><span  id="height"></span></div>
+                        <div><span>Weight:</span><span  id="weight"></span></div>
+                        <div><span>Experience:</span><span  id="experience"></span></div>
+                        <div><span>Abilities:</span> <span id="ability"></span> </div>
+                        <div><span>Type:</span><span  id="type"></span></div>
                 </div>
              </div>
 
@@ -54,14 +55,23 @@
     <script src="../detail/detail.js"></script>
     <script>
 
+
     const name = getPokemonName(location);
 
 
+        
 
-
-    
     store.getPokeMonDetail(name).then(() => {
+
                 const pokDetail = store.pokeMonDetail()
+
+                console.log(pokDetail);
+
+                document.getElementById("ability").innerHTML = pokDetail.abilities.map((eachAbility)=>{
+                            return `<a href = ../ability/ability.html?pokemonName=${eachAbility.ability.name}>${eachAbility.ability.name}</a>`
+                        })
+
+
                 let detailComponent = new DetailComponent(pokDetail);
                 console.log(detailComponent);
 				if (pokDetail) {
@@ -96,7 +106,7 @@
 						'innerHTML',
 						detailComponent.pokemon.base_experience
                     ); 
-                    
+                   /*  
                     let ability = document.getElementById('ability');
 					detailComponent.updateHtmlValue(
 						ability,
@@ -104,7 +114,7 @@
 						detailComponent.pokemon.abilities.map((eachAbility)=>{
                             return eachAbility.ability.name
                         })
-					); 
+                    );  */
                     let type = document.getElementById('type');
 					detailComponent.updateHtmlValue(
 						type,

@@ -1,5 +1,6 @@
 let _pokeMonList;
 let pokeDetail
+let pokemonAbility
 class Store {
     getpokemonData() {
         return fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0')
@@ -13,6 +14,7 @@ class Store {
     getpokemonList() {
         return _pokeMonList;
     }
+
     getPokeMonDetail(name) {
         return fetch(`https://pokeapi.co/api/v2/pokemon/${name}/`)
             .then((response) => response.json())
@@ -22,6 +24,17 @@ class Store {
     }
     pokeMonDetail() {
         return pokeDetail;
+    }
+    getPokemonAbility(name) {
+        return fetch(`https://pokeapi.co/api/v2/ability/${name}/`)
+            .then((response) => response.json())
+            .then((ability) => {
+                pokemonAbility = ability;
+
+            });
+    }
+    pokeMonDetailAbility() {
+        return pokemonAbility;
     }
 
 }

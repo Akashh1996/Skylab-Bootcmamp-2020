@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ability.css">
+</head>
+<body>
+
+    <script src="../store.js"></script>
+    <script src="../util/location.js"></script>
+ 
+    <script>
+        const name = getPokemonName(location);
+        console.log(name);
+        
+        store.getPokemonAbility(name).then(() => {
+            let pokDetail = store.pokeMonDetailAbility()
+            console.log(pokDetail);
+
+            document.body.innerHTML = `<h1>${pokDetail.effect_entries[1].effect}` 
+            
+        })
+
+
+
+
+
+    </script>
+     -->
+</body>
+</html>
