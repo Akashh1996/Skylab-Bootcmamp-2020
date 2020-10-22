@@ -45,5 +45,4 @@ class PokemonList {
 		pokemonList = new PokemonList(pokemons);
 		pokemonList.createPokemonList();
 	});
-	console.log(_pokemons);
 })();

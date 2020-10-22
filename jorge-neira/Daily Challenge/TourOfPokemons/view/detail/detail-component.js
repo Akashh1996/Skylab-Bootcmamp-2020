@@ -36,6 +36,4 @@ const pokemonLocationName = getPokemonUrlName(curUrlSearch);
 	);
 	const seeMoreAbilities = document.querySelector('.seeAbilities');
 	seeMoreAbilities.addEventListener('click', function () {});
-
-	console.log(_pokemonsDetail);
 })();

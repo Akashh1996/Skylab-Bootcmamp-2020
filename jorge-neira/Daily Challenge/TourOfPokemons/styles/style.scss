@@ -32,64 +32,99 @@ button {
 
 .wrapper {
 	width: 100%;
-}
-
-.pokemonNav {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 30px;
-	.navBtn {
-		margin: 0 10px;
-		font-size: 30px;
-		padding: 10px;
-	}
-}
-
-.pokemonList__block {
-	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	.pokemonList__title {
-		font-size: 50px;
-	}
-	.pokemonList__wrapper {
+	.pokemonNav {
 		display: flex;
-		align-items: center;
-		.pokemonList__items {
-			margin-top: 30px;
-			font-size: 30px;
-		}
-	}
-	.pageBtn {
-		text-align: center;
-		font-size: 20px;
-		margin: 50px;
-		padding: 15px 20px;
-	}
-}
-
-.pokemonDetail {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	.detail-box {
-		display: flex;
-		flex-direction: column;
-		.pokemon-title {
-			font-size: 50px;
-		}
-		.pokemonStat {
-			font-size: 30px;
-		}
-		.pokeStyle {
-			color: rgb(255, 0, 0);
-		}
-		.seeAbilities {
+		justify-content: center;
+		margin-bottom: 30px;
+		.navBtn {
+			margin: 0 10px;
 			font-size: 30px;
 			padding: 10px;
+		}
+	}
+	.pokemonList__block {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		.pokemonList__title {
+			font-size: 50px;
+		}
+		.pokemonList__wrapper {
+			display: flex;
+			align-items: center;
+			.pokemonList__items {
+				margin-top: 30px;
+				font-size: 30px;
+			}
+		}
+		.pageBtn {
+			text-align: center;
+			font-size: 20px;
+			margin: 50px;
+			padding: 15px 20px;
+		}
+	}
+	.pokemonDetail {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		.detail-box {
+			display: flex;
+			flex-direction: column;
+			.pokemon-title {
+				font-size: 50px;
+			}
+			.pokemonStat {
+				font-size: 30px;
+			}
+			.pokeStyle {
+				color: rgb(255, 0, 0);
+			}
+			.seeAbilities {
+				font-size: 30px;
+				padding: 10px;
+			}
+		}
+	}
+	.pokemonAbilities {
+		max-width: 70%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		.defaultInfo-container {
+			display: flex;
+			width: 100%;
+			.pokemonGeneral-container {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				width: 100%;
+				padding-left: 50px;
+				font-size: 50px;
+				.pokemonAbility-name {
+					color: red;
+				}
+				.pokemonAbility-info {
+					color: red;
+				}
+			}
+		}
+		.ability-selector {
+			width: 100%;
+			margin-top: 25px;
+			.additional-info__container {
+				font-size: 30px;
+				display: flex;
+				flex-direction: column;
+			}
 		}
 	}
 }
