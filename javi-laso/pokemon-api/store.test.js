@@ -17,6 +17,10 @@ describe('Pokemon', () => {
         circle.setAttribute('r', 37);
     });
 
+    test('should be defined', () => {
+        expect(store).toBeDefined();
+    });
+
 	describe('getPokemonList', () => {
 		beforeEach(() => {
 			global.fetch = jest.fn().mockImplementationOnce(() =>
