@@ -1,5 +1,6 @@
 let pokemon;
-let pokemonList;
+let pokemonList = [];
+let pokemonAbility;
 
 class Store {
 	loadPokemon() {
@@ -26,6 +27,16 @@ class Store {
 
 	getPok() {
 		return pokemon;
+	}
+
+	setAbilitiesList() {
+		let liElem = '';
+		let array = pokemon['abilities'];
+		for (let index = 0; index < array.length; index++) {
+			liElem += `<a href=“/hability/hability.html?ability=${array[index].ability.name}“>
+            <li class=“abilityLi”>${array[index].ability.name}</li></a>`;
+		}
+		return liElem;
 	}
 }
 

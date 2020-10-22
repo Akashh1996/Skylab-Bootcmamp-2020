@@ -6,8 +6,18 @@
 		<title>Document</title>
 	</head>
 	<body>
+		<h2 id="namepokemon"></h2>
+		<ul id="abilities__list"></ul>
 		<span class="pokemon"></span>
+		<script src="../pokemon/index.js"></script>
 		<script src="../store.js"></script>
 		<script src="./detail.js"></script>
+		<script>
+			const pokeName = window.location.search.slice(6);
+			document.getElementById('namepokemon').innerHTML = pokeName;
+			document.getElementById(
+				'abilities__list'
+			).innerHTML = store.setAbilitiesList();
+		</script>
 	</body>
 </html>

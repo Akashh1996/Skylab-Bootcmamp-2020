@@ -10,7 +10,7 @@ class PokemonComponent {
 				element.innerHTML +
 				`
 <li>
-<a href="https://pokeapi.co/api/v2/pokemon/${poke.name}">
+<a href="./../detail/detail.html?name=${poke.name}">
 <span id="pokemon-name">${poke.name}</span>
 </a>
 </li>
