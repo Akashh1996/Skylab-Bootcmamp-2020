@@ -1,5 +1,6 @@
 let _pokemonList;
 let _pokemonDetail;
+let _pokemonAbility;
 
 class Store {
 
@@ -21,11 +22,16 @@ class Store {
             .then((pokemon) => {
                 _pokemonDetail = pokemon;
             });
-	}
+    }
 	
     pokemonDetail() {
         return _pokemonDetail;
     }
+
+    getPokemonAbilitiesDetail(){
+        return _pokemonDetail.abilities[0].ability.name
+    }
+
 
     getTenPokemons(list) {
 		return this.getPokemonList(list).slice(1, 11);

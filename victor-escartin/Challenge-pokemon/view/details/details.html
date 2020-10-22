@@ -24,7 +24,9 @@
 		<script src="../../util/location.js"></script>
 		<script src="../details/details.js"></script>
 		<script>
-			const name = getPokemonName(location);
+			const location1 = location;
+			const name = getPokemonName(location1);
+			const ability = getPokemonAbility(location1);
 
 			store.getPokemonDetail(name).then(() => {
 				const pokemonDetail = store.pokemonDetail();
@@ -38,6 +40,7 @@
 						'src',
 						detailComponent.pokemon.sprites.front_shiny
 					);
+					document.getElementById('pokeName');
 				}
 			});
 		</script>

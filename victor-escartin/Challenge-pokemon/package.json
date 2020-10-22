@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "store.js",
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watchAll",
-    "test:coverage": "jest --collect--coverage"
+    "test": "jest --watch",
+    "test:debug": "node --inspect-brk node_modules/jest/bin/jest.js --runInBand",
+    "test:coverage": "jest --collect--coverage --watchAll"
   },
   "keywords": [],
   "author": "",

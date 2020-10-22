@@ -1,5 +1,4 @@
 const store = require("./store");
-const location = require("./util/location");
 
 ​
 describe('loadPokemon', () => {
@@ -14,19 +13,17 @@ describe('loadPokemon', () => {
 			expect(store.getPokemonList()).toEqual(response);
 		});
 	});
-});
-​
-describe('loadPokemon', () => {
-	test('should update pokemon', () => {
-		global.fetch = jest.fn().mockImplementationOnce(() =>
-			Promise.resolve({
-				name: 'charizard',
-				power: 20
-			})
-		);
-​
-		return store.getPokemoData('charizard').then((response) => {
-			expect(location.getPokemonName()).toEqual(response);
+
+
+	test('should return de detail of abilities from one pokemon', () => {
+		
+		
+		store
+
+		expect(store.getPokemonAbilitiesDetail()).toBe('overflow')
 		});
 	});
+
+
 });
+​
