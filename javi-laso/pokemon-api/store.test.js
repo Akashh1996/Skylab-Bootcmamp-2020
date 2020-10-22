@@ -279,6 +279,19 @@ describe('Pokemon', () => {
         });
     });
 
+    describe('getPokemonAbility, async test', () => {
+		beforeEach(() => {
+            json = jest.fn().mockReturnValueOnce({effect_changes: {}, effect_entries: {}})
+            global.fetch = jest.fn().mockImplementationOnce(response => {
+                return Promise.resolve({json});
+            })
+        });
+        test('should return an object of objects', async () => {
+            store.loadPokemonAbilityByName('overgrow')
+            await expect(store.getPokemonAbility()).toEqual({effect_changes: {}, effect_entries: {}});
+        });
+    });
+
     describe('getPokemonAbility', () => {
 		beforeEach(() => {
             json = jest.fn().mockReturnValueOnce({effect_changes: {}, effect_entries: {}})
@@ -317,21 +330,21 @@ describe('Pokemon', () => {
     })
 
     describe('addToInnerHtml', () => {
-        test('should change innerHTML from an element', () => {
+        test('should add something in the innerHTML from an element', () => {
             //arrange
             //act
-            store.addToInnerHtml(element, 'hola');
+            store.addToInnerHtml(element, 'something added');
             //assert          
-            expect(element.innerHTML).toBe('hola');
+            expect(element.innerHTML).toBe('something added');
         });
         
-        test('should change innerHTML from an element', () => {
+        test('should concatenate text in innerHTML from an element', () => {
             //arrange
             //act
-            store.addToInnerHtml(element, 'hola');
-            store.addToInnerHtml(element, 'hola');
+            store.addToInnerHtml(element, 'something added');
+            store.addToInnerHtml(element, ' and something more');
             //assert          
-            expect(element.innerHTML).toBe('holahola');
+            expect(element.innerHTML).toBe('something added and something more');
         });
     });
 })

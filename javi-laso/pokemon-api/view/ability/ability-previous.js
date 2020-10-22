@@ -9,10 +9,9 @@ const name = store.getElementFromSearch(url, 'abilityName');
 
 backBtn.addEventListener('click', () => {
     window.location = `../Details/details.html?pokemonName=${store.getElementFromSearch(url, 'pokemonName')}`;
-});
+})
 
-(async () => {
-    await store.loadPokemonAbilityByName(name);
+store.loadPokemonAbilityByName(name).then(() => {
     const ability = store.getPokemonAbility();
     store.updateValueHtml(nameTitle, 'innerHTML', ability.name);
     store.updateValueHtml(idInput, 'innerHTML', ability.id);
@@ -24,4 +23,5 @@ backBtn.addEventListener('click', () => {
             `<li><a href="../Details/details.html?pokemonName=${ability.pokemon[index].pokemon.name}" class="capitalize">${ability.pokemon[index].pokemon.name}</a></li>`
         );
     }
-})()
+    
+});

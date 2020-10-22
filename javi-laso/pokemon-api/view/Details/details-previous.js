@@ -14,10 +14,9 @@ const name = store.getElementFromSearch(url, 'pokemonName');
 
 backBtn.addEventListener('click', () => {
     window.location = '../Pokemon-list/list.html';
-});
+})
 
-(async () => {
-    await store.loadPokemonByName(name);
+const pok = store.loadPokemonByName(name).then(() => {
     const pokemon = store.getPokemon();
     pokemonImg.setAttribute('src', `${pokemon.sprites.other['official-artwork'].front_default}`);
     store.updateValueHtml(idInput, 'innerHTML', pokemon.id);
@@ -41,4 +40,4 @@ backBtn.addEventListener('click', () => {
         store.setStrokeDashoffsetInCircle(circles[circleIndex], pokemon.stats[circleIndex]['base_stat'], 200);
         store.setStrokeDasharrayInCircle(circles[circleIndex], pokemon.stats[circleIndex]['base_stat'], 200);
     }
-})()
+});

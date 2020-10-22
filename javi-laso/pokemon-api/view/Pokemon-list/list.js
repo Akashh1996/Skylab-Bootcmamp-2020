@@ -5,34 +5,32 @@ const listContainer = document.getElementById('pokemon-list');
 const previousBtn = document.getElementById('previous');
 const nextBtn = document.getElementById('next');
 
-
-store.loadPokedex(quantity, startNumber).then(() => {
+(async () => {
+    await store.loadPokedex(quantity, startNumber);
     pokedex = store.getPokemonList();
     for (let index = 0; index < pokedex.results.length; index++) {
         store.createListElement(listContainer, pokedex.results, index);
     }
-});
+})()
 
-previousBtn.addEventListener('click', () => {
+previousBtn.addEventListener('click', async () => {
     startNumber = startNumber - quantity < 0 ? 0 : startNumber - quantity;
 
-    store.loadPokedex(quantity, startNumber).then(() => {
-        listContainer.innerHTML = '';
-        pokedex = store.getPokemonList();
-        for (let index = 0; index < pokedex.results.length; index++) {
-            store.createListElement(listContainer, pokedex.results, index);
-        }
-    });
+    await store.loadPokedex(quantity, startNumber);
+    listContainer.innerHTML = '';
+    pokedex = store.getPokemonList();
+    for (let index = 0; index < pokedex.results.length; index++) {
+        store.createListElement(listContainer, pokedex.results, index);
+    }
 })
 
-nextBtn.addEventListener('click', () => {
+nextBtn.addEventListener('click', async () => {
     startNumber = startNumber + quantity > 1050 ? 1050 : startNumber + quantity;
 
-    store.loadPokedex(quantity, startNumber).then(() => {
-        listContainer.innerHTML = '';
-        pokedex = store.getPokemonList();
-        for (let index = 0; index < pokedex.results.length; index++) {
-            store.createListElement(listContainer, pokedex.results, index);
-        }
-    });
+    await store.loadPokedex(quantity, startNumber)
+    listContainer.innerHTML = '';
+    pokedex = store.getPokemonList();
+    for (let index = 0; index < pokedex.results.length; index++) {
+        store.createListElement(listContainer, pokedex.results, index);
+    }
 })
