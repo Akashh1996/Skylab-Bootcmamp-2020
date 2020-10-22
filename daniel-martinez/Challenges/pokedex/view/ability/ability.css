@@ -25,7 +25,7 @@ body {
 	margin: 0;
 }
 
-#pokemon-title {
+#ability-title {
 	text-transform: capitalize;
 	color: rgb(255, 255, 255);
 	background-color: rgb(146, 146, 146);
@@ -48,4 +48,13 @@ body {
 
 .info-block {
 	display: flex;
+}
+
+#info-block__abilities {
+	background-color: white;
+	width: 100vw;
+}
+
+#ability__description {
+	padding: 30px;
 }

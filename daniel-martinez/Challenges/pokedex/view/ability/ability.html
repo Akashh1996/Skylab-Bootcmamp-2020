@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ability</title>
+    <title id="head-title"></title>
     <link rel="stylesheet" href="ability.css">
     <link rel="shortcut icon" id="tabImage" href="https://cdn2.iconfinder.com/data/icons/pokemon-filledoutline/64/pokeball-people-pokemon-nintendo-video-game-gaming-gartoon-ball-512.png" type="image/x-icon">
     <link href="//db.onlinewebfonts.com/c/51ba22ae06790efd464bde752a2cd9d1?family=Flexo" rel="stylesheet" type="text/css"/>
@@ -16,15 +16,13 @@
     </header>
     <main>
         <div id="title-block">
-            <div id="flex-spacer"></div>
-            <h2 id="pokemon-title"></h2>
+            <h2 id="ability-title"></h2>
             <div id="flex-spacer"></div>
         </div>
         <div class="info-block">
             <figure id="info-block__pokemon-image"></figure>
             <section id="info-block__abilities">
-                <h3 id="abilites__title">Abilities:</h3>
-                <ul id="abilities__list"></ul>
+                <p id="ability__description"></p>
             </section>
         </div>
     </main>
@@ -32,14 +30,15 @@
 
 <script src="./../list/list.js"></script>
 <script src="./../../src/poke-store.js"></script>
-<script src="./detail.js"></script>
+<script src="./../detail/detail.js"></script>
 <script>
-    const pokemonId = +window.location.search.slice(3,window.location.search.indexOf('&'));
-    const pokemonName = window.location.search.slice(window.location.search.indexOf('e=')+2);
-    pokedex.loadPokemonsFromAPIById(pokemonId).then(() =>{
-        document.getElementById('pokemon-title').innerHTML = pokedex.pokemonDetailTitle(pokemonId, pokemonName);
-        document.getElementById('abilities__list').innerHTML = pokedex.setAbilitiesList();
-        document.getElementById('info-block__pokemon-image').innerHTML = pokedex.setPokemonImage(pokemonName);
+    const ability = window.location.search.replace('?ability=','');
+    pokedex.loadAbilityFromAPI(ability).then(() =>{
+        document.getElementById('head-title').innerHTML = ability;
+        document.getElementById('ability-title').innerHTML = `Ability:&nbsp&nbsp<b>${ability}</b>`;
+        const abilityDescription = pokedex.getAbilityDescription(ability).then((response)=>{
+            document.getElementById('ability__description').innerHTML = response;
+        })
     })
 </script>
 </body>

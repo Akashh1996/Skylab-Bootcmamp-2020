@@ -62,10 +62,29 @@ class Pokedex {
         let array = _pokemon['abilities'];
         for (let index = 0; index < array.length; index++){
             liElem+= `<a href="./../ability/ability.html?ability=${array[index].ability.name}">
-            <li class="abilityLi">${array[index].ability.name}</li></a>`;
+            <li class="abilityLi">${array[index].ability.name.replace('-',' ')}</li></a>`;
         }
         return liElem;
     }
+
+    loadAbilityFromAPI(ability){
+        const url = `https://pokeapi.co/api/v2/ability/${ability}`;
+        return fetch(url)
+        .then((response) => response.json())
+        .then((abilityObj) => {
+            return abilityObj;
+        })
+    }
+
+    async getAbilityDescription(ability){
+        let abilityObj = await this.loadAbilityFromAPI(ability);
+            for (let i = 0; i< abilityObj['effect_entries'].length; i++){
+                if (abilityObj['effect_entries'][i]['language']['name']==='en'){
+                    return abilityObj['effect_entries'][i]['effect'];
+                }
+            }
+    }
+    
 }
 
 let _pokedex = new Pokedex;

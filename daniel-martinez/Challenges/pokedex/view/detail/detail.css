@@ -51,10 +51,28 @@ body {
 }
 
 #info-block__abilities {
-	margin: 40px;
-	background-color: rgb(146, 146, 146);
-	height: 100px;
+	margin: 0 0 40px 40px;
+	background-color: white;
+	height: 140px;
 	width: 80%;
-	padding: 10px;
-	border-radius: 2px;
+	padding: 30px 10px 10px 10px;
+}
+
+#abilities__list {
+	margin-top: 10px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.abilityLi:hover {
+	color: rgb(202, 202, 0);
+}
+
+.abilityLi {
+	margin-bottom: 5px;
+	font-size: 18px;
+	color: black;
+	text-transform: capitalize;
 }
