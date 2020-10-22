@@ -89,8 +89,6 @@ function gameOfLife(cell) {
 
 }
 
-gameOfLife(gridState)
-
 
 
 /* const gridInitial = [
