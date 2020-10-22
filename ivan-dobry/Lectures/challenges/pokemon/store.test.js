@@ -48,6 +48,11 @@ describe('store', () => {
                 expect(store.getPokemon()).toEqual({ability: []})
             })
         });
-    });
-    
+
+        test('should return pokemon ability', () => {
+            return store.loadPokemonsFromAPIById().then(() => {
+                expect(store.getPokemonAbility()).toEqual([])
+            })
+        });
+    });  
 });

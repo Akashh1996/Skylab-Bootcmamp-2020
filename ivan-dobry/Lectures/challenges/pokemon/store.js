@@ -43,6 +43,10 @@ class Store {
         _pokemon = pokemon;
     }
 
+    getPokemonAbility () {
+        return _pokemon.ability;
+    }
+
 }
 
 const store = new Store();
