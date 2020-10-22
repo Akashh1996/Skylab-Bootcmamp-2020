@@ -7,8 +7,8 @@ body {
 .hero-detail {
     display: flex;
     flex-direction: column;
-    width: 800px;
-    height: 800px;
+    width: 30%;
+    height: auto;
     margin: 50px auto;
     padding: 15px 20px;
     padding-bottom: 0;
@@ -68,13 +68,12 @@ a {
 
 .hero-detail__info {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-around;
+    align-items: center;
     margin: 15px 0;
     flex-wrap: wrap;
     width: 100%;
-    height: 1000px;
+    height: auto;
 }
 
 .hero-detail__info__block,
@@ -119,6 +118,19 @@ a {
     color: #597888;
     font-weight: 600;
     font-size: 20px;
+}
+
+.stats {
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 5px 7px;
+    text-transform: capitalize;
+}
+
+.stats:hover {
+    background-color: #475e6a;
+    color: white;
 }
 
 .hero-detail__info__block__group {
