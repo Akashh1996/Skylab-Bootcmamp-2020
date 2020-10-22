@@ -47,6 +47,14 @@ const skylabArray = {
         };
     },
 
+    every: (original, element) => {
+        let objArray = Object.values(original);
+        for (let i = 0; i < objArray.length - 1; i++) {
+            if (!element(objArray[i])) return false;
+        }
+        return true;
+    },
+    
 };
 
 let filterArray = {
