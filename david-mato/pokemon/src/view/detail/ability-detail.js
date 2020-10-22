@@ -7,3 +7,5 @@ class AbilityComponent {
         element.innerHTML = value;
     }
 }
+
+module.exports = AbilityComponent;

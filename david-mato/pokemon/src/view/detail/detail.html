@@ -39,7 +39,6 @@
             const getId = params.get('pokeId');
             store.getPokemonById(getId).then(() => {
                 pokemon = store.getPokemon();
-                console.log(pokemon)
                 const detailComponent = new DetailComponent(pokemon);
                 if (pokemon) {
                     let idElement = document.getElementById('poke-name');

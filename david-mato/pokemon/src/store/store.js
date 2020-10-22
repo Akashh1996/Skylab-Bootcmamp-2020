@@ -16,20 +16,22 @@ class Store {
         return _pokeAbility;
     }
 
-    async loadPokemons() {
-        let response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=50&offset=200');
-        let objWithResults = await response.json();
-        _pokemons = await objWithResults.results;
+    loadPokemons() {
+        return fetch('https://pokeapi.co/api/v2/pokemon?limit=50&offset=200')
+            .then((response) => response.json())
+            .then((data) => _pokemons = data)
     }
 
-    async getPokemonById(pokeName) {
-        let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`);
-        _pokemon = await response.json();
+    getPokemonById(pokeName) {
+        return fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`)
+            .then((response) => response.json())
+            .then((data) => _pokemon = data)
     }
 
-    async loadPokeAbilityByName(abilityName) {
-        let response = await fetch(`https://pokeapi.co/api/v2/ability/${abilityName}`);
-        _pokeAbility = await response.json();
+    loadPokeAbilityByName(abilityName) {
+        return fetch(`https://pokeapi.co/api/v2/ability/${abilityName}`)
+            .then((response) => response.json())
+            .then((data) => _pokeAbility = data)
     }
 }
 

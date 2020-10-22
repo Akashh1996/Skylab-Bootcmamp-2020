@@ -1,4 +1,4 @@
-const Store = require('./store');
+const Store = require('./store-async');
 
 describe('store', () => {
     let store;
@@ -23,35 +23,39 @@ describe('store', () => {
         expect(store.getPokeAbility()).toBeUndefined();
     })
 
-    test('should return an array of pokemon objects', () => {
+    test('should return an array of pokemon objects', async () => {
         const response = {
             json: jest.fn().mockReturnValueOnce([{}])
         }
         global.fetch = jest.fn().mockImplementationOnce(() => Promise.resolve(response));
-        return store.loadPokemons().then(() => {
+        
+        try{
+            await store.loadPokemons();
             expect(store.getPokemons()).toEqual([{}])
-        })
+        } catch (error) {}
     })
 
-    test('should return a pokemon object', () => {
+    test('should return a pokemon object', async () => {
         const response = {
             json: jest.fn().mockReturnValueOnce({})
         }
         global.fetch = jest.fn().mockImplementationOnce(() => Promise.resolve(response));
         
-        return store.getPokemonById().then(() => {
-            expect(store.getPokemon()).toEqual({})
-        })
+        try{
+            await store.getPokemonById();
+            expect(store.getPokemon()).toEqual([{}])
+        } catch (error) {}
     })
 
-    test('should return an ability object', () => {
+    test('should return an ability object', async () => {
         const response = {
             json: jest.fn().mockReturnValueOnce({})
         }
         global.fetch = jest.fn().mockImplementationOnce(() => Promise.resolve(response));
         
-        return store.loadPokeAbilityByName().then(() => {
-            expect(store.getPokeAbility()).toEqual({})
-        })
+        try{
+            await store.loadPokeAbilityByName();
+            expect(store.getPokeAbility()).toEqual([{}])
+        } catch (error) {}
     })
 })

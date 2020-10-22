@@ -23,7 +23,7 @@
 <script>
     const store = new Store();
     store.loadPokemons().then(() => {
-        const listComponent = new ListComponent(_pokemons);
+        const listComponent = new ListComponent(_pokemons.results);
         const pokemonList = document.getElementById('pokemon-list');
         listComponent.updateHtmlPokemonList(pokemonList);
     })

@@ -25,10 +25,11 @@
             const abilityName = params.get('abilityName');
             store.loadPokeAbilityByName(abilityName).then(() => {
                 const ability = store.getPokeAbility();
-                console.log(ability)
                 const abilityComponent = new AbilityComponent(ability);
+
                 const abilityName = document.getElementById('poke-ability-name');
                 abilityComponent.updateHtmlElement(abilityName, ability.name);
+                
                 const abilityExplanation = document.getElementById('ability-explanation');
                 abilityComponent.updateHtmlElement(abilityExplanation, ability.effect_entries[1].effect);
             })
