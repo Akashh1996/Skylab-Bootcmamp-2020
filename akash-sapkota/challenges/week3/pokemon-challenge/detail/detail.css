@@ -105,3 +105,10 @@ a{
     font-size: larger;
     font-size: 30px;
 }
+@media only screen and (max-width: 600px) {
+    .detail_card1{
+        width: 70%;
+    
+    
+    }
+  }
