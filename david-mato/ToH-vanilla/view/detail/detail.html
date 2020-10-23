@@ -61,7 +61,25 @@
 		<script>
 			const heroId = getHeroId(location);
 			const hero = store.getHeroById(heroId);
-            let detailComponent = new DetailComponent(hero);
+			let detailComponent = new DetailComponent(hero);
+
+			function loadData(data) {
+				console.log(data);
+			}
+			
+			function loadHeroes(url, type, callback) {
+				let xhr = new XMLHttpRequest();
+				xhr.open('GET', url);
+				xhr.responseType = type;
+
+				xhr.onload = function() {
+					callback(xhr.response);
+				}
+
+				xhr.send()
+			}
+
+			loadHeroes('../../api/superHeroData.json', 'json', loadData)
 
 			if (hero) {
 				let idElement = document.getElementById('detail-title');
