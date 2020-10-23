@@ -20,18 +20,27 @@ class Store {
         return fetch('https://pokeapi.co/api/v2/pokemon?limit=50&offset=200')
             .then((response) => response.json())
             .then((data) => _pokemons = data)
+            .catch ((error) => {
+                _pokemons = null;
+            });
     }
 
     getPokemonById(pokeName) {
         return fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`)
             .then((response) => response.json())
             .then((data) => _pokemon = data)
+            .catch ((error) => {
+                _pokemon = null;
+            });
     }
 
     loadPokeAbilityByName(abilityName) {
         return fetch(`https://pokeapi.co/api/v2/ability/${abilityName}`)
             .then((response) => response.json())
             .then((data) => _pokeAbility = data)
+            .catch ((error) => {
+                _pokeAbility = null;
+            });
     }
 }
 
