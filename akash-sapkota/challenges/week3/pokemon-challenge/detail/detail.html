@@ -22,7 +22,7 @@
     <main>
       
         <div class="detail-wrapper">
-            <div id="next" class="button">Next</div>
+            <div id="previous" class="button">Prev</div>
 
             <div class="detail_card1">
 
@@ -44,7 +44,7 @@
              
 
             <div class="buttons">
-                <div id="previous" class="button">Prev</div>
+                <div id="next" class="button">Next</div>
 
             </div> 
 
@@ -79,7 +79,7 @@
 
         
 
-    store.getPokeMonDetail(name).then(() => {
+    /* store.getPokeMonDetail(name).then(() => {
 
                 const pokDetail = store.pokeMonDetail()
 
@@ -92,7 +92,7 @@
 
                 let detailComponent = new DetailComponent(pokDetail);
                 console.log(detailComponent);
-				if (pokDetail) {
+				if (!pokDetail) {
 					
 					let image = document.getElementById('image');
 					detailComponent.updateHtmlValue(
@@ -157,20 +157,114 @@
 					); 
                     
 					
+                }else{
+                    console.log("error");
                 }
                 
+                 */
                 
+        
+
+            (async () =>{
+                await store.getPokeMonDetail(name)
+                 const pokDetail = store.pokeMonDetail()
+
+
+
+                let detailComponent = new DetailComponent(pokDetail);
+                console.log(detailComponent);
+				if (pokDetail) {
+                    
+                document.getElementById("ability").innerHTML = pokDetail.abilities.map((eachAbility)=>{
+                            return `<a href = ../ability/ability.html?pokemonName=${eachAbility.ability.name}>${eachAbility.ability.name}</a>`
+                        })
+
+					
+					let image = document.getElementById('image');
+					detailComponent.updateHtmlValue(
+						image,
+						'src',
+						detailComponent.pokemon.sprites.front_shiny 
+                    );
+                    let height = document.getElementById('height');
+					detailComponent.updateHtmlValue(
+						height,
+						'innerHTML',
+						detailComponent.pokemon.order
+					); 
+                    let order = document.getElementById('order');
+					detailComponent.updateHtmlValue(
+						order,
+						'innerHTML',
+						detailComponent.pokemon.height
+					); 
+                    let weight = document.getElementById('weight');
+					detailComponent.updateHtmlValue(
+						weight,
+						'innerHTML',
+						detailComponent.pokemon.weight
+					); 
+                    let experience = document.getElementById('experience');
+					detailComponent.updateHtmlValue(
+						experience,
+						'innerHTML',
+						detailComponent.pokemon.base_experience
+                    ); 
+                    let type = document.getElementById('type');
+					detailComponent.updateHtmlValue(
+						type,
+                        'innerHTML',
+						detailComponent.pokemon.types.map((eachType)=>{
+                            return eachType.type.name
+                        })
+                    ); 
+                    let pokemonName = document.getElementById('pokemon-name');
+					detailComponent.updateHtmlValue(
+						pokemonName,
+						'innerHTML',
+						detailComponent.pokemon.name
+                    ); 
+                    let stats = document.getElementById('stats');
+					detailComponent.updateHtmlValue(
+						stats,
+                        'innerHTML',
+						detailComponent.pokemon.stats.map((eachstats)=>{
+                            return eachstats.stat.name 
+                        })
+					); 
+                    
+                    let statNumber = document.getElementById('stat-number');
+					detailComponent.updateHtmlValue(
+						statNumber,
+                        'innerHTML',
+						detailComponent.pokemon.stats.map((eachstatNumber)=>{
+                            return eachstatNumber.base_stat
+                        })
+					); 
+                    
+					
+                }else{
+                    console.log("error");
+                }
                 
-            });
-      
+
+            })() 
+    
             document.getElementById("next").addEventListener("click",()=>{
                 console.log(name++);
                 window.location.search = `?pokemonName=${name++}`
             })
 
              console.log(name);
+
             document.getElementById("previous").addEventListener("click",()=>{
-                window.location.search = `?pokemonName=${name--}`
+                
+                let nextName = +name
+                if(nextName === 1){
+                    nextName = 101
+                }
+                window.location.search = `?pokemonName=${--nextName}`
+
             })
              
     </script>

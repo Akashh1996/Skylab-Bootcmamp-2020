@@ -19,6 +19,12 @@
         </div>
     
     <ul id="pokeMon"></ul>
+
+    <div class="error" style="color: white; text-align: center;"></div>
+
+    <div style="width: 30%; margin: auto; " class="errorImage" >
+        <img src="https://media.giphy.com/media/p3n6WxKCgy1sOPjB0W/giphy.gif" alt="">
+    </div>
     
 
     </nav>
@@ -26,7 +32,7 @@
     <script src="../store.js"></script>
     <script src="./list.js"></script>
     <script>
-        store.getpokemonData().then(() => {
+         /* store.getpokemonData().then(() => {
                 const pokemonList = store.getpokemonList();
                 console.log(pokemonList);
                 const pokemonComponent = new PokemonComponent (pokemonList);
@@ -34,8 +40,24 @@
                     let element = document.getElementById("pokeMon")
                     pokemonComponent.updatePokemonList(element)
                 }
+                
  
-            });
+            });  */
+
+             (async () =>{
+                await store.getpokemonData()
+                const pokemonList =   store.getpokemonList();
+                console.log(pokemonList);
+                const pokemonComponent = new PokemonComponent (pokemonList);
+                if(pokemonList.length>0){
+                    let element = document.getElementById("pokeMon")
+                    pokemonComponent.updatePokemonList(element)
+                }else{
+                    document.querySelector(".error").innerHTML = "<h1>Holy cow !! Server Crashed Again</h1>"
+                    document.querySelector(".errorImage").style.display = "block"
+                }
+
+            })() 
             
     </script>
     

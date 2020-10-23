@@ -88,11 +88,18 @@ a{
     color: white;
     box-shadow:   0 0 25px crimson;
     cursor: pointer;
-    border-bottom: 6px solid greenyellow;
+    border: 2px solid black;
+    border-bottom: 6px solid crimson;
     background-color: lightblue;
     color: black;
     box-shadow:   0 0 27px yellow;
 
+
+
+}
+.button:hover{
+
+    font-size: larger;
 
 
 }
@@ -105,7 +112,7 @@ a{
     font-size: larger;
     font-size: 30px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .detail_card1{
         width: 70%;
     

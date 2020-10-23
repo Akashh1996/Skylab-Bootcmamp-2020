@@ -1,43 +1,75 @@
+const {
+    expect,
+    beforeEach
+} = require('@jest/globals');
 const store = require('./store');
 
 describe('Poke Store', () => {
-    test('should load pokemons from api', () => {
-        const response = {
-            json: jest.fn().mockReturnValueOnce({
-                results: [{
+    describe('should load list of pokemons from API', () => {
+
+        beforeEach(() => {
+            const response = {
+                json: jest.fn().mockReturnValueOnce({
+                    results: [{
+                        id: 12,
+                        name: 'Narco'
+                    }]
+                })
+            };
+            global.fetch = jest
+                .fn()
+                .mockImplementationOnce(() => Promise.resolve(response));
+        })
+
+        test('should load pokemons from api', () => {
+
+
+            return store.getpokemonData().then(() => {
+                expect(store.getpokemonList()).toEqual([{
                     id: 12,
                     name: 'Narco'
-                }]
-            })
-        };
-        global.fetch = jest
-            .fn()
-            .mockImplementationOnce(() => Promise.resolve(response));
+                }]);
+            });
+        });
 
-        return store.getpokemonData().then(() => {
+    });
+    describe('get pokemon list', () => {
+        test('should return a list of pokemon in an array', () => {
             expect(store.getpokemonList()).toEqual([{
                 id: 12,
                 name: 'Narco'
-            }]);
+            }])
+        });
+
+    });
+
+    /* describe('Poke Store', () => {
+        describe('should load list of pokemons from API', () => {
+            test('should load pokemons from api', () => {
+                const response = {
+                    json: jest.fn().mockReturnValueOnce({
+                        results: [{
+                            id: 12,
+                            name: 'Narco'
+                        }]
+                    })
+                };
+                global.fetch = jest
+                    .fn()
+                    .mockImplementationOnce(() => Promise.resolve(response));
+
+                return store.getpokemonData().then(() => {
+                    expect(store.getpokemonList()).toEqual([{
+                        id: 12,
+                        name: 'Narco'
+                    }]);
+                });
+            });
+
         });
     });
 
-    /*   test("should return a single pokemon", () => {
-          expect(store.getPokemon()).toEqual([]);
-      }) */
-    /* test("should load pokemons from api", () => {
-        const response = {
-            json: jest.fn().mockReturnValueOnce([{
-                id: 12,
-                name: "Narco"
-            }])
-        }
-        global.fetch = jest.fn().mockImplementationOnce(() => response)
-        return store.loadPokemonsFromAPIById(12).then(() => {
-            expect(store.getPokemon()).toEqual([{
-                id: 12,
-                name: "Narco"
-            }]);
-        })
-    }) */
+ */
+
+
 });

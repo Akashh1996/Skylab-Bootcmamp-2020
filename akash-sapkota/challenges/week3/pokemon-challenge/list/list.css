@@ -24,3 +24,6 @@ ul{
     justify-content: center;
     margin: auto;
 }
+.errorImage{
+    display: none;
+}  
