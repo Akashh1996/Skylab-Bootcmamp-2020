@@ -17,10 +17,17 @@ class Store {
     }
     
     async getPokemonDetail(name) {
-        let url = `https://pokeapi.co/api/v2/pokemon/${name}/`;
-        const response = await fetch(url);
-        const pokemonDetail = await response.json();
-        _pokemonDetail = pokemonDetail;
+        try {
+            let url = `https://pokeapirsgwrg.co/api/v2/pokemon/${name}/`;
+            const response = await fetch(url);
+            const pokemonDetail = await response.json();
+            _pokemonDetail = pokemonDetail;
+            
+        } catch (error) {
+            console.log("No mola nada")
+            _pokemonDetail=false;
+            
+        }
     }
 
     async getPokemonAbility(ability) {
@@ -47,6 +54,11 @@ class Store {
         let abilityUrl = _pokemonDetail.abilities[0].ability.url.split('/');
         abilityId = abilityUrl[6];
         return abilityId;
+    }
+
+    getError(){
+        let error= 'https://media.giphy.com/media/3o7aDawKyC9xHz3oxG/giphy.gif';
+        return error;
     }
 }
 

@@ -12,15 +12,10 @@
 			<div class="detail">
 				<div class="detail_header">
 					<div><img src="" id="image" /></div>
-					<div>ability</div>
+					<div id="ability">ability</div>
 					<div id="pokemon__ability"></div>
 				</div>
-				<div class="detail_all">
-					<div>
-						<br />
-						<span>Weight:</span>59kg<span></span>
-					</div>
-				</div>
+				<div class="detail_all"></div>
 			</div>
 		</main>
 
@@ -30,10 +25,12 @@
 		<script>
 			const location1 = location;
 			const name = getPokemonName(location1);
-			store.getPokemonDetail(name).then(() => {
+			(async () => {
+				await store.getPokemonDetail(name);
 				const pokemonDetail = store.pokemonDetail();
 				let detailComponent = new DetailComponent(pokemonDetail);
 				console.log(detailComponent);
+
 				if (pokemonDetail) {
 					document.getElementById('pokeName').innerHTML = name;
 					let image = document.getElementById('image');
@@ -49,8 +46,19 @@
 							'pokemon__ability'
 						).innerHTML = _pokemonAbility;
 					});
+				} else {
+					console.log('No mola nada');
+
+					document.getElementById('pokeName').innerHTML =
+						'Como escribiendo código...';
+
+					document.getElementById('ability').innerHTML =
+						'NO funciona y no tienes ni idea de por qué....';
+
+					let image = document.getElementById('image');
+					detailComponent.updateHtmlValue(image, 'src', store.getError());
 				}
-			});
+			})();
 		</script>
 	</body>
 </html>
