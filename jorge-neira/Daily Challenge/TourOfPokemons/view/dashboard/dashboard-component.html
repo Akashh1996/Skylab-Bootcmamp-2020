@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../styles/style.css" />
+		<title>Pokemon Abilities</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<section class="pokemonNav">
+				<button class="navBtn">
+					<a href="../list/list-component.html">Pokemon List</a>
+				</button>
+				<button class="navBtn">
+					<a href="../detail/detail-component.html?pokemonName=bulbasaur"
+						>Pokemon Detail</a
+					>
+				</button>
+			</section>
+			<section class="pokemonAbilities">
+				<div class="defaultInfo-container">
+					<div class="pokemonImage-container">
+						<img class="pokemonImage" />
+					</div>
+					<div class="pokemonGeneral-container">
+						<span class="pokemonAbility-name"></span>
+						<span class="pokemonAbility-info"></span>
+					</div>
+				</div>
+				<div class="ability-selector">
+					<div class="additional-info__container"></div>
+				</div>
+			</section>
+		</div>
+	</body>
+	<script src="../../utils/getUrlParam.js"></script>
+	<script src="../../app/store.js"></script>
+	<script src="./dashboard-component.js"></script>
+</html>

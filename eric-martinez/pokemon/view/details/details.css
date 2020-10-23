@@ -1,0 +1,11 @@
+#pokemon_details {
+	display: flex;
+	flex-direction: column;
+}
+label {
+	margin-top: 20px;
+}
+div {
+	display: flex;
+	flex-direction: column;
+}
