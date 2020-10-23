@@ -1,20 +1,18 @@
 const store = require('./store');
 
 describe('loadPokédex', () => {
+    beforeEach(() => {
+      global.fetch = jest.fn().mockImplementationOnce(() => 
+      Promise.resolve({
+          json: jest.fn().mockReturnValueOnce([{"name":"bulbasaur","url":"https://pokeapi.co/api/v2/pokemon/1/"}])
+      }))
+    })
 
-    test('the data is peanut butter', async () => {
-        const data = await store.loadPokedex();
-        expect(data).toBe('');
-      });
-      
-      test('the fetch fails with an error', async () => {
-        expect.assertions(1);
-        try {
-          await fetchData();
-        } catch (e) {
-          expect(e).toMatch('error');
-        }
-      });
+    test('should return the Pokédex', () => {
+      return store.loadPokedex().then((response) => {
+          expect(response).toEqual([{"name":"bulbasaur","url":"https://pokeapi.co/api/v2/pokemon/1/"}])
+      })
+    })
 
     test('should return anchor Pokédex', () => {
 
@@ -87,6 +85,22 @@ describe('loadAbilityPokemon', () => {
         // assert
         expect(response).toBe(undefined)
     })
+
+})
+
+describe('loadformPokekom', () => {
+  beforeEach(() => {
+    global.fetch = jest.fn().mockImplementationOnce(() => 
+    Promise.resolve({
+        json: jest.fn().mockReturnValueOnce([{"name":"bulbasaur","url":"https://pokeapi.co/api/v2/pokemon/1/"}])
+    }))
+  })
+
+  test('should return the Pokédex', () => {
+    return store.loadformPokemon(1).then((response) => {
+        expect(response).toEqual([{"name":"bulbasaur","url":"https://pokeapi.co/api/v2/pokemon/1/"}])
+    })
+  })
 
 })
 
@@ -163,6 +177,58 @@ describe('loadPokemon', () => {
         let response = store.abilityAnchorPokemon("1",a,"abilities","ability")
     
         // assert
-        expect(response).toBe("<li><a href=./ability.html?id=1&ability=65/>overgrow</a></li>")
+        expect(response).toBe("<li class=\"anchorlist\"><a href=./ability.html?id=1&ability=65/>overgrow</a></li>")
     })
+})
+
+describe('loadPokédex', () => {
+  beforeEach(() => {
+    global.fetch = jest.fn().mockImplementationOnce(() => 
+    Promise.reject('There was an error'))
+  })
+
+  test('should return the Pokédex', () => {
+    return store.loadPokedex().then((response) => {
+        expect(response).toBe('There was an error')
+    })
+  })
+})
+
+describe('loadAbilityPokemon', () => {
+  beforeEach(() => {
+      global.fetch = jest.fn().mockImplementationOnce(() => 
+      Promise.reject('No information available'))
+  })
+
+  test('should return the Pokédex', () => {
+      return store.loadAbilityPokemon(1000).then((response) => {
+          expect(response).toBe('No information available')
+      })
+  })
+})
+
+describe('loadPokemon', () => {
+  beforeEach(() => {
+      global.fetch = jest.fn().mockImplementationOnce(() => 
+      Promise.reject('No information available'))
+  })
+
+  test('should return info of Pokemon id:1', () => {
+      return store.loadPokemon(10000).then((response) => {
+          expect(response).toBe('No information available')
+      })
+  })
+})
+
+describe('loadformPokemon', () => {
+  beforeEach(() => {
+      global.fetch = jest.fn().mockImplementationOnce(() => 
+      Promise.reject('https://i.pinimg.com/originals/00/2d/57/002d5714c44f88a16c1f0bdfa97ca05e.jpg'))
+  })
+
+  test('should return info of Pokemon id:1', () => {
+      return store.loadformPokemon(1000).then((response) => {
+          expect(response).toBe('https://i.pinimg.com/originals/00/2d/57/002d5714c44f88a16c1f0bdfa97ca05e.jpg')
+      })
+  })
 })
