@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="css/skylab-logo.png" type="image/x-icon" />
+    <title>GameOfLife-Skylab</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/app.css" />
+  </head>
+  <body>
+
+    <div id="contentDiv">
+      <h1>EL JUEGO DE LA VIDA by John Horton Conway</h1>
+      <br />
+      <button onclick="play()">
+        Play / Pause <br />
+        (Press P)
+      </button>
+      <button onclick="newGame()">
+        New Game <br />
+        (Press C)
+      </button>
+      <button onclick="randomGame()">
+        Random Game <br />
+        (Press R)
+      </button>
+      <div id="slider-section">
+        <p>Game Size</p>
+        <br><input id="sliderValue" type="range" min="10" max="30" valueAsnumber="20" step="1">
+        <span id="sliderText">20</span>
+      </div>
+    </div>
+
+    <div id="canvas"></div>
+
+    <footer style="color:white">
+      Víctor Escartín <span style="color: white"><img src="css/skylab-logo.png" width="20px" height="20px"> </> Skylab <span style="color:rgb(165, 0, 124)"> Coders </span>Academy</span>  </span>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
