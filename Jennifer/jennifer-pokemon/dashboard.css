@@ -1,0 +1,31 @@
+#list-pokemon {
+	display: flex;
+	flex-direction: column;
+	height: 200px;
+	width: 90%;
+	flex-wrap: wrap;
+	font-size: 18px;
+	border-bottom: 1px solid black;
+}
+
+a:hover {
+	color: red;
+	font-size: 20px;
+}
+
+.name-pokemon {
+	padding: 30px;
+}
+
+body {
+	font-family: 'Turret Road', cursive;
+	background-image: url(https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700524090.jpg);
+	background-size: cover;
+}
+
+#pokemon-text {
+	display: flex;
+	margin-left: 50px;
+	margin-top: 150px;
+	font-size: 200px;
+}
