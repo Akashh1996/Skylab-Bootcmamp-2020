@@ -80,3 +80,18 @@ a {
 	color: black;
 	text-transform: capitalize;
 }
+
+#error-info {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	top: 160px;
+	left: 0;
+}
+
+#error404 {
+	width: 100%;
+	left: 0;
+	object-fit: scale-down;
+}

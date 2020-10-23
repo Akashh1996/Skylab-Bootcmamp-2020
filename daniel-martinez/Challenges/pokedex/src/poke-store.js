@@ -1,5 +1,7 @@
 let _pokemons = {results: [{name: "", url:""}]};
 let _pokemon = {sprites: {other: {"official-artwork": {front_default: "..."}}}, abilities:[{ability: {name: ''}}]};
+let abilityObj = {'effect_entries':[{language:{name: 'en'}, effect: ''}]}
+
 
 class Pokedex {
     async loadPokemons(page){
@@ -9,16 +11,20 @@ class Pokedex {
             const value = await response.json();
             _pokemons = value;
         } catch {
-            console.log('La URL de la API no existe.');
+            _pokemons = {results: null};
         }
     }
 
     getPokemons(){ 
-        return _pokemons["results"];
+        return _pokemons;
     }
 
     getPokemonNum(pokemonInList){
         return pokemonInList["url"].slice(34,-1);
+    }
+
+    getPokemon(){
+        return _pokemon;
     }
 
     async loadPokemonsFromAPIById(pokemonId){
@@ -28,12 +34,12 @@ class Pokedex {
         const pokemonDetailObj = await response.json();
         _pokemon = pokemonDetailObj;
         } catch {
-            console.log('La URL de la API no existe.');
+            _pokemon =  null;
         } 
     }
 
     setListOfPokemons(){
-        let array = this.getPokemons();
+        let array = this.getPokemons().results;
         let liElem = '';
         for (let pokemonArrayIndex = 0; pokemonArrayIndex < array.length; pokemonArrayIndex++){
             liElem +=
@@ -74,18 +80,22 @@ class Pokedex {
         const url = `https://pokeapi.co/api/v2/ability/${ability}`;
         try {
             const response = await fetch(url);
-            const abilityObj = await response.json();
-            return abilityObj;
+            const value = await response.json();
+            abilityObj = value;
         } catch {
-            console.log(`Hay un error con la URL de la descripción de ${abilty}`);
+            abilityObj = null;
         }
     }
 
-    async getAbilityDescription(ability){
-        let abilityObj = await this.loadAbilityFromAPI(ability);
-            for (let i = 0; i< abilityObj['effect_entries'].length; i++){
-                if (abilityObj['effect_entries'][i]['language']['name']==='en'){
-                    return abilityObj['effect_entries'][i]['effect'];
+    getAbilityObj(){
+        return abilityObj;
+    }
+
+    getAbilityDescription(){
+        let abilityObject = this.getAbilityObj();
+            for (let i = 0; i< abilityObject['effect_entries'].length; i++){
+                if (abilityObject['effect_entries'][i]['language']['name']==='en'){
+                    return abilityObject['effect_entries'][i]['effect'];
                 }
             }
     }

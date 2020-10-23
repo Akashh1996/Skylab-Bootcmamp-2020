@@ -25,6 +25,7 @@
                 <p id="ability__description"></p>
             </section>
         </div>
+        <div id="error-info"></div>
     </main>
     
 
@@ -33,13 +34,16 @@
 <script src="./../detail/detail.js"></script>
 <script>
     const ability = window.location.search.replace('?ability=','');
-    pokedex.loadAbilityFromAPI(ability).then(() =>{
-        document.getElementById('head-title').innerHTML = ability;
-        document.getElementById('ability-title').innerHTML = `Ability:&nbsp&nbsp<b>${ability}</b>`;
-        const abilityDescription = pokedex.getAbilityDescription(ability).then((response)=>{
-            document.getElementById('ability__description').innerHTML = response;
-        })
-    })
+    (async () => {
+        await pokedex.loadAbilityFromAPI(ability);
+        if (pokedex.getAbilityObj()){
+            document.getElementById('head-title').innerHTML = `Ability:&nbsp${ability}`;
+            document.getElementById('ability-title').innerHTML = `Ability:&nbsp&nbsp<b>${ability}</b>`;
+            document.getElementById('ability__description').innerHTML = pokedex.getAbilityDescription();
+        } else {
+            document.getElementById("error-info").innerHTML = '<img src="./../../src/Pokemon404.png" alt="error404" id="error404">';
+        }
+    })()
 </script>
 </body>
 </html>

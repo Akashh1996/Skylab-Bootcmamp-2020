@@ -12,7 +12,7 @@ describe('getPokemons', () => {
     test('should call getPokemons and return an array of Pokemon', ()=>{
         //arrange
         //act
-        let response = pokedex.getPokemons();
+        let response = pokedex.getPokemons().results;
         //assert
         expect(response).toEqual([{name: "", url:""}]);
     })
@@ -94,14 +94,65 @@ describe('backAndNextButtons', () => {
     })
 })
 
-describe('loadPokemons', () => {
-    test('should load a list of pokemon from an api', ()=>{
-        const json = jest.fn().mockReturnValueOnce({results:[]});
-        const fetchImplementation = () => {Promise.resolve({json: json})};
-        global.fetch = jest.fn().mockImplementationOnce(fetchImplementation);
-        return pokedex.loadPokemons(0).then(() => {
-        expect(pokedex.getPokemon()).toEqual([]);
+describe('getAbilityDescription', () => {
+    test('should call getAbilityDescription and return a string', ()=>{
+        //arrange
+        //act
+        let response = pokedex.getAbilityDescription();
+        //assert
+        expect(response).toEqual(``);
     })
+})
+
+describe('async functions', () => {
+    beforeEach(()=>{
+        const json = jest.fn().mockReturnValueOnce([]);
+        const fetchImplementation = () => {return Promise.resolve({json: json})};
+        global.fetch = jest.fn().mockImplementationOnce(fetchImplementation);
+    })
+
+    test('loadPokemons should load a list of pokemon from an api', ()=>{
+        return pokedex.loadPokemons(1).then(() => {
+        expect(pokedex.getPokemons()).toEqual([]);
+        })
+    })
+
+    test('loadPokemonsFromAPIById should load a pokemon from an api', ()=>{
+        return pokedex.loadPokemonsFromAPIById(0).then(() => {
+        expect(pokedex.getPokemon()).toEqual([]);
+        })
+    })
+
+    test('loadAbilityFromAPI should load an ability from an api', ()=>{
+        return pokedex.loadAbilityFromAPI(0).then(() => {
+        expect(pokedex.getAbilityObj()).toEqual([]);
+        })
+    })
+})
+
+describe('async functions', () => {
+    beforeEach(()=>{
+        const json = jest.fn().mockReturnValueOnce([]);
+        const fetchImplementation = () => {return Promise.reject()};
+        global.fetch = jest.fn().mockImplementationOnce(fetchImplementation);
+    })
+
+    test('loadPokemons should load a list of pokemon from an api', ()=>{
+        return pokedex.loadPokemons(1).then(() => {
+        expect(pokedex.getPokemons().results).toBe(null);
+        })
+    })
+
+    test('loadPokemonsFromAPIById should load a pokemon from an api', ()=>{
+        return pokedex.loadPokemonsFromAPIById(0).then(() => {
+        expect(pokedex.getPokemon()).toBe(null)
+        })
+    })
+
+    test('loadAbilityFromAPI should load an ability from an api', ()=>{
+        return pokedex.loadAbilityFromAPI(0).then(() => {
+        expect(pokedex.getAbilityObj()).toBe(null)
+        })
     })
 })
 

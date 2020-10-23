@@ -88,3 +88,18 @@ a > li {
 	text-decoration: none;
 	margin: 0 20px;
 }
+
+#error-info {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	top: 200px;
+	left: 0;
+}
+
+#error404 {
+	width: 100%;
+	left: 0;
+	object-fit: scale-down;
+}

@@ -27,21 +27,26 @@
                 <ul id="abilities__list"></ul>
             </section>
         </div>
+        <div id="error-info"></div>
     </main>
     
 
 <script src="./../list/list.js"></script>
 <script src="./../../src/poke-store.js"></script>
-<script src="./detail.js"></script>
 <script>
     const pokemonId = +window.location.search.slice(3,window.location.search.indexOf('&'));
     const pokemonName = window.location.search.slice(window.location.search.indexOf('e=')+2);
-    pokedex.loadPokemonsFromAPIById(pokemonId).then(() =>{
-        document.getElementById('pokemon-title').innerHTML = pokedex.pokemonDetailTitle(pokemonId, pokemonName);
-        document.getElementById('head-title').innerHTML = pokemonName;
-        document.getElementById('abilities__list').innerHTML = pokedex.setAbilitiesList();
-        document.getElementById('info-block__pokemon-image').innerHTML = pokedex.setPokemonImage(pokemonName);
-    })
+    (async ()=> {
+        await pokedex.loadPokemonsFromAPIById(pokemonId);
+        if (pokedex.getPokemon()) {
+            document.getElementById('pokemon-title').innerHTML = pokedex.pokemonDetailTitle(pokemonId, pokemonName);
+            document.getElementById('head-title').innerHTML = `Pokemon: ${pokemonName}`;
+            document.getElementById('abilities__list').innerHTML = pokedex.setAbilitiesList();
+            document.getElementById('info-block__pokemon-image').innerHTML = pokedex.setPokemonImage(pokemonName);
+        } else {
+            document.getElementById("error-info").innerHTML = '<img src="./../../src/Pokemon404.png" alt="error404" id="error404">';
+        }
+    })();
 </script>
 </body>
 </html>
