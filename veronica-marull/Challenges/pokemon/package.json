@@ -1,0 +1,17 @@
+{
+	"name": "pokemon",
+	"version": "1.0.0",
+	"description": "",
+	"main": "store.js",
+	"scripts": {
+		"test": "test",
+		"test:coverage": "jest --collect-coverage --watchAll",
+		"test:debug": "node --inspect"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"jest": "^26.6.0"
+	}
+}

@@ -1,0 +1,56 @@
+a:link,
+a:visited,
+a:active {
+	text-decoration: none;
+}
+* {
+	font-family: Verdana, sans-serif;
+}
+
+body {
+	background-color: rgb(223, 221, 222);
+}
+
+nav a {
+	color: black;
+}
+.main-container {
+	display: flex;
+}
+
+.main-container > div {
+	margin-left: 30px;
+}
+
+.power-bio,
+.appe-work-conect {
+	margin-top: 50px;
+	margin-left: 20px;
+}
+
+.buttons {
+	display: flex;
+}
+.buttons a {
+	color: black;
+}
+
+.button:hover {
+	background-color: #c0aab6;
+}
+
+.button {
+	padding: 10px;
+	background-color: rgb(201, 198, 200);
+	margin: 2%;
+	border-radius: 15px;
+}
+
+.main-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.main-container span {
+	padding: 10px;
+}

@@ -1,0 +1,48 @@
+ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+}
+
+li {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: 1px solid black;
+	width: 130px;
+	text-align: center;
+	background-color: rgb(201, 198, 200);
+	color: white;
+	font-size: 20px;
+}
+
+h3 {
+	margin-left: 30px;
+}
+
+a:link,
+a:visited,
+a:active {
+	text-decoration: none;
+}
+
+body {
+	background-color: rgb(213, 213, 218);
+}
+
+.buttons {
+	display: flex;
+}
+.buttons a {
+	color: black;
+}
+
+.button:hover {
+	background-color: #c0aab6;
+}
+
+.button {
+	padding: 10px;
+	background-color: rgb(201, 198, 200);
+	margin: 2%;
+	border-radius: 15px;
+}
