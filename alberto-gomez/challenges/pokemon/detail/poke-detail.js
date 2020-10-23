@@ -9,7 +9,6 @@ function printPokemonDetail(pokemon) {
 	let image = document.createElement('img');
 	document.body.appendChild(image);
 	image.setAttribute('src', `${pokemon.sprites.front_shiny}`);
-	debugger;
 	for (i = 0; i < pokemon.abilities.length; i++) {
 		let ability = document.createElement('li');
 		pokemonAbility.appendChild(ability);

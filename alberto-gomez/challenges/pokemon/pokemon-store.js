@@ -19,32 +19,33 @@ class Store {
 		return this.getPokemon().find((pokemon) => pokemon.id === pokemonId);
 	}
 
-	loadPokemon() {
-		return fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=1')
-			.then((response) => {
-				return response.json();
-			})
-			.then((pokemon) => {
-				_pokemonList = pokemon;
-			});
+	async loadPokemon() {
+		const response = await fetch(
+			'https://pokeapi.co/api/v2/pokemon?limit=20&offset=1'
+		);
+		const pokemon = await response.json();
+		_pokemonList = pokemon;
 	}
 
-	loadPokemonDetail(pokemonName) {
-		return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
-			.then((response) => {
-				return response.json();
-			})
-			.then((pokemon) => {
-				_pokemonDetail = pokemon;
-			});
+	async loadPokemonDetail(pokemonName) {
+		const response = await fetch(
+			`https://pokeapi.co/api/v2/pokemon/${pokemonName}`
+		);
+		const pokemon = await response.json();
+		_pokemonDetail = pokemon;
 	}
 
-	loadAbilityFromAbilityName(pokemonAbility) {
-		return fetch(`https://pokeapi.co/api/v2/ability/${pokemonAbility}`)
-			.then((response) => response.json())
-			.then((pokemonAbilityObject) => {
-				_pokemonAbilityName = pokemonAbilityObject;
-			});
+	async loadAbilityFromAbilityName(pokemonAbility) {
+		try {
+			const response = await fetch(
+				`https://pokeapi.co/api/v2/abilitysamoixasmdsa/${pokemonAbility}`
+			);
+			const pokemonAbilityObject = await response.json();
+			_pokemonAbilityName = pokemonAbilityObject;
+		} catch (error) {
+			console.log('There is an error: ', error);
+			_pokemonAbilityName = null;
+		}
 	}
 }
 
