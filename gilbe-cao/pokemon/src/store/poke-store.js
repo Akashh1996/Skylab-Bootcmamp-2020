@@ -7,6 +7,8 @@ class PokeStore {
 	}
 
 	getPokemon() {
+		debugger;
+
 		return _pokemon;
 	}
 
@@ -27,25 +29,38 @@ class PokeStore {
 		return fetch(url)
 			.then((response) => response.json())
 			.then((pokemons) => {
-				_pokemons = pokemons;
+				_pokemons = pokemons.results;
+				return _pokemons;
+			})
+			.catch((error) => {
+				console.log('There was an error: ', error);
+				return [];
 			});
 	}
 
-	async loadPokemonsFromAPI() {
+	async loadPokemonsFromAPIx() {
 		debugger;
 		let url = 'https://pokeapi.co/api/v2/pokemon?limit=100&offset=200';
-		const response = await fetch(url);
-		const pokemons = await response.json();
-		_pokemons = pokemons;
+		try {
+			const response = await fetch(url);
+			const pokemons = await response.json();
+			_pokemons = pokemons;
+		} catch (error) {
+			console.log('There was an error: ', error);
+			return [];
+		}
 	}
 
-	loadPokemonsFromAPIById(pokemonId) {
+	async loadPokemonsFromAPIById(pokemonId) {
 		const url = `https://pokeapi.co/api/v2/pokemon/${pokemonId}`;
-		return fetch(url)
-			.then((response) => response.json())
-			.then((pokemonDetailsObject) => {
-				_pokemon = pokemonDetailsObject;
-			});
+		try {
+			const response = await fetch(url);
+			const pokemonDetailsObject = await response.json();
+
+			_pokemon = pokemonDetailsObject;
+		} catch (error) {
+			_pokemon = null;
+		}
 	}
 }
 
