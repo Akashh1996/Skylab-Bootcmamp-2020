@@ -12,7 +12,7 @@ class Store {
 			let pokedex = await response.json();
 			return (_pokedex = pokedex);
 		} catch (error) {
-			return `There was an error ${error}`;
+			return `There was an error`;
 		}
 	}
 
@@ -93,10 +93,6 @@ class Store {
 				return ability.effect_entries[index].effect;
 			}
 		}
-    }
-    
-    formPokemon(form) {
-        return this.sprites.front_default
     }
 }
 
