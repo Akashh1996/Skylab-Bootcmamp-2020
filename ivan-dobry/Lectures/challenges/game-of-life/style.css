@@ -1,0 +1,94 @@
+body {
+	font-family: sans-serif;
+	background-color: grey;
+}
+
+.header__container {
+	background-color: black;
+	color: white;
+	width: 100%;
+}
+
+.header__container::after {
+	border: solid;
+}
+
+.header__title {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.header__title p {
+	font-size: 30px;
+	margin: 15px 10px 15px 10px;
+}
+
+.header__buttons {
+	margin: 15px 10px 15px 10px;
+}
+
+.header__buttons:first-child {
+	margin-right: 100px;
+}
+
+.reset {
+	display: none;
+}
+
+.main-container {
+	background-color: grey;
+	height: 100%;
+	width: 100%;
+	min-width: 100%;
+	height: 660px;
+	margin-bottom: 2px;
+}
+
+.grid-game {
+	height: 100%;
+	width: 660px;
+	min-width: 500px;
+	margin: auto;
+	min-height: 660px;
+}
+
+:root {
+	--grid-cols: 1;
+	--grid-rows: 1;
+}
+
+#container {
+	display: grid;
+	grid-template-rows: repeat(var(--grid-rows), 1fr);
+	grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+.grid-item {
+	border: 1px solid black;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+
+.footer {
+	background-color: black;
+	height: 20px;
+}
+
+.input__header {
+	display: flex;
+}
+
+.input__header p {
+	font-size: 20px;
+}
+
+.input__button {
+	margin: auto;
+	margin-left: 10px;
+}
+
+.input__box {
+	margin: auto;
+}

@@ -1,0 +1,14 @@
+{
+	"name": "katas",
+	"version": "1.0.0",
+	"description": "",
+	"main": "compare-powers.js",
+	"scripts": {
+		"test": "jest --watch"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"jest": "^26.5.3"
+	}
+}
