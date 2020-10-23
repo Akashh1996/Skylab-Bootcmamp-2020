@@ -28,31 +28,18 @@ describe('store', () => {
     })
 
     test('should return an array of pokemon objects', async () => {
-        try{
             await store.loadPokemons();
             expect(store.getPokemons()).toEqual([{}])
-        } catch (error) {
-            expect(store.getPokemons()).toBe(null)
-        }
     })
 
     test('should return a pokemon object', async () => {
-        try{
             await store.getPokemonById();
             expect(store.getPokemon()).toEqual([{}])
-        } catch (error) {
-            expect(store.getPokemon()).toBe(null)
-
-        }
     })
 
     test('should return an ability object', async () => {
-        try{
             await store.loadPokeAbilityByName();
             expect(store.getPokeAbility()).toEqual([{}])
-        } catch (error) {
-            expect(store.getPokeAbility()).toBe(null)
-        }
     })
 })
 
@@ -61,11 +48,21 @@ describe('store with fetch throwing errors', () => {
 
     beforeEach(() => {
         store = new Store();
-        global.fetch = jest.fn().mockImplementationOnce(() => Promise.rejected());
+        global.fetch = jest.fn().mockImplementationOnce(() => Promise.reject());
     })
 
-    test('should return an array of pokemon objects', async () => {
+    test('should call loadPokemons and return null', async () => {
         await store.loadPokemons();
         expect(store.getPokemons()).toBe(null)
+    })
+
+    test('should call getPokemonById and return null', async () => {
+        await store.getPokemonById();
+        expect(store.getPokemon()).toBe(null)
+    })
+
+    test('should call loadPokeAbilityByName and return null', async () => {
+        await store.loadPokeAbilityByName();
+        expect(store.getPokeAbility()).toBe(null)
     })
 })
