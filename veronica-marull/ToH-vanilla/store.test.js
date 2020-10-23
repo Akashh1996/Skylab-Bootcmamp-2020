@@ -1,3 +1,4 @@
+const { test, expect, jest } = require('@jest/globals');
 const store = require('./store');
 
 describe('store', () => {
@@ -36,4 +37,25 @@ describe('store', () => {
 			]);
 		});
 	});
+
+
+	describe('loadHeroes', () => {
+		test.only('should return a promise', () => {
+
+			global.fetch = jest.fn().mockImplementationOnce(() => 
+				Promise.resolve({
+					json: jest.fn().mockReturnValueOnce([{ id: 12, name: 'Narco'}])
+			    })
+		    );
+			return store.loadHeroes().then((response) => {
+				expect(response).toEqual([{ id: 12, name: 'Narco'}]);
+			})
+		});
+	})
+
+
+
 });
+
+
+

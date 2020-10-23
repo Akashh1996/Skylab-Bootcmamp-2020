@@ -222,6 +222,18 @@ let _heroes = [
 ];
 
 class Store {
+
+	loadHeroes() {
+		return fetch('../../superHeroData.json')
+			.then((response) => response.json())
+			.then((heroes) => {
+				_heroes =heroes;
+				return heroes;
+			});
+			
+	}
+
+
 	getHeroes() {
 		return _heroes;
 	}

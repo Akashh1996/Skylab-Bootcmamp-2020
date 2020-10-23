@@ -10,10 +10,10 @@
 	</head>
 	<body>
 		<h1>Tour of Heroes</h1>
-		<nav>
-			<a href="../dashboard/dashboard.html">Dashboard</a>
-			<a href="../heroes/heroes.html">Heroes</a>
-		</nav>
+		<div class="buttons">
+			<div class="button" id="dashboard-btn"><a href="../dashboard/dashboard.html">Dashboard</a></div>
+			<div class="button" id="heroes-btn"><a href="../heroes/heroes.html">Heroes</a></div>
+		</div>
 		<main>
             
             <h3>My Heroes</h3>
@@ -36,9 +36,9 @@
             
             heroes.forEach(hero => {
                 
-                document.getElementById('list').innerHTML += `<li>
+                document.getElementById('list').innerHTML += `<a href="../detail/detail.html?heroId=${hero.id}"<li>
                             ${hero.id} ${hero.name}
-                        </li>` 
+                        </li></a>` 
             }) 
 
             
