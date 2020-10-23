@@ -54,3 +54,14 @@ ul li+li {
     color: gray;
     text-decoration: none;
 }
+
+.error {
+    text-align: center;
+    display: none;
+}
+
+p {
+    color: rgb(100, 100, 26);
+    font-family: sans-serif;
+    font-size: 40px;
+}
