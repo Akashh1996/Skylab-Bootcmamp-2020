@@ -4,10 +4,16 @@ let _abilities;
 
 class Store {
     async loadPokedex() {
-        let url = "https://pokeapi.co/api/v2/pokemon?limit=100&offset=100";
-        const response = await fetch(url);
-        const pokemons = await response.json();
-        _pokemons = pokemons.results;
+        try {
+            let url = "https://pokeapi.co/api/v2/00pokemon?limit=100&offset=100";
+            const response = await fetch(url);
+            const pokemons = await response.json();
+            _pokemons = pokemons.results;
+        }
+        catch{
+            return {};
+        }
+            
     }
 
     getPokemons() {
@@ -21,19 +27,30 @@ class Store {
     }
 
     async getDetails(name) {
-        let url = `https://pokeapi.co/api/v2/pokemon/${name}`;
-        const response = await fetch(url);
-        const pokemonDetail = await response.json();
-        _details = pokemonDetail;
+        try{
+            let url = `https://pokeapi.co/api/v2/pokemon/${name}`;
+            const response = await fetch(url);
+            const pokemonDetail = await response.json();
+            _details = pokemonDetail;
+        }catch{
+            return {};
+        }
         
     }
 
     async getAbilities(){
-        let url = `https://pokeapi.co/api/v2/ability/${getId}`;
-        const response = await fetch(url);
-        const abilities = await response.json();
-        _abilities = abilities;
+        try{
+            let url = `https://pokeapi.co/api/v2/ability/${getId}`;
+            const response = await fetch(url);
+            const abilities = await response.json();
+            _abilities = abilities;
+        }catch{
+            return {};
+        }
+        
     }
 }
 
 const store = new Store();
+
+module.exports = Store;

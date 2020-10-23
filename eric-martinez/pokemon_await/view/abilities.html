@@ -6,7 +6,7 @@
     <title>Abilities</title>
 </head>
 <body>
-
+    <h1 id="pokeTitle"></h1>
     <div id="ability_describe"></div>
     <script src="../store.js"></script>
 
@@ -16,13 +16,23 @@
         const getId = store.getName(url);
 
         store.getAbilities(getId).then(() => {
-            const ability_detail = _abilities.effect_entries[0].effect;
-            console.log(ability_detail);
+            
 
-            const spanElement = document.createElement('span');
-            spanElement.innerHTML = ability_detail;
-            const divElement = document.getElementById('ability_describe');
-            divElement.appendChild(spanElement);
+            if(getId){
+                const ability_detail = _abilities.effect_entries[0].effect;
+                const spanElement = document.createElement('span');
+                spanElement.innerHTML = ability_detail;
+                const divElement = document.getElementById('ability_describe');
+                divElement.appendChild(spanElement);
+            }else{
+                const errorTitle = document.getElementById('pokeTitle');
+                errorTitle.innerText = "Oooooooh an error has occurred";
+                const pokemonListElement = document.getElementById('pokemon_list');
+                pokemonListElement.innerHTML = "<img src=\"https://cdn.dribbble.com/users/2104064/screenshots/8512308/media/8205deaaa43a836b9ba471e6ff7a0f6e.png\">"
+            }
+            
+           
+           
         })
     </script>
 
