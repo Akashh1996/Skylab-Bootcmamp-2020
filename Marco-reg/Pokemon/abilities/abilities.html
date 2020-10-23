@@ -13,19 +13,25 @@
 	<body>
 		<script src="../store.js"></script>
 		<script>
+			const pokDetail = store.pokeMonDetail();
 			function getPokemonName(location) {
 				const params = new URLSearchParams(location.search.substring(1));
 				const getName = params.get('pokemonName');
 				return getName;
 			}
 
-			let name = getPokemonName(location);
-
-			store.getAbilityDescription(name).then(() => {
-				const pokDetail = store.getDescription();
-				console.log(pokDetail);
-				document.body.innerHTML = pokDetail.effect_entries[1].effect;
-			});
+			(async () => {
+				let name = getPokemonName(location);
+				await store.getAbilityDescription(name);
+				let description = store.getDescription();
+				if (description) {
+					document.body.innerHTML = description.effect_entries[1].effect;
+				} else {
+					document.body.innerHTML =
+						`<p> You seem a little bit lost</p>` +
+						`<img class="fade-in" src="https://media0.giphy.com/media/l0HlGaP4eR8Rt14OI/giphy.gif?cid=ecf05e47c3nz5mhx7sm32ym8bakzvxeoife8oxwxr7frvba7&rid=giphy.gif">`;
+				}
+			})();
 		</script>
 	</body>
 </html>
