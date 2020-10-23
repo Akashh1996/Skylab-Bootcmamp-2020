@@ -5,6 +5,8 @@
 
 body {
 	font: 12px/1.55 'Source Sans Pro', sans-serif;
+	margin: auto;
+	width: 90%;
 }
 
 .margin {
