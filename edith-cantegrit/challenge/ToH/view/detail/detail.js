@@ -50,6 +50,4 @@ function printHero() {
 
 printHero();
 
-console.log(hero)
-
 module.exports = DetailComponent;
