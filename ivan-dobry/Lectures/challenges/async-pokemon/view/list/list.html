@@ -42,11 +42,15 @@
 		<script src="./list.js"></script>
 		<script>
 			store.getPokemonData().then(() => {
+				let element = document.getElementById('pokemon-list');
 				const pokemonList = store.getTenPokemons();
-				console.log(pokemonList);
-				const pokemonComponent = new PokemonComponent(pokemonList);
-				if (pokemonList) {
-					let element = document.getElementById('pokemon-list');
+				debugger;
+				if (pokemonList === null) {
+					console.log('error!!');
+					element.innerHTML = 'No pokemon data';
+				} else {
+					console.log(pokemonList);
+					const pokemonComponent = new PokemonComponent(pokemonList);
 					pokemonComponent.updatePokemonList(element);
 				}
 			});

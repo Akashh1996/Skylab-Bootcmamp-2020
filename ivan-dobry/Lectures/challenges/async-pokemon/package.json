@@ -1,5 +1,5 @@
 {
-  "name": "Challenge-pokemon",
+  "name": "challengepokemon",
   "version": "1.0.0",
   "main": "store.js",
   "scripts": {
@@ -11,8 +11,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^26.6.0"
-  },
-  "dependencies": {},
-  "description": ""
+    "jest": "^26.6.1"
+  }
 }

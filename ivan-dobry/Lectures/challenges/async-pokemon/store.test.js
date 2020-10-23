@@ -14,12 +14,15 @@ describe('store', () => {
 				})
 			);
 		});
-
-        test('should update _pokemons', () => {
-            return store.loadPokemons().then(() => {
-                expect(store.getPokemons()).toEqual([{id: 12, name: 'bulbasour'}])
+            test('should update _pokemons', () => {
+            return store.getPokemonData().then(() => {
+                expect(store.getPokemonList()).toEqual([{id: 12, name: 'bulbasour'}])
             })
         });
+
+        test('the fetch fails with an error', async () => {
+            await expect(fetchData()).rejects.toThrow('error');
+          });
 
         test('should return pokemon id', () => {
             store.setPokemon({id: 12})

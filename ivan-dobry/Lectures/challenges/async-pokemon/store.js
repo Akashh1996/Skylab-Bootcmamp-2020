@@ -6,11 +6,14 @@ let abilityId;
 class Store {
 
     async getPokemonData() {
-        debugger;
-        let url = 'https://pokeapi.co/api/v2/pokemon?limit=20&offset=0';
+        let url = 'https://pokeapi.co/api/v2/poksemon?limit=20&offset=0';
+        try {
             const response = await fetch(url);
             const pokemon = await response.json();
             _pokemonList = pokemon.results;
+        } catch (error) {
+            _pokemonList = null;
+        }
     }
 
     getPokemonList() {
@@ -19,16 +22,26 @@ class Store {
     
     async getPokemonDetail(name) {
         let url = `https://pokeapi.co/api/v2/pokemon/${name}/`;
-        const response = await fetch(url);
-        const pokemonDetail = await response.json();
-        _pokemonDetail = pokemonDetail;
+        try {
+            const response = await fetch(url);
+            const pokemonDetail = await response.json();
+            _pokemonDetail = pokemonDetail;
+        } catch (error) {
+            _pokemonDetail = null;
+        }
+   
     }
 
     async getPokemonAbility(ability) {
         let url = `https://pokeapi.co/api/v2/ability/${ability}`;
-        const response = await fetch(url);
-        const pokemonability = await response.json();
-        return _pokemonAbility = pokemonability.effect_entries[1].effect;
+
+        try {
+            const response = await fetch(url);
+            const pokemonability = await response.json();
+            return _pokemonAbility = pokemonability.effect_entries[1].effect;
+        } catch (error) {
+            _pokemonAbility = null;
+        }
     }
 	
     pokemonDetail() {
@@ -40,8 +53,14 @@ class Store {
     }
 
 
-    getTenPokemons(list) {
-		return this.getPokemonList(list).slice(1, 11);
+    getTenPokemons() {
+        let pokemonList = _pokemonList
+        debugger;
+        if (pokemonList === null) {
+            return null;
+        } else {
+        return pokemonList.slice(1, 11);
+        }
     }
 
     getPokemonAbilityId () {
