@@ -6,8 +6,8 @@ let thisPokemon;
 class Pokedex{  
     loadPokedex(limit, set){
         debugger;
-        let lista ="https://pokeapi.co/api/v2/pokemon?limit="+ limit +"offset="+ set;
-        return fetch(list);
+        let lista ="https://pokeapi.co/api/v2/pokemon?limit="+ limit +"&offset="+ set;
+        return fetch(lista)
         .then((response) => {
             return response.json();
         })
