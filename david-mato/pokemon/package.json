@@ -1,8 +1,8 @@
 {
-  "name": "toh-vanilla",
+  "name": "pokemon",
   "version": "1.0.0",
   "description": "",
-  "main": "store.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest --watch",
     "test:coverage": "jest --collect-coverage",
