@@ -2,14 +2,15 @@ let _pokemons = {results: [{name: "", url:""}]};
 let _pokemon = {sprites: {other: {"official-artwork": {front_default: "..."}}}, abilities:[{ability: {name: ''}}]};
 
 class Pokedex {
-    loadPokemons(page){
-        return fetch(`https://pokeapi.co/api/v2/pokemon?limit=100&offset=${page*100}`)
-        .then((response) =>{
-            return response.json();
-        }).then((value) => {
+    async loadPokemons(page){
+        let url = `https://pokeapi.co/api/v2/pokemon?limit=100&offset=${page*100}`;
+        try {
+            const response = await fetch(url);
+            const value = await response.json();
             _pokemons = value;
-            return _pokemons;
-        })
+        } catch {
+            console.log('La URL de la API no existe.');
+        }
     }
 
     getPokemons(){ 
@@ -20,13 +21,15 @@ class Pokedex {
         return pokemonInList["url"].slice(34,-1);
     }
 
-    loadPokemonsFromAPIById(pokemonId){
+    async loadPokemonsFromAPIById(pokemonId){
         const url = `https://pokeapi.co/api/v2/pokemon/${pokemonId}`;
-        return fetch(url)
-        .then((response) => response.json())
-        .then((pokemonDetailObj) => {
-            _pokemon = pokemonDetailObj;
-        })
+        try {
+        const response = await fetch(url);
+        const pokemonDetailObj = await response.json();
+        _pokemon = pokemonDetailObj;
+        } catch {
+            console.log('La URL de la API no existe.');
+        } 
     }
 
     setListOfPokemons(){
@@ -67,13 +70,15 @@ class Pokedex {
         return liElem;
     }
 
-    loadAbilityFromAPI(ability){
+    async loadAbilityFromAPI(ability){
         const url = `https://pokeapi.co/api/v2/ability/${ability}`;
-        return fetch(url)
-        .then((response) => response.json())
-        .then((abilityObj) => {
+        try {
+            const response = await fetch(url);
+            const abilityObj = await response.json();
             return abilityObj;
-        })
+        } catch {
+            console.log(`Hay un error con la URL de la descripción de ${abilty}`);
+        }
     }
 
     async getAbilityDescription(ability){
