@@ -13,25 +13,22 @@
 			<a href="../dashboard/dashboard.html">Dashboard</a>
 			<a href="../heroes/heroes.html">Heroes</a>
 		</nav>
-		<h3>Top Heroes</h3>
-		<div class="grid grid-pad" id="top-heroes__list">
-			<a href="">
-				<div class="module hero">
-					<h4></h4>
-				</div>
-			</a>
-		</div>
+		<main>
+			<h3>Top Heroes</h3>
+			<div class="grid grid-pad" id="top-heroes__list"></div>
+		</main>
 
 		<script src="../../store.js"></script>
 		<script src="./dashboard.js"></script>
 		<script>
-			debugger;
-			const heroes = store.getTopHeroes();
-			const dashbaordComponent = new DashboardComponent(heroes);
-			if (heroes) {
-				let element = document.getElementById('top-heroes__list');
-				dashbaordComponent.updateHtmlHeroList(element);
-			}
+			store.loadHeroes().then(() => {
+				const heroes = store.getTopHeroes();
+				const dashbaordComponent = new DashboardComponent(heroes);
+				if (heroes) {
+					let element = document.getElementById('top-heroes__list');
+					dashbaordComponent.updateHtmlHeroList(element);
+				}
+			});
 		</script>
 	</body>
 </html>

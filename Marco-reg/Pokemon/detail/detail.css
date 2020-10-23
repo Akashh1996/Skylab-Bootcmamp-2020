@@ -1,0 +1,49 @@
+* {
+	font-family: 'Press Start 2P', cursive;
+}
+
+body {
+	background-color: white;
+}
+
+.abilities__wrapper1,
+.abilities__wrapper2,
+.moves__wrapper,
+.types__wrapper {
+	margin-top: 10px;
+}
+
+.details__wrapper {
+	border: 1px solid rgba(128, 128, 128, 0.5);
+	padding: 10px;
+	margin-top: 20px;
+	max-width: 400px;
+	background-color: hsl(60, 100%, 92%);
+}
+
+button {
+	background-color: #ffcc00;
+	border: none;
+	color: white;
+	padding: 15px 22px;
+	text-align: center;
+	display: inline-block;
+	font-size: 12px;
+	margin-top: 20px;
+	text-decoration: none;
+}
+
+.pokemon__logo {
+	max-width: 200px;
+}
+
+.anchor__abilities {
+	text-decoration: none;
+	color: white;
+	background-color: #ffcc00;
+	padding: 3px;
+}
+
+.nav_button {
+	color: white;
+}
