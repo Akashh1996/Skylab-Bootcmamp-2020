@@ -9,7 +9,7 @@ describe('Poke Store', () => {
 		expect(store.getPokemons()).toEqual([]);
 	});
 
-	test('should load pokemons from api', () => {
+	test('should load pokemons from api', async () => {
 		const response = {
 			json: jest.fn().mockReturnValueOnce([{ id: 12, name: 'Narco' }])
 		};
@@ -17,9 +17,10 @@ describe('Poke Store', () => {
 			.fn()
 			.mockImplementationOnce(() => Promise.resolve(response));
 
-		return store.loadPokemonsFromAPI().then(() => {
+		try {
+			await store.loadPokemonsFromAPI();
 			expect(store.getPokemons()).toEqual([{ id: 12, name: 'Narco' }]);
-		});
+		} catch (error) {}
 	});
 
 	test('should return single pokemon', () => {

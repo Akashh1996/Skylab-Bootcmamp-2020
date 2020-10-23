@@ -9,11 +9,17 @@
 		<script src="../store/poke-store.js"></script>
 		<script>
 			const pokeId = 2;
+			/*
+						pokeStore.loadPokemonsFromAPIById(pokeId).then(() => {
+							// pinto el base XP
+							document.body.innerHTML = `<p>Experiencia base ----> ${pokeStore.getBaseExperience()}</p>
+			                    <p>Este bicho es ----> ${pokeStore.getSpecie()}</p>`;
+						});
 
-			pokeStore.loadPokemonsFromAPIById(pokeId).then(() => {
-				// pinto el base XP
-				document.body.innerHTML = `<p>Experiencia base ----> ${pokeStore.getBaseExperience()}</p>
-                    <p>Este bicho es ----> ${pokeStore.getSpecie()}</p>`;
+						*/
+			pokeStore.loadPokemonsFromAPI().then(() => {
+				debugger;
+				//pinta
 			});
 		</script>
 	</body>
