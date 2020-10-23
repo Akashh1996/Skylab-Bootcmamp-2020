@@ -5,24 +5,24 @@ let _ability;
 class Store {
 
     async loadPokedex () {
-        let response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=807')
+        let response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100&offset=0')
         let pokedex = await response.json();
         _pokedex = pokedex
-        return Promise.resolve(_pokedex)
+        return _pokedex
     }
 
     async loadPokemon (id) {
         let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
         let pokemon = await response.json();
         _pokemon = pokemon
-        return Promise.resolve(_pokemon)
+        return _pokemon
     }
 
     async loadAbilityPokemon (abilityId) {
         let response = await fetch(`https://pokeapi.co/api/v2/ability/${abilityId}`)
         let ability = await response.json()
         _ability = ability
-        return Promise.resolve(_ability)
+        return _ability
     }
 
     anchorPokedex(pokedex) {
