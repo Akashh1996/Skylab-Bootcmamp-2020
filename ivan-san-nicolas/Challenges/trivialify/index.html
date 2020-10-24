@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivialify</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="body__wrapper">
+        <header class="fixed-header">
+            <img src="https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5f941dae4a56326822fa8114/7c8f2c4b10c6fd27540a657cc910e249/spotify-white-logo.png"
+                alt="spotify-logo" id="spotify-logo">
+            <span id="pag-title">trivialify</span>
+        </header>
+        <section class="game-body" id="game-body">
+            <section class="game-body__block">
+                <span class="game-author-name__title" id="game-author-name__title">avici</span>
+            </section>
+            <section class="game-body__block">
+                <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/soul-music-album-cover-template-design-078b4fd2c2ffe07d451e750202b4a2c5_screen.jpg?ts=1566577588"
+                    alt="album-picture" id="album-picture">
+            </section>
+            <section class="game-body__block game-options">
+                <div class="button game-body-options" id="option-1">option 1</div>
+                <div class="button game-body-options" id="option-2">option 2</div>
+                <div class="button game-body-options" id="option-3">option 3</div>
+                <div class="button game-body-options" id="option-4">option 4</div>
+            </section>
+            <section class="game-body__block">
+                <div class="button" onclick="endGame(gameBody, gameEnd)">
+                    <span>stop</span>
+                    <span class="material-icons">stop</span>
+                </div>
+                <div class="button">timer: </div>
+                <div class="button">total points: </div>
+            </section>
+        </section>
+        <section class="game-end" id="game-end">
+            <section class="game-end__block total-points">
+                <span>total points: </span>
+            </section>
+            <section class="game-end__block total-points-info">
+                <span>correct answers: </span>
+                <span>incorrect answers: </span>
+            </section>
+            <div class="button play-again-button">
+                <span>play again</span>
+                <span class="material-icons">play_arrow</span>
+            </div>
+        </section>
+    </section>
+
+    <script>
+        const gameBody = document.getElementById('game-body');
+        const gameEnd = document.getElementById('game-end');
+    </script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
