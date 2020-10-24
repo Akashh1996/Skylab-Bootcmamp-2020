@@ -21,7 +21,11 @@
                 document.getElementById("titulo").innerHTML = thisPokemon.name;
                 document.getElementById("subtitulo").innerHTML = "id: " + thisPokemon.id;
                 document.getElementById("subtitulo2").innerHTML = "order: " + thisPokemon.order;
-                document.getElementById("type").innerHTML = "type: " + thisPokemon.types[0].type.name + "/" + thisPokemon.types[1].type.name;
+                if (thisPokemon.types.length === 2) {
+                    document.getElementById("cosa").innerHTML = "type: " + thisPokemon.types[0].type.name + "/" + thisPokemon.types[1].type.name;
+                } else {
+                    document.getElementById("cosa").innerHTML = "type: " + thisPokemon.types[0].type.name
+                }
                 const currentEl = document.getElementById("End");
 
                 const title = document.createElement("a");
@@ -74,13 +78,20 @@
 
 
     </script>
-    <header class="theTitles">
-        <h1 id="titulo" style="margin-top: 0px; margin-bottom: 0px;"></h1>
-        <h2 id="subtitulo" style="margin-top: 0px; margin-bottom: 0px;"></h2>
-        <h3 id="subtitulo2" style="margin-top: 0px"></h3>
-        <h3 id="type" style="margin-top: 0px; margin-bottom: 0px;"></h3>
-    </header>
+    <main>
+        <img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Pokeball.PNG">
+        <header class="theTitles">
+            <h1 id="titulo" style="margin-top: 0px; margin-bottom: 0px;"></h1>
+            <h2 id="subtitulo" style="margin-top: 0px; margin-bottom: 0px;"></h2>
+            <h3 id="subtitulo2" style="margin-top: 0px"></h3>
+            <h3 id="cosa" style="margin-top: 0px; margin-bottom: 0px;"></h3>
+            <p id="error"></p>
+
+        </header>
+
+    </main>
     <div id="End"></div>
+
 </body>
 
 </html>

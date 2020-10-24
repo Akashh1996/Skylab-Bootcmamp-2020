@@ -10,23 +10,34 @@
 
 <body>
     <script src="Pokemon.js"></script>
-    <label for="fname" style="margin-right: 7px">Busca tu pokemon:</label>
-    <input type="text" id="searchBar" name="fname"><button type="button" style="margin-bottom: 20px; margin-left: 2px"
-        onclick="search()">Search</button><br>
-    <label for="fname">Empieza en numero: </label>
-    <input type="text" id="longList" name="fname"><button type="button"
-        style="visibility: hidden; margin-bottom: 5px;"></button><br>
-    <label for="fname">Longitud de la lista :</label>
-    <input type="text" id="empNum" name="fname"><button type="button" style="margin-left: 2px" onclick="getList()">Make
-        list</button>
+    <header>
+        <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/800px-International_Pok%C3%A9mon_logo.svg.png">
+        <h3 for="fname" style="margin-top: 7px">Busca tu pokemon:</h3>
+        <input type="text" id="searchBar" name="fname"><button type="button"
+            style="margin-bottom: 20px; margin-top: 2px" onclick="search()">Search</button><br>
+
+        <h3>Haz tu lista de busqueda!</h3>
+        <input type="text" id="longList" name="fname" placeholder="Numero del primer pokemon de la lista">
+        <input type="text" id="empNum" name="fname" placeholder="Longitud de la lista" style="margin-top: 2px"><button
+            type="button" style="margin-top: 2px" onclick="getList()">Make
+            list</button>
+    </header>
+
     <p id="check"></p>
+    <p id="error"></p>
     <script>
         var limit;
         var set;
+        var element;
         function getList() {
-            limit = document.getElementById("longList").value;
-            set = document.getElementById("empNum").value;
-            document.getElementById("check").innerHTML = "list created!"
+            limit = parseInt(document.getElementById("longList").value);
+            set = parseInt(document.getElementById("empNum").value);
+            if (typeof (limit) === "number" && isFinite(limit) && typeof (set) === "number" && isFinite(set)) {
+                element = document.getElementById("check").innerHTML = "List created!";
+            } else {
+                element = document.getElementById("check").innerHTML = "Please introduce numbers";
+            }
         }
         function search() {
             var flag = 0;
@@ -34,8 +45,8 @@
             gameFreak.getName(nombre).then(() => {
                 gameFreak.loadPokedex(limit, set).then(() => {
                     let propert1 = gameFreak.getPokedex();
-                    for (let i = 0; i < _pokemon.results.length; i++) {
-                        if (_pokemon.results[i].name === nombre) {
+                    for (let i = 0; i < _pokemon.length; i++) {
+                        if (_pokemon[i].name === nombre) {
                             window.location.href = linkHtml;
                             flag = 1;
                         }

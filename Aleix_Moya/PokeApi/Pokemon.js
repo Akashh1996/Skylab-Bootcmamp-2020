@@ -4,19 +4,15 @@ let link;
 let linkHtml;
 let thisPokemon;
 class Pokedex{  
-    loadPokedex(limit, set){
-        debugger;
+    async loadPokedex(limit, set){
         let lista ="https://pokeapi.co/api/v2/pokemon?limit="+ limit +"&offset="+ set;
-        return fetch(lista)
-        .then((response) => {
-            return response.json();
-        })
-        .then((pokemons) =>{
-            _pokemon = pokemons;
-            return pokemons;
-        });
+        const response = await fetch(lista)
+        const pokemons = await response.json();
+        _pokemon = pokemons.results;
+        return pokemons;
     }
     loadPag(pagUrl){
+        
         return fetch(pagUrl)
         .then((response) => {
             return response.json();
@@ -41,15 +37,11 @@ class Pokedex{
             return url;
         })
     }
-    loadPokemon(link){
-        return fetch(link)
-        .then((response) => {
-            return response.json();
-        })
-        .then((elPokemon) =>{
-            thisPokemon = elPokemon;
-            return elPokemon;
-        });
+    async loadPokemon(link){
+        const response = await fetch(link)
+        const elPokemon = await response.json();
+        thisPokemon = elPokemon;
+        return elPokemon;
     }
     getPokemon(){
         return thisPokemon;
