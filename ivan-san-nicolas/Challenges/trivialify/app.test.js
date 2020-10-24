@@ -6,4 +6,4 @@ describe('Stop button', () => {
         expect(gameBody.style.display).toBe('none');
         expect(gameEnd.style.display).toBe('flex')
     });
-})
+});
