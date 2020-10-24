@@ -26,11 +26,4 @@ class PokemonComponent {
 
 module.exports = PokemonComponent;
 
-                // <li>
-
-                // <a href="../details/details.html?pokemonName=${eachPokemon.name}">
-                // <span>${x++}</span> - <span> ${eachPokemon.name}</span>
-
-                // </a>
-
-                // </li>
+  
