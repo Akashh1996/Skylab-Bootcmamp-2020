@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^26.6.1"
+  },
   "scripts": {
-    "test": "test --watchAll",
-    "test:coverage": "test --collect-coverage"
+    "test": "jest --watch"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "jest": "^26.6.1"
-  }
+  "license": "ISC"
 }
