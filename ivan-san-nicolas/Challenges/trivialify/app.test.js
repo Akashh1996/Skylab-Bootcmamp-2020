@@ -1,3 +1,5 @@
+const endGame = require('./app.js')
+
 describe('Stop button', () => {
     test('should hide game-body and show game-end', () => {
         // act
