@@ -18,7 +18,7 @@
         </header>
         <section class="game-body" id="game-body">
             <section class="game-body__block">
-                <span class="game-author-name__title" id="game-author-name__title">avici</span>
+                <span class="game-author-name__title" id="game-author-name__title">avicii</span>
             </section>
             <section class="game-body__block">
                 <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/soul-music-album-cover-template-design-078b4fd2c2ffe07d451e750202b4a2c5_screen.jpg?ts=1566577588"
@@ -47,7 +47,7 @@
                 <span>correct answers: </span>
                 <span>incorrect answers: </span>
             </section>
-            <div class="button play-again-button">
+            <div class="button play-again-button" onclick="playAgain(player)">
                 <span>play again</span>
                 <span class="material-icons">play_arrow</span>
             </div>
@@ -58,6 +58,7 @@
         const gameBody = document.getElementById('game-body');
         const gameEnd = document.getElementById('game-end');
     </script>
+    <script src="spotiStore.js"></script>
     <script src="app.js"></script>
 
 </body>
