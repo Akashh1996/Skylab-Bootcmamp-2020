@@ -1,22 +1,42 @@
 body {
-    background-color: rgb(51, 51, 51);
+    /* background-color: rgb(51, 51, 51); */
+    background: linear-gradient(rgb(51, 51, 51), rgb(12, 12, 12));
     font-family: sans-serif;
 }
 
 h1 {
-    color: white;
+    color: rgb(0, 194, 75);
     text-align: center;
+    margin-bottom: 5px;
 }
 
 .playlist-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: rgb(19, 18, 18);
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+}
+
+.artist {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+.artist_tittle {
+    color: white;
+}
+
+.image {
+    margin-bottom: 20px;
 }
 
 .song__tittle__button {
-    width: 100px;
-    margin: auto;
+    width: 120px;
     height: 70px;
     background-color: rgb(64, 64, 64);
     color: white;
@@ -24,20 +44,20 @@ h1 {
     border-radius: 20px;
 }
 
-/* song-button-wrapper {} */
-
-.artist {
-    margin-bottom: 40px;
-    color: white;
-    font-size: 25px;
+.song__tittle__button:hover {
+    background-color: rgb(110, 110, 110);
 }
 
 .start-button {
-    margin-top: 60px;
+    margin-top: 10px;
     width: 100px;
     height: 30px;
     background-color: rgb(0, 194, 75);
     border-radius: 20px;
     color: white;
     border: none;
+}
+
+.start-button:hover {
+    background-color: rgb(58, 255, 133);
 }

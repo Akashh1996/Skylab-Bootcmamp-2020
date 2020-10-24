@@ -14,10 +14,12 @@
     </header>
     <section class="playlist-container">
 
-
+        <div class="artist_tittle">Artist</div>
         <div class="artist" id="artist"></div>
 
-        <div class="image" id="image"></div>
+        <!--  <div class="image" id="image"></div> -->
+
+        <img class="image" id="image" src="" alt="">
 
         <div class="song-button-wrapper" id="song">
             <button id="song__tittle" class="song__tittle__button"></button>
@@ -40,13 +42,9 @@
         (async () => {
             await store.getToken();
             await store.loadPlaylist()
-            /* console.log(token);
-            console.log(store.loadPlaylist()) */
             let playListArray = []
 
-
             for (let i = 0; i < playList.length; i++) {
-
                 playListArray.push({
                     artist: playList[i].track.artists[0].name,
                     image: playList[i].track.album.images[1],
@@ -54,14 +52,13 @@
                 })
 
             }
-            /*  console.log(playListArray) */
             const randomArtist = createRandomArtistDetail(playListArray)
 
             let artistTittle = document.getElementById('artist')
             artistTittle.innerHTML = randomArtist.artist
 
-            /* let imageElement = document.getElementById('image')
-            imageElement.innerHTML = randomArtist.image.url */
+            let imageElement = document.getElementById('image')
+            imageElement.src = randomArtist.image.url
 
             let songTittle = document.getElementById('song__tittle')
             songTittle.innerHTML = randomArtist.song
