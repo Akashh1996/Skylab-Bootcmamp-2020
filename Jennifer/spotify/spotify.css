@@ -1,0 +1,34 @@
+body {
+	display: flex;
+	justify-content: center;
+}
+
+#div-game {
+	border: 1px solid black;
+}
+
+#autor {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+	border: 1px solid black;
+}
+
+div img {
+	/* width: 500px; */
+}
+
+#answers {
+	display: flex;
+	justify-content: space-around;
+}
+
+#answer0,
+#answer1,
+#answer2,
+#answer3 {
+	width: 100px;
+	height: 50px;
+	border: 1px solid black;
+}
