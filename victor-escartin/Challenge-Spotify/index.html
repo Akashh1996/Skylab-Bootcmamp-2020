@@ -6,7 +6,31 @@
 		<title>SPOTIFY QUIZ</title>
 	</head>
 	<body>
+		<div id="main-image">
+			IMAGEN PRINCIPAL
+			<img class="classImage" />
+		</div>
+
 		<script src="store.js"></script>
-		<script></script>
+		<script src="index.js"></script>
+		<script>
+			(async () => {
+				await store.getToken();
+				const playListData = await store.getPlayLists();
+				console.log(playListData);
+				console.log(token);
+
+				let playListComponent = new PlayListComponent(playListData);
+
+				if (playListData) {
+					let mainImage = document.querySelector('.classImage');
+					playListComponent.updateHtmlValue(
+						mainImage,
+						'src',
+						playListData.images[0].url
+					);
+				}
+			})();
+		</script>
 	</body>
 </html>
