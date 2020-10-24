@@ -23,7 +23,7 @@ class SpotifyStore {
 
 	async getArtist() {
 		const response = await fetch(
-			`https://api.spotify.com/v1/artists?ids=78tfBR026VhVUGCBiZMX06,7i3eGEz3HNFnPOCdc7mqoq,0DCw6lHkzh9t7f8Hb4Z0Sx,0DCw6lHkzh9t7f8Hb4Z0Sx,6qqNVTkY8uBg9cP3Jd7DAH,1GhPHrq36VKCY3ucVaZCfo,7fM0h2CG7zKqKc0jEa1b4R,5lCekoJW9jNq01B1wiqdAb,48q2mPVwlKnlSaCx07i6Ta,2CIMQHirSU0MQqyYHq0eOx`,
+			`https://api.spotify.com/v1/artists?ids=78tfBR026VhVUGCBiZMX06,7i3eGEz3HNFnPOCdc7mqoq,7muzHifhMdnfN1xncRLOqk,0DCw6lHkzh9t7f8Hb4Z0Sx,6qqNVTkY8uBg9cP3Jd7DAH,24Hb4GKFYquK73R8mTyInu,7fM0h2CG7zKqKc0jEa1b4R,5lCekoJW9jNq01B1wiqdAb,6aUgzC0cMh0StjV7LyFEDr`,
 			{
 				method: 'GET',
 				headers: { Authorization: 'Bearer ' + token }
@@ -49,10 +49,4 @@ let spotifyStore = new SpotifyStore();
 
 (async () => {
 	await spotifyStore.getToken();
-	await spotifyStore.getArtist();
-	console.log(await spotifyStore.getArtist());
-	console.log(await spotifyStore.getAlbums('6qqNVTkY8uBg9cP3Jd7DAH'));
-	// artistsList.forEach(async (artists) => {
-	// console.log(await spotifyStore.getAlbums(artists.id));
-	// });
 })();

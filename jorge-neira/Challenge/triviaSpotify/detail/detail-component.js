@@ -1,5 +1,0 @@
-class SpotifyGame{
-  constructor(){
-    
-  }
-}
