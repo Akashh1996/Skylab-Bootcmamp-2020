@@ -15,6 +15,19 @@ class Quiz {
         return `${songName}`;
     }
 
+    createArrayOfOptions(playlistObj,indexSong, numOfSongs){
+        let array = [];
+        array.push(this.setQuizOption(playlistObj,indexSong));
+        let random;
+        while(array.length !== 4){
+            random = this.randomNum(numOfSongs);
+            if (random !== indexSong){
+                array.push(this.setQuizOption(playlistObj,random))
+            }
+        }
+        return array;
+    }
+
     shuffle(array) {
         var m = array.length, t, i;
         while (m) {
@@ -37,8 +50,10 @@ const quiz = new Quiz;
     let indexSong = quiz.randomNum(numOfSongs);
     document.getElementById('playlist').innerHTML = `Playlist name: ${playlistObj.name}`;
     document.getElementById('album-block').innerHTML = quiz.setAlbumImage(playlistObj,indexSong);
-    document.getElementById('option1').innerHTML = quiz.setQuizOption(playlistObj,indexSong);
-    document.getElementById('option2').innerHTML = quiz.setQuizOption(playlistObj,quiz.randomNum(numOfSongs));
-    document.getElementById('option3').innerHTML = quiz.setQuizOption(playlistObj,quiz.randomNum(numOfSongs));
-    document.getElementById('option4').innerHTML = quiz.setQuizOption(playlistObj,quiz.randomNum(numOfSongs));
+    let arrayOptions = quiz.createArrayOfOptions(playlistObj,indexSong,numOfSongs);
+    arrayOptions = quiz.shuffle(arrayOptions);
+    document.getElementById('option1').innerHTML = arrayOptions[0];
+    document.getElementById('option2').innerHTML = arrayOptions[1];
+    document.getElementById('option3').innerHTML = arrayOptions[2];
+    document.getElementById('option4').innerHTML = arrayOptions[3];
 })()
