@@ -20,7 +20,24 @@
     <script src="spotrivia.js"></script>
     <script>
 
+        (async () => {
+            await store.getToken();
+            console.log(token);
+            console.log(store.loadPlaylist())
 
+
+        })();
+
+        /*    (async () => {
+               await store.loadPlaylist()
+               store.getPlaylist()
+               artistList.forEach((items) => {
+   
+               })
+   
+   
+           })()
+    */
 
     </script>
 </body>
