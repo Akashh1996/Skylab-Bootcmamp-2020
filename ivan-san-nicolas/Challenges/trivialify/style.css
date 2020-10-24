@@ -63,7 +63,7 @@ body {
   letter-spacing: 5px;
 }
 
-#album-picture {
+.album-picture {
   width: 300px;
   height: auto;
   border-radius: 10px;
@@ -78,6 +78,7 @@ body {
 
 .game-body-options {
   margin: 20px;
+  font-size: 20px;
 }
 
 .button {
