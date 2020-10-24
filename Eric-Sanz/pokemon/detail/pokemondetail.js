@@ -3,5 +3,7 @@ class PokemonDetailComponent {
         this.pokemon = pokemon;
     }
     
-    
+    updateHtmlInformation(element, property, value) {
+        element[property] = value;
+    }
 }

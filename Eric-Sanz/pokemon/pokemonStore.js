@@ -1,5 +1,7 @@
 let _pokedex;
 let _pokedexData;
+let _pokemonAbilities;
+let _pokemonAbilitiesDescription;
 
 class Pokemonstore {
 
@@ -19,13 +21,11 @@ class Pokemonstore {
         return _pokedexData;
     }
 
-    loadPokedexDataByName(pokemonName) {
+    async loadPokedexDataByName(pokemonName) {
         const url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
-        return fetch(url)
-        .then((response) => { return response.json()})
-        .then((pokemonData) => {
-            _pokedexData = pokemonData;
-        });
+        const response = await fetch(url);
+        const pokemonData = await response.json();
+        _pokedexData = pokemonData;
     }
 
     getTenPokemons(list) {

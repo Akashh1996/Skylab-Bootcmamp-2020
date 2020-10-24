@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Detail</title>
+    <link rel="stylesheet" href="pokemondetail.css">
+</head>
+<body>
+    <div id = 'pokeName'>
+        <div id = poke-abilities>
+
+        </div>
+
+    </div>
+    
+
+    <script src="../pokemonLocation.js"></script>
+    <script src="../pokemonStore.js"></script>
+    <script src="pokemondetail.js"></script>
+    <script>
+
+        const pokelocation = location;
+        const name = getPokemonName(pokelocation);
+        
+        store.loadPokedexDataByName(name).then(() => {
+             const pokemonDetail = store.loadPokedexDataByName();
+            debugger;
+            let detailComponent = new PokemonDetailComponent(pokemonDetail);
+            console.log(detailComponent);
+            if (detailComponent) {
+                document.getElementById('pokeName').innerHTML = name;
+                let abilities = document.getElementById('poke-abilities');
+            }
+        })
+    </script>
+</body>
+</html>

@@ -14,16 +14,12 @@ class PokemonListComponent {
 				<div class="id-pokemon">${x++}</div>
 				<a
 					class="name-pokemon"
-					href="../details/details.html?pokemonName=${eachPokemon.name}"
+					href="../detail/pokemondetail.html?pokemonName=${eachPokemon.name}"
 					>${eachPokemon.name}</a
 				>
 			</div>
                 `;
         });
-    }
-
-    next(element) {
-
     }
 }
 
