@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio id="track" controls>
+        <source src="track" type="audio/mpeg">
+      </audio>      
+    <span id="text"></span>
+    <span id="text-name"></span>
+    <script src="store.js"></script>
+    <script>
+        (async()=>{
+            await store.getToken()
+            let playlist = await store.loadPlaylist()
+            document.getElementById("track").src = playlist.items[2].track.preview_url
+            document.getElementById("text").innerHTML = playlist.items[2].added_at
+            document.getElementById("text-name").innerHTML = playlist.items[2].added_at
+        })()
+    </script>
+</body>
+</html>
