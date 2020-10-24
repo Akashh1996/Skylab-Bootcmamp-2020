@@ -1,5 +1,4 @@
 function findOdd(A) {
-    debugger;
     let totalArray = [];
     let actualNum = A[0];
     for (let i in A) {
