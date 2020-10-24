@@ -1,0 +1,20 @@
+* {
+	font-family: 'Press Start 2P', cursive;
+}
+
+li {
+	background-color: #ffcc00;
+	border: none;
+	color: #025492;
+	padding: 15px 22px;
+	text-align: center;
+	font-size: 12px;
+	margin-top: 20px;
+
+	max-width: 150px;
+	color: white;
+}
+
+.pokemon__list__button {
+	color: white;
+}

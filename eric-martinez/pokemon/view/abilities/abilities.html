@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="ability_describe"></div>
+    <script src="../../store.js"></script>
+    
+
+    <script>
+        const url = window.location.search;
+        const getId = store.getName(url);
+        
+        store.getAbilities(getId).then(() => {
+            const ability_detail = _abilities.effect_entries[0].effect;
+            console.log(ability_detail);
+            
+            const spanElement = document.createElement('span');
+            spanElement.innerHTML = ability_detail;
+            const divElement = document.getElementById('ability_describe');
+            divElement.appendChild(spanElement);
+        })
+    </script>
+
+</body>
+</html>
