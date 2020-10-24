@@ -60,7 +60,6 @@ function drawStars() {
     for (let y = 0; y < resolution; y++) {
         for (let x = 0; x < resolution; x++) {
             if (stars[x][y]) {
-                //Hacer lineas entre estrella
                 if (x != resolution - 1) {
                     if (stars[x + 1][y]) {
                         context.beginPath();
@@ -97,7 +96,6 @@ function drawStars() {
                         context.stroke();
                     }
                 }
-                //Pintar circulos
                 context.beginPath();
                 context.arc((starRadius * scale + x * spaceBetween) * scale, (starRadius * scale + y * spaceBetween) * scale, starRadius * scale, 0, Math.PI * 2, false);
                 context.fillStyle = "rgb(74, 143, 246)";
