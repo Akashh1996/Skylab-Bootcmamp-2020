@@ -2,20 +2,26 @@ body {
     background-color: #EBEBEB;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: 1px;
+    text-transform: capitalize;
 }
 
 .pokemon-detail {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 50%;
+    min-width: 400px;
     height: auto;
     margin: 50px auto;
     padding: 15px 20px;
     padding-bottom: 0;
     background-color: #FFFFFF;
     box-shadow: 4px 4px #888888;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 16px;
+}
+
+#pokemon-abilities {
+    display: none;
 }
 
 h2 {
@@ -66,25 +72,24 @@ a {
     text-align: center;
 }
 
-.pokemon-detail__info {
+.pokemon__detail__info {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     margin: 15px 0;
-    flex-wrap: wrap;
-    width: 100%;
+    width: auto;
     height: auto;
 }
 
-.pokemon-detail__info__block,
-.pokemon-detail__info__block__group {
+.pokemon-detail__info__block {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
     padding: 10px 0;
-    overflow: hidden;
+    padding: 5px 7px;
+    text-transform: capitalize;
+    height: auto;
 }
+
 
 .pokemon-properties {
     display: flex;
@@ -99,9 +104,6 @@ a {
     text-transform: capitalize;
 }
 
-.pokemon-detail__info__block>input {
-    width: 150px;
-}
 
 .pokemon-detail__info__block__property-name {
     padding: 0 10px;
@@ -120,17 +122,9 @@ a {
     font-size: 20px;
 }
 
-.stats {
-    cursor: pointer;
-    border: 1px solid gray;
-    border-radius: 10px;
-    padding: 5px 7px;
-    text-transform: capitalize;
-}
-
-.stats:hover {
-    background-color: #475e6a;
-    color: white;
+#pokemon-detail-sprites {
+    width: 200px;
+    height: 200px;
 }
 
 .pokemon-detail__info__block__group {
@@ -143,13 +137,17 @@ a {
     font-size: 20px;
 }
 
+.pokemon-ability {
+    cursor: pointer;
+}
+
 .back-button {
     margin: 10px 0;
     width: 60px;
     height: 25px;
     background-color: #EEEEEE;
     color: #979797;
-    margin-right: 10px;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
