@@ -7,19 +7,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <audio id="track" controls>
-        <source src="track" type="audio/mpeg">
-      </audio>      
-    <span id="text"></span>
-    <span id="text-name"></span>
+    <h1>Hans Zimmer Quiz</h1>
+    <div id="question"></div>
     <script src="store.js"></script>
     <script>
+        let playlist;
         (async()=>{
             await store.getToken()
-            let playlist = await store.loadPlaylist()
-            document.getElementById("track").src = playlist.items[2].track.preview_url
-            document.getElementById("text").innerHTML = playlist.items[2].added_at
-            document.getElementById("text-name").innerHTML = playlist.items[2].added_at
+            playlist = await store.loadPlaylist()
+            document.getElementById("question").innerHTML = store.loadQuestion(playlist,1)
         })()
     </script>
 </body>
