@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon - Detail</title>
+    <link rel="icon" href="https://www.flaticon.es/svg/static/icons/svg/743/743977.svg"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <header>
+            <div class="poke">
+                <img src="https://www.flaticon.es/svg/static/icons/svg/743/743977.svg" width="20" />
+                <h1>Pokédex</h1>
+            </div>
+            <nav class="navigation">
+                <a href="./list.html" class="nav-button">List of Pokémon</a>
+                <a href="" class="nav-button" id="back-button">Back to Pokémon</a>
+            </nav>
+        </header>
+        <main>
+            <div class="hero-info">
+                <img id="hero">
+                <div class="info">
+                    <h2 class="detail-heroes-title">Pokémon - Detail</h2>
+                    <div class="id">
+                        <label for="id-text" class="id-label">Id: </label>
+                        <span id="id-text" class="name-text"></span>
+                    </div>
+                    <div class="name">
+                        <label for="name-text" class="id-label">Name: </label>
+                        <input value="" id="name-text" class="name-text">
+                    </div>
+                </div>
+            </div>
+            <div class="description-ability">
+                <h2 class="top-heroes-title" id="abilityName"></h2>
+                <ul id="ability"></ul>
+            </div>
+        </main>
+    </div>
+    <script src="store.js"></script>
+    <script>
+
+        let id = +window.location.search.split('&')[0].split('=')[1]
+        document.getElementById('id-text').innerHTML = id;
+        document.getElementById('back-button').href=`./detail.html?id=${id}`
+
+        store.loadPokemon(id).then((pokemon) => {
+            document.getElementById('name-text').value = pokemon.name;
+            document.getElementById('hero').src = pokemon.sprites.front_default
+        })
+
+        let abilityId = +window.location.search.split('&')[1].split('=')[1].split('/')[0]
+        store.loadAbilityPokemon(abilityId).then((ability) => {
+            document.getElementById('ability').innerHTML = store.languageAbility(ability)    
+            document.getElementById('abilityName').innerHTML = `Ability - ${ability.name}`     
+        })
+
+    </script>
+</body>
+</html>
