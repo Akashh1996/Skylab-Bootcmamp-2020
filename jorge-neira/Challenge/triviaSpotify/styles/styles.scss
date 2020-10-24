@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap');
+
+$textColor: #fff;
+$primaryColor: #1db954;
+$SecondaryColor: #212121;
+$darkColor: #121212;
+$lightDarkColor: #535353;
+$lightColor: #b3b3b3;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0%;
+}
+
+body {
+	font-family: 'Signika', sans-serif;
+}

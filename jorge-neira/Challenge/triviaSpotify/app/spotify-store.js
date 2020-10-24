@@ -1,47 +1,58 @@
+const cliend_id = '1ab978dbc11f4ec1a57242474134a007';
+const _cliend_secret_id = 'fa2bc6e91e6c4c2b90420a2565b26669';
+let token;
+let artistsList;
+class SpotifyStore {
+	async getToken() {
+		try {
+			const response = await fetch('https://accounts.spotify.com/api/token', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/x-www-form-urlencoded',
+					Authorization: 'Basic ' + btoa(cliend_id + ':' + _cliend_secret_id)
+				},
+				body: 'grant_type=client_credentials'
+			});
 
-
-let _pruebas;
-let newToken;
-
-class Prueba {
-	async _getToken() {
-		const response = await fetch('https://accounts.spotify.com/api/token', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/x-www-form-urlencoded',
-				Authorization:
-					'Basic ' +
-					btoa(
-						'1ab978dbc11f4ec1a57242474134a007' +
-							':' +
-							'fa2bc6e91e6c4c2b90420a2565b26669'
-					)
-			},
-			body: 'grant_type=client_credentials'
-		});
-
-		const data = await response.json();
-		return (newToken = data.access_token);
+			const data = await response.json();
+			return (token = data.access_token);
+		} catch (tokenError) {
+			console.log('Token invalido');
+		}
 	}
 
-	async getTest() {
+	async getArtist() {
 		const response = await fetch(
-			'https://api.spotify.com/v1/search?q=classical&type=track&market=US',
+			`https://api.spotify.com/v1/artists?ids=78tfBR026VhVUGCBiZMX06,7i3eGEz3HNFnPOCdc7mqoq,0DCw6lHkzh9t7f8Hb4Z0Sx,0DCw6lHkzh9t7f8Hb4Z0Sx,6qqNVTkY8uBg9cP3Jd7DAH,1GhPHrq36VKCY3ucVaZCfo,7fM0h2CG7zKqKc0jEa1b4R,5lCekoJW9jNq01B1wiqdAb,48q2mPVwlKnlSaCx07i6Ta,2CIMQHirSU0MQqyYHq0eOx`,
 			{
 				method: 'GET',
-				headers: { Authorization: 'Bearer ' + newToken }
+				headers: { Authorization: 'Bearer ' + token }
+			}
+		);
+		const artists = await response.json();
+		return (artistsList = artists.artists);
+	}
+	async getAlbums(artistId) {
+		const response = await fetch(
+			`https://api.spotify.com/v1/artists/${artistId}/albums`,
+			{
+				method: 'GET',
+				headers: { Authorization: 'Bearer ' + token }
 			}
 		);
 		const result = await response.json();
-		return (_pruebas = result.tracks);
+		return result;
 	}
 }
 
-let test = new Prueba();
+let spotifyStore = new SpotifyStore();
 
 (async () => {
-	await test._getToken();
-	await test.getTest();
-	console.log(newToken);
-	console.log(_pruebas);
+	await spotifyStore.getToken();
+	await spotifyStore.getArtist();
+	console.log(await spotifyStore.getArtist());
+	console.log(await spotifyStore.getAlbums('6qqNVTkY8uBg9cP3Jd7DAH'));
+	// artistsList.forEach(async (artists) => {
+	// console.log(await spotifyStore.getAlbums(artists.id));
+	// });
 })();
