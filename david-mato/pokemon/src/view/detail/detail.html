@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <img class="pokemon-title" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="Pokemon title">
+    </header>
+    <main>
+        <article class="pokemon-detail-wrapper">
+            <div class="pokemon-detail">
+                <h2 id="poke-name"></h2>
+                <div id="poke-img"></div>
+                <div>
+                    <span class="pokemon-characteristic">Base experience: </span>
+                    <span id="poke-base-experience" class="pokemon-characteristic"></span>
+                </div>
+                <div>
+                    <span class="pokemon-characteristic">Abilities: </span>
+                    <ul id="poke-abilities" class="pokemon-characteristic"></ul>
+                </div>
+                <div>
+                    <span class="pokemon-characteristic">Height: </span>
+                    <span id="poke-height" class="pokemon-characteristic"></span>
+                </div>
+                <div>
+                    <span class="pokemon-characteristic" class="pokemon-characteristic">Weight: </span>
+                    <span id="poke-weight" class="pokemon-characteristic"></span>
+                </div>
+            </div>
+        </article>
+    </main>
+    <script src="../../store/store.js"></script>
+    <script src="detail.js"></script>
+    <script>
+        const store = new Store();
+        store.loadPokemons().then(() => {
+            const params = new URLSearchParams(location.search.substring(1));
+            const getId = params.get('pokeId');
+            store.getPokemonById(getId).then(() => {
+                pokemon = store.getPokemon();
+                const detailComponent = new DetailComponent(pokemon);
+                if (pokemon) {
+                    let idElement = document.getElementById('poke-name');
+				    detailComponent.updateHtmlValue(
+					idElement,
+					'innerHTML',
+					detailComponent.pokemon.name
+                    );
+
+                    idElement = document.getElementById('poke-img');
+				    detailComponent.loadPhoto(
+					idElement,
+					'innerHTML',
+					detailComponent.pokemon.sprites.other.dream_world.front_default
+                    );
+
+                    idElement = document.getElementById('poke-base-experience');
+				    detailComponent.updateHtmlValue(
+					idElement,
+					'innerHTML',
+					detailComponent.pokemon.base_experience
+                    );
+
+                    const pokeAbilities = document.getElementById('poke-abilities')
+                    for (let i = 0; i < detailComponent.pokemon.abilities.length; i++) {
+                        let li = document.createElement('li');
+                        li.setAttribute('id', `poke-ability${i}`);
+                        pokeAbilities.appendChild(li)
+                        idElement = document.getElementById(`poke-ability${i}`);
+                        detailComponent.updateHtmlValueToButton(
+                        li,
+                        'innerHTML',
+                        detailComponent.pokemon.abilities[i].ability.name)
+                    }
+                    
+                    idElement = document.getElementById('poke-height');
+                    detailComponent.updateHtmlValue(
+                    idElement,
+                    'innerHTML',
+                    detailComponent.pokemon.height
+                    );
+                    
+                    idElement = document.getElementById('poke-weight');
+				    detailComponent.updateHtmlValue(
+					idElement,
+					'innerHTML',
+					detailComponent.pokemon.weight
+                    );
+                }
+            });
+        })
+    </script>
+</body>
+</html>

@@ -54,7 +54,7 @@ function Life(playButton, stopButton, clearButton) {
 	function setInitialState() {
 		let currentState = [];
 		const lifeForm = document.forms[0];
-		debugger;
+
 		if (lifeForm) {
 			for (let i = 0; i < lifeForm.length; i++) {
 				const position = splitId(lifeForm[i]);
@@ -103,10 +103,8 @@ function Life(playButton, stopButton, clearButton) {
 	}
 
 	function updateView({ row, column, isChecked }) {
-		const inputElement = document.getinputElementById(
-			`cell--${row}--${column}`
-		);
-		if (inputElement) element.checked = !!isChecked;
+		const inputElement = document.getElementById(`cell--${row}--${column}`);
+		if (inputElement) inputElement.checked = !!isChecked;
 	}
 
 	function countNeighbours({ row, column }, state) {
