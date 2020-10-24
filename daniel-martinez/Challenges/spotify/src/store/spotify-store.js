@@ -19,6 +19,46 @@ class SpotifyStore {
             console.log('Invalid token');
         }
     }
+
+
+    async getPlaylist (token, playlistId) {
+        const limit = 10;
+        const result = await fetch(`https://api.spotify.com/v1/playlists/${playlistId}`,{
+            method: 'GET',
+            headers: { 'Authorization' : 'Bearer ' + token}
+        });
+        const data = await result.json();
+        return data;
+    }
+
+    /*
+    async getGenres(token){
+    const result = await fetch(`https://api.spotify.com/v1/browse/categories?locale=sv_ES`, {
+        method: 'GET',
+        headers: { 'Authorization' : 'Bearer' + token}
+    });
+    const data = await result.json();
+    return data_access_token;
+    
+    async getTracks(token, tracksEndPoint){
+        const limit = 10;
+         const result = await fetch(`${tracksEndPoint}?limit=${limit}`, {
+            method: 'GET',
+            headers: { 'Authorization' : 'Bearer ' + token}
+        });
+        const data = await response.json();
+        return data.items;
+    }
+
+    async getTrack(token, trackEndPoint){
+
+         const result = await fetch(`${trackEndPoint}`, {
+            method: 'GET',
+            headers: { 'Authorization' : 'Bearer ' + token}
+        });
+        const data = await response.json();
+        return data;
+    } */
 }
 
 let spotifyStore = new SpotifyStore();

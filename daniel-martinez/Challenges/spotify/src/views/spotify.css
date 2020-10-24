@@ -1,0 +1,72 @@
+* {
+	font-family: Montserrat;
+}
+
+body {
+	background-color: rgb(18, 18, 18);
+	color: white;
+}
+
+.title {
+	display: flex;
+	align-items: center;
+	font-size: 25px;
+}
+
+#title-logo {
+	width: 80px;
+	margin: 15px;
+}
+
+#album-block {
+	display: flex;
+	justify-content: center;
+}
+
+#options-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+}
+
+#options-list__first-row,
+#options-list__second-row {
+	margin-top: 20px;
+	display: flex;
+}
+
+#option1,
+#option2,
+#option3,
+#option4 {
+	font-size: 18px;
+	width: 300px;
+	height: 86px;
+	list-style: none;
+	border: 1px solid black;
+	border-radius: 2px;
+	padding: 20px 0;
+	background-color: rgb(87, 181, 96);
+	color: white;
+}
+
+#option1,
+#option3 {
+	margin-right: 10px;
+}
+
+#option1:hover,
+#option2:hover,
+#option3:hover,
+#option4:hover {
+	background-color: white;
+	color: rgb(87, 181, 96);
+	border: 2px solid rgb(87, 181, 96);
+}
+
+#playlist {
+	text-align: center;
+	font-size: 14px;
+}

@@ -4,7 +4,9 @@
   "description": "",
   "main": "spotify-store.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "test",
+    "test:coverage":"jest --collect-coverage --watchAll",
+    "test:debug": "--inspect-brk ./node_modules/jest/bin/jest.js –runInBand"
   },
   "keywords": [],
   "author": "",

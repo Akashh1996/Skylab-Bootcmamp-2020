@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Quiz</title>
+    <link rel="stylesheet" href="spotify.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <p id="token"></p>
+    <section class="title">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png" id="title-logo"/>
+        <h1> SpotiQuiz</h1>
+    </section>
+    <div id="album-block"></div>
+    <ul id="options-list">
+        <h2>Which song is in this album?</h2>
+        <div id="options-list__first-row">
+            <button id="option1" class="option"></button>
+            <button id="option2" class="option"></button>
+        </div>
+        <div id="options-list__second-row">
+            <button id="option3" class="option"></button>
+            <button id="option4" class="option"></button>
+        </div>
+    </ul>
+    <p id="playlist"></p>
     <script src="./../store/spotify-store.js"></script>
-    <script>
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
