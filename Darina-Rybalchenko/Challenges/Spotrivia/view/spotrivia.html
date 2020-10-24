@@ -12,6 +12,23 @@
     <header>
         <h1>Spotrivia</h1>
     </header>
+    <section class="playlist-container">
+
+
+        <div class="artist" id="artist"></div>
+
+        <div class="image" id="image"></div>
+
+        <div class="song-button-wrapper" id="song">
+            <button id="song__tittle" class="song__tittle__button"></button>
+            <button id="song__tittle" class="song__tittle__button">Song2 Random</button>
+            <button id="song__tittle" class="song__tittle__button">Song3 Random</button>
+            <button id="song__tittle" class="song__tittle__button">Song4 Random</button>
+        </div>
+
+        <button id="start-button" class="start-button">p l a y</button>
+
+    </section>
 
 
 
@@ -22,22 +39,37 @@
 
         (async () => {
             await store.getToken();
-            console.log(token);
-            console.log(store.loadPlaylist())
+            await store.loadPlaylist()
+            /* console.log(token);
+            console.log(store.loadPlaylist()) */
+            let playListArray = []
 
 
+            for (let i = 0; i < playList.length; i++) {
+
+                playListArray.push({
+                    artist: playList[i].track.artists[0].name,
+                    image: playList[i].track.album.images[1],
+                    song: playList[i].track.name,
+                })
+
+            }
+            /*  console.log(playListArray) */
+            const randomArtist = createRandomArtistDetail(playListArray)
+
+            let artistTittle = document.getElementById('artist')
+            artistTittle.innerHTML = randomArtist.artist
+
+            /* let imageElement = document.getElementById('image')
+            imageElement.innerHTML = randomArtist.image.url */
+
+            let songTittle = document.getElementById('song__tittle')
+            songTittle.innerHTML = randomArtist.song
+            console.log(randomArtist)
         })();
 
-        /*    (async () => {
-               await store.loadPlaylist()
-               store.getPlaylist()
-               artistList.forEach((items) => {
-   
-               })
-   
-   
-           })()
-    */
+
+
 
     </script>
 </body>

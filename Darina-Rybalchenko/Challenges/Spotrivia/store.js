@@ -1,7 +1,7 @@
 const cliend_id = '45e87dbfc6544be9a5552e198d98aec5';
 const _cliend_secret_id = '303572df10dd4650ab69b01d0e65d6b5';
 let token;
-let artistList = []
+let playList = []
 
 class SpotifyStore {
     async getToken() {
@@ -17,10 +17,6 @@ class SpotifyStore {
         return (token = data.access_token);
     }
 
-    getPlaylist() {
-        return artistList
-    }
-
     async loadPlaylist() {
         const response = await fetch('https://api.spotify.com/v1/playlists/6k9xRTn4aAyp1N5iOXJV5n',
             {
@@ -29,7 +25,7 @@ class SpotifyStore {
 
             });
         const result = await response.json()
-        return artistList = result.tracks.items
+        return playList = result.tracks.items
 
     }
 
