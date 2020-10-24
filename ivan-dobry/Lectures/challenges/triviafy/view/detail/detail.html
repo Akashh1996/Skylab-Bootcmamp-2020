@@ -11,30 +11,19 @@
 		</header>
 		<section class="section__image">
 			<img
+				id="artist__image"
 				src="https://i.scdn.co/image/ab67616d00001e022277d1a849a63c7075ec38ff"
 				alt=""
 			/>
 		</section>
-		<section class="artist">Artist Name</section>
+		<section class="artist" id="artist">Artist Name</section>
 		<section class="section__butons">
-			<button class="butons_answer">answer1</button>
-			<button class="butons_answer">answer2</button>
-			<button class="butons_answer">answer3</button>
-			<button class="butons_answer">answer4</button>
+			<button class="butons__answer" id="butons_answer1">answer1</button>
+			<button class="butons__answer" id="butons_answer2">answer2</button>
+			<button class="butons__answer" id="butons_answer3">answer3</button>
+			<button class="butons__answer" id="butons_answer4">answer4</button>
 		</section>
 		<script src="../../store.js"></script>
 		<script src="detail.js"></script>
-		<script>
-			(async function spoty() {
-				await store.getSpotifyData();
-				for (let i = 0; i < itemArray.length; i++) {
-					artistArray.push([
-						itemArray[i].track.artists[0].name,
-						itemArray[i].track.name,
-						itemArray[i].track.album.images[1].url
-					]);
-				}
-			})();
-		</script>
 	</body>
 </html>

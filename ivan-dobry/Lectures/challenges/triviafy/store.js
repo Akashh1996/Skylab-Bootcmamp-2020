@@ -1,10 +1,9 @@
 let _spotifyData;
 const cliend_id = '522f6a81070e477d87135a0c669e9bd5';
 const _cliend_secret_id = 'cb68d9cfbc9d489eb30fd35a21e7a005';
-let token ='BQCmRy2hJmlgdv2SaPzF0cxTobeWlQCfsMW0ZNj9_RHSdFja9OjfZVkr-LpN5yoYJUgb6f5rTYi-B-9ALBFUgsAPoIMBvhiCqN1XHVw9oOMkn4AUMsELBoaSwHCdoOvD8lCWiIrxLF6llc6LwR873cTKZrE3ktbQ86PbQKY'
+let token ='BQAQXwOi9qbowIQD7ipXwgsyw27sQSarwxgKSLcqvoRFzx7-ZzMPpGlSGNh7IMEH3GpHrmZ8AiJJ35aZv5LhTTHjC4Pa3Op-rexZco9eQOi0Gk-OSW6okyIXft1mcls3AiaA62qwO8vqnuWtA6YyWc_YGsM9a8wwi2bTaK4'
 let itemArray = [];
 let artistArray = [];
-let prueba;
 
 class Store {
 
@@ -33,11 +32,5 @@ class Store {
     }
 	
 }      
-
-
-
-// getArtistName _spotifyData.tracks.items[0].track.artists[0].name
-
-//getSongName _spotifyData.tracks.items[0].track.name
 
 const store = new Store();
