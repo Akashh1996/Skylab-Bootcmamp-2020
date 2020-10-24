@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main id="container">
+        <h1>Spotify Trivial</h1>
+        <span>A continuación, se te presentará un nombre de artista aleatorio y cuatro canciones.</span><br>
+        <span>Deberás seleccionar la única canción de las presentadas que pertenece al artista</span><br>
+        <br>
+        <img id="random-artist-image" src="" alt="">
+        <h3 id="random-artist-name"></h3>
+        <form id="random-songs" class="vertical-container" action="">
+            <div class="horizontal-container">
+                <div class="vertical-container">
+                    <div class="horizontal-container input-container">
+                        <input id="random-song1" type="radio" name="answers">
+                        <label class="songLabel" for="random-song1"></label>
+                    </div>
+                    <div class="horizontal-container input-container">
+                        <input id="random-song2" type="radio" name="answers">
+                        <label class="songLabel" for="random-song2"></label>
+                    </div>
+                </div>
+                <div class="vertical-container">
+                    <div class="horizontal-container input-container">
+                        <input id="random-song3" type="radio" name="answers">
+                        <label class="songLabel" for="random-song3"></label>
+                    </div>
+                    <div class="horizontal-container input-container">
+                        <input id="random-song4" type="radio" name="answers">
+                        <label class="songLabel" for="random-song4"></label>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <button id="submit-answer">Send</button>
+        <h3 id="is-correct"></h3>
+    </main>
+    <script src="../../store.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+body {
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	main {
+		margin: 20px;
+	}
+
+	h1 {
+		margin: 20px 0px;
+	}
+}
+
+.horizontal-container {
+	display: flex;
+}
+
+.vertical-container {
+	display: flex;
+	flex-direction: column;
+}
+
+#submit-answer {
+	width: 80px;
+	margin-bottom: 30px;
+}
+
+#random-songs {
+	width: 600px;
+	input {
+		margin: 15px 20px 10px 0px;
+	}
+
+	.horizontal-container {
+		margin-right: 15px;
+	}
+}
+
+.input-container {
+	justify-content: flex-start;
+	align-items: center;
+}

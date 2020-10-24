@@ -1,0 +1,55 @@
+body * {
+  margin: 0;
+  padding: 0;
+}
+
+body main {
+  margin: 20px;
+}
+
+body h1 {
+  margin: 20px 0px;
+}
+
+.horizontal-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.vertical-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#submit-answer {
+  width: 80px;
+  margin-bottom: 30px;
+}
+
+#random-songs {
+  width: 600px;
+}
+
+#random-songs input {
+  margin: 15px 20px 10px 0px;
+}
+
+#random-songs .horizontal-container {
+  margin-right: 15px;
+}
+
+.input-container {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=styles.css.map */
