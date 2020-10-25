@@ -15,6 +15,7 @@ let randomButtons = [];
 let time = 30;
 let index = 0;
 let score = 0;
+let randomWrongArr = [];
 
 playAgain.style.display= 'none';
 
@@ -45,9 +46,14 @@ function randomArtists (arr) {
     }
 }
 
+function randomWrong (arr) {
+    while(arr.length < 4){
+        var r = Math.floor(Math.random() * 17);
+        if(arr.indexOf(r) === -1) arr.push(r);
+    }
+}
 
 randomArtists (randomArtistsArray);
-
 
 function updateDisplay() {
     if (index === 10) {
@@ -60,10 +66,12 @@ function updateDisplay() {
     artistImage.src = artistArray[randomArtistsArray[index]][2];
     audioBox.src = artistArray[randomArtistsArray[index]][3];
     randomButtons = [];
+    randomWrongArr = [];
     randomFour (randomButtons);
+    randomWrong (randomWrongArr);
     buttonArray[randomButtons[0]].innerHTML = artistArray[randomArtistsArray[index]][1];
     for (let i = 1; i < randomButtons.length; i++) {
-        buttonArray[randomButtons[i]].innerHTML = wrongAnswers[Math.floor(Math.random() * 17)];
+        buttonArray[randomButtons[i]].innerHTML = wrongAnswers[randomWrongArr[i]];
     }
     time = 30;
 }
@@ -83,8 +91,6 @@ buttons.addEventListener('click', (event) => {
     }
 
 });
-
-
 
 let timer = setInterval (function () {
     time --;
