@@ -5,12 +5,14 @@ let button2 = document.getElementById('butons_answer2');
 let button3 = document.getElementById('butons_answer3');
 let button4 = document.getElementById('butons_answer4');
 let timerBox = document.getElementById('timer');
+let correctBox = document.getElementById('correct-answer');
 let wrongAnswers = ['Paranoid', 'Master of Puppets', 'Ace of Spades', 'Crazy Train', 'The Number of the Beast', 'Highway Star', 'Highway to Hell', 'Cowboys from Hell', 'Rainbow in the Dark', 'Running with the Devil', '2 Minutes to Midnight', 'Bark at the Moon', 'Roots Bloody Roots', 'Cemetery Gates', 'Fear of the Dark', 'Whiplash', 'Symphony of Destruction']
 let buttonArray = [button1, button2, button3, button4];
 let randomArtistsArray = [];
 let randomButtons = [];
 let time = 10;
 let index = 0;
+let score = 0;
 
 (async function spoty() {
     await store.getSpotifyData();
@@ -21,7 +23,7 @@ let index = 0;
             itemArray[i].track.album.images[1].url
         ]);
     }
-    console.log(artistArray);
+    updateDisplay();
 })();
 
 function randomFour (arr) {
@@ -43,6 +45,10 @@ randomArtists (randomArtistsArray);
 
 
 function updateDisplay() {
+    if (index === 10) {
+        timerBox.innerHTML = `Game over! score: ${score}`
+        clearInterval(timer);
+    }
     artistName.innerHTML = artistArray[randomArtistsArray[index]][0];
     artistName.className = artistArray[randomArtistsArray[index]][1];
     artistImage.src = artistArray[randomArtistsArray[index]][2];
@@ -60,10 +66,13 @@ buttons.addEventListener('click', (event) => {
 
     if (event.target.innerHTML === artistName.className) {
         console.log('correcto!')
+        correctBox.innerHTML = 'CORRECT!'
         index ++;
         updateDisplay();
+        score ++;
     } else {
         console.log('Fail!')
+        correctBox.innerHTML = `Wrong! The correct answer was ${artistName.className}`
         index ++;
         updateDisplay();
     }

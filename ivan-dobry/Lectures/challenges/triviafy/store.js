@@ -1,7 +1,7 @@
 let _spotifyData;
 const cliend_id = '522f6a81070e477d87135a0c669e9bd5';
 const _cliend_secret_id = 'cb68d9cfbc9d489eb30fd35a21e7a005';
-let token ='BQACRKipwIyaQxa5Nbfa0eMzooVKhE3oOk7vmWIJ1OCHK9F1bmYeqy87NUzSw6w_AZpceaa0y63s_LOWXOftQN332CVZWMn1tqz6C2PZNDH1mPz1Gmr4jOBbnXbMp44jlnRs3lucq3B37qA3MbU4ywFLkjx8H6hH2pAbbrs'
+let token ='BQAcAZMMTlqn1CLBWe1RHEfe3s2-DAhxAi2m-JJNiXsRQWriWrmCg_axi5lO6vlyRIq4x_geFHRs9qeneSPipoJtrqMy7IK012SJY-DbW8kUvo9w-lEOWXe2yWFsY-bbhLVKP7bJj6eTbk43Y5m787oYZ9j4MiCeWqL0q_4'
 let itemArray = [];
 let artistArray = [];
 
