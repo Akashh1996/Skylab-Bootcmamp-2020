@@ -4,8 +4,9 @@ let _spotifyToken;
 let _artist;
 let _artistTopTracks;
 let _categories;
-let selectedArtist;
-let _correctAnswer;
+const _seconds = 15;
+let _secondsTimer;
+let _functionTimer;
 
 class SpotifyStore {
 	getClientId() {
@@ -38,6 +39,10 @@ class SpotifyStore {
 		return _spotifyToken;
 	}
 
+	updateValueHtml(element, property, value) {
+		element[property] = value;
+	}
+
 	async requestArtist(artist) {
 		const url = `https://api.spotify.com/v1/artists/${artist}`;
 		const response = await fetch(url, {
@@ -50,6 +55,10 @@ class SpotifyStore {
 		const artistObject = await response.json();
 		_artist = artistObject;
 		return artistObject;
+	}
+
+	setArtist(artist) {
+		_artist = artist;
 	}
 
 	getArtist() {
@@ -106,90 +115,155 @@ class SpotifyStore {
 		const randomArtist = Math.floor(Math.random() * artistsArray.length);
 		await this.requestArtist(artistsArray[randomArtist]);
 		const artist = this.getArtist();
-		selectedArtist = artist;
-		container.innerHTML = artist.name;
+		this.updateValueHtml(container, 'innerHTML', artist.name);
 		return artist.name;
 	}
 
-	setRandomArtistImagetoContainer(imgContainer) {
-		const artist = this.getArtist();
-		const artistPicture = artist.images.find((element) => {
-			return element.height === 160;
-		});
-		imgContainer.setAttribute('src', artistPicture.url);
-		return artistPicture.url;
+	setArtistImagetoContainer(imgContainer) {
+		try {
+			const artist = this.getArtist();
+			let artistPicture = artist.images.find((element) => {
+				return element.height >= 160;
+			});
+			imgContainer.setAttribute('src', artistPicture.url);
+			return artistPicture.url;
+		} catch (error) {
+			return null;
+		}
 	}
 
-	async setRandomSongsToInputs(formContainer, artists) {
-		//Creates an array with the ids of the artists
+	getClassNameFromContainerInArray(formContainer, className) {
+		const labels = formContainer.querySelectorAll(`.${className}`);
+		return [].slice.call(labels);
+	}
+
+	getRandomElementFromArray(labelsArray) {
+		const randomNumber = Math.floor(Math.random() * labelsArray.length);
+		return labelsArray[randomNumber];
+	}
+
+	async setRandomSongsToInputs(formContainer, artists, resultContainer) {
+		// Creates an array with the ids of the artists
 		const artistsArray = Object.values(artists);
-		//takes the artist that will be the answer
+		// Takes the artist that will be the answer
 		let actualArtist = this.getArtist();
+		// Put the labels in an array
+		let buttonsArray = this.getClassNameFromContainerInArray(
+			formContainer,
+			'button-answer'
+		);
 		// Choose a random label input to put the song of the answer artist
-		const labels = formContainer.querySelectorAll('.songLabel');
-		const labelsArray = [].slice.call(labels);
-		let randomLabelNumber = Math.floor(Math.random() * labelsArray.length);
-		let randomSongLabel = labelsArray[randomLabelNumber];
+		let randomButton = this.getRandomElementFromArray(buttonsArray);
 		// Chooses a random song from the artist
 		let randomSong = await this.getRandomSongFromTopTracks(actualArtist.id);
 		// Puts the random song in the random label chosen
-		randomSongLabel.innerHTML = randomSong;
+		this.updateValueHtml(randomButton, 'innerHTML', randomSong);
 		// Set the input to the correct answer
-		_correctAnswer = randomSongLabel;
+		this.setCorrectButton(randomButton, resultContainer);
+		// this.setCorrectAnswer(randomLabel);
 		// Removes the answer artist from the array to choose
 		const actualArtistIndex = artistsArray.findIndex(
-			(elem) => elem === actualArtist.id
+			(element) => element === actualArtist.id
 		);
 		artistsArray.splice(actualArtistIndex, 1);
 		// Removes the label from the labels
-		let actualLabelIndex = labelsArray.findIndex(
-			(elem) => elem === randomSongLabel
+		let actualLabelIndex = buttonsArray.findIndex(
+			(element) => element === randomButton
 		);
-		labelsArray.splice(actualLabelIndex, 1);
-		// Puts random songs in the rest of labels
-		for (let index = 0; index < labelsArray.length; index++) {
+		buttonsArray.splice(actualLabelIndex, 1);
+		// Puts random songs in the rest of buttons
+		for (let index = 0; index < buttonsArray.length; index++) {
+			// Get a random number and choses an artist
 			const randomArtist = Math.floor(Math.random() * artistsArray.length);
-			await this.requestArtist(artistsArray[randomArtist]);
-			actualArtist = this.getArtist();
-			randomSong = await this.getRandomSongFromTopTracks(actualArtist.id);
-			randomSongLabel = labelsArray[index];
-			randomSongLabel.innerHTML = randomSong;
+			// Takes a random song from top tracks of the artist selected
+			randomSong = await this.getRandomSongFromTopTracks(
+				artistsArray[randomArtist]
+			);
+			// Choses the next button
+			randomButton = buttonsArray[index];
+			// Updates the button with the name of the random song chosen
+			this.updateValueHtml(randomButton, 'innerHTML', randomSong);
+			// The button will be an incorrect answer
+			this.setIncorrectButton(randomButton, resultContainer);
 		}
 	}
 
-	setCorrectAnswer(songLabel) {
-		_correctAnswer = songLabel;
+	setCorrectButton(button, resultContainer) {
+		button.addEventListener('click', () => {
+			this.updateValueHtml(resultContainer, 'innerHTML', 'CORRECT!');
+			this.stopTimerFunction();
+			this.stopTimerSeconds();
+		});
 	}
 
-	getCorrectAnswer() {
-		return _correctAnswer;
+	setIncorrectButton(button, resultContainer) {
+		button.addEventListener('click', () => {
+			this.updateValueHtml(resultContainer, 'innerHTML', 'INCORRECT!');
+			this.stopTimerFunction();
+			this.stopTimerSeconds();
+		});
 	}
 
-	async setArtistAndSongs(
+	async setNewGame(
 		titleContainer,
-		formContainer,
+		artists,
 		imgContainer,
-		artists
+		formContainer,
+		resultContainer
 	) {
-		await this.setRandomArtistNameToContainer(titleContainer, artists);
-		this.setRandomArtistImagetoContainer(imgContainer);
-		this.setRandomSongsToInputs(formContainer, artists);
+		await store.setRandomArtistNameToContainer(titleContainer, artists);
+		store.setArtistImagetoContainer(imgContainer);
+		store.setRandomSongsToInputs(formContainer, artists, resultContainer);
 	}
 
-	checkCorrectAnswer(formContainer) {
-		const inputs = formContainer.querySelectorAll('input');
-		let selectedInput;
-		debugger;
-		for (let index = 0; index < inputs.length; index++) {
-			if (inputs[index].checked === true) {
-				selectedInput = inputs[index];
-				break;
+	getSeconds() {
+		return _seconds;
+	}
+
+	timerSeconds(timerContainer) {
+		let second = this.getSeconds();
+		_secondsTimer = setInterval(() => {
+			if (second > 9) {
+				this.updateValueHtml(timerContainer, 'innerHTML', `00:${second}`);
+			} else {
+				this.updateValueHtml(timerContainer, 'innerHTML', `00:0${second}`);
 			}
-		}
-		if (selectedInput.parentNode === this.getCorrectAnswer().parentNode) {
-			return true;
-		}
-		return false;
+			second--;
+			second = second < 0 ? this.getSeconds() : second;
+		}, 1000);
+	}
+
+	stopTimerSeconds() {
+		clearInterval(_secondsTimer);
+	}
+
+	timerFunction(
+		titleContainer,
+		artists,
+		imgContainer,
+		formContainer,
+		resultContainer,
+		timerContainer
+	) {
+		_functionTimer = setInterval(() => {
+			this.updateValueHtml(resultContainer, 'innerHTML', '');
+			this.updateValueHtml(
+				timerContainer,
+				'innerHTML',
+				`00:${this.getSeconds() + 1}`
+			);
+			this.setNewGame(
+				titleContainer,
+				artists,
+				imgContainer,
+				formContainer,
+				resultContainer
+			);
+		}, (this.getSeconds() + 1) * 1000);
+	}
+
+	stopTimerFunction() {
+		clearInterval(_functionTimer);
 	}
 }
 

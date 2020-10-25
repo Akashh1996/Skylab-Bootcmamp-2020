@@ -11,27 +11,30 @@ const artists = {
 	Within_Temptation: '3hE8S8ohRErocpkY7uJW4a',
 	Sum_41: '0qT79UgT5tY4yudH9VfsdT'
 };
+
 const container = document.getElementById('container');
 const artistImage = document.getElementById('random-artist-image');
 const artistNameContainer = document.getElementById('random-artist-name');
 const formContainer = document.getElementById('random-songs');
-const sendAnswerBtn = document.getElementById('submit-answer');
-const isCorrect = document.getElementById('is-correct');
+const resultContainer = document.getElementById('is-correct');
+const timerContainer = document.getElementById('timer');
 
 (async () => {
 	await store.requestSpotifyToken();
-	store.setArtistAndSongs(
+	store.timerSeconds(timerContainer);
+	store.setNewGame(
 		artistNameContainer,
-		formContainer,
+		artists,
 		artistImage,
-		artists
+		formContainer,
+		resultContainer
 	);
-
-	sendAnswerBtn.addEventListener('click', () => {
-		if (store.checkCorrectAnswer(formContainer)) {
-			isCorrect.innerHTML = 'CORRECT!';
-		} else {
-			isCorrect.innerHTML = 'INCORRECT!';
-		}
-	});
+	store.timerFunction(
+		artistNameContainer,
+		artists,
+		artistImage,
+		formContainer,
+		resultContainer,
+		timerContainer
+	);
 })();
