@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
+    <link rel="stylesheet" href="spotify.css">
 </head>
 <body>
+    <header>
+        <img src="Spotify_Logo_RGB_Green.png" class = 'spotify-logo'>
+    </header>
     <div class="game-container">
-        <div id="question-container" class = 'hide'>
-        <img src="">
-        <div id="question">Question</div>
-        <div id="answer-buttons" class = 'btn-grid'>
-            <button class = 'btn'>Answer 1</button>
-            <button class = 'btn'>Answer 2</button>
-            <button class = 'btn'>Answer 3</button>
-            <button class = 'btn'>Answer 4</button>
+        <div id="question-container" class = 'q-container hide'>
+            <p class = 'artist' id="question">Artist</p>
+            <div class = 'image-container'>
+                <img class = 'image-question' src="Spotify_Icon_RGB_Green.png" width="300px">
+            </div>
+            <span class = 'artist-question' id="question">Which song is from<p class = 'artist-question'>Artist</p></span>
+            <div id="answer-buttons" class = 'btn-grid'>
+                <button class = 'btn'>Answer 1</button>
+                <button class = 'btn'>Answer 2</button>
+                <button class = 'btn'>Answer 3</button>
+                <button class = 'btn'>Answer 4</button>
+            </div>
         </div>
-
-        </div>
-        <div classs = 'controls'>
+        <div classs = 'btn-controls'>
             <button id="start-button" class = 'start-btn btn'>Start</button>
             <button id="next-button" class = 'next-btn btn hide'>Next</button>
         </div>
@@ -53,10 +59,19 @@
                 }
                 ]
 
+
+                let artistImage = document.querySelector('.image-question');
+                    playlistComponent.updateHtmlValue(
+                        artistImage,
+                        'src',
+                        playList.items[0].track.album.images[1].url
+                    );
+
+                // document.querySelector('#image-question').setAttribute = playList.items[0].track.album.images[1].url;
+
                 console.log(trackNameArray);
                 console.log(trackArtistsNameArray);
                 console.log(questionsObject[0].question);
-                document.querySelector('#nombre').innerHTML = playList.items[1].track.artists[0].name;
             }
             console.log(token);
         })()

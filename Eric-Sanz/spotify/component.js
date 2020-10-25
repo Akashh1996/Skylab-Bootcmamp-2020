@@ -4,8 +4,22 @@ class PlaylistComponent {
     }
 
     updateHtmlValue(element, property, value) {
-        element.setAttributte(property, value)
+        element.setAttribute(property, value)
     }
 }
 
+const startButton = document.getElementById('')
+
+function startGame() {
+
+}
+
+
+function setNextQuestion() {
+
+}
+
+function selectAnswer() {
+
+}
 
