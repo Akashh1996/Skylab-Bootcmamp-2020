@@ -20,7 +20,7 @@ class SpotifyStore {
 
 	async getPlaylist() {
 		const response = await fetch(
-			'https://api.spotify.com/v1/playlists/37i9dQZF1DWTvNyxOwkztu',
+			'https://api.spotify.com/v1/playlists/37i9dQZF1DWXRqgorJj26U',
 			{
 				method: 'GET',
 				headers: {
@@ -34,11 +34,3 @@ class SpotifyStore {
 }
 
 const store = new SpotifyStore();
-
-(async () => {
-	await store.getToken();
-	await store.getPlaylist();
-
-	console.log(token);
-	console.log(_playlist);
-})();
