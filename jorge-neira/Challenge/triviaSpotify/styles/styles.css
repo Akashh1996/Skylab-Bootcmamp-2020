@@ -58,8 +58,8 @@ body .container .artist__block .artists__images .artist-img__item {
           box-shadow: 1px 1px 16px -2px rgba(0, 0, 0, 0.3);
   width: 200px;
   height: 200px;
-  background-color: #1db954;
   overflow: hidden;
+  border-radius: 50%;
 }
 
 body .container .artist__block .artists__images .artist-img__item .artist-photo {

@@ -1,5 +1,6 @@
-class SpotifyGame {
+class SpotifyArtistGrid {
 	constructor(artistArr) {
+		console.log(artistArr);
 		this.artistArr = artistArr;
 	}
 	createDashBoardGrid() {
@@ -7,13 +8,19 @@ class SpotifyGame {
 		this.artistArr.forEach((artist) => {
 			const artistBlockImg = document.createElement('div');
 			artistBlockImg.className = 'artist-img__item';
+			const createAnchorImg = document.createElement('a');
+			createAnchorImg.setAttribute(
+				'href',
+				`../detail/detail-component.html?id=${artist.id}`
+			);
 			const artistImg = document.createElement('img');
 			artistImg.className = 'artist-photo';
 			artistImg.setAttribute('src', artist.images[1].url);
 			artistImg.setAttribute('alt', 'artist-photo');
 			artistImg.setAttribute('height', '100%');
 			artistGridContainer.appendChild(artistBlockImg);
-			artistBlockImg.appendChild(artistImg);
+			artistBlockImg.appendChild(createAnchorImg);
+			createAnchorImg.appendChild(artistImg);
 		});
 	}
 }
@@ -21,7 +28,6 @@ class SpotifyGame {
 (async () => {
 	await spotifyStore.getToken();
 	const artistList = await spotifyStore.getArtist();
-	const spotifyGame = new SpotifyGame(artistList);
-	spotifyGame.createDashBoardGrid();
-	console.log(artistList);
+	const spotifyArtistGrid = new SpotifyArtistGrid(artistList);
+	spotifyArtistGrid.createDashBoardGrid();
 })();
