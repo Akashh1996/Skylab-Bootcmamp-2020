@@ -12,11 +12,11 @@
     </header>
     <div class="game-container">
         <div id="question-container" class = 'q-container hide'>
-            <p class = 'artist' id="question">Artist</p>
+            <div class = 'artist' id="question"></div>
             <div class = 'image-container'>
                 <img class = 'image-question' src="Spotify_Icon_RGB_Green.png" width="300px">
             </div>
-            <span class = 'artist-question' id="question">Which song is from<p class = 'artist-question'>Artist</p></span>
+            <span class = 'artist-question' id="question">Which song is from</span>
             <div id="answer-buttons" class = 'btn-grid'>
                 <button class = 'btn'>Answer 1</button>
                 <button class = 'btn'>Answer 2</button>
@@ -54,11 +54,12 @@
                     question: `${trackArtistsNameArray[0]}`,
                     answers: [
                         { text: `${trackNameArray[0]}`, correct: true },
-                        { text: `${trackNameArray[6]}`, correct: false}
+                        { text: `${trackNameArray[6]}`, correct: false},
+                        { text: `${trackNameArray[3]}`, correct: false},
+                        { text: `${trackNameArray[9]}`, correct: false}
                     ]
                 }
                 ]
-
 
                 let artistImage = document.querySelector('.image-question');
                     playlistComponent.updateHtmlValue(
@@ -72,6 +73,76 @@
                 console.log(trackNameArray);
                 console.log(trackArtistsNameArray);
                 console.log(questionsObject[0].question);
+
+                
+                const startButton = document.getElementById('start-button');
+                const nextButton = document.getElementById('next-button');
+                const questionContainer = document.getElementById('question-container');
+                const questionElement = document.querySelector('#question');
+                const answerButtons = document.getElementById('answer-buttons');
+                let shuffledQuestions, currentQuestionsIndex;
+
+                startButton.addEventListener('click', startGame)
+
+                function startGame() {
+                    startButton.classList.add('hide');
+                    shuffledQuestions = questionsObject.sort(() => Math.random() - .5);
+                    currentQuestionsIndex = 0;
+                    questionContainer.classList.remove('hide');
+                    setNextQuestion();
+                    //set timer
+                
+                }
+
+                function setNextQuestion() {
+                    resetState();
+                    showQuestion(shuffledQuestions[currentQuestionsIndex]);
+                }
+
+                function showQuestion(questionsObject) {
+                    questionElement.innerText = questionsObject.question;
+                    questionsObject.answers.forEach(answers => {
+                        const button = document.createElement('button');
+                        button.innerText = answers.text;
+                        button.classList.add('btn');
+                        if (answers.correct) {
+                            button.dataset.correct = answers.correct;
+                        }
+                        button.addEventListener('click', selectAnswer);
+                        answerButtons.appendChild(button);
+                    })
+                }
+
+                function resetState() {
+                    nextButton.classList.add('hide');
+                    while (answerButtons.firstChild) {
+                        answerButtons.removeChild(answerButtons.firstChild);
+                    }
+                }
+
+                function selectAnswer(element) {
+                    const selectedButton = element.target;
+                    const correct = selectedButton.dataset.correct;
+                    setStatusClass(document.body, correct);
+                    Array.from(answerButtons.children).forEach(button => {
+                        setStatusClass(button, button.dataset.correct);
+                    })
+                    nextButton.classList.remove('hide');
+                }
+
+                function setStatusClass(element, correct) {
+                    clearStatusClass(element);
+                    if (correct) {
+                        element.classList.add('correct');
+                    } else {
+                        element.classList.add('wrong');
+                    }
+                }
+
+                function clearStatusClass(element) {
+                    element.classList.remove('correct');
+                    element.classList.remove('wrong');
+                }
             }
             console.log(token);
         })()
