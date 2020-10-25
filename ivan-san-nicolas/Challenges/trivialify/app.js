@@ -122,5 +122,5 @@ function playAgain(player, resetPlayer) {
 
 setPlayerPoints(player);
 getRandomArtist(artists);
-fillOtherOptions();
+//fillOtherOptions();
 let countdownLeft = setInterval(countdown, 1000);
