@@ -5,10 +5,9 @@ function createRandomPlayListArray(playListArray) {
 
 }
 
-
 function createRandomSongsArray(songsArray) {
     let randomFourSongs = []
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 3; i++) {
         let songsArrayRandom = songsArray[Math.floor(Math.random() * songsArray.length)]
         randomFourSongs.push(songsArrayRandom)
     }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Dashboard Spotify</title>
+</head>
+
+<body>
+    <header>
+        <h1>Spotrivia</h1>
+    </header>
+
+    <section class="playlist-container">
+
+        <div class="artist_tittle">Artist</div>
+        <div class="artist" id="artist"></div>
+        <img class="image" id="image" src="" alt="">
+
+        <button id="start-button" class="start-button">p l a y</button>
+
+    </section>
+
+    <script src="../store.js"></script>
+    <script src="dashboard.js"></script>
+    <script>
+
+        (async () => {
+            await store.getToken();
+            await store.loadPlaylist()
+            let playListArray = []
+
+            for (let i = 0; i < playList.length; i++) {
+                playListArray.push({
+                    artist: playList[i].track.artists[0].name,
+                    image: playList[i].track.album.images[1],
+                })
+            }
+            console.log(playListArray)
+
+            const artistName = playListArray
+
+            let artistTittle = document.getElementById('artist')
+            artistTittle.innerHTML = artistName.artist
+            console.log(artistName.artist)
+
+
+
+
+
+            /*   const randomPlayListDetail = createRandomPlayListArray(playListArray)
+              let artistTittle = document.getElementById('artist')
+              let imageElement = document.getElementById('image')
+  
+              imageElement.src = randomPlayListDetail.image.url
+              artistTittle.innerHTML = randomPlayListDetail.artist */
+
+        })();
+
+
+
+
+
+    </script>
+</body>
+
+</html>

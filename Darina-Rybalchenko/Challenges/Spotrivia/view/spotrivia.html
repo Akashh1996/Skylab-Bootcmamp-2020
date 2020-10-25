@@ -16,24 +16,21 @@
 
         <div class="artist_tittle">Artist</div>
         <div class="artist" id="artist"></div>
-
-        <!--  <div class="image" id="image"></div> -->
-
         <img class="image" id="image" src="" alt="">
 
         <div class="song-button-wrapper" id="song">
+            <button id="song__tittle" class="song__tittle__button"></button>
             <button id="song__tittle_0" class="song__tittle__button"></button>
             <button id="song__tittle_1" class="song__tittle__button"></button>
             <button id="song__tittle_2" class="song__tittle__button"></button>
-            <button id="song__tittle_3" class="song__tittle__button"></button>
         </div>
 
-        <button id="start-button" class="start-button">p l a y</button>
+        <div class="start-and-points-wrapper">
+            <button id="start-button" class="start-button">p l a y</button>
+            <div id="points-desplay" class="points__display"></div>
+        </div>
 
     </section>
-
-
-
 
     <script src="../store.js"></script>
     <script src="spotrivia.js"></script>
@@ -53,28 +50,62 @@
 
             }
 
-            const randomPlayListDetail = createRandomPlayListArray(playListArray)
-            let artistTittle = document.getElementById('artist')
-            let imageElement = document.getElementById('image')
-            imageElement.src = randomPlayListDetail.image.url
-            artistTittle.innerHTML = randomPlayListDetail.artist
+            let rightSongTittle;
+            let songTittle;
+            let points = 0
+            let turn = 0;
 
-            const songsArray = []
-            for (let j = 0; j < playListArray.length; j++) {
-                songsArray.push(playListArray[j].song)
+            function createRandomPlayList() {
+                const randomPlayListDetail = createRandomPlayListArray(playListArray)
+                let artistTittle = document.getElementById('artist')
+                let imageElement = document.getElementById('image')
+                rightSongTittle = document.getElementById('song__tittle')
+                imageElement.src = randomPlayListDetail.image.url
+                artistTittle.innerHTML = randomPlayListDetail.artist
+                rightSongTittle.innerHTML = randomPlayListDetail.song
             }
+            createRandomPlayList()
 
-            const songsRandomArray = createRandomSongsArray(songsArray)
-            console.log(songsRandomArray)
-            for (let i = 0; i < 4; i++) {
-                let songTittle = document.getElementById(`song__tittle_${i}`)
-                songTittle.innerHTML = songsRandomArray[i]
+            function createRandomSongs() {
+                const songsArray = []
+                for (let j = 0; j < playListArray.length; j++) {
+                    songsArray.push(playListArray[j].song)
+                }
+
+                const songsRandomArray = createRandomSongsArray(songsArray)
+
+                for (let i = 0; i < 3; i++) {
+                    songTittle = document.getElementById(`song__tittle_${i}`)
+                    songTittle.innerHTML = songsRandomArray[i]
+                }
             }
+            createRandomSongs()
+
+            function endOfGame() {
+                if (turn === 10) {
+                    let pointsInDisplay = document.getElementById('points-desplay')
+                    pointsInDisplay.innerHTML = `Points: ${points}`
+                    pointsInDisplay.style.display = 'inline'
+                }
+            }
+            endOfGame()
+
+            rightSongTittle.addEventListener('click', function () {
+                turn++
+                points++
+                createRandomSongs()
+                createRandomPlayList()
+                endOfGame()
+            })
+
+            songTittle.addEventListener('click', function () {
+                turn++
+                createRandomSongs()
+                createRandomPlayList()
+                endOfGame()
+            })
 
         })();
-
-
-
 
     </script>
 </body>
