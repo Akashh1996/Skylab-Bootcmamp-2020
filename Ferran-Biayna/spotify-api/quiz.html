@@ -9,11 +9,9 @@
 	</head>
 	<body>
         <h1>Quiz - Hans Zimmer</h1>
-        <div class="quiz-box">
-            <p id="time"></p>
-            <div id="quiz"></div>
-        </div>
-        <a id="back" href="" style="display:none"><button>Inicio</button></a>
+        <p id="time"></p>
+        <div id="quiz"></div>
+        <a id="end" href="./home.html" style="display:none"><button>Terminar</button></a>
 		<script src="store.js"></script>
 		<script>
             let playlist;
@@ -131,25 +129,16 @@
             }
             function nextTurn() {
                 document.getElementById('submit').style.display = "none"
-                document.getElementById('next').style.display = "inline-block";
                 if (turn+1===10) {
-                    document.getElementById('next').innerHTML = "Finalizar";
-                    document.getElementById('next').addEventListener('click', () => {
-                        endQuiz()
-                    })
+                    document.getElementById('answer').innerHTML += `<br><br>¡Felicidades, has terminado el quiz!<br>Tu puntuación final es de - ${score}/${turn+1} -<br>Haz click en "Terminar" para volver al menú principal`
+                    document.getElementById('end').style.display = "inline-block";
                 } else {
+                    document.getElementById('next').style.display = "inline-block";
                     document.getElementById('next').addEventListener('click', () => {
                         turn++
                         answerQuiz()
                     })
                 }
-            }
-            function endQuiz() {
-                document.getElementById("quiz-box").style.display="none";
-                document.getElementById("back").style.display="inline-block"
-                document.getElementById('back').addEventListener('click', () => {
-                        document.getElementById('back').src="./home.html"
-                    })
             }
 		</script>
 	</body>
