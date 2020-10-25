@@ -67,18 +67,24 @@
             }
             createRandomPlayList()
 
+
+
             function createRandomSongs() {
                 const songsArray = []
                 for (let index = 0; index < playListArray.length; index++) {
                     songsArray.push(playListArray[index].song)
                 }
+                const randomSongArray = []
 
-                const songsRandomArray = createRandomSongsArray(songsArray)
 
                 for (let i = 0; i < 3; i++) {
+                    let randomIndex = Math.round(Math.random() * (songsArray.length - 1));
+                    randomSongArray.push(songsArray[randomIndex])
+                    songsArray.splice(randomIndex, 1)
                     songTittle = document.getElementById(`song__tittle_${i}`)
-                    songTittle.innerHTML = songsRandomArray[i]
+                    songTittle.innerHTML = randomSongArray[i]
                 }
+                return randomSongArray
             }
             createRandomSongs()
 
@@ -96,6 +102,7 @@
             rightSongTittle.addEventListener('click', function () {
                 turn++
                 points++
+
                 createRandomSongs()
                 createRandomPlayList()
                 endOfGame()
