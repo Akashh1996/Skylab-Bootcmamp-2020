@@ -1,0 +1,2 @@
+const store = require('./store')
+

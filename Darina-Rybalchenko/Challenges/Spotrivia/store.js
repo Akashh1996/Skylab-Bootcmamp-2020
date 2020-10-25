@@ -31,4 +31,5 @@ class SpotifyStore {
 }
 const store = new SpotifyStore();
 
+module.exports = store
 

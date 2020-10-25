@@ -27,7 +27,8 @@
 
         <div class="start-and-points-wrapper">
             <button id="start-button" class="start-button">p l a y</button>
-            <div id="points-desplay" class="points__display"></div>
+            <div id="end-of-game" class="end__of__game">End of game</div>
+            <div id="points-display" class="points__display"></div>
         </div>
 
     </section>
@@ -68,8 +69,8 @@
 
             function createRandomSongs() {
                 const songsArray = []
-                for (let j = 0; j < playListArray.length; j++) {
-                    songsArray.push(playListArray[j].song)
+                for (let index = 0; index < playListArray.length; index++) {
+                    songsArray.push(playListArray[index].song)
                 }
 
                 const songsRandomArray = createRandomSongsArray(songsArray)
@@ -83,9 +84,11 @@
 
             function endOfGame() {
                 if (turn === 10) {
-                    let pointsInDisplay = document.getElementById('points-desplay')
+                    let pointsInDisplay = document.getElementById('points-display')
                     pointsInDisplay.innerHTML = `Points: ${points}`
                     pointsInDisplay.style.display = 'inline'
+                    let endOfGameInDisplay = document.getElementById('end-of-game')
+                    endOfGameInDisplay.style.display = 'inline'
                 }
             }
             endOfGame()
