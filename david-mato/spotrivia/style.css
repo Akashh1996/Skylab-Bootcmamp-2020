@@ -48,12 +48,13 @@ main {
 	border: 3px solid rgb(226, 226, 226);
 	position: absolute;
 	top: 50%;
-	left: 48%;
+	left: 48.5%;
 	transform: translate(-50%, -50%);
 	cursor: pointer;
 	display: flex;
 	align-items: center;
 	padding: 0px 35px 0 10px;
+	/* visibility: hidden; */
 }
 
 .play-button:focus {
@@ -75,10 +76,15 @@ main {
 /* QUESTIONS */
 
 .question-container {
-	border: 3px solid rgb(255, 255, 255);
-	width: fit-content;
-	height: 176px;
 	position: relative;
+	width: fit-content;
+	align-items: center;
+}
+
+.question-container,
+.right-and-wrong-answers__wrapper {
+	border: 3px solid rgb(255, 255, 255);
+	height: 176px;
 	top: 15%;
 	left: 48.5%;
 	transform: translate(-50%);
@@ -86,10 +92,10 @@ main {
 	border-radius: 20px;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 }
 
-.select-song-text {
+.select-song-text,
+.right-and-wrong-answers__wrapper {
 	color: white;
 	font-size: 35px;
 	letter-spacing: 0.1px;
@@ -163,4 +169,40 @@ main {
 .question-container,
 .song-options {
 	visibility: hidden;
+}
+
+/* GAME RESULTS */
+
+.right-and-wrong-answers__wrapper {
+	position: absolute;
+	border: 3px solid white;
+	width: 270px;
+	justify-content: space-around;
+	padding-right: 30px;
+	padding-left: 40px;
+	visibility: hidden;
+}
+
+.right-and-wrong-answers__container {
+	position: relative;
+}
+
+.right-and-wrong-answers__text {
+	border-bottom: 2px solid white;
+}
+
+.num-of-right-answers,
+.num-of-wrong-answers {
+	font-size: 55px;
+	position: absolute;
+	right: 0px;
+	top: -10px;
+}
+
+.num-of-right-answers {
+	color: rgb(47, 213, 102);
+}
+
+.num-of-wrong-answers {
+	color: red;
 }

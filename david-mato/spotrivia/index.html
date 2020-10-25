@@ -16,18 +16,29 @@
         </div>
     </header>
     <main>
-        <button class="play-button"><img class="play-symbol" src="https://jccdallas.org/wp-content/uploads/2020/06/Spotify-Play-Button.png" alt="Play symbol"><span class="play">Play</span></button>
-            <div class="timer"></div>
-            <div class="question-container">
-                <p class="select-song-text">Selecciona la canción de:</p>
-                <p class="singer"></p>
+        <button class="play-button">
+            <img class="play-symbol" src="https://jccdallas.org/wp-content/uploads/2020/06/Spotify-Play-Button.png" alt="Play symbol">
+            <span class="play">Play</span>
+        </button>
+        <div class="timer"></div>
+        <div class="question-container">
+            <p class="select-song-text">Selecciona la canción de:</p>
+            <p class="singer"></p>
+        </div>
+        <div class="song-options">
+            <button class="song-option"></button>
+            <button class="song-option"></button>
+            <button class="song-option"></button>
+            <button class="song-option"></button>
+        </div>
+        <div class="right-and-wrong-answers__wrapper">
+            <div class="right-and-wrong-answers__container">
+                <span class="right-and-wrong-answers__text">Acietos: </span><span class="num-of-right-answers">10</span>
             </div>
-            <div class="song-options">
-                <button class="song-option"></button>
-                <button class="song-option"></button>
-                <button class="song-option"></button>
-                <button class="song-option"></button>
+            <div class="right-and-wrong-answers__container">
+                <span class="right-and-wrong-answers__text">Errores: </span><span class="num-of-wrong-answers">0</span>
             </div>
+        </div>
     </main>
     <script src="store/store.js"></script>
     <script src="spotrivia.js"></script>
