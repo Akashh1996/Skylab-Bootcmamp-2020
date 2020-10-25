@@ -20,7 +20,11 @@ class SpotifyGame {
 			artistImage: document.querySelector('.gameboard-artist__img'),
 			artistAudio: document.querySelector('.gameboard-artist__audio'),
 			artistPreview: document.querySelector('.gameboard-artist__preview'),
-			artistGameBtn: document.querySelectorAll('gameBtn')
+			optionGameBtn: document.querySelectorAll('.gameBtn'),
+			scoreGameSpan: document.querySelector('.statusScore'),
+			pauseStatusBtn: document.querySelector('.pauseBtn'),
+			nextStatusBtn: document.querySelector('.nextBtn'),
+			exitStatusBtn: document.querySelector('.exitBtn')
 		};
 		const getGenresList = (genres) => {
 			genres.forEach((element, index) => {
@@ -31,39 +35,53 @@ class SpotifyGame {
 			});
 		};
 
-		const generateRandomNumber = () => {
-			const randomNum = Math.floor(Math.random() * 10);
-			return randomNum;
-		};
 		const generateThreeRandomNumbers = () => {
-			let arrnum = [];
-			for (let index = 0; index < 3; index++) {
-				while (condition) {
-					const randomNum = Math.floor(Math.random() * 9);
-				}
+			let randomNumForWrongAnswer = [];
+			while (randomNumForWrongAnswer.length !== 3) {
+				const randomNum = Math.floor(Math.random() * 9);
+				if (randomNumForWrongAnswer.includes(randomNum)) continue;
+				randomNumForWrongAnswer.push(randomNum);
 			}
+			console.log(randomNumForWrongAnswer);
+			return randomNumForWrongAnswer;
 		};
 
-		const createRandomQuizFromTracks = (tracks) => {
-			// for (let curSong = 0; curSong < tracks.length; curSong++) {
-			// 	setInterval(() => {}, 30000);
-			// }
-			const randomNumberToStartGame = generateRandomNumber();
-			const curPreviewName = tracks[randomNumberToStartGame].name;
+		const setCurrentRound = (tracks, currentRound = 0) => {
+			const wrongAnswerIndex = generateThreeRandomNumbers();
+			const curPreviewName = [];
+			curPreviewName.push(tracks[currentRound].name);
+			console.log(curPreviewName);
+			// DOMElements.artistPreview.autoplay = true;
+			DOMElements.artistPreview.src = tracks[currentRound].preview_url;
 			const randomTracks = tracks
-				.filter((track) => {
-					if (track.name !== curPreviewName) return track;
+				.filter((track, index) => {
+					if (track.name !== curPreviewName[index]) return track;
 				})
 				.map((trackName) => {
 					return trackName.name;
 				});
-			const wrongPreviewNames = 'A';
-
-			DOMElements.artistPreview.src =
-				tracks[randomNumberToStartGame].preview_url;
-			// DOMElements.artistPreview.autoplay = true;
 			console.log(randomTracks);
+			debugger;
+			wrongAnswerIndex.forEach((wrongTracks) => {
+				curPreviewName.push(randomTracks[wrongTracks]);
+			});
 			console.log(curPreviewName);
+		};
+
+		const updateScore = () => {};
+
+		const nextRound = () => {
+			let secondsRemaining = 30;
+			let timer = setInterval(() => {
+				secondsRemaining--;
+				console.log(secondsRemaining);
+				if (secondsRemaining <= 0) {
+					setCurrentRound(this.topTracks);
+					updateScore();
+					clearInterval(timer);
+					nextRound();
+				}
+			}, 1000);
 		};
 
 		(() => {
@@ -71,7 +89,8 @@ class SpotifyGame {
 			DOMElements.artistFollowers.textContent = this.followers;
 			DOMElements.artistImage.src = this.image;
 			getGenresList(this.genres);
-			createRandomQuizFromTracks(this.topTracks);
+			// nextRound();
+			setCurrentRound(this.topTracks);
 		})();
 	}
 }

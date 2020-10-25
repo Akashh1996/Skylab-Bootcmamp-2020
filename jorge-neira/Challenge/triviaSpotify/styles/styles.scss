@@ -13,6 +13,7 @@ $lightColor: #b3b3b3;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0%;
+	font-family: 'Signika', sans-serif;
 }
 
 a {
@@ -23,8 +24,22 @@ li {
 	list-style: none;
 }
 
+.btn {
+	cursor: pointer;
+	border-radius: 35px;
+	border: none;
+	outline: none;
+	background: none;
+	color: $textColor;
+	font-size: 25px;
+	padding: 10px;
+}
+.btn:hover {
+	background: $SecondaryColor;
+	color: $primaryColor;
+}
+
 body {
-	font-family: 'Signika', sans-serif;
 	height: 100vh;
 	background-color: $darkColor;
 	display: flex;
@@ -39,7 +54,6 @@ body {
 	.artist-dashboard-wrapper {
 		display: flex;
 		max-width: 700px;
-		// background-color: white;
 		.artist__block {
 			.artists__images {
 				position: relative;
@@ -120,20 +134,21 @@ body {
 			}
 		}
 	}
-}
-.gameboard-buttons {
-	.gameBtn {
-		border-radius: 35px;
-		cursor: pointer;
-		border: none;
-		outline: none;
-		background: none;
-		color: $textColor;
-		font-size: 30px;
-		padding: 15px 25px;
-	}
-	.gameBtn:hover {
-		background: $SecondaryColor;
-		color: $primaryColor;
+	.gameControls {
+		width: 60vw;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		.gameboard-buttons {
+			display: flex;
+			flex-direction: column;
+		}
+		.gameboard-status-button {
+			display: flex;
+			flex-direction: column;
+			.statusScore {
+				font-size: 30px;
+			}
+		}
 	}
 }

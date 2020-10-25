@@ -6,6 +6,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0%;
+  font-family: 'Signika', sans-serif;
 }
 
 a {
@@ -16,8 +17,23 @@ li {
   list-style: none;
 }
 
+.btn {
+  cursor: pointer;
+  border-radius: 35px;
+  border: none;
+  outline: none;
+  background: none;
+  color: #fff;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.btn:hover {
+  background: #212121;
+  color: #1db954;
+}
+
 body {
-  font-family: 'Signika', sans-serif;
   height: 100vh;
   background-color: #121212;
   display: -webkit-box;
@@ -170,19 +186,39 @@ body .spotify-gameboard .gameboard-artist-image__container .gameboard-artist__pr
   width: 450px;
 }
 
-.gameboard-buttons .gameBtn {
-  border-radius: 35px;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background: none;
-  color: #fff;
-  font-size: 30px;
-  padding: 15px 25px;
+body .gameControls {
+  width: 60vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.gameboard-buttons .gameBtn:hover {
-  background: #212121;
-  color: #1db954;
+body .gameControls .gameboard-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .gameControls .gameboard-status-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .gameControls .gameboard-status-button .statusScore {
+  font-size: 30px;
 }
 /*# sourceMappingURL=styles.css.map */
