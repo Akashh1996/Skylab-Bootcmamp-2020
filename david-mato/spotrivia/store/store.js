@@ -39,5 +39,8 @@ class Store {
 
     resetSingersTracks() {
         _singersTracks = [];
+        return _singersTracks;
     }
 }
+
+module.exports = Store;
