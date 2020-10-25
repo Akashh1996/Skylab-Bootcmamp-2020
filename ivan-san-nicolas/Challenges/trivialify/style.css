@@ -53,6 +53,10 @@ body {
   margin: 20px 0;
 }
 
+#next {
+  display: none;
+}
+
 .game-author-name__title {
   padding: 20px 100px;
   background-color: #68D962;
@@ -101,12 +105,46 @@ body {
   color: #68D962;
   border: 1px solid #68D962;
   border-radius: 20px;
-  cursor: pointer;
 }
 
 .button:hover {
   background-color: #68D962;
   color: #000000;
+  cursor: pointer;
+}
+
+.wrong {
+  color: white;
+  background-color: red;
+  border: 3px solid darkred;
+}
+
+.wrong:hover {
+  background-color: darkred;
+  color: white;
+}
+
+.right {
+  color: white;
+  background-color: green;
+  border: 3px solid darkgreen;
+}
+
+.right:hover {
+  background-color: darkgreen;
+  color: #68D962;
+}
+
+.grey {
+  color: white;
+  background-color: gray;
+  border: 1px solid grey;
+}
+
+.grey:hover {
+  background-color: gray;
+  border: 1px solid darkgray;
+  color: white;
 }
 
 @media (max-width: 1300px) {

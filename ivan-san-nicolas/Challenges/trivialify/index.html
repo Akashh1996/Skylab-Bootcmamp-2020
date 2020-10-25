@@ -18,19 +18,26 @@
         </header>
         <section class="game-body" id="game-body">
             <section class="game-body__block">
-                <span class="game-author-name__title" id="game-author-name__title">avicii</span>
+                <span class="game-author-name__title" id="game-author-name__title"></span>
             </section>
             <section class="game-body__block" id='album-picture'>
             </section>
             <section class="game-body__block game-options">
                 <div class="answers-row">
-                    <div class="button game-body-options" id="option-1">AAAAAAAAAAAA</div>
-                    <div class="button game-body-options" id="option-2">AAAAAAAAAAAA</div>
+                    <div class="button game-body-options" id="option-1" onclick="checkAnswer('option-1')">
+                    </div>
+                    <div class="button game-body-options" id="option-2" onclick="checkAnswer('option-2')">
+                    </div>
                 </div>
                 <div class="answers-row">
-                    <div class="button game-body-options" id="option-3">AAAAAAAAAAAA</div>
-                    <div class="button game-body-options" id="option-4">AAAAAAAAAAAA</div>
+                    <div class="button game-body-options" id="option-3" onclick="checkAnswer('option-3')">
+                    </div>
+                    <div class="button game-body-options" id="option-4" onclick="checkAnswer('option-4')">
+                    </div>
                 </div>
+            </section>
+            <section class="game-body__block" id="next">
+                <div class="button" onclick="nextRound()">next</div>
             </section>
             <section class="game-body__block">
                 <div class="button" onclick="endGame()">
@@ -38,18 +45,18 @@
                     <span class="material-icons">stop</span>
                 </div>
                 <div class="button" id="timer">timer: 20</div>
-                <div class="button" id="total-points">total points: </div>
+                <div class="button" id="total-points"></div>
             </section>
         </section>
         <section class="game-end" id="game-end">
             <section class="game-end__block total-points">
-                <span>total points: </span>
+                <span id="endgame-totalpoints"></span>
             </section>
             <section class="game-end__block total-points-info">
-                <span>correct answers: </span>
-                <span>incorrect answers: </span>
+                <span id="endgame-correct-answers"></span>
+                <span id="endgame-incorrect-answers"></span>
             </section>
-            <div class="button play-again-button" onclick="playAgain(player)">
+            <div class="button play-again-button" onclick="playAgain()">
                 <span>play again</span>
                 <span class="material-icons">play_arrow</span>
             </div>
