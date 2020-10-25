@@ -1,3 +1,6 @@
+const cliend_id = 'ee0dc57d5f1849aa8d1f16a59f079c4f';
+const _cliend_secret_id = '82a4a00f29cf40fa85ad2e7e8da34750';
+let token;
 let _singer;
 let _singersTracks = [];
 let _singerIDs = [
@@ -14,6 +17,19 @@ let _singerIDs = [
 ]
 
 class Store {
+    async getToken() {
+		const response = await fetch('https://accounts.spotify.com/api/token', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded',
+				Authorization: 'Basic ' + btoa(cliend_id + ':' + _cliend_secret_id)
+			},
+			body: 'grant_type=client_credentials'
+		});
+		const data = await response.json();
+		return (token = data.access_token);
+    }
+
     async loadSingerTracksFromAPI(token, singerID) {
         let response = await fetch(`https://api.spotify.com/v1/artists/${singerID}/top-tracks?access_token=${token}&offset=20&limit=10&market=US`);
         let data = await response.json();

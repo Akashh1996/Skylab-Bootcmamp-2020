@@ -14,17 +14,17 @@ let numberOfWrongAnswers = 0;
 let arrOfQuestionSingers = [];
 let countDownInterval;
 let rightAnswer;
+let store;
+let accessToken;
 
-const playSpotrivia = () => {
-    playButton.style.visibility = 'hidden';
-    rightAndWrongAnswers.style.visibility = 'hidden';
-    timer.style.visibility = 'visible';
-    questionContainer.style.visibility = 'visible';
-    songOptions.style.visibility = 'visible';
+(async () => {
+    store = new Store();
+    accessToken = await store.getToken();
+})()
 
-    const store = new Store();
-    const accessToken = 'BQDRHprooW_N9PPHzjuYhGbZ4j9Lqw6MiL-ZzxQmy_HCw1-WwV7w4tlULj0gL5MJf4fdB7IkztFQm5Fhc16ThEXlv_RBwVh8gsHBNacE6qRmlwUfN2dmzCTV96jkpwXwH1vGA-FFspBdXLrwWQNXwQ_mI3QgSL2VIHH-cVd7fDW1PcWO4qmomfmWHYDJNrBtSNDkomlR';
-
+const playSpotrivia = async () => {
+    
+    
     const rounds = async () => {
         const arrOfRandomIDNums = [];
         let randomNumForSingerID;
@@ -56,7 +56,6 @@ const playSpotrivia = () => {
             if (arrOfQuestionSingers.length < 10) {
                 rounds();
             } else {
-                console.log(arrOfQuestionSingers.length);
                 playButton.style.visibility = 'visible';
                 playButton.style.top = '70%';
                 songOptions.style.visibility = 'hidden';
@@ -117,6 +116,12 @@ const playSpotrivia = () => {
                 }
                 randomButtonNumber_Generator();
             } while (arrOfRandomButtonNumber.length < 4)
+
+            playButton.style.visibility = 'hidden';
+            rightAndWrongAnswers.style.visibility = 'hidden';
+            timer.style.visibility = 'visible';
+            questionContainer.style.visibility = 'visible';
+            songOptions.style.visibility = 'visible';
             
             countDownInterval = setInterval(() => {
                 if (!+timer.innerHTML) {
