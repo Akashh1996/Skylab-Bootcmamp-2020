@@ -42,7 +42,6 @@ class SpotifyGame {
 				if (randomNumForWrongAnswer.includes(randomNum)) continue;
 				randomNumForWrongAnswer.push(randomNum);
 			}
-			console.log(randomNumForWrongAnswer);
 			return randomNumForWrongAnswer;
 		};
 
@@ -51,7 +50,7 @@ class SpotifyGame {
 			const curPreviewName = [];
 			curPreviewName.push(tracks[currentRound].name);
 			console.log(curPreviewName);
-			// DOMElements.artistPreview.autoplay = true;
+			DOMElements.artistPreview.autoplay = true;
 			DOMElements.artistPreview.src = tracks[currentRound].preview_url;
 			const randomTracks = tracks
 				.filter((track, index) => {
@@ -60,26 +59,27 @@ class SpotifyGame {
 				.map((trackName) => {
 					return trackName.name;
 				});
-			console.log(randomTracks);
-			debugger;
 			wrongAnswerIndex.forEach((wrongTracks) => {
 				curPreviewName.push(randomTracks[wrongTracks]);
 			});
-			console.log(curPreviewName);
+			DOMElements.optionGameBtn.forEach((btnOption, index) => {
+				btnOption.textContent = `${curPreviewName[index]}`;
+			});
 		};
 
 		const updateScore = () => {};
 
 		const nextRound = () => {
-			let secondsRemaining = 30;
+			let roundCounter = 0;
+			let secondsRemaining = 10;
 			let timer = setInterval(() => {
 				secondsRemaining--;
 				console.log(secondsRemaining);
 				if (secondsRemaining <= 0) {
-					setCurrentRound(this.topTracks);
-					updateScore();
+					nextRound(roundCounter++);
+					setCurrentRound(this.topTracks, roundCounter);
+					// updateScore();
 					clearInterval(timer);
-					nextRound();
 				}
 			}, 1000);
 		};
@@ -90,7 +90,7 @@ class SpotifyGame {
 			DOMElements.artistImage.src = this.image;
 			getGenresList(this.genres);
 			// nextRound();
-			setCurrentRound(this.topTracks);
+			setCurrentRound(this.topTracks, 4);
 		})();
 	}
 }
