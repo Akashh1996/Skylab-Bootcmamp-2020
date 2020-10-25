@@ -14,7 +14,7 @@
         <div id="question-container" class = 'q-container hide'>
             <div class = 'artist' id="question"></div>
             <div class = 'image-container'>
-                <img class = 'image-question' src="Spotify_Icon_RGB_Green.png" width="300px">
+                <img class = 'image-question' id = 'albumImg' src="Spotify_Icon_RGB_Green.png" width="300px">
             </div>
             <span class = 'artist-question' id="question">Which song is from</span>
             <div id="answer-buttons" class = 'btn-grid'>
@@ -42,12 +42,14 @@
             let playlistComponent = new PlaylistComponent(playList);
             let trackNameArray = [];
             let trackArtistsNameArray = [];
+            let albumImageArray = [];
 
             if (playList) {
 
                 for (let i = 0; i < playList.items.length; i++) {
                     trackNameArray.push(playList.items[i].track.name);
                     trackArtistsNameArray.push(playList.items[i].track.artists[0].name);
+                    albumImageArray.push(playList.items[i].track.album.images[1].url);
                 }
 
                 let questionsObject = [ {
@@ -57,7 +59,8 @@
                         { text: `${trackNameArray[6]}`, correct: false},
                         { text: `${trackNameArray[3]}`, correct: false},
                         { text: `${trackNameArray[9]}`, correct: false}
-                    ]
+                    ],
+                    albumImage: `${albumImageArray[0]}`
                 },
                 {
                     question: `${trackArtistsNameArray[1]}`,
@@ -66,7 +69,8 @@
                         { text: `${trackNameArray[8]}`, correct: false},
                         { text: `${trackNameArray[1]}`, correct: true},
                         { text: `${trackNameArray[3]}`, correct: false}
-                    ]
+                    ],
+                    albumImage: `${albumImageArray[1]}`
                 },
                 {
                     question: `${trackArtistsNameArray[2]}`,
@@ -75,7 +79,8 @@
                         {text: `${trackNameArray[10]}`, correct: false},
                         {text: `${trackNameArray[5]}`, correct: false},
                         {text: `${trackNameArray[2]}`, correct: true}
-                    ]
+                    ],
+                    albumImage: `${albumImageArray[2]}`
                 },
                 {
                     question: `${trackArtistsNameArray[3]}`,
@@ -84,7 +89,8 @@
                         {text: `${trackNameArray[3]}`, correct: true},
                         {text: `${trackNameArray[12]}`, correct: false},
                         {text: `${trackNameArray[6]}`, correct: false}
-                    ]
+                    ],
+                    albumImage: `${albumImageArray[3]}`
                 },
                 {
                     question: `${trackArtistsNameArray[4]}`,
@@ -93,7 +99,8 @@
                         {text: `${trackNameArray[2]}`, correct: false},
                         {text: `${trackNameArray[4]}`, correct: true},
                         {text: `${trackNameArray[11]}`, correct: false}
-                    ]
+                    ],
+                    albumImage: `${albumImageArray[4]}`
                 },
                 {
                     question: `${trackArtistsNameArray[5]}`,
@@ -102,16 +109,18 @@
                         {text: `${trackNameArray[10]}`, correct: false},
                         {text: `${trackNameArray[14]}`, correct: false},
                         {text: `${trackNameArray[5]}`, correct: true}
-                    ]
+                    ],
+                    albumImage: `${albumImageArray[5]}`
                 },
                 {
                     question: `${trackArtistsNameArray[6]}`,
                     answers: [
-                        {text: `${trackNameArray[15]}`, correct: false},
+                        {text: `${trackNameArray[12]}`, correct: false},
                         {text: `${trackNameArray[0]}`, correct: false},
                         {text: `${trackNameArray[10]}`, correct: false},
                         {text: `${trackNameArray[6]}`, correct: true}
-                    ]
+                    ],
+                    albumImage: `${albumImageArray[6]}`
                 },
                 {
                     question: `${trackArtistsNameArray[7]}`,
@@ -120,7 +129,8 @@
                         {text: `${trackNameArray[11]}`, correct: false},
                         {text: `${trackNameArray[7]}`, correct: true},
                         {text: `${trackNameArray[4]}`, correct: false}
-                    ]
+                    ],
+                    albumImage: `${albumImageArray[7]}`
                 },
                 {
                     question: `${trackArtistsNameArray[8]}`,
@@ -129,7 +139,8 @@
                         {text: `${trackNameArray[9]}`, correct: false},
                         {text: `${trackNameArray[13]}`, correct: false},
                         {text: `${trackNameArray[0]}`, correct: false}
-                    ]
+                    ],
+                    albumImage: `${albumImageArray[8]}`
                 },
                 {
                     question: `${trackArtistsNameArray[9]}`,
@@ -138,16 +149,18 @@
                         {text: `${trackNameArray[1]}`, correct: false},
                         {text: `${trackNameArray[14]}`, correct: false},
                         {text: `${trackNameArray[10]}`, correct: false}
-                    ]
+                    ],
+                    albumImage: `${albumImageArray[9]}`
                 },
                 {
                     question: `${trackArtistsNameArray[10]}`,
                     answers: [
                         {text: `${trackNameArray[6]}`, correct: false},
                         {text: `${trackNameArray[10]}`, correct: true},
-                        {text: `${trackNameArray[15]}`, correct: false},
+                        {text: `${trackNameArray[4]}`, correct: false},
                         {text: `${trackNameArray[2]}`, correct: false}
-                    ]
+                    ],
+                    albumImage: `${albumImageArray[10]}`
                 },
                 {
                     question: `${trackArtistsNameArray[11]}`,
@@ -156,7 +169,8 @@
                         {text: `${trackNameArray[7]}`, correct: false},
                         {text: `${trackNameArray[9]}`, correct: false},
                         {text: `${trackNameArray[11]}`, correct: true}
-                    ]
+                    ],
+                    albumImage: `${albumImageArray[11]}`
                 },
                 {
                     question: `${trackArtistsNameArray[12]}`,
@@ -165,7 +179,8 @@
                         {text: `${trackNameArray[0]}`, correct: false},
                         {text: `${trackNameArray[12]}`, correct: true},
                         {text: `${trackNameArray[5]}`, correct: false}
-                    ]
+                    ],
+                    albumImage: `${albumImageArray[12]}`
                 },
                 {
                     question: `${trackArtistsNameArray[13]}`,
@@ -174,7 +189,8 @@
                         {text: `${trackNameArray[13]}`, correct: true},
                         {text: `${trackNameArray[14]}`, correct: false},
                         {text: `${trackNameArray[6]}`, correct: false}
-                    ]
+                    ],
+                    albumImage: `${albumImageArray[13]}`
                 },
                 {
                     question: `${trackArtistsNameArray[14]}`,
@@ -183,25 +199,11 @@
                         {text: `${trackNameArray[3]}`, correct: false},
                         {text: `${trackNameArray[12]}`, correct: false},
                         {text: `${trackNameArray[14]}`, correct: true}
-                    ]
+                    ],
+                    albumImage: `${albumImageArray[14]}`
                 },
-                {
-                    question: `${trackArtistsNameArray[15]}`,
-                    answers: [
-                        {text: `${trackNameArray[15]}`, correct: true},
-                        {text: `${trackNameArray[0]}`, correct: false},
-                        {text: `${trackNameArray[11]}`, correct: false},
-                        {text: `${trackNameArray[8]}`, correct: false}
-                    ]
-                }
                 ]
 
-                let artistImage = document.querySelector('.image-question');
-                    playlistComponent.updateHtmlValue(
-                        artistImage,
-                        'src',
-                        playList.items[0].track.album.images[1].url
-                    );
 
                 // document.querySelector('#image-question').setAttribute = playList.items[0].track.album.images[1].url;
 
@@ -214,6 +216,7 @@
                 const nextButton = document.getElementById('next-button');
                 const questionContainer = document.getElementById('question-container');
                 const questionElement = document.querySelector('#question');
+                // const artistImage = document.querySelector('#albumImg');
                 const answerButtons = document.getElementById('answer-buttons');
                 let shuffledQuestions, currentQuestionsIndex;
 
@@ -238,7 +241,21 @@
                     showQuestion(shuffledQuestions[currentQuestionsIndex]);
                 }
 
+                // let artistImage = document.querySelector('.image-question');
+                //     playlistComponent.updateHtmlValue(
+                //         artistImage,
+                //         'src',
+                //         playList.items[0].track.album.images[1].url
+                //     );
+
                 function showQuestion(questionsObject) {
+                    // artistImage.getAttribute = questionsObject.albumImage;
+                    let artistImage = document.querySelector('.image-question');
+                    playlistComponent.updateHtmlValue(
+                        artistImage,
+                        'src',
+                        questionsObject.albumImage
+                    );
                     questionElement.innerText = questionsObject.question;
                     questionsObject.answers.forEach(answers => {
                         const button = document.createElement('button');
