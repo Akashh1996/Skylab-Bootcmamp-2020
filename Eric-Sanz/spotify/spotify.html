@@ -9,14 +9,19 @@
 <body>
     <header>
         <img src="Spotify_Logo_RGB_Green.png" class = 'spotify-logo'>
+        <div class = 'timer'>300 seconds</div>
+        <div class = 'points'></div>
     </header>
     <div class="game-container">
         <div id="question-container" class = 'q-container hide'>
-            <div class = 'artist' id="question"></div>
+            <!-- <div class = 'artist' id="question"></div> -->
             <div class = 'image-container'>
                 <img class = 'image-question' id = 'albumImg' src="Spotify_Icon_RGB_Green.png" width="300px">
             </div>
-            <span class = 'artist-question' id="question">Which song is from</span>
+            <div class = 'artist-container'>
+                <div class = 'artist-question'>Which of these songs is from</div>
+                <div class = 'artist' id="question"></div>
+            </div>
             <div id="answer-buttons" class = 'btn-grid'>
                 <button class = 'btn'>Answer 1</button>
                 <button class = 'btn'>Answer 2</button>
@@ -219,6 +224,8 @@
                 // const artistImage = document.querySelector('#albumImg');
                 const answerButtons = document.getElementById('answer-buttons');
                 let shuffledQuestions, currentQuestionsIndex;
+                let pointsCounter = document.querySelector('.points');
+                let points;
 
                 startButton.addEventListener('click', startGame)
                 nextButton.addEventListener('click', () => {
@@ -231,9 +238,10 @@
                     shuffledQuestions = questionsObject.sort(() => Math.random() - .5);
                     currentQuestionsIndex = 0;
                     questionContainer.classList.remove('hide');
+                    points = 0;
+                    pointsCounter.innerText = `${points} points`;
                     setNextQuestion();
                     //set timer
-                
                 }
 
                 function setNextQuestion() {
@@ -241,15 +249,7 @@
                     showQuestion(shuffledQuestions[currentQuestionsIndex]);
                 }
 
-                // let artistImage = document.querySelector('.image-question');
-                //     playlistComponent.updateHtmlValue(
-                //         artistImage,
-                //         'src',
-                //         playList.items[0].track.album.images[1].url
-                //     );
-
                 function showQuestion(questionsObject) {
-                    // artistImage.getAttribute = questionsObject.albumImage;
                     let artistImage = document.querySelector('.image-question');
                     playlistComponent.updateHtmlValue(
                         artistImage,
@@ -284,6 +284,10 @@
                     Array.from(answerButtons.children).forEach(button => {
                         setStatusClass(button, button.dataset.correct);
                     })
+                    if (correct) {
+                            points+= 10;
+                            pointsCounter.innerText = `${points} points`;
+                    }
                     if (shuffledQuestions.length > currentQuestionsIndex + 1) {
                         nextButton.classList.remove('hide');
                     } else {

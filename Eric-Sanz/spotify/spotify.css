@@ -36,16 +36,27 @@ header {
 	position: fixed;
 	top: 0;
 	left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
 	height: 50px;
 	width: 100%;
+	min-width: 440px;
 	background-color: black;
 	box-shadow: 0 0 10px 2px;
 }
 
 .spotify-logo {
-	margin-top: 2px;
 	width: 130px;
-	margin-left: 40px;
+}
+
+.timer {
+	color: white;
+}
+
+.points {
+	color: white;
 }
 
 .game-container {
@@ -64,17 +75,24 @@ header {
 }
 
 .artist {
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-left: 10px;
 	font-weight: bold;
 	font-size: 24px;
 	display: flex;
 	justify-content: center;
+	text-decoration: underline;
+}
+
+.artist-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 20px;
 }
 
 .artist-question {
 	font-weight: bold;
-	font-size: 24px;
+	font-size: 18px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
