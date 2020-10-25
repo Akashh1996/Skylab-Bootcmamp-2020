@@ -4,15 +4,19 @@ let button1 = document.getElementById('butons_answer1');
 let button2 = document.getElementById('butons_answer2');
 let button3 = document.getElementById('butons_answer3');
 let button4 = document.getElementById('butons_answer4');
+let audioBox = document.getElementById('audioBox');
 let timerBox = document.getElementById('timer');
 let correctBox = document.getElementById('correct-answer');
+let playAgain = document.getElementById('play-again');
 let wrongAnswers = ['Paranoid', 'Master of Puppets', 'Ace of Spades', 'Crazy Train', 'The Number of the Beast', 'Highway Star', 'Highway to Hell', 'Cowboys from Hell', 'Rainbow in the Dark', 'Running with the Devil', '2 Minutes to Midnight', 'Bark at the Moon', 'Roots Bloody Roots', 'Cemetery Gates', 'Fear of the Dark', 'Whiplash', 'Symphony of Destruction']
 let buttonArray = [button1, button2, button3, button4];
 let randomArtistsArray = [];
 let randomButtons = [];
-let time = 10;
+let time = 30;
 let index = 0;
 let score = 0;
+
+playAgain.style.display= 'none';
 
 (async function spoty() {
     await store.getSpotifyData();
@@ -20,7 +24,8 @@ let score = 0;
         artistArray.push([
             itemArray[i].track.artists[0].name,
             itemArray[i].track.name,
-            itemArray[i].track.album.images[1].url
+            itemArray[i].track.album.images[1].url,
+            itemArray[i].track.preview_url
         ]);
     }
     updateDisplay();
@@ -35,7 +40,7 @@ function randomFour (arr) {
 
 function randomArtists (arr) {
     while(arr.length < 10){
-        var r = Math.floor(Math.random() * 27) + 1;
+        var r = Math.floor(Math.random() * 27);
         if(arr.indexOf(r) === -1) arr.push(r);
     }
 }
@@ -48,30 +53,30 @@ function updateDisplay() {
     if (index === 10) {
         timerBox.innerHTML = `Game over! score: ${score}`
         clearInterval(timer);
+        playAgain.style.display = 'block'
     }
     artistName.innerHTML = artistArray[randomArtistsArray[index]][0];
     artistName.className = artistArray[randomArtistsArray[index]][1];
     artistImage.src = artistArray[randomArtistsArray[index]][2];
+    audioBox.src = artistArray[randomArtistsArray[index]][3];
     randomButtons = [];
     randomFour (randomButtons);
     buttonArray[randomButtons[0]].innerHTML = artistArray[randomArtistsArray[index]][1];
     for (let i = 1; i < randomButtons.length; i++) {
         buttonArray[randomButtons[i]].innerHTML = wrongAnswers[Math.floor(Math.random() * 17)];
     }
-    time = 10;
+    time = 30;
 }
 
 const buttons = document.querySelector('.section__butons');
 buttons.addEventListener('click', (event) => {
 
     if (event.target.innerHTML === artistName.className) {
-        console.log('correcto!')
         correctBox.innerHTML = 'CORRECT!'
         index ++;
-        updateDisplay();
         score ++;
+        updateDisplay();
     } else {
-        console.log('Fail!')
         correctBox.innerHTML = `Wrong! The correct answer was ${artistName.className}`
         index ++;
         updateDisplay();
@@ -87,6 +92,7 @@ let timer = setInterval (function () {
 
     if (time === 0) {
         index ++;
+        correctBox.innerHTML = `Wrong! The correct answer was ${artistName.className}`
         updateDisplay();
     }
 
