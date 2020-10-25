@@ -19,15 +19,100 @@
             let playlist;
             let turn=0;
             let score=0;
-
+            let questions = [
+                {
+                    index: 1,
+                    title: '¿Con cuál de las siguientes películas asociarías esta BSO?',
+                    answers: ['Gladiator', 'Inception', 'Interstellar', 'The Last Samurai'],
+                    correct: 'Inception'
+                },
+                {
+                    index: 2,
+                    title: '¿Con cuál de las siguientes películas asociarías esta BSO?',
+                    answers: [
+                        'Inception',
+                        'The Dark Knight Rises',
+                        'Interstellar',
+                        'The Dark Knight'
+                    ],
+                    correct: 'Interstellar'
+                },
+                {
+                    index: 9,
+                    title: '¿Con cuál de las siguientes películas asociarías esta BSO?',
+                    answers: [
+                        'Batman Begins',
+                        'Dunkerque',
+                        'Blade Runner 2049',
+                        'Pirates of the Caribbean'
+                    ],
+                    correct: 'Blade Runner 2049'
+                },
+                {
+                    index: 13,
+                    title: '¿Con cuál de las siguientes películas asociarías esta BSO?',
+                    answers: [
+                        'The Last Samurai',
+                        'Interstellar',
+                        'Gladiator',
+                        'Blade Runner 2049'
+                    ],
+                    correct: 'The Last Samurai'
+                },
+                {
+                    index: 15,
+                    title: '¿Con cuál de las siguientes películas asociarías esta BSO?',
+                    answers: [
+                        'Dunkerque',
+                        'The Da Vinci Code',
+                        'The Lion King',
+                        'The Dark Knight'
+                    ],
+                    correct: 'The Dark Knight'
+                },
+                {
+                    index: 21,
+                    title: '¿Con cuál de las siguientes películas asociarías esta BSO?',
+                    answers: ['Inception', 'Inferno', 'Angels & Demons', 'The Da Vinci Code'],
+                    correct: 'Inception'
+                },
+                {
+                    index: 26,
+                    title: '¿Con cuál de los siguientes personajes asociarías esta BSO?',
+                    answers: ['Harvey Dent', 'Batman', 'Joker', 'Gilberto Cao'],
+                    correct: 'Batman'
+                },
+                {
+                    index: 30,
+                    title: '¿Con cuál de los siguientes personajes asociarías esta BSO?',
+                    answers: ['Harvey Dent', 'Batman', 'Joker', 'Gilberto Cao'],
+                    correct: 'Joker'
+                },
+                {
+                    index: 41,
+                    title: '¿Con cuál de las siguientes películas asociarías esta BSO?',
+                    answers: ['Dunkerque', 'The Last Samurai', 'Gladiator', 'Inferno'],
+                    correct: 'The Last Samurai'
+                },
+                {
+                    index: 58,
+                    title: '¿Con cuál de los siguientes videojuegos asociarías esta BSO?',
+                    answers: [
+                        'Fifa 2007',
+                        'Call of Duty: Modern Warfare 2',
+                        'Tetris',
+                        'Fifa 2008'
+                    ],
+                    correct: 'Call of Duty: Modern Warfare 2'
+                }
+            ];
             (async function(){
                 await store.getToken()
                 playlist = await store.loadPlaylist()
                 answerQuiz(turn,score)
             })();
-
             function answerQuiz() {
-                document.getElementById("quiz").innerHTML = store.loadQuestion(playlist,turn)
+                document.getElementById("quiz").innerHTML = store.loadQuestion(playlist,turn,questions)
                 document.getElementById("submit").addEventListener('click', () => {
                     let data = new FormData(form);
                     let answer = "";
@@ -44,7 +129,6 @@
                     nextTurn()
                 })
             }
-
             function nextTurn() {
                 document.getElementById('submit').style.display = "none"
                 document.getElementById('next').style.display = "inline-block";
@@ -60,7 +144,6 @@
                     })
                 }
             }
-
             function endQuiz() {
                 document.getElementById("quiz-box").style.display="none";
                 document.getElementById("back").style.display="inline-block"
@@ -68,7 +151,6 @@
                         document.getElementById('back').src="./home.html"
                     })
             }
-
 		</script>
 	</body>
 </html>
