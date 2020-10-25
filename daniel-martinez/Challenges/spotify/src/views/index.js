@@ -1,6 +1,6 @@
+let arrayOptions;
 
 class Quiz {
-
     randomNum(numOfSongs){
         return Math.floor(Math.random()*numOfSongs);
     }
@@ -41,14 +41,44 @@ class Quiz {
       
     checkAnswer(option, correctSong){
         if (option === correctSong){
-            //paintOthersGray();
             document.getElementById('correct-incorrect__text').innerHTML = 'Correct!';
             document.getElementById('correct-incorrect__symbol').setAttribute('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Green_tick_pointed.svg/1200px-Green_tick_pointed.svg.png");
+            this.nextButton();
+            this.disableButtonsCorrect(option);
         } else {
+            //paintCorrectOne
             document.getElementById('correct-incorrect__text').innerHTML = 'Incorrect!';
             document.getElementById('correct-incorrect__symbol').setAttribute('src', "https://i.dlpng.com/static/png/6658483_preview.png");
+            this.nextButton();
+            this.disableButtonsIncorrect(option, correctSong);
         }
-        //
+        //stop timer
+        //setTimeout > next round
+    }
+
+    disableButtonsCorrect(option){
+        for (let i = 0; i < 4; i++){
+            if(arrayOptions[i] !== option){
+                document.getElementById(`option${i+1}`).setAttribute('disabled',true);
+                document.getElementById(`option${i+1}`).style.backgroundColor = "grey";
+            }
+        }
+    }
+
+    disableButtonsIncorrect(option, correctSong){
+        for (let i = 0; i < 4; i++){
+            document.getElementById(`option${i+1}`).setAttribute('disabled',true);
+            if(arrayOptions[i] !== option && arrayOptions[i] !== correctSong){
+                document.getElementById(`option${i+1}`).style.backgroundColor = "grey";
+            } else if (arrayOptions[i] === option) {
+                document.getElementById(`option${i+1}`).style.backgroundColor = "red";
+            }
+        }
+    }
+
+    nextButton(){
+        document.getElementById('correct-incorrect__next-button').style.display = "block";
+        document.getElementById('correct-incorrect__next-button').innerHTML = "Next";
     }
 }
 
@@ -61,10 +91,15 @@ const quiz = new Quiz;
     let indexSong = quiz.randomNum(numOfSongs);
     let correctSong = playlistObj.tracks.items[indexSong].track.name;
 
+    let round = +window.location.search.replace('?round=','');
+    document.getElementById("stats__round").innerHTML = `Round ${round}`;
+    document.getElementById("stats__points").innerHTML = `Points ${points}/${round-1}`;
+    document.getElementById('correct-incorrect__next-button').setAttribute('href',`./spotify.html?round=${round+1}`);
+
     document.getElementById('playlist').innerHTML = `(Playlist name: ${playlistObj.name})`;
     document.getElementById('album-block').innerHTML = quiz.setAlbumImage(playlistObj,indexSong);
 
-    let arrayOptions = quiz.createArrayOfOptions(playlistObj,indexSong,numOfSongs);
+    arrayOptions = quiz.createArrayOfOptions(playlistObj,indexSong,numOfSongs);
     arrayOptions = quiz.shuffle(arrayOptions);
     document.getElementById('option1').innerHTML = arrayOptions[0];
     let option1 = document.getElementById('option1').innerHTML;
