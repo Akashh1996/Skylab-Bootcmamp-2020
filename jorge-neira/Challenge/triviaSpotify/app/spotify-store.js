@@ -2,8 +2,6 @@ const cliend_id = '1ab978dbc11f4ec1a57242474134a007';
 const _cliend_secret_id = 'fa2bc6e91e6c4c2b90420a2565b26669';
 let token;
 let artistsList;
-let tracks;
-let albums;
 class SpotifyStore {
 	async getToken() {
 		try {
@@ -23,7 +21,7 @@ class SpotifyStore {
 		}
 	}
 
-	async getArtist() {
+	async getSeveralArtist() {
 		const response = await fetch(
 			`https://api.spotify.com/v1/artists?ids=7BqEidErPMNiUXCRE0dV2n,2xiIXseIJcq3nG7C8fHeBj,5eAWCfyUhZtHHtBdNk56l1,06VibSJEr3GLxLBBZhRums,3TOqt5oJwL9BE2NG9MEwDa,2CIMQHirSU0MQqyYHq0eOx,64KEffDW9EtZ1y2vBYgq8T,4YwB41gFHCxY5bcNR3CcIH,6aUgzC0cMh0StjV7LyFEDr`,
 			{
@@ -34,35 +32,28 @@ class SpotifyStore {
 		const artists = await response.json();
 		return (artistsList = artists.artists);
 	}
-	async getAlbums(artistId) {
+	async getArtist(artistId) {
 		const response = await fetch(
-			`https://api.spotify.com/v1/artists/${artistId}/albums`,
+			`https://api.spotify.com/v1/artists/${artistId}/`,
 			{
 				method: 'GET',
 				headers: { Authorization: 'Bearer ' + token }
 			}
 		);
-		const spotifyAlbums = await response.json();
-		return (albums = spotifyAlbums);
+		const spotifyArtist = await response.json();
+		return spotifyArtist;
 	}
-	async getTracks(artistId) {
+	async getTopTracks(artistId) {
 		const response = await fetch(
-			`https://api.spotify.com/v1/artists/${artistId}/top-tracks`,
+			`https://api.spotify.com/v1/artists/${artistId}/top-tracks?country=ES`,
 			{
 				method: 'GET',
 				headers: { Authorization: 'Bearer ' + token }
 			}
 		);
 		const spotifyTracks = await response.json();
-		return (tracks = spotifyTracks);
+		return spotifyTracks;
 	}
 }
 
 let spotifyStore = new SpotifyStore();
-
-(async () => {
-	console.log(await spotifyStore.getToken());
-	console.log(await spotifyStore.getArtist());
-	console.log(await spotifyStore.getAlbums('7BqEidErPMNiUXCRE0dV2n'));
-	console.log(await spotifyStore.getTracks('7BqEidErPMNiUXCRE0dV2n'));
-})();

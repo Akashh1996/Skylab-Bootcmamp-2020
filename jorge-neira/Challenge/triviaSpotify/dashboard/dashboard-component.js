@@ -1,6 +1,5 @@
 class SpotifyArtistGrid {
 	constructor(artistArr) {
-		console.log(artistArr);
 		this.artistArr = artistArr;
 	}
 	createDashBoardGrid() {
@@ -27,7 +26,7 @@ class SpotifyArtistGrid {
 
 (async () => {
 	await spotifyStore.getToken();
-	const artistList = await spotifyStore.getArtist();
+	const artistList = await spotifyStore.getSeveralArtist();
 	const spotifyArtistGrid = new SpotifyArtistGrid(artistList);
 	spotifyArtistGrid.createDashBoardGrid();
 })();
