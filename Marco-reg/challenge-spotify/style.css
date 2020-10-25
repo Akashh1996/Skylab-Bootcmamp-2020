@@ -73,5 +73,10 @@ nav {
 	transform: translateX(0%);
 }
 body {
-	background-image: linear-gradient(#c074b2, #8ab5e8);
+	background-color: tomato;
+}
+.main-display {
+	display: flex;
+	justify-content: center;
+	margin: 40px;
 }

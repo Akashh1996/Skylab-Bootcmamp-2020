@@ -37,6 +37,7 @@ const spotify = new SpotifyStore();
     await spotify.getToken();
     await spotify.playlist();
     
+    
     let songsList = _songs.tracks.items;
     let imageArray = [];
     
@@ -44,6 +45,13 @@ const spotify = new SpotifyStore();
     let songlist=_songs.tracks.items;
 
     let songsArray=[];
+    for(i in songsList) {
+        imageArray.push(songsList[i].track.album.images[1])
+        }
+        for(i in songsList) {
+        artistsArray.push(songsList[i].track.artists[0].name)
+        }
+    
     for(i in songlist){
         console.log(songlist[i].track.name);
         songsArray.push(songlist[i].track.name)
@@ -59,8 +67,8 @@ const spotify = new SpotifyStore();
         document.getElementById("artist-1").innerHTML = songsList[randomIndex].track.artists[0].name;
         document.getElementById("artist-2").innerHTML = songsList[randomIndex].track.artists[0].name;
         document.getElementById("artist-3").innerHTML = songsList[randomIndex].track.artists[0].name;
-        //document.getElementById("song-image").src = imageArray[randomIndex].url;
-        //document.querySelector("button").innerHTML = randomIndex;
+        document.getElementById("song-image").src = imageArray[randomIndex].url;
+        document.querySelector("button").innerHTML = randomIndex;
     }
     displayRandomValues();
 })();
