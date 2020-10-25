@@ -53,6 +53,7 @@
         })
 
         let abilityId = +window.location.search.split('&')[1].split('=')[1].split('/')[0]
+        
         store.loadAbilityPokemon(abilityId).then((ability) => {
             document.getElementById('ability').innerHTML = store.languageAbility(ability)    
             document.getElementById('abilityName').innerHTML = `Ability - ${ability.name}`     

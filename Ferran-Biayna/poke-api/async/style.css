@@ -221,6 +221,7 @@ header h1 {
     margin-right: 20px;
     margin-top: 10px;
     text-transform: capitalize;
+    padding-bottom: 20px;
 }
 
 .description-ability {
@@ -242,4 +243,17 @@ header h1 {
 .poke > h1 {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.anchorlist {
+
+}
+
+.anchorlist a:link, .anchorlist a:visited, .anchorlist a:active, .anchorlist a:link {
+    color: black;
+    text-decoration: none;
+}
+
+.anchorlist a:hover {
+    color: rgb(51, 20, 187);
 }

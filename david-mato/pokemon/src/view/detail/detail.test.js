@@ -43,6 +43,6 @@ describe('detail', () => {
 
         detailComponent.loadPhoto(element, property, value)
 
-        expect(element[property]).toEqual(`<img src="${value}" />`);
+        expect(element[property]).toEqual(`<img src="${value}" class=\"poke-img\"/>`);
     })
 })

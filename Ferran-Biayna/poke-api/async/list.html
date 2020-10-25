@@ -25,9 +25,10 @@
     </div>
     <script src="store.js"></script>
     <script>
-        store.loadPokedex().then((pokedex) => {
-            document.getElementById('list-heroes-list').innerHTML = store.anchorPokedex(pokedex);
-        })
+        (async () => {
+            const pokedex = await store.loadPokedex()
+            document.getElementById('list-heroes-list').innerHTML = store.anchorPokedex(pokedex)
+        })()
     </script>
 </body>
 </html>

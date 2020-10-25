@@ -27,13 +27,18 @@
             const abilityName = params.get('abilityName');
             store.loadPokeAbilityByName(abilityName).then(() => {
                 const ability = store.getPokeAbility();
-                const abilityComponent = new AbilityComponent(ability);
 
-                const abilityName = document.getElementById('poke-ability-name');
-                abilityComponent.updateHtmlElement(abilityName, ability.name);
-                
-                const abilityExplanation = document.getElementById('ability-explanation');
-                abilityComponent.updateHtmlElement(abilityExplanation, ability.effect_entries[1].effect);
+                if(ability) {
+                    const abilityComponent = new AbilityComponent(ability);
+    
+                    const abilityName = document.getElementById('poke-ability-name');
+                    abilityComponent.updateHtmlElement(abilityName, ability.name);
+                    
+                    const abilityExplanation = document.getElementById('ability-explanation');
+                    abilityComponent.updateHtmlElement(abilityExplanation, ability.effect_entries[1].effect);
+                } else {
+                    document.getElementById('poke-ability-name').innerHTML = 'No se ha podido mostrar la habilidad del Pokémon';
+                }
             })
         })
     </script>
