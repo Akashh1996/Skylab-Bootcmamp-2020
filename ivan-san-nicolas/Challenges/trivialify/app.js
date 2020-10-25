@@ -21,9 +21,14 @@ function countdown() {
     timer.innerHTML = `Timer: ${timeLeft}`;
     timeLeft--;
     timer.innerHTML = `Timer: ${timeLeft}`;
+    if (timeLeft === 10) {
+        document.getElementById('timer').className = 'button warning';
+    }
+    if (timeLeft === 5) {
+        document.getElementById('timer').className = 'button alarm';
+    }
     if (timeLeft === 0) {
-        debugger;
-        return checkAnswer(`option-5`);
+        return checkAnswer('wrong');
     }
 }
 
@@ -89,6 +94,7 @@ async function fillOtherOptions() {
 
 function checkAnswer(optionId) {
     if (player.answer === false) {
+        clearInterval(countdownLeft);
         player.answer = true;
         document.getElementById('next').style.display = 'flex';
         if (optionId === player.correctAnswer) {
@@ -100,6 +106,11 @@ function checkAnswer(optionId) {
             }
             const actualOption = document.getElementById(optionId);
             actualOption.className = 'button game-body-options right';
+        } else if (optionId === 'wrong') {
+            for (let index = 1; index < 5; index++) {
+                document.getElementById(`option-${index}`).className = 'button game-body-options grey';
+            }
+            document.getElementById(player.correctAnswer).className = 'button game-body-options right';
         } else {
             player.incorrectAnswers++;
             for (let index = 1; index < 5; index++) {
@@ -122,19 +133,32 @@ function endGame() {
     document.getElementById('endgame-correct-answers').innerHTML = `correct answers: ${player.correctAnswers}`;
     document.getElementById('endgame-incorrect-answers').innerHTML = `incorrect answers: ${player.incorrectAnswers}`;
 
-    //clearInterval(myVar);
+    clearInterval(countdownLeft);
 }
 
+function resetPlayer() {
+    player = {
+        points: 0,
+        correctAnswers: 0,
+        incorrectAnswers: 0,
+        usedArtists: [],
+        optionsLeft: [1, 2, 3, 4],
+        correctAnswer: '',
+        answer: false,
+        rounds: 0
+    }
+}
 
 function playAgain() {
-    function resetPlayer() {
-        player.points = 0;
-        player.correctAnswers = 0;
-        player.incorrectAnswers = 0;
-    }
     resetPlayer();
-    gameEnd.style.display = 'none';
-    gameBody.style.display = 'flex';
+    document.getElementById('timer').innerHTML = `total points: ${player.points}`;
+    for (let index = 1; index < 5; index++) {
+        document.getElementById(`option-${index}`).className = 'button game-body-options';
+    }
+    document.getElementById('game-end').style.display = 'none';
+    document.getElementById('game-body').style.display = 'flex';
+    nextRound();
+    player.rounds--;
 }
 
 async function nextRound() {
@@ -142,6 +166,10 @@ async function nextRound() {
     if (player.rounds === 20) {
         return endGame();
     } else {
+        timeLeft = 20;
+        document.getElementById('timer').innerHTML = `timer: ${timeLeft}`;
+        countdownLeft = null;
+        countdownLeft = setInterval(countdown, 1000);
         document.getElementById('next').style.display = 'none';
         player.answer = false;
         for (let index = 1; index < 5; index++) {
@@ -150,7 +178,6 @@ async function nextRound() {
         setPlayerPoints(player);
         await getRandomArtist(artists);
         fillOtherOptions();
-        timer = 20;
     }
 }
 
@@ -159,5 +186,5 @@ async function nextRound() {
     setPlayerPoints(player);
     await getRandomArtist(artists);
     fillOtherOptions();
-    //var myVar = setInterval(countdown, 1000);
 })()
+let countdownLeft = setInterval(countdown, 1000);

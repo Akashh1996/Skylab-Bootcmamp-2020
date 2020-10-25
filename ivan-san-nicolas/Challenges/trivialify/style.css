@@ -147,6 +147,14 @@ body {
   color: white;
 }
 
+.warning {
+  color: orange;
+}
+
+.alarm {
+  color: red;
+}
+
 @media (max-width: 1300px) {
   .game-options {
     flex-direction: column;
