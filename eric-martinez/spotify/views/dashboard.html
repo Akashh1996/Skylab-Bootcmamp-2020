@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
+    <header>
+        <img class="img_header" src="https://www.scdn.co/i/_global/twitter_card-default.jpg">
+        <h1 id="title">Trivialify</h1>
+    </header>
+    
     <h1 id="artistName"></h1>
+
     <button class="playAgain">Play again</button>
     <h2 id="punctuation">Punctuation: 0</h2>
     <div id="imgAlbum"></div>
-
-    <audio controls autoplay>
-        <source id="songAudio">
-    </audio>
+    <div id="audioElement" class="audio_element"></div>
 
     <div id="questionsTrivia"></div>
     
@@ -64,11 +67,12 @@
             const title = document.getElementById("artistName");
             const albumImg = document.getElementById("imgAlbum");
             const questions = document.getElementById("questionsTrivia");
-            title.innerText = "Artist: " + randomArtist.artist;
-            albumImg.innerHTML=`<img src=\"${randomArtist.image}">`;
+            title.innerText = randomArtist.artist;
+            albumImg.innerHTML=`<img id="img_song" src=\"${randomArtist.image}">`;
             
-            const audioSong = document.getElementById("songAudio");
-            audioSong.setAttribute("src", randomArtist.track);
+            const audioSong = randomArtist.track;
+            const element = document.getElementById("audioElement");
+            updateAudio(element, audioSong);
     
 
             const divAnswer = document.getElementById("questionsTrivia");

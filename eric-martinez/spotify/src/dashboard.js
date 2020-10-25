@@ -51,3 +51,17 @@ function restartGame(){
     const score = document.getElementById("punctuation");
     score.innerHTML = "Punctuation: " + cont;
 }
+
+function updateAudio(element, audioSong){
+    const elementAudio = element;
+    const audio =  audioSong;
+    elementAudio.innerHTML="";
+    elementAudio.innerHTML =
+        elementAudio.innerHTML + 
+        `
+<audio controls autoplay>
+<source id="songAudio" src="${audio}">
+</audio>
+        `;
+
+}
