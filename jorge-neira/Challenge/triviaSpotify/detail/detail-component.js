@@ -30,18 +30,19 @@ class SpotifyGame {
 			});
 		};
 
-		const generateRandomNumber = (num) => {
-			debugger;
-			const randomNum = Math.floor(Math.random() * num);
+		const generateRandomNumber = () => {
+			const randomNum = Math.floor(Math.random() * 10);
 			return randomNum;
 		};
 
 		const createRandomQuizFromTracks = (tracks) => {
+			const randomNumberToStartGame = generateRandomNumber();
+			console.log(this.topTracks);
+			console.log(this.topTracks[1]);
 			DOMElements.artistPreview.setAttribute(
 				'src',
-				`${tracks[generateRandomNumber(10)].preview_url}`
+				`${tracks[randomNumberToStartGame].preview_url}`
 			);
-			console.log(this.tracks[generateRandomNumber(10)].preview_url);
 		};
 
 		(() => {
@@ -51,14 +52,6 @@ class SpotifyGame {
 			getGenresList(this.genres);
 			createRandomQuizFromTracks(this.topTracks);
 		})();
-	}
-
-	displayName() {
-		console.log(this.name);
-		console.log(this.image);
-		console.log(this.followers);
-		console.log(this.genres);
-		console.log(this.topTracks);
 	}
 }
 let artistInfo, artistTopTracks;
@@ -75,6 +68,7 @@ const curIdFromLocation = getIdParam(curLocation);
 		artistInfo.genres,
 		artistTopTracks.tracks
 	);
-	spotifyGame.displayName(); // to delete
+	console.log(artistTopTracks.tracks[1]);
+
 	spotifyGame.playGame();
 })();

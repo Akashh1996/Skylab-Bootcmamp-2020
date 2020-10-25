@@ -23,7 +23,7 @@ class SpotifyStore {
 
 	async getSeveralArtist() {
 		const response = await fetch(
-			`https://api.spotify.com/v1/artists?ids=7BqEidErPMNiUXCRE0dV2n,2xiIXseIJcq3nG7C8fHeBj,5eAWCfyUhZtHHtBdNk56l1,06VibSJEr3GLxLBBZhRums,3TOqt5oJwL9BE2NG9MEwDa,2CIMQHirSU0MQqyYHq0eOx,64KEffDW9EtZ1y2vBYgq8T,4YwB41gFHCxY5bcNR3CcIH,6aUgzC0cMh0StjV7LyFEDr`,
+			`https://api.spotify.com/v1/artists?ids=2xiIXseIJcq3nG7C8fHeBj,7BqEidErPMNiUXCRE0dV2n,5eAWCfyUhZtHHtBdNk56l1,24Hb4GKFYquK73R8mTyInu,3TOqt5oJwL9BE2NG9MEwDa,50hbotxVDC7jjk24PfKJa2,6XyY86QOPPrYVGvF9ch6wz,4YwB41gFHCxY5bcNR3CcIH,49bzE5vRBRIota4qeHtQM8`,
 			{
 				method: 'GET',
 				headers: { Authorization: 'Bearer ' + token }
