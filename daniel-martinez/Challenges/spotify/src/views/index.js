@@ -47,8 +47,8 @@ class Quiz {
         } else {
             document.getElementById('correct-incorrect__text').innerHTML = 'Incorrect!';
             document.getElementById('correct-incorrect__symbol').setAttribute('src', "https://i.dlpng.com/static/png/6658483_preview.png");
-
         }
+        //
     }
 }
 
