@@ -55,3 +55,30 @@ describe('store', () => {
         })
     })
 })
+
+describe("store functions's catch", () => {
+    let store;
+
+    beforeEach(() => {
+        store = new Store();
+        global.fetch = jest.fn().mockImplementationOnce(() => Promise.reject());
+    });
+
+    test('should call loadPokemons and return null', () => {
+        return store.loadPokemons().then(() => {
+            expect(store.getPokemons()).toBe(null)
+        })
+    });
+    
+    test('should call loadPokemons and return null', () => {
+        return store.getPokemonById().then(() => {
+            expect(store.getPokemon()).toBe(null)
+        })
+    });
+
+    test('should call loadPokeAbilityByName and return null', () => {
+        return store.loadPokeAbilityByName().then(() => {
+            expect(store.getPokeAbility()).toBe(null)
+        })
+    });
+})
