@@ -21,8 +21,13 @@
 			</header>
 			<figure class="gameboard-artist-image__container">
 				<img src="" alt="Artist Image" class="gameboard-artist__img" />
-				<audio controls autoplay class="gameboard-artist__audio">
-					<source class="gameboard-artist__preview" />
+				<audio
+					src=""
+					controls
+					onload="play()"
+					class="gameboard-artist__preview"
+				>
+					<source src="" type="audio/mpeg" class="gameboard-artist__audio" />
 				</audio>
 			</figure>
 			<section class="gameboard-buttons">
@@ -37,4 +42,3 @@
 		<script src="../detail/detail-component.js"></script>
 	</body>
 </html>
-

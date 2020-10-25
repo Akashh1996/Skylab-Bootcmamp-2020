@@ -160,11 +160,14 @@ body .spotify-gameboard .gameboard-artist-image__container .gameboard-artist__im
   margin-bottom: 20px;
 }
 
-body .spotify-gameboard .gameboard-artist-image__container .gameboard-artist__audio {
+body .spotify-gameboard .gameboard-artist-image__container .gameboard-artist__preview {
+  margin-bottom: 30px;
+  outline: none;
+}
+
+body .spotify-gameboard .gameboard-artist-image__container .gameboard-artist__preview .gameboard-artist__audio {
   margin: 10px;
   width: 450px;
-  margin-bottom: 20px;
-  outline: none;
 }
 
 .gameboard-buttons .gameBtn {

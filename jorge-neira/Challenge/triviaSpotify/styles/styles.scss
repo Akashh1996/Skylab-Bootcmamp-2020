@@ -110,11 +110,13 @@ body {
 				width: 450px;
 				margin-bottom: 20px;
 			}
-			.gameboard-artist__audio {
-				margin: 10px;
-				width: 450px;
-				margin-bottom: 20px;
+			.gameboard-artist__preview {
+				margin-bottom: 30px;
 				outline: none;
+				.gameboard-artist__audio {
+					margin: 10px;
+					width: 450px;
+				}
 			}
 		}
 	}
