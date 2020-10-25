@@ -60,6 +60,7 @@ nav {
 		align-items: center;
 		width: 50%;
 		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
 	}
 	.nav-links li {
 		opacity: 0;
@@ -67,4 +68,12 @@ nav {
 	.burger {
 		display: block;
 	}
+}
+.nav-active {
+	transform: translateX(0%);
+}
+body {
+	background-color: #509bf5;
+
+	background-image: linear-gradient(#c074b2, #8ab5e8);
 }
