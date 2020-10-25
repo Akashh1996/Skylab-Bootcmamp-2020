@@ -23,18 +23,22 @@
             <section class="game-body__block" id='album-picture'>
             </section>
             <section class="game-body__block game-options">
-                <div class="button game-body-options" id="option-1">option 1</div>
-                <div class="button game-body-options" id="option-2">option 2</div>
-                <div class="button game-body-options" id="option-3">option 3</div>
-                <div class="button game-body-options" id="option-4">option 4</div>
+                <div class="answers-row">
+                    <div class="button game-body-options" id="option-1">AAAAAAAAAAAA</div>
+                    <div class="button game-body-options" id="option-2">AAAAAAAAAAAA</div>
+                </div>
+                <div class="answers-row">
+                    <div class="button game-body-options" id="option-3">AAAAAAAAAAAA</div>
+                    <div class="button game-body-options" id="option-4">AAAAAAAAAAAA</div>
+                </div>
             </section>
             <section class="game-body__block">
-                <div class="button" onclick="endGame(gameBody, gameEnd)">
+                <div class="button" onclick="endGame()">
                     <span>stop</span>
                     <span class="material-icons">stop</span>
                 </div>
-                <div class="button">timer: </div>
-                <div class="button">total points: </div>
+                <div class="button" id="timer">timer: 20</div>
+                <div class="button" id="total-points">total points: </div>
             </section>
         </section>
         <section class="game-end" id="game-end">
