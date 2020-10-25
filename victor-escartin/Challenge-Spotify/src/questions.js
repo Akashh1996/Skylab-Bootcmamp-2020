@@ -1,3 +1,22 @@
+(async () => {
+  await store.getToken();
+  const playListData = await store.getPlayLists();
+  console.log(playListData);
+  console.log(token);
+
+  let playListComponent = new PlayListComponent(playListData);
+
+  if (playListData) {
+    let artistImage = document.querySelector('.artistImage');
+    playListComponent.updateHtmlValue(
+      artistImage,
+      'src',
+      playListData.tracks.items[17].track.album.images[1].url
+    );
+  }
+
+})();
+
 
 
 //Select random Tracks
@@ -22,6 +41,130 @@ let index= randomTracks();
 module.exports=questions;
 
 
+
+// // creating an array and passing the number, questions, options, and answers
+// const questions = [
+//     {
+//     numb: 1,
+//     image: playListData.tracks.items[index[0]].track.album.images[0].url,
+//     question: "Qué canción pertenece a este artista?",
+//     answer: playListData.tracks.items[index[0]].track.name,
+//     options: [
+//       "Hyper Text Preprocessor",
+//       "Hyper Text Markup Language",
+//       "Hyper Text Multiple Language",
+//       "Hyper Tool Multi Language"
+//     ]
+//   },
+//     {
+//     numb: 2,
+//     image: playListData.tracks.items[index[1]].track.album.images[0].url,
+//     question: "Qué canción pertenece a este artista?",
+//     answer: playListData.tracks.items[index[1]].track.name,
+//     options: [
+//       "Common Style Sheet",
+//       "Colorful Style Sheet",
+//       "Computer Style Sheet",
+//       "Cascading Style Sheet"
+//     ]
+//   },
+//     {
+//     numb: 3,
+//     image: playListData.tracks.items[index[2]].track.album.images[0].url,
+//     question: "Qué canción pertenece a este artista?",
+//     answer: playListData.tracks.items[index[2]].track.name,
+//     options: [
+//       "Hypertext Preprocessor",
+//       "Hypertext Programming",
+//       "Hypertext Preprogramming",
+//       "Hometext Preprocessor"
+//     ]
+//   },
+//     {
+//     numb: 4,
+//     image: playListData.tracks.items[index[3]].track.album.images[0].url,
+//     question: "Qué canción pertenece a este artista?",
+//     answer: playListData.tracks.items[index[3]].track.name,
+//     options: [
+//       "Stylish Question Language",
+//       "Stylesheet Query Language",
+//       "Statement Question Language",
+//       "Structured Query Language"
+//     ]
+//   },
+//     {
+//     numb: 5,
+//     image: playListData.tracks.items[index[4]].track.album.images[0].url,
+//     question: "Qué canción pertenece a este artista?",
+//     answer: playListData.tracks.items[index[4]].track.name,
+//     options: [
+//       "eXtensible Markup Language",
+//       "eXecutable Multiple Language",
+//       "eXTra Multi-Program Language",
+//       "eXamine Multiple Language"
+//     ]
+//   },
+//     {
+//     numb: 6,
+//     image: playListData.tracks.items[index[5]].track.album.images[0].url,
+//     question: "Qué canción pertenece a este artista?",
+//     answer: playListData.tracks.items[index[5]].track.name,
+//     options: [
+//       "eXtensible Markup Language",
+//       "eXecutable Multiple Language",
+//       "eXTra Multi-Program Language",
+//       "eXamine Multiple Language"
+//     ]
+//   },
+//     {
+//     numb: 7,
+//     image: playListData.tracks.items[index[6]].track.album.images[0].url,
+//     question: "Qué canción pertenece a este artista?",
+//     answer: playListData.tracks.items[index[6]].track.name,
+//     options: [
+//       "eXtensible Markup Language",
+//       "eXecutable Multiple Language",
+//       "eXTra Multi-Program Language",
+//       "eXamine Multiple Language"
+//     ]
+//   },
+//     {
+//     numb: 8,
+//     image: playListData.tracks.items[index[7]].track.album.images[0].url,
+//     question: "Qué canción pertenece a este artista?",
+//     answer: playListData.tracks.items[index[7]].track.name,
+//     options: [
+//       "eXtensible Markup Language",
+//       "eXecutable Multiple Language",
+//       "eXTra Multi-Program Language",
+//       "eXamine Multiple Language"
+//     ]
+//   },
+//     {
+//     numb: 9,
+//     image: playListData.tracks.items[index[8]].track.album.images[0].url,
+//     question: "Qué canción pertenece a este artista?",
+//     answer: playListData.tracks.items[index[8]].track.name,
+//     options: [
+//       "eXtensible Markup Language",
+//       "eXecutable Multiple Language",
+//       "eXTra Multi-Program Language",
+//       "eXamine Multiple Language"
+//     ]
+//   },
+//     {
+//     numb: 10,
+//     image: playListData.tracks.items[index[9]].track.album.images[0].url,
+//     question: "Qué canción pertenece a este artista?",
+//     answer: playListData.tracks.items[index[9]].track.name,
+//     options: [
+//       "eXtensible Markup Language",
+//       "eXecutable Multiple Language",
+//       "eXTra Multi-Program Language",
+//       "eXamine Multiple Language"
+//     ]
+//   }
+// ];
 
 
 

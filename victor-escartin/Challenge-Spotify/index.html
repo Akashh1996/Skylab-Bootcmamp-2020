@@ -10,46 +10,47 @@
 		
 	</head>
 	<body>
-		
-		<!-- start Quiz button -->
-		<div id="main-page">
-			<div class="start_btn"><button>TRIVIALIFY <br> (Press to Start Game) </button></div>
-		</div>
+		<main>
+			<!-- start Quiz button -->
+			<div id="main-page">
+				<div class="start_btn"><button> <u>TRIVIALIFY</u><br> (Press to Start Game) </button></div>
+			</div>
 
-		<!-- Info Box -->
-		<div class="info_box">
-			<div class="info-title"><span>INSTRUCCIONES TRIVIALIFY</span></div>
-			<div class="info-list">
-				<div class="info">
-					1. Se mostrará la imagen de un autor musical y 4 posibles respuestas,
-					y se deberá escoger la opción correcta
+			<!-- Info Box -->
+			<div class="info_box">
+				<div class="info-title"><span>INSTRUCCIONES TRIVIALIFY</span></div>
+				<div class="info-list">
+					<div class="info">
+						1. Se mostrará la imagen de un autor musical y 4 posibles respuestas,
+						y se deberá escoger la opción correcta
+					</div>
+					<div class="info">
+						2. El jugador tendrá <span>15 segundos</span> para responder cada
+						pregunta
+					</div>
+					<div class="info">
+						3. Una vez seleccionada la respuesta, no se podrá deshacer.
+					</div>
+					<div class="info">
+						4. Una vez consumido el tiempo, no se podrá elegir ninguna opción.
+					</div>
+					<div class="info">
+						5. Al finalizar el tiempo de cada pregunta, se mostrará la opción
+						correcta.
+					</div>
+					<div class="info">
+						6. En cualquier momento se podrá cancelar la partida.
+					</div>
+					<div class="info">
+						7. Al finalizar el juego, se mostrará la puntuación final obtenida.
+					</div>
 				</div>
-				<div class="info">
-					2. El jugador tendrá <span>15 segundos</span> para responder cada
-					pregunta
-				</div>
-				<div class="info">
-					3. Una vez seleccionada la respuesta, no se podrá deshacer.
-				</div>
-				<div class="info">
-					4. Una vez consumido el tiempo, no se podrá elegir ninguna opción.
-				</div>
-				<div class="info">
-					5. Al finalizar el tiempo de cada pregunta, se mostrará la opción
-					correcta.
-				</div>
-				<div class="info">
-					6. En cualquier momento se podrá cancelar la partida.
-				</div>
-				<div class="info">
-					7. Al finalizar el juego, se mostrará la puntuación final obtenida.
+				<div class="buttons">
+					<button class="quit">Volver</button>
+					<button class="start_game">Jugar</button>
 				</div>
 			</div>
-			<div class="buttons">
-				<button class="quit">Volver</button>
-				<button class="restart">Jugar</button>
-			</div>
-		</div>
+		</main>
 
 		<!-- Quiz Box -->
 		<div class="quiz_box">
@@ -66,24 +67,18 @@
 					<!-- Here I've inserted question from JavaScript -->
 					<span>¿Qué canción fue interpretada por este artista?</span>
 					<div id="artist_image">
-						<img class="artistImage" />
+						<div class="singerImage"></div>
+						<div class="singerName"></div>
 					</div>
+					
+
 				</div>
-				<div class="option_list">
-					<!-- Here I've inserted options from JavaScript -->
-					<div class="option" onclick="optionSelected(this)">
-						<span>Celine Dion</span>
-					</div>
-					<div class="option" onclick="optionSelected(this)">
-						<span>Mark Anthony</span>
-					</div>
-					<div class="option" onclick="optionSelected(this)">
-						<span>Barbra Streisand</span>
-					</div>
-					<div class="option" onclick="optionSelected(this)">
-						<span>Withney Houston</span>
-					</div>
-				</div>
+				<div class="song-options">
+					<button class="song-option"></button>
+					<button class="song-option"></button>
+					<button class="song-option"></button>
+					<button class="song-option"></button>
+				  </div>
 			</section>
 
 			<!-- footer of Quiz Box -->
@@ -98,6 +93,11 @@
 			</footer>
 		</div>
 
+		<div class="right-and-wrong-answers__wrapper">
+			<div class="right-and-wrong-answers__container"><span class="right-and-wrong-answers__text">Acietos: </span><span class="num-of-right-answers"></span></div>
+			<div class="right-and-wrong-answers__container"><span class="right-and-wrong-answers__text">Errores: </span><span class="num-of-wrong-answers"></span></div>
+		</div>
+
 		<!-- Result Box -->
 		<div class="result_box">
 			<div class="icon">
@@ -109,7 +109,7 @@
 			</div>
 			<div class="buttons">
 				<button class="restart">Volver a Jugar</button>
-				<button class="quit">Salir del Juego</button>
+				<button class="quit" onclick="location.reload()">Salir del Juego</button>
 			</div>
 		</div>
 
@@ -120,153 +120,14 @@
 		<script src="./src/store/store.js"></script>
 		  <!-- FontAweome CDN Link for Icons-->
 		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-		<!-- Inside this JavaScript file I've inserted Questions and Options only -->
-		<script src="./src/questions.js"></script>
+
 		<!-- Inside this JavaScript file I've coded all Quiz Codes -->
 		<script src="./src/script.js"></script>
-		<script src="./src/playListComponents.js"></script>
+
 		<script>
 			(async () => {
 				await store.getToken();
-				const playListData = await store.getPlayLists();
-				console.log(playListData);
 				console.log(token);
-
-				let playListComponent = new PlayListComponent(playListData);
-
-				if (playListData) {
-					let artistImage = document.querySelector('.artistImage');
-					playListComponent.updateHtmlValue(
-						artistImage,
-						'src',
-						playListData.tracks.items[17].track.album.images[1].url
-					);
-				}
-
-
-// // creating an array and passing the number, questions, options, and answers
-// const questions = [
-//     {
-//     numb: 1,
-//     image: playListData.tracks.items[index[0]].track.album.images[0].url,
-//     question: "Qué canción pertenece a este artista?",
-//     answer: playListData.tracks.items[index[0]].track.name,
-//     options: [
-//       "Hyper Text Preprocessor",
-//       "Hyper Text Markup Language",
-//       "Hyper Text Multiple Language",
-//       "Hyper Tool Multi Language"
-//     ]
-//   },
-//     {
-//     numb: 2,
-//     image: playListData.tracks.items[index[1]].track.album.images[0].url,
-//     question: "Qué canción pertenece a este artista?",
-//     answer: playListData.tracks.items[index[1]].track.name,
-//     options: [
-//       "Common Style Sheet",
-//       "Colorful Style Sheet",
-//       "Computer Style Sheet",
-//       "Cascading Style Sheet"
-//     ]
-//   },
-//     {
-//     numb: 3,
-//     image: playListData.tracks.items[index[2]].track.album.images[0].url,
-//     question: "Qué canción pertenece a este artista?",
-//     answer: playListData.tracks.items[index[2]].track.name,
-//     options: [
-//       "Hypertext Preprocessor",
-//       "Hypertext Programming",
-//       "Hypertext Preprogramming",
-//       "Hometext Preprocessor"
-//     ]
-//   },
-//     {
-//     numb: 4,
-//     image: playListData.tracks.items[index[3]].track.album.images[0].url,
-//     question: "Qué canción pertenece a este artista?",
-//     answer: playListData.tracks.items[index[3]].track.name,
-//     options: [
-//       "Stylish Question Language",
-//       "Stylesheet Query Language",
-//       "Statement Question Language",
-//       "Structured Query Language"
-//     ]
-//   },
-//     {
-//     numb: 5,
-//     image: playListData.tracks.items[index[4]].track.album.images[0].url,
-//     question: "Qué canción pertenece a este artista?",
-//     answer: playListData.tracks.items[index[4]].track.name,
-//     options: [
-//       "eXtensible Markup Language",
-//       "eXecutable Multiple Language",
-//       "eXTra Multi-Program Language",
-//       "eXamine Multiple Language"
-//     ]
-//   },
-//     {
-//     numb: 6,
-//     image: playListData.tracks.items[index[5]].track.album.images[0].url,
-//     question: "Qué canción pertenece a este artista?",
-//     answer: playListData.tracks.items[index[5]].track.name,
-//     options: [
-//       "eXtensible Markup Language",
-//       "eXecutable Multiple Language",
-//       "eXTra Multi-Program Language",
-//       "eXamine Multiple Language"
-//     ]
-//   },
-//     {
-//     numb: 7,
-//     image: playListData.tracks.items[index[6]].track.album.images[0].url,
-//     question: "Qué canción pertenece a este artista?",
-//     answer: playListData.tracks.items[index[6]].track.name,
-//     options: [
-//       "eXtensible Markup Language",
-//       "eXecutable Multiple Language",
-//       "eXTra Multi-Program Language",
-//       "eXamine Multiple Language"
-//     ]
-//   },
-//     {
-//     numb: 8,
-//     image: playListData.tracks.items[index[7]].track.album.images[0].url,
-//     question: "Qué canción pertenece a este artista?",
-//     answer: playListData.tracks.items[index[7]].track.name,
-//     options: [
-//       "eXtensible Markup Language",
-//       "eXecutable Multiple Language",
-//       "eXTra Multi-Program Language",
-//       "eXamine Multiple Language"
-//     ]
-//   },
-//     {
-//     numb: 9,
-//     image: playListData.tracks.items[index[8]].track.album.images[0].url,
-//     question: "Qué canción pertenece a este artista?",
-//     answer: playListData.tracks.items[index[8]].track.name,
-//     options: [
-//       "eXtensible Markup Language",
-//       "eXecutable Multiple Language",
-//       "eXTra Multi-Program Language",
-//       "eXamine Multiple Language"
-//     ]
-//   },
-//     {
-//     numb: 10,
-//     image: playListData.tracks.items[index[9]].track.album.images[0].url,
-//     question: "Qué canción pertenece a este artista?",
-//     answer: playListData.tracks.items[index[9]].track.name,
-//     options: [
-//       "eXtensible Markup Language",
-//       "eXecutable Multiple Language",
-//       "eXTra Multi-Program Language",
-//       "eXamine Multiple Language"
-//     ]
-//   }
-// ];
 			})();
 		</script>
 	</body>
