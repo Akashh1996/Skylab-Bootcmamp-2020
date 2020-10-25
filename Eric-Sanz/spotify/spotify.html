@@ -6,8 +6,60 @@
     <title>Spotify</title>
 </head>
 <body>
-    
+    <div class="game-container">
+        <div id="question-container" class = 'hide'>
+        <img src="">
+        <div id="question">Question</div>
+        <div id="answer-buttons" class = 'btn-grid'>
+            <button class = 'btn'>Answer 1</button>
+            <button class = 'btn'>Answer 2</button>
+            <button class = 'btn'>Answer 3</button>
+            <button class = 'btn'>Answer 4</button>
+        </div>
 
+        </div>
+        <div classs = 'controls'>
+            <button id="start-button" class = 'start-btn btn'>Start</button>
+            <button id="next-button" class = 'next-btn btn hide'>Next</button>
+        </div>
+    </div>
+    
     <script src="spotify.js"></script>
+    <script src="component.js"></script>
+    <script> 
+        (async() => {
+            // await spotifystore.getAlbum();
+            // await spotifystore.getTracks();
+            await spotifystore.getToken();
+            console.log(token);
+            const playList = await spotifystore.getPlaylist();
+            let playlistComponent = new PlaylistComponent(playList);
+            let trackNameArray = [];
+            let trackArtistsNameArray = [];
+
+            if (playList) {
+
+                for (let i = 0; i < playList.items.length; i++) {
+                    trackNameArray.push(playList.items[i].track.name);
+                    trackArtistsNameArray.push(playList.items[i].track.artists[0].name);
+                }
+
+                let questionsObject = [ {
+                    question: `${trackArtistsNameArray[0]}`,
+                    answers: [
+                        { text: `${trackNameArray[0]}`, correct: true },
+                        { text: `${trackNameArray[6]}`, correct: false}
+                    ]
+                }
+                ]
+
+                console.log(trackNameArray);
+                console.log(trackArtistsNameArray);
+                console.log(questionsObject[0].question);
+                document.querySelector('#nombre').innerHTML = playList.items[1].track.artists[0].name;
+            }
+            console.log(token);
+        })()
+    </script>
 </body>
 </html>
