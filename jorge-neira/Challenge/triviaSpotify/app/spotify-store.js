@@ -32,6 +32,7 @@ class SpotifyStore {
 		const artists = await response.json();
 		return (artistsList = artists.artists);
 	}
+
 	async getArtist(artistId) {
 		const response = await fetch(
 			`https://api.spotify.com/v1/artists/${artistId}/`,
@@ -43,6 +44,7 @@ class SpotifyStore {
 		const spotifyArtist = await response.json();
 		return spotifyArtist;
 	}
+
 	async getTopTracks(artistId) {
 		const response = await fetch(
 			`https://api.spotify.com/v1/artists/${artistId}/top-tracks?country=ES`,

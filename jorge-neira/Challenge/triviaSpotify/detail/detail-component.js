@@ -21,23 +21,38 @@ class SpotifyGame {
 			artistPreview: document.querySelector('.gameboard-artist__preview'),
 			artistGameBtn: document.querySelectorAll('gameBtn')
 		};
-		function getGenresList(genres) {
+		const getGenresList = (genres) => {
 			genres.forEach((element, index) => {
 				if (index > 2) return;
 				const createLiGenres = document.createElement('li');
 				createLiGenres.textContent = element;
 				DOMElements.artistGenres.appendChild(createLiGenres);
 			});
-		}
+		};
+
+		const generateRandomNumber = (num) => {
+			debugger;
+			const randomNum = Math.floor(Math.random() * num);
+			return randomNum;
+		};
+
+		const createRandomQuizFromTracks = (tracks) => {
+			DOMElements.artistPreview.setAttribute(
+				'src',
+				`${tracks[generateRandomNumber(10)].preview_url}`
+			);
+			console.log(this.tracks[generateRandomNumber(10)].preview_url);
+		};
+
 		(() => {
 			DOMElements.artistName.textContent = this.name;
 			DOMElements.artistFollowers.textContent = this.followers;
 			DOMElements.artistImage.src = this.image;
 			getGenresList(this.genres);
+			createRandomQuizFromTracks(this.topTracks);
 		})();
 	}
 
-	createRandomQuizFromTracks() {}
 	displayName() {
 		console.log(this.name);
 		console.log(this.image);
