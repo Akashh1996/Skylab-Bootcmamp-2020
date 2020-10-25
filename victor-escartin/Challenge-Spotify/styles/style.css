@@ -9,8 +9,14 @@
 
 body {
 	background: url(https://images.pexels.com/photos/2747446/pexels-photo-2747446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-	/* background-size: cover;
-	background-repeat: no-repeat; */
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.signature {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
 }
 
 ::selection {
@@ -36,6 +42,12 @@ body {
 	z-index: 5;
 	pointer-events: auto;
 	transform: translate(-50%, -50%) scale(1);
+}
+
+.spotifyLogo {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .start_btn button {
@@ -225,45 +237,6 @@ section .song-options .song-option:hover {
 	border: 1px solid #b8daff;
 }
 
-section .song-options .song-option.correct {
-	color: #155724;
-	background: #d4edda;
-	border: 1px solid #c3e6cb;
-}
-
-section .song-options .song-option.incorrect {
-	color: #721c24;
-	background: #f8d7da;
-	border: 1px solid #f5c6cb;
-}
-
-section .song-options .song-option.disabled {
-	pointer-events: none;
-}
-
-section .song-options .song-option .icon {
-	height: 26px;
-	width: 26px;
-	border: 2px solid transparent;
-	border-radius: 50%;
-	text-align: center;
-	font-size: 13px;
-	pointer-events: none;
-	transition: all 0.3s ease;
-	line-height: 24px;
-}
-.song-options .song-option .icon.tick {
-	color: #23903c;
-	border-color: #008b21;
-	background: #d4edda;
-}
-
-.song-options .song-option .icon.cross {
-	color: #a42834;
-	background: #f8d7da;
-	border-color: #a42834;
-}
-
 footer {
 	height: 100px;
 	padding: 0 30px;
@@ -274,25 +247,6 @@ footer {
 	border-top: 1px solid lightgrey;
 	color: white;
 	padding: 10px;
-}
-
-footer .total_que span {
-	display: flex;
-	user-select: none;
-}
-
-footer .total_que span p {
-	font-weight: 500;
-	padding: 0 5px;
-}
-
-footer .total_que span p:first-child {
-	padding-left: 0px;
-}
-
-footer .footer_btns {
-	display: flex;
-	flex-direction: row;
 }
 
 footer .exit_btn {
@@ -314,7 +268,7 @@ footer .exit_btn {
 	margin-right: 10px;
 }
 
-footer .next_btn {
+footer .result_btn {
 	height: 40px;
 	padding: 0 13px;
 	font-size: 18px;
@@ -338,7 +292,7 @@ footer button:hover {
 	background: #0263ca;
 }
 
-footer .next_btn.show {
+footer .result_btn.show {
 	opacity: 1;
 	pointer-events: auto;
 	transform: scale(1);
@@ -416,6 +370,16 @@ footer .next_btn.show {
 }
 
 .buttons button.quit:hover {
+	color: #fff;
+	background: #010980;
+}
+
+.buttons button.quitResults {
+	color: #fff;
+	background: #007bff;
+}
+
+.buttons button.quitResults:hover {
 	color: #fff;
 	background: #010980;
 }

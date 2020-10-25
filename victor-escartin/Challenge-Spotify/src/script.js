@@ -1,3 +1,5 @@
+//DOM Elements
+const mainPage_box = document.querySelector("#main-page");
 const start_btn = document.querySelector(".start_btn button");
 const info_box = document.querySelector(".info_box");
 const exit_btn = info_box.querySelector(".buttons .quit");
@@ -10,11 +12,10 @@ const songButton = document.getElementsByClassName('song-option');
 const timer = document.querySelector(".timer_sec");
 const time_line = document.querySelector(".header .time_line");
 const questionContainer = document.querySelector(".quiz_box");
+const result_btn = document.querySelector(".result_btn");
+const result_box = document.querySelector(".result_box");
 
-const rightAndWrongAnswers = document.getElementsByClassName('right-and-wrong-answers__wrapper')[0];
-const rightAnswersCounter = document.getElementsByClassName('num-of-right-answers')[0];
-const wrongAnswersCounter = document.getElementsByClassName('num-of-wrong-answers')[0];
-
+//Scope Elements
 let counter;
 let numberOfRightAnswers = 0;
 let numberOfWrongAnswers = 0;
@@ -22,19 +23,19 @@ let arrOfQuestionSingers = [];
 let countDownInterval;
 let rightAnswer;
 
-// Show instructions button from main-page
+// Show info box
 start_btn.onclick = ()=>{
-    info_box.classList.add("activeInfo"); //show info box
+    info_box.classList.add("activeInfo"); 
     document.getElementById('main-page').style.visibility = "hidden";
 }
 
-// Return main-page button from info-box
+// Return to main page
 exit_btn.onclick = ()=>{
-    info_box.classList.remove("activeInfo"); //hide info box
+    info_box.classList.remove("activeInfo");
     document.getElementById('main-page').style.visibility = "visible";
 }
 
-// Start Game button from info-box
+// Show quiz box
 startGame_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.add("activeQuiz"); //show quiz box
@@ -42,10 +43,9 @@ startGame_btn.onclick = ()=>{
     Trivialify();
 }
 
+// Start Game
 function Trivialify () {
-
     const rounds = async () => {
-        debugger;
         const arrOfRandomIDNums = [];
         let randomNumForSingerID;
 
@@ -66,8 +66,8 @@ function Trivialify () {
 
         const setSongButtonsToOriginalState = () => {
             for (let i = 0; i < songButton.length; i++) {
-                songButton[i].style.backgroundColor = 'white';
-                songButton[i].style.color = 'black';
+                songButton[i].style.backgroundColor = ' #007bff';
+                songButton[i].style.color = '#fff';
             }
         }
 
@@ -76,19 +76,10 @@ function Trivialify () {
             if (arrOfQuestionSingers.length < 10) {
                 rounds();
             } else {
-                console.log(arrOfQuestionSingers.length);
-                playButton.style.visibility = 'visible';
-                playButton.style.top = '70%';
-                // songOptions.style.visibility = 'hidden';
-                timer.style.visibility = 'hidden';
-                questionContainer.style.visibility = 'hidden';
-                rightAnswersCounter.innerHTML = numberOfRightAnswers;
-                wrongAnswersCounter.innerHTML = numberOfWrongAnswers;
-                rightAndWrongAnswers.style.visibility = 'visible';
-                arrOfQuestionSingers = [];
-                numberOfRightAnswers = 0;
-                numberOfWrongAnswers = 0;
-                setSongButtonsToOriginalState();
+                console.log(`Respuestas: ${arrOfQuestionSingers.length}`);
+                console.log(`Aciertos: ${numberOfRightAnswers}`);
+                console.log(`Fallos: ${numberOfWrongAnswers}`);
+                result_btn.classList.add("show");
             }
         }
 
@@ -194,30 +185,25 @@ function Trivialify () {
     rounds();
 }
 
+// Show Results Box
+function showResult(){
+    mainPage_box.style.visibility = 'hidden';
+    info_box.classList.remove("activeInfo");
+    quiz_box.classList.remove("activeQuiz");
+    result_box.classList.add("activeResult");
 
-
-
-
-
-
-
-
-
-function showResult(rights){
-    info_box.classList.remove("activeInfo"); //hide info box
-    quiz_box.classList.remove("activeQuiz"); //hide quiz box
-    result_box.classList.add("activeResult"); //show result box
     const scoreText = result_box.querySelector(".score_text");
-    if (rights > 3){ // if user scored more than 3
-        let scoreTag = `<span>Enhorabuena!, has acertado ${rights} preguntas de 10</span>`;
-        scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
-    }
-    else if(rights > 1){ // if user scored more than 1
-        let scoreTag = `<span>No está mal, has acertado ${rights} preguntas de 10</span>`;
+
+    if (numberOfRightAnswers > 3){
+        let scoreTag = `<span>Enhorabuena!, has acertado ${numberOfRightAnswers} preguntas de 10</span>`;
         scoreText.innerHTML = scoreTag;
     }
-    else{ // if user scored less than 1
-        let scoreTag = `<span>Lo siento, ${rights} de 10, ¿volvemos a jugar?</span>`;
+    else if(numberOfRightAnswers > 1){
+        let scoreTag = `<span>No está mal, has acertado ${numberOfRightAnswers} preguntas de 10</span>`;
+        scoreText.innerHTML = scoreTag;
+    }
+    else{
+        let scoreTag = `<span>Lo siento, ${numberOfRightAnswers} de 10, ¿volvemos a jugar?</span>`;
         scoreText.innerHTML = scoreTag;
     }
 }

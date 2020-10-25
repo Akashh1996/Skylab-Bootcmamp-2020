@@ -1,4 +1,3 @@
-<!-- Created By CodingNepal - www.codingnepalweb.com  -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -10,9 +9,15 @@
 		
 	</head>
 	<body>
+		<!-- Signature -->
+		<div class="signature" style="color:white">
+			Víctor Escartín &nbsp; <span style="color: white"><img src="https://pbs.twimg.com/profile_images/718411051340079104/xJ-vRtnD_bigger.jpg" width="20px" height="20px"> </> &nbsp; Skylab <span style="color: blue"> Coders </span>Academy</span>  </span>
+		</div>
+
+		<!-- MAIN PAGE  -->
 		<main>
-			<!-- start Quiz button -->
 			<div id="main-page">
+				<div class="spotifyLogo"><img src="https://logodownload.org/wp-content/uploads/2016/09/spotify-logo-0.png" width="400px" height="400px"> </div>
 				<div class="start_btn"><button> <u>TRIVIALIFY</u><br> (Press to Start Game) </button></div>
 			</div>
 
@@ -52,7 +57,8 @@
 			</div>
 		</main>
 
-		<!-- Quiz Box -->
+		<!-- QUIZ BOX -->
+		<!-- Header and Timer -->
 		<div class="quiz_box">
 			<header>
 				<div class="title">Preguntas TRIVIALIFY</div>
@@ -62,16 +68,16 @@
 				</div>
 				<div class="time_line"></div>
 			</header>
+
+		<!-- Question and Options -->
 			<section>
 				<div class="que_text">
-					<!-- Here I've inserted question from JavaScript -->
 					<span>¿Qué canción fue interpretada por este artista?</span>
 					<div id="artist_image">
 						<div class="singerImage"></div>
 						<div class="singerName"></div>
 					</div>
 					
-
 				</div>
 				<div class="song-options">
 					<button class="song-option"></button>
@@ -81,49 +87,32 @@
 				  </div>
 			</section>
 
-			<!-- footer of Quiz Box -->
+			<!-- Footer Buttons -->
 			<footer>
-				<div class="total_que">
-					<!-- Here I've inserted Question Count Number from JavaScript -->
-				</div>
 				<div class="footer_btns">
 					<button class="exit_btn" onclick="location.reload()">Salir</button>
-					<button class="next_btn">Siguiente Pregunta</button>
+					<button class="result_btn" onclick="showResult()">Ver Resultado</button>
 				</div>
 			</footer>
 		</div>
 
-		<div class="right-and-wrong-answers__wrapper">
-			<div class="right-and-wrong-answers__container"><span class="right-and-wrong-answers__text">Acietos: </span><span class="num-of-right-answers"></span></div>
-			<div class="right-and-wrong-answers__container"><span class="right-and-wrong-answers__text">Errores: </span><span class="num-of-wrong-answers"></span></div>
-		</div>
-
-		<!-- Result Box -->
+		<!-- RESULT BOX -->
 		<div class="result_box">
 			<div class="icon">
 				<i class="fas fa-crown"></i>
 			</div>
 			<div class="complete_text">Juego Completado!</div>
-			<div class="score_text">
-				<!-- Here I've inserted Score Result from JavaScript -->
-			</div>
+			<div class="score_text"></div>
 			<div class="buttons">
-				<button class="restart">Volver a Jugar</button>
-				<button class="quit" onclick="location.reload()">Salir del Juego</button>
+				<button class="quitResults" onclick="location.reload()">Salir del Juego</button>
 			</div>
 		</div>
 
-
-		<div class="signature" style="color:white">
-			Víctor Escartín <span style="color: white"><img src="https://pbs.twimg.com/profile_images/718411051340079104/xJ-vRtnD_bigger.jpg" width="20px" height="20px"> </> Skylab <span style="color: blue"> Coders </span>Academy</span>  </span>
-		</div>
+		<!-- SCRIPTS -->
 		<script src="./src/store/store.js"></script>
-		  <!-- FontAweome CDN Link for Icons-->
 		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-		<!-- Inside this JavaScript file I've coded all Quiz Codes -->
 		<script src="./src/script.js"></script>
-
+		<!-- Script to obtain Spotify's Token -->
 		<script>
 			(async () => {
 				await store.getToken();

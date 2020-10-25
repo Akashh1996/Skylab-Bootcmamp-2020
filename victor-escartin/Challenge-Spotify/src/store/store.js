@@ -11,11 +11,12 @@ let _singerIDs = [
     '1HY2Jd0NmPuamShAr6KMms',  //Lady Gaga
     '58lV9VcRSjABbAbfWS6skp',  //Bon Jovi
     '711MCceyCBcFnzjGY4Q7Un',  //AC/CD
-    '7Ey4PD4MYsKc5I2dolUwbH',  //Aerosmith
-    '06HL4z0CvFAxyc27GXpf02',
-    '07YZf4WDAMNwqr4jfgOZ8y',
-    '1HY2Jd0NmPuamShAr6KMms'
+    '3fMbdgg4jU18AjLCKBhRSm',  //Michael Jackson
+    '2SHhfs4BiDxGQ3oxqf0UHY',  //Roxette
+    '3DiDSECUqqY1AuBP8qtaIa',  //Alicia Keys
+    '4S9EykWXhStSc15wEx8QFK'   //Celine Dion
 ]
+
 
 class SpotifyStore {
 
