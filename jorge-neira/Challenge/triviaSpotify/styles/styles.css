@@ -8,6 +8,14 @@
   padding: 0%;
 }
 
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
 body {
   font-family: 'Signika', sans-serif;
   height: 100vh;
@@ -30,14 +38,14 @@ body .logo {
   padding: 50px;
 }
 
-body .container {
+body .artist-dashboard-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   max-width: 700px;
 }
 
-body .container .artist__block .artists__images {
+body .artist-dashboard-wrapper .artist__block .artists__images {
   position: relative;
   cursor: pointer;
   display: -webkit-box;
@@ -53,7 +61,7 @@ body .container .artist__block .artists__images {
   height: 700px;
 }
 
-body .container .artist__block .artists__images .artist-img__item {
+body .artist-dashboard-wrapper .artist__block .artists__images .artist-img__item {
   -webkit-box-shadow: 1px 1px 16px -2px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 1px 16px -2px rgba(0, 0, 0, 0.3);
   width: 200px;
@@ -62,7 +70,116 @@ body .container .artist__block .artists__images .artist-img__item {
   border-radius: 50%;
 }
 
-body .container .artist__block .artists__images .artist-img__item .artist-photo {
+body .artist-dashboard-wrapper .artist__block .artists__images .artist-img__item .artist-photo {
   height: 100%;
+}
+
+body .spotify-gameboard {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .spotify-gameboard .gameboard-artist-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 450px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+body .spotify-gameboard .gameboard-artist-info .artist-info-primary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .spotify-gameboard .gameboard-artist-info .artist-info-primary .artist-info-name {
+  font-size: xx-large;
+  text-transform: uppercase;
+}
+
+body .spotify-gameboard .gameboard-artist-info .artist-info-primary .artist-info-followers {
+  font-size: x-large;
+}
+
+body .spotify-gameboard .gameboard-artist-info .artist-info-primary .artist-info-followers .artist-followers {
+  font-size: large;
+  color: #1db954;
+}
+
+body .spotify-gameboard .gameboard-artist-info .artist-info-secondary .artist-info-listGenres {
+  font-size: 20px;
+}
+
+body .spotify-gameboard .gameboard-artist-info .artist-info-secondary .artist-info-listGenres li {
+  padding-bottom: 6px;
+  color: #b3b3b3;
+  text-transform: uppercase;
+}
+
+body .spotify-gameboard .gameboard-artist-image__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .spotify-gameboard .gameboard-artist-image__container .gameboard-artist__img {
+  -webkit-box-shadow: 1px 1px 16px -2px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 16px -2px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 450px;
+  margin-bottom: 20px;
+}
+
+body .spotify-gameboard .gameboard-artist-image__container .gameboard-artist__audio {
+  margin: 10px;
+  width: 450px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.gameboard-buttons .gameBtn {
+  border-radius: 35px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  color: #fff;
+  font-size: 30px;
+  padding: 15px 25px;
+}
+
+.gameboard-buttons .gameBtn:hover {
+  background: #212121;
+  color: #1db954;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -12,6 +12,32 @@ class SpotifyGame {
 		this.genres = artistGenres;
 		this.topTracks = artistTopTracksArr;
 	}
+	playGame() {
+		const DOMElements = {
+			artistName: document.querySelector('.artist-info-name'),
+			artistFollowers: document.querySelector('.artist-followers'),
+			artistGenres: document.querySelector('.artist-info-listGenres'),
+			artistImage: document.querySelector('.gameboard-artist__img'),
+			artistPreview: document.querySelector('.gameboard-artist__preview'),
+			artistGameBtn: document.querySelectorAll('gameBtn')
+		};
+		function getGenresList(genres) {
+			genres.forEach((element, index) => {
+				if (index > 2) return;
+				const createLiGenres = document.createElement('li');
+				createLiGenres.textContent = element;
+				DOMElements.artistGenres.appendChild(createLiGenres);
+			});
+		}
+		(() => {
+			DOMElements.artistName.textContent = this.name;
+			DOMElements.artistFollowers.textContent = this.followers;
+			DOMElements.artistImage.src = this.image;
+			getGenresList(this.genres);
+		})();
+	}
+
+	createRandomQuizFromTracks() {}
 	displayName() {
 		console.log(this.name);
 		console.log(this.image);
@@ -34,5 +60,6 @@ const curIdFromLocation = getIdParam(curLocation);
 		artistInfo.genres,
 		artistTopTracks.tracks
 	);
-	spotifyGame.displayName();
+	spotifyGame.displayName(); // to delete
+	spotifyGame.playGame();
 })();
