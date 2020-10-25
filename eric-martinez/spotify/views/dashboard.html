@@ -8,8 +8,14 @@
 </head>
 <body>
     <h1 id="artistName"></h1>
+    <button class="playAgain">Play again</button>
     <h2 id="punctuation">Punctuation: 0</h2>
     <div id="imgAlbum"></div>
+
+    <audio controls autoplay>
+        <source id="songAudio">
+    </audio>
+
     <div id="questionsTrivia"></div>
     
 
@@ -17,22 +23,37 @@
     <script src="../src/dashboard.js"></script>
     <script>
 
+    
+    
     (async() => {
         await store.getToken();
         await store.getPlaylist();
         const playlist = _playlist;
-        
+
+
+        const startButton = document.querySelectorAll(".playAgain");
+            for (const button of startButton) {
+            button.addEventListener('click', function(event) {
+                correctSong();
+                restartGame();
+                startGame();
+                drawDashboard();
+            })
+            }
+
         startGame();
         drawDashboard();
 
         function drawDashboard(){
+
             let artistArray = [];
 
             for(let index = 0; index < playlist.tracks.items.length; index++){
                 artistArray.push({
                     artist: playlist.tracks.items[index].track.artists[0].name,
                     song: playlist.tracks.items[index].track.name,
-                    image: playlist.tracks.items[index].track.album.images[1].url
+                    image: playlist.tracks.items[index].track.album.images[1].url,
+                    track: playlist.tracks.items[index].track.preview_url
                 });
             }
 
@@ -46,6 +67,10 @@
             title.innerText = "Artist: " + randomArtist.artist;
             albumImg.innerHTML=`<img src=\"${randomArtist.image}">`;
             
+            const audioSong = document.getElementById("songAudio");
+            audioSong.setAttribute("src", randomArtist.track);
+    
+
             const divAnswer = document.getElementById("questionsTrivia");
             const questionsTrivia = document.createElement("button");
             questionsTrivia.setAttribute("class", "correctAnswer");

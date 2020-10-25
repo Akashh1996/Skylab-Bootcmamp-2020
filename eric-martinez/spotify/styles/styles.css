@@ -24,6 +24,11 @@ button {
 	width: 200px;
 }
 
+#playAgain {
+	height: 50px;
+	width: 100px;
+}
+
 #questionsTrivia {
 	display: flex;
 	flex-direction: row;

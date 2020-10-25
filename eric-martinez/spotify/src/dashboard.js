@@ -45,3 +45,9 @@ function startGame(){
     const reestartButton = document.getElementById("questionsTrivia");
     reestartButton.innerHTML = "";
 }
+
+function restartGame(){
+    cont = 0;
+    const score = document.getElementById("punctuation");
+    score.innerHTML = "Punctuation: " + cont;
+}
