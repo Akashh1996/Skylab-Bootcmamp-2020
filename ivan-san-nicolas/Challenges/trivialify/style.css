@@ -74,6 +74,15 @@ body {
   margin: 0 auto;
   margin-top: 60px;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.answers-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .game-body-options {
@@ -91,8 +100,8 @@ body {
   background-color: #000000;
   color: #68D962;
   border: 1px solid #68D962;
-  cursor: pointer;
   border-radius: 20px;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -104,6 +113,10 @@ body {
   .game-options {
     flex-direction: column;
     width: 50%;
+  }
+
+  .answers-row {
+    flex-direction: column;
   }
 }
 
