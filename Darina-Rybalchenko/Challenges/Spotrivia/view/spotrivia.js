@@ -1,12 +1,16 @@
 
-function createRandomArtistDetail(playListArray) {
-    let artistArray = playListArray
-    let artistArrayRandom = artistArray[Math.floor(Math.random() * artistArray.length)]
-    return artistArrayRandom
+function createRandomPlayListArray(playListArray) {
+    let playlistArrayRandom = playListArray[Math.floor(Math.random() * playListArray.length)]
+    return playlistArrayRandom
 
 }
 
-function createRandomSongs() {
 
+function createRandomSongsArray(songsArray) {
+    let randomFourSongs = []
+    for (let i = 0; i < 4; i++) {
+        let songsArrayRandom = songsArray[Math.floor(Math.random() * songsArray.length)]
+        randomFourSongs.push(songsArrayRandom)
+    }
+    return randomFourSongs
 }
-

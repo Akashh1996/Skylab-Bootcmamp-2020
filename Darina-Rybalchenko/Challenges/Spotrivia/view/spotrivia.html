@@ -22,10 +22,10 @@
         <img class="image" id="image" src="" alt="">
 
         <div class="song-button-wrapper" id="song">
-            <button id="song__tittle" class="song__tittle__button"></button>
-            <button id="song__tittle" class="song__tittle__button">Song2 Random</button>
-            <button id="song__tittle" class="song__tittle__button">Song3 Random</button>
-            <button id="song__tittle" class="song__tittle__button">Song4 Random</button>
+            <button id="song__tittle_0" class="song__tittle__button"></button>
+            <button id="song__tittle_1" class="song__tittle__button"></button>
+            <button id="song__tittle_2" class="song__tittle__button"></button>
+            <button id="song__tittle_3" class="song__tittle__button"></button>
         </div>
 
         <button id="start-button" class="start-button">p l a y</button>
@@ -52,17 +52,25 @@
                 })
 
             }
-            const randomArtist = createRandomArtistDetail(playListArray)
 
+            const randomPlayListDetail = createRandomPlayListArray(playListArray)
             let artistTittle = document.getElementById('artist')
-            artistTittle.innerHTML = randomArtist.artist
-
             let imageElement = document.getElementById('image')
-            imageElement.src = randomArtist.image.url
+            imageElement.src = randomPlayListDetail.image.url
+            artistTittle.innerHTML = randomPlayListDetail.artist
 
-            let songTittle = document.getElementById('song__tittle')
-            songTittle.innerHTML = randomArtist.song
-            console.log(randomArtist)
+            const songsArray = []
+            for (let j = 0; j < playListArray.length; j++) {
+                songsArray.push(playListArray[j].song)
+            }
+
+            const songsRandomArray = createRandomSongsArray(songsArray)
+            console.log(songsRandomArray)
+            for (let i = 0; i < 4; i++) {
+                let songTittle = document.getElementById(`song__tittle_${i}`)
+                songTittle.innerHTML = songsRandomArray[i]
+            }
+
         })();
 
 

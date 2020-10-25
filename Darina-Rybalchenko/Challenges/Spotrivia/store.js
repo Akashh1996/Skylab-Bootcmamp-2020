@@ -28,8 +28,6 @@ class SpotifyStore {
         return playList = result.tracks.items
 
     }
-
-
 }
 const store = new SpotifyStore();
 
