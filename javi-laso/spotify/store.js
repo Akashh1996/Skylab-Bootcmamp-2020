@@ -4,7 +4,7 @@ let _spotifyToken;
 let _artist;
 let _artistTopTracks;
 let _categories;
-const _seconds = 15;
+let _seconds = 15;
 let _secondsTimer;
 let _functionTimer;
 
@@ -90,7 +90,7 @@ class SpotifyStore {
 		await this.requestArtistTopTracks(artist);
 		const topTracks = this.getArtistTopTracks();
 		const number = Math.floor(Math.random() * topTracks.length);
-		return topTracks[number].name;
+		return topTracks[number];
 	}
 
 	async requestCategories() {
@@ -142,7 +142,12 @@ class SpotifyStore {
 		return labelsArray[randomNumber];
 	}
 
-	async setRandomSongsToInputs(formContainer, artists, resultContainer) {
+	async setRandomSongsToInputs(
+		formContainer,
+		artists,
+		resultContainer,
+		audioContainer
+	) {
 		// Creates an array with the ids of the artists
 		const artistsArray = Object.values(artists);
 		// Takes the artist that will be the answer
@@ -157,10 +162,11 @@ class SpotifyStore {
 		// Chooses a random song from the artist
 		let randomSong = await this.getRandomSongFromTopTracks(actualArtist.id);
 		// Puts the random song in the random label chosen
-		this.updateValueHtml(randomButton, 'innerHTML', randomSong);
+		this.updateValueHtml(randomButton, 'innerHTML', randomSong.name);
+		this.updateValueHtml(audioContainer, 'src', randomSong.preview_url);
+		this.updateValueHtml(audioContainer, 'autoplay', true);
 		// Set the input to the correct answer
 		this.setCorrectButton(randomButton, resultContainer);
-		// this.setCorrectAnswer(randomLabel);
 		// Removes the answer artist from the array to choose
 		const actualArtistIndex = artistsArray.findIndex(
 			(element) => element === actualArtist.id
@@ -182,7 +188,7 @@ class SpotifyStore {
 			// Choses the next button
 			randomButton = buttonsArray[index];
 			// Updates the button with the name of the random song chosen
-			this.updateValueHtml(randomButton, 'innerHTML', randomSong);
+			this.updateValueHtml(randomButton, 'innerHTML', randomSong.name);
 			// The button will be an incorrect answer
 			this.setIncorrectButton(randomButton, resultContainer);
 		}
@@ -209,15 +215,25 @@ class SpotifyStore {
 		artists,
 		imgContainer,
 		formContainer,
-		resultContainer
+		resultContainer,
+		audioContainer
 	) {
 		await store.setRandomArtistNameToContainer(titleContainer, artists);
 		store.setArtistImagetoContainer(imgContainer);
-		store.setRandomSongsToInputs(formContainer, artists, resultContainer);
+		store.setRandomSongsToInputs(
+			formContainer,
+			artists,
+			resultContainer,
+			audioContainer
+		);
 	}
 
 	getSeconds() {
 		return _seconds;
+	}
+
+	setSeconds(seconds) {
+		_seconds = seconds;
 	}
 
 	timerSeconds(timerContainer) {
@@ -243,7 +259,8 @@ class SpotifyStore {
 		imgContainer,
 		formContainer,
 		resultContainer,
-		timerContainer
+		timerContainer,
+		audioContainer
 	) {
 		_functionTimer = setInterval(() => {
 			this.updateValueHtml(resultContainer, 'innerHTML', '');
@@ -257,7 +274,8 @@ class SpotifyStore {
 				artists,
 				imgContainer,
 				formContainer,
-				resultContainer
+				resultContainer,
+				audioContainer
 			);
 		}, (this.getSeconds() + 1) * 1000);
 	}

@@ -8,15 +8,17 @@ let formContainer;
 let imgContainer;
 let artists;
 let resultContainer;
+let timerContainer;
 
 describe('Spotify Store', () => {
 	beforeEach(() => {
 		store = new SpotifyStore();
-		titleContainer = document.createElement('div');
+		titleContainer = document.createElement('h1');
 		formContainer = document.createElement('form');
 		formContainer.innerHTML = '';
 		imgContainer = document.createElement('img');
 		resultContainer = document.createElement('span');
+		timerContainer = document.createElement('span');
 		artists = {
 			Rammstein: '6wWVKhxIU2cEi0K81v7HvP',
 			Metallica: '2ye2Wgw4gimLv2eAKyk1NB',
@@ -27,6 +29,7 @@ describe('Spotify Store', () => {
 		document.body.appendChild(formContainer);
 		document.body.appendChild(imgContainer);
 		document.body.appendChild(resultContainer);
+		document.body.appendChild(timerContainer);
 	});
 
 	describe('requestSpotifyToken promise resolved', () => {
@@ -310,12 +313,34 @@ describe('Spotify Store', () => {
 		});
 	});
 
+	describe('timerSeconds', () => {
+		beforeEach(() => {
+			store.setSeconds(15);
+			jest.useFakeTimers();
+		});
+		test('should call setInterval every second', () => {
+			store.timerSeconds(timerContainer);
+			expect(setInterval).toHaveBeenCalledTimes(1);
+			expect(setInterval).toHaveBeenLastCalledWith(expect.any(Function), 1000);
+		});
+	});
+
 	describe('timerFunction', () => {
-		jest.useFakeTimers();
-		test('should call setNewGame every 15 seconds', () => {
-			const spy1 = jest.spyOn(store, 'setNewGame');
-			store.timerFunction(15000);
-			expect(spy1).toHaveBeenCalledTimes(3);
+		beforeEach(() => {
+			store.setSeconds(15);
+			jest.useFakeTimers();
+		});
+		test('should call setInterval every 15 + 1 seconds', () => {
+			store.timerFunction(
+				titleContainer,
+				artists,
+				imgContainer,
+				formContainer,
+				resultContainer,
+				timerContainer
+			);
+			expect(setInterval).toHaveBeenCalledTimes(1);
+			expect(setInterval).toHaveBeenLastCalledWith(expect.any(Function), 16000);
 		});
 	});
 });

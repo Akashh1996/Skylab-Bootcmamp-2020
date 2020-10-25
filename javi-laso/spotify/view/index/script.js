@@ -18,6 +18,7 @@ const artistNameContainer = document.getElementById('random-artist-name');
 const formContainer = document.getElementById('random-songs');
 const resultContainer = document.getElementById('is-correct');
 const timerContainer = document.getElementById('timer');
+const audioContainer = document.getElementById('audio');
 
 (async () => {
 	await store.requestSpotifyToken();
@@ -27,7 +28,8 @@ const timerContainer = document.getElementById('timer');
 		artists,
 		artistImage,
 		formContainer,
-		resultContainer
+		resultContainer,
+		audioContainer
 	);
 	store.timerFunction(
 		artistNameContainer,
@@ -35,6 +37,7 @@ const timerContainer = document.getElementById('timer');
 		artistImage,
 		formContainer,
 		resultContainer,
-		timerContainer
+		timerContainer,
+		audioContainer
 	);
 })();
