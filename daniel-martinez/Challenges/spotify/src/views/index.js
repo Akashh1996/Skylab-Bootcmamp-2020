@@ -39,6 +39,17 @@ class Quiz {
         return array;
     }
       
+    checkAnswer(option, correctSong){
+        if (option === correctSong){
+            //paintOthersGray();
+            document.getElementById('correct-incorrect__text').innerHTML = 'Correct!';
+            document.getElementById('correct-incorrect__symbol').setAttribute('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Green_tick_pointed.svg/1200px-Green_tick_pointed.svg.png");
+        } else {
+            document.getElementById('correct-incorrect__text').innerHTML = 'Incorrect!';
+            document.getElementById('correct-incorrect__symbol').setAttribute('src', "https://i.dlpng.com/static/png/6658483_preview.png");
+
+        }
+    }
 }
 
 const quiz = new Quiz;
@@ -48,12 +59,24 @@ const quiz = new Quiz;
     const playlistObj = await spotifyStore.getPlaylist(token, "0ddZALObYa8D1Zc4H1OX3U");
     let numOfSongs = playlistObj.tracks.items.length;
     let indexSong = quiz.randomNum(numOfSongs);
-    document.getElementById('playlist').innerHTML = `Playlist name: ${playlistObj.name}`;
+    let correctSong = playlistObj.tracks.items[indexSong].track.name;
+
+    document.getElementById('playlist').innerHTML = `(Playlist name: ${playlistObj.name})`;
     document.getElementById('album-block').innerHTML = quiz.setAlbumImage(playlistObj,indexSong);
+
     let arrayOptions = quiz.createArrayOfOptions(playlistObj,indexSong,numOfSongs);
     arrayOptions = quiz.shuffle(arrayOptions);
     document.getElementById('option1').innerHTML = arrayOptions[0];
+    let option1 = document.getElementById('option1').innerHTML;
     document.getElementById('option2').innerHTML = arrayOptions[1];
+    let option2 = document.getElementById('option2').innerHTML;
     document.getElementById('option3').innerHTML = arrayOptions[2];
+    let option3 = document.getElementById('option3').innerHTML;
     document.getElementById('option4').innerHTML = arrayOptions[3];
+    let option4 = document.getElementById('option4').innerHTML;
+
+    document.getElementById('option1').addEventListener("click", function(){ quiz.checkAnswer(option1, correctSong);});
+    document.getElementById('option2').addEventListener("click", function(){ quiz.checkAnswer(option2, correctSong);});
+    document.getElementById('option3').addEventListener("click", function(){ quiz.checkAnswer(option3, correctSong);});
+    document.getElementById('option4').addEventListener("click", function(){ quiz.checkAnswer(option4, correctSong);});
 })()

@@ -70,3 +70,19 @@ body {
 	text-align: center;
 	font-size: 14px;
 }
+
+#correct-incorrect {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#correct-incorrect__text {
+	font-size: 40px;
+	font-weight: 600;
+	margin-right: 10px;
+}
+
+#correct-incorrect__symbol {
+	height: 30px;
+}
