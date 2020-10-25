@@ -18,7 +18,7 @@ class SpotifyStore {
         return (token = data.access_token);
         
         } catch (tokenError) {
-            console.log('Token invalido');
+            console.log('Invalid token');
         }
     }
 
