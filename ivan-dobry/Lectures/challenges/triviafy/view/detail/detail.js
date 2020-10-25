@@ -102,4 +102,4 @@ let timer = setInterval (function () {
         updateDisplay();
     }
 
-}, 1000); 
+}, 1000);
