@@ -183,6 +183,7 @@ class SpotifyGame {
 }
 let artistInfo, artistTopTracks;
 const curLocation = location;
+console.log(curLocation);
 const curIdFromLocation = getIdParam(curLocation);
 (async () => {
 	await spotifyStore.getToken();

@@ -3,3 +3,5 @@ const getIdParam = (location) => {
 	const getCurId = params.get('id');
 	return getCurId;
 };
+
+module.exports = getIdParam;
