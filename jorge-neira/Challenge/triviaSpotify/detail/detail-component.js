@@ -31,11 +31,12 @@ class SpotifyGame {
 			currentTopTracks: this.topTracks,
 			correctAnswerPoints: 10,
 			currentGameScore: 0,
-			secondsRemaining: 5,
+			secondsRemaining: 30,
 			roundCounter: 0,
 			gameStatus: true,
 			gamePause: false,
-			currentCorrectAnswer: ''
+			currentCorrectAnswer: '',
+			timer: ''
 		};
 		const getGenresList = (genres) => {
 			genres.forEach((element, index) => {
@@ -89,53 +90,80 @@ class SpotifyGame {
 
 		const setGameTimer = () => {
 			if (gameVariables.gameStatus) {
-				let timer = setInterval(() => {
+				gameVariables.timer = setInterval(() => {
 					gameVariables.secondsRemaining--;
 					console.log(gameVariables.secondsRemaining);
 					if (gameVariables.secondsRemaining <= 0) {
 						if (!gameVariables.gameStatus) {
-							clearInterval(timer);
+							clearInterval(gameVariables.timer);
 						} else {
 							if (gameVariables.roundCounter === 9) {
 								gameVariables.gameStatus = false;
-								clearInterval(timer);
+								clearInterval(gameVariables.timer);
 							} else {
-								gameVariables.secondsRemaining = 5;
+								gameVariables.secondsRemaining = 30;
 								gameVariables.roundCounter++;
 								setGameTimer();
 								setCurrentRound(this.topTracks, gameVariables.roundCounter);
-								clearInterval(timer);
+								clearInterval(gameVariables.timer);
 							}
 						}
 					}
 				}, 1000);
-				DOMElements.pauseStatusBtn.addEventListener('click', function () {
-					clearInterval(timer);
-					gameVariables.gamePause = true;
-					DOMElements.artistPreview.pause();
-				});
-				DOMElements.nextStatusBtn.addEventListener('click', function () {
-					if (gameVariables.roundCounter === 9) return;
-					if (gameVariables.gamePause) {
-						gameVariables.gamePause = false;
-					}
-					clearInterval(timer);
-					gameVariables.secondsRemaining = 30;
-					setGameTimer();
-					gameVariables.roundCounter++;
-					setCurrentRound(
-						gameVariables.currentTopTracks,
-						gameVariables.roundCounter
-					);
-				});
 			}
 		};
 
+		const doNextRound = () => {
+			clearInterval(gameVariables.timer);
+			gameVariables.secondsRemaining = 30;
+			setGameTimer();
+			gameVariables.roundCounter++;
+			setCurrentRound(
+				gameVariables.currentTopTracks,
+				gameVariables.roundCounter
+			);
+		};
+
+		DOMElements.pauseStatusBtn.addEventListener('click', function () {
+			clearInterval(gameVariables.timer);
+			DOMElements.artistPreview.pause();
+			gameVariables.gamePause = true;
+		});
+		DOMElements.nextStatusBtn.addEventListener('click', function () {
+			if (gameVariables.roundCounter === 9) return;
+			if (gameVariables.gamePause) {
+				gameVariables.gamePause = false;
+			}
+			doNextRound();
+		});
 		DOMElements.optionGameBtn.forEach((button) => {
 			button.addEventListener('click', function () {
-				if (button.textContent === gameVariables.currentCorrectAnswer) {
-					console.log(gameVariables.currentCorrectAnswer);
+				console.log(gameVariables.gamePause);
+				if (
+					gameVariables.roundCounter === 9 &&
+					button.textContent === gameVariables.currentCorrectAnswer &&
+					!gameVariables.gamePause
+				) {
+					clearInterval(gameVariables.timer);
+					gameVariables.gamePause = true;
+					DOMElements.artistPreview.pause();
 					updateScore();
+					return;
+				} else {
+					if (gameVariables.gamePause && gameVariables.roundCounter === 9) {
+						return;
+					}
+					if (gameVariables.gamePause) {
+						gameVariables.gamePause = false;
+						doNextRound();
+						return;
+					}
+					if (button.textContent === gameVariables.currentCorrectAnswer) {
+						doNextRound();
+						updateScore();
+					} else {
+						doNextRound();
+					}
 				}
 			});
 		});
