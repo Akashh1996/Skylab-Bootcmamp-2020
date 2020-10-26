@@ -1,0 +1,16 @@
+.book-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 400px;
+    height: 40px;
+    margin: 35px 0;
+    padding: 0 10px;
+    background-color: azure;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.book-item:hover {
+    background-color: rgb(196, 210, 210);
+}
