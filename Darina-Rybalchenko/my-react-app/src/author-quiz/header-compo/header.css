@@ -9,9 +9,10 @@ h1 {
 .header__second__element {
     display: flex;
     flex-direction: column;
-    background-color: rgb(207, 232, 241);
-    width: 70%;
+    background-color: rgb(236, 237, 241);
+    width: 80%;
     margin: auto;
+    margin-bottom: 10px;
 }
 
 h2 {
