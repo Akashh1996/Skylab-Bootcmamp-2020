@@ -1,0 +1,161 @@
+* {
+	font-family: Tahoma, sans-serif;
+	background-color: rgb(245, 243, 243);
+	margin: 10px;
+}
+
+body {
+	border: 1px solid rgb(41, 41, 41);
+}
+
+.navigation {
+	position: relative;
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.nav-button {
+	border-radius: 5px;
+	padding: 7px 10px;
+	background-color: rgb(197, 197, 197);
+	color: rgb(59, 59, 59);
+	text-decoration: none;
+	margin-right: 5px;
+	width: 100px;
+}
+
+.nav-button:hover {
+	color: rgb(65, 141, 241);
+}
+
+a {
+	display: flex;
+	align-self: center;
+	text-decoration: none;
+	color: white;
+	background-color: rgb(65, 141, 241);
+	border: 1px solid transparent;
+}
+
+a:hover {
+	background-color: white;
+	color: rgb(65, 141, 241);
+	border: 1px solid rgb(65, 141, 241);
+}
+
+.details-container__head-info {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap-reverse;
+}
+
+.head-info__id-and-name,
+#head-info__image,
+.flex-spacer {
+	flex: 1;
+}
+
+.details-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin: 10px 20px;
+}
+
+.id,
+.name {
+	display: flex;
+	margin: 0px;
+}
+
+#image-xs,
+#image-sm,
+#image-md,
+#image-lg {
+	display: none;
+}
+
+.powerstats__title {
+	margin-bottom: 0;
+}
+
+#powerstats__circles {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 0;
+}
+
+#powerstats__circles svg circle {
+	width: 100px;
+	height: 100px;
+	fill: none;
+	stroke-width: 9;
+	stroke: rgb(74, 63, 230);
+	stroke-dashoffset: 233;
+	stroke-dasharray: 233;
+	transform: rotate(-90deg);
+	transform-origin: 50% 50%;
+}
+#powerstats__circles svg circle:nth-child(1) {
+	stroke-dasharray: 0;
+	stroke-dashoffset: 0;
+	stroke: #d9d9d9;
+}
+
+svg {
+	margin-bottom: 0;
+}
+
+.circle-span {
+	position: relative;
+}
+
+.powerstat-number {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	font-size: 18px;
+}
+
+.powerstat-text {
+	text-transform: capitalize;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+	margin-top: 0;
+}
+
+.info-block1,
+.info-block2 {
+	display: flex;
+	margin: 0;
+}
+
+#appearance,
+#work {
+	margin-right: 20px;
+	min-width: 320px;
+	max-width: 320px;
+}
+
+#appearance__items,
+#biography__items,
+#work__items,
+#connections__items {
+	padding-left: 10px;
+	text-transform: capitalize;
+}
+
+@media screen and (max-width: 900px) {
+	#image-sm {
+		display: block;
+		border: 1px solid black;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	#image-md {
+		display: block;
+		border: 1px solid black;
+	}
+}

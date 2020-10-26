@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Pokemon</title>
+	</head>
+	<body>
+		<ul class="listPokemon" id="listPokemon"></ul>
+		<script src="./../store.js"></script>
+		<script src="./index.js"></script>
+		<script>
+			store.loadPokemon().then(() => {
+				const pokemon = store.getPokemon();
+				const pokemonComponent = new PokemonComponent(pokemon);
+				if (pokemon) {
+					let element = document.getElementById('listPokemon');
+					pokemonComponent.updateHtmlPokemonList(element);
+				}
+			});
+		</script>
+	</body>
+</html>

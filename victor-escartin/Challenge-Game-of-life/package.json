@@ -1,0 +1,17 @@
+{
+  "name": "Challenge-Game-of-life",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:debug":"jest --watch",
+    "test:coverage":"jest --collect--coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.5.3"
+  }
+}

@@ -36,4 +36,20 @@ describe('store', () => {
 			]);
 		});
 	});
+
+	describe('loadHeroes', () => {
+		beforeEach(() => {
+			global.fetch = jest.fn().mockImplementationOnce(() =>
+				Promise.resolve({
+					json: jest.fn().mockReturnValueOnce([{ id: 12, name: 'Narco' }])
+				})
+			);
+		});
+
+		test('should update _heroes', () => {
+			return store.loadHeroes().then(() => {
+				expect(store.getHeroes()).toEqual([{ id: 12, name: 'Narco' }]);
+			});
+		});
+	});
 });
