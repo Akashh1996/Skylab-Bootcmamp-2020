@@ -206,6 +206,9 @@ body .gameControls .gameboard-buttons {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 body .gameControls .gameboard-status-button {

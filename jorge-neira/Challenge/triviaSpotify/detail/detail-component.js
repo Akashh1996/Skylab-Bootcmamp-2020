@@ -28,10 +28,14 @@ class SpotifyGame {
 			exitStatusBtn: document.querySelector('.exitBtn')
 		};
 		const gameVariables = {
-			secondsRemaining: 30,
+			currentTopTracks: this.topTracks,
+			correctAnswerPoints: 10,
+			currentGameScore: 0,
+			secondsRemaining: 5,
 			roundCounter: 0,
 			gameStatus: true,
-			currentGameScore: 0
+			gamePause: false,
+			currentCorrectAnswer: ''
 		};
 		const getGenresList = (genres) => {
 			genres.forEach((element, index) => {
@@ -42,23 +46,25 @@ class SpotifyGame {
 			});
 		};
 
-		const generateThreeRandomNumbers = () => {
-			let randomNumForWrongAnswer = [];
-			while (randomNumForWrongAnswer.length !== 3) {
-				const randomNum = Math.floor(Math.random() * 8);
-				if (randomNumForWrongAnswer.includes(randomNum)) continue;
-				randomNumForWrongAnswer.push(randomNum);
+		const generateRandomNumber = (maxNums, maxValue) => {
+			let randomNumbers = [];
+			while (randomNumbers.length !== maxNums) {
+				const randomNum = Math.floor(Math.random() * maxValue);
+				if (randomNumbers.includes(randomNum)) continue;
+				randomNumbers.push(randomNum);
 			}
-			return randomNumForWrongAnswer;
+			return randomNumbers;
 		};
 
 		const setCurrentRound = (tracks, currentRound = 0) => {
-			const wrongAnswerIndex = generateThreeRandomNumbers();
+			const wrongAnswerIndex = generateRandomNumber(3, 8);
+			const randomButtonPositionQuestion = generateRandomNumber(4, 4);
 			const curentArtistSong = [];
+			gameVariables.currentCorrectAnswer = tracks[currentRound].name;
 			curentArtistSong.push(tracks[currentRound].name);
+			console.log(curentArtistSong);
 			DOMElements.artistPreview.autoplay = true;
 			DOMElements.artistPreview.src = tracks[currentRound].preview_url;
-			console.log(curentArtistSong[0]);
 			const randomTracks = [];
 			tracks.forEach((track) => {
 				if (track.name !== curentArtistSong[0]) {
@@ -68,14 +74,17 @@ class SpotifyGame {
 			wrongAnswerIndex.forEach((wrongTracks) => {
 				curentArtistSong.push(randomTracks[wrongTracks]);
 			});
-			console.log(curentArtistSong);
-			DOMElements.optionGameBtn.forEach((btnOption, index) => {
-				btnOption.textContent = `${curentArtistSong[index]}`;
+			randomButtonPositionQuestion.forEach((randomIndex, index) => {
+				DOMElements.optionGameBtn[
+					randomIndex
+				].textContent = `${curentArtistSong[index]}`;
 			});
 		};
 
 		const updateScore = () => {
-			gameVariables.currentGameScore++;
+			gameVariables.currentGameScore =
+				gameVariables.currentGameScore + gameVariables.correctAnswerPoints;
+			DOMElements.gameScore.textContent = gameVariables.currentGameScore;
 		};
 
 		const setGameTimer = () => {
@@ -84,26 +93,64 @@ class SpotifyGame {
 					gameVariables.secondsRemaining--;
 					console.log(gameVariables.secondsRemaining);
 					if (gameVariables.secondsRemaining <= 0) {
-						gameVariables.secondsRemaining = 30;
-						gameVariables.roundCounter++;
-						// setGameTimer();
-						setCurrentRound(this.topTracks, gameVariables.roundCounter);
-						clearInterval(timer);
+						if (!gameVariables.gameStatus) {
+							clearInterval(timer);
+						} else {
+							if (gameVariables.roundCounter === 9) {
+								gameVariables.gameStatus = false;
+								clearInterval(timer);
+							} else {
+								gameVariables.secondsRemaining = 5;
+								gameVariables.roundCounter++;
+								setGameTimer();
+								setCurrentRound(this.topTracks, gameVariables.roundCounter);
+								clearInterval(timer);
+							}
+						}
 					}
 				}, 1000);
+				DOMElements.pauseStatusBtn.addEventListener('click', function () {
+					clearInterval(timer);
+					gameVariables.gamePause = true;
+					DOMElements.artistPreview.pause();
+				});
+				DOMElements.nextStatusBtn.addEventListener('click', function () {
+					if (gameVariables.roundCounter === 9) return;
+					if (gameVariables.gamePause) {
+						gameVariables.gamePause = false;
+					}
+					clearInterval(timer);
+					gameVariables.secondsRemaining = 30;
+					setGameTimer();
+					gameVariables.roundCounter++;
+					setCurrentRound(
+						gameVariables.currentTopTracks,
+						gameVariables.roundCounter
+					);
+				});
 			}
 		};
 
+		DOMElements.optionGameBtn.forEach((button) => {
+			button.addEventListener('click', function () {
+				if (button.textContent === gameVariables.currentCorrectAnswer) {
+					console.log(gameVariables.currentCorrectAnswer);
+					updateScore();
+				}
+			});
+		});
+		DOMElements.exitStatusBtn.addEventListener('click', function () {
+			document.location.href =
+				'http://127.0.0.1:5500/dashboard/dashboard-component.html';
+		});
 		(() => {
 			DOMElements.artistName.textContent = this.name;
 			DOMElements.artistFollowers.textContent = this.followers;
 			DOMElements.artistImage.src = this.image;
 			getGenresList(this.genres);
-			// setGameTimer();
-			// setCurrentRound(this.topTracks);
+			setGameTimer();
+			setCurrentRound(this.topTracks);
 		})();
-
-		DOMElements.exitStatusBtn.addEventListener('click', function () {});
 	}
 }
 let artistInfo, artistTopTracks;

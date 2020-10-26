@@ -142,6 +142,7 @@ body {
 		.gameboard-buttons {
 			display: flex;
 			flex-direction: column;
+			align-items: flex-start;
 		}
 		.gameboard-status-button {
 			display: flex;
