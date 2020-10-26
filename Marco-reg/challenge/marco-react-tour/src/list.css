@@ -1,0 +1,16 @@
+.list {
+	display: flex;
+	flex-direction: column;
+}
+.topten {
+	background-color: #eeeeee;
+}
+ul {
+	list-style-type: none;
+}
+.id {
+	margin: 5px;
+}
+.detail {
+	display: flex;
+}
