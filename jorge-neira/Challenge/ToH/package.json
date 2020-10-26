@@ -1,0 +1,27 @@
+{
+  "name": "toh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "store.js",
+  "dependencies": {
+    "babel-preset-current-node-syntax": "^0.1.4",
+    "balanced-match": "^1.0.0",
+    "browser-process-hrtime": "^1.0.0",
+    "buffer-from": "^1.1.1",
+    "callsites": "^3.1.0",
+    "camelcase": "^5.3.1",
+    "caseless": "^0.12.0",
+    "char-regex": "^1.0.2"
+  },
+  "devDependencies": {
+    "jest": "^26.6.0"
+  },
+  "scripts": {
+    "test": "jest --watch",
+    "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
+    "test:coverage": "jest --collect-coverage --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

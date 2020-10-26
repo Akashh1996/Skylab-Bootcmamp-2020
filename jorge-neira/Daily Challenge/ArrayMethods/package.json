@@ -1,0 +1,19 @@
+{
+  "name": "array-methods",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mapArray.js",
+  "dependencies": {
+    "jest": "^26.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --watch",
+    "test:coverage": "jest --collect-coverage",
+    "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

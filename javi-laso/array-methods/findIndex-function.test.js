@@ -1,6 +1,6 @@
 const findIndexFunction = require('./findIndex-function');
 
-describe('Map function', () => {
+describe('Find index function', () => {
     test('Should return 5', () => {
         //assign
         const skylabArray = {0: 1, 1: '2', 2: {}, 3: 'pet', 4: null, 5: 25, length: 6};

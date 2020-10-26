@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+</head>
+<body>
+    <h1 id="pokeTitle"></h1>
+    <div id="pokemon_list"></div>
+    <script src="../store.js"></script>
+    
+    <script>
+        store.loadPokedex().then(() => {
+            const pokedex = store.getPokemons();
+           if(pokedex){
+            const pokemonListElement = document.getElementById('pokemon_list');
+            const createUl = document.createElement('ul')
+            pokemonListElement.appendChild(createUl)
+            pokedex.forEach(pokemon => {
+                const liElement = document.createElement('li');
+                const anchoreElement = document.createElement('a');
+                anchoreElement.setAttribute('href', `./detail.html?pokemonName=${pokemon.name}`);
+                anchoreElement.innerText = pokemon.name;
+                createUl.appendChild(liElement);
+                liElement.appendChild(anchoreElement);
+            });
+           }else{
+            const errorTitle = document.getElementById('pokeTitle');
+            errorTitle.innerText = "Oooooooh an error has occurred";
+            const pokemonListElement = document.getElementById('pokemon_list');
+            pokemonListElement.innerHTML = "<img src=\"https://cdn.dribbble.com/users/2104064/screenshots/8512308/media/8205deaaa43a836b9ba471e6ff7a0f6e.png\" height='800px' width='1400px'>"
+           }
+        });
+    </script>
+    
+</body>
+</html>
