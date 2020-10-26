@@ -4,10 +4,15 @@ import './index.css';
 //import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/header/Header';
+import './components/header/header.css';
+import Author from './components/author/Author';
+import './components/author/author.css';
+
 
 ReactDOM.render( <
   React.StrictMode >
   <Header />
+  <Author/>
 </React.StrictMode>, document.getElementById('root')
 );
 
