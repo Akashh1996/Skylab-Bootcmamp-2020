@@ -1,0 +1,17 @@
+{
+	"name": "spotify",
+	"version": "1.0.0",
+	"description": "",
+	"main": "main.js",
+	"scripts": {
+		"test": "test",
+		"test:coverage": "jest --collect-coverage --watchAll",
+		"test:debug": "node --inspect -brk./node_modules/jest/bin/jest.js --runInBand"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"jest": "^26.6.1"
+	}
+}

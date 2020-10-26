@@ -1,0 +1,59 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.navbar {
+	height: 100px;
+	background-color: black;
+}
+
+body {
+	background-color: #2f4bba;
+}
+
+h1 {
+	color: #73d962;
+	text-align: center;
+	margin-top: 20px;
+	font-size: 80px;
+}
+
+.logo-navbar {
+	width: 300px;
+	height: 90px;
+}
+.btn {
+	padding: 10px;
+	font-weight: 600;
+	font-size: 20px;
+	color: #ffffff;
+	background-color: #1883ba;
+	border-radius: 6px;
+	border: 2px solid #1883ba;
+}
+.btn:hover {
+	color: rgb(198, 201, 238);
+}
+
+.startbtn {
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
+}
+
+.hidden {
+	display: none;
+}
+.imagesize {
+	width: 400px;
+	height: 500px;
+}
+
+#artist {
+	font-size: 50px;
+	font-family: Arial, sans-serif;
+}
+.artist_image {
+	text-align: center;
+}
