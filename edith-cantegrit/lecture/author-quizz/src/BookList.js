@@ -12,13 +12,3 @@ function BookList({books}) {
 }
 
 export default BookList; 
-
-
-// function App() {
-//     const [count, setCount] = useState(0);
-//     return (
-//       <button onClick={() => setCount(1)}>
-//         Click me!
-//       </button>
-//     );
-//   }
