@@ -1,11 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import HeaderAuthor from './headerAuthorComponent/HeaderAuthorComponent';
+ import HeaderAuthor from './headerAuthorComponent/HeaderAuthorComponent';
+import DetailAuthor from './detailAuthorComponent/DetailAuthorComponent';
+import ListAuthor from './listAuthorComponent/ListAuthorComponent';
 
 ReactDOM.render(
 	<React.StrictMode>
 		<HeaderAuthor />
+		<DetailAuthor />
+		<ListAuthor />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
