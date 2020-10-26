@@ -1,17 +1,14 @@
 import React from 'react';
 import BookItem from './BookItem';
+import BookList from './BookList';
 
 class ListAuthor extends React.Component {
 	render() {
-		const titles = ['jorge', 'jorge1', 'jorge2', 'ScoobyDoo', 'Bilma'];
+		const books = ['jorge', 'jorge1', 'jorge2', 'ScoobyDoo', 'Bilma'];
 		return (
 			<>
 				<div class="listContainer">
-					<ul>
-						{titles.map((title) => (
-							<BookItem title={title} />
-						))}
-					</ul>
+					<BookList books={books} item={BookItem} />
 				</div>
 				<div>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
