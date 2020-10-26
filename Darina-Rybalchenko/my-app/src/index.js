@@ -2,12 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Header from './header-compo/header'
+import Sum from './sum'
 
+
+const props = {
+  a: 4,
+  b: 2
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
+    <Sum {...props} />
   </React.StrictMode>,
   document.getElementById('root')
 );

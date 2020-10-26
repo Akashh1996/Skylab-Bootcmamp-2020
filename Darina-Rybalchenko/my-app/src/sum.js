@@ -23,7 +23,11 @@ class Sum extends React.Component {
     }
 }
 
-
+/* Sum.propTypes = {
+    a: Prop.Types.number.isRequired,
+    b: Prop.Types.number.isRequired
+}
+ */
 
 
 export default Sum
