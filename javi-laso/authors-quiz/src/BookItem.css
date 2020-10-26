@@ -1,0 +1,20 @@
+.answers-button {
+	outline: none;
+	background-color: #f1f7fd;
+	border: none;
+	margin-bottom: 20px;
+	cursor: pointer;
+	border-left: 3px #d2e1f0 solid;
+}
+
+.answers-button:hover {
+	background-color: #d2e1f0;
+}
+
+.answer {
+	list-style-type: none;
+	margin: 20px;
+	padding-left: 20px;
+	text-align: start;
+	font-size: 16px;
+}
