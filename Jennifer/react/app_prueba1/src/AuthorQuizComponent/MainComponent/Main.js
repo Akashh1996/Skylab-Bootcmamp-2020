@@ -12,13 +12,16 @@ function Main() {
 	];
 
 	return (
-		<section className="main">
+		<section id="main">
 			<img
 				alt="author img"
 				src="https://study.com/cimages/multimages/16/mark_twain_1871.jpg"
 			></img>
 			<ul></ul>
 			<BookList books={books} />
+			<div id="button">
+				<input type="button" id="button_continue" value="continue"></input>
+			</div>
 		</section>
 	);
 }
