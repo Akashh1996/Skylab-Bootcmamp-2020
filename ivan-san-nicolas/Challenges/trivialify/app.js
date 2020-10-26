@@ -163,11 +163,12 @@ function playAgain() {
 
 async function nextRound() {
     player.rounds++;
-    if (player.rounds === 20) {
+    if (player.rounds === 21) {
         return endGame();
     } else {
         timeLeft = 20;
         document.getElementById('timer').innerHTML = `timer: ${timeLeft}`;
+        document.getElementById('timer').className = 'button';
         countdownLeft = null;
         countdownLeft = setInterval(countdown, 1000);
         document.getElementById('next').style.display = 'none';
