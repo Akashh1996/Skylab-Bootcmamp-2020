@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Sum({ a, b }) {
+function Sum({ a, b, showAlert }) {
 	return (
 		<h1>
-			{a} + {b} = {a + b}
+			{a} + {b} = <button onClick={() => showAlert(a, b)}>?</button>
 		</h1>
 	);
 }
 
 Sum.propTypes = {
 	a: PropTypes.number.isRequired,
-	b: PropTypes.number.isRequired
+	b: PropTypes.number.isRequired,
+	showAlert: PropTypes.func.isRequired
 };
 
 export default Sum;

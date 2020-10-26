@@ -7,9 +7,17 @@ import reportWebVitals from './reportWebVitals';
 // import ClickCounter from './ClickCounter';
 import Sum from './Sum';
 
+const props = {
+	a: 5,
+	b: 8,
+	showAlert: (a, b) => {
+		alert(`El resultado es ${a + b}`);
+	}
+};
+
 ReactDOM.render(
 	<React.StrictMode>
-		<Sum a={1} b={12} />
+		<Sum {...props} />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
