@@ -6,18 +6,13 @@ import Header from './Header/Header';
 import AuthorImage from './author-image/AuthorImage';
 import Answers from './Answers/Answers';
 
-let options = {
-	options1: 'The shining',
-	options2: 'The adventures by the author shown',
-	options3: 'MacBeth',
-	options4: 'IT'
-};
-
 ReactDOM.render(
 	<React.StrictMode>
 		<Header />
-		<AuthorImage img="https://cdn.britannica.com/74/177874-131-62098C6C/Jules-Verne.jpg" />
-		<Answers options={options} />
+		<div className="main-content" id="main">
+			<AuthorImage img="https://study.com/cimages/multimages/16/mark_twain_1871.jpg" />
+			<Answers />
+		</div>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
