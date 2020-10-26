@@ -1,3 +1,4 @@
+import React from "react"
 import './index.css';
 
 
@@ -19,12 +20,7 @@ function List() {
    
     return (
         
-    <div className="main">
-      <div className="title__buttons">
-        <h1 className="dashboard_title">Tour of Heroes</h1>
-        <button className="dashboard_btn">Dashboard</button>
-        <button className="heroes_btn">Heroes</button>
-      </div>
+   
       <div className= "list_heroes">
           <h2 className="my_heroes_title">My Heroes</h2>
           <div className="top_heroes_btn_wrapper"></div>
@@ -35,7 +31,7 @@ function List() {
           })}
           
       </div>
-    </div>
+  
     );  
 
   }

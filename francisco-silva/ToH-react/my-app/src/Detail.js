@@ -1,3 +1,4 @@
+import React from "react"
 import './index.css';
 
 
@@ -17,12 +18,7 @@ function Detail() {
 ];
     return (
         
-    <div className="main">
-      <div className="title__buttons">
-        <h1 className="dashboard_title">Tour of Heroes</h1>
-        <button className="dashboard_btn">Dashboard</button>
-        <button className="heroes_btn">Heroes</button>
-      </div>
+    
       <div className= "list_heroes">
     <h2 className="my_heroes_title">{heroes[4].name} details!</h2>
           <div className="hero_details_wrapper"></div>
@@ -30,7 +26,7 @@ function Detail() {
     <p>name: <input type="text" value = {heroes[4].name}/></p>
           
       </div>
-    </div>
+  
     );  
 
   }
