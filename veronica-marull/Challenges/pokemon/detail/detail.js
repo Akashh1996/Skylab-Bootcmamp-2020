@@ -1,7 +1,8 @@
 //const store = require('../store');
 
-function drawPokemon(pokeName) {
-	store.getPokemonDetail(pokeName).then((pokemon) => {
+async function drawPokemon(pokeName) {
+	const pokemon = await store.getPokemonDetail(pokeName);
+	if (pokemon) {
 		let details = document.getElementById('details');
 		details.innerHTML = '';
 
@@ -25,7 +26,9 @@ function drawPokemon(pokeName) {
 			anchorElement.href = `./abilityDetail.html?abilityName=${ability.ability.name}`;
 			details.appendChild(anchorElement);
 		});
-	});
+	} else {
+		details.innerHTML = `<img class="error" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSUM8u05GrI8V9Q8wRQxypqqJQqHFwZIF95OA&usqp=CAU">`;
+	}
 }
 
 function getPokemonName() {

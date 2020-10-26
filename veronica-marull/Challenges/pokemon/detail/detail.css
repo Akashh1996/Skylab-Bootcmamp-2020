@@ -54,3 +54,7 @@ nav a {
 .main-container span {
 	padding: 10px;
 }
+
+.error {
+	width: 300px;
+}

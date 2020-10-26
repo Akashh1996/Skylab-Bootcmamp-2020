@@ -1,0 +1,30 @@
+.buttons {
+	display: flex;
+}
+.buttons a {
+	color: black;
+}
+
+.button:hover {
+	background-color: #c0aab6;
+}
+
+.button {
+	padding: 10px;
+	background-color: rgb(201, 198, 200);
+	margin: 2%;
+	border-radius: 15px;
+}
+
+.main-container {
+	display: flex;
+	flex-direction: column;
+}
+a:link,
+a:visited,
+a:active {
+	text-decoration: none;
+}
+* {
+	font-family: Verdana, sans-serif;
+}

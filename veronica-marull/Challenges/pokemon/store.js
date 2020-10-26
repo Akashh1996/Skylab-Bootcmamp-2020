@@ -1,6 +1,6 @@
 class Store {
 	pokemons = null;
-
+	/*
 	loadPokemons() {
 		return fetch('https://pokeapi.co/api/v2/pokemon')
 			.then((response) => response.json())
@@ -9,15 +9,28 @@ class Store {
 				return this.pokemons;
 			});
 	}
+	*/
+	async loadPokemons() {
+		const response = await fetch('https://pokeapi.co/api/v2/pokemon');
+		const pokemonsResponse = await response.json();
+
+		return pokemonsResponse.results;
+	}
 
 	getPokemons() {
 		return this.pokemons;
 	}
 
-	getPokemonDetail(idOrName) {
-		return fetch(
-			`https://pokeapi.co/api/v2/pokemon/${idOrName}/`
-		).then((response) => response.json());
+	async getPokemonDetail(idOrName) {
+		try {
+			const response = await fetch(
+				`https://pokeapi.co/api/v2/pokemon/${idOrName}/`
+			);
+			const detail = await response.json();
+			return detail;
+		} catch (error) {
+			console.log('error');
+		}
 	}
 
 	getPokemonAbility(abilityName) {
