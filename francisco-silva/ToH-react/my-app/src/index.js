@@ -1,16 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Dashboard from './Dashboard';
+// import Dashboard from './Dashboard';
+// import List from './List';
+import Detail from './Detail';
 
 // import reportWebVitals from './reportWebVitals';
 
 
 
+
+
 ReactDOM.render(
+  
   <React.StrictMode>
     
-    <Dashboard/>
+    <Detail/>
 
   </React.StrictMode>,
   document.getElementById('root')

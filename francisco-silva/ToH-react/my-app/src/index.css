@@ -37,11 +37,24 @@ button:hover {
 	margin: 10px;
 	cursor: pointer;
 }
-.top_heroes_btn:hover {
+.top_heroes_btn:hover,
+.my_heroes_btn:hover {
 	background-color: #5ebede;
 }
 
 .top_heroes_btn_wrapper {
 	display: flex;
 	flex-direction: row;
+}
+
+.my_heroes_btn {
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	background-color: #008cba;
+	border: none;
+	color: white;
+	width: 190px;
+	padding: 10px;
+	font-size: 20px;
 }
