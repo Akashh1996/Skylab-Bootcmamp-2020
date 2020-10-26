@@ -69,7 +69,7 @@ const spotify = new SpotifyStore();
 		document.getElementById('artist-3').innerHTML =
 			songsList[randomIndex].track.artists[0].name;
 		document.getElementById('song-image').src = imageArray[randomIndex].url;
-		//document.querySelector("button").innerHTML = randomIndex;
+		
 	}
 	displayRandomValues();
 	function displayRandomAnswers() {
