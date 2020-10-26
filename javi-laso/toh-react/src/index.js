@@ -10,7 +10,7 @@ import store from './store';
 
 const dashboard = store.getTopHeroes();
 const heroesList = store.getHeroes();
-const hero = store.getHeroById(1);
+const hero = store.getHeroById(4);
 
 ReactDOM.render(
 	<React.StrictMode>

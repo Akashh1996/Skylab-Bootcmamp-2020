@@ -4,7 +4,7 @@ import './DashboardElement.css';
 function DashboardElement({ name }) {
 	return (
 		<li>
-			<a>{name}</a>
+			<a href="#">{name}</a>
 		</li>
 	);
 }

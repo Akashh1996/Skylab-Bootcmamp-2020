@@ -512,6 +512,29 @@ class Store {
 	getTopHeroes() {
 		return this.getHeroes().slice(0, 4);
 	}
+
+	getDashOffSetfromPercent(circle, percent) {
+		let radius = circle.getAttribute('r');
+		let circumference = Math.PI * radius * 2;
+		percent = percent < 0 ? 0 : percent > 100 ? 100 : percent;
+		let dashOffSet = circumference - (percent / 100) * circumference;
+		let dashArray = circumference;
+		return [dashOffSet, dashArray];
+	}
+
+	setStrokeDashoffsetInCircle(circle, percent) {
+		circle.style.strokeDashoffset = this.getDashOffSetfromPercent(
+			circle,
+			percent
+		)[0];
+	}
+
+	setStrokeDasharrayInCircle(circle, percent) {
+		circle.style.strokeDasharray = this.getDashOffSetfromPercent(
+			circle,
+			percent
+		)[1];
+	}
 }
 
 const store = new Store();
