@@ -1,0 +1,9 @@
+* {
+	font-family: 'Press Start 2P', cursive;
+}
+body {
+	display: flex;
+	width: 100vh;
+	background-color: antiquewhite;
+	margin: 25px;
+}

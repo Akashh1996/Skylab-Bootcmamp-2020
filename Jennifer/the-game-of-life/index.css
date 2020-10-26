@@ -1,0 +1,63 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #fffcf2;
+}
+
+h1 {
+	text-align: end;
+	font-style: italic;
+	font-size: 50px;
+	margin-right: 10px;
+}
+h3 {
+	font-style: italic;
+}
+#grid-container {
+	display: grid;
+	border: 3px solid black;
+	grid-template-columns: repeat(50, auto);
+	grid-template-rows: repeat(50, auto);
+	width: 500px;
+	height: 500px;
+}
+
+.div-game {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.celula {
+	border: 1px solid black;
+	background: white;
+}
+
+.celula-viva {
+	background: black;
+}
+
+.ultima-ronda {
+	background: crimson;
+}
+
+.buttons {
+	display: flex;
+	margin-top: 10px;
+}
+
+#button-start,
+#button-end {
+	width: 200px;
+	height: 50px;
+	background: wheat;
+}
+
+#button-end {
+	display: none;
+}

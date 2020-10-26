@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of heroes</title>
+    <link rel="stylesheet" href="../../style-dashboard.css">
+</head>
+<body>
+    <header>
+        <h1 class="main-title">Tour of Heroes</h1>
+        <nav>
+            <a class="nav-buttons" href="../dashboard/dashboard.html">Dashboard</a>
+            <a class="nav-buttons" href="../list/list-of-heroes.html">Heroes</a>
+        </nav>
+    </header>
+    <main>
+        <article class="top-heroes-wrapper">
+            <h2 class="detail-title-wrapper"><span id="detail-title"></span> details!</h2>
+			<div id="hero-img"></div>
+			<div class="hero-characteristic">
+				<span>Id: </span>
+				<span id="hero-id__value"></span>
+			</div>
+			<div class="hero-characteristic">
+				<label
+					><span>Name: </span>
+					<input id="hero-name__input" placeholder="name" />
+				</label>
+            </div>
+            <div class="hero-characteristic">
+				<span>Slug: </span>
+				<span id="hero-slug__value"></span>
+			</div>
+            <div class="hero-characteristic">
+				<span>Powerstats: </span>
+				<span id="hero-powerstats__value"></span>
+			</div>
+            <div class="hero-characteristic">
+				<span>Appearance: </span>
+				<span id="hero-appearance__value"></span>
+			</div>
+            <div class="hero-characteristic">
+				<span>Biography: </span>
+				<span id="hero-biography__value"></span>
+			</div>
+            <div class="hero-characteristic">
+				<span>Work: </span>
+				<span id="hero-work__value"></span>
+			</div>
+            <div class="hero-characteristic">
+				<span>Connections: </span>
+				<span id="hero-connections__value"></span>
+			</div>
+            <button class="back-button" onclick="window.history.back()">Back</button>
+        </article>
+    </main>
+        <script src="../../utils/get-hero-id.js"></script>
+		<script src="../../store.js"></script>
+		<script src="./detail.js"></script>
+		<script>
+			const heroId = getHeroId(location);
+			const hero = store.getHeroById(heroId);
+			let detailComponent = new DetailComponent(hero);
+
+			function loadData(data) {
+				console.log(data);
+			}
+			
+			function loadHeroes(url, type, callback) {
+				let xhr = new XMLHttpRequest();
+				xhr.open('GET', url);
+				xhr.responseType = type;
+
+				xhr.onload = function() {
+					callback(xhr.response);
+				}
+
+				xhr.send()
+			}
+
+			loadHeroes('../../api/superHeroData.json', 'json', loadData)
+
+			if (hero) {
+				let idElement = document.getElementById('detail-title');
+				detailComponent.updateHtmlValue(
+					idElement,
+					'innerHTML',
+					detailComponent.hero.name
+				);
+
+				idElement = document.getElementById('hero-img');
+				detailComponent.addPhoto(
+					idElement,
+					'innerHTML',
+					detailComponent.hero.images.md
+				);
+
+				idElement = document.getElementById('hero-id__value');
+				detailComponent.updateHtmlValue(
+					idElement,
+					'innerHTML',
+					detailComponent.hero.id
+				);
+
+				nameElement = document.getElementById('hero-name__input');
+				detailComponent.updateHtmlValue(
+					nameElement,
+					'value',
+					detailComponent.hero.name
+				);
+
+				nameElement = document.getElementById('hero-slug__value');
+				detailComponent.updateHtmlValue(
+					nameElement,
+					'innerHTML',
+					detailComponent.hero.slug
+				);
+
+				nameElement = document.getElementById('hero-powerstats__value');
+				detailComponent.updateHtmlValue(
+					nameElement,
+					'innerHTML',
+					detailComponent.hero.powerstats
+                );
+
+				nameElement = document.getElementById('hero-appearance__value');
+				detailComponent.updateHtmlValue(
+					nameElement,
+					'innerHTML',
+					detailComponent.hero.appearance
+                );
+
+				nameElement = document.getElementById('hero-biography__value');
+				detailComponent.updateHtmlValue(
+					nameElement,
+					'innerHTML',
+					detailComponent.hero.biography
+                );
+                
+				nameElement = document.getElementById('hero-work__value');
+				detailComponent.updateHtmlValue(
+					nameElement,
+					'innerHTML',
+					detailComponent.hero.work
+				)
+                
+				nameElement = document.getElementById('hero-connections__value');
+				detailComponent.updateHtmlValue(
+					nameElement,
+					'innerHTML',
+					detailComponent.hero.connections
+				)
+			}
+		</script>
+</body>
+</html>

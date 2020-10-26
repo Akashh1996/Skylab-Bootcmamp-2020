@@ -29,12 +29,14 @@
 		<script src="../../store.js"></script>
 		<script src="./heroes.js"></script>
 		<script>
-			const heroes = store.getHeroes();
-			const heroesComponent = new HeroesComponent(heroes);
-			if (heroes) {
-				let element = document.getElementById('heroes');
-				heroesComponent.updateHtmlHeroList(element);
-			}
+			store.loadHeroes().then(() => {
+				const heroes = store.getHeroes();
+				const heroesComponent = new HeroesComponent(heroes);
+				if (heroes) {
+					let element = document.getElementById('heroes');
+					heroesComponent.updateHtmlHeroList(element);
+				}
+			});
 		</script>
 	</body>
 </html>
