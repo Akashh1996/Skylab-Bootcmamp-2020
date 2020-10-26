@@ -1,7 +1,7 @@
 import React from 'react';
 
-function BookItem(props) {
-return <li>{props.title}</li>
+function BookItem({title}) {
+return <li>{title}</li>
 }
 
 export default BookItem;
