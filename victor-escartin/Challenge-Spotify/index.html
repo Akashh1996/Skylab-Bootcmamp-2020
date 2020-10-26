@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/718411051340079104/xJ-vRtnD_bigger.jpg" type="image/x-icon" />
+		<title>TRIVIALIFY SKYLAB</title>
+		<link rel="stylesheet" href="styles/style.css" />
+		
+	</head>
+	<body>
+		<!-- Signature -->
+		<div class="signature" style="color:white">
+			Víctor Escartín &nbsp; <span style="color: white"><img src="https://pbs.twimg.com/profile_images/718411051340079104/xJ-vRtnD_bigger.jpg" width="20px" height="20px"> </> &nbsp; Skylab <span style="color: blue"> Coders </span>Academy</span>  </span>
+		</div>
+
+		<!-- MAIN PAGE  -->
+		<main>
+			<div id="main-page">
+				<div class="spotifyLogo"><img src="https://logodownload.org/wp-content/uploads/2016/09/spotify-logo-0.png" width="400px" height="400px"> </div>
+				<div class="start_btn"><button> <u>TRIVIALIFY</u><br> (Press to Start Game) </button></div>
+			</div>
+
+			<!-- Info Box -->
+			<div class="info_box">
+				<div class="info-title"><span>INSTRUCCIONES TRIVIALIFY</span></div>
+				<div class="info-list">
+					<div class="info">
+						1. Se mostrará la imagen de un autor musical y 4 posibles respuestas,
+						y se deberá escoger la opción correcta
+					</div>
+					<div class="info">
+						2. El jugador tendrá <span>15 segundos</span> para responder cada
+						pregunta
+					</div>
+					<div class="info">
+						3. Una vez seleccionada la respuesta, no se podrá deshacer.
+					</div>
+					<div class="info">
+						4. Una vez consumido el tiempo, no se podrá elegir ninguna opción.
+					</div>
+					<div class="info">
+						5. Al finalizar el tiempo de cada pregunta, se mostrará la opción
+						correcta.
+					</div>
+					<div class="info">
+						6. En cualquier momento se podrá cancelar la partida.
+					</div>
+					<div class="info">
+						7. Al finalizar el juego, se mostrará la puntuación final obtenida.
+					</div>
+				</div>
+				<div class="buttons">
+					<button class="quit">Volver</button>
+					<button class="start_game">Jugar</button>
+				</div>
+			</div>
+		</main>
+
+		<!-- QUIZ BOX -->
+		<!-- Header and Timer -->
+		<div class="quiz_box">
+			<header>
+				<div class="title">Preguntas TRIVIALIFY</div>
+				<div class="timer">
+					<div class="time_left_txt">Tiempo Restante</div>
+					<div class="timer_sec">15</div>
+				</div>
+				<div class="time_line"></div>
+			</header>
+
+		<!-- Question and Options -->
+			<section>
+				<div class="que_text">
+					<span>¿Qué canción fue interpretada por este artista?</span>
+					<div id="artist_image">
+						<div class="singerImage"></div>
+						<div class="singerName"></div>
+					</div>
+					
+				</div>
+				<div class="song-options">
+					<button class="song-option"></button>
+					<button class="song-option"></button>
+					<button class="song-option"></button>
+					<button class="song-option"></button>
+				  </div>
+			</section>
+
+			<!-- Footer Buttons -->
+			<footer>
+				<div class="footer_btns">
+					<button class="exit_btn" onclick="location.reload()">Salir</button>
+					<button class="result_btn" onclick="showResult()">Ver Resultado</button>
+				</div>
+			</footer>
+		</div>
+
+		<!-- RESULT BOX -->
+		<div class="result_box">
+			<div class="icon">
+				<i class="fas fa-crown"></i>
+			</div>
+			<div class="complete_text">Juego Completado!</div>
+			<div class="score_text"></div>
+			<div class="buttons">
+				<button class="quitResults" onclick="location.reload()">Salir del Juego</button>
+			</div>
+		</div>
+
+		<!-- SCRIPTS -->
+		<script src="./src/store/store.js"></script>
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<script src="./src/script.js"></script>
+		<!-- Script to obtain Spotify's Token -->
+		<script>
+			(async () => {
+				await store.getToken();
+				console.log(token);
+			})();
+		</script>
+	</body>
+</html>
