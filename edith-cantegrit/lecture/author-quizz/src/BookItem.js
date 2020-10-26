@@ -3,8 +3,8 @@ import React from 'react';
 function BookItem({title}) {
     function handleClick(e) {
         e.preventDefault();
-        console.log("caca")
-        
+        console.log("changeColor")
+
     }
     
     return (
