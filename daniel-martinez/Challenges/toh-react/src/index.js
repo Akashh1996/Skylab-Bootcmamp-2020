@@ -2,13 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Header from './Header';
-import List from './List';
+//import List from './List';
+//import Detail from './Detail';
+import Dashboard from './Dashboard';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <Header />
-    <List />
+    <Dashboard />
   </React.StrictMode>,
   document.getElementById('root')
 );
