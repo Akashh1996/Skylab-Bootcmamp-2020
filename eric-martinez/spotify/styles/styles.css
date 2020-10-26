@@ -28,6 +28,7 @@ header {
 }
 h2 {
 	margin-top: 0px;
+	margin-bottom: 0px;
 	text-align: end;
 	margin-right: 50px;
 	color: rgb(255, 251, 0);
@@ -58,6 +59,7 @@ button {
 }
 
 .playAgain {
+	margin-top: 10px;
 	height: 50px;
 	width: 150px;
 	border: none;
@@ -73,4 +75,14 @@ button {
 	margin-top: 40px;
 	display: flex;
 	justify-content: center;
+}
+
+.correctAnswer:hover {
+	color: #1db954;
+}
+.wrongAnswer:hover {
+	color: #1db954;
+}
+.playAgain:hover {
+	color: red;
 }
