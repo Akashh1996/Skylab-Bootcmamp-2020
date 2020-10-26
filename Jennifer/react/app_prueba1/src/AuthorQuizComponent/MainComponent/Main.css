@@ -1,0 +1,11 @@
+.main {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+li {
+	background: skyblue;
+	margin: 10px;
+	height: 40px;
+}
