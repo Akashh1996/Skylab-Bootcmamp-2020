@@ -3,16 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './header.css';
-import Header from './Header';
-import Image from './Image';
-
-
+import Header from './components/header/Header';
 
 ReactDOM.render( <
   React.StrictMode >
   <Header />
-  <Image />
 </React.StrictMode>, document.getElementById('root')
 );
 
