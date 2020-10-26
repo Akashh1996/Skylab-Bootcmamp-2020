@@ -28,21 +28,12 @@ function Dashboard() {
       <div className= "top_heroes">
           <h2 className="top_heroes_title">Top Heroes</h2>
           <div className="top_heroes_btn_wrapper"></div>
-          <button className="top_heroes_btn"></button>
-          <button className="top_heroes_btn"></button>
-          <button className="top_heroes_btn"></button>
-          <button className="top_heroes_btn"></button>
+          {heroes.map((heroe) => {})}
+          
       </div>
     </div>
     );  
-    function PrintHeroes() {
-        let buttons = document.getElementsByClassName("top_heroes_btn");
-        for(let i=0; i<4; i++) {
-            buttons[i].innerHTML = heroes[i].name 
-        }
-     
-
-    }
+   
     
   }
 
