@@ -1,0 +1,189 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+	--hue-body: 145;
+	--hue-neutral: 190;
+	--hue-wrong: 0;
+	--hue-correct: 100;
+}
+
+body {
+	--hue: var(--hue-body);
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body.correct {
+	--hue: var(--hue-correct);
+}
+
+body.wrong {
+	--hue: var(--hue-wrong);
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	height: 50px;
+	width: 100%;
+	min-width: 440px;
+	background-color: black;
+	box-shadow: 0 0 10px 2px;
+}
+
+.spotify-logo {
+	width: 130px;
+}
+
+.timer {
+	color: white;
+}
+
+.points {
+	color: white;
+}
+
+.game-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+	width: 800px;
+	min-width: 350px;
+	max-width: 80%;
+	background-color: white;
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: 0 0 10px 2px;
+}
+
+.artist {
+	margin-left: 10px;
+	font-weight: bold;
+	font-size: 24px;
+	display: flex;
+	justify-content: center;
+	text-decoration: underline;
+}
+
+.artist-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 20px;
+}
+
+.artist-question {
+	font-weight: bold;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 10px;
+}
+
+.image-container {
+	display: flex;
+	justify-content: center;
+}
+
+img {
+	border: 3px solid black;
+	padding: 1px;
+}
+
+.btn-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+	margin: 10px 0;
+}
+
+.btn {
+	--hue: var(--hue-neutral);
+	background-color: hsl(var(--hue), 100%, 35%);
+	border: 2px solid hsl(var(--hue), 100%, 10%);
+	border-radius: 10px;
+	padding: 5px 10px;
+	color: white;
+	outline: none;
+	height: 40px;
+	width: 250px;
+}
+
+.btn:hover {
+	cursor: pointer;
+	border-color: black;
+	background-color: hsl(210, 100%, 20%);
+}
+
+.btn.correct {
+	--hue: var(--hue-correct);
+	color: black;
+	font-weight: bold;
+}
+
+.btn.wrong {
+	--hue: var(--hue-wrong);
+}
+
+.start-btn,
+.next-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 25px;
+	font-weight: bold;
+	padding: 10px 20px;
+	height: 60px;
+}
+
+.q-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.btn-controls {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.final-points {
+	margin-top: 10px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	color: black;
+}
+
+.timer {
+	color: white;
+}
+
+.hide {
+	display: none;
+}

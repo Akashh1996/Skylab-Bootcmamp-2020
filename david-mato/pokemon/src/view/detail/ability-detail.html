@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <img class="pokemon-title" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="Pokemon title">
+    </header>
+    <main>
+        <article class="ability-wrapper">
+            <div class="ability-container">
+                <h2 id="poke-ability-name"></h2>
+                <p id="ability-explanation"></p>
+            </div>
+        </article>
+    </main>
+    <script src="../../store/store.js"></script>
+    <script src="ability-detail.js"></script>
+    <script>
+        const store = new Store();
+        store.loadPokemons().then(() => {
+            const params = new URLSearchParams(location.search.substring(1));
+            const abilityName = params.get('abilityName');
+            store.loadPokeAbilityByName(abilityName).then(() => {
+                const ability = store.getPokeAbility();
+
+                if(ability) {
+                    const abilityComponent = new AbilityComponent(ability);
+    
+                    const abilityName = document.getElementById('poke-ability-name');
+                    abilityComponent.updateHtmlElement(abilityName, ability.name);
+                    
+                    const abilityExplanation = document.getElementById('ability-explanation');
+                    abilityComponent.updateHtmlElement(abilityExplanation, ability.effect_entries[1].effect);
+                } else {
+                    document.getElementById('poke-ability-name').innerHTML = 'No se ha podido mostrar la habilidad del Pokémon';
+                }
+            })
+        })
+    </script>
+</body>
+</html>
