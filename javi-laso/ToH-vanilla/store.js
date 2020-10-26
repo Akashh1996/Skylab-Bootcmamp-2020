@@ -1,17 +1,32 @@
+let _heroes;
+
 class Store {
 
-    constructor(herolist) {
-        this.heroes = herolist;
+    loadHeroesX() {
+        return fetch('../../api/superHeroData.json').then(response => {
+            return response.json();
+        }).then(heroes => {
+            _heroes = heroes;
+            return heroes;
+        });
+    }
+
+    async loadHeroes() {
+        const url = '../../api/superHeroData.json';
+        const response = await fetch(url);
+        const heroes = await response.json();
+        debugger;
+        _heroes = heroes;
     }
 
     getHeroes() {
-        return this.heroes;
+        return _heroes;
     }
 
     getHeroById(heroId) {
-        for (let i = 0; i < this.heroes.length; i++) {
-            if (this.heroes[i]['id']*1 === heroId*1) {
-                return this.heroes[i];
+        for (let i = 0; i < _heroes.length; i++) {
+            if (_heroes[i]['id']*1 === heroId*1) {
+                return _heroes[i];
             }
         }
     }
@@ -89,4 +104,6 @@ class Store {
     }
 }
 
-module.exports = Store;
+let store = new Store();
+
+module.exports = store;

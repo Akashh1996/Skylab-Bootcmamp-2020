@@ -23,9 +23,13 @@
 <script>
     const store = new Store();
     store.loadPokemons().then(() => {
-        const listComponent = new ListComponent(_pokemons.results);
         const pokemonList = document.getElementById('pokemon-list');
-        listComponent.updateHtmlPokemonList(pokemonList);
+        if (store.getPokemons()) {
+            const listComponent = new ListComponent(_pokemons.results);
+            listComponent.updateHtmlPokemonList(pokemonList);
+        } else {
+            pokemonList.innerHTML = 'No se ha podido mostrar la lista de Pokémons'
+        }
     })
 </script>
 </html>
