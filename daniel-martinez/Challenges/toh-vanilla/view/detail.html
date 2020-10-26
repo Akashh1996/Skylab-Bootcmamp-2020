@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="tab-title"></title>
+    <link rel="stylesheet" href="./detail.css">
+    <link rel="shortcut icon" id="tabImage" href="" type="image/x-icon">
+</head>
+<body>
+    <header>
+    <h1>Tour of Heroes</h1>
+        <nav class="navigation">
+            <a href="./dashbord.html" class="nav-button">Dashboard</a>
+            <a href="./list-of-heroes.html" class="nav-button">Heroes</a>
+        </nav>
+    </header>
+    <main>
+        <h2 id="hero-title"></h2>
+        <div class="details-container">
+            <div class="details-container__head-info">
+                <div class="head-info__id-and-name">
+                    <div class="id">
+                        <label for="id-text" class="id-label">id:</label>
+                        <p id="id-text"></p>
+                    </div>
+                    <div class="name">
+                        <label for="name-input" class="id-label">name:</label>
+                        <input type="text" class="name-input" id="name-input"></input>
+                    </div>
+                </div>
+                <div id="head-info__image"></div>
+                <div class="flex-spacer"></div>
+            </div>
+            <section id="powerstats">
+                <h3 class="powerstats__title">Power Stats</h3>
+                <div id="powerstats__circles">
+                    <span class="circle-span">
+                        <svg height="100" width="100">
+                            <circle cx="50" cy="50" r="37"></circle>
+                            <circle id="circle1" cx="50" cy="50" r="37"></circle>
+                        </svg>
+                        <h2 id="powerstat1-number" class="powerstat-number"></h2>
+                        <h4 id="powerstat1-text" class="powerstat-text"></h4>
+                    </span>
+                    <span class="circle-span">
+                        <svg height="100" width="100">
+                            <circle cx="50" cy="50" r="37"></circle>
+                            <circle id="circle2" cx="50" cy="50" r="37"></circle>
+                        </svg>
+                        <h2 id="powerstat2-number" class="powerstat-number"></h2>
+                        <h4 id="powerstat2-text" class="powerstat-text"></h4>
+                    </span><span class="circle-span">
+                        <svg height="100" width="100">
+                            <circle cx="50" cy="50" r="37"></circle>
+                            <circle id="circle3" cx="50" cy="50" r="37"></circle>
+                        </svg>
+                        <h2 id="powerstat3-number" class="powerstat-number"></h2>
+                        <h4 id="powerstat3-text" class="powerstat-text"></h4>
+                    </span><span class="circle-span">
+                        <svg height="100" width="100">
+                            <circle cx="50" cy="50" r="37"></circle>
+                            <circle id="circle4" cx="50" cy="50" r="37"></circle>
+                        </svg>
+                        <h2 id="powerstat4-number" class="powerstat-number"></h2>
+                        <h4 id="powerstat4-text" class="powerstat-text"></h4>
+                    </span><span class="circle-span">
+                        <svg height="100" width="100">
+                            <circle cx="50" cy="50" r="37"></circle>
+                            <circle id="circle5" cx="50" cy="50" r="37"></circle>
+                        </svg>
+                        <h2 id="powerstat5-number" class="powerstat-number"></h2>
+                        <h4 id="powerstat5-text" class="powerstat-text"></h4>
+                    </span><span class="circle-span">
+                        <svg height="100" width="100">
+                            <circle cx="50" cy="50" r="37"></circle>
+                            <circle id="circle6" cx="50" cy="50" r="37"></circle>
+                        </svg>
+                        <h2 id="powerstat6-number" class="powerstat-number"></h2>
+                        <h4 id="powerstat6-text" class="powerstat-text"></h4>
+                    </span>
+                </div>
+            </section>
+            <section class="info-block1">
+                <section id="appearance">
+                    <h3 class="appearance__title">Appearance</h3>
+                    <ul id="appearance__items"></ul>
+                </section>
+                <section id="biography">
+                    <h3 class="biography__title">Biography</h3>
+                    <ul id="biography__items"></ul>
+                </section>
+            </section>
+            <section class="info-block2">
+                <section id="work">
+                    <h3 class="work__title">Work</h3>
+                    <ul id="work__items"></ul>
+                </section>
+                <section id="connections">
+                    <h3 class="connections__title">Connections</h3>
+                    <ul id="connections__items"></ul>
+                </section>
+            </section>
+        </div>
+        <a href="./list-of-heroes.html" class="nav-button">Back</a>
+    </main>
+    <script src="../store.js"></script>
+    <script>
+        store.loadHeroes().then(()=>{
+            let id = +window.location.search.replace('?id=','');
+            document.getElementById('hero-title').innerHTML = store.heroTitle(id);
+            document.getElementById('tab-title').innerHTML = `${store.heroTitle(id)} - ToH`;
+            document.getElementById('tabImage').href = store.imageTab(id);
+            document.getElementById('id-text').innerHTML = id;
+            document.getElementById('head-info__image').innerHTML = store.setImage(id);
+            const nameInput = document.getElementById('name-input');
+            store.updateHtmlValue(nameInput, "value", store.getHeroById(id)["name"]);
+            store.drawPowerStats(id);
+            document.getElementById('appearance__items').innerHTML = store.setAppearance(id);
+            document.getElementById('biography__items').innerHTML = store.setBiography(id);
+            document.getElementById('work__items').innerHTML = store.setWork(id);
+            document.getElementById('connections__items').innerHTML = store.setConnections(id);
+        });
+    </script>
+</body>
+</html>

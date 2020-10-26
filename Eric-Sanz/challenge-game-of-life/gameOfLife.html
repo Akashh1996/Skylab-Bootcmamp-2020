@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gameOfLife.css">
+</head>
+<body>
+    <header>
+        <div class = 'button-container'>
+            <button class = 'buttons' id = 'play-button' onclick="playGame()">Play</button>
+            <button class = 'buttons' id = 'pause-button' onclick="pauseResume()">Pause</button>
+            <button class = 'buttons' id = 'step-button' onclick="stepByStep()">Step</button>
+            <button class = 'buttons' id = 'random-button' onclick="randomize()">Randomize</button>
+            <button class = 'buttons' id = 'clear-button' onclick="clearButton()">Clear</button>
+        </div>
+    </header>
+    <div class = 'cicles-container'>
+        <h1>Game Of Life</h1>
+        <div class = 'count-container'>
+            <p>Cicles count:</p>
+            <span id = 'cicles-count'>0</span>
+        </div>
+    </div>
+    <div class = 'canvas-container'>
+        <canvas width ='1300' height = '600' id = 'canvas'></canvas>
+    </div>
+    <script src="gameOfLife.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="jquery-3.5.1.min.js"></script>
+		<link rel="stylesheet" href="style.css" />
+		<title>Game Of Life</title>
+	</head>
+	<body>
+		<header>
+			<div class="header__container">
+				<div class="header__title">
+					<p>Game of Life</p>
+					<div class="input__header">
+						<p>Choose cols x rows:</p>
+						<input type="text" class="input__box" id="input__box" />
+						<button class="input__button" onclick="makeGrid()">
+							Create grid
+						</button>
+					</div>
+					<div class="header__buttons">
+						<button id="button__start" onclick="startInterval ()">Start</button>
+						<button id="button__stop" onclick="stopInterval()">stop</button>
+						<button class="reset">Reset</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="main-container">
+			<div class="grid-game" id="container"></div>
+		</section>
+		<footer class="footer"></footer>
+	</body>
+	<script src="gameOfLife.js"></script>
+</html>

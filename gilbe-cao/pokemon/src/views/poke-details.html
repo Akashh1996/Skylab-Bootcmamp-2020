@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Poke Details</title>
+	</head>
+	<body>
+		<script src="../store/poke-store.js"></script>
+		<script>
+			const pokeId = 2;
+			(async () => {
+				await pokeStore.loadPokemonsFromAPIById(pokeId);
+				if (pokeStore.getPokemon()) {
+					document.body.innerHTML = `<p>Experiencia base ----> ${pokeStore.getBaseExperience()}</p>
+								<p>Este bicho es ----> ${pokeStore.getSpecie()}</p>`;
+				} else {
+					document.body.innerHTML = `<p>No hay datos pokes con id: ${pokeId}</p>`;
+				}
+			})();
+		</script>
+	</body>
+</html>
