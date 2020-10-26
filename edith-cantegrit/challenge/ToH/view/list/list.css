@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title {
+    color: rgb(170, 165, 165);
+}
+
+.heroesDash {
+    border-style: none;
+    color: rgb(86, 119, 138);
+    font-weight: bold;
+    text-decoration: none;;
+}
+
+.heroesDash:hover {
+    color: rgb(80, 150, 194);
+    background-color: rgb(221, 213, 213);
+}
+
+
+
+.titleSection {
+    display:flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: grey;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.buttonHero{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    border: solid;
+    border-color: grey;
+    width: 120px
+}
+
+.idHero {
+    
+    background-color: rgb(80, 150, 194);
+}
+
+.nameHero {
+    height: 100%;
+    text-decoration: none;
+    background-color: white;
+    color: black
+
+}
