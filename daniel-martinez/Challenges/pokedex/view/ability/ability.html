@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="head-title"></title>
+    <link rel="stylesheet" href="ability.css">
+    <link rel="shortcut icon" id="tabImage" href="https://cdn2.iconfinder.com/data/icons/pokemon-filledoutline/64/pokeball-people-pokemon-nintendo-video-game-gaming-gartoon-ball-512.png" type="image/x-icon">
+    <link href="//db.onlinewebfonts.com/c/51ba22ae06790efd464bde752a2cd9d1?family=Flexo" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <header>
+        <figure class="pokedex-logo">
+            <a href="./../list/list.html"><img src="https://cdn.bulbagarden.net/upload/4/4b/Pok%C3%A9dex_logo.png" alt="pokedex" id="pokedex-logo__image"></a>
+        </figure>
+    </header>
+    <main>
+        <div id="title-block">
+            <h2 id="ability-title"></h2>
+            <div id="flex-spacer"></div>
+        </div>
+        <div class="info-block">
+            <figure id="info-block__pokemon-image"></figure>
+            <section id="info-block__abilities">
+                <p id="ability__description"></p>
+            </section>
+        </div>
+        <div id="error-info"></div>
+    </main>
+    
+
+<script src="./../list/list.js"></script>
+<script src="./../../src/poke-store.js"></script>
+<script src="./../detail/detail.js"></script>
+<script>
+    const ability = window.location.search.replace('?ability=','');
+    (async () => {
+        await pokedex.loadAbilityFromAPI(ability);
+        if (pokedex.getAbilityObj()){
+            document.getElementById('head-title').innerHTML = `Ability:&nbsp${ability}`;
+            document.getElementById('ability-title').innerHTML = `Ability:&nbsp&nbsp<b>${ability}</b>`;
+            document.getElementById('ability__description').innerHTML = pokedex.getAbilityDescription();
+        } else {
+            document.getElementById("error-info").innerHTML = '<img src="./../../src/Pokemon404.png" alt="error404" id="error404">';
+        }
+    })()
+</script>
+</body>
+</html>
