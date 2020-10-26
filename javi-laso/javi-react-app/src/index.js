@@ -4,12 +4,12 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import App from './App';
 // import Hello from './Hello';
-// import Sum from './Sum';
-import ClickCounter from './ClickCounter';
+// import ClickCounter from './ClickCounter';
+import Sum from './Sum';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<ClickCounter />
+		<Sum a={1} b={12} />
 	</React.StrictMode>,
 	document.getElementById('root')
 );

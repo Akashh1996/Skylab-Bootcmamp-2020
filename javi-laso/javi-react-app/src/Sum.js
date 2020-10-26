@@ -1,20 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-class Sum extends React.Component {
-	componentWillMount() {
-		console.info('>>>>>>>>>>mount');
-	}
-	componentDidMount() {
-		console.info('>>>>>>>>>>>>>>Rendered');
-	}
-	render() {
-		console.info('>>>>>>>>>>render');
-		return (
-			<h1>
-				{this.props.a} + {this.props.b} = {this.props.a + this.props.b}
-			</h1>
-		);
-	}
+function Sum({ a, b }) {
+	return (
+		<h1>
+			{a} + {b} = {a + b}
+		</h1>
+	);
 }
+
+Sum.propTypes = {
+	a: PropTypes.number.isRequired,
+	b: PropTypes.number.isRequired
+};
 
 export default Sum;
