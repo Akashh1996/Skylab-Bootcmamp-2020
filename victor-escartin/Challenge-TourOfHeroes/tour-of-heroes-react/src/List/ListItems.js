@@ -1,13 +1,17 @@
 import React from 'react';
-import '../style.css'
+import '../Styles/list.css'
 
 function ListItem({heroID, heroName}) {
     return (
-        <a class="list-heroes__buttons" href="../detail/detail.html?heroId=${hero.id}">
-            <span class="list-heroes__buttons--id">{heroID}</span>
-            <span class="list-heroes__buttons--name">{heroName}</span>
-        </a>
+        <div className="list-item">
+            <div  className="box-position">{heroID}</div>
+                <a className="name-position"
+                    href="../details/details.html?heroId=${heroID}">{heroName}
+                </a>
+        </div>
     )
 }
 
 export default ListItem;
+
+            

@@ -1,18 +1,16 @@
 import React from 'react';
-import heroes from '../store/store';
-import DashboardTopHero from './DashboardTopHero';
-import '../style.css'
+import heroes from '../Store/store';
+import DashboardTopHeroes from '../Dashboard/DashboardTopHeroes';
+import '../Styles/dashboard.css'
 
 function Dashboard() {  
     return (
-        <>
-           <article class="top-heroes-wrapper">
-                <h2 class="top-heroes-title">Top Heroes</h2>
-                <div id="top-heroes__list">
-                    {heroes.slice(1, 5).map((hero) => <DashboardTopHero heroName={hero.name}/>)}
-                </div>
-            </article>
-        </>
+        <main>
+            <div className="subtitle">Top Heroes</div>
+                <div className="boxes-topHeroes">
+                    {heroes.slice(1, 5).map((hero) => <DashboardTopHeroes heroName={hero.name}/>)}
+			    </div>
+		</main>
     )
 }
 

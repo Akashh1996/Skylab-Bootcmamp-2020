@@ -1,10 +1,10 @@
 import React from 'react';
-import '../style.css'
+import '../Styles/dashboard.css'
 
-function DashboardTopHero({heroName}) {
+function DashboardTopHeroes({heroName}) {
     return (
-        <a class="top-heroes-buttons" href="../detail/detail.html?heroId=${hero.id}">{heroName}</a>
+        <a className="btn-topHeroe" href="../detail/detail.html?heroId=${hero.id}">{heroName}</a>
     )
 }
 
-export default DashboardTopHero;
+export default DashboardTopHeroes;

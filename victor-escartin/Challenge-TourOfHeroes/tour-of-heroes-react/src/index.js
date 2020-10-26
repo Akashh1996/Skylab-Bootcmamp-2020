@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './Header/Header.js';
-// import List from './List/List';
+import List from './List/List';
 import Dashboard from './Dashboard/Dashboard';
-// import Detail from './Detail/Detail.js';
 
 ReactDOM.render(
   <React.StrictMode>
     <Header />
     <Dashboard />
+    <List />
   </React.StrictMode>,
   document.getElementById('root')
 );

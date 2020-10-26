@@ -1,15 +1,23 @@
 import React from 'react';
-import '../style.css'
+import '../Styles/dashboard.css'
 
 function Header() {
     return (
-        <header>
-            <h1 class="main-title">Tour of Heroes</h1>
-            <nav>
-                <a class="nav-buttons" href="../dashboard/dashboard.html">Dashboard</a>
-                <a class="nav-buttons" href="list-of-heroes.html">Heroes</a>
-            </nav>
-        </header>
+        <div id="general-container">
+        <div id="main-container" >
+            <header>
+                <div className="title">Tour of Heroes</div>
+                <div className="options">
+                    <div id="option-dashboard">
+                        <a href="../dashboard/dashboard.html">Dashboard</a>
+                    </div>
+                    <div id="option-heroes">
+                        <a href="../list/list.html">Heroes</a>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
     )
 }
 
