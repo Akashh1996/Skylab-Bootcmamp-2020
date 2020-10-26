@@ -75,8 +75,6 @@
                     songsArray.push(playListArray[index].song)
                 }
                 const randomSongArray = []
-
-
                 for (let i = 0; i < 3; i++) {
                     let randomIndex = Math.round(Math.random() * (songsArray.length - 1));
                     randomSongArray.push(songsArray[randomIndex])
@@ -102,7 +100,6 @@
             rightSongTittle.addEventListener('click', function () {
                 turn++
                 points++
-
                 createRandomSongs()
                 createRandomPlayList()
                 endOfGame()
