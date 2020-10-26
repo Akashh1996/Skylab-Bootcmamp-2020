@@ -12,8 +12,11 @@ function AuthorQuiz() {
 	return (
 		<>
 			<Header />
-			<div className="main-content">
-				<img alt="author" />
+			<div id="main-content" className="main-content">
+				<img
+					src="https://www.biografiasyvidas.com/biografia/t/fotos/twain_mark.jpg"
+					alt="author"
+				/>
 				<BookList books={books} />
 			</div>
 		</>
