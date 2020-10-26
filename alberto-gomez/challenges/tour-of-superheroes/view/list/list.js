@@ -9,7 +9,7 @@ function addItemsToList(heroes) {
 		heroLi.appendChild(heroAnchor);
 		heroAnchor.setAttribute(
 			'href',
-			`/challenges/tour-of-superheroes/view/detail/detail.html?heroId=${heroes[i].id}`
+			`../detail/detail.html?heroId=${heroes[i].id}`
 		);
 		let heroSpanId = document.createElement('span');
 		let heroSpanName = document.createElement('span');
