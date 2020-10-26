@@ -63,7 +63,6 @@ class SpotifyGame {
 			const curentArtistSong = [];
 			gameVariables.currentCorrectAnswer = tracks[currentRound].name;
 			curentArtistSong.push(tracks[currentRound].name);
-			console.log(curentArtistSong);
 			DOMElements.artistPreview.autoplay = true;
 			DOMElements.artistPreview.src = tracks[currentRound].preview_url;
 			const randomTracks = [];
@@ -92,7 +91,6 @@ class SpotifyGame {
 			if (gameVariables.gameStatus) {
 				gameVariables.timer = setInterval(() => {
 					gameVariables.secondsRemaining--;
-					console.log(gameVariables.secondsRemaining);
 					if (gameVariables.secondsRemaining <= 0) {
 						if (!gameVariables.gameStatus) {
 							clearInterval(gameVariables.timer);
@@ -138,7 +136,6 @@ class SpotifyGame {
 		});
 		DOMElements.optionGameBtn.forEach((button) => {
 			button.addEventListener('click', function () {
-				console.log(gameVariables.gamePause);
 				if (
 					gameVariables.roundCounter === 9 &&
 					button.textContent === gameVariables.currentCorrectAnswer &&
@@ -183,7 +180,6 @@ class SpotifyGame {
 }
 let artistInfo, artistTopTracks;
 const curLocation = location;
-console.log(curLocation);
 const curIdFromLocation = getIdParam(curLocation);
 (async () => {
 	await spotifyStore.getToken();

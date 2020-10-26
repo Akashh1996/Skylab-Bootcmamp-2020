@@ -17,7 +17,7 @@ class SpotifyStore {
 			const data = await response.json();
 			return (token = data.access_token);
 		} catch (tokenError) {
-			console.log('Token invalido');
+			return 'Token invalido';
 		}
 	}
 
