@@ -1,5 +1,6 @@
 import React from "react"
 import './index.css';
+import Header from './Header';
 
 
 function Detail() {
@@ -18,13 +19,15 @@ function Detail() {
 ];
     return (
         
-    
+    <div className="detail_wrapper">
+      <Header/>
       <div className= "list_heroes">
     <h2 className="my_heroes_title">{heroes[4].name} details!</h2>
           <div className="hero_details_wrapper"></div>
     <p>id: {heroes[4].id}</p>
     <p>name: <input type="text" value = {heroes[4].name}/></p>
           
+      </div>
       </div>
   
     );  

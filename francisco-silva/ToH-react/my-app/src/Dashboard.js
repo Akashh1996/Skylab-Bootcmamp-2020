@@ -1,5 +1,6 @@
 import React from "react"
 import './index.css';
+import Header from './Header';
 
 
 function Dashboard() {
@@ -20,7 +21,8 @@ function Dashboard() {
    
     return (
         
-   
+      <div className="dashboard_wrapper">
+        <Header/>
       <div className= "top_heroes">
           <h2 className="top_heroes_title">Top Heroes</h2>
           <div className="top_heroes_btn_wrapper"></div>
@@ -30,6 +32,7 @@ function Dashboard() {
           return <button className="top_heroes_btn">{heroes[topFour].name}</button>
           })}
           
+      </div>
       </div>
 
     );  

@@ -1,5 +1,6 @@
 import React from "react"
 import './index.css';
+import Header from './Header';
 
 
 function List() {
@@ -19,8 +20,8 @@ function List() {
 ];
    
     return (
-        
-   
+      <div className ="list-wrapper">
+      <Header/>
       <div className= "list_heroes">
           <h2 className="my_heroes_title">My Heroes</h2>
           <div className="top_heroes_btn_wrapper"></div>
@@ -30,6 +31,7 @@ function List() {
           return <button className="my_heroes_btn">{heroes[list].id} - {heroes[list].name}</button>
           })}
           
+      </div>
       </div>
   
     );  
