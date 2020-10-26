@@ -18,7 +18,7 @@ class SpotifyStore {
 		return (token = data.access_token);
 	}
 	async playlist() {
-		const url = 'https://api.spotify.com/v1/playlists/37i9dQZF1E38ulQAIeijCs';
+		const url = 'https://api.spotify.com/v1/playlists/37i9dQZF1E39jv72r40LVS';
 		try {
 			const response = await fetch(url, {
 				method: 'GET',
@@ -87,8 +87,7 @@ const spotify = new SpotifyStore();
 		}
 	}
 	displayRandomAnswers();
-	// let audio=
-	// console.log(audio);
+	
 	document.getElementById('audio-test').src =
 		songlist[randomIndex].track.preview_url;
 })();
