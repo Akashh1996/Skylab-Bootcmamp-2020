@@ -16,13 +16,21 @@ class SpotifyStore {
 		return (token = data.access_token);
 	}
 
-	async getListSpotify() {
-		let url = '';
-	}
-
 	async getArtist(idArtist) {
 		const response = await fetch(
 			`https://api.spotify.com/v1/artists/${idArtist}`,
+			{
+				method: 'GET',
+				headers: { Authorization: 'Bearer ' + token }
+			}
+		);
+		const result = await response.json();
+		return result;
+	}
+
+	async getTopSongs(idArtist) {
+		const response = await fetch(
+			`https://api.spotify.com/v1/artists/${idArtist}/top-tracks?country=ES`,
 			{
 				method: 'GET',
 				headers: { Authorization: 'Bearer ' + token }
@@ -55,3 +63,5 @@ class SpotifyStore {
 }
 
 const spotifyStore = new SpotifyStore();
+
+module.exports = spotifyStore;

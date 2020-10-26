@@ -1,10 +1,18 @@
 body {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: #212121;
+	font-family: 'Special Elite', cursive;
 }
 
 #div-game {
-	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 100px;
+	width: 70%;
 }
 
 #autor {
@@ -12,23 +20,61 @@ body {
 	justify-content: center;
 	text-align: center;
 	flex-direction: column;
-	border: 1px solid black;
-}
-
-div img {
-	/* width: 500px; */
 }
 
 #answers {
-	display: flex;
-	justify-content: space-around;
+	display: none;
+	justify-content: space-evenly;
+	margin-top: 20px;
 }
 
 #answer0,
 #answer1,
 #answer2,
 #answer3 {
-	width: 100px;
+	width: 200px;
 	height: 50px;
-	border: 1px solid black;
+	color: white;
+	background: #1db954;
+	cursor: pointer;
+}
+
+#answers button:hover {
+	background: #c4f1d4;
+	color: black;
+}
+
+.logo-spotify {
+	height: 100px;
+	width: 350px;
+}
+
+.logo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 400px;
+	height: 100px;
+}
+
+#name-autor {
+	font-family: 'Special Elite', cursive;
+	color: white;
+	font-size: 50px;
+}
+
+.correctAnswer {
+	color: white;
+	background: red;
+}
+
+#start-Game {
+	font-family: 'Special Elite', cursive;
+	font-size: 100px;
+	background: none;
+	margin: none;
+	color: white;
+	border: none;
+	outline: none;
+	cursor: pointer;
 }
