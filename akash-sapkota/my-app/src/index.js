@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import ClickCounter from './Sum.js';
+import Sum from './Sum.js';
 
 const props = {
 	a: 9,
@@ -12,8 +12,9 @@ ReactDOM.render(
 	<React.StrictMode>
 		{/* 	<Sum a={10} b={3} />
 		 */}
-		{/* <Sum {...props} /> */}
-		<ClickCounter />
+		<Sum {...props} />
+		{/* 		<ClickCounter />
+		 */}{' '}
 	</React.StrictMode>,
 	document.getElementById('root')
 );

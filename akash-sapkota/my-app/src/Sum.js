@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /* function Sum(props) {
 	return (
@@ -8,7 +9,7 @@ import React from 'react';
 		</h1>
 	);
 } */
-/* function Sum({ a, b }) {
+function Sum({ a, b }) {
 	return (
 		<h1>
 			{' '}
@@ -16,7 +17,7 @@ import React from 'react';
 		</h1>
 	);
 }
- */
+
 /* class Sum extends React.Component {
 	render() {
 		console.log('render ............. ');
@@ -37,7 +38,7 @@ import React from 'react';
 }
  */
 
-class ClickCounter extends React.Component {
+/* class ClickCounter extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { clicks: 0 };
@@ -53,6 +54,11 @@ class ClickCounter extends React.Component {
 			</div>
 		);
 	}
-}
+} */
 
-export default ClickCounter;
+Sum.propTypes = {
+	a: PropTypes.number.isRequired,
+	b: PropTypes.number.isRequired
+};
+
+export default Sum;
