@@ -1,9 +1,14 @@
 import React from 'react';
 import './BookItem.css';
 
-function BookItem({ title }) {
+function BookItem({ title, answer, funct }) {
 	return (
-		<button className="answers-button">
+		<button
+			className="answers-button"
+			onClick={() => {
+				funct(answer);
+			}}
+		>
 			<li className="answer">{title}</li>
 		</button>
 	);

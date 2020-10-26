@@ -2,13 +2,17 @@
 	outline: none;
 	background-color: #f1f7fd;
 	border: none;
-	margin-bottom: 20px;
+	margin: 0px 40px 20px 0px;
 	cursor: pointer;
 	border-left: 3px #d2e1f0 solid;
 }
 
 .answers-button:hover {
 	background-color: #d2e1f0;
+}
+
+.answers-button:focus {
+	outline: none;
 }
 
 .answer {
