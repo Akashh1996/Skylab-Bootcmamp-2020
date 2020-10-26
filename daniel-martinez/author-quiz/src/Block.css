@@ -1,0 +1,8 @@
+#block {
+	display: flex;
+	margin: 10px;
+}
+
+#block__author-image {
+	height: 300px;
+}
