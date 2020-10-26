@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap");
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0%;
+  font-family: 'Signika', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 35px;
+  border: none;
+  outline: none;
+  background: none;
+  color: #fff;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.btn:hover {
+  background: #212121;
+  color: #1db954;
+}
+
+body {
+  height: 100vh;
+  background-color: #121212;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 50px;
+}
+
+body .artist-dashboard-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 700px;
+}
+
+body .artist-dashboard-wrapper .artist__block .artists__images {
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 700px;
+}
+
+body .artist-dashboard-wrapper .artist__block .artists__images .artist-img__item {
+  -webkit-box-shadow: 1px 1px 16px -2px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 16px -2px rgba(0, 0, 0, 0.3);
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+body .artist-dashboard-wrapper .artist__block .artists__images .artist-img__item .artist-photo {
+  height: 100%;
+}
+
+body .spotify-gameboard {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .spotify-gameboard .gameboard-artist-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 450px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+body .spotify-gameboard .gameboard-artist-info .artist-info-primary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .spotify-gameboard .gameboard-artist-info .artist-info-primary .artist-info-name {
+  font-size: xx-large;
+  text-transform: uppercase;
+}
+
+body .spotify-gameboard .gameboard-artist-info .artist-info-primary .artist-info-followers {
+  font-size: x-large;
+}
+
+body .spotify-gameboard .gameboard-artist-info .artist-info-primary .artist-info-followers .artist-followers {
+  font-size: large;
+  color: #1db954;
+}
+
+body .spotify-gameboard .gameboard-artist-info .artist-info-secondary .artist-info-listGenres {
+  font-size: 20px;
+}
+
+body .spotify-gameboard .gameboard-artist-info .artist-info-secondary .artist-info-listGenres li {
+  padding-bottom: 6px;
+  color: #b3b3b3;
+  text-transform: uppercase;
+}
+
+body .spotify-gameboard .gameboard-artist-image__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .spotify-gameboard .gameboard-artist-image__container .gameboard-artist__img {
+  -webkit-box-shadow: 1px 1px 16px -2px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 16px -2px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 450px;
+  margin-bottom: 20px;
+}
+
+body .spotify-gameboard .gameboard-artist-image__container .gameboard-artist__preview {
+  margin-bottom: 30px;
+  outline: none;
+}
+
+body .spotify-gameboard .gameboard-artist-image__container .gameboard-artist__preview .gameboard-artist__audio {
+  margin: 10px;
+  width: 450px;
+}
+
+body .gameControls {
+  width: 60vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .gameControls .gameboard-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .gameControls .gameboard-status-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .gameControls .gameboard-status-button .statusScore {
+  font-size: 30px;
+}
+/*# sourceMappingURL=styles.css.map */
