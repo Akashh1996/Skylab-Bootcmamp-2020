@@ -1,0 +1,23 @@
+.header {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.header__second__element {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(207, 232, 241);
+    width: 70%;
+    margin: auto;
+}
+
+h2 {
+    margin-left: 20px;
+}
+
+p {
+    margin-left: 20px;
+}
