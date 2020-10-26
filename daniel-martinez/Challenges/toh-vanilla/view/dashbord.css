@@ -1,0 +1,80 @@
+* {
+	font-family: Tahoma, sans-serif;
+	background-color: rgb(245, 243, 243);
+	margin: 10px;
+}
+
+body {
+	border: 1px solid rgb(41, 41, 41);
+}
+
+.navigation {
+	position: relative;
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.nav-button {
+	border-radius: 5px;
+	padding: 7px 10px;
+	background-color: rgb(197, 197, 197);
+	color: rgb(59, 59, 59);
+	text-decoration: none;
+	margin-right: 5px;
+}
+
+.nav-button:hover {
+	color: rgb(65, 141, 241);
+}
+
+.top-heroes-title {
+	text-align: center;
+}
+
+#top-heroes-container {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	margin: 10px 20px;
+	justify-content: center;
+}
+
+.top-hero-block {
+	margin: 10px;
+	padding: 40px 30px;
+	background-color: rgb(102, 124, 137);
+}
+
+li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100px;
+	height: 100px;
+	margin: 0;
+	background-color: rgb(65, 141, 241);
+	padding: 20px 10px;
+	list-style-type: none;
+}
+
+a {
+	display: flex;
+	text-decoration: none;
+	color: white;
+	background-color: rgb(65, 141, 241);
+	border: 1px solid transparent;
+}
+
+a:hover {
+	background-color: white;
+	color: rgb(65, 141, 241);
+	border: 1px solid rgb(65, 141, 241);
+}
+
+li:hover {
+	background-color: white;
+}
+
+a > li:hover {
+	color: rgb(65, 141, 241);
+}

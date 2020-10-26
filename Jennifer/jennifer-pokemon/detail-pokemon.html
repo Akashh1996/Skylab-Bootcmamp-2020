@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Detail Pokemon</title>
+		<link rel="stylesheet" href="detail-pokemon.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@800&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="detail-pokemon">
+			<span id="pokeName">POKEMON: </span>
+			<div id="div-base-experience">
+				<span id="abilities">BASE EXPERIENCE</span>
+			</div>
+			<div id="div-order">
+				<span id="abilities">ORDER</span>
+			</div>
+			<div id="div-weight-height">
+				<span id="abilities">WEIGHT AND HEIGHT</span>
+			</div>
+
+			<div id="div-abilities">
+				<span id="abilities">ABILITIES</span>
+			</div>
+			<div id="div-forms">
+				<span id="abilities">FORMS</span>
+			</div>
+			<div id="div-types">
+				<span id="abilities">TYPES</span>
+			</div>
+		</div>
+
+		<script src="store.js"></script>
+		<script src="dashboard-pokemon.js"></script>
+		<script src="detail-pokemon.js"></script>
+		<script>
+			printDetailsPokemon(store);
+		</script>
+	</body>
+</html>

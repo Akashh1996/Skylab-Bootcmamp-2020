@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pokemon List</title>
+		<link rel="stylesheet" href="detail.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<img
+			class="pokemon__logo"
+			src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png"
+		/>
+		<main class="details__wrapper">
+			<h2><span id="detail-title"></span> Pokedex</h2>
+			<img id="pokemon__image" src="#" />
+
+			<div>
+				<label>name: <span id="pokemon-name"></span></label>
+			</div>
+			<div class="abilities__wrapper1">
+				<span>ability 1: </span>
+				<a class="anchor__abilities" href="" id="first-ability"
+					><span id="abilities1"></span
+				></a>
+			</div>
+			<div class="abilities__wrapper2" id="abilities2__display">
+				<span>ability 2: </span>
+				<a class="anchor__abilities" href="" id="second-ability"
+					><span id="abilities2"></span
+				></a>
+			</div>
+			<div class="moves__wrapper">
+				<span>moves: </span>
+				<span id="moves"></span>
+			</div>
+			<div class="types__wrapper">
+				<span>type: </span>
+				<span id="types"></span>
+			</div>
+		</main>
+		<nav>
+			<button>
+				<a class="nav_button" href="../dashboard/dashboard.html">Dashboard</a>
+			</button>
+			<button>
+				<a class="nav_button" href="../list/list.html">Pokemon</a>
+			</button>
+		</nav>
+
+		<script src="../store.js"></script>
+		<script>
+			let name = store.getPokemonName(location);
+
+			store.getPokeMonDetail(name).then(() => {
+				const pokDetail = store.pokeMonDetail();
+				document.getElementById(
+					'first-ability'
+				).href = `../abilities/abilities.html?pokemonName=${pokDetail.abilities[1].ability.name}`;
+				document.getElementById(
+					'second-ability'
+				).innerHTML = `${pokDetail.abilities[1].ability.name}`;
+
+				document.getElementById(
+					'second-ability'
+				).href = `../abilities/abilities.html?pokemonName=${pokDetail.abilities[1].ability.name}`;
+				document.getElementById(
+					'second-ability'
+				).innerHTML = `${pokDetail.abilities[1].ability.name}`;
+
+				document.querySelector('#pokemon__image').src =
+					pokDetail.sprites.front_default;
+				document.querySelector('#abilities1').innerHTML =
+					pokDetail.abilities[0].ability.name;
+				if (pokDetail.abilities[1]) {
+					document.querySelector('#abilities2').innerHTML =
+						pokDetail.abilities[1].ability.name;
+				} else {
+					let abilitiesWrapper2 = document.getElementById(
+						'abilities2__display'
+					);
+					abilitiesWrapper2.style.display = 'none';
+				}
+				document.querySelector('#pokemon-name').innerHTML = pokDetail.name;
+				document.querySelector('#moves').innerHTML =
+					pokDetail.moves[0].move.name;
+				document.querySelector('#types').innerHTML =
+					pokDetail.types[0].type.name;
+			});
+		</script>
+	</body>
+</html>
