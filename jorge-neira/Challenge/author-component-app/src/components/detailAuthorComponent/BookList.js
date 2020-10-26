@@ -1,11 +1,10 @@
 import React from 'react';
 import BookItem from './BookItem';
-
-function BookList({ books, item }) {
+function BookList({ books }) {
 	return (
 		<ul>
-			{books.map((title) => (
-				<BookItem title={title} />
+			{books.map((title, index) => (
+				<BookItem title={title} key={index} />
 			))}
 		</ul>
 	);
