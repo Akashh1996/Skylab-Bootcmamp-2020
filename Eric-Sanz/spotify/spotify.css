@@ -138,6 +138,7 @@ img {
 .btn.correct {
 	--hue: var(--hue-correct);
 	color: black;
+	font-weight: bold;
 }
 
 .btn.wrong {
@@ -163,8 +164,24 @@ img {
 
 .btn-controls {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	margin-top: 10px;
+}
+
+.final-points {
+	margin-top: 10px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	color: black;
+}
+
+.timer {
+	color: white;
 }
 
 .hide {

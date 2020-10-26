@@ -9,7 +9,7 @@
 <body>
     <header>
         <img src="Spotify_Logo_RGB_Green.png" class = 'spotify-logo'>
-        <div class = 'timer'>300 seconds</div>
+        <div class = 'timer'></div>
         <div class = 'points'></div>
     </header>
     <div class="game-container">
@@ -23,14 +23,15 @@
                 <div class = 'artist' id="question"></div>
             </div>
             <div id="answer-buttons" class = 'btn-grid'>
-                <button class = 'btn'>Answer 1</button>
-                <button class = 'btn'>Answer 2</button>
-                <button class = 'btn'>Answer 3</button>
-                <button class = 'btn'>Answer 4</button>
+                <button class = 'btn'></button>
+                <button class = 'btn'></button>
+                <button class = 'btn'></button>
+                <button class = 'btn'></button>
             </div>
         </div>
-        <div classs = 'btn-controls'>
+        <div class = 'btn-controls'>
             <button id="start-button" class = 'start-btn btn'>Start</button>
+            <div class = 'final-points'></div>
             <button id="next-button" class = 'next-btn btn hide'>Next</button>
         </div>
     </div>
@@ -221,8 +222,9 @@
                 const nextButton = document.getElementById('next-button');
                 const questionContainer = document.getElementById('question-container');
                 const questionElement = document.querySelector('#question');
-                // const artistImage = document.querySelector('#albumImg');
+                const finalPointSystem = document.querySelector('.final-points');
                 const answerButtons = document.getElementById('answer-buttons');
+                const countdownDisplay = document.querySelector('timer');
                 let shuffledQuestions, currentQuestionsIndex;
                 let pointsCounter = document.querySelector('.points');
                 let points;
@@ -241,12 +243,27 @@
                     points = 0;
                     pointsCounter.innerText = `${points} points`;
                     setNextQuestion();
-                    //set timer
+                    timer();
                 }
+
+                function timer() {
+                    countdownDisplay.value = '20';
+                    timeLeft = 20;
+                    timerGenerate = setInterval(function() {
+                        timeLeft--;
+                    
+                        if (timeLeft <= 10 ) countdownDisplay.style.color = 'red';
+                        if (timeLeft === 0) clearInterval(timerGenerate);
+                    
+                        countdownDisplay.innerText = timeLeft;
+                    },1000)
+                }
+
 
                 function setNextQuestion() {
                     resetState();
                     showQuestion(shuffledQuestions[currentQuestionsIndex]);
+                    timer();
                 }
 
                 function showQuestion(questionsObject) {
@@ -291,6 +308,17 @@
                     if (shuffledQuestions.length > currentQuestionsIndex + 1) {
                         nextButton.classList.remove('hide');
                     } else {
+                        if (points === 150) {
+                            finalPointSystem.innerText = `You have made ${points} points!!! You beast!! You know what's good!!`
+                        } else if (points >= 100 && points <= 140) {
+                            finalPointSystem.innerText = `You have made ${points} points!! What a great score!! Congratulations!!`
+                        } else if (points >= 60 && points <= 90) {
+                            finalPointSystem.innerText = `You have made ${points} points!! It seems you know one or two things about this style of music!!`
+                        } else if (points >= 10 && points <= 50) {
+                            finalPointSystem.innerText = `You have made ${points} points... I know you can do it better. Try again!`
+                        } else {
+                            finalPointSystem.innerText = `You have made ${points} points... Are you sure you didn't do it on purpose??`
+                        }
                         startButton.innerText = 'Re-start';
                         startButton.classList.remove('hide');
                     }
