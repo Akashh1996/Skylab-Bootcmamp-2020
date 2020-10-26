@@ -3,10 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Sum from './Sum';
+
+const props = {
+    a: 4,
+    b: 2,
+    showAlert: function(a, b) {
+        console.log(`El resultado es ${a +b}`);
+    }
+};
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Sum {...props}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
