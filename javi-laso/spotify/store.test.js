@@ -106,7 +106,7 @@ describe('Spotify Store', () => {
 		});
 	});
 
-	describe('getRandomSongFromTopTracks', () => {
+	describe.only('getRandomSongFromTopTracks', () => {
 		beforeEach(() => {
 			global.fetch = jest.fn().mockImplementationOnce(() =>
 				Promise.resolve({
@@ -128,7 +128,7 @@ describe('Spotify Store', () => {
 		test('should return a random track', async () => {
 			const trackName = await store.getRandomSongFromTopTracks(
 				'5kdLOinhQnlSk4su7U6lyW'
-			);
+			).name;
 			expect(array).toContainEqual({ name: trackName });
 		});
 	});
