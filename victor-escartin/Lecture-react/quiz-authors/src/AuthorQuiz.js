@@ -1,4 +1,6 @@
 import React from 'react';
+import BookList from './BookList';
+import Header from './Header';
 
 function AuthorQuiz(){
 
@@ -11,14 +13,11 @@ function AuthorQuiz(){
 
     return (
       <>
-        <h1>Author Quiz</h1>
-        <p> Select the book written by the Author shown</p>
+      <Header/>
+      <div className="">
         <img alt="author"></img>
-        <ul>
-          {books.map((title)=>
-            <li>{title}</li>
-          )}
-        </ul>
+        <BookList books={books}/>
+      </div>
       </>
     )
   }
