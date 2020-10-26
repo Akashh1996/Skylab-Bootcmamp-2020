@@ -9,8 +9,10 @@ class Store {
 			return response.json();
 		})
 		.then((value) => {
+ challenge/ivan-dobry/pokemon
             _heroes = value.results;
             console.log(_heroes);
+
 		});
 
 	}
