@@ -73,10 +73,33 @@ nav {
 	transform: translateX(0%);
 }
 body {
-	background-color: tomato;
+	background: rgb(2, 0, 36);
+	background: radial-gradient(
+		circle,
+		rgba(2, 0, 36, 1) 0%,
+		rgba(67, 71, 89, 0.9867297260701156) 61%,
+		rgba(0, 212, 255, 1) 100%
+	);
 }
 .main-display {
 	display: flex;
 	justify-content: center;
 	margin: 40px;
+}
+.button {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin: 10px;
+}
+.buttons {
+	padding: 5px;
+	height: 25px;
+	border-radius: 5px;
+	background-color: black;
+	color: rgb(226, 226, 226);
+}
+.audio {
+	display: flex;
+	justify-content: center;
 }
