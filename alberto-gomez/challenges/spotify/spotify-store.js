@@ -8,6 +8,24 @@ let _artist;
 
 class SpotifyStore {
 	async getToken() {
+		let data = new URLSearchParams();
+		data.append('client_id', client_id);
+		data.append('client_secret', _client_secret_id);
+		data.append('grant_type', 'client_credentials');
+		data.append('scope', 'user-read-private');
+		return fetch('https://accounts.spotify.com/api/token', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded',
+				Authorization: 'Basic ' + btoa(client_id + ':' + _client_secret_id)
+			},
+			body: data
+		})
+			.then((resp) => resp.json())
+			.then((json) => json.access_token)
+			.then((access_token) => (token = access_token));
+	}
+	/* async getToken() {
 		const response = await fetch('https://accounts.spotify.com/api/token', {
 			method: 'POST',
 			headers: {
@@ -18,8 +36,9 @@ class SpotifyStore {
 		});
 
 		const data = await response.json();
+		console.log(data.access_token);
 		return (token = data.access_token);
-	}
+	} */
 
 	async getPlaylist() {
 		const response = await fetch(
@@ -35,21 +54,24 @@ class SpotifyStore {
 		return (_playlist = gotPlaylist);
 	}
 
-	async getArtist() {
+	async getArtist(access_token, artistId) {
 		debugger;
 		const response = await fetch(
-			`https://api.spotify.com/v1/artists/5a2EaR3hamoenG9rDuVn8j`,
+			`https://api.spotify.com/v1/artists/${artistId}`,
 			{
+				mode: 'no-cors',
 				method: 'GET',
 				headers: {
-					Authorization: 'Bearer' + token
+					Authorization: 'Bearer ' + access_token
 				}
 			}
-		);
-		debugger;
-
-		const gotArtist = await response.json();
-		return (_artist = gotArtist);
+		)
+			.then((resp) => resp.json())
+			.then((_artist) => {
+				_artistName = _artist.name;
+				_imagesArtist = _artist.images;
+				return _artist;
+			});
 	}
 
 	getSongs(songItems) {

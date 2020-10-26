@@ -12,8 +12,7 @@ function getArtistId(location) {
 
 (async () => {
 	debugger;
-	await store.getToken();
 
-	await store.getArtist(getArtistId(window.location));
+	await store.getArtist(store.getToken(), getArtistId(window.location));
 	printArtistDetail(store.getArtistInfo());
 })();
