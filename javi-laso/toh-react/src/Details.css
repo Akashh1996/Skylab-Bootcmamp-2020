@@ -1,0 +1,9 @@
+.details .data,
+.details .label {
+	font-size: 20px;
+}
+
+.label {
+	color: #607d8b;
+	font-weight: 500;
+}
