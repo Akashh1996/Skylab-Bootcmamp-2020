@@ -9,7 +9,10 @@ import reportWebVitals from './reportWebVitals';
 
 const props = {
   a:10,
-  b:10
+  b:10,
+  showAlert: function() {
+    alert(`El resultado es ${this.a + this.b}`);
+  }
 }
 
 ReactDOM.render(
