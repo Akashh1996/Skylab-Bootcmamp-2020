@@ -14,8 +14,10 @@ function AuthorQUiz() {
     return (
         <>
             <Header />
-            <img src={require('./image/Pluma.png')} alt='book'/>
-            <BookList books = {books} />
+            <div className = "info-container">
+                <img src={'https://study.com/cimages/multimages/16/mark_twain_1871.jpg'} alt='book'/>
+                <BookList books = {books} />
+            </div>
         </>
     );    
 }

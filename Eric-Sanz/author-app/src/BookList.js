@@ -3,9 +3,9 @@ import BookItem from './BookItem';
 
 function BookList({books}) {
     return (
-        <ul>
+        <ul id="change-color" className="list">
         {books.map((title) => (
-            <BookItem title = {title} key={title}/>
+            <BookItem title = {title}/>
         ))}
         </ul>
     )
