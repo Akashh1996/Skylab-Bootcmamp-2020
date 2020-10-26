@@ -2,16 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import ClickCounter from './clickCounter';
+import Sum from './Sum';
 
 const props={
   a: 4,
-  b: 2
+  b: 2,
+  showAlert: function(){
+    console.log(`El resultado es ${this.a+this.b}`)
+  }
 };
 
 ReactDOM.render(
   <React.StrictMode>
-    <ClickCounter/>
+    <Sum {...props}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
