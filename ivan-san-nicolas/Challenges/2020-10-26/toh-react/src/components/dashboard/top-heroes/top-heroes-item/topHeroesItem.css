@@ -1,0 +1,19 @@
+.top-heroes-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(46, 76, 117);
+    border-radius: 10px;
+}
+
+.top-heroes-item:hover {
+    background-color: rgb(27, 46, 71);
+    cursor: pointer;
+}
