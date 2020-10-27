@@ -109,7 +109,7 @@
         store.loadHeroes().then(()=>{
             let id = +window.location.search.replace('?id=','');
             document.getElementById('hero-title').innerHTML = store.heroTitle(id);
-            document.getElementById('tab-title').innerHTML = store.heroTitle(id);
+            document.getElementById('tab-title').innerHTML = `${store.heroTitle(id)} - ToH`;
             document.getElementById('tabImage').href = store.imageTab(id);
             document.getElementById('id-text').innerHTML = id;
             document.getElementById('head-info__image').innerHTML = store.setImage(id);

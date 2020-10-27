@@ -1,0 +1,23 @@
+#block {
+	display: flex;
+	margin: 10px;
+}
+
+#block__author-image {
+	height: 300px;
+}
+
+#button {
+	display: flex;
+	justify-content: flex-end;
+	margin: 10%;
+}
+
+#button__continue {
+	background-color: rgb(0, 122, 221);
+	color: white;
+	border: none;
+	padding: 10px;
+	border-radius: 4px;
+	display: none;
+}

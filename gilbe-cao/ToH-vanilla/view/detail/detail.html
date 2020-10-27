@@ -29,7 +29,8 @@
 		<script src="../../store.js"></script>
 		<script src="./detail.js"></script>
 		<script>
-			store.loadHeroes().then(() => {
+			(async function dum() {
+				await store.loadHeroes();
 				const heroId = getHeroId(location);
 				const hero = store.getHeroById(heroId);
 				let detailComponent = new DetailComponent(hero);
@@ -56,7 +57,7 @@
 						detailComponent.hero.name
 					);
 				}
-			});
+			})();
 		</script>
 	</body>
 </html>

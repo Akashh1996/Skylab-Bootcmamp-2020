@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="spotify.css">
+</head>
+<body>
+    <header>
+        <img src="Spotify_Logo_RGB_Green.png" class = 'spotify-logo'>
+        <div class = 'timer'></div>
+        <div class = 'points'></div>
+    </header>
+    <div class="game-container">
+        <div id="question-container" class = 'q-container hide'>
+            <!-- <div class = 'artist' id="question"></div> -->
+            <div class = 'image-container'>
+                <img class = 'image-question' id = 'albumImg' src="Spotify_Icon_RGB_Green.png" width="300px">
+            </div>
+            <div class = 'artist-container'>
+                <div class = 'artist-question'>Which of these songs is from</div>
+                <div class = 'artist' id="question"></div>
+            </div>
+            <div id="answer-buttons" class = 'btn-grid'>
+                <button class = 'btn'></button>
+                <button class = 'btn'></button>
+                <button class = 'btn'></button>
+                <button class = 'btn'></button>
+            </div>
+        </div>
+        <div class = 'btn-controls'>
+            <button id="start-button" class = 'start-btn btn'>Start</button>
+            <div class = 'final-points'></div>
+            <button id="next-button" class = 'next-btn btn hide'>Next</button>
+        </div>
+    </div>
+    
+    <script src="spotify.js"></script>
+    <script src="component.js"></script>
+    <script> 
+        (async() => {
+            // await spotifystore.getAlbum();
+            // await spotifystore.getTracks();
+            await spotifystore.getToken();
+            console.log(token);
+            const playList = await spotifystore.getPlaylist();
+            let playlistComponent = new PlaylistComponent(playList);
+            let trackNameArray = [];
+            let trackArtistsNameArray = [];
+            let albumImageArray = [];
+
+            if (playList) {
+
+                for (let i = 0; i < playList.items.length; i++) {
+                    trackNameArray.push(playList.items[i].track.name);
+                    trackArtistsNameArray.push(playList.items[i].track.artists[0].name);
+                    albumImageArray.push(playList.items[i].track.album.images[1].url);
+                }
+
+                let questionsObject = [ {
+                    question: `${trackArtistsNameArray[0]}`,
+                    answers: [
+                        { text: `${trackNameArray[0]}`, correct: true },
+                        { text: `${trackNameArray[6]}`, correct: false},
+                        { text: `${trackNameArray[3]}`, correct: false},
+                        { text: `${trackNameArray[9]}`, correct: false}
+                    ],
+                    albumImage: `${albumImageArray[0]}`
+                },
+                {
+                    question: `${trackArtistsNameArray[1]}`,
+                    answers: [
+                        { text: `${trackNameArray[2]}`, correct: false},
+                        { text: `${trackNameArray[8]}`, correct: false},
+                        { text: `${trackNameArray[1]}`, correct: true},
+                        { text: `${trackNameArray[3]}`, correct: false}
+                    ],
+                    albumImage: `${albumImageArray[1]}`
+                },
+                {
+                    question: `${trackArtistsNameArray[2]}`,
+                    answers: [
+                        {text: `${trackNameArray[7]}`, correct: false},
+                        {text: `${trackNameArray[10]}`, correct: false},
+                        {text: `${trackNameArray[5]}`, correct: false},
+                        {text: `${trackNameArray[2]}`, correct: true}
+                    ],
+                    albumImage: `${albumImageArray[2]}`
+                },
+                {
+                    question: `${trackArtistsNameArray[3]}`,
+                    answers: [
+                        {text: `${trackNameArray[9]}`, correct: false},
+                        {text: `${trackNameArray[3]}`, correct: true},
+                        {text: `${trackNameArray[12]}`, correct: false},
+                        {text: `${trackNameArray[6]}`, correct: false}
+                    ],
+                    albumImage: `${albumImageArray[3]}`
+                },
+                {
+                    question: `${trackArtistsNameArray[4]}`,
+                    answers: [
+                        {text: `${trackNameArray[8]}`, correct: false},
+                        {text: `${trackNameArray[2]}`, correct: false},
+                        {text: `${trackNameArray[4]}`, correct: true},
+                        {text: `${trackNameArray[11]}`, correct: false}
+                    ],
+                    albumImage: `${albumImageArray[4]}`
+                },
+                {
+                    question: `${trackArtistsNameArray[5]}`,
+                    answers: [
+                        {text: `${trackNameArray[2]}`, correct: false},
+                        {text: `${trackNameArray[10]}`, correct: false},
+                        {text: `${trackNameArray[14]}`, correct: false},
+                        {text: `${trackNameArray[5]}`, correct: true}
+                    ],
+                    albumImage: `${albumImageArray[5]}`
+                },
+                {
+                    question: `${trackArtistsNameArray[6]}`,
+                    answers: [
+                        {text: `${trackNameArray[12]}`, correct: false},
+                        {text: `${trackNameArray[0]}`, correct: false},
+                        {text: `${trackNameArray[10]}`, correct: false},
+                        {text: `${trackNameArray[6]}`, correct: true}
+                    ],
+                    albumImage: `${albumImageArray[6]}`
+                },
+                {
+                    question: `${trackArtistsNameArray[7]}`,
+                    answers: [
+                        {text: `${trackNameArray[9]}`, correct: false},
+                        {text: `${trackNameArray[11]}`, correct: false},
+                        {text: `${trackNameArray[7]}`, correct: true},
+                        {text: `${trackNameArray[4]}`, correct: false}
+                    ],
+                    albumImage: `${albumImageArray[7]}`
+                },
+                {
+                    question: `${trackArtistsNameArray[8]}`,
+                    answers: [
+                        {text: `${trackNameArray[8]}`, correct: true},
+                        {text: `${trackNameArray[9]}`, correct: false},
+                        {text: `${trackNameArray[13]}`, correct: false},
+                        {text: `${trackNameArray[0]}`, correct: false}
+                    ],
+                    albumImage: `${albumImageArray[8]}`
+                },
+                {
+                    question: `${trackArtistsNameArray[9]}`,
+                    answers: [
+                        {text: `${trackNameArray[9]}`, correct: true},
+                        {text: `${trackNameArray[1]}`, correct: false},
+                        {text: `${trackNameArray[14]}`, correct: false},
+                        {text: `${trackNameArray[10]}`, correct: false}
+                    ],
+                    albumImage: `${albumImageArray[9]}`
+                },
+                {
+                    question: `${trackArtistsNameArray[10]}`,
+                    answers: [
+                        {text: `${trackNameArray[6]}`, correct: false},
+                        {text: `${trackNameArray[10]}`, correct: true},
+                        {text: `${trackNameArray[4]}`, correct: false},
+                        {text: `${trackNameArray[2]}`, correct: false}
+                    ],
+                    albumImage: `${albumImageArray[10]}`
+                },
+                {
+                    question: `${trackArtistsNameArray[11]}`,
+                    answers: [
+                        {text: `${trackNameArray[8]}`, correct: false},
+                        {text: `${trackNameArray[7]}`, correct: false},
+                        {text: `${trackNameArray[9]}`, correct: false},
+                        {text: `${trackNameArray[11]}`, correct: true}
+                    ],
+                    albumImage: `${albumImageArray[11]}`
+                },
+                {
+                    question: `${trackArtistsNameArray[12]}`,
+                    answers: [
+                        {text: `${trackNameArray[10]}`, correct: false},
+                        {text: `${trackNameArray[0]}`, correct: false},
+                        {text: `${trackNameArray[12]}`, correct: true},
+                        {text: `${trackNameArray[5]}`, correct: false}
+                    ],
+                    albumImage: `${albumImageArray[12]}`
+                },
+                {
+                    question: `${trackArtistsNameArray[13]}`,
+                    answers: [
+                        {text: `${trackNameArray[4]}`, correct: false},
+                        {text: `${trackNameArray[13]}`, correct: true},
+                        {text: `${trackNameArray[14]}`, correct: false},
+                        {text: `${trackNameArray[6]}`, correct: false}
+                    ],
+                    albumImage: `${albumImageArray[13]}`
+                },
+                {
+                    question: `${trackArtistsNameArray[14]}`,
+                    answers: [
+                        {text: `${trackNameArray[1]}`, correct: false},
+                        {text: `${trackNameArray[3]}`, correct: false},
+                        {text: `${trackNameArray[12]}`, correct: false},
+                        {text: `${trackNameArray[14]}`, correct: true}
+                    ],
+                    albumImage: `${albumImageArray[14]}`
+                },
+                ]
+
+
+                // document.querySelector('#image-question').setAttribute = playList.items[0].track.album.images[1].url;
+
+                console.log(trackNameArray);
+                console.log(trackArtistsNameArray);
+                console.log(questionsObject[0].question);
+
+                
+                const startButton = document.getElementById('start-button');
+                const nextButton = document.getElementById('next-button');
+                const questionContainer = document.getElementById('question-container');
+                const questionElement = document.querySelector('#question');
+                const finalPointSystem = document.querySelector('.final-points');
+                const answerButtons = document.getElementById('answer-buttons');
+                const countdownDisplay = document.querySelector('timer');
+                let shuffledQuestions, currentQuestionsIndex;
+                let pointsCounter = document.querySelector('.points');
+                let points;
+
+                startButton.addEventListener('click', startGame)
+                nextButton.addEventListener('click', () => {
+                    currentQuestionsIndex++;
+                    setNextQuestion();
+                })
+
+                function startGame() {
+                    startButton.classList.add('hide');
+                    shuffledQuestions = questionsObject.sort(() => Math.random() - .5);
+                    currentQuestionsIndex = 0;
+                    questionContainer.classList.remove('hide');
+                    points = 0;
+                    pointsCounter.innerText = `${points} points`;
+                    setNextQuestion();
+                    timer();
+                }
+
+                function timer() {
+                    countdownDisplay.value = '20';
+                    timeLeft = 20;
+                    timerGenerate = setInterval(function() {
+                        timeLeft--;
+                    
+                        if (timeLeft <= 10 ) countdownDisplay.style.color = 'red';
+                        if (timeLeft === 0) clearInterval(timerGenerate);
+                    
+                        countdownDisplay.innerText = timeLeft;
+                    },1000)
+                }
+
+
+                function setNextQuestion() {
+                    resetState();
+                    showQuestion(shuffledQuestions[currentQuestionsIndex]);
+                    timer();
+                }
+
+                function showQuestion(questionsObject) {
+                    let artistImage = document.querySelector('.image-question');
+                    playlistComponent.updateHtmlValue(
+                        artistImage,
+                        'src',
+                        questionsObject.albumImage
+                    );
+                    questionElement.innerText = questionsObject.question;
+                    questionsObject.answers.forEach(answers => {
+                        const button = document.createElement('button');
+                        button.innerText = answers.text;
+                        button.classList.add('btn');
+                        if (answers.correct) {
+                            button.dataset.correct = answers.correct;
+                        }
+                        button.addEventListener('click', selectAnswer);
+                        answerButtons.appendChild(button);
+                    })
+                }
+
+                function resetState() {
+                    clearStatusClass(document.body);
+                    nextButton.classList.add('hide');
+                    while (answerButtons.firstChild) {
+                        answerButtons.removeChild(answerButtons.firstChild);
+                    }
+                }
+
+                function selectAnswer(element) {
+                    const selectedButton = element.target;
+                    const correct = selectedButton.dataset.correct;
+                    setStatusClass(document.body, correct);
+                    Array.from(answerButtons.children).forEach(button => {
+                        setStatusClass(button, button.dataset.correct);
+                    })
+                    if (correct) {
+                            points+= 10;
+                            pointsCounter.innerText = `${points} points`;
+                    }
+                    if (shuffledQuestions.length > currentQuestionsIndex + 1) {
+                        nextButton.classList.remove('hide');
+                    } else {
+                        if (points === 150) {
+                            finalPointSystem.innerText = `You have made ${points} points!!! You beast!! You know what's good!!`
+                        } else if (points >= 100 && points <= 140) {
+                            finalPointSystem.innerText = `You have made ${points} points!! What a great score!! Congratulations!!`
+                        } else if (points >= 60 && points <= 90) {
+                            finalPointSystem.innerText = `You have made ${points} points!! It seems you know one or two things about this style of music!!`
+                        } else if (points >= 10 && points <= 50) {
+                            finalPointSystem.innerText = `You have made ${points} points... I know you can do it better. Try again!`
+                        } else {
+                            finalPointSystem.innerText = `You have made ${points} points... Are you sure you didn't do it on purpose??`
+                        }
+                        startButton.innerText = 'Re-start';
+                        startButton.classList.remove('hide');
+                    }
+                }
+
+                function setStatusClass(element, correct) {
+                    clearStatusClass(element);
+                    if (correct) {
+                        element.classList.add('correct');
+                    } else {
+                        element.classList.add('wrong');
+                    }
+                }
+
+                function clearStatusClass(element) {
+                    element.classList.remove('correct');
+                    element.classList.remove('wrong');
+                }
+            }
+            console.log(token);
+        })()
+    </script>
+</body>
+</html>
