@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Sum({a, b}) {
+function Sum({a, b, showAlert}) {
+    function clickHandler(event) {
+        showAlert(a, b);
+    }
     return (
-        <h1>
-            {a} + {b} = <button onClick={() => showAlert(a, b)}>?</button>
-        </h1>
+        <>
+            {a} + {b} = <button onClick={clickHandler}>?</button>
+            <button onClick={() => alert('otro boton')}>otro boton</button>
+        </>
     );
 }
 

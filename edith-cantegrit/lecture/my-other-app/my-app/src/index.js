@@ -9,13 +9,15 @@ const props = {
     a: 4,
     b: 2,
     showAlert: function(a, b) {
-        console.log(`El resultado es ${a +b}`);
+        alert(`El resultado es ${a +b}`);
     }
 };
 
 ReactDOM.render(
   <React.StrictMode>
-    <Sum {...props}/>
+    {React.createElement('a', {href: 'http//:skylabcoders.com'}, 
+    React.createElement(Sum, {...props}, null)
+    )}
   </React.StrictMode>,
   document.getElementById('root')
 );
