@@ -1,24 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Hello from './Hello';
-import Sum from './Sum';
-import ClickCounter from './ClickCounter';
-
-const props = {
+import InputText from './InputText';
+/* import ConditionalDisplay from './ConditionalDisplay';
+ */
+/* const props = {
 	a: 4,
 	b: 2,
 	showAlert: function (a, b) {
 		alert(`El resultado es ${a + b}`);
 	}
-};
+}; */
+
+let isVisible = false;
 ReactDOM.render(
 	<React.StrictMode>
-		{React.createElement(Sum, { ...props }, null)}
-		<ClickCounter />
-		<App />
+		{/* <ConditionalDisplay isVisible={isVisible}>
+			<div>La suma es 0</div>
+			<span>La suma es mayor que 0</span>
+		</ConditionalDisplay> */}
+		<InputText />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
