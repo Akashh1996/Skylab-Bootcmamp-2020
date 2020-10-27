@@ -1,18 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Sum from './Sum';
+import Input from './Input';
 import reportWebVitals from './reportWebVitals';
-import ClickCounter from './ClickCounter';
-import ConditionalDisplay from './ConditionalDisplay'
 
-let isVisible=false
 ReactDOM.render(
   <React.StrictMode>
-    <ClickCounter/>
-    <ConditionalDisplay isVisible={isVisible}>
-      <h1>Skylab mola molt!</h1>
-    </ConditionalDisplay>
+    <Input/>
   </React.StrictMode>,
   document.getElementById('root')
 );

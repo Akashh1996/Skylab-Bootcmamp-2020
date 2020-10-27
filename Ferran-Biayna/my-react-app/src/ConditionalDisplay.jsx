@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 
-function ConditionalDisplay({isVisible, children}) {
+function ConditionalDisplay(props) {
     const [isVisible, setIsVisible] = useState(props.isVisible);
-    const test = useState(props.isVisible)
-    const a = test[0]
-    const b = test[1]
     debugger
 
     return (
