@@ -8,4 +8,16 @@
 .heroes-button {
 	outline: none;
 	border: none;
+	height: 50px;
+	margin-bottom: 10px;
+	width: 200px;
+	display: flex;
+	align-items: center;
+}
+
+.list-hero-id {
+	
+}
+
+.list-hero-name {
 }

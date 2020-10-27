@@ -8,6 +8,7 @@ import ListHero from './components/listComponent/listHero';
 ReactDOM.render(
 	<React.StrictMode>
 		<DasboardHero />
+
 		<DetailHero />
 		<ListHero />
 	</React.StrictMode>,

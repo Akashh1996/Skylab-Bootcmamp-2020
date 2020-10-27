@@ -14,7 +14,7 @@ class ListHero extends React.Component {
 				<h2>My Heroes</h2>
 				<ul>
 					{heroList.map((heroes) => (
-						<ListOfHeroes heroes={heroes.name} key={heroes.id} />
+						<ListOfHeroes heroName={heroes.name} heroId={heroes.id} />
 					))}
 				</ul>
 			</section>
