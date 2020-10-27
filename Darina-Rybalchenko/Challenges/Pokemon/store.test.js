@@ -26,15 +26,4 @@ describe('store', () => {
 
     })
 
-    /* test('should load pokemon details from api', () => {
-        const json = jest.fn().mockReturnValueOnce({ id: 12, name: 'Narco' })
-        const fecthImplementation = () => Promise.resolve({ json })
-        global.fetch = jest.fn().mockImplementationOnce(fecthImplementation)
-
-        return store.loadPokemonsFromApiById(12).then(() => {
-            expect(store.getPokemon()).toEqual({ id: 12, name: 'Narco' })
-
-        })
-    }) */
-
 })

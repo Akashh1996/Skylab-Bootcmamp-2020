@@ -17,16 +17,6 @@ class Store {
         return ability
     }
 
-    /*  loadPokemons() {
-         return fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=200')
-             .then(response => {
-                 return response.json()
-             })
-             .then(pokemons => {
-                 _pokemons = pokemons.results
-             })
-     } */
-
     async loadPokemons() {
         const url = 'https://pokeapi.co/api/v2/pokemon?limit=20&offset=200'
         try {
@@ -41,17 +31,6 @@ class Store {
         }
     }
 
-
-    /*   loadPokemonsfromApiById(pokemonName) {
-          const url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
-          return fetch(url)
-              .then(response => {
-                  return response.json()
-              })
-              .then(pokemonDetailsObject => {
-                  pokemon = pokemonDetailsObject
-              })
-      } */
 
     async loadPokemonsfromApiById(pokemonName) {
         const url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
