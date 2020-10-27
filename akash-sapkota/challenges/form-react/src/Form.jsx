@@ -2,38 +2,27 @@ import React, { useState } from "react"
 import Select from "./Select"
 
 function Form() {
-    const [passenger, setPassenger] = useState("1 passenger")
-
-    const [inputOption, setOption] = useState("ida")
-    /* 
-        const inputOption = 'ida'
-    
-        function setOption(valor) {
-            inputOption=valor
-        }
-     */
-    debugger
-
-    let options = [
-        "idaa",
-        "vuelta",
-        "ida y vuelta"
-
-    ]
-
-    function handleChange({ target: { value } }, setvalue) {
-        setvalue(value)
+    let myObj = {
+        name: "akash",
+        age: 35
     }
 
     return (
         <div>
+            <Select name={myObj.name} surname={myObj.age}>
+                <h1>hello</h1>
+            </Select>
+        </div>
+    )
+}
+
+export default Form
+
+/*
+<div>
             <div>
                 <label>Viaje</label>
-
-
-                <select value={inputOption} onChange={(event) => handleChange(event, setOption)}>
-                    {options.map((valor) => <option value={valor}>{valor}</option>)}
-                </select>
+                <Select />
             </div>
             <div>
                 <label>Trip</label>
@@ -43,12 +32,18 @@ function Form() {
                 />
             </div>
 
+</div > */
 
+/*
+    function handleChange({ target: { value } }, setvalue) {
+            setvalue(value)
+    }
+*/
 
+/* const [passenger, setPassenger] = useState("1 passenger")
+    let options = [
+        "idaa",
+        "vuelta",
+        "ida y vuelta"
 
-
-        </div >
-    )
-}
-
-export default Form
+    ] */

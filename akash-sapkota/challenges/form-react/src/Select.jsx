@@ -1,15 +1,14 @@
 import React from "react"
 
-function Select(options) {
+function Select(props) {
+    debugger
     return (
 
-        <select>
-            {options.map((option) => {
-                return <option value={option}> {option}</option>
-            })}
-        </select>
+        <h1>{props.name} {props.surname}</h1>
+
 
     )
 }
 
 export default Select
+
