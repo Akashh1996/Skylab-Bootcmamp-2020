@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import ConditionalDisplay from './ConditionalDisplay'
+import TextInput from './TextInput'
 
 
 ReactDOM.render(
@@ -11,6 +12,7 @@ ReactDOM.render(
         <div>La suma es 0</div>
         <span>La suma es mayor que 0</span>
     </ConditionalDisplay>
+    <TextInput />
   </React.StrictMode>,
   document.getElementById('root')
 );
