@@ -1,7 +1,11 @@
 import React from 'react';
 
 function BookItem({ title }) {
-	return <li>{title}</li>;
+	return (
+		<a>
+			<li>{title}</li>
+		</a>
+	);
 }
 
 export default BookItem;

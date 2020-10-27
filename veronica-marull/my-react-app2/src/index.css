@@ -16,3 +16,18 @@ code {
 	display: flex;
 	flex-direction: row;
 }
+.ringhtAnswer {
+	background-color: green;
+}
+
+.wrongAnswer {
+	background-color: red;
+}
+
+a {
+	cursor: pointer;
+}
+
+li {
+	list-style: none;
+}
