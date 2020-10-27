@@ -7,15 +7,14 @@ import reportWebVitals from './reportWebVitals';
 // import Hello from './Hello';
 // import ClickCounter from './components/ClickCounter';
 // import Sum from './components/Sum';
-import ConditionalDisplay from './components/ConditionalDisplay';
+// import ConditionalDisplay from './components/ConditionalDisplay';
+import TextInput from './components/TextInput';
 
 let isVisible = false;
 
 ReactDOM.render(
 	<React.StrictMode>
-		<ConditionalDisplay isVisible={isVisible}>
-			<h1>Skylab mola!</h1>
-		</ConditionalDisplay>
+		<TextInput />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
