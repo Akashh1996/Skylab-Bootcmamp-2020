@@ -1,0 +1,11 @@
+#list {
+	margin: 40px;
+}
+
+#list__title {
+	font-weight: 500;
+}
+
+#list__ul {
+	padding-left: 5px;
+}
