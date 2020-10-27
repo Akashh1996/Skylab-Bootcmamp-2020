@@ -40,7 +40,7 @@ body {
 
 h1 {
 	font-size: 30px;
-	color: rgb(254, 157, 157);
+	color: rgba(244, 67, 54, 0.9);
 }
 #trip {
 	margin-right: 50px;
@@ -53,7 +53,7 @@ h1 {
 }
 button {
 	margin-top: 20px;
-	background-color: rgba(244, 67, 54, 0.7);
+	background-color: rgba(244, 67, 54, 0.6);
 	border: none;
 	color: white;
 	padding: 15px 32px;
@@ -62,4 +62,8 @@ button {
 	display: inline-block;
 	font-size: 16px;
 	border-radius: 10px;
+	cursor: pointer;
+}
+button:hover {
+	background-color: rgba(244, 67, 54, 0.9);
 }
