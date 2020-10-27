@@ -1,6 +1,6 @@
 let _heroes
 class Store {
-    debugger
+ 
     loadHeroes() {
         
         return fetch('../../apil/superHeroData.json').then((response) => {
