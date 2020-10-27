@@ -1,27 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import './TohStyles.css';
+import Header from './Header/Header';
+import Dashboard from './Dashboard/Dashboard';
+import List from './List/List';
+import Detail from './Detail/Detail';
 import reportWebVitals from './reportWebVitals';
-import Sum from './components/Sum';
-import ClickCounter from './components/ClickCounter';
-
-const props = {
-	a: 4,
-	b: 2
-};
 
 ReactDOM.render(
-	<React.StrictMode>
-		<Sum />
-		{React.createElement(
-			'a',
-			{ href: 'http://skylabcoders.com' },
-			React.createElement(Sum, { ...props }, null)
-		)}
-		<ClickCounter />
-	</React.StrictMode>,
-	document.getElementById('root')
+  <React.StrictMode>
+    <Header />
+    <Dashboard />
+    <List />
+    <Detail />
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

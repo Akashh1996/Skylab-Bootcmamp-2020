@@ -1,12 +1,12 @@
 {
-  "name": "toh-vanilla",
+  "name": "heroes-final",
   "version": "1.0.0",
   "description": "",
   "main": "store.js",
   "scripts": {
     "test": "jest --watch",
-    "test:coverage": "jest --collect-coverage",
-    "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand"
+    "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
+     "test:coverage": "jest --collect-coverage --watch"
   },
   "keywords": [],
   "author": "",

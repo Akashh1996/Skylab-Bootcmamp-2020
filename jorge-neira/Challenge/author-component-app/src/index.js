@@ -1,25 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Sum from './components/Sum';
-import ClickCounter from './components/ClickCounter';
-
-const props = {
-	a: 4,
-	b: 2
-};
+import './index.css';
+import HeaderAuthor from './components/headerAuthorComponent/HeaderAuthorComponent';
+import DetailAuthor from './components/detailAuthorComponent/DetailAuthorComponent';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Sum />
-		{React.createElement(
-			'a',
-			{ href: 'http://skylabcoders.com' },
-			React.createElement(Sum, { ...props }, null)
-		)}
-		<ClickCounter />
+		<HeaderAuthor />
+		<DetailAuthor />
 	</React.StrictMode>,
 	document.getElementById('root')
 );

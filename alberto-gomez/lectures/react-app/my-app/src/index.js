@@ -3,23 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Sum from './components/Sum';
-import ClickCounter from './components/ClickCounter';
+import Hello from './Hello';
+import Sum from './Sum';
+import ClickCounter from './ClickCounter';
 
 const props = {
 	a: 4,
-	b: 2
+	b: 2,
+	showAlert: function (a, b) {
+		alert(`El resultado es ${a + b}`);
+	}
 };
-
 ReactDOM.render(
 	<React.StrictMode>
-		<Sum />
-		{React.createElement(
-			'a',
-			{ href: 'http://skylabcoders.com' },
-			React.createElement(Sum, { ...props }, null)
-		)}
+		{React.createElement(Sum, { ...props }, null)}
 		<ClickCounter />
+		<App />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
