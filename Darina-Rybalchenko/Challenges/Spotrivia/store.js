@@ -17,6 +17,7 @@ class SpotifyStore {
         return (token = data.access_token);
     }
 
+
     async loadPlaylist() {
         const response = await fetch('https://api.spotify.com/v1/playlists/6k9xRTn4aAyp1N5iOXJV5n',
             {
