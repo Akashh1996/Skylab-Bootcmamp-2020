@@ -5,7 +5,6 @@ import HeroStore from '../../store/heroStore';
 import HeroList from './dashboardHeroList';
 
 const topHeros = HeroStore.getTopHeroes();
-
 class DashboardHero extends React.Component {
 	render() {
 		return (

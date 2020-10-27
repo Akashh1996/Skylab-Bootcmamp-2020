@@ -1,3 +1,11 @@
 .list-container {
 	padding: 20px;
 }
+.list-heroes {
+	list-style: none;
+}
+
+.heroes-button {
+	outline: none;
+	border: none;
+}
