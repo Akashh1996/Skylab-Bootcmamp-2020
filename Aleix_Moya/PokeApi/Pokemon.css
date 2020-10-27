@@ -1,0 +1,17 @@
+body{
+    background-color: #F0EA4B;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+}
+.theTitles{
+    position: relative;
+    margin-left: 10%;
+}
+#imagen{
+    max-width: 7%;
+    position: absolute;
+    z-index: -1;
+}

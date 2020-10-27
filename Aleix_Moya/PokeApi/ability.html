@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="fname">Idioma:</label>
+    <input type="text" id="myIdioms" name="fname">
+    <button type="button" id="button" onclick="idiom()">Search</button>
+    <button type="button" id="Change" style="display: none" onclick="Ret()">Change language</button>
+    <button type="button" id="goBacl" onclick="goBackM()">Go Back to Menu</button>
+    <p id="error"></p>
+    <script src="Pokemon.js"></script>
+    <script>
+        function goBackM() {
+            window.location.href = "Pokemon.html"
+        }
+        function Ret() {
+            window.location.reload();
+        }
+        var actualPokemon;
+        var elUrl;
+        var name = window.location.hash.substring(1);
+        function idiom() {
+
+            gameFreak.getName(name).then(() => {
+                gameFreak.loadPokemon(link).then(() => {
+                    const currentEl = document.getElementById("End");
+                    const title = document.createElement("h4");
+                    const newContent = document.createTextNode("Abilities:");
+                    const abilityWeb = 'ability.html' + '#' + (name);
+                    title.setAttribute('href', abilityWeb);
+                    title.appendChild(newContent);
+                    document.body.insertBefore(title, currentEl);
+                    for (let i = 0; i < thisPokemon.abilities.length; i++) {
+                        addAbility(thisPokemon, i);
+                    };
+                });
+            });
+            button.style.display = "none";
+            document.getElementById("Change").style.display = "inline";
+        }
+        function addAbility(thisPokemon, index) {
+            gameFreak.getName(name).then(() => {
+                gameFreak.loadPokemon(link).then(() => {
+                    gameFreak.loadPag(thisPokemon.abilities[index].ability.url).then(() => {
+                        var idiom;
+                        if ((document.getElementById("myIdioms").value) === "english") {
+                            for (i = 0; i < items.effect_entries.length; i++) {
+                                if (items.effect_entries[i].language.name = "en") {
+                                    idiom = i;
+                                }
+                            }
+                        } else {
+                            if ((document.getElementById("myIdioms").value) === "english") {
+                                for (i = 0; i < items.effect_entries.length; i++) {
+                                    if (items.effect_entries[i].language.name = "de") {
+                                        idiom = i;
+                                    }
+                                }
+                            } else {
+                                document.getElementById("check").innerHTML = "This language is not available";
+                            }
+                        }
+                        const newA = document.createElement("p");
+                        const newContent = document.createTextNode(thisPokemon.abilities[index].ability.name + ":  " + items.effect_entries[idiom].effect);
+                        newA.appendChild(newContent);
+                        const currentEl = document.getElementById("End");
+                        document.body.insertBefore(newA, currentEl);
+                    });
+                });
+            });
+        };
+    </script>
+    <p id="check"></p>
+</body>
+
+</html>
