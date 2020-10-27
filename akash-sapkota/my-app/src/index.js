@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Sum from './Sum';
+import ConditionalDisplay from './ConditionalDisplay';
 
 const props = {
 	a: 9,
@@ -15,6 +16,8 @@ const sum = React.createElement(
 	React.createElement(Sum, { ...props }, null)
 );
 
+let isVisible = false;
+
 ReactDOM.render(
 	<React.StrictMode>
 		{/* 	{ 	<Sum a={10} b={3} />
@@ -22,7 +25,14 @@ ReactDOM.render(
 		<Sum {...props} />
 		{		<ClickCounter />
 		 } */}
-		{sum}
+		{/* 		{sum}
+		 */}{' '}
+		<ConditionalDisplay isVisible={isVisible}>
+			{/* <div> es Major que zerp</div>
+			<span>Es major que 0</span> */}
+
+			<h1>React Mata</h1>
+		</ConditionalDisplay>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
