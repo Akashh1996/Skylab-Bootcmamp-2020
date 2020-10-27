@@ -35,3 +35,32 @@
 	flex-direction: column;
 	margin-left: 5px;
 }
+
+.top-heroes-container {
+	width: fit-content;
+}
+
+.top-heroes-title {
+	margin-top: 30px;
+	text-align: center;
+	font-size: 30px;
+	color: gray;
+}
+
+.top-btn {
+	text-decoration: none;
+	width: 180px;
+	height: 145px;
+	float: left;
+	text-align: center;
+	color: white;
+	background-color: rgb(113, 140, 153);
+	margin: 0 40px 40px 0;
+	font-size: 19px;
+	font-weight: 600;
+	vertical-align: middle;
+}
+
+.top-btn:last-child {
+	margin-right: 0;
+}
