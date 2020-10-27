@@ -49,3 +49,8 @@ input:checked + .slider:before {
 .slider.round:before {
 	border-radius: 50%;
 }
+
+#viaje-profesional {
+	color: black;
+	margin-left: 5px;
+}

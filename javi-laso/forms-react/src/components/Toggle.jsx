@@ -3,7 +3,7 @@ import './Toggle.css';
 
 function Toggle(props) {
 	return (
-		<section class="blue-button">
+		<section class="blue-button d-flex">
 			<label class="switch">
 				<input type="checkbox" checked />
 				<span class="slider round"></span>
