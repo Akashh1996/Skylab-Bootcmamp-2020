@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Sum({ a, b, showAlert }) {
+function Sum({ a, b, showAlert, children }) {
 	return (
 		<h1>
 			{a} + {b} = <button onClick={() => showAlert(a, b)}>?</button>

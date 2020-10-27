@@ -2,23 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+// import myProps from './store/data';
 // import App from './App';
 // import Hello from './Hello';
 // import ClickCounter from './components/ClickCounter';
-import Sum from './components/Sum';
+// import Sum from './components/Sum';
+import ConditionalDisplay from './components/ConditionalDisplay';
 
-const props = {
-	a: 5,
-	b: 8,
-	showAlert: (a, b) => {
-		alert(`El resultado es ${a + b}`);
-	}
-};
-
-const sum = React.createElement(Sum, { ...props }, null);
+let isVisible = false;
 
 ReactDOM.render(
-	<React.StrictMode>{sum}</React.StrictMode>,
+	<React.StrictMode>
+		<ConditionalDisplay isVisible={isVisible}>
+			<h1>Skylab mola!</h1>
+		</ConditionalDisplay>
+	</React.StrictMode>,
 	document.getElementById('root')
 );
 
