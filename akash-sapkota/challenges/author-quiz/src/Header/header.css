@@ -1,0 +1,13 @@
+.header {
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: auto;
+	background-color: #ecedf0;
+	margin-bottom: 10px;
+}
+h1,
+p {
+	margin-left: 7px;
+}

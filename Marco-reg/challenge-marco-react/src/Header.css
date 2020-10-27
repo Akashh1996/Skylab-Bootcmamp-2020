@@ -1,0 +1,20 @@
+.header {
+	background-color: #eceeef;
+}
+.titles {
+	background-color: #d9edf7;
+}
+.authors {
+	display: flex;
+	justify-content: space-around;
+	width: ;
+}
+.list-authors {
+	display: flex;
+	flex-direction: column;
+	justify-content: inherit;
+	list-style: none;
+}
+.titles:hover {
+	background-color: teal;
+}
