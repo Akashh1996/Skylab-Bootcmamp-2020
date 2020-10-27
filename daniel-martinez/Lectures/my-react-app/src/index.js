@@ -4,15 +4,13 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 //import Sum from './Sum'
 //import ClickCounter from './ClickCounter'
-import ConditionalDisplay from './ConditionalDisplay';
+//import ConditionalDisplay from './ConditionalDisplay';
+import TextInput from './TextInput';
 
-let isVisible = false;
 
 ReactDOM.render(
   <React.StrictMode>
-    <ConditionalDisplay isVisible={isVisible}>
-        <h1>Hola!</h1>
-    </ConditionalDisplay>
+      <TextInput />
   </React.StrictMode>,
   document.getElementById('root')
 );
