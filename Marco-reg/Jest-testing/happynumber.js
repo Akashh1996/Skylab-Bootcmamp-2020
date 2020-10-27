@@ -17,7 +17,6 @@ function isHappy(n){
             
             happyArray = HAPPY_ARRAY_ONE;
             break;
-    
         }else{
             happyArray.push(n.toString().split('').map(n  => n*n).reduce((a,v)=>a+v))
             n = n.toString().split('').map(n  => n*n).reduce((a,v)=>a+v);

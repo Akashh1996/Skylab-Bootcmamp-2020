@@ -1,0 +1,1189 @@
+* {
+	font-family: 'Source Sans Pro';
+	color: black;
+	margin: 0;
+}
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: rgb(248, 248, 248);
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	z-index: 1000;
+}
+
+.header__flex-spacer {
+	display: none;
+}
+
+.page {
+	position: relative;
+	top: 50px;
+	min-width: 350px;
+}
+
+.burgermenu {
+	display: block;
+	width: 50px;
+	height: 50px;
+	background: url(MariaLunarillosMedia/burger_menu.png) no-repeat center left;
+	top: 0;
+	left: 0;
+}
+
+.mainicons {
+	display: none;
+}
+
+.red-block {
+	display: none;
+}
+
+.blue-block {
+	display: none;
+}
+
+.yellow-block {
+	display: none;
+}
+
+.flex-spacer {
+	display: none;
+	height: 50px;
+}
+
+.user {
+	margin: 10px 60px 10px 30px;
+	width: 27px;
+	height: 27px;
+	background: url(MariaLunarillosMedia/sprite.svg) 0 0 no-repeat;
+}
+
+.user-entry {
+	display: none;
+}
+
+.social-media-header {
+	display: none;
+}
+
+.search {
+	width: 50px;
+	height: 50px;
+	background: #bbb8b6 url(MariaLunarillosMedia/sprite.svg) -304px 12px no-repeat;
+}
+
+.cart {
+	width: 50px;
+	height: 50px;
+	background: #fff url(MariaLunarillosMedia/sprite.svg) -66px 10px no-repeat;
+	margin: 0;
+}
+
+.zero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 22px;
+	font-weight: 500;
+	margin: 0;
+	width: 50px;
+	height: 50px;
+	color: white;
+	background-color: #ff5959;
+}
+
+.logo {
+	padding: 30px 30px 0 0;
+	text-align: center;
+}
+
+.logo-big {
+	display: none;
+}
+
+.logo-small {
+	max-width: 325px;
+}
+
+.quick-access {
+	display: none;
+}
+
+.top-container {
+	margin-top: 40px;
+}
+
+.big-image {
+	width: 100%;
+}
+
+.circles {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.dot {
+	height: 13px;
+	width: 13px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 15px 10px 20px 10px;
+}
+
+.wrapper-container {
+	background: #f8f8f8;
+	margin-bottom: 15px;
+	margin-top: 130px;
+}
+
+.wrapper-container-brands {
+	background: rgb(255, 255, 255);
+	margin-bottom: 15px;
+	border-top: 135px solid rgb(255, 255, 255);
+}
+
+.container-home {
+	position: relative;
+	text-align: center;
+	border-bottom: 0;
+}
+
+.category-header {
+	position: relative;
+	bottom: 175px;
+	padding-top: 110px;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	text-align: center;
+}
+
+.category-header .icon-category {
+	top: -64px;
+	width: 100%;
+	height: 100px;
+}
+
+.drawing {
+	top: -64px;
+	height: 120px;
+}
+
+.category-header .title {
+	display: inline-block;
+	padding: 20px 0;
+	text-transform: uppercase;
+	margin-bottom: 0;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	margin-top: 20px;
+	line-height: 22px;
+	font-size: 22px;
+	font-weight: 800;
+	letter-spacing: 6px;
+	width: 200px;
+	color: #2e2925;
+}
+
+.categories-photos {
+	padding-top: 0;
+	margin-top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.box-single,
+.box-double {
+	display: flex;
+	justify-content: left;
+	margin-bottom: 7.5px;
+	align-items: flex-end;
+	width: 320px;
+	height: 136.36px;
+}
+
+.categories-photos__molde {
+	background-image: url(MariaLunarillosMedia/moldesdereposteria.jpg);
+	background-size: cover;
+}
+
+.categories-photos__uten-basico {
+	background-image: url(MariaLunarillosMedia/utensiliosbasicos.jpg);
+	background-size: cover;
+}
+
+.categories-photos__pequeno-elect {
+	background-image: url(MariaLunarillosMedia/pequenoelectrodomestico2.jpg);
+	background-size: cover;
+}
+
+.categories-photos__capsulas {
+	background-image: url(MariaLunarillosMedia/capsulas-cupcakes.jpg);
+	background-size: cover;
+}
+
+.categories-photos__cajas-y-bases {
+	background-image: url(MariaLunarillosMedia/cajas3.jpg);
+	background-size: cover;
+}
+
+.categories-photos__cortadores-galletas {
+	background-image: url(MariaLunarillosMedia/cortadoresgalletas2.jpg);
+	background-size: cover;
+}
+
+.categories-photos__ceramica-y-textil {
+	background-image: url(https://static3.marialunarillos.com/media/wysiwyg/stands.jpg);
+	background-size: cover;
+}
+
+.categories-photos__banetones {
+	background-image: url(MariaLunarillosMedia/banetones.jpg);
+	background-size: cover;
+}
+
+.categories-photos__toppers-y-figuritas {
+	background-image: url(MariaLunarillosMedia/toppers3.jpg);
+	background-size: cover;
+}
+
+.description {
+	width: 40%;
+	padding: 20px 20px 20px 20px;
+	background-color: rgba(248, 248, 248, 0.8);
+}
+
+.description-title {
+	color: rgb(102, 99, 95) !important;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+.description-text {
+	display: none;
+}
+
+.triangle {
+	display: none;
+}
+
+.ver-mas {
+	display: flex;
+	justify-content: center;
+	margin-top: 35px;
+}
+
+.ver-mas__button {
+	color: white;
+	background-color: #ff5959;
+	border: 0;
+	padding: 15px 30px;
+	font-size: 18px;
+}
+
+.categories-photos__fondant {
+	background-image: url(MariaLunarillosMedia/fondant2.jpg);
+	background-size: cover;
+}
+
+.categories-photos__ingredientes-de-reposteria {
+	background-image: url(MariaLunarillosMedia/ingredientesreposteria.jpg);
+	background-size: cover;
+}
+
+.categories-photos__impresion-personalizada {
+	background-image: url(https://static3.marialunarillos.com/media/wysiwyg/impresionpersonalizada.jpg);
+	background-size: cover;
+}
+
+.categories-photos__colorantes-alimentarios {
+	background-image: url(MariaLunarillosMedia/Colorantes-alimentarios.jpg);
+	background-size: cover;
+}
+
+.categories-photos__papel-comestible {
+	background-image: url(MariaLunarillosMedia/papelcomestible.jpg);
+	background-size: cover;
+}
+
+.categories-photos__sprinkles-y-purpurinas {
+	background-image: url(MariaLunarillosMedia/sprinkles3.jpg);
+	background-size: cover;
+}
+
+.categories-photos__fiestas-tematicas {
+	background-image: url(MariaLunarillosMedia/fiestastematicas.jpg);
+	background-size: cover;
+}
+
+.categories-photos__fiestas-personajes {
+	background-image: url(MariaLunarillosMedia/fiestaspersonajes.jpg);
+	background-size: cover;
+}
+
+.categories-photos__accesorios-para-fiestas {
+	background-image: url(https://static3.marialunarillos.com/media/wysiwyg/pompones.jpg);
+	background-size: cover;
+}
+
+.ultimas-entradas {
+	display: flex;
+	justify-content: center;
+	margin-top: 35px;
+}
+
+.ultimas-entradas__button {
+	color: white;
+	background-color: #ff5959;
+	border: 0;
+	padding: 15px 1px 15px 1px;
+	width: 320px;
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-weight: 900;
+}
+
+.brands {
+	display: none;
+}
+
+.blog__picture {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 15px;
+}
+
+.blog__picture--caption {
+	background-color: white;
+	width: 320px;
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+}
+
+.blog__picture--image {
+	width: 320px;
+}
+
+.blog__picture--caption--author {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	padding: 5px 10px 10px 15px;
+}
+
+.blog__picture--caption--author--name {
+	margin-left: 5px;
+}
+
+.author-name {
+	color: #ff5959;
+	font-weight: 600;
+	margin-top: 0;
+}
+
+.caption-blog {
+	color: rgb(102, 99, 95);
+	padding: 20px 20px 20px 20px;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 18px;
+	background-color: white;
+}
+
+.wrapper-container-icons {
+	margin-bottom: 15px;
+	border-top: 100px solid white;
+}
+
+.container-home-icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	top: 200px;
+	background-color: #e8e6e5;
+	padding-bottom: 40px;
+}
+
+.container-home-icons__row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 40px 10px 10px 10px;
+	width: 60%;
+}
+
+.container-home-icons__row--icon {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+}
+
+.container-home-icons__row--camion {
+	height: 60px;
+	width: 85px;
+	background: url(MariaLunarillosMedia/sprite.svg) 0 -38px no-repeat transparent;
+}
+
+.container-home-icons__row--reloj {
+	padding-bottom: 0;
+	height: 60px;
+	width: 55px;
+	background: url(MariaLunarillosMedia/sprite.svg) -90px -38px no-repeat
+		transparent;
+}
+
+.container-home-icons__row--sobre {
+	padding-bottom: 0;
+	height: 60px;
+	width: 68px;
+	background: url(MariaLunarillosMedia/sprite.svg) -150px -36px no-repeat
+		transparent;
+}
+
+.container-home-icons__row--card {
+	padding-bottom: 0;
+	height: 60px;
+	width: 77px;
+	background: url(MariaLunarillosMedia/sprite.svg) -223px -38px no-repeat
+		transparent;
+}
+
+footer {
+	background-color: rgb(248, 248, 248);
+}
+
+.icons-caption {
+	text-align: center;
+	color: rgb(102, 99, 95);
+	padding: 20px 0px 0px 0px;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 18px;
+}
+.icons-subcaption {
+	text-align: center;
+	color: rgb(102, 99, 95);
+	padding: 0px 0px 0px 0px;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 18px;
+}
+
+.social-networks {
+	border-top: 80px solid rgb(248, 248, 248);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.h3 {
+	color: #67625f;
+	padding: 20px 0px 0px 0px;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.sn-icons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 15px;
+}
+
+.sn {
+	display: block;
+	margin-bottom: 30px;
+	width: 33px;
+	height: 32px;
+	background: url(MariaLunarillosMedia/sprite.svg) 0 0 no-repeat transparent;
+}
+
+.facebook {
+	background-position: 0 -494px;
+}
+
+.twitter {
+	background-position: -35px -494px;
+}
+
+.instagram {
+	background-position: -70px -494px;
+}
+
+.pinterest {
+	background-position: -106px -494px;
+}
+
+.youtube {
+	background-position: -176px -494px;
+}
+
+.novedades-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.recibe-novedades {
+	text-align: center;
+	width: 320px;
+	padding: 55px 0 15px;
+	border-top: 1px solid rgb(102, 99, 95);
+}
+
+.email {
+	width: 320px;
+	height: 40px;
+	padding: 0 10px;
+	margin-bottom: 10px;
+	border: 1px solid #67625f;
+	font-family: 'Source Sans Pro';
+	font-size: 15px;
+	font-weight: 300px;
+}
+
+.label-politica {
+	margin: 5px 0 5px 0;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+	font-family: 'Source Sans Pro';
+	color: rgb(102, 99, 95);
+}
+
+.politica-checkbox {
+	width: 24px;
+}
+
+.suscribete-button {
+	margin-top: 10px;
+	margin-bottom: 55px;
+	color: white;
+	background-color: #ff5959;
+	border: 0;
+	padding: 10px 1px;
+	width: 320px;
+	font-size: 17px;
+	font-weight: 700;
+}
+
+.suscribete-button-desktop {
+	display: none;
+}
+
+.more-info {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 320px;
+	padding-top: 55px;
+	padding-bottom: 100px;
+	border-top: 1px solid rgb(102, 99, 95);
+}
+
+.more-info__icon {
+	display: block;
+	width: 30px;
+	height: 31px;
+	margin: auto;
+}
+
+.contact-icon {
+	background: url(MariaLunarillosMedia/sprite.svg) 0 -207px no-repeat;
+}
+
+.about-us-icon {
+	background: url(MariaLunarillosMedia/sprite.svg) 0 -246px no-repeat;
+}
+
+.conditions-icon {
+	background: url(MariaLunarillosMedia/sprite.svg) 0 -285px no-repeat;
+}
+
+.more-info__caption {
+	text-align: center;
+	margin: 5px auto 20px auto;
+	color: #ff5959;
+	font-size: 14px;
+}
+
+.copyright {
+	background-color: #ff5959;
+	margin: 0;
+}
+
+.copyright__text {
+	text-align: center;
+	font-size: 14px;
+	color: white;
+	line-height: 50px;
+}
+
+@media screen and (min-width: 1020px) {
+	.header {
+		height: 60px;
+		width: 100%;
+		position: fixed;
+		z-index: 1000;
+	}
+
+	.mainicons {
+		display: flex;
+		flex-direction: row;
+		position: absolute;
+		left: 200px;
+	}
+
+	.red-rectangle {
+		height: 130px;
+		width: 70px;
+		background: url(./MariaLunarillosMedia/maria-lunarillos.png) #ff5959 bottom
+			center no-repeat;
+		margin-right: 5px;
+	}
+
+	.blue-rectangle {
+		height: 130px;
+		width: 70px;
+		background: url(./MariaLunarillosMedia/cucute.png) #6199af bottom center
+			no-repeat;
+		margin-right: 5px;
+	}
+
+	.yellow-rectangle {
+		height: 130px;
+		width: 70px;
+		background: url(./MariaLunarillosMedia/mumuchu.png) #f6b436 bottom center
+			no-repeat;
+	}
+
+	.blue-rectangle,
+	.yellow-rectangle {
+		position: relative;
+		top: -50px;
+	}
+
+	.blue-rectangle:hover,
+	.yellow-rectangle:hover {
+		top: 0px;
+	}
+
+	.header__flex-spacer {
+		display: block;
+		flex: 1;
+	}
+
+	.user {
+		margin-right: 10px;
+		margin-top: 15px;
+	}
+
+	.search {
+		display: none;
+	}
+
+	.social-media-header {
+		display: flex;
+		margin: 0 40px 0 20px;
+		margin-top: 5px;
+	}
+
+	.cart {
+		background-color: rgb(248, 248, 248);
+		align-self: center;
+	}
+
+	.cart:hover {
+		border-top: 10px solid #ff5959;
+	}
+
+	.zero {
+		align-self: center;
+		height: 60px;
+	}
+
+	.smheader-icon {
+		width: 25px;
+		height: 20px;
+		margin: 15px 7px 0;
+		background: url(./MariaLunarillosMedia/sprite.svg) transparent 0 0 no-repeat;
+	}
+
+	.social-media-header > .facebook {
+		background-position: -4px -540px;
+	}
+
+	.social-media-header > .facebook:hover {
+		background-position: -4px -500px;
+	}
+
+	.social-media-header > .twitter {
+		background-position: -40px -540px;
+	}
+
+	.social-media-header > .twitter:hover {
+		background-position: -40px -500px;
+	}
+
+	.social-media-header > .instagram {
+		background-position: -75px -540px;
+	}
+
+	.social-media-header > .instagram:hover {
+		background-position: -75px -500px;
+	}
+
+	.social-media-header > .pinterest {
+		background-position: -110px -540px;
+	}
+
+	.social-media-header > .pinterest:hover {
+		background-position: -110px -500px;
+	}
+
+	.social-media-header > .youtube {
+		background-position: -180px -540px;
+	}
+
+	.social-media-header > .youtube:hover {
+		background-position: -180px -500px;
+	}
+
+	.zero {
+		margin-right: 50px;
+	}
+
+	.user-entry {
+		display: block;
+		align-self: center;
+		margin-right: 20px;
+	}
+
+	.user-entry:hover {
+		color: #ff5959;
+	}
+
+	.cart:hover {
+		background: #ff5959 url(MariaLunarillosMedia/sprite.svg) -105px 10px no-repeat;
+	}
+
+	.burgermenu {
+		display: none;
+	}
+
+	.title-container-block {
+		display: flex;
+		justify-content: center;
+	}
+
+	.title-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 70%;
+	}
+
+	.flex-spacer {
+		flex: 2;
+	}
+
+	.logo {
+		padding: 0;
+		display: flex;
+		align-content: center;
+		max-width: 300px;
+	}
+
+	.logo-small {
+		display: none;
+	}
+
+	.logo-big {
+		display: block;
+		margin: 80px 0 30px;
+	}
+
+	.quick-access {
+		display: flex;
+		flex-direction: column;
+		max-width: 570px;
+		padding: 50px 0 0 10px;
+	}
+
+	.flex-spacer {
+		display: block;
+		position: relative;
+		flex: 1;
+		background: rgb(255, 255, 255);
+	}
+
+	.quick-access__top-block {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 30px;
+	}
+
+	.novedades,
+	.ofertas {
+		padding: 0 8px 0 0;
+		width: 130px;
+		text-transform: uppercase;
+		color: #ffffff;
+		display: block;
+		font-size: 15px;
+		font-weight: 600;
+		text-decoration: none;
+		letter-spacing: 1px;
+		line-height: 30px;
+		text-align: center;
+		margin-right: 5px;
+		border: none;
+	}
+
+	.novedades {
+		background: #9faa4d;
+	}
+
+	.ofertas {
+		background: #8e789d;
+	}
+
+	.form-search {
+		color: #bbb;
+		display: flex;
+		width: 300px;
+		border: 1px solid #bbb8b6;
+	}
+
+	.form-search__icon {
+		width: 50px;
+		justify-self: right;
+		background-color: rgb(170, 170, 170);
+		border: none;
+	}
+
+	.search-desktop {
+		float: left;
+		border: none;
+		width: calc(100% - 49px);
+		height: 28px;
+		margin: 0;
+		font-size: 12px;
+		letter-spacing: 1px;
+		padding: 0 5px;
+		color: #bbb8b6;
+		text-transform: uppercase;
+	}
+
+	.quick-access__bottom-block {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.quick-access__bottom-block-left {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.category-block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-right: 5px;
+	}
+
+	.quick-access-logo {
+		background-position: center;
+		background-color: #f2f2f2;
+		background-repeat: no-repeat;
+		font-size: 15px;
+		letter-spacing: 1px;
+		color: #2e2925;
+		position: relative;
+		width: 100px;
+		height: 100px;
+	}
+
+	.blog-logo {
+		background-position: center;
+		background-color: #ff5959;
+		background-repeat: no-repeat;
+		background-size: 50%;
+		font-size: 15px;
+		position: relative;
+		width: 100px;
+		height: 100px;
+	}
+
+	.category-caption,
+	.blog-caption {
+		font-size: 15px;
+		margin-top: 7px;
+		text-align: center;
+		font-weight: 600;
+		position: relative;
+		padding: 0;
+		letter-spacing: 1px;
+		font-weight: 400;
+	}
+
+	.blog-caption {
+		color: #ff5959;
+	}
+
+	.utensilios-logo {
+		background-image: url(MariaLunarillosMedia/utensiliosML.png);
+		background-size: 50%;
+	}
+
+	.ingredientes-logo {
+		background-image: url(MariaLunarillosMedia/magdalena.png);
+		background-size: 50%;
+	}
+
+	.fiestas-logo {
+		background-image: url(MariaLunarillosMedia/tarta-cumpleanos.png);
+		background-size: 50%;
+	}
+
+	.marcas-logo {
+		background-image: url(MariaLunarillosMedia/delantal.png);
+		background-size: 70%;
+	}
+
+	.blog-logo {
+		background-image: url(MariaLunarillosMedia/menu.svg);
+		background-repeat: no-repeat;
+		background-position: -465px -5px;
+		background-size: 800px;
+	}
+
+	.triple-block {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.triple-block__column {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.single-block__column {
+		padding-bottom: 10px;
+	}
+
+	.box-single,
+	.box-double {
+		margin: 7.5px;
+	}
+
+	.box-single {
+		height: 615px;
+		width: 350px;
+	}
+
+	.box-double {
+		height: 300px;
+		width: 715px;
+	}
+
+	.categories-photos {
+		margin-bottom: 100px;
+	}
+
+	.description {
+		width: 200px;
+		height: 110px;
+		padding: 20px 20px 20px 20px;
+		background-color: rgba(255, 255, 255, 0.8);
+		position: relative;
+	}
+
+	.description-title {
+		color: rgb(102, 99, 95) !important;
+		font-size: 18px;
+		line-height: 18px;
+		margin-bottom: 10px;
+	}
+
+	.description-text {
+		display: block;
+		color: rgb(102, 99, 95);
+	}
+
+	.description:after {
+		content: '';
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-bottom: 150px solid rgba(255, 255, 255, 0.8);
+		border-right: 100px solid transparent;
+		position: absolute;
+		right: -100px;
+		top: 0;
+	}
+
+	.wrapper-container-icons {
+		width: 100vw;
+		border-top: 100px solid white;
+		display: flex;
+		justify-content: center;
+		background-color: #e8e6e5;
+		margin-bottom: 0 !important;
+	}
+
+	.blog {
+		display: none;
+	}
+
+	.brands {
+		display: block;
+		display: flex;
+		justify-content: center;
+		align-content: flex-end;
+		padding-bottom: 0;
+	}
+
+	.brands-image {
+		width: 85vw;
+	}
+
+	.icon-category__brands {
+		margin-bottom: 60px;
+	}
+
+	.container-home-icons {
+		flex-direction: row;
+	}
+
+	.container-home-icons__row--icon {
+		margin: 0 30px;
+	}
+
+	.footer-row-desktop {
+		display: flex;
+		justify-content: center;
+		background-color: rgb(248, 248, 248);
+		margin-top: 20px;
+	}
+
+	.footer-row-desktop__block {
+		display: flex;
+		flex-direction: row;
+		width: 70%;
+		justify-content: center;
+	}
+
+	.siguenos {
+		align-self: flex-start;
+	}
+
+	.social-networks {
+		border-top: 60px solid rgb(248, 248, 248);
+		flex: 1;
+		margin-top: 0px;
+		padding-top: 0px;
+		border-right: 1px solid #bbb8b6;
+		margin-bottom: 140px;
+		padding-right: 20px;
+	}
+
+	.sn-icons {
+		margin-top: 25px;
+		align-self: flex-start;
+	}
+
+	.novedades-footer {
+		flex: 1;
+		margin-top: 25px;
+		padding: 0px 30px 0px;
+		border-right: 1px solid #bbb8b6;
+		margin-bottom: 140px;
+	}
+
+	.recibe-novedades {
+		text-align: left;
+		margin-bottom: 5px;
+		border-top: none;
+		align-self: flex-start;
+	}
+
+	.politica-privacidad {
+		align-self: flex-start;
+	}
+
+	.more-info {
+		flex: 1;
+		padding-top: 0;
+		border-top: none;
+		margin-top: 55px;
+	}
+
+	.suscribete-button {
+		display: none;
+	}
+
+	.email {
+		width: 280px;
+	}
+
+	.input-and-button-desktop {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.suscribete-button-desktop {
+		display: block;
+		color: white;
+		background-color: #ff5959;
+		border: 0;
+		padding: 10px 1px;
+		height: 42px;
+		width: 120px;
+		font-size: 17px;
+		font-weight: 700;
+		margin-left: 5px;
+	}
+
+	.more-info {
+		display: block;
+		flex: 1;
+		padding-left: 20px;
+		width: 500px;
+	}
+
+	.more-info__block {
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+		align-items: center;
+		padding: 10px 0px;
+	}
+
+	.more-info__icon {
+		margin-right: 0px;
+		margin-left: 0px;
+		width: 40px;
+	}
+
+	.more-info__caption {
+		margin: 0;
+		font-size: 18px;
+		text-align: left;
+		width: 200px;
+	}
+}

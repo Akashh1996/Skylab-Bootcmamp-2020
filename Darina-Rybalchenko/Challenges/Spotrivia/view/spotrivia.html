@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotrivia</title>
+    <link rel="stylesheet" href="spotrivia.css">
+</head>
+
+<body>
+    <header>
+        <h1>Spotrivia</h1>
+    </header>
+    <section class="playlist-container">
+
+        <div class="artist_tittle">Artist</div>
+        <div class="artist" id="artist"></div>
+        <img class="image" id="image" src="" alt="">
+
+        <div class="song-button-wrapper" id="song">
+            <button id="song__tittle" class="song__tittle__button"></button>
+            <button id="song__tittle_0" class="song__tittle__button"></button>
+            <button id="song__tittle_1" class="song__tittle__button"></button>
+            <button id="song__tittle_2" class="song__tittle__button"></button>
+        </div>
+
+        <div class="start-and-points-wrapper">
+            <button id="start-button" class="start-button">p l a y</button>
+            <div id="end-of-game" class="end__of__game">End of game</div>
+            <div id="points-display" class="points__display"></div>
+        </div>
+
+    </section>
+
+    <script src="../store.js"></script>
+    <script src="spotrivia.js"></script>
+    <script>
+
+        (async () => {
+            await store.getToken();
+            await store.loadPlaylist()
+            let playListArray = []
+
+            for (let i = 0; i < playList.length; i++) {
+                playListArray.push({
+                    artist: playList[i].track.artists[0].name,
+                    image: playList[i].track.album.images[1],
+                    song: playList[i].track.name,
+                })
+
+            }
+
+            let rightSongTittle;
+            let songTittle;
+            let points = 0
+            let turn = 0;
+
+            function createRandomPlayList() {
+                const randomPlayListDetail = createRandomPlayListArray(playListArray)
+                let artistTittle = document.getElementById('artist')
+                let imageElement = document.getElementById('image')
+                rightSongTittle = document.getElementById('song__tittle')
+                imageElement.src = randomPlayListDetail.image.url
+                artistTittle.innerHTML = randomPlayListDetail.artist
+                rightSongTittle.innerHTML = randomPlayListDetail.song
+            }
+            createRandomPlayList()
+
+
+
+            function createRandomSongs() {
+                const songsArray = []
+                for (let index = 0; index < playListArray.length; index++) {
+                    songsArray.push(playListArray[index].song)
+                }
+                const randomSongArray = []
+                for (let i = 0; i < 3; i++) {
+                    let randomIndex = Math.round(Math.random() * (songsArray.length - 1));
+                    randomSongArray.push(songsArray[randomIndex])
+                    songsArray.splice(randomIndex, 1)
+                    songTittle = document.getElementById(`song__tittle_${i}`)
+                    songTittle.innerHTML = randomSongArray[i]
+                }
+                return randomSongArray
+            }
+            createRandomSongs()
+
+            function endOfGame() {
+                if (turn === 10) {
+                    let pointsInDisplay = document.getElementById('points-display')
+                    pointsInDisplay.innerHTML = `Points: ${points}`
+                    pointsInDisplay.style.display = 'inline'
+                    let endOfGameInDisplay = document.getElementById('end-of-game')
+                    endOfGameInDisplay.style.display = 'inline'
+                }
+            }
+            endOfGame()
+
+            rightSongTittle.addEventListener('click', function () {
+                turn++
+                points++
+                createRandomSongs()
+                createRandomPlayList()
+                endOfGame()
+            })
+
+            songTittle.addEventListener('click', function () {
+                turn++
+                createRandomSongs()
+                createRandomPlayList()
+                endOfGame()
+            })
+
+        })();
+
+    </script>
+</body>
+
+</html>
