@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Sum({ a, b, showAlert }) {
+function Sum({ a, b, showAlert, children }) {
+	debugger;
 	return (
-		<>
-			{a} + {b} ={' '}
+		<div>
+			<h1>
+				{a} + {b} ={' '}
+			</h1>
 			<button
 				onClick={() => {
 					showAlert(a, b);
@@ -12,7 +15,7 @@ function Sum({ a, b, showAlert }) {
 			>
 				?
 			</button>
-		</>
+		</div>
 	);
 }
 
