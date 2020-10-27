@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex - Navigation</title>
+    <link rel="icon" href="https://www.flaticon.es/svg/static/icons/svg/743/743977.svg"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <header>
+            <div class="poke">
+                <img src="https://www.flaticon.es/svg/static/icons/svg/743/743977.svg" width="20" />
+                <h1>Pokédex</h1>
+            </div>
+            <nav class="navigation">
+                <a href="./list.html" class="nav-button">List of Pokemon</a>
+            </nav>
+        </header>
+        <main>
+            <h2 class="list-heroes-title">List of Pokémon</h2>
+            <ul id="list-heroes-list"></ul>
+        </main>
+    </div>
+    <script src="store.js"></script>
+    <script>
+        (async () => {
+            const pokedex = await store.loadPokedex()
+            document.getElementById('list-heroes-list').innerHTML = store.anchorPokedex(pokedex)
+        })()
+    </script>
+</body>
+</html>

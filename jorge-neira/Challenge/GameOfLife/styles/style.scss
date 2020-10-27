@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Bangers', cursive;
+	background-color: black;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+button {
+	font-family: 'Bangers', cursive;
+	display: flex;
+}
+
+.gameBtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.btn {
+		border-radius: 20px 20px 0 0;
+		cursor: pointer;
+		background-color: black;
+		color: white;
+		padding: 10px 30px;
+		outline: none;
+		border: none;
+		font-size: 30px;
+		margin-right: 10px;
+	}
+	.btn:hover {
+		background-color: white;
+		color: black;
+	}
+}
