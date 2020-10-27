@@ -9,7 +9,6 @@ function DateInput () {
             setInputValue(event.target.value)
         }}/>
         </>
-        
     )
 }
 
