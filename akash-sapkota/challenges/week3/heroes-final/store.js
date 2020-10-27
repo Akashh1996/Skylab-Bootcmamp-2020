@@ -2,16 +2,14 @@ let _heroes
 class Store {
     debugger
     loadHeroes() {
-        //debugger;
+        
         return fetch('../../apil/superHeroData.json').then((response) => {
             return response.json()
         }).then((heroes) => {
             _heroes = heroes
-            /*  return _heroes */
+            
         })
-        /* .then((x)=>{  en este bloque x vale _heroes y asi van concatenando if we return in upper blockx  
-
-        }) */
+       
 
     }
 
