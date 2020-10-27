@@ -1,0 +1,63 @@
+* {
+	font-family: Montserrat;
+}
+
+body {
+	background-color: rgb(18, 18, 18);
+	color: white;
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+	margin-top: 200px;
+}
+
+#title-logo {
+	width: 80px;
+	margin: 15px;
+}
+
+.instructions {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#instructions__text {
+	width: 600px;
+	font-size: 20px;
+	text-align: justify;
+}
+
+#instructions__welcome {
+	font-size: 30px;
+}
+
+#instructions__good-luck {
+	font-size: 30px;
+}
+
+#start-button {
+	margin-top: 20px;
+	font-size: 25px;
+	width: 300px;
+	height: 60px;
+	list-style: none;
+	border: 1px solid black;
+	border-radius: 40px;
+	padding: 10px 0;
+	background-color: rgb(87, 181, 96);
+	color: white;
+	overflow: none;
+}
+
+#start-button:hover {
+	background-color: white;
+	color: rgb(87, 181, 96);
+	border: 2px solid rgb(87, 181, 96);
+	outline: none;
+}

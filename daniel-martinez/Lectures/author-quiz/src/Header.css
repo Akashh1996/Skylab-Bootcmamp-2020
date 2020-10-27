@@ -1,0 +1,11 @@
+#header {
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(221, 221, 221);
+	margin: 10px;
+	padding: 30px 20px;
+}
+
+#header__title {
+	margin-bottom: 0;
+}
