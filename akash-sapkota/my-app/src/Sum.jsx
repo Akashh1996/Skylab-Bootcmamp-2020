@@ -12,8 +12,15 @@ import PropTypes from 'prop-types';
 function Sum({ a, b }) {
 	return (
 		<h1>
-			{' '}
-			{a} + {b} = {a + b}{' '}
+			{a} + {b} ={' '}
+			<button
+				onClick={() => {
+					alert(a + b);
+				}}
+			>
+				{' '}
+				{a + b}{' '}
+			</button>
 		</h1>
 	);
 }
