@@ -4,8 +4,8 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import App from './App';
 // import Hello from './Hello';
-// import ClickCounter from './ClickCounter';
-import Sum from './Sum';
+// import ClickCounter from './components/ClickCounter';
+import Sum from './components/Sum';
 
 const props = {
 	a: 5,
@@ -15,10 +15,10 @@ const props = {
 	}
 };
 
+const sum = React.createElement(Sum, { ...props }, null);
+
 ReactDOM.render(
-	<React.StrictMode>
-		<Sum {...props} />
-	</React.StrictMode>,
+	<React.StrictMode>{sum}</React.StrictMode>,
 	document.getElementById('root')
 );
 
