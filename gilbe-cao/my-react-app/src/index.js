@@ -2,16 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import ConditionalDisplay, { x, w } from './components/ConditionalDisplay';
-
-let isVisible = false;
-const obj = { value: x, otroValue: w };
+import TextInput from './components/TextInput';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<ConditionalDisplay show={isVisible} obj={obj}>
-			<h1>Skylab mola molt!</h1>
-		</ConditionalDisplay>
+		<TextInput />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
