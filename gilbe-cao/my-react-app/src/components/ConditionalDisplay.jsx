@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function ConditionalDisplay(props) {
-	const [isVisible, setIsVisible] = useState(props.isVisible);
+	const [isVisible, setIsVisible] = useState(props.show);
 
 	return (
 		<div>
@@ -22,3 +22,5 @@ function ConditionalDisplay(props) {
 }
 
 export default ConditionalDisplay;
+export const x = true;
+export const w = false;
