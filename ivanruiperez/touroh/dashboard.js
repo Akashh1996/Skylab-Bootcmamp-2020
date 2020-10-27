@@ -1,3 +1,4 @@
+
 class DashboardComponent {
 	constructor(heroes) {
 		this.heroes = heroes;
@@ -20,3 +21,4 @@ class DashboardComponent {
 }
 const dashboardComponent = new DashboardComponent();
 module.exports = dashboardComponent;
+

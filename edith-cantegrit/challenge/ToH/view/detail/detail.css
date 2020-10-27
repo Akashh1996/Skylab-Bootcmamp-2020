@@ -1,0 +1,97 @@
+body {
+    font-family: sans-serif;
+}
+.heroesDash {
+    border-style: none;
+    color: rgb(86, 119, 138);
+    font-weight: bold;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+.heroesDash:hover {
+    color: rgb(80, 150, 194);
+    background-color: rgb(221, 213, 213);
+}
+
+.divHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 10px
+}
+
+.mainDiv {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column; 
+    font-size: 15px;
+    border: solid 1px grey;
+    background-color: rgb(202, 214, 226);
+}
+
+.nameAndAppearance {
+    margin-left: 20px;
+    line-height: 20px;
+}
+
+.titlebio {
+    display:flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-top: 60px;
+    padding-left: 40px;
+}
+
+.bioStyle { 
+    display: flex;
+    flex-direction: column;
+    font-weight: normal;
+    position: relative;
+    margin-top: 20px;
+
+}
+
+.group {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90px;
+}
+
+.statisticsBlock {
+    display: flex; 
+    flex-direction: row;
+}
+
+.powerstats {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+.powerstats svg {
+	position: relative;
+	width: 100px;
+	height: 100px;
+}
+.powerstats svg circle {
+	width: 100px;
+	height: 100px;
+	fill: none;
+	stroke-width: 9;
+	stroke: lightgreen;
+	stroke-dashoffset: 233;
+	stroke-dasharray: 233;
+	transform: rotate(-90deg);
+	transform-origin: 50% 50%;
+}
+.powerstats svg circle:nth-child(1) {
+	stroke-dasharray: 0;
+	stroke-dashoffset: 0;
+	stroke: #d9d9d9;
+}
+.powerstats__number {
+	position: absolute;
+	top: 32px;
+	font-size: 30px;
+}

@@ -1,0 +1,97 @@
+* {
+	margin: 0;
+	font-family: 'Flexo';
+}
+
+#head-title {
+	text-transform: capitalize;
+}
+
+body {
+	background-color: rgb(195, 44, 51);
+}
+
+.pokedex-logo {
+	display: flex;
+	justify-content: flex-start;
+	margin: 10px 10px 20px;
+}
+
+#pokedex-logo__image {
+	width: 200px;
+}
+
+#title-block {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	width: 100vw;
+	margin: 0;
+}
+
+#pokemon-title {
+	text-transform: capitalize;
+	color: rgb(255, 255, 255);
+	background-color: rgb(146, 146, 146);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 60px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	width: 400px;
+	text-align: center;
+}
+
+#flex-spacer {
+	display: flex;
+	background-color: rgb(146, 146, 146);
+	height: 40px;
+	flex: 1;
+}
+
+.info-block {
+	display: flex;
+}
+
+#info-block__abilities {
+	margin: 0 0 40px 40px;
+	background-color: white;
+	height: 140px;
+	width: 80%;
+	padding: 30px 10px 10px 10px;
+}
+
+#abilities__list {
+	margin-top: 10px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.abilityLi:hover {
+	color: rgb(202, 202, 0);
+}
+
+.abilityLi {
+	margin-bottom: 5px;
+	font-size: 18px;
+	color: black;
+	text-transform: capitalize;
+}
+
+#error-info {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	top: 160px;
+	left: 0;
+}
+
+#error404 {
+	width: 100%;
+	left: 0;
+	object-fit: scale-down;
+}
