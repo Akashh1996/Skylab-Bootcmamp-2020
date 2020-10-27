@@ -2,19 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import ConditionalDisplay from './ConditionalDisplay'
-import TextInput from './TextInput'
-
+import TextInput from './components/TextInput';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ConditionalDisplay isVisible={true}>
-        <div>La suma es 0</div>
-        <span>La suma es mayor que 0</span>
-    </ConditionalDisplay>
-    <TextInput />
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<TextInput />
+	</React.StrictMode>,
+	document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
