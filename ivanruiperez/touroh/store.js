@@ -20,7 +20,7 @@ class Store {
 	}
 
 	getTopHeroes() {
-		debugger;
+		
 		return this.getHeroes().slice(0, 4);
 	}
 }
