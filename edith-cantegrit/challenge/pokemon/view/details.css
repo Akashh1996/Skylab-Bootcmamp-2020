@@ -1,0 +1,114 @@
+@import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+body {
+    border-color: blue;
+    border: solid 2px;
+    border-radius: 30px;
+    -webkit-box-shadow:inset 0px 0px 0px 10px #f00;
+    -moz-box-shadow:inset 0px 0px 0px 10px #f00;
+    box-shadow:inset 0px 0px 0px 10px #f00;
+    width:70%;
+}
+
+.pokeImg {
+    height:60px;
+    width: auto;
+    margin-top: -20px;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: Pokemon;
+    background: blue;
+    border: solid 2px;
+    border-radius: 30px;
+    -webkit-box-shadow:inset 0px 0px 0px 10px #f00;
+    -moz-box-shadow:inset 0px 0px 0px 10px #f00;
+    box-shadow:inset 0px 0px 0px 10px #f00;
+    padding-bottom: 10px;
+    
+}
+
+.divBtns {
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    height: 500px;
+    background-color: blue;
+    -webkit-box-shadow:inset 0px 0px 0px 10px #f00;
+    -moz-box-shadow:inset 0px 0px 0px 10px #f00;
+    box-shadow:inset 0px 0px 0px 10px #f00;
+}
+
+.anchorStyle {
+    text-decoration: none;
+    color: black;
+    font-family: "Comic sans ms";
+    font-weight: bold;
+}
+
+.btnPokedex {
+    margin: 2px;
+    border-color: red;
+}
+
+#boxPres {
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 20px;
+    font-family: 'Comic Sans ms';
+}
+
+.boxPres__div {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.abilitiesSect {
+    display:flex;
+    flex-direction: column;
+    margin-left: 5%;
+    align-items: center;
+    font-family: 'Comic Sans ms';
+    
+
+}
+
+.idHeightWeight {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 0em;
+    white-space: pre;
+}
+
+.titleName{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-family: Pokemon;
+}
+
+.containerDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerDivtext {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    max-width: 80%;
+    font-size: 10px;
+}
+
+#textAb {
+    padding: 30px;
+}
