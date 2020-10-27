@@ -2,15 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import ClickCounter from './ClickCounter';
+import Sum from './components/Sum';
+import myProps from './store/data';
 
-const props = {
-	a: 4,
-	b: 2
-};
 ReactDOM.render(
 	<React.StrictMode>
-		<ClickCounter />
+		{React.createElement(
+			'h1',
+			null,
+			React.createElement(Sum, { ...myProps }, null)
+		)}
 	</React.StrictMode>,
 	document.getElementById('root')
 );

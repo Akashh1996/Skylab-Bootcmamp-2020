@@ -1,15 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-/*
-function Sum(props) {
+function Sum({ a, b, showAlert }) {
 	return (
-		<h1>
-			{props.a} + {props.b} = {props.a + props.b}
-		</h1>
+		<>
+			{a} + {b} ={' '}
+			<button
+				onClick={() => {
+					showAlert(a, b);
+				}}
+			>
+				?
+			</button>
+		</>
 	);
 }
-*/
 
+Sum.propTypes = {
+	a: PropTypes.number.isRequired,
+	b: PropTypes.number.isRequired,
+	showAlert: PropTypes.func.isRequired
+};
+
+/*
 class Sum extends React.Component {
 	componentWillMount() {
 		console.info('>>>>>>>>will mount    ');
@@ -26,5 +39,5 @@ class Sum extends React.Component {
 		);
 	}
 }
-
+*/
 export default Sum;
