@@ -1,9 +1,8 @@
 import React from 'react'
-import Header from '../Header'
-import Heroes from './Heroes.'
+import Header from './../Header'
+import DetailItem from './DetailItem/DetailItem'
 
-
-function HeroList() {
+function Detail() {
     const heroes = [
         { id: 11, name: 'Dr Nice' },
         { id: 12, name: 'Narco' },
@@ -20,10 +19,10 @@ function HeroList() {
     return (
         <>
             <Header />
-            <Heroes heroes={heroes} />
+            <DetailItem heroId={heroes} />
 
         </>
     )
 }
 
-export default HeroList
+export default Detail

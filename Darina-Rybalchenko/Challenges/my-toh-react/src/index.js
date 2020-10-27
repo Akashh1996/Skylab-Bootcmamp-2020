@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import HeroDashboard from './Dashboard/HeroDashboard'
+import HeroList from './List/HeroList'
+/* import Detail from './Detail/Detail' */
 
 ReactDOM.render(
   <React.StrictMode>
     <HeroDashboard />
+    <HeroList />
+
 
   </React.StrictMode>,
   document.getElementById('root')
