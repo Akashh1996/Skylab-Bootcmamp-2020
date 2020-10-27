@@ -1,0 +1,15 @@
+.header-title {
+	font-size: 30px;
+	font-weight: 600;
+	color: rgb(189, 189, 189);
+}
+
+.nav-btn {
+	text-decoration: none;
+	border-radius: 4px;
+	font-size: 20px;
+	color: rgb(113, 140, 153);
+	background-color: rgb(241, 237, 237);
+	padding: 5px 10px;
+	margin-right: 5px;
+}
