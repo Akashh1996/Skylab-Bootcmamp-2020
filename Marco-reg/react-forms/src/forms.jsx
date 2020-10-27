@@ -16,7 +16,7 @@ const Class=['Premium','Economy','MaxiPremium',`You ain't got enough Money`];
 function InputForms(){
 
     return(
-        <div>
+        <div class="main-wrapper">
             <div className="top-bar">
                 <a>RESERVAR UN VUELO</a>
                 <a>RESERVAR UN VUELO CON MILLAS</a>
@@ -44,13 +44,19 @@ function InputForms(){
             <div className="flightDate">
                 <DateFlight/>
             </div>
-            <div>
-                <h2>Viajes Profesionales</h2>
+            <div className="pro">
+                <h4>Viajes Profesionales</h4>
 
                 <label className="switch">
                     <input type="checkbox"/>
                     <span className="slider"></span>
                 </label>
+            </div>
+            <div className="Search">
+                <button className="button">
+                    <a>Buscar vuelos</a>
+                </button>
+
             </div>
 
            
