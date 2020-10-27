@@ -8,12 +8,13 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import myProps from './data';
 import ConditionalDisplay from './ConditionalDisplay';
-import ConditionalDisplay2 from './ConditionalDisplay2';
+import ConditionalDisplay2, { x, w} from './ConditionalDisplay2';
 
+const obj = { value: x, otroValue: w};
 
 ReactDOM.render(
   <React.StrictMode> 
-      <ConditionalDisplay isVisible={true}>
+      <ConditionalDisplay isVisible={true} obj={obj}>
         <div>La suma es 0</div>
         <div>La suma es mayor que 0</div>
       </ConditionalDisplay>

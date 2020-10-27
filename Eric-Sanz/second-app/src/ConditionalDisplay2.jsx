@@ -19,3 +19,5 @@ function ConditionalDisplay2(props) {
 }
 
 export default ConditionalDisplay2;
+export const x = true;
+export const w = false;
