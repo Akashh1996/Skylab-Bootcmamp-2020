@@ -1,5 +1,5 @@
 function checkForEquality(a,b){
-    console.log(a,b)
+    
     if (a == b){
         if(typeof(a) == "string" && typeof(b)=="string"){
             return true;
