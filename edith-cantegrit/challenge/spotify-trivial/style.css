@@ -1,0 +1,134 @@
+.body{
+
+    background-color: #343a40;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.logo {
+    height: 30px;
+    width: 30px;
+}
+
+.cardLogo {
+    display:flex;
+    flex-direction: row; 
+    justify-content: flex-start;
+    align-items: center;
+    background-color:#1ad85c;
+    color: white;
+    padding-left: 1.25rem;
+}
+
+.cardHeader {
+    display:flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    align-items: center;
+    background-color:#1ad85c;
+    color: white;
+    padding-bottom: 1.25rem;
+}
+
+/*TURN AND SCORE*/
+
+#flexScore{
+    display: flex;
+    flex-direction: row;
+    color: yellow;
+}
+.turn-score {
+    font-size: 15px;
+    margin-left: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/*TIMER*/
+
+.base-timer {
+    position: relative;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .base-timer__svg {
+    transform: scaleX(-1);
+  }
+  
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  .base-timer__path-elapsed {
+    stroke-width: 12px;
+    stroke: grey;
+  }
+  
+  .base-timer__path-remaining {
+    stroke-width: 12px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+  }
+  
+  .base-timer__path-remaining.green {
+    color: rgb(4, 230, 79);
+  }
+  
+  .base-timer__path-remaining.orange {
+    color: orange;
+  }
+  
+  .base-timer__path-remaining.red {
+    color: red;
+  }
+  
+  .base-timer__label {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+  }
+
+/* BUTTONS */
+
+.buttonBox{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+}
+
+#boxSpace {
+    height: 200px;
+    width: auto;
+}
+  
+.button-start {
+    text-decoration: none;
+    text-align: center;
+    width: 15em;
+    padding: .5em;
+    color: #ffffff;
+    border: solid thin #37754d;
+    -webkit-border-radius: .7em;
+    -moz-border-radius: .7em;
+    border-radius: .7em;
+    -webkit-box-shadow: 2px 2px 3px #999; 
+    box-shadow: 2px 2px 2px #bbb;
+    background-color: #1ad85c;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e9ede8), to(#1ad85c),color-stop(0.4, #238143));
+}
+
+.button-start:hover {
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #000;
+    color: #ffffff;
+    -webkit-box-shadow: 2px 2px 3px rgb(66, 64, 64); 
+    box-shadow: 2px 2px 2px rgb(61, 60, 60);
+}

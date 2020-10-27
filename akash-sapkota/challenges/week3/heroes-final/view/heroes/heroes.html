@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tour of Heroes</title>
+		<link rel="stylesheet" href="../../style.css" />
+		<link rel="stylesheet" href="./heroes.css" />
+	</head>
+	<body>
+		<h1>Tour of Heroes</h1>
+		<nav>
+			<a href="../dashboard/dashboard.html">Dashboard</a>
+			<a href="../heroes/heroes.html">Heroes</a>
+		</nav>
+		<main>
+			<h2>My Heroes</h2>
+
+			<div>
+				<label
+					>Hero name:
+					<input id="hero-name__input" />
+				</label>
+			</div>
+
+			<ul class="heroes" id="heroes"></ul>
+		</main>
+
+		<script src="../../store.js"></script>
+		<script src="./heroes.js"></script>
+		<script>
+
+		store.loadHeroes().then(()=>{
+
+            let heroes = store.getHeroes()
+            let heroComponent = new HeroesComponent(heroes)
+            if(heroes){
+                let element = document.getElementById("heroes")
+                heroComponent.updateHtmlHeroList(element)
+            }})
+		</script>
+	</body>
+</html>

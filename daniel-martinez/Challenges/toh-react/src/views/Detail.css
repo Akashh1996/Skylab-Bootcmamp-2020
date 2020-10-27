@@ -1,0 +1,43 @@
+#detail-title {
+	font-weight: 500;
+	font-size: 30px;
+	margin: 40px 40px 20px 40px;
+}
+
+#data {
+	display: flex;
+	flex-direction: column;
+	margin: 20px 40px 40px 40px;
+}
+
+#data__id,
+#data__name {
+	display: flex;
+	color: rgb(97, 125, 140);
+	font-weight: 800;
+	font-size: 18px;
+}
+
+#id__label,
+#name__label {
+	width: 70px;
+}
+
+#name__value {
+	font-size: 18px;
+}
+
+#back-button {
+	background-color: rgb(214, 214, 214);
+	border: none;
+	font-size: 20px;
+	padding: 6px;
+	border-radius: 4px;
+	margin: 5px;
+	width: 80px;
+	margin-top: 40px;
+}
+
+#back-button:hover {
+	color: rgb(0, 153, 255);
+}

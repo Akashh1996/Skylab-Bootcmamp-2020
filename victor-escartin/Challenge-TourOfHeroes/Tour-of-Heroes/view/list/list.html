@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../style/list.css" />
+		<title>List</title>
+	</head>
+	<body>
+		<div id="general-container">
+			<div id="main-container" class="container">
+				<header>
+					<div class="title">Tour of Heroes</div>
+					<div class="options">
+						<div id="option-dashboard">
+							<a href="../dashboard/dashboard.html">Dashboard</a>
+						</div>
+						<div id="option-heroes"><a href="#">Heroes</a></div>
+					</div>
+				</header>
+				<main>
+					<div class="list-container">
+						<div class="title-list">My Heroes</div>
+						<div id="list-heroes" class="list-ranking"></div>
+					</div>
+				</main>
+			</div>
+		</div>
+
+		<script src="../../utils/get-hero-id.js"></script>
+		<script src="../../store.js"></script>
+		<script src="../list/list.js"></script>
+		<script>
+			const heroes = store.getHeroes();
+			const heroesComponent = new HeroesComponent(heroes);
+			if (heroes) {
+				let element = document.getElementById('list-heroes');
+				heroesComponent.updateHtmlHeroList(element);
+			}
+		</script>
+	</body>
+</html>

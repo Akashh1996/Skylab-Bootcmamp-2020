@@ -1,0 +1,43 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  height: 220px;
+  background-color: rgb(231, 231, 231);
+}
+
+#body-quiz {
+  display: flex;
+  margin: 20px;
+}
+
+ul {
+  flex: 2;
+  list-style: none;
+}
+
+li {
+  margin: 10px;
+  background-color: rgb(228, 247, 250);
+  padding: 10px;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: rgb(210, 227, 230);
+}
+
+li
+
+#img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
