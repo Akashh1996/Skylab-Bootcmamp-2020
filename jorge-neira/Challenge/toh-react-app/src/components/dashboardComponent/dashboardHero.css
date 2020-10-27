@@ -20,6 +20,7 @@
 }
 
 .listItem-button {
+	cursor: pointer;
 	font-size: 20px;
 	margin: 10px;
 	outline: none;
@@ -29,4 +30,8 @@
 	color: #fff;
 	border-radius: 10px;
 	background: rgb(93, 126, 121);
+}
+
+.listItem-button:hover {
+	background: rgb(94, 144, 136);
 }

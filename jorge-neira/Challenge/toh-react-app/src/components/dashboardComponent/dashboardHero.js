@@ -1,7 +1,7 @@
 import React from 'react';
+import './dashboardHero.css';
 import NavigationHero from '../navigationComponent/navigationHero';
 import HeroStore from '../../store/heroStore';
-import './dashboardHero.css';
 import HeroList from './dashboardHeroList';
 
 const topHeros = HeroStore.getTopHeroes();
