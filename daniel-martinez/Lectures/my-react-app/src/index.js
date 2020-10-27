@@ -2,18 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Sum from './Sum'
-import ClickCounter from './ClickCounter'
+//import Sum from './Sum'
+//import ClickCounter from './ClickCounter'
+import ConditionalDisplay from './ConditionalDisplay';
 
-const props ={
-  a: 4,
-  b: 2
-}
+let isVisible = false;
 
 ReactDOM.render(
   <React.StrictMode>
-    <Sum {...props}/>
-    <ClickCounter />
+    <ConditionalDisplay isVisible={isVisible}>
+        <h1>Hola!</h1>
+    </ConditionalDisplay>
   </React.StrictMode>,
   document.getElementById('root')
 );
