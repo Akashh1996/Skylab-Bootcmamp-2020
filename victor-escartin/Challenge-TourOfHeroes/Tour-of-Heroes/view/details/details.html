@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../style/details.css" />
+		<title>Details</title>
+	</head>
+	<body>
+		<div id="general-container" class="container">
+			<header>
+				<div id="titles-container">
+					<div class="title">Tour of Heroes</div>
+					<div class="options">
+						<div id="option-dashboard">
+							<a href="../dashboard/dashboard.html">Dashboard</a>
+						</div>
+						<div id="option-heroes"><a href="../list/list.html">Heroes</a></div>
+					</div>
+				</div>
+			</header>
+
+			<main>
+				<div id="main-details"></div>
+				<input
+					class="back-btn"
+					type="button"
+					onclick="history.back()"
+					name="back return"
+					value="Back"
+				/>
+			</main>
+		</div>
+		<script src="../../utils/get-hero-id.js"></script>
+		<script src="../../store.js"></script>
+		<script src="../details/details.js"></script>
+		<script>
+			store.loadHeroes().then(() => {
+				const heroId = getHeroId(location);
+				const heroes = store.getHeroById(heroId);
+
+				let detailComponent = new DetailComponent(heroes);
+
+				if (heroes) {
+					let element = document.getElementById('main-details');
+
+					detailComponent.updateHtmlHeroDetails(element);
+				}
+			});
+		</script>
+	</body>
+</html>
