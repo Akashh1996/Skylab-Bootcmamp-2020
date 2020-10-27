@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './dashboard/Header';
-import List from './list/List';
+/* import TopFour from './dashboard/TopFour';
+ */ import List from './list/List';
 
 function Toh() {
 	let heroes = [
@@ -19,6 +20,8 @@ function Toh() {
 		<>
 			<Header />
 			<List heroes={heroes} />
+			{/* 			<TopFour heroes={heroes} />
+			 */}
 		</>
 	);
 }
