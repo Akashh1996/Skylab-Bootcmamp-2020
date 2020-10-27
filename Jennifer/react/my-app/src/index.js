@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Sum from './Sum';
-import ClickCounter from './ClickCounter';
+import Sum from './components/Sum';
+import ClickCounter from './components/ClickCounter';
 
 const props = {
 	a: 4,
@@ -13,6 +13,12 @@ const props = {
 
 ReactDOM.render(
 	<React.StrictMode>
+		<Sum />
+		{React.createElement(
+			'a',
+			{ href: 'http://skylabcoders.com' },
+			React.createElement(Sum, { ...props }, null)
+		)}
 		<ClickCounter />
 	</React.StrictMode>,
 	document.getElementById('root')
