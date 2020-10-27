@@ -64,3 +64,20 @@
 .top-btn:last-child {
 	margin-right: 0;
 }
+
+.hero-details {
+	margin-bottom: 20px;
+}
+
+.hero-details:first-of-type {
+	margin-top: 20px;
+}
+
+.hero-details span:first-child {
+	color: rgb(68, 100, 116);
+	font-size: 17px;
+}
+
+#hero-name {
+	font-size: 16px;
+}
