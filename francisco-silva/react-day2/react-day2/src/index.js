@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ConditionalDisplay from "./ConditionalDisplay"
 
+let isVisible = false;
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ConditionalDisplay isVisible={isVisible}>
+      <h1>Skylaba mola molt!</h1>
+    </ConditionalDisplay>
   </React.StrictMode>,
   document.getElementById('root')
 );
