@@ -1,9 +1,24 @@
-function getHeroId(location) {
-	let search = location.search;
-	search = search.slice(1, search.length);
-	const andSplitted = search.split('&');
-	const query = andSplitted.find((value) => value.includes('heroId'));
-	const result = query && query.split('=');
-	return result && +result[1];
+
+class DashboardComponent {
+	constructor(heroes) {
+		this.heroes = heroes;
+	}
+
+	updateHtmlHeroList(element) {
+		element.innerHTML = '';
+		this.heroes.forEach((hero) => {
+			element.innerHTML =
+				element.innerHTML +
+				`
+<a href="./detail.html?heroId=${hero.id}" class="heroe__detail">
+<div class="top__heroe__link">
+<h4>${hero.name}</h4>
+</div>
+</a>
+`;
+		});
+	}
 }
-module.exports = getHeroId;
+const dashboardComponent = new DashboardComponent();
+module.exports = dashboardComponent;
+

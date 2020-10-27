@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Sum({a,b, showAlert}) {
     return (
     <h1>
-        {a} + {b} =<button onClick={() => showAlert(a,b)}>?</button>
+        {a} + {b} =<button onClick={() => showAlert({a,b})}>?</button>
     </h1>
     )
 }
