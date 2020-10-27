@@ -1,18 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import reportWebVitals from './reportWebVitals';
-import Sum from './sum'
+import reportWebVitals from './reportWebVitals'
+import ConditionalDsplay from './ConditionalDisplay'
 
-
-const props = {
-  a: 4,
-  b: 2
-}
+let isVisible = false;
 
 ReactDOM.render(
   <React.StrictMode>
-    <Sum {...props} />
+    <ConditionalDsplay isVisible={isVisible}>
+      <h1>SkyLab mola molt!</h1>
+    </ConditionalDsplay>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
