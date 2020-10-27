@@ -7,23 +7,34 @@ import './index.css';
 // import ClickCounter from './ClickCounter';
 import reportWebVitals from './reportWebVitals';
 // import myProps from './data';
-import ConditionalDisplay from './ConditionalDisplay';
-import ConditionalDisplay2, { x, w} from './ConditionalDisplay2';
+// import ConditionalDisplay from './ConditionalDisplay';
+// import ConditionalDisplay2, { x, w} from './ConditionalDisplay2';
+import TextInput from './TextInput';
 
-const obj = { value: x, otroValue: w};
 
 ReactDOM.render(
-  <React.StrictMode> 
-      <ConditionalDisplay isVisible={true} obj={obj}>
-        <div>La suma es 0</div>
-        <div>La suma es mayor que 0</div>
-      </ConditionalDisplay>
-      <ConditionalDisplay2 isVisible={true}>
-        <h2>Ahora me ves!</h2>
-      </ConditionalDisplay2>
+  <React.StrictMode>
+    < TextInput />
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+
+
+// const obj = { value: x, otroValue: w};
+
+// ReactDOM.render(
+//   <React.StrictMode> 
+//       <ConditionalDisplay isVisible={true} obj={obj}>
+//         <div>La suma es 0</div>
+//         <div>La suma es mayor que 0</div>
+//       </ConditionalDisplay>
+//       <ConditionalDisplay2 isVisible={true}>
+//         <h2>Ahora me ves!</h2>
+//       </ConditionalDisplay2>
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
 
 
 
