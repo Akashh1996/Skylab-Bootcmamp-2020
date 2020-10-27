@@ -1,0 +1,22 @@
+
+body{
+    background-color: lightblue;
+}
+
+#ability-english, #ability-german{
+    display: none;
+    text-align: center;
+}
+button{
+    padding: 10px;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    
+}
+.buttons button{
+    margin: 10px;
+    
+}
