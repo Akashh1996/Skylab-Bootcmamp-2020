@@ -7,6 +7,7 @@ import Main from './Main/Main'
 
 ReactDOM.render(
   <React.StrictMode>
+    {/* {React.createElement(Sum, {})} */}
     <Header title='Author Quiz' instructions='Select the book written by the author shown'/>
     <Main image='https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Mark_Twain%2C_Brady-Handy_photo_portrait%2C_Feb_7%2C_1871%2C_cropped.jpg/170px-Mark_Twain%2C_Brady-Handy_photo_portrait%2C_Feb_7%2C_1871%2C_cropped.jpg'/>
   </React.StrictMode>,
