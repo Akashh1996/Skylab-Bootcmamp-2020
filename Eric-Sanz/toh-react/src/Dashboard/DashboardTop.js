@@ -3,7 +3,7 @@ import '../TohStyles.css';
 
 function DashboardTop({heroName}) {
     return (
-        <button className="top-btn">{heroName}</button>
+        <button className="top-hero">{heroName}</button>
     )
 }
 

@@ -1,25 +1,37 @@
-.list-heroes__btn {
-	width: 170px;
+.list__heroes-ids {
+	margin-left: -30px;
+	background: rgba(30, 70, 107, 0.7);
+	color: snow;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
 	height: 35px;
-	margin-bottom: 10px;
-	border-radius: 4px;
-	font-size: 18px;
-	text-decoration: none;
-	color: rgb(113, 140, 153);
-	background-color: rgb(241, 237, 237);
+	border-radius: 3px;
 }
 
-.list-heroes__btn-id {
-	width: 35px;
-	height: 100%;
-	position: relative;
-	left: 0;
-	float: left;
-	border-radius: 4px 0 0 4px;
-	text-align: center;
-	font-size: 16px;
-	color: white;
-	background-color: rgb(113, 140, 153);
+.list__heroes-names {
+	padding-top: 8px;
+	padding-left: 15px;
+	cursor: pointer;
+	display: flex;
+	background-color: #ecebebdc;
+	border-radius: 3px;
+	width: 170px;
+	height: 35px;
+	margin-top: -35px;
+	color: slategrey;
+}
+
+.list__heroes-names:hover {
+	background-color: #cac8c8dc;
+}
+
+.list-heroes__btn {
+	width: 170px;
+	margin-left: 10px;
+	margin-top: 10px;
+	height: 35px;
 }
 
 .list-heroes__btn-name {
@@ -33,7 +45,7 @@
 .list-heroes {
 	display: flex;
 	flex-direction: column;
-	margin-left: 5px;
+	margin-left: 20px;
 }
 
 .top-heroes-container {
@@ -47,18 +59,18 @@
 	color: gray;
 }
 
-.top-btn {
-	text-decoration: none;
-	width: 180px;
-	height: 145px;
-	float: left;
-	text-align: center;
-	color: white;
-	background-color: rgb(113, 140, 153);
-	margin: 0 40px 40px 0;
-	font-size: 19px;
+.top-hero {
 	font-weight: 600;
-	vertical-align: middle;
+	margin-left: 20px;
+	width: 130px;
+	height: 120px;
+	background: rgba(42, 83, 122, 0.7);
+	text-align: center;
+}
+
+.top-hero:hover {
+	cursor: pointer;
+	background: rgba(73, 137, 197, 0.7);
 }
 
 .top-btn:last-child {

@@ -4,10 +4,10 @@ import '../TohStyles.css';
 
 function ListItem ({heroId, heroName}) {
     return (
-        <button className="list-heroes__btn" alt="heroes">
-            <span className="list-heroes__btn-id">{heroId}</span>
-            <span className="list-heroes__btn-name">{heroName}</span>
-        </button>
+        <div className="list-heroes__btn" alt="heroes">
+            <span className="list__heroes-ids">{heroId}</span>
+            <button className="list__heroes-names">{heroName}</button>
+        </div>
     )
 }
 
