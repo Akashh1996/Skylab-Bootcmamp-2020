@@ -18,7 +18,7 @@ const props = {
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Sum {...props} />
+		{React.createElement(Sum, { ...props }, null)}
 	</React.StrictMode>,
 	document.getElementById('root')
 );
