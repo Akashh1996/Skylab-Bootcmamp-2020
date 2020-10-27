@@ -14,7 +14,7 @@ function DateInput() {
                 placeholder="Fecha de viaje *"
                 value={date}
                 required
-                min="2020-10-08"
+                min="2020-10-28"
                 onChange={(event) => handleChange(event, setDate)}
             />
         </div>

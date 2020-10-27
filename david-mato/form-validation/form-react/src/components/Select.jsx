@@ -2,15 +2,10 @@ import React from 'react';
 import SelectOptions from './SelectOptions';
 
 function Select({type, options}) {
-
-    function handleChange({target: {value}}, setValue) {
-        setValue(value);
-	}
-	
-    return (
+	return (
 		<div className="select-item">
 			<label htmlFor={type}>{type}</label>
-			<select name="viaje" id="viaje" value={type} onChange={(event) => handleChange(event, type)}>
+			<select name="viaje" id="viaje">
 				{options.map((value) => <SelectOptions value={value}/> )}
 			</select>
 		</div>
