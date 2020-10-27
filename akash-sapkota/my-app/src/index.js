@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Sum from './Sum';
 import ConditionalDisplay from './ConditionalDisplay';
+import Input from './Input';
 
 const props = {
 	a: 9,
@@ -33,6 +34,7 @@ ReactDOM.render(
 
 			<h1>React Mata</h1>
 		</ConditionalDisplay>
+		<Input />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
