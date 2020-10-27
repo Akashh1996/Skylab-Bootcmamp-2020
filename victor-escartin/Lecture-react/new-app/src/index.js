@@ -2,14 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import ConditionalDisplay from './ConditionalDisplay.jsx';
+import TextInput from './TextInput.jsx';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <ConditionalDisplay isVisible={true}>
-      <h1>Skylab mola molt!</h1>
-    </ConditionalDisplay>
+    <TextInput/>
   </React.StrictMode>,
   document.getElementById('root')
 );
