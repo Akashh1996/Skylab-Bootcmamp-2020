@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of life</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset-stylesheet.css">
+    <script src="game-of-life.js" async></script>
+</head>
+<body>
+    <header class="title-wrapper">
+        <div class="title-container">
+            <span class="h1">conway's game of life</span>
+        </div>
+    </header>
+    <main>
+        <label class="switch">
+            <input type="checkbox" id="night-or-day-mode" disabled/>
+            <span class="slider round"></span>
+        </label>
+        <input id="grid-size" type="range" min="10" max="55" value="40" disabled>
+        <table id="grid-container">
+            <ol class="instructions-list">
+                <li>After pressing START, you'll be able to resize the grid with the slider on the right.</li>
+                <li>Select the cells you want or press R to randomize the grid.</li>
+                <li>Press Enter &#8629 to play the game, S to stop it, and Backspace &#8592 to reset it.</li>
+                <li>During the game, you can accelerate or decelerate execution by pressing + or -.</li>
+            </ol>
+            <div class="instructions-button">instructions </div>
+            <div class="start-button">start</div>
+        </table>
+    </main>
+</body>
+</html>

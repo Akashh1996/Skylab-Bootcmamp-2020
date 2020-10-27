@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Abilities</title>
+		<link rel="stylesheet" href="abilities.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<script src="../store.js"></script>
+		<script>
+			const pokDetail = store.pokeMonDetail();
+			function getPokemonName(location) {
+				const params = new URLSearchParams(location.search.substring(1));
+				const getName = params.get('pokemonName');
+				return getName;
+			}
+
+			(async () => {
+				let name = getPokemonName(location);
+				await store.getAbilityDescription(name);
+				let description = store.getDescription();
+				if (description) {
+					document.body.innerHTML = description.effect_entries[1].effect;
+				} else {
+					document.body.innerHTML =
+						`<p> You seem a little bit lost</p>` +
+						`<img class="fade-in" src="https://media0.giphy.com/media/l0HlGaP4eR8Rt14OI/giphy.gif?cid=ecf05e47c3nz5mhx7sm32ym8bakzvxeoife8oxwxr7frvba7&rid=giphy.gif">`;
+				}
+			})();
+		</script>
+	</body>
+</html>

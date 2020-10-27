@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>POKEMON ABILITIES</title>
+	</head>
+	<body>
+		<div id="pokemon-ability"></div>
+		<script src="../../store.js"></script>
+		<script src="../../util/location.js"></script>
+		<script src="../details/details.js"></script>
+		<script src="../ability/ability.js"></script>
+		<script>
+			const location1 = location;
+			const name = getPokemonName(location1);
+
+			store.getPokemonDetail(name).then(() => {
+				const abilityName = store.getPokemonAbilitiesDetail();
+				console.log(abilityName);
+			});
+		</script>
+	</body>
+</html>

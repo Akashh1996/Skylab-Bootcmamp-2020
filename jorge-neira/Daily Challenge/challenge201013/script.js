@@ -25,16 +25,21 @@ console.log(strictEquals(true, false)); //false
 console.log(strictEquals(false, false)); //true
 console.log(strictEquals('Water', 'Oil')); //false
 
-const objectClone = (object) => {
-	let x = Object.assign({}, object);
-	return x;
-};
+////////////////////////////////////////////////////////////////
 
-const deepCloning = (object) => {
-	return Object.assign({}, object);
-};
-
-let person = { name: 'jamon', age: 56 };
-
-console.log(objectClone(person));
-console.log(person);
+function deepCopy(original) {
+	let newOriginal = {};
+	if (!original) {
+		return original;
+	} else {
+		for (const props in original) {
+			debugger;
+			if (typeof original[props] === 'object') {
+				newOriginal[props] = deepCopy(original[props]);
+			} else {
+				newOriginal[props] = original[props];
+			}
+		}
+		return newOriginal;
+	}
+}

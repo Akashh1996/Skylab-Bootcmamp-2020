@@ -233,3 +233,71 @@ body {
 	display: flex;
 	flex-direction: row;
 }
+.info__icons {
+	background-color: #f8f8f8;
+}
+
+.shipping__orders,
+.devolutions__credit {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.info__icons-images {
+	opacity: 0.5;
+}
+
+.shipping,
+.orders,
+.devolutions,
+.credit {
+	margin-top: 50px;
+}
+
+.shipping,
+.devolutions {
+	margin-left: 40px;
+}
+
+.orders,
+.credit {
+	margin-right: 40px;
+}
+
+.info__icons-text {
+	font-size: 12px;
+	color: #67635f;
+	display: flex;
+	justify-content: center;
+}
+
+.info__icons-title {
+	font-size: 15px;
+	color: #67625f;
+	margin: 2px;
+	display: flex;
+	justify-content: center;
+}
+
+.shipping,
+.orders,
+.devolutions,
+.credit {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.devolutions__credit {
+	margin-right: 40px;
+}
+
+.social-network-icons-wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+.social-network-icons {
+	fill: red;
+}

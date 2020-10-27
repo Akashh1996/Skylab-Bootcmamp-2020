@@ -1,0 +1,15 @@
+.back-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    padding: 5px 10px;
+    background-color: rgb(180, 179, 179);
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    color: white;
+    background-color: gray;
+    cursor: pointer;
+}

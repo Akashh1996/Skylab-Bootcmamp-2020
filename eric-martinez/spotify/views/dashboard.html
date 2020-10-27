@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotitrial</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header>
+        <img class="img_header" src="https://www.scdn.co/i/_global/twitter_card-default.jpg">
+        <h1 id="title">Trivialify</h1>
+    </header>
+    
+    <h1 id="artistName"></h1>
+
+    <button class="playAgain">Play again</button>
+    <h2 id="punctuation">Punctuation: 0</h2>
+    <div id="imgAlbum"></div>
+    <div id="audioElement" class="audio_element"></div>
+
+    <div id="questionsTrivia"></div>
+    
+
+    <script src="../store.js"></script>
+    <script src="../src/dashboard.js"></script>
+    <script>
+
+    
+    
+    (async() => {
+        await store.getToken();
+        await store.getPlaylist();
+        const playlist = _playlist;
+
+
+        const startButton = document.querySelectorAll(".playAgain");
+            for (const button of startButton) {
+            button.addEventListener('click', function(event) {
+                correctSong();
+                restartGame();
+                startGame();
+                drawDashboard();
+            })
+            }
+
+        startGame();
+        drawDashboard();
+
+        function drawDashboard(){
+
+            let artistArray = [];
+
+            for(let index = 0; index < playlist.tracks.items.length; index++){
+                artistArray.push({
+                    artist: playlist.tracks.items[index].track.artists[0].name,
+                    song: playlist.tracks.items[index].track.name,
+                    image: playlist.tracks.items[index].track.album.images[1].url,
+                    track: playlist.tracks.items[index].track.preview_url
+                });
+            }
+
+            const randomArtist = randomCorrect(artistArray);
+            const randonWrongQuest = randomWrong(artistArray, randomArtist);
+
+            
+            const title = document.getElementById("artistName");
+            const albumImg = document.getElementById("imgAlbum");
+            const questions = document.getElementById("questionsTrivia");
+            title.innerText = randomArtist.artist;
+            albumImg.innerHTML=`<img id="img_song" src=\"${randomArtist.image}">`;
+            
+            const audioSong = randomArtist.track;
+            const element = document.getElementById("audioElement");
+            updateAudio(element, audioSong);
+    
+
+            const divAnswer = document.getElementById("questionsTrivia");
+            const questionsTrivia = document.createElement("button");
+            questionsTrivia.setAttribute("class", "correctAnswer");
+            questionsTrivia.innerHTML = "1. " + randomArtist.song;
+            divAnswer.appendChild(questionsTrivia);
+            
+            for(let index = 0; index < randonWrongQuest.length; index++){
+                const wrongButton = document.createElement("button");
+                wrongButton.setAttribute("class", "wrongAnswer");
+                wrongButton.innerHTML = `${index + 2}. ` + randonWrongQuest[index].song;
+                divAnswer.appendChild(wrongButton);
+            }
+
+
+            const correctButton = document.querySelectorAll(".correctAnswer");
+            for (const button of correctButton) {
+            button.addEventListener('click', function(event) {
+                correctSong();
+                startGame();
+                drawDashboard();
+            })
+            }
+
+            const wrongButton = document.querySelectorAll(".wrongAnswer");
+            for (const button of wrongButton) {
+            button.addEventListener('click', function(event) {
+                wrongSongs();
+                startGame();
+                drawDashboard();
+            })
+            }
+        }
+        
+    })();
+
+    </script>
+</body>
+</html>

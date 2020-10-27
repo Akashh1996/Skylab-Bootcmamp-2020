@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/detail.css">
+    <title>Details</title>
+</head>
+<body>
+
+    <h1 id="pokemonTitle"></h1>
+
+    <div id='pokemon-abilities'>
+    </div>
+
+    <script src="../store.js"></script>
+    
+    <script>
+        const url = window.location.search;
+        const getName = store.getName(url);
+        
+        function generateAbilitiesElements(pokemonAbilities){
+            pokemonAbilities.forEach((ability)=>{
+                const url = ability.ability.url;
+                const urlArray = url.split('/');
+                const idAbility = urlArray[urlArray.length-2];
+
+                const anchorElement = document.createElement('a');
+                anchorElement.innerHTML = ability.ability.name
+                anchorElement.href = `./abilities.html?abilityId=${idAbility}`
+                const abilitiesContainerElement = document.getElementById('pokemon-abilities');
+                abilitiesContainerElement.appendChild(anchorElement)
+
+            })
+        }
+
+        store.getDetails(getName).then(() => {
+            const pokemon_details = _details.abilities;
+
+            if(pokemon_details){
+                const titleElement = document.getElementById('pokemonTitle');
+                titleElement.innerText = getName;
+
+                generateAbilitiesElements(pokemon_details);
+            }
+
+        });
+    </script>
+</body>
+</html>
