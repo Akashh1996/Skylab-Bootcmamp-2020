@@ -5,18 +5,14 @@ import reportWebVitals from './reportWebVitals';
 //import Dashboard from './components/dashboard/Dashboard';
 //import Detail from './components/detail/Detail';
 //import Aside from './components/aside/Aside';
-import ConditionalDisplay from './components/ConditionalDisplay';
+import Input from './components/input/Input';
 
 // <Dashboard />
 // <Detail />
 
-let isVisible = false;  
-
 ReactDOM.render(
   <React.StrictMode>
-    <ConditionalDisplay isVisible={isVisible}>
-      <h1>Skylab mola molt!</h1>
-      </ConditionalDisplay>
+    <Input/>
   </React.StrictMode>,
   document.getElementById('root')
 );
