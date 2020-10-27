@@ -1,0 +1,27 @@
+.list-heroes__btn {
+	width: 170px;
+	height: 35px;
+	margin-bottom: 10px;
+	border-radius: 4px;
+	font-size: 18px;
+	text-decoration: none;
+	color: rgb(113, 140, 153);
+	background-color: rgb(241, 237, 237);
+}
+
+.list-heroes__btn-id {
+	width: 35px;
+	height: 100%;
+	position: relative;
+	left: 0;
+	float: left;
+	border-radius: 4px 0 0 4px;
+	text-align: center;
+	font-size: 16px;
+	color: white;
+	background-color: rgb(113, 140, 153);
+}
+
+.list-heroes__btn-name {
+	padding-left: 17px;
+}
