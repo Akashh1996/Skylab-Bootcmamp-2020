@@ -1,0 +1,26 @@
+.nav-container {
+}
+
+.nav-title {
+	color: rgb(155, 152, 152);
+}
+
+.nav-buttons {
+}
+
+.nav-button {
+	font-size: 20px;
+	border: none;
+	outline: none;
+	margin: 5px;
+	padding: 5px;
+	border-radius: 5px;
+}
+.nav-button > a {
+	text-decoration: none;
+	color: black;
+}
+
+.nav-button:hover > a:hover {
+	color: rgb(74, 173, 173);
+}
