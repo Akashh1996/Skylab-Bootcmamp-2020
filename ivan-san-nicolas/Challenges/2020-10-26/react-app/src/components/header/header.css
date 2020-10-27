@@ -1,0 +1,10 @@
+.header {
+    background-color: rgb(198, 197, 197);
+    width: 80%;
+    height: 100px;
+    margin: 20px 40px;
+    padding: 20px 40px;
+    line-height: 10px;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,40 @@
+body {
+	display: flex;
+	justify-content: center;
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#list-heroes {
+	padding: 20px;
+	background: skyblue;
+	border: 1px solid black;
+	margin-top: 20px;
+}
+
+#header {
+	padding: 20px;
+	background: skyblue;
+	border: 1px solid black;
+}
+
+#list {
+	list-style-type: none;
+}
+
+.content-list {
+	text-decoration: none;
+}
+
+h2 {
+	text-align: center;
+}
+
+nav {
+	display: flex;
+	justify-content: space-evenly;
+}
