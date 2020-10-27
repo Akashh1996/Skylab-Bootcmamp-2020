@@ -1,7 +1,11 @@
 import React from 'react';
 
-export default class DashboardHeroList extends React.Component {
-	render() {
-		return;
-	}
+function DashboardHeroList({ hero }) {
+	return (
+		<li className="listItem">
+			<button className="listItem-button">{hero}</button>
+		</li>
+	);
 }
+
+export default DashboardHeroList;

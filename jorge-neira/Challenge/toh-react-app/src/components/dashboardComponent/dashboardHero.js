@@ -1,11 +1,10 @@
 import React from 'react';
-import HeroStore from './store/heroStore';
-import './dashboardHero.css';
 import NavigationHero from '../navigationComponent/navigationHero';
+import HeroStore from '../../store/heroStore';
+import './dashboardHero.css';
+import HeroList from './dashboardHeroList';
 
-// const dashboard = HeroStore.getTopHeroes();
-// const heroesList = HeroStore.getHeroes();
-const hero = HeroStore.getHeroById(4);
+const topHeros = HeroStore.getTopHeroes();
 
 class DashboardHero extends React.Component {
 	render() {
@@ -14,9 +13,12 @@ class DashboardHero extends React.Component {
 				<section className="dashbaord-container">
 					<NavigationHero />
 					<nav className="topheros">
+						<h2 className="topheros-title">Top Heroes</h2>
 						<ul>
-              
-            </ul>
+							{topHeros.map((hero) => (
+								<HeroList hero={hero.name} key={hero.id} />
+							))}
+						</ul>
 					</nav>
 				</section>
 			</>

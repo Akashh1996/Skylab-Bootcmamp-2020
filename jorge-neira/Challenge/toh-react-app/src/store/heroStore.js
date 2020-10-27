@@ -26,7 +26,5 @@ class HeroStore extends React.Component {
 		return this.getHeroes().slice(0, 4);
 	}
 }
-
 const store = new HeroStore();
-
 export default store;
