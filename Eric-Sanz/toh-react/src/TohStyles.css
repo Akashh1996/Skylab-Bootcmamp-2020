@@ -25,3 +25,13 @@
 .list-heroes__btn-name {
 	padding-left: 17px;
 }
+
+.list-title {
+	font-size: 30px;
+}
+
+.list-heroes {
+	display: flex;
+	flex-direction: column;
+	margin-left: 5px;
+}

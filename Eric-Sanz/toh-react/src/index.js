@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Toh from './Toh';
+import Header from './Header/Header';
+import Dashboard from './Dashboard/Dashboard';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Toh />
+    <Header />
+    <Dashboard />
   </React.StrictMode>,
   document.getElementById('root')
 );
