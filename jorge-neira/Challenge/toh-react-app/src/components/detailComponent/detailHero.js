@@ -12,14 +12,12 @@ class DetailHero extends React.Component {
 				<section className="detail-container">
 					<NavigationHero />
 					<h2 className="heroTitle">{heroById.name} details!</h2>
-					<span>id: {heroById.id}</span>
-					<br></br>
-					<span>
+					<span className="heroInfo">id: {heroById.id}</span>
+					<span className="heroInfo heroInfo-input-wrapper">
 						Name
-						<input type="text" value={heroById.name}></input>
+						<input className="heroInput" type="text" value={heroById.name}></input>
 					</span>
-					<br></br>
-					<button>Back</button>
+					<button className="backButton">Back</button>
 				</section>
 			</>
 		);
