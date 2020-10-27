@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ConditionalDisplay from "./ConditionalDisplay"
+import Input from "./Input"
+// import ConditionalDisplay from "./ConditionalDisplay"
 
-let isVisible = false;
+
+// let isVisible = false;
 ReactDOM.render(
   <React.StrictMode>
-    <ConditionalDisplay isVisible={isVisible}>
-      <h1>Skylaba mola molt!</h1>
-    </ConditionalDisplay>
+    <Input></Input>
   </React.StrictMode>,
   document.getElementById('root')
 );
