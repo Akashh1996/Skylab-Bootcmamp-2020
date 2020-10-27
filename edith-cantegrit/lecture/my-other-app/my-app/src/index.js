@@ -1,21 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Sum from './Sum';
+import ConditionalDisplay from './ConditionalDisplay'
 
-const props = {
-    a: 4,
-    b: 2,
-    showAlert: function(a, b) {
-        console.log(`El resultado es ${a +b}`);
-    }
-};
 
 ReactDOM.render(
   <React.StrictMode>
-    <Sum {...props}/>
+    <ConditionalDisplay isVisible={true}>
+        <div>La suma es 0</div>
+        <span>La suma es mayor que 0</span>
+    </ConditionalDisplay>
   </React.StrictMode>,
   document.getElementById('root')
 );
