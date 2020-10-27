@@ -1,38 +1,32 @@
 // CONVERT A FUNCTION INTO A CLASS
 
 import React from 'react';
-import PropTypes from 'prop-types';
 
-function Sum({ a, b }) {
-	return (
-		<h1>
-			{{ a }} + {{ b }} ={' '}
-			<button onClick={() => alert(`El resultado es ${a + b}`)}>?</button>
-		</h1>
-	);
+/* 
+function Sum(props) {
+    return (
+        <h1>
+            {props.a} + {props.b} = {props.a + props.b}
+        </h1>
+    );
 }
+*/
 
-/* class Sum extends React.Component {
+class Sum extends React.Component {
 	componentWillMount() {
 		console.info('>>>>>>>>>>> will mount');
 	}
 	componentDidMount() {
 		console.info('>>>>>>>>>> did mount');
 	}
-	render({ a, b }) {
+	render() {
 		console.info('render');
 		return (
 			<h1>
-				{{ a }} + {{ b }} ={' '}
-				<button onClick={() => alert(`El resultado es ${a + b}`)}>?</button>
+				{this.props.a} + {this.props.b} = {this.props.a + this.props.b}
 			</h1>
 		);
 	}
-} */
-
-Sum.propTypes = {
-	a: PropTypes.number.isRequired,
-	b: PropTypes.number.isRequired
-};
+}
 
 export default Sum;
