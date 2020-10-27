@@ -7,7 +7,7 @@ function disemvowel(str) {
     }
     return newStr;
 }
-console.log(disemvowel("This website is for losers LOL!"));
+
   
 
 
