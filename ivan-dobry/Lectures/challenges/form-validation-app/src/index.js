@@ -3,14 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Header from './components/Header';
 import reportWebVitals from './reportWebVitals';
-import SelectionInput from './components/SelectionInput';
-import RegularInput from './components/RegularInput';
+import FirstInputSection from './components/FirstInputSection';
+import SecondInputSection from './components/SecondInputSection';
+import ThirdInputSection from './components/ThirdInputSection';
+import FourthInputSection from './components/FourthInputSection';
 
 ReactDOM.render(
 	<React.StrictMode>
 		<Header />
-		<SelectionInput />
-		<RegularInput />
+		<FirstInputSection />
+		<SecondInputSection />
+		<ThirdInputSection />
+		<FourthInputSection />
 	</React.StrictMode>,
 	document.getElementById('root')
 );

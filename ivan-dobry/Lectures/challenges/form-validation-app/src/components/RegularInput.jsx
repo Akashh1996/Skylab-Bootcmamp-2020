@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function RegularInput () {
+    const [inputValue, setInputValue] = useState('1 Pasajero');
     return(
-        <label htmlFor="pasajeros"><input type="text" value='1 Pasajero' id='pasajeros'/></label>
+        <> 
+        <label htmlFor="pasajeros" for='pasajeros'></label>
+       <input type="text" id='pasajeros' name="pasajeros" value={inputValue} onChange= {(event) => {
+            setInputValue(event.target.value)
+        }}/>
+        </>
         
     )
 }
