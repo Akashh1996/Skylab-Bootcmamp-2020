@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Header from './Header';
-//import List from './List';
-//import Detail from './Detail';
-import Dashboard from './Dashboard';
+import Header from './components/Header';
+//import List from './views/List';
+//import Detail from './views/Detail';
+import Dashboard from './views/Dashboard';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
+    {React.createElement(Header, null, null)}
     <Dashboard />
   </React.StrictMode>,
   document.getElementById('root')

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Dashboard.css'
-import DashboardItem from './DashboardItem';
+import DashboardItem from './../components/DashboardItem';
 
 function Dashboard(){
     const heroes = [

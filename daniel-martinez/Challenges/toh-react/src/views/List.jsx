@@ -1,6 +1,6 @@
 import React from 'react';
 import './List.css'
-import ListItem from './ListItem';
+import ListItem from './../components/ListItem';
 
 function List(){
     const heroes = [
