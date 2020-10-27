@@ -91,7 +91,7 @@ async function addArtist() {
 		};
 		listArtists.push(artist);
 	}
-	console.log(listArtists);
+	
 
 	myInterval();
 }
