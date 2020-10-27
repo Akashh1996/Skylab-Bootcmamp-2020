@@ -3,23 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Sum from './components/Sum';
-import ClickCounter from './components/ClickCounter';
-
-const props = {
-	a: 4,
-	b: 2
-};
+import Dashboard from './components/DashboardComponent/Dashboard';
+import ListComponent from './components/ListComponent/ListComponent';
+import Header from './components/Header/Header';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Sum />
-		{React.createElement(
-			'a',
-			{ href: 'http://skylabcoders.com' },
-			React.createElement(Sum, { ...props }, null)
-		)}
-		<ClickCounter />
+		<Header />
+		<Dashboard />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
