@@ -2,20 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Sum from './Sum';
-import myProps from './data';
-
-const props={...props};
-
+import ConditionalDisplay from './ConditionalDisplay.jsx';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    {React.createElement(
-      'h1', 
-      null,
-      React.createElement(Sum,{...props},null)
-    )}
+    <ConditionalDisplay isVisible={true}>
+      <h1>Skylab mola molt!</h1>
+    </ConditionalDisplay>
   </React.StrictMode>,
   document.getElementById('root')
 );
