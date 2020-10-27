@@ -2,14 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-//import Dashboard from './components/dashboard/Dashboard';
-//import Detail from './components/detail/Detail';
-//import Aside from './components/aside/Aside';
 import Input from './components/input/Input';
-
-// <Dashboard />
-// <Detail />
-
 ReactDOM.render(
   <React.StrictMode>
     <Input/>
