@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.passengerSection {
+    display:flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.passengerSection--box {
+    margin-right: 50px;
+}
+
+.buttonBuscar {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+	height: 20px;
+	background-color: red;
+	color: white;
+	box-shadow: darkgray;
+	padding: 10px 10px 30px 10px;
+	text-align: center;
+}
+
+.boxIdayVuelta {
+	margin-top: 50px;
+	margin-left: 15px;
+	height: 30px;
+	width: 265px;
+}
+
+.caja {
+	border-style: none none solid none;
+	border-width: 0.5px;
+}
+
+.labelstyle {
+	font-size: 13px;
+	margin-bottom: 10px;
+	color: grey;
+}
+
+.boxTitle {
+    display: flex;
+    flex-direction: row;
+}

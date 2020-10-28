@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../style/list.css" />
+		<title>POKEMON LIST</title>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<div class="title">POKEMON'S LIST</div>
+				<div class="subtitle">Gotta catch'em All</div>
+			</header>
+			<div class="pokebol">
+				<img
+					src="../../style/pokeball_PNG25.png"
+					width="300px"
+					height="300px"
+				/>
+			</div>
+			<div id="pokemon-list"></div>
+
+			<div id="main-btns">
+				<input
+					class="main-btn"
+					type="button"
+					onclick="history.back()"
+					name="back return"
+					value="BACK"
+				/>
+				<input
+					class="main-btn"
+					type="button"
+					onclick=""
+					name="back return"
+					value="NEXT"
+				/>
+			</div>
+		</div>
+		<script src="../../store.js"></script>
+		<script src="./list.js"></script>
+		<script>
+			store.getPokemonData().then(() => {
+				const pokemonList = store.getTenPokemons();
+				console.log(pokemonList);
+				const pokemonComponent = new PokemonComponent(pokemonList);
+				if (pokemonList) {
+					let element = document.getElementById('pokemon-list');
+					pokemonComponent.updatePokemonList(element);
+				}
+			});
+		</script>
+	</body>
+</html>

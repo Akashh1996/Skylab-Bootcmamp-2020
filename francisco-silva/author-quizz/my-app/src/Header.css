@@ -1,0 +1,46 @@
+* {
+	font-family: Helvetica, sans-serif;
+}
+
+.main-content {
+	display: flex;
+	flex-direction: row;
+}
+
+.header {
+	background-color: rgb(203, 203, 203);
+	padding: 10px;
+	margin-bottom: 20px;
+	border: solid 1px rgba(0, 0, 0, 0.3);
+}
+
+#authors {
+	display: flex;
+
+	padding: 40px;
+	flex-direction: row;
+
+	background-color: rgba(101, 101, 101, 0.5);
+}
+
+.list-authors {
+	padding: 30px;
+	list-style-type: none;
+}
+
+.titles {
+	padding: 5px;
+	color: white;
+	margin: 10px;
+	background-color: rgb(124, 131, 113);
+	cursor: pointer;
+	font-size: 30px;
+}
+
+.author {
+	margin: 10px;
+}
+
+.titles:hover {
+	background-color: salmon;
+}

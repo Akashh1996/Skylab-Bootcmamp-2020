@@ -1,0 +1,101 @@
+:root {
+  --button-height: 60px;
+}
+
+body {
+  background-color: black;
+}
+
+body * {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 95vw;
+  height: 95vh;
+  margin: 20px;
+  color: white;
+}
+
+body h1 {
+  margin: 20px 0px;
+  color: #1db954;
+}
+
+.flex-spacer1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.flex-spacer2 {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.flex-spacer4 {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+.horizontal-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.vertical-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#random-artist-image {
+  height: 160px;
+  margin: 15px 0px;
+}
+
+.button-answer {
+  height: var(--button-height);
+  width: 250px;
+  padding: 3px 12px;
+  font-size: 15px;
+  border-radius: calc(var(--button-height) / 2);
+  color: white;
+  background-color: #1db954;
+  margin: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#is-correct {
+  margin-top: 15px;
+  height: 23px;
+}
+
+#timer {
+  font-size: 30px;
+  height: 37px;
+}
+/*# sourceMappingURL=styles.css.map */

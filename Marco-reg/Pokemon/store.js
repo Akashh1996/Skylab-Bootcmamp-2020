@@ -5,14 +5,20 @@ class Store {
     getDescription(){
         return descriptions;
     }
-    getAbilityDescription(description){
-        
+     async getAbilityDescription(description){
         let url=`https://pokeapi.co/api/v2/ability/${description}`
-        return fetch(url)
-        .then((response)=>response.json())
-        .then((description)=>{
-            descriptions=description;
-        })
+        try{
+            const response= await fetch(url);
+            const PokemonDetailDescription= await response.json();
+            descriptions=PokemonDetailDescription;
+
+        }catch(error){
+            descriptions=null;
+        }
+        
+        
+       
+        
 
     }
     getpokemon() {

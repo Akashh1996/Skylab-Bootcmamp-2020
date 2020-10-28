@@ -1,0 +1,25 @@
+.header {
+	background-color: rgba(204, 201, 201, 0.863);
+}
+#main {
+	display: flex;
+	align-items: center;
+}
+li {
+	background-color: rgba(122, 197, 247, 0.582);
+	padding: 10px;
+	margin: 10px;
+	list-style-type: none;
+}
+li:hover {
+	background-color: rgb(122, 197, 247);
+}
+#button {
+	display: none;
+	justify-content: center;
+}
+#button__continue {
+	background-color: rgb(38, 103, 241);
+	color: white;
+	border: none;
+}
