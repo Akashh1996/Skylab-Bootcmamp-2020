@@ -1,4 +1,5 @@
 import dispatcher from '../dispatcher';
+import actionTypes from './action-types';
 
 const hero = {
 	id: 12,
@@ -6,9 +7,15 @@ const hero = {
 	lastname: 'Traficanta'
 };
 
-export function loadHero() {
+export function loadHero(otherHero) {
 	dispatcher.dispatch({
-		type: 'LOAD_HERO',
-		data: hero
+		type: actionTypes.LOAD_HERO,
+		data: otherHero ? otherHero : hero
+	});
+}
+
+export function deleteHero() {
+	dispatcher.dispatch({
+		type: actionTypes.DELETE_HERO
 	});
 }
