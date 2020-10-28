@@ -1,13 +1,160 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+	box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+	background: white;
+	color: black;
+	line-height: 1.6;
+	font-family: 'Quicksand', sans-serif;
+	padding: 0 1.5em;
+}
+
+/* SWITCH BUTTON */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: '';
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+/* SWITCH BUTTON */
+
+.menu {
+	display: flex;
+	flex-direction: row;
+	font-size: 12px;
+	align-items: center center;
+	padding: 3%;
+	text-align: center;
+}
+
+.reserve1 {
+	border-bottom: 3px solid #d63031;
+}
+
+.line {
+	height: 2px;
+	background-color: grey;
+}
+
+.pax {
+	display: flex;
+	flex-direction: row-reverse;
+	font-size: 12px;
+}
+
+.mainContent {
+	padding: 5%;
+}
+
+.travelData {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-content: center center;
+}
+
+#travel {
+	text-align: center;
+	padding: 1%;
+}
+
+#passengers {
+	text-align: center;
+	padding: 1%;
+}
+
+#travelClass {
+	text-align: center;
+	padding: 1%;
+}
+
+.box-options {
+	padding: 1%;
+	height: 1%;
+	border: none;
+	border-bottom: 2px solid #838383;
+}
+
+#date {
+	padding: 1%;
+	height: 1%;
+	border: none;
+	border-bottom: 2px solid #838383;
+}
+
+#landings {
+	display: grid;
+	grid-template-rows: auto auto;
+	align-content: center center;
+}
+
+.businessTravel {
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+.flight-btn {
+	background: #b70e21;
+	color: #fff;
+	height: 30px;
+	width: 100%;
+	padding: 0.7em;
+	border: none;
+	outline: 0;
+	border-bottom: 1px solid #838383;
 }
