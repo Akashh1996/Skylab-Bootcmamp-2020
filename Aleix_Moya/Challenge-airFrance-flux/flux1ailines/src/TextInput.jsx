@@ -23,7 +23,6 @@ function TextInput(){
         };
     }, [hero, flag]);
     function onChange (){
-        debugger;
         const hero = heroStore.getHero();
         setHero(hero);
         setId(hero?.id || "");
