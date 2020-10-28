@@ -104,6 +104,8 @@ function Form() {
 					</label>
 					<p>Viaje profesional</p>
 				</div>
+				<button className="search-button">Add info</button>
+				<button className="search-button">Delete info</button>
 				<button className="search-button">Buscar Vuelos</button>
 			</div>
 		</div>

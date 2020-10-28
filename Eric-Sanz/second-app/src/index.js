@@ -9,8 +9,7 @@ import reportWebVitals from './reportWebVitals';
 // import myProps from './data';
 // import ConditionalDisplay from './ConditionalDisplay';
 // import ConditionalDisplay2, { x, w} from './ConditionalDisplay2';
-import TextInput from './TextInput';
-
+import TextInput from '../src/components/TextInput';
 
 ReactDOM.render(
   <React.StrictMode>
