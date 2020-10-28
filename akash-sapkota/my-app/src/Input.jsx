@@ -18,7 +18,7 @@ function Input() {
         return () => {
             heroStore.removeEventListener(onChange);
         };
-    }, [hero]);
+    }, []);
 
     function onChange() {
         const hero = heroStore.getHero();

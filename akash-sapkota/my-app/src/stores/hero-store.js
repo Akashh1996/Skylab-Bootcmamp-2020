@@ -2,6 +2,7 @@ import { EventEmitter } from 'events';
 import dispatcher from '../dispatcher';
 
 let _hero;
+console.log(_hero);
 class HeroStore extends EventEmitter {
 	addEventListener(callback) {
 		this.on('CHANGE', callback);
