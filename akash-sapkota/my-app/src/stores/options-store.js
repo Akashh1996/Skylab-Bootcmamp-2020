@@ -1,8 +1,8 @@
 import { EventEmitter } from 'events';
 import dispatcher from '../dispatcher';
 
-let _hero;
-class HeroStore extends EventEmitter {
+let _Options;
+class OptionStore extends EventEmitter {
 	addEventListener(callback) {
 		this.on('CHANGE', callback);
 	}
@@ -15,18 +15,18 @@ class HeroStore extends EventEmitter {
 		this.emit('CHANGE');
 	}
 
-	getHero() {
-		return _hero;
+	getOptions() {
+		return _Options;
 	}
 }
 
-const heroStore = new HeroStore();
+const optionStore = new OptionStore();
 
 dispatcher.register((action) => {
 	switch (action.type) {
-		case 'LOAD_HERO':
-			_hero = action.data;
-			heroStore.emitChange();
+		case 'LOAD_OPTIONS':
+			_Options = action.data;
+			optionStore.emitChange();
 			break;
 
 		default:
@@ -34,4 +34,4 @@ dispatcher.register((action) => {
 	}
 });
 
-export default heroStore;
+export default optionStore;

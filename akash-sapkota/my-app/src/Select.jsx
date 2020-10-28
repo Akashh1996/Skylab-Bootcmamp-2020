@@ -1,24 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { loadHero } from './actions/action-creators';
-import heroStore from './stores/hero-store';
+import { loadOptions } from './actions/action-creators';
+import optionStore from './stores/options-store';
 
 
 function Select() {
-    const [hero, setHero] = useState(heroStore.getHero());
-    const [id, setId] = useState(hero?.id);
-    const [name, setName] = useState(hero?.name);
-    const [lastname, setLastName] = useState(hero?.lastname);
+    const [option, setOption] = useState(optionStore.getHero());
 
     useEffect(() => {
-        heroStore.addEventListener(onChange);
-        if (!hero) {
-            loadHero();
+        optionStore.addEventListener(onChange);
+        if (!optionStore) {
+            loadOptions();
         }
 
         return () => {
-            heroStore.removeEventListener(onChange);
+            optionStore.removeEventListener(onChange);
         };
-    }, [hero, id]);
+    }, [hero]);
 
     function onChange() {
         const hero = heroStore.getHero();
