@@ -3,8 +3,7 @@ import SelectOption from './SelectOptions';
 import HeaderNav from './Header';
 import UserLogin from './UserLogin';
 import Date from './Date';
-import Input from './Input';
-// import Button from './Button';
+import Button from './Button';
 
 const airFrance = {
 	flightOptions: ['Ida y vuelta', 'Solo ida', 'Destinos múltiples'],
@@ -29,11 +28,12 @@ function FormSection() {
 			<form>
 				<UserLogin />
 				<Date />
-				<SelectOption classType={airFrance.classType} />
-				<SelectOption flightOptions={airFrance.flightOptions} />
-				<SelectOption passengers={airFrance.passengers} />
-				<Input />
-				{/* <Button /> */}
+				<SelectOption
+					classType={airFrance.classType}
+					flightOptions={airFrance.flightOptions}
+					passengers={airFrance.passengers}
+				/>
+				<Button />
 			</form>
 		</section>
 	);

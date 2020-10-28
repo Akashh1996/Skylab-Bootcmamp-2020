@@ -1,7 +1,6 @@
 import React from 'react';
 
-function Option(props) {
-	return <option>{console.log(props)}</option>;
+function Option({ option, id }) {
+	return <option key={id}>{option}</option>;
 }
-
 export default Option;
