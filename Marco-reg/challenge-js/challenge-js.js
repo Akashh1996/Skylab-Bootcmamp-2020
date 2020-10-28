@@ -19,7 +19,6 @@ function checkForEquality(a,b){
 }
 checkForEquality(true,"a");
 
-///clone 
 
 
 let car={wheels:4, color:"red",passangers:3}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tour of Heroes</title>
+        <link rel="stylesheet" href="../../style.css">
+		<link rel="stylesheet" href="./detail.css">
+
+        
+	</head>
+	<body>
+		<h1>Tour of Heroes</h1>
+		<nav>
+			<a href="../dashboard/dashboard.html">Dashboard</a>
+			<a href="../heroes/heroes.html">Heroes</a>
+		</nav>
+		<main>
+			<h3><span id="detail-title"></span> Details</h3>
+				<div class="wrapper">
+					<div id="detail-description">
+						<div>ID:</div>
+						<div>Name:</div>
+						
+						<div>Slug:</div>
+						<div>Place Of Birth:</div>
+
+						<div>Gender:</div>
+						<div>Race:</div>
+						<div>Weight:</div>
+						<div>Aliases:</div>
+
+						<div>FirstAppearance:</div>
+
+						<div>Publisher:</div>
+						<div>Connections:</div>
+					</div>
+
+					<div id="detail-heroes">
+						<div id="detail-heroes__id"></div>
+						<div id="detail-heroes__name"></div>
+						<div id="detail-heroes__slug"></div>
+
+						<div id="detail-heroes__birth__place"></div>
+						<div id="detail-heroes__gender"></div>
+						<div id="detail-heroes__race"></div>
+						<div id="detail-heroes__weight"></div>
+
+						<div id="detail-heroes__aliases"></div>
+
+						<div id="detail-heroes__first__appearance"></div>
+						<div id="detail-heroes__publisher"></div>
+						<div id="detail-heroes__connection">data</div>
+					</div>
+
+					<div class="detail-image">
+						<img src="" alt="heroImage" id="detail-hero__image">
+					</div>
+				</div>
+	
+			
+		</main>
+		<script src="../../utils/get-hero-id.js"></script>
+		<script src="../../store.js"></script>
+		<script src="./detail.js"></script>
+		<script>
+
+		store.loadHeroes().then(()=>{
+			
+			const heroId = getHeroId(location);
+			const hero = store.getHeroById(heroId);
+			let detailComponent = new DetailComponent(hero);
+ 
+		 	/* function laodHeroes(url, type, callback){
+
+        	let xhr = new XMLHttpRequest() 
+        	xhr.open("GET",url)
+        	xhr.responseType = type
+
+        	xhr.onload = function(){
+				callback(xhr.response) 
+			}
+			xhr.send()
+			}
+			
+			function loadData(data){
+				console.log(data);
+			}
+
+			laodHeroes("../../apil/superHeroData.json", "json", loadData)   */
+
+
+			if (hero) {
+				let heroId = document.getElementById('detail-heroes__id');
+				detailComponent.updateHtmlValue(
+					heroId,
+					'innerHTML',
+					detailComponent.hero.id
+				);
+
+				let heroName = document.getElementById('detail-heroes__name');
+				detailComponent.updateHtmlValue(
+					heroName,
+					'innerHTML',
+					detailComponent.hero.name
+				);
+				let heroSlug = document.getElementById("detail-heroes__slug");
+				detailComponent.updateHtmlValue(
+					heroSlug,
+					'innerHTML',
+					detailComponent.hero.slug
+				);
+				let heroBirthPlace = document.getElementById("detail-heroes__birth__place");
+				detailComponent.updateHtmlValue(
+					heroBirthPlace,
+					'innerHTML',
+					detailComponent.hero.biography.placeOfBirth
+				);
+				let heroGender = document.getElementById("detail-heroes__gender");
+				detailComponent.updateHtmlValue(
+					heroGender,
+					'innerHTML',
+					detailComponent.hero.appearance.gender
+				);
+				let heroRace = document.getElementById("detail-heroes__race");
+				detailComponent.updateHtmlValue(
+					heroRace,
+					'innerHTML',
+					detailComponent.hero.appearance.race
+				);
+				let heroWeight = document.getElementById("detail-heroes__weight");
+				detailComponent.updateHtmlValue(
+					heroWeight,
+					'innerHTML',
+					detailComponent.hero.appearance.weight[1]
+				);
+				let FirstAppearance = document.getElementById("detail-heroes__first__appearance");
+				detailComponent.updateHtmlValue(
+					FirstAppearance,
+					'innerHTML',
+					detailComponent.hero.biography.firstAppearance
+				);
+				let heroAliases = document.getElementById("detail-heroes__aliases");
+				detailComponent.updateHtmlValue(
+					heroAliases,
+					'innerHTML',
+					detailComponent.hero.biography.aliases
+				);
+				let heroPublisher = document.getElementById("detail-heroes__publisher");
+				detailComponent.updateHtmlValue(
+					heroPublisher,
+					'innerHTML',
+					detailComponent.hero.biography.publisher
+				);
+				let heroConnection = document.getElementById("detail-heroes__connection");
+				detailComponent.updateHtmlValue(
+					heroConnection,
+					'innerHTML',
+					detailComponent.hero.connections.groupAffiliation
+				);
+				let heroTitle = document.getElementById("detail-title");
+				detailComponent.updateHtmlValue(
+					heroTitle,
+					'innerHTML',
+					detailComponent.hero.name 
+				);
+				let image = document.getElementById("detail-hero__image");
+				detailComponent.updateHtmlValue(
+					image,
+					'src',
+					detailComponent.hero.images.sm
+				);
+
+				
+			
+			}
+		})			
+
+
+		</script>
+	</body>
+</html>

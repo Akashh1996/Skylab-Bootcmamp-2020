@@ -1,0 +1,122 @@
+* {
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	margin: 0px;
+}
+
+#song-image {
+	border: 3px solid white;
+	max-width: 300px;
+	align-self: center;
+	margin: 20px;
+	box-shadow: 0 0 10px 2px;
+	border-radius: 10px;
+}
+
+#main-wrapper {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 20px;
+	background-color: #181818;
+}
+
+#final {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 20px;
+	background-color: #181818;
+}
+
+.buttons-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.button {
+	margin: 5px;
+	width: 300px;
+	height: 70px;
+	max-width: 500px;
+	align-self: center;
+	background-color: #b3b3b3;
+	border: 0px;
+	color: white;
+	padding: 19px 56px 21px;
+	border-radius: 500px;
+	cursor: pointer;
+	outline: none;
+}
+
+#reset-button {
+	margin: 5px;
+	width: 200px;
+	height: 70px;
+	max-width: 500px;
+	align-self: center;
+	background-color: #1db954;
+	border: 0px;
+	color: white;
+	padding: 19px 56px 21px;
+	border-radius: 500px;
+	cursor: pointer;
+	outline: none;
+	margin-top: 10px;
+}
+
+header {
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	background-color: black;
+	align-items: center;
+}
+.spotify-logo {
+	max-width: 70px;
+	background-color: black;
+}
+h1 {
+	background-color: black;
+	margin-left: 20px;
+	color: #a7a7a7;
+}
+h3 {
+	margin: 20px 0px 20px 10px;
+	font-size: 40px;
+	color: white;
+}
+
+.footer {
+	background-color: black;
+	height: 70px;
+	padding-top: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#final {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 620px;
+	display: none;
+}
+#total-points {
+	color: white;
+	margin-left: 44px;
+	margin-bottom: 10px;
+}
+#audio {
+	outline: none;
+}
+
+#countdown {
+	color: #1db954;
+	align-items: center;
+	font-size: 60px;
+	margin: 20px 10px 20px 0px;
+}
+.artist-name-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}

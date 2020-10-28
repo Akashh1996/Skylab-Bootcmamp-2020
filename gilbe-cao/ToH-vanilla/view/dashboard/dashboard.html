@@ -20,7 +20,7 @@
 
 		<script src="../../store.js"></script>
 		<script src="./dashboard.js"></script>
-		<script>
+		<script>		
 			store.loadHeroes().then(() => {
 				const heroes = store.getTopHeroes();
 				const dashbaordComponent = new DashboardComponent(heroes);
