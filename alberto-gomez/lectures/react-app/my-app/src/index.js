@@ -13,7 +13,6 @@ import InputText from './InputText';
 	}
 }; */
 
-let isVisible = false;
 ReactDOM.render(
 	<React.StrictMode>
 		{/* <ConditionalDisplay isVisible={isVisible}>
