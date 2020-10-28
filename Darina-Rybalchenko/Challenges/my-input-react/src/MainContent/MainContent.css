@@ -1,0 +1,11 @@
+body {
+    background: silver
+}
+
+.main-content {
+    margin-top: 40px;
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    background-color: white;
+}

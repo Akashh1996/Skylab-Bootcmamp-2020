@@ -1,0 +1,19 @@
+.book-option {
+	display: block;
+	background: rgb(212, 237, 245);
+	border: none;
+	height: 50px;
+	text-align: left;
+	font-size: 18px;
+	padding-left: 20px;
+	border-left: 4px solid lightblue;
+	cursor: pointer;
+}
+
+.book-option:hover {
+	background-color: lightblue;
+}
+
+.book-option:focus {
+	outline: none;
+}
