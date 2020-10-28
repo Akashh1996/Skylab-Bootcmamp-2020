@@ -1,11 +1,3 @@
-/*function printAbility() {
-    actualPokemon = pokeStore.getPokemon();
-    const body = document.body;
-    let element = document.createElement('p');
-    element.innerHTML = actualPokemon.abilities[0].ability.name;
-    body.appendChild(element);
-}*/
-
 function wichPokemon() {
     const actualLocation = location.search;
     const pureLocation = actualLocation.slice(0, 1);
@@ -13,7 +5,6 @@ function wichPokemon() {
     let pokemon = separatedLocation[1];
     pokeStore.loadPokemonFromAPIByName(pokemon).then(() => printAbility());
 }
-//wichPokemon();
 
 
 function firstsPokemons() {
