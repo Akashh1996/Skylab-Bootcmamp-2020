@@ -10,8 +10,6 @@ import reportWebVitals from './reportWebVitals';
 // import ConditionalDisplay from './components/ConditionalDisplay';
 import TextInput from './components/TextInput';
 
-let isVisible = false;
-
 ReactDOM.render(
 	<React.StrictMode>
 		<TextInput />

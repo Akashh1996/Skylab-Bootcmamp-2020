@@ -1,9 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { loadHero } from '../actions/action-creators';
+import heroStore from '../stores/hero-store';
 
 function TextInput() {
-	const [IdValue, setIdValue] = useState('react');
-	const [nameValue, setNameValue] = useState('Narco');
-	const [lastNameValue, setLastNameValue] = useState('Traficante');
+	debugger;
+	const [hero, setHero] = useState(heroStore.getHero());
+	const [IdValue, setIdValue] = useState(hero?.id);
+	const [nameValue, setNameValue] = useState(hero?.name);
+	const [lastNameValue, setLastNameValue] = useState(hero?.lastname);
+
+	useEffect(() => {
+		debugger;
+		heroStore.addEventListener(onChange);
+
+		if (!hero) {
+			loadHero();
+		}
+
+		return () => {
+			heroStore.removeEventListener(onChange);
+		};
+	}, [hero]);
+
+	function onChange() {
+		debugger;
+		const hero = heroStore.getHero();
+		setHero(hero);
+		setIdValue(hero.id);
+		setNameValue(hero.name);
+		setLastNameValue(hero.lastname);
+	}
 
 	const handleChange = ({ target: { value } }, setValue) => {
 		setValue(value);

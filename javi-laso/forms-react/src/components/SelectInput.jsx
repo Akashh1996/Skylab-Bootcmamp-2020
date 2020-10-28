@@ -2,7 +2,6 @@ import React from 'react';
 import Option from './Option';
 
 function SelectInput(props) {
-
 	const array = props.optionValues;
 	return (
 		<select>

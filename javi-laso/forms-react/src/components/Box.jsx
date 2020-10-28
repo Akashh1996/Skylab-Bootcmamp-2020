@@ -1,19 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import {
+	loadOptionsFlights,
+	loadPassengers,
+	loadClassType
+} from '../actions/action-creators';
 import SelectInput from './SelectInput';
 import Input from './Input';
 import Button from './Button';
 import Toggle from './Toggle';
+import store from '../stores/store';
 
-function Box(props) {
+function Box() {
+	const [optionsFlights, setOptionsFlights] = useState(store.getOptionSFlights);
+	const [passengers, setPassengers] = useState(store.getPassengers);
+	const [classType, setClassType] = useState(store.getClassType);
+
+	useEffect(() => {
+		store.addEventListener(onChange);
+
+		return () => {
+			store.removeEventListener(onChange);
+		};
+	}, [optionsFlights, passengers, classType]);
+
+	function onChange() {
+		const optionsFlights = store.getOptionSFlights();
+		setOptionsFlights(optionsFlights);
+		const passengers = store.getPassengers();
+		setPassengers(passengers);
+		const classType = store.getClassType();
+		setClassType(classType);
+	}
+
 	return (
 		<section className="box">
 			<div className="d-flex">
 				<div className="fifty-p">
-					<SelectInput optionValues={props.optionValues} />
-					<SelectInput optionValues={props.optionPassengers} />
+					<SelectInput optionValues={optionsFlights} />
+					<SelectInput optionValues={passengers} />
 				</div>
 				<div className="flex-grow-1"></div>
-				<SelectInput optionValues={props.optionClassType} />
+				<SelectInput optionValues={classType} />
 			</div>
 			<div className="d-flex justify-content-between">
 				<Input className="city-input" type="text" placeholder={'Salida de *'} />
