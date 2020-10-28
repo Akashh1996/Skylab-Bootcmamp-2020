@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <title>Forms Validation</title>
+  </head>
+  <body>
+
+    <div class="airfrance">
+
+      <div class="menu">
+        <div class="reserve1">RESERVAR UN VUELO</div>
+        <div class="reserve2">RESERVAR UN VUELO CON MILLAS</div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="mainContent">
+
+        <div class="pax">
+          <a href="">Book for 10+ passengers</a>
+        </div>
+          
+        <div class="travelData">
+          <div id="travel" class="data">
+            <p>
+              <label type="text" for="viaje">Viaje</label>
+              <select name="viaje" id="viaje" class="box-options">
+                <option value="idaYvuelta">Ida y vuelta</option>
+                <option value="ida">Solo ida</option>
+                <option value="destMultiples">Destinos multiples</option>
+              </select>
+            </p>
+          </div>
+        </div>
+        
+        
+        <div id="passengers" class="data">
+          <p>
+            <label for="pasajeros">Pasajeros*</label>
+            <select name="pasajeros" id="pasajeros" class="box-options">
+              <option value="1">1 Pasajero</option>
+              <option value="2">2 Pasajeros</option>
+              <option value="3">3 Pasajeros</option>
+              <option value="3">4 Pasajeros</option>
+              <option value="3">5 Pasajeros</option>
+            </select>
+          </p>
+        </div>
+
+        <div id="travelClass" class="data">
+          <p>
+            <label for="traveClass">Clase</label>
+            <select name="lass" id="travelClass" class="box-options" >
+              <option value="eco" >ECONOMY</option>
+              <option value="premium">PREMIUM ECONOMY</option>
+              <option value="business">BUSINESS</option>
+              <option value="premier">LA PREMIÈRE</option>
+            </select>
+          </p>
+        </div>
+        <br />
+
+        <div id="landings" class="data">
+
+          <div id="departures" >
+            <span class="material-icons">flight_takeoff</span>
+            <select name="departures" id="departures" class="box-options">
+              <option value="predef">Salidas de *</option>
+              <option value="Acorunya">A Corunya, A Corunya Airport</option>
+              <option value="barcelona">Barcelona, Aeroport del Prat</option>
+              <option value="madrid">Madrid, Barajas Airport</option>
+            </select>
+          </div>
+
+          <div id="Arrivals">
+            <span class="material-icons">flight_land</span>
+            <select name="arrivals" id="arrivals" class="box-options">
+              <option value="predef">Salidas de *</option>
+              <option value="Acorunya">A Corunya, A Corunya Airport</option>
+              <option value="barcelona">Barcelona, Aeroport del Prat</option>
+              <option value="madrid">Madrid, Barajas Airport</option>
+            </select>
+          </div>
+
+        </div>      
+        <br />
+
+      <form>
+          <div id="calendar">
+            <div>Fechas del Viaje*</div> 
+              <input id="date" type="date" >
+            </div>
+          </div>
+      </form>
+        <br>
+
+      <div class="businessTravel">
+        <div>   <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label> Viaje Profesional</div>
+      </div>
+
+    </div>
+
+    <div class="btn">
+      <p><button class="flight-btn">Buscar vuelos</button></p>
+        
+    </div>
+
+  </div>
+
+  <div class="personalFormContent">
+
+    <h1 class="logo">Contact <span>Us</span></h1>
+
+      <div class="contact-wrapper animated bounceInUp">
+        <div class="contact-form">
+            <h3>Contact us</h3>
+            <form action="">
+              <p>
+                <label>Full Name</label>
+                <input type="text" name="fullname" placeholder="Enter your name" required>
+              </p>
+              <p>
+                <label>Email Adress</label>
+                <input type="email" name="email" placeholder="Enter your mail adress" required>
+              </p>
+              <p>
+                <label>Phone Number</label>
+                <input type="tel" name="phone" placeholder="Enter your phone number" required>
+              </p>
+              <p class="block">
+                <label>Message</label> 
+                <textarea name="message" rows="3" placeholder="Type your message here..."></textarea>
+              </p>
+              <p>
+                <button id="send-button">Send</button>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+  </body>
+</html>
