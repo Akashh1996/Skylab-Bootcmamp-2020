@@ -4,7 +4,6 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import TextInput from './components/TextInput';
 import ConditionalDisplay from './components/ConditionalDisplay';
-
 ReactDOM.render(
 	<React.StrictMode>
 		<TextInput />

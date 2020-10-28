@@ -1,29 +1,63 @@
-import React, {useState} from 'react'
+import React, { useEffect, useState } from 'react';
+import { loadHero } from '../actions/action-creators';
+import heroStore from '../stores/hero-store';
 
-function TextInput () {
-    const [iDValue, setIDValue] = useState('12');
-    const [nameValue, setNameValue] = useState('Narco');
-    const [hero, setHero] = useState({
-        id: 12,
-        name: 'Narco'
-    });
+function TextInput() {
+    const [hero, setHero] = useState(heroStore.getHero());
+    debugger;
+	const [id, setId] = useState(hero?.id);
+	const [name, setName] = useState(hero?.name);
+	const [lastname, setLastName] = useState(hero?.lastname);
 
-    return (
-        <>
-        <p>
-            id: 
-    <input type='text' value={iDValue} onChange={(event) => {
-        setIDValue(event.target.value);
-        console.log(event.target.value)}}></input>
-        </p>
-        <p>
-            name: 
-            <input type="text" value={nameValue} onChange={(event) => {
-                setNameValue(event.target.value);
-            }}/>
-        </p>
-        </>
-    )
+	useEffect(() => {
+		heroStore.addEventListener(onChange);
+		if (!hero) {
+			loadHero();
+		}
+
+		return () => {
+			heroStore.removeEventListener(onChange);
+		};
+	}, [hero]);
+
+	function onChange() {
+		const hero = heroStore.getHero();
+		setHero(hero);
+		setId(hero?.id);
+		setName(hero?.name);
+		setLastName(hero?.lastname);
+	}
+
+	function handleChange(event, setValue) {
+		setValue(event.target.value);
+	}
+	return (
+		<>
+			<p>
+				id:
+				<input
+					type="text"
+					value={id}
+					onChange={(event) => handleChange(event, setId)}
+				/>
+			</p>
+			<p>
+				name:
+				<input
+					type="text"
+					value={name}
+					onChange={(event) => handleChange(event, setName)}
+				/>
+			</p>
+			<p>
+				name:
+				<input
+					type="text"
+					value={lastname}
+					onChange={(event) => handleChange(event, setLastName)}
+				/>
+			</p>
+		</>
+	);
 }
-
-export default TextInput
+export default TextInput;
