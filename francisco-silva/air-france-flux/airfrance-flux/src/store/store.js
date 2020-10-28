@@ -4,6 +4,7 @@ import dispatcher from '../dispatcher';
 let _destination;
 let _travelers;
 let _classOptions;
+let _airports;
 
 class GoingAndComing extends EventEmitter {
 	addEventListener(callback) {
@@ -27,9 +28,15 @@ class GoingAndComing extends EventEmitter {
 	getClass() {
 		return _classOptions;
 	}
+	getAirports() {
+		return _airports;
+	}
 }
 
+
+
 const goingAndComing = new GoingAndComing();
+
 
 dispatcher.register((action) => {
 	switch (action.type) {
@@ -43,6 +50,10 @@ dispatcher.register((action) => {
 			break;
 		case 'LOAD_CLASS':
 			_classOptions = action.data;
+			goingAndComing.emitChange();
+			break;
+		case 'LOAD_AIRPORTS':
+			_airports = action.data;
 			goingAndComing.emitChange();
 			break;
 		default:
