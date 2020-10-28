@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Sum({ a, b, showAlert, children }) {
-	debugger;
 	return (
 		<div>
 			<h1>
