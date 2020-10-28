@@ -38,14 +38,12 @@ export function loadClassType() {
 }
 
 export function loadMadridBarcelona() {
-	debugger;
 	dispatcher.dispatch({
 		type: actionTypes.LOAD_MADRIDBARCELONA
 	});
 }
 
 export function eraseForm() {
-	debugger;
 	dispatcher.dispatch({
 		type: actionTypes.ERASE_FORM
 	});

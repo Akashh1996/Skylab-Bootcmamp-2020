@@ -72,7 +72,6 @@ dispatcher.register((action) => {
 			store.emitChange();
 			break;
 		case actionTypes.LOAD_MADRIDBARCELONA:
-			debugger;
 			_departureCity = 'Madrid';
 			_arrivalCity = 'Barcelona';
 			_departureDate = `${date.getFullYear()}-${

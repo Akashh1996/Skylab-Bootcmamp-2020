@@ -107,7 +107,6 @@ function Box() {
 	}
 
 	function changeDepartureCity() {
-		debugger;
 		const departureCity = store.getDepartureCity();
 		setDepartureCity(departureCity);
 	}
