@@ -4,11 +4,7 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 
-import Sum from './Sum';
-
-import PropTypes from 'prop-types';
-import ConditionalDisplay from './ConditionalDisplay';
-import TextInput from './TextInput';
+import TextInput from './components/TextInput';
 
 ReactDOM.render(
 	<React.StrictMode>
