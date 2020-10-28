@@ -2,18 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Sum from './Sum'
-import ClickCounter from './ClickCounter'
+//import Sum from './Sum'
+//import ClickCounter from './ClickCounter'
+//import ConditionalDisplay from './ConditionalDisplay';
+import TextInput from './TextInput';
 
-const props ={
-  a: 4,
-  b: 2
-}
 
 ReactDOM.render(
   <React.StrictMode>
-    <Sum {...props}/>
-    <ClickCounter />
+      <TextInput />
   </React.StrictMode>,
   document.getElementById('root')
 );
