@@ -34,7 +34,6 @@ function Main() {
 	}
 
 	useEffect(() => {
-		console.log('entroo');
 		flightsStore.addEventListener(onChangeFlight);
 
 		return () => {
