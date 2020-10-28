@@ -14,6 +14,16 @@ class HeroStore extends EventEmitter {
 		return _heroes.filter((hero) => hero.id !== heroId);
 	}
 
+	updateHero(updatedHero) {
+		return _heroes.map((hero) => {
+			if (updatedHero.id === hero.id) {
+				return updatedHero;
+			} else {
+				return hero;
+			}
+		});
+	}
+
 	addEventListener(callback) {
 		this.on(CHANGE, callback);
 	}
@@ -36,13 +46,15 @@ dispatcher.register((action) => {
 			_heroes = action.payload;
 			break;
 		case actionTypes.DELETE_HEROES:
-			_heroes = deleteHero(action.payload);
+			_heroes = heroStore.deleteHero(action.payload);
 			heroStore.emitChange();
 			break;
 		case actionTypes.ADD_HERO:
+			_heroes = [..._heroes, action.payload];
 			heroStore.emitChange();
 			break;
 		case actionTypes.UPDATE_HERO:
+			_heroes = heroStore.updateHero(action.payload);
 			heroStore.emitChange();
 			break;
 
