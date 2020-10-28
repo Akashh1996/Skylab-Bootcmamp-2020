@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import HeroList from '../src/components/HeroList';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<h1>hellow world</h1>
+		<HeroList />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
