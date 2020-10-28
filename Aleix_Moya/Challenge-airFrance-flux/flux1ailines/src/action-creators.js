@@ -1,18 +1,31 @@
 import dispatcher from './dispatcher'
 
-const hero = {
+const hero1 = {
     id: 'Ida y Vuelta',
     name: '1 Pasajero',
     lastname: 'Economy',
-    salida: 'salida',
-    llegada: 'llegada',
-    fechas: 'fechas',
+    salida: 'Barcelona',
+    llegada: 'Madrid',
+    fechas: '7/10/2020',
 };
-
+const hero2 = {
+    id: 'Ida',
+    name: '2 Pasajeros',
+    lastname: 'Bussiness',
+    salida: 'London',
+    llegada: 'Paris',
+    fechas: '20/5/2022',
+};
 export function loadHero(){
     dispatcher.dispatch({
         type: 'LOAD_HERO',
-        data: hero
+        data: hero2
+    })
+}
+export function loadHero2(){
+    dispatcher.dispatch({
+        type: 'LOAD_HERO',
+        data: hero1
     })
 }
 
