@@ -22,3 +22,8 @@ export function loadClass() {
 		data: ClassOptions
 	});
 }
+export function deleteFlights() {
+	dispatcher.dispatch({
+		type: 'DELETE_FLIGHTS'
+	});
+}

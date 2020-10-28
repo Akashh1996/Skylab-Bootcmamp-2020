@@ -62,6 +62,7 @@ function SelectOptions() {
 				<SelectAirport />
 				<SelectAirport />
 			</div>
+			<button>Delete Search</button>
 			<div className="flightDate">
 				<DateFlight />
 			</div>
