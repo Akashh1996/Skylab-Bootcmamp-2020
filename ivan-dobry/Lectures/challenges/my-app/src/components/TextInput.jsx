@@ -4,7 +4,6 @@ import heroStore from '../stores/hero-store';
 
 function TextInput() {
     const [hero, setHero] = useState(heroStore.getHero());
-    debugger;
 	const [id, setId] = useState(hero?.id);
 	const [name, setName] = useState(hero?.name);
 	const [lastname, setLastName] = useState(hero?.lastname);
