@@ -39,10 +39,7 @@ function SelectOptions() {
 
 	return (
 		<div class="main-wrapper">
-			<div className="top-bar">
-				<a href>RESERVAR UN VUELO</a>
-				<a href>RESERVAR UN VUELO CON MILLAS</a>
-			</div>
+			
 			
 			<div className="travelers">
 				<p>
