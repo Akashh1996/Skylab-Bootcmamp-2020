@@ -3,21 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Trip from './components/Trip';
-import Passenger from './components/Passenger';
-import ClassType from './components/ClassType';
-import From from './components/From';
-import To from './components/To';
-import DateOfFlight from './components/DateOfFlight';
+
+import Form from './components/Form';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Trip />
-		<Passenger />
-		<ClassType />
-		<From />
-		<To />
-		<DateOfFlight />
+		<Form />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
