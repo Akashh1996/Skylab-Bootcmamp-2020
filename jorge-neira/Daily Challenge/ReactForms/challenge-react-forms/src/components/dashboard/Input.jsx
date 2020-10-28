@@ -1,7 +1,7 @@
 import React from 'react';
 
 function MyInput() {
-	return 8;
+	return <div>8</div>;
 }
 
 export default MyInput;

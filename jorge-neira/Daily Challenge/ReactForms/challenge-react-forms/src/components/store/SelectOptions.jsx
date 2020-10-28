@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
-
-function SelectOption({ option }) {
+import React from 'react';
+import Option from './Option';
+function SelectOption(props) {
 	return (
-		<div>
-			<option></option>
-		</div>
+		<>
+			<select>{console.log(props.classType)}</select>;
+			<select>{console.log(props.flightOptions)}</select>;
+			<select>{console.log(props.passengers)}</select>;
+		</>
 	);
 }
 

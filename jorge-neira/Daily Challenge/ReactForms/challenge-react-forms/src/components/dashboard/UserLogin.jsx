@@ -17,7 +17,7 @@ function UserLogin() {
 					required
 					pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
 					onChange={(event) => handleChange(event, setEmail)}
-					value="hola@as.com"
+					value={email}
 				></input>
 			</label>
 			<label>
