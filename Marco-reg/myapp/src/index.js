@@ -9,7 +9,6 @@ import ConditionalDisplay from './ConditianlDisplay';
 
 import TextInput from './components/TextInput';
 
-let isVisible = false;
 ReactDOM.render(
 	<React.StrictMode>
 		<TextInput />

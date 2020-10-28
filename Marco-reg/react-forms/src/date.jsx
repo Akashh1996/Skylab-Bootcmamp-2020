@@ -5,7 +5,7 @@ function DateFlight({options}){
     return(
         <>
             
-            <input type="date">
+            <input type="date" >
                 </input>
 
             
