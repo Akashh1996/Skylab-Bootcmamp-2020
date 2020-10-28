@@ -2,16 +2,19 @@ import SelectAirport from '../Airports';
 import DateFlight from '../date';
 import DropDown from '../DropDownComponent/DropDown';
 import React, { useEffect, useState } from 'react';
-import { loadDestination } from '../actions/action-creator';
+import { loadDestination, loadTravelers } from '../actions/action-creator';
 import goingAndComingStore from '../store/store';
 
 function SelectOptions() {
 	const [flightOptions, setFlightOptions] = useState(null);
+	const [travelers, setTravelersOptions] = useState(null);
 
 	useEffect(() => {
 		goingAndComingStore.addEventListener(onChange);
 		loadDestination();
 		// Cargar los pasajeros
+		goingAndComingStore.addEventListener(onChange);
+		loadTravelers();
 		return () => {
 			goingAndComingStore.removeEventListener(onChange);
 		};
