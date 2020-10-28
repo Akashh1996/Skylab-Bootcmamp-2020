@@ -1,0 +1,83 @@
+body {
+  font-size: 110%;
+  font-weight: 500;
+  background-image: url("https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131_1280.jpg");
+display: flex;
+flex-direction: column;
+justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+#root {
+display: flex;
+flex-direction: column;
+justify-content: center;
+  align-items: center;
+  background-color: white;
+width: 70%;
+  border: 1px solid black;
+  border-radius: 1%;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-start;
+  margin: 25px;
+}
+
+button {
+background-color: red;
+  color: white;
+  padding: 10px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  margin: 1vw;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+header {
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+}
+
+header span {
+  margin-left: 30px;
+  font-size: 125%;
+}
+
+form {
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+
+input {
+  font-size: 110%;
+  border: 2px solid black;
+  border-bottom-color: rgba(133, 136, 133,0.5);
+  border-top-color: white;
+  border-left-color: white;
+  border-right-color: white;
+}
+
+select {
+  font-size: 110%;
+  border: 2px solid black;
+  border-bottom-color: rgba(133, 136, 133,0.5);
+  border-bottom-color: rgba(133, 136, 133,0.5);
+  border-top-color: white;
+  border-left-color: white;
+  border-right-color: white;
+}
