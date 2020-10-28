@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ListItem from './ListItem';
-import loadHeroes from '../../actions/hero-actions';
+import { loadHeroes } from '../../actions/hero-actions';
 import storeHeroes from '../../stores/hero-store';
 import '../TohStyles.css';
 
@@ -17,15 +17,19 @@ function List() {
 		storeHeroes.removeEventListener(onChange);
 	}, [heroes]);
 
-	function onChange() {}
+	function onChange() {
+		setHeroes(storeHeroes.getHeroes());
+	}
 
 	return (
 		<main>
 			<h2 className="list-title">My Heroes</h2>
 			<div className="list-heroes">
-				{heroes.map((hero) => (
-					<ListItem heroId={hero.id} heroName={hero.name} />
-				))}
+				{heroes &&
+					heroes.length > 0 &&
+					heroes.map((hero) => (
+						<ListItem heroId={hero.id} heroName={hero.name} />
+					))}
 			</div>
 		</main>
 	);
