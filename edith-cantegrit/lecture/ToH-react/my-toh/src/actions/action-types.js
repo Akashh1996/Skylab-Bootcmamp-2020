@@ -1,0 +1,6 @@
+const actionsTypes = {
+    LOAD_HEROES: 'LOAD_HERO',
+    DELETE_HERO: 'DELETE_HERO',
+    ADD_HERO: 'ADD_HERO',
+    UPDATE_HERO: 'UPDATE_HERO'
+}
