@@ -4,7 +4,6 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import HeroList from './components/HeroList';
 
-
 ReactDOM.render(
   <React.StrictMode>
     <HeroList />
