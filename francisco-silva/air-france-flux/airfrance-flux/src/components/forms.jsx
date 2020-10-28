@@ -9,6 +9,7 @@ function SelectOptions() {
 	const [flightOptions, setFlightOptions] = useState(null);
 	const [travelers, setTravelersOptions] = useState(null);
 	const [classOptions, setClassOptions] = useState(null);
+	
 
 	useEffect(() => {
 		goingAndComingStore.addEventListener(onChange);
@@ -38,16 +39,14 @@ function SelectOptions() {
 				<a href>RESERVAR UN VUELO</a>
 				<a href>RESERVAR UN VUELO CON MILLAS</a>
 			</div>
-			<div className="more-people">
-				<p>Reservar para más de 10 pasajeros</p>
-			</div>
+			
 			<div className="travelers">
 				<p>
 					Viajes
 					<DropDown options={flightOptions} />
 				</p>
 				<p>pasajeros
-				<DropDown options ={travelers}/>
+					<DropDown options ={travelers}/>
 				</p>
 				
 				<p>class
