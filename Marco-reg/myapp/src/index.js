@@ -6,20 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import Sum from './sum';
 import ClickCounter from './click';
 import ConditionalDisplay from './ConditianlDisplay';
-import TextInput from './Input';
-const props={
-  a:4,
-  b:2
-};
-let isVisible=false;
+
+import TextInput from './components/TextInput';
+
+let isVisible = false;
 ReactDOM.render(
-  <React.StrictMode>
-   <TextInput/>
-   <App/>
-    
-    
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<TextInput />
+	</React.StrictMode>,
+	document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
