@@ -20,6 +20,7 @@ function TextInput() {
 	}, [hero]);
 
 	function onChange() {
+		debugger;
 		const hero = heroStore.getHero();
 		setHero(hero);
 		setId(hero?.id);
