@@ -3,7 +3,7 @@ import { loadHero } from './actions/action-creators';
 import heroStore from './stores/hero-store';
 
 
-function Input() {
+function Select() {
     const [hero, setHero] = useState(heroStore.getHero());
     const [id, setId] = useState(hero?.id);
     const [name, setName] = useState(hero?.name);
@@ -18,7 +18,7 @@ function Input() {
         return () => {
             heroStore.removeEventListener(onChange);
         };
-    }, [hero]);
+    }, [hero, id]);
 
     function onChange() {
         const hero = heroStore.getHero();
@@ -65,4 +65,4 @@ function Input() {
 
 
 
-export default Input;
+export default Select;
