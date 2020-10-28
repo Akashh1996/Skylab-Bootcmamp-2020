@@ -1,8 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-
-function ClassName() {
-  return 
+function Option(props) {
+	return <option>{console.log(props)}</option>;
 }
 
-export default ClassName
+export default Option;

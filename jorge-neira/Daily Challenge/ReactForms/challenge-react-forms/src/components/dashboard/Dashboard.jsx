@@ -1,8 +1,7 @@
 import React from 'react';
-// import SelectOption from './components/store/SelectOptions';
+import SelectOption from './SelectOptions';
 import HeaderNav from './Header';
 import UserLogin from './UserLogin';
-import SelectOption from '../store/SelectOptions';
 import Date from './Date';
 import Input from './Input';
 // import Button from './Button';
