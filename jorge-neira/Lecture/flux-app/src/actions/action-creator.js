@@ -1,5 +1,5 @@
 import dispatcher from '../dispatcher';
-
+debugger;
 const hero = {
 	id: 12,
 	name: 'Narco',
@@ -7,6 +7,7 @@ const hero = {
 };
 
 export function loadHero() {
+	debugger;
 	dispatcher.dispatch({
 		type: 'LOAD_HERO',
 		data: hero

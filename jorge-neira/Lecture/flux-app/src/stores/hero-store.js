@@ -5,18 +5,22 @@ let _hero;
 
 class HeroStore extends EventEmitter {
 	addEventListener(callback) {
+		debugger;
 		this.on('CHANGE', callback);
 	}
 
 	removeEventListener(callback) {
+		debugger;
 		this.removeListener('CHANGE', callback);
 	}
 
 	emitChange() {
+		debugger;
 		this.emit('CHANGE');
 	}
 
 	getHero() {
+		debugger;
 		return _hero;
 	}
 }
@@ -24,6 +28,7 @@ class HeroStore extends EventEmitter {
 const heroStore = new HeroStore();
 
 dispatcher.register((action) => {
+	debugger;
 	switch (action.type) {
 		case 'LOAD_HERO':
 			_hero = action.data;

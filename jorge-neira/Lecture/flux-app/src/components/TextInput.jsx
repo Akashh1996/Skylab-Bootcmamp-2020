@@ -9,9 +9,9 @@ function TextInput() {
 	const [lastname, setLastName] = useState(hero?.lastname);
 
 	useEffect(() => {
-		debugger;
 		heroStore.addEventListener(onChange);
 		if (!hero) {
+			debugger;
 			loadHero();
 		}
 
@@ -21,6 +21,8 @@ function TextInput() {
 	}, [hero]);
 
 	function onChange() {
+		debugger;
+
 		const hero = heroStore.getHero();
 		setHero(hero);
 		setId(hero?.id);
