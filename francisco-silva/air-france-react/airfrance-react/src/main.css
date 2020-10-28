@@ -1,0 +1,69 @@
+.trip-class_wrapper {
+	display: flex;
+	flex-direction: row;
+}
+.people-date_wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+.departure-arrival_wrapper {
+	display: flex;
+	flex-direction: row;
+}
+#bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -1;
+}
+.main-wrapper {
+	font-family: Helvetica, sans-serif;
+	background-color: rgba(176, 220, 181, 0.6);
+	border-radius: 20px;
+	padding: 20px;
+	max-width: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 100px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {
+	font-size: 30px;
+	color: rgba(244, 67, 54, 0.9);
+}
+#trip {
+	margin-right: 50px;
+}
+#people {
+	margin-right: 20px;
+}
+#departure {
+	margin-right: 10px;
+}
+button {
+	margin-top: 20px;
+	background-color: rgba(244, 67, 54, 0.6);
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+button:hover {
+	background-color: rgba(244, 67, 54, 0.9);
+}
