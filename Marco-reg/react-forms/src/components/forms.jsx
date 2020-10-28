@@ -2,12 +2,17 @@ import SelectAirport from '../Airports';
 import DateFlight from '../date';
 import DropDown from '../DropDownComponent/DropDown';
 import React, { useEffect, useState } from 'react';
-import { loadDestination, loadTravelers } from '../actions/action-creator';
+import {
+	loadClass,
+	loadDestination,
+	loadTravelers
+} from '../actions/action-creator';
 import goingAndComingStore from '../store/store';
 
 function SelectOptions() {
 	const [flightOptions, setFlightOptions] = useState(null);
 	const [travelers, setTravelersOptions] = useState(null);
+	const [classOptions, setClassOptions] = useState(null);
 
 	useEffect(() => {
 		goingAndComingStore.addEventListener(onChange);
@@ -15,6 +20,8 @@ function SelectOptions() {
 		// Cargar los pasajeros
 		goingAndComingStore.addEventListener(onChange);
 		loadTravelers();
+		goingAndComingStore.addEventListener(onChange);
+		loadClass();
 		return () => {
 			goingAndComingStore.removeEventListener(onChange);
 		};
@@ -23,6 +30,8 @@ function SelectOptions() {
 	function onChange() {
 		setFlightOptions(goingAndComingStore.getDestination());
 		// setear el valor a pasajeros
+		setTravelersOptions(goingAndComingStore.getTravelers());
+		setClassOptions(goingAndComingStore.getClass());
 	}
 
 	return (
@@ -39,8 +48,15 @@ function SelectOptions() {
 					Viajes
 					<DropDown options={flightOptions} />
 				</p>
-				<p>pasajeros</p>
-				<p>class</p>
+				<p>
+					pasajeros
+					<DropDown options={travelers} />
+				</p>
+
+				<p>
+					class
+					<DropDown options={classOptions} />
+				</p>
 			</div>
 			<div className="airports">
 				<SelectAirport />

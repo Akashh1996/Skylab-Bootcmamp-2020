@@ -2,6 +2,8 @@ import { EventEmitter } from 'events';
 import dispatcher from '../dispatcher';
 
 let _destination;
+let _travelers;
+let _classOptions;
 
 class GoingAndComing extends EventEmitter {
 	addEventListener(callback) {
@@ -19,6 +21,12 @@ class GoingAndComing extends EventEmitter {
 	getDestination() {
 		return _destination;
 	}
+	getTravelers() {
+		return _travelers;
+	}
+	getClass() {
+		return _classOptions;
+	}
 }
 
 const goingAndComing = new GoingAndComing();
@@ -27,6 +35,14 @@ dispatcher.register((action) => {
 	switch (action.type) {
 		case 'LOAD_DESTINATION':
 			_destination = action.data;
+			goingAndComing.emitChange();
+			break;
+		case 'LOAD_TRAVELERS':
+			_travelers = action.data;
+			goingAndComing.emitChange();
+			break;
+		case 'LOAD_CLASS':
+			_classOptions = action.data;
 			goingAndComing.emitChange();
 			break;
 
