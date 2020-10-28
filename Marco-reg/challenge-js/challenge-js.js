@@ -19,11 +19,6 @@ function checkForEquality(a,b){
 }
 checkForEquality(true,"a");
 
-<<<<<<< HEAD
-
-=======
-///clone 
->>>>>>> 628e43f48783322d1c6e46adf00a576d66aabb2a
 
 
 let car={wheels:4, color:"red",passangers:3}
