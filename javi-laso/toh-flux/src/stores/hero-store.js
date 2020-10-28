@@ -10,8 +10,8 @@ class HeroStore extends EventEmitter {
 		return _heroes;
 	}
 
-	deleteHero(heroToDelete) {
-		return _heroes.filter((hero) => hero.id !== heroToDelete.id);
+	deleteHero(heroId) {
+		return _heroes.filter((hero) => hero.id !== heroId);
 	}
 
 	updateHero(updatedHero) {
