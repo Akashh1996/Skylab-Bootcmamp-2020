@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Header from './Header';
-import Select from './Select';
-import InputText from './InputText';
-import InputDate from './InputDate';
+import Header from './components/Header';
+import Select from './components/Select';
+import InputText from './components/InputText';
+import InputDate from './components/InputDate';
 import reportWebVitals from './reportWebVitals';
-
-const viajeForm = ['Ida y vuelta', 'Sólo Ida', 'Destinos múltiples'];
 
 const pasajerosForm = [
 	'1 pasajero',
@@ -32,7 +30,7 @@ ReactDOM.render(
 					<a href>Book for 10+ passengers</a>
 				</section>
 				<section className="row first">
-					<Select name="Viaje:" id="viajeForm" options={viajeForm} />
+					<Select name="Viaje:" id="viajeForm" />
 					<Select
 						name="Pasajeros:"
 						id="pasajerosForm"
