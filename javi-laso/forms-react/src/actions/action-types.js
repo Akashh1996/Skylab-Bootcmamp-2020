@@ -1,0 +1,7 @@
+const actionTypes = {
+	LOAD_OPTIONFLIGHTS: 'LOAD_OPTIONFLIGHTS',
+	LOAD_PASSENGERS: 'LOAD_PASSENGERS',
+	LOAD_CLASSTYPE: 'LOAD_CLASSTYPE'
+};
+
+export default actionTypes;

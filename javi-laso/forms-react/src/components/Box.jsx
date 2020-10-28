@@ -11,12 +11,26 @@ import Toggle from './Toggle';
 import store from '../stores/store';
 
 function Box() {
-	const [optionsFlights, setOptionsFlights] = useState(store.getOptionSFlights);
-	const [passengers, setPassengers] = useState(store.getPassengers);
-	const [classType, setClassType] = useState(store.getClassType);
+	const [optionsFlights, setOptionsFlights] = useState(
+		store.getOptionSFlights()
+	);
+	const [passengers, setPassengers] = useState(store.getPassengers());
+	const [classType, setClassType] = useState(store.getClassType());
 
 	useEffect(() => {
 		store.addEventListener(onChange);
+
+		if (!optionsFlights) {
+			loadOptionsFlights();
+		}
+
+		if (!passengers) {
+			loadPassengers();
+		}
+
+		if (!classType) {
+			loadClassType();
+		}
 
 		return () => {
 			store.removeEventListener(onChange);

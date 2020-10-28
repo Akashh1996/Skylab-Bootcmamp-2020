@@ -1,4 +1,5 @@
 import dispatcher from '../dispatcher';
+import actionTypes from './action-types';
 
 const optionsFlights = ['Ida y vuelta', 'Solo ida', 'Destinos múltiples'];
 const passengers = [
@@ -8,27 +9,30 @@ const passengers = [
 	'4 pasajeros',
 	'5 pasajeros',
 	'6 pasajeros',
-	'7 pasajeros'
+	'7 pasajeros',
+	'8 pasajeros',
+	'9 pasajeros',
+	'10 pasajeros'
 ];
 const classType = ['ECONOMY', 'PREMIUM ECONOMY', 'BUSINESS', 'LA PREMIÈRE'];
 
 export function loadOptionsFlights() {
 	dispatcher.dispatch({
-		type: 'LOAD_OPTIONFLIGHTS',
-		data: optionsFlights
+		type: actionTypes.LOAD_OPTIONFLIGHTS,
+		payload: optionsFlights
 	});
 }
 
 export function loadPassengers() {
 	dispatcher.dispatch({
-		type: 'LOAD_PASSENGERS',
-		data: passengers
+		type: actionTypes.LOAD_PASSENGERS,
+		payload: passengers
 	});
 }
 
 export function loadClassType() {
 	dispatcher.dispatch({
-		type: 'LOAD_CLASSTYPE',
-		data: classType
+		type: actionTypes.LOAD_CLASSTYPE,
+		payload: classType
 	});
 }

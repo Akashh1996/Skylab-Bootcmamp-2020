@@ -1,13 +1,13 @@
 import React from 'react';
 import Option from './Option';
 
-function SelectInput(props) {
-	const array = props.optionValues;
+function SelectInput({ optionValues }) {
 	return (
 		<select>
-			{array.map(function (element) {
-				return <Option options={element} />;
-			})}
+			{optionValues &&
+				optionValues.map((element) => {
+					return <Option options={element} />;
+				})}
 		</select>
 	);
 }
