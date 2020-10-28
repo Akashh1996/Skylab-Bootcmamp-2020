@@ -29,7 +29,7 @@ ReactDOM.render(
 			<Header />
 			<form>
 				<section className="passengers10">
-					<a href="#">Book for 10+ passengers</a>
+					<a href>Book for 10+ passengers</a>
 				</section>
 				<section className="row first">
 					<Select name="Viaje:" id="viajeForm" options={viajeForm} />
