@@ -1,0 +1,21 @@
+nav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	border-bottom: 1px solid rgb(139, 139, 139);
+	box-shadow: 0.0000005px 0.0000005px 6px black;
+}
+
+.title {
+	margin: 20px 20px 15px 20px;
+}
+
+.t1 {
+	padding-bottom: 5px;
+	margin-bottom: 0;
+	border-bottom: 3px solid rgb(194, 42, 29);
+}
+
+.t2 {
+	font-weight: 300;
+}
