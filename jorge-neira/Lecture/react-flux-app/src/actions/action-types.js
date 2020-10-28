@@ -1,5 +1,9 @@
 const actionTypes = {
-	TEST: 'TEST'
+	LOAD_HEROES: 'LOAD_HEROES',
+	DELETE_HEROES: 'DELETE_HEROES',
+	CREATE_HEROES: 'CREATE_HEROES',
+	UPDATE_HEROES: 'UPDATE_HEROES'
 };
 
 export default actionTypes;
+
