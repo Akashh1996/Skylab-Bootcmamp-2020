@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 
 function ConditionalDisplay(props){
-    debugger;
     const[isVisible, setIsVisible] = useState(props.isVisible);
     
     return (
