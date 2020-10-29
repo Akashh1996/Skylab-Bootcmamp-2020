@@ -4,6 +4,7 @@ import actionTypes from '../actions/action-types';
 
 const CHANGE = 'CHANGE';
 let _heroes = [];
+let _hero;
 
 class HeroStore extends EventEmitter {
 	getHeroes() {
@@ -12,6 +13,10 @@ class HeroStore extends EventEmitter {
 
 	getTopHeroes() {
 		return this.getHeroes().slice(0, 4);
+	}
+
+	getHero() {
+		return _hero;
 	}
 
 	addEventListener(callback) {
@@ -33,6 +38,10 @@ dispatcher.register((action) => {
 	switch (action.type) {
 		case actionTypes.LOAD_HEROES:
 			_heroes = action.payload;
+			heroStore.emitChange();
+			break;
+		case actionTypes.LOAD_HERO:
+			_hero = action.payload;
 			heroStore.emitChange();
 			break;
 		default:

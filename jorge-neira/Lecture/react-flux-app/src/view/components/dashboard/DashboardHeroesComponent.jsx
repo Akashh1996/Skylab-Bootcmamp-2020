@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { loadHeroes } from '../../../actions/action-creators';
 import heroStore from '../../../stores/hero-store';
 
 function Dashboard() {
-	const [heroes, setHeroes] = useState(heroStore.getHeroes());
+	const [heroes] = useState(heroStore.getHeroes());
+	const [topHeroes, setTopHeroes] = useState(heroStore.getTopHeroes());
 
 	useEffect(() => {
 		heroStore.addEventListener(handleChange);
@@ -13,10 +15,10 @@ function Dashboard() {
 		return () => {
 			heroStore.removeEventListener(handleChange);
 		};
-	}, [heroes]);
+	}, [heroes, topHeroes]);
 
 	function handleChange() {
-		setHeroes(heroStore.getTopHeroes());
+		setTopHeroes(heroStore.getTopHeroes());
 	}
 
 	return (
@@ -24,8 +26,12 @@ function Dashboard() {
 			<h2>Top Heroes</h2>
 			<section>
 				<ul>
-					{heroes.map((heroMap, index) => (
-						<li key={index}>{heroMap.name}</li>
+					{topHeroes.map((topHeroMap, index) => (
+						<li key={index}>
+							<Link to={`/hero/detail/${topHeroMap.id}`}>
+								{topHeroMap.name}
+							</Link>
+						</li>
 					))}
 				</ul>
 			</section>
