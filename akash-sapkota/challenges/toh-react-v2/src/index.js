@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import HeroList from './components/HeroList';
-import Header from './components/Header';
+import Header from './components/Header.js';
 import Dashboard from './components/Dashboard';
 import HeroDetail from './components/HeroDetail';
 import { BrowserRouter, Route } from 'react-router-dom';
