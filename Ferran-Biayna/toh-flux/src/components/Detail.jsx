@@ -1,37 +1,41 @@
 import React, { useState, useEffect} from 'react';
-import { loadHeroes } from '../actions/action-creators';
+import { loadHeroesById } from '../actions/action-creators';
 import heroStore from '../stores/store';
 
-function DetailHero() {
-    const [heroes, setHeroes] = useState(heroStore.getHeroById(11));
+function DetailHero(props) {
+
+	const [heroid] = useState(+props.match.params.heroid)
+	const [hero, setHeroes] = useState(null);
+	
+	function handleChange() {
+
+		setHeroes(heroStore.getHero())
+    }
 
 	useEffect(() => {
 		heroStore.addEventListener(handleChange);
-		if (!heroes || !heroes.length) {
-			loadHeroes();
+
+		if (!hero || !heroid) {
+			loadHeroesById(heroid);
 		}
 
-		return () => {
+		return () => 
 			heroStore.removeEventListener(handleChange);
-		};
-	}, [heroes]);
-
-	function handleChange() {
-		setHeroes(heroStore.getHeroById(11))
-    }
+		
+	}, [hero, heroid]);
 
     return (
-		<div class="hero-info">
+		<div className="hero-info">
 			<img alt="error" id="hero"/>
-			<div class="info">
-				<h2 class="detail-heroes-title">Hero - Detail</h2>
-				<div class="id">
-					<label for="id-text" class="id-label">Id: </label>
-					<span id="id-text" class="name-text">{heroes?.id}</span>
+			<div className="info">
+				<h2 className="detail-heroes-title">Hero - Detail</h2>
+				<div className="id">
+					<span className="id-label">Id: </span>
+					<span className="name-text">{hero?.id}</span>
 				</div>
-				<div class="name">
-					<label for="name-text" class="id-label">Name: </label>
-					<span value="" id="name-text" class="name-text">{heroes?.name}</span>
+				<div className="name">
+					<span className="id-label">Name: </span>
+					<span className="name-text">{hero?.name}</span>
 				</div>
 			</div>
 		</div>

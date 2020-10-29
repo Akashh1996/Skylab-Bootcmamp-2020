@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { loadHeroes } from '../actions/action-creators';
+import { Link } from 'react-router-dom'
 import heroStore from '../stores/store';
 
 function HeroList() {
-	const [heroes, setHeroes] = useState(heroStore.getHeroes());
+	
+	const [heroes, setHeroes] = useState(null);
 	
 	useEffect(() => {
 		heroStore.addEventListener(handleChange);
@@ -24,7 +26,7 @@ function HeroList() {
 		<main>
 			<h2 className="list-heroes-title">List of Heroes</h2>
 			<ul id="list-heroes-list">
-				{heroes.map((hero) => <li>{hero.name}</li>)}
+				{heroes?.map((hero) => <li key={hero.id}><Link to={`/heroes/${hero.id}`}>{hero.name}</Link></li>)}
 			</ul>
 		</main>
 	);

@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 function Header() {
     return <header>
     <h1>Tour of Heroes</h1>
-    <nav class="navigation">
-        <a href="./home.html" class="nav-button">Dashboard</a>
-        <a href="./navigation.html" class="nav-button">Heroes</a>
+    <nav className="navigation">
+        <Link to="/" className="nav-button">Dashboard</Link>
+        <Link to="/heroes" className="nav-button">Heroes</Link>
     </nav>
 </header>
 }

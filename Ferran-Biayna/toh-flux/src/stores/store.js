@@ -1,50 +1,54 @@
-import { EventEmitter } from 'events'
-import dispatcher from '../dispatcher/dispatcher.js'
-import actionTypes from '../actions/action-types.js'
+import { EventEmitter } from 'events';
+import dispatcher from '../dispatcher/dispatcher.js';
+import actionTypes from '../actions/action-types.js';
 
 const change = 'change';
 let heroes = [];
+let hero = [];
 
 class HeroStore extends EventEmitter {
-    
-    getHeroes() {
-        return heroes;
-    }
-
-    getHeroById(heroId) {
-		return this.getHeroes().find((hero) => hero.id === heroId);
+	getHeroes() {
+		return heroes;
 	}
 
-    getTopHeroes() {
-        return this.getHeroes().slice(0,4)
-    }
+	getHero() {
+		return hero;
+	}
 
-    addEventListener(callback) {
-        this.on(change, callback)
-    }
+	getTopHeroes() {
+		return this.getHeroes().slice(0, 4);
+	}
 
-    removeEventListener(callback) {
-        this.removeListener(change, callback)
-    }
+	addEventListener(callback) {
+		this.on(change, callback);
+	}
 
-    emitChange() {
-        this.emit(change)
-    }
+	removeEventListener(callback) {
+		this.removeListener(change, callback);
+	}
 
+	emitChange() {
+		this.emit(change);
+	}
 }
 
 const heroStore = new HeroStore();
 
 dispatcher.register((action) => {
-    switch (action.type) {
-        case actionTypes.load_hero:
-            heroes=action.payload
-            heroStore.emitChange();
-            break;
-    
-        default:
-            break;
-    }
-})
+	switch (action.type) {
+		case actionTypes.load_heroes:
+			heroes = action.payload;
+			heroStore.emitChange();
+			break;
 
-export default heroStore
+		case actionTypes.load_hero:
+			hero = action.payload;
+			heroStore.emitChange();
+			break;
+
+		default:
+			break;
+	}
+});
+
+export default heroStore;
