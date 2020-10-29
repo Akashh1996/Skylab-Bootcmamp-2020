@@ -6,6 +6,7 @@ import HeroList from './components/HeroList';
 import HeroDetails from './components/HeroDetails';
 import reportWebVitals from './reportWebVitals';
 import Dashboard from './components/Dashboard';
+import NotFound from './components/NotFound';
 import Header from './components/Header';
 
 ReactDOM.render(
@@ -13,9 +14,12 @@ ReactDOM.render(
 		<BrowserRouter>
 			<Header />
 			<hr />
-			<Route path="/" exact component={Dashboard} />
-			<Route path="/heroes" exact component={HeroList} />
-			<Route path="/heroes/:algo" component={HeroDetails} />
+			<Switch>
+				<Route path="/" exact component={Dashboard} />
+				<Route path="/heroes" exact component={HeroList} />
+				<Route path="/heroes/:algo" component={HeroDetails} />
+				<Route component={NotFound} />
+			</Switch>
 		</BrowserRouter>
 	</React.StrictMode>,
 	document.getElementById('root')

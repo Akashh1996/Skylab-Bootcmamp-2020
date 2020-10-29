@@ -24,6 +24,13 @@ class HeroStore extends EventEmitter {
 		});
 	}
 
+	sliceHeroes(amount) {
+		if (!amount) {
+			return [];
+		}
+		return _heroes.slice(0, amount);
+	}
+
 	addEventListener(callback) {
 		this.on(CHANGE, callback);
 	}
