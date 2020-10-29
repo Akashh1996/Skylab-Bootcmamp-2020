@@ -3,7 +3,6 @@ function firstsPokemons() {
     let pokemons;
     pokeStore.loadPokemonsFromAPI().then(() => {
         pokemons = pokeStore.getPokemons();
-        console.log(pokemons);
         for (let index = 0; index < 4; index++) {
             let element = document.createElement('div');
             element.innerHTML = `<div class="topPokemon-block" id="${pokemons[index].name}">${pokemons[index].name}</div>`;
