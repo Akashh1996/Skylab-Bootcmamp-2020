@@ -65,7 +65,6 @@ dispatcher.register((action) => {
 			heroStore.emitChange();
 			break;
 		case actionTypes.ADD_HERO:
-			debugger;
 			_heroes = [..._heroes, action.payload];
 			heroStore.emitChange();
 			break;
