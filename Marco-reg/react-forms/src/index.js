@@ -4,7 +4,7 @@ import index from './index.css';
 import Airports from './Airports';
 import Date from './date';
 import reportWebVitals from './reportWebVitals';
-import InputForms from './forms';
+import InputForms from './components/forms';
 import DropDown from './DropDownComponent/DropDown';
 
 ReactDOM.render(

@@ -1,17 +1,19 @@
 import React from 'react';
-import heroes from '../store/store';
+import heroes from '../stores/store';
 import ListItem from './ListItem';
-import '../style.css'
+import '../style.css';
 
 function List() {
-    return (
-        <main>
-            <h2 class="list-title">My Heroes</h2>
-            <div class="list-heroes">
-                {heroes.map((hero) => <ListItem heroID={hero.id} heroName={hero.name}/>)}
-            </div>
-        </main>
-    )
+	return (
+		<main>
+			<h2 class="list-title">My Heroes</h2>
+			<div class="list-heroes">
+				{heroes.map((hero) => (
+					<ListItem heroID={hero.id} heroName={hero.name} />
+				))}
+			</div>
+		</main>
+	);
 }
 
 export default List;
