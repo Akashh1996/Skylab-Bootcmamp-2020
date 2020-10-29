@@ -11,6 +11,7 @@ function Dashboard() {
 		storeHeroes.addEventListener(onChange);
 
 		if (!heroes || !heroes.length) {
+			debugger;
 			loadHeroes();
 		}
 
@@ -18,7 +19,8 @@ function Dashboard() {
 	}, [heroes]);
 
 	function onChange() {
-		setHeroes(storeHeroes.getHeroes);
+		debugger;
+		setHeroes(storeHeroes.getHeroes());
 	}
 
 	return (
@@ -26,10 +28,9 @@ function Dashboard() {
 			<h2 className="top.heroes-title">Top Heroes</h2>
 			<div id="top-heroes__list">
 				{heroes &&
-					heroes.length &&
-					heroes
-						.slice(1, 5)
-						.map((hero) => <DashboardTop heroName={hero.name} />)}
+					heroes.map((hero) => {
+						return <DashboardTop heroName={hero.name} heroId={hero.id} />;
+					})}
 			</div>
 		</div>
 	);

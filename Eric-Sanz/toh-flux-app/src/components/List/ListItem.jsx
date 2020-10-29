@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../TohStyles.css';
 import { Link } from 'react-router-dom';
-import storeHeroes from '../../stores/hero-store';
 
 function ListItem({ heroId, heroName }) {
 	return (

@@ -17,7 +17,7 @@ function DetailHeroes() {
 	}, [heroes]);
 
 	function onChange() {
-		setHeroes(storeHeroes.getHeroes());
+		setHeroes(storeHeroes.getHeroById());
 	}
 
 	return (
