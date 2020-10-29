@@ -1,59 +1,67 @@
-import { EventEmitter } from "events";
+import { EventEmitter } from 'events';
 import dispatcher from '../dispatcher/dispatcher';
-import actionsTypes  from '../actions/action-types';
+import actionTypes from '../actions/action-types';
 
 const CHANGE = 'CHANGE';
 let _heroes = [];
 
 class HeroStore extends EventEmitter {
-    getHeroes() {
-        return _heroes; 
-    }
+	getHeroes() {
+		return _heroes;
+	}
 
-    deleteHero(heroId) {
-        return _heroes.filter((hero) => hero.id !== heroId);
-    }
+	deleteHero(heroId) {
+		return _heroes.filter((hero) => hero.id !== heroId);
+	}
 
-    updateHero(updatedHero) {
-        return _heroes.map((hero) => {
-            if(updatedHero.id)
-        })
-    }
+	updateHero(updatedHero) {
+		return _heroes.map((hero) => {
+			if (updatedHero.id === hero.id) {
+				return updatedHero;
+			} else {
+				return hero;
+			}
+		});
+	}
 
-    addEventListener(callback) {
-        this.on(CHANGE, callback);
-    }
+	addEventListener(callback) {
+		this.on(CHANGE, callback);
+	}
 
-    removeEventListener(callback) {
-        this.removeListener(CHANGE, callback);
-    }
+	removeEventListener(callback) {
+		this.removeListener(CHANGE, callback);
+	}
 
-    emitChange() {
-        this.emit(CHANGE);
-    }
+	emitChange() {
+		this.emit(CHANGE);
+	}
 }
 
 const heroStore = new HeroStore();
 
-dispatcher.register((action)=> {
-    switch(action.type) {
-        case actionsTypes.LOAD_HEROES:
-            _heroes = action.playload;
-            heroStore.emitChange(); 
-            break;
-        case actionsTypes.DELETE_HERO:
-            _heroes = heroStore.deleteHero(action.playload);
-            heroStore.emitChange(); 
-            break;
-        case actionsTypes.ADD_HERO:
-            _heroes = [..._heroes, action.playload];
-            heroStore.emitChange();
-            break; 
-        case actionsTypes.UPDATE_HERO:
-            _heroes = heroStore.updateHero(action.playload);
-            heroStore.emitChange();  
-            break;   
-    }
-})
+dispatcher.register((action) => {
+	switch (action.type) {
+		case actionTypes.LOAD_HEROES:
+			_heroes = action.payload;
+			heroStore.emitChange();
+			break;
+		case actionTypes.DELETE_HERO:
+			_heroes = heroStore.deleteHero(action.payload);
+			heroStore.emitChange();
+			break;
+		case actionTypes.ADD_HERO:
+			debugger;
+			_heroes = [..._heroes, action.payload];
+			heroStore.emitChange();
+			break;
+		case actionTypes.UPDATE_HERO:
+			_heroes = heroStore.updateHero(action.payload);
+			heroStore.emitChange();
+			break;
 
-export default heroStore; 
+		default:
+			break;
+	}
+});
+
+export default heroStore;
