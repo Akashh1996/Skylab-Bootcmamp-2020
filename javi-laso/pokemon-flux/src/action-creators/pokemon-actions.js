@@ -13,4 +13,16 @@ async function loadPokemons(limit = 30, offset = 0) {
 	});
 }
 
-export { loadPokemons };
+async function loadPokemon(pokemonName) {
+	const response = await fetch(
+		`https://pokeapi.co/api/v2/pokemon/${pokemonName}`
+	);
+	const pokemon = await response.json();
+
+	dispatcher.dispatch({
+		type: actionTypes.LOAD_POKEMON,
+		payload: pokemon
+	});
+}
+
+export { loadPokemons, loadPokemon };

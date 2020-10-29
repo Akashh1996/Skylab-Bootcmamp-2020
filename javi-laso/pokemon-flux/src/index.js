@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Header from './components/Header';
 import PokemonList from './components/PokemonList';
+import PokemonDetail from './components/PokemonDetail';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter>
-			<Header />
 			<Switch>
-				<Route to="/" component={PokemonList} />
+				<Route path="/" exact component={PokemonList} />
+				<Route path="/pokemon/:pokemonName" component={PokemonDetail} />
 			</Switch>
 		</BrowserRouter>
 	</React.StrictMode>,

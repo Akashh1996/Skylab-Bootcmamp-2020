@@ -24,9 +24,9 @@ function PokemonList() {
 
 	return (
 		<>
-			{!pokemonList && <h1>Problema</h1>}
+			<h1>Pokemon list</h1>
 			{pokemonList && (
-				<ul>
+				<ul className="pokemon-list">
 					{pokemonList.map((pokemon) => {
 						return <ListElement pokemon={pokemon} />;
 					})}
