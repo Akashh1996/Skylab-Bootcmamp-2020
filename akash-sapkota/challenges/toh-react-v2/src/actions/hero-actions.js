@@ -2,7 +2,7 @@ import actionTypes from './action-types';
 import dispatcher from '../dispatcher/dispatcher';
 
 export async function loadHeroes() {
-	const respose = await fetch('api/heroes.json');
+	const respose = await fetch('/api/heroes.json');
 	const heroes = await respose.json();
 
 	dispatcher.dispatch({

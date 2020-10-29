@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { loadHeroes } from '../actions/hero-actions';
 import heroStore from '../stores/hero-store';
-import { useParams } from "react-router-dom"
-function HeroDetail() {
-    let { heroId } = useParams()
-    console.log(heroId);
+function HeroDetail(props) {
+    const [heroId] = useState(+props.match.params.heroId)
     const [heroDetail, setHeroDetail] = useState(heroStore.getHeroDetail(heroId));
     useEffect(() => {
         heroStore.addEventListener(handleChange);
+
         if (!heroDetail || !heroDetail.length) {
             loadHeroes();
         }
@@ -16,16 +15,16 @@ function HeroDetail() {
         return () => {
             heroStore.removeEventListener(handleChange);
         };
-    }, [heroDetail]);
+    }, [heroDetail, heroId]);
 
     function handleChange() {
-        setHeroDetail(heroStore.getHeroDetail());
+        setHeroDetail(heroStore.getHeroDetail(heroId));
     }
 
     return (
         <>
             {heroDetail &&
-                heroDetail.length > 0 &&
+
                 <div>
                     <h1>{heroDetail.name}</h1>
                     <p>{heroDetail.id}</p>
