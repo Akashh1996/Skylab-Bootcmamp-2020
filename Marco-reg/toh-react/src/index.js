@@ -1,16 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import index from './index.css';
-import Airports from './Airports';
-import Date from './date';
+
 import reportWebVitals from './reportWebVitals';
-import InputForms from './components/forms';
-import DropDown from './DropDownComponent/DropDown';
 
 ReactDOM.render(
-	<React.StrictMode>
-		<InputForms />
-	</React.StrictMode>,
+	<React.StrictMode></React.StrictMode>,
 	document.getElementById('root')
 );
 
