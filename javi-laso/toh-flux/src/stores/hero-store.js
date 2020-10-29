@@ -4,6 +4,7 @@ import actionTypes from '../actions/action-types';
 
 const CHANGE = 'CHANGE';
 let _heroes;
+let _hero;
 
 class HeroStore extends EventEmitter {
 	constructor() {
@@ -17,6 +18,7 @@ class HeroStore extends EventEmitter {
 		this.addEventListener = HeroStore.addEventListener;
 		this.removeEventListener = HeroStore.removeEventListener;
 		this.emitChange = HeroStore.emitChange;
+		this.getHero = HeroStore.getHero;
 	}
 
 	static getHeroes() {
@@ -31,8 +33,8 @@ class HeroStore extends EventEmitter {
 		}
 	}
 
-	static getHeroById(heroId) {
-		return this.getHeroes().find((element) => element.id === heroId);
+	static getHero() {
+		return _hero;
 	}
 
 	static deleteHero(heroId) {
@@ -83,6 +85,11 @@ dispatcher.register((action) => {
 
 		case actionTypes.DELETE_HERO:
 			_heroes = heroStore.deleteHero(action.payload);
+			heroStore.emitChange();
+			break;
+
+		case actionTypes.LOAD_HERO:
+			_hero = action.payload;
 			heroStore.emitChange();
 			break;
 
