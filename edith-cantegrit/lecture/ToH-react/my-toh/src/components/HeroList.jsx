@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { loadHeroes, deleteHero, createHero } from '../actions/hero-actions';
-import heroStore from '../stores/hero-store';
+import heroStore, { HeroStore } from '../stores/hero-store';
+import { Link } from 'react-router-dom';
 
 function HeroList(props) {
-	const [heroes, setHeroes] = useState(heroStore.getHeroes());
+	const [heroes, setHeroes] = useState('');
 	const [newHero, setNewHero] = useState('');
 
 	useEffect(() => {
@@ -18,7 +19,7 @@ function HeroList(props) {
 	}, [heroes]);
 
 	function handleChange() {
-		setHeroes(heroStore.getHeroes());
+		setHeroes(HeroStore.getHeroes());
 	}
 
 	return (
@@ -34,7 +35,7 @@ function HeroList(props) {
 				heroes.length > 0 &&
 				heroes.map((hero) => (
 					<li key={hero.id}>
-						{hero.name} <button onClick={() => deleteHero(hero.id)}>x</button>
+						<Link to={`/heroes/${hero.id}`}>{hero.name}</Link> <button onClick={() => deleteHero(hero.id)}>x</button>
 					</li>
 			))}
 		</>

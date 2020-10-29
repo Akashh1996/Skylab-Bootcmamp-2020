@@ -31,3 +31,10 @@ export function createHero(name) {
 		}
 	});
 }
+
+export function getHeroById(heroId) {
+    dispatcher.dispatch({
+        type: 'GET_HERO_DATA',
+        payload: heroId
+    })
+}

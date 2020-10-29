@@ -3,19 +3,26 @@ import dispatcher from '../dispatcher/dispatcher';
 import actionTypes from '../actions/action-types';
 
 const CHANGE = 'CHANGE';
-let _heroes = [];
+let heroes = [];
 
-class HeroStore extends EventEmitter {
-	getHeroes() {
-		return _heroes;
+export class HeroStore extends EventEmitter {
+	static getHeroes() {
+		return heroes;
 	}
 
-	deleteHero(heroId) {
-		return _heroes.filter((hero) => hero.id !== heroId);
-	}
+	static deleteHero(heroId) {
+		return heroes.filter((hero) => hero.id !== heroId);
+    }
+    
+    static sliceHeroes(amount) {
+        if(!amount) {
+            return [];
+        }
+        return heroes.slice(0, amount);
+    }
 
-	updateHero(updatedHero) {
-		return _heroes.map((hero) => {
+	static updateHero(updatedHero) {
+		return heroes.map((hero) => {
 			if (updatedHero.id === hero.id) {
 				return updatedHero;
 			} else {
@@ -23,6 +30,10 @@ class HeroStore extends EventEmitter {
 			}
 		});
 	}
+
+    getHeroById(heroId) {
+        return heroes[heroId];
+    }
 
 	addEventListener(callback) {
 		this.on(CHANGE, callback);
@@ -42,24 +53,25 @@ const heroStore = new HeroStore();
 dispatcher.register((action) => {
 	switch (action.type) {
 		case actionTypes.LOAD_HEROES:
-			_heroes = action.payload;
+			heroes = action.payload;
 			heroStore.emitChange();
 			break;
 		case actionTypes.DELETE_HERO:
-			_heroes = heroStore.deleteHero(action.payload);
+			heroes = heroStore.deleteHero(action.payload);
 			heroStore.emitChange();
 			break;
 		case actionTypes.ADD_HERO:
-			debugger;
-			_heroes = [..._heroes, action.payload];
+			heroes = [...heroes, action.payload];
 			heroStore.emitChange();
 			break;
 		case actionTypes.UPDATE_HERO:
-			_heroes = heroStore.updateHero(action.payload);
+			heroes = heroStore.updateHero(action.payload);
 			heroStore.emitChange();
-			break;
-
-		default:
+            break;
+        case 'GET_HERO_DATA':
+            heroes = heroStore.getHeroById(action.payload);
+            heroStore.emitChange();
+            default:
 			break;
 	}
 });
