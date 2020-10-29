@@ -25,22 +25,4 @@ Sum.propTypes = {
 	showAlert: PropTypes.func.isRequired
 };
 
-/*
-class Sum extends React.Component {
-	componentWillMount() {
-		console.info('>>>>>>>>will mount    ');
-	}
-	componentDidMount() {
-		console.info('>>>>>>>>did mount    ');
-	}
-	render() {
-		console.info('>>>>>>>>rendear');
-		return (
-			<h1>
-				{this.props.a} + {this.props.b} = {this.props.a + this.props.b}
-			</h1>
-		);
-	}
-}
-*/
 export default Sum;
