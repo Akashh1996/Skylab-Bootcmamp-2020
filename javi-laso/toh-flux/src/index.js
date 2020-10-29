@@ -16,7 +16,7 @@ ReactDOM.render(
 			<Switch>
 				<Route path="/" exact component={Dashboard} />
 				<Route path="/heroes" exact component={HeroList} />
-				<Route path="/heroes/:id" component={Details} />
+				<Route path="/heroes/:heroId" component={Details} />
 				<Route component={NotFound} />
 			</Switch>
 		</BrowserRouter>

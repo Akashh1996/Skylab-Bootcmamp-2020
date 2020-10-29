@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import './Details.css';
 import heroStore from '../stores/hero-store';
 import PowerStatCircle from './PowerStatCircle';
 // import PowerStatCircle from './PowerStatCircle';
 
-function Details() {
-	const { id } = useParams();
-	const [hero] = useState(heroStore.getHeroById(+id));
+function Details({ match }) {
+	const heroId = match.params.heroId;
+	const [hero] = useState(heroStore.getHeroById(+heroId));
 
 	useEffect(() => {
 		document.title = `${hero.name} details`;
