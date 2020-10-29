@@ -15,7 +15,7 @@ export default function HeroList() {
 	}, [heroes]);
 
 	function handleChange() {
-		setHeroes(heroStore.getHeroes());
+		setHeroes(heroStore.getHerolist());
 	}
 
 	return (

@@ -3,9 +3,7 @@ import actionTypes from './action-types';
 
 export async function loadHeroes() {
 	let heroes;
-	const response = await fetch(
-		'https://pokeapi.co/api/v2/pokemon?limit=100&offset=200'
-	);
+	const response = await fetch('api/superHeroData.json');
 	debugger;
 	const result = await response.json();
 	heroes = result;

@@ -18,6 +18,10 @@ class HeroStore extends EventEmitter {
 		return this.getHeroes().slice(0, 4);
 	}
 
+	getHerolist() {
+		return this.getHeroes().slice(0, 10)
+	}
+
 	addEventListener(callback) {
 		this.on(CHANGE, callback);
 	}
