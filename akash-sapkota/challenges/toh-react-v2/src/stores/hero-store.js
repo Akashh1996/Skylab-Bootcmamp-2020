@@ -4,6 +4,8 @@ import actionTypes from '../actions/action-types';
 
 const CHANGE = 'CHANGE';
 let _heroes = [];
+let _topHeroes = [];
+let _heroDetail = [];
 
 class HeroStore extends EventEmitter {
 	getHeroes() {
@@ -18,12 +20,18 @@ class HeroStore extends EventEmitter {
 	emitChange() {
 		this.emit(CHANGE);
 	}
+	getTopHeroes() {
+		_topHeroes = _heroes.slice(1, 5);
+		return _topHeroes;
+	}
+	getHeroDetail(id) {
+		_heroDetail = _heroes.find((hero) => hero.id === id);
+		return _heroDetail;
+	}
 }
-
 const heroStore = new HeroStore();
 
 dispatcher.register((action) => {
-	debugger;
 	switch (action.type) {
 		case actionTypes.LOAD_HEROES:
 			_heroes = action.payload;

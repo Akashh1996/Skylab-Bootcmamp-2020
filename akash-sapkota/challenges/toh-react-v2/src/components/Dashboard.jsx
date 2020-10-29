@@ -1,36 +1,37 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { loadHeroes } from '../actions/hero-actions';
 import heroStore from '../stores/hero-store';
 
-function HeroList(props) {
-    const [heroes, setHeroes] = useState(heroStore.getHeroes());
-    console.log(heroStore.getHeroes());
+function Dashboard() {
+    const [topHeroes, setTopHeroes] = useState(heroStore.getTopHeroes());
     useEffect(() => {
         heroStore.addEventListener(handleChange);
-        if (!heroes || !heroes.length) {
+        if (!topHeroes || !topHeroes.length) {
             loadHeroes();
         }
 
         return () => {
             heroStore.removeEventListener(handleChange);
         };
-    }, [heroes]);
+    }, [topHeroes]);
 
     function handleChange() {
-        setHeroes(heroStore.getHeroes());
+        setTopHeroes(heroStore.getTopHeroes());
     }
 
     return (
         <>
-            {heroes &&
-                heroes.length > 0 &&
-                heroes.map((hero) => (
+            {topHeroes &&
+                topHeroes.length > 0 &&
+                topHeroes.map((hero) => (
                     <li key={hero.id}>
-                        {hero.name} <button>x</button>
+                        <Link to={`/heroes/${hero.id}`}>{hero.name}</Link>
+
                     </li>
                 ))}
         </>
     );
 }
 
-export default HeroList;
+export default Dashboard
