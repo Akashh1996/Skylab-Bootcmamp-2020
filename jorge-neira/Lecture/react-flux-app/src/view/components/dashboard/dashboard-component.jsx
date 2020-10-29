@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './dashboard-component.css';
+import { loadHeroes } from '../../../actions/action-creators';
 import HeroList from './dashboardHeroList-component';
-import HeroStore from '../../../stores/hero-store';
+import heroStore from '../../../stores/hero-store';
 
 export default function DashboardHeroes() {
-	const topHeroes = HeroStore.getTopHeroes();
+	const [heroes, setHeroes] = useState(heroStore.getHeroes);
+	const [topHeroes, setTopHeroes] = useState(heroStore.getHeroes());
+
+	useEffect(() => {
+		heroStore.addEventListener(handleChange);
+		if (!heroes && !heroes.length) {
+			loadHeroes();
+		}
+		return () => {
+			heroStore.removeEventListener(handleChange);
+		};
+	}, [heroes, topHeroes]);
+
+	function handleChange() {
+		setHeroes(heroStore.getHeroes());
+		setTopHeroes(heroStore.getTopHeroes());
+	}
+
 	return (
 		<section className="dashbaord-container">
 			<nav className="topheros">

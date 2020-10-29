@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Header.css';
 
 export default function HeaderNavigation() {
@@ -7,12 +6,8 @@ export default function HeaderNavigation() {
 		<header className="nav-container">
 			<h1 className="nav-title">Tour of Heroes</h1>
 			<nav className="nav-buttons">
-				<button className="nav-button">
-					<Link to="/">Dashboard</Link>
-				</button>
-				<button className="nav-button">
-					<Link to="/heroes/list">Heroes List</Link>
-				</button>
+				<button className="nav-button">DASHBOARD</button>
+				<button className="nav-button">HEROES LIST</button>
 			</nav>
 		</header>
 	);

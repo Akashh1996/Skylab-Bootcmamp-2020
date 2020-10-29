@@ -4,11 +4,19 @@ export default function DetailHero() {
 	return (
 		<section className="detail-container">
 			<h2 className="heroTitle">details!</h2>
-			<span className="heroInfo">id: 12</span>
-			<span className="heroInfo heroInfo-input-wrapper">
-				Name
-				<input className="heroInput" type="text" value={'Test'}></input>
-			</span>
+			<div>
+				<span className="heroInfo heroInfo-input-wrapper">
+					Name:
+					<input className="heroInput" type="text" defaultValue="test"></input>
+				</span>
+			</div>
+			<div>
+				<span className="heroInfo heroInfo-input-wrapper">
+					id:
+					<input className="heroInput" type="text" defaultValue="testa"></input>
+				</span>
+			</div>
+
 			<button className="backButton">Back</button>
 		</section>
 	);
