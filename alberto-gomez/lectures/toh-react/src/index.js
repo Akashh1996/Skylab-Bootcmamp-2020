@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import HeroList from './components/HeroList';
+import HeroDetails from './components/HeroDetails.jsx';
+import Dashboard from './components/Dashboard.jsx';
+import Header from './components/Header';
+import NotFound from './components/NotFound';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<HeroList />
+		<BrowserRouter>
+			<Header />
+			<hr />
+			<Route path="/" exact component={Dashboard} />
+			<Route path="/heroes" exact component={HeroList} />
+			<Route path="/heroes/:algo" component={HeroDetails} />
+			<Route component={NotFound} />
+		</BrowserRouter>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
