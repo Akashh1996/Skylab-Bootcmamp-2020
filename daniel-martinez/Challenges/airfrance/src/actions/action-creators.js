@@ -1,11 +1,11 @@
-import dispatcher from '../dispatcher';
-import actionTypes from './actionTypes';
+import dispatcher from '../dispatcher/dispatcher';
+import actionTypes from './action-types';
 
-const viajeForm = ['Ida y vuelta', 'Sólo Ida', 'Destinos múltiples'];
-
-export function loadViajeform() {
+export async function loadForm1() {
+	const response = await fetch('Form1.json');
+	const form = await response.json();
 	dispatcher.dispatch({
-		type: actionTypes.LOAD_VIAJEFORM,
-		data: viajeForm
+		type: actionTypes.LOAD_FORM,
+		data: form
 	});
 }

@@ -6,9 +6,9 @@ function Select({ name, id, options }) {
 	return (
 		<div className="blocks">
 			<Label text={name} />
-			<select name={name} id={id}>
+			<select name={name} id={id} key={name}>
 				{options.map((option) => (
-					<Option option={option} />
+					<Option option={option} key={option} />
 				))}
 			</select>
 		</div>

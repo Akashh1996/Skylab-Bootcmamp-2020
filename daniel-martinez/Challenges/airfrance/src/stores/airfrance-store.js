@@ -1,9 +1,8 @@
 import { EventEmitter } from 'events';
-import dispatcher from '../dispatcher';
+import dispatcher from '../dispatcher/dispatcher';
 import actionTypes from './../actions/action-types';
-import { loadViajeform } from './../actions/action-creators';
 
-let _viajeform;
+let _form;
 
 class AirfranceStore extends EventEmitter {
 	addEventListener(callback) {
@@ -18,17 +17,19 @@ class AirfranceStore extends EventEmitter {
 		this.emit('CHANGE');
 	}
 
-	getViajeform() {
-		return _viajeform;
+	getForm() {
+		debugger;
+		return _form;
 	}
 }
 
 const airfranceStore = new AirfranceStore();
 
 dispatcher.register((action) => {
+	debugger;
 	switch (action.type) {
-		case actionTypes.LOAD_VIAJEFORM:
-			_viajeform = action.data;
+		case actionTypes.LOAD_FORM:
+			_form = action.data;
 			airfranceStore.emitChange();
 			break;
 

@@ -1,0 +1,13 @@
+{
+    "viaje" : "Sólo Ida",
+    "pasajeros" : 3,
+    "clase" : "PREMIUM ECONOMY",
+    "salida" : "Barcelona",
+    "llegada" : "Mallorca",
+    "fecha" : "02/02/2020",
+    "viajePro" : false,
+    "nombre": "Daniel",
+    "apellido": "Martinez",
+    "email": "dmart34323@gmail.com",
+    "telf": "657483291"
+}

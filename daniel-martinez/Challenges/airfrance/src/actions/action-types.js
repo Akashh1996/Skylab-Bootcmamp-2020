@@ -1,5 +1,6 @@
 const actionTypes = {
-	LOAD_VIAJEFORM: 'LOAD_VIAJEFORM'
+	LOAD_FORM: 'LOAD_FORM',
+	SET_NAME: 'SET_NAME'
 };
 
 export default actionTypes;
