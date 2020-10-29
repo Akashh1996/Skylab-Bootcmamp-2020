@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './Details.css';
 import heroStore from '../stores/hero-store';
 import PowerStatCircle from './PowerStatCircle';
-// import PowerStatCircle from './PowerStatCircle';
 
 function Details({ match }) {
 	const heroId = match.params.heroId;

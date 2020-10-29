@@ -6,11 +6,24 @@ const CHANGE = 'CHANGE';
 let _heroes;
 
 class HeroStore extends EventEmitter {
-	getHeroes() {
+	constructor() {
+		super();
+		this.getHeroes = HeroStore.getHeroes;
+		this.getTopHeroes = HeroStore.getTopHeroes;
+		this.getHeroById = HeroStore.getHeroById;
+		this.deleteHero = HeroStore.deleteHero;
+		this.getDashOffSetfromPercent = HeroStore.getDashOffSetfromPercent;
+		this.setDashParamsInCircle = HeroStore.setDashParamsInCircle;
+		this.addEventListener = HeroStore.addEventListener;
+		this.removeEventListener = HeroStore.removeEventListener;
+		this.emitChange = HeroStore.emitChange;
+	}
+
+	static getHeroes() {
 		return _heroes;
 	}
 
-	getTopHeroes() {
+	static getTopHeroes() {
 		try {
 			return this.getHeroes().slice(0, 4);
 		} catch {
@@ -18,17 +31,17 @@ class HeroStore extends EventEmitter {
 		}
 	}
 
-	getHeroById(heroId) {
+	static getHeroById(heroId) {
 		return this.getHeroes().find((element) => element.id === heroId);
 	}
 
-	deleteHero(heroId) {
+	static deleteHero(heroId) {
 		return _heroes.filter((hero) => {
 			return hero.id !== heroId;
 		});
 	}
 
-	getDashOffSetfromPercent(circle, percent) {
+	static getDashOffSetfromPercent(circle, percent) {
 		let radius = circle.getAttribute('r');
 		let circumference = Math.PI * radius * 2;
 		percent = percent < 0 ? 0 : percent > 100 ? 100 : percent;
@@ -37,7 +50,7 @@ class HeroStore extends EventEmitter {
 		return [dashOffSet, dashArray];
 	}
 
-	setDashParamsInCircle(circle, percent) {
+	static setDashParamsInCircle(circle, percent) {
 		const [dashOffSet, dashArray] = this.getDashOffSetfromPercent(
 			circle,
 			percent
@@ -46,15 +59,15 @@ class HeroStore extends EventEmitter {
 		circle.style.strokeDasharray = dashArray;
 	}
 
-	addEventListener(callback) {
+	static addEventListener(callback) {
 		this.on(CHANGE, callback);
 	}
 
-	removeEventListener(callback) {
+	static removeEventListener(callback) {
 		this.removeListener(CHANGE, callback);
 	}
 
-	emitChange() {
+	static emitChange() {
 		this.emit(CHANGE);
 	}
 }
