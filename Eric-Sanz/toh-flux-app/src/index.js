@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import './TohStyles.css';
+// import Header from './components/Header/Header';
+// import Dashboard from './components/Dashboard/Dashboard';
+import List from './components/List/List';
+// import Detail from './components/Detail/Detail';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <Header />
+    <Dashboard /> */}
+    <List />
+    {/* <Detail /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

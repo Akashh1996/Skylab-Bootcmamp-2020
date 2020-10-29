@@ -16,11 +16,11 @@ class HeroStore extends EventEmitter{
     }
 
     removeEventListener(callback){
-        this.remove(CHANGE, callback);
+        this.removeListener(CHANGE, callback);
     }
 
     emitChange(){
-        this.emitChange(CHANGE);
+        this.emit(CHANGE,);
     }
 }
 

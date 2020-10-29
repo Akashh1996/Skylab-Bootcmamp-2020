@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import ListItem from './ListItem';
 import { loadHeroes } from '../../actions/hero-actions';
 import storeHeroes from '../../stores/hero-store';
-import '../TohStyles.css';
+import '../../TohStyles.css';
 
 function List() {
-	const [heroes, setHeroes] = useState[storeHeroes.getHeroes()];
+	const [heroes, setHeroes] = useState(storeHeroes.getHeroes());
 
 	useEffect(() => {
 		storeHeroes.addEventListener(onChange);
@@ -13,8 +13,9 @@ function List() {
 		if (!heroes || !heroes.length) {
 			loadHeroes();
 		}
-
-		storeHeroes.removeEventListener(onChange);
+		return () => {
+			storeHeroes.removeEventListener(onChange);
+		};
 	}, [heroes]);
 
 	function onChange() {
