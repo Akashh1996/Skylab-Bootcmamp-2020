@@ -6,7 +6,7 @@ const CHANGE = 'CHANGE';
 let _heroes = [];
 
 class HeroStore extends EventEmitter {
-	getHoroes() {
+	getHeroes() {
 		return _heroes;
 	}
 
@@ -28,7 +28,7 @@ class HeroStore extends EventEmitter {
 		this.on(CHANGE, callback);
 	}
 
-	removeListener(callback) {
+	removeEventListener(callback) {
 		this.removeListener(CHANGE, callback);
 	}
 
@@ -42,14 +42,15 @@ const heroStore = new HeroStore();
 dispatcher.register((action) => {
 	switch (action.type) {
 		case actionTypes.LOAD_HEROES:
-			heroStore.emitChange();
 			_heroes = action.payload;
+			heroStore.emitChange();
 			break;
-		case actionTypes.DELETE_HEROES:
+		case actionTypes.DELETE_HERO:
 			_heroes = heroStore.deleteHero(action.payload);
 			heroStore.emitChange();
 			break;
 		case actionTypes.ADD_HERO:
+			debugger;
 			_heroes = [..._heroes, action.payload];
 			heroStore.emitChange();
 			break;
