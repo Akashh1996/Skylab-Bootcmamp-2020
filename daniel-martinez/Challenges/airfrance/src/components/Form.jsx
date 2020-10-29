@@ -27,15 +27,16 @@ const claseForm = [
 ];
 
 function Form() {
-	const [form, setForm] = useState(null);
+	const [form, setForm] = useState(airfranceStore.getForm());
 	//const [name, setInputName] = useState(null);
 
 	useEffect(() => {
 		airfranceStore.addEventListener(handleChanges);
 		if (!form) {
 			loadForm1();
+		} else {
+			console.log(form.nombre);
 		}
-
 		return () => airfranceStore.removeEventListener(handleChanges);
 	}, [form]);
 
@@ -93,7 +94,7 @@ function Form() {
 				</section>
 				<section className="row info">
 					<div className="name">
-						<InputText label="Nombre:" text={form.nombre} />
+						<InputText label="Nombre:" text={form?.nombre} />
 					</div>
 					<div className="apellido">
 						<InputText label="Apellido:" />

@@ -26,7 +26,6 @@ class AirfranceStore extends EventEmitter {
 const airfranceStore = new AirfranceStore();
 
 dispatcher.register((action) => {
-	debugger;
 	switch (action.type) {
 		case actionTypes.LOAD_FORM:
 			_form = action.data;

@@ -23,6 +23,10 @@ textarea {
 	border-left: white;
 }
 
+input:focus {
+	outline: none;
+}
+
 label {
 	color: rgb(56, 56, 56);
 }
