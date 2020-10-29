@@ -1,0 +1,92 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  justify-content: center;
+  margin-left: 2%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.Vuelo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 70%;
+}
+.botonVuelos {
+  background-color: gray;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.botonVuelos:hover{
+  background-color: red;
+}
+
+.botonVuelos1 {
+  background-color: grey;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.botonVuelos1:hover{
+  background-color: blue;
+}
+.botonVuelos2 {
+  background-color: grey;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.botonVuelos2:hover {
+  background-color: blueviolet;
+}
+.exit{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 70%;
+}
+.titulos{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+#title1:hover{
+  border-bottom: 1px solid red;
+}
+#title2{
+  margin-left: 4%; 
+
+}
+input{
+  border: none;
+  border-bottom: 1px solid black;
+}
+#title2:hover{
+  border-bottom: 1px solid red;
+}
+button{
+  margin-top:10px;
+} 
+.leButton{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 70%;
+}
