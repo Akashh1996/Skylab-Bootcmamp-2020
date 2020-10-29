@@ -19,7 +19,11 @@ class HeroStore extends EventEmitter {
 	}
 
 	getHerolist() {
-		return this.getHeroes().slice(0, 10)
+		return this.getHeroes().slice(0, 10);
+	}
+
+	deleteHero() {
+		return this.getHerolist().filter(hero => "as")
 	}
 
 	addEventListener(callback) {
@@ -40,6 +44,11 @@ const heroStore = new HeroStore();
 dispatcher.register((action) => {
 	switch (action.type) {
 		case actionTypes.LOAD_HEROES:
+			_heroes = action.payload;
+			heroStore.emitChange();
+			break;
+
+		case actionTypes.DELETE_HEROES:
 			_heroes = action.payload;
 			heroStore.emitChange();
 			break;

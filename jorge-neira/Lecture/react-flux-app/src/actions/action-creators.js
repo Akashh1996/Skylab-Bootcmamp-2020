@@ -4,7 +4,6 @@ import actionTypes from './action-types';
 export async function loadHeroes() {
 	let heroes;
 	const response = await fetch('api/superHeroData.json');
-	debugger;
 	const result = await response.json();
 	heroes = result;
 
@@ -12,4 +11,13 @@ export async function loadHeroes() {
 		type: actionTypes.LOAD_HEROES,
 		payload: heroes
 	});
+}
+
+export function deleteHeroes(heroId) {
+	console.log(heroId);
+
+	// dispatcher.dispatch({
+	// 	type: actionTypes.DELETE_HEROES,
+	// 	payload: heroes
+	// });
 }
