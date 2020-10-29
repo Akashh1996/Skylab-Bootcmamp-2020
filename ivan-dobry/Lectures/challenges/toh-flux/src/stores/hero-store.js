@@ -11,6 +11,7 @@ class HeroStore extends EventEmitter {
 	}
 
 	deleteHero(heroId) {
+		debugger;
 		return _heroes.filter((hero) => hero.id !== heroId);
 	}
 
