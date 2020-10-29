@@ -3,10 +3,8 @@ import { loadHeroes } from '../actions/action-creators';
 import heroStore from '../stores/store';
 
 function DetailHero() {
-    debugger
     const [heroes, setHeroes] = useState(heroStore.getHeroById(11));
 
-	
 	useEffect(() => {
 		heroStore.addEventListener(handleChange);
 		if (!heroes || !heroes.length) {

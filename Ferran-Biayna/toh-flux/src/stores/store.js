@@ -12,7 +12,6 @@ class HeroStore extends EventEmitter {
     }
 
     getHeroById(heroId) {
-        debugger
 		return this.getHeroes().find((hero) => hero.id === heroId);
 	}
 
@@ -37,7 +36,6 @@ class HeroStore extends EventEmitter {
 const heroStore = new HeroStore();
 
 dispatcher.register((action) => {
-    debugger
     switch (action.type) {
         case actionTypes.load_hero:
             heroes=action.payload
