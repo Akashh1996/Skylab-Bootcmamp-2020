@@ -2,18 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './TohStyles.css';
-// import Header from './components/Header/Header';
-// import Dashboard from './components/Dashboard/Dashboard';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Dashboard from './components/Dashboard/Dashboard';
 import List from './components/List/List';
-// import Detail from './components/Detail/Detail';
+import Detail from './components/Detail/Detail';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Header />
-    <Dashboard /> */}
-    <List />
-    {/* <Detail /> */}
+    <BrowserRouter>
+      <Header />
+      <Route path="/Dashboard" component={Dashboard}/> 
+      <Route path="/List" component={List}/>
+      <Route path="/Detail" component={Detail}/>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

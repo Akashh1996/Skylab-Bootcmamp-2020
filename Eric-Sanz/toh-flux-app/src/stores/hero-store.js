@@ -11,6 +11,10 @@ class HeroStore extends EventEmitter{
         return _heroes;
     }
 
+    // removeHero() {
+    //     return _heroes.filter(heroId)
+    // }
+
     addEventListener(callback){
         this.on(CHANGE, callback); 
     }
@@ -32,7 +36,11 @@ dispatcher.register((action)=> {
             _heroes = action.data
             storeHeroes.emitChange();
             break;
-    
+        case typeActions.REMOVE_HEROES:
+            _heroes = 
+            storeHeroes.emitChange(); 
+            break;
+
         default:
             break;
     }

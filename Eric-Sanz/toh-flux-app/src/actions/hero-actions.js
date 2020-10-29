@@ -10,3 +10,13 @@ export async function loadHeroes() {
         data: heroes
     })
 };
+
+export function removeHeroe(heroId) {
+    dispatcher.dispatch({
+        type: typeActions.REMOVE_HEROES,
+        data: heroId
+    })
+};
+
+
+
