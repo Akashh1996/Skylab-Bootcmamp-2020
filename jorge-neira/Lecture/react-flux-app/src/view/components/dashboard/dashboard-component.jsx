@@ -1,10 +1,10 @@
 import React from 'react';
 import './dashboard-component.css';
 import HeroList from './dashboardHeroList-component';
-import { Link } from 'react-router-dom';
+import HeroStore from '../../../stores/hero-store';
 
+const topHeroes = HeroStore.getTopHeroes();
 export default function DashboardHeroes() {
-	const topHeroes = ['prueba', 'prueba', 'prueba', 'prueba'];
 	return (
 		<>
 			<section className="dashbaord-container">

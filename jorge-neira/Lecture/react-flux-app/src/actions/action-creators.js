@@ -13,11 +13,4 @@ export async function loadHeroes() {
 	});
 }
 
-export function deleteHeroes(heroId) {
-	console.log(heroId);
 
-	// dispatcher.dispatch({
-	// 	type: actionTypes.DELETE_HEROES,
-	// 	payload: heroes
-	// });
-}

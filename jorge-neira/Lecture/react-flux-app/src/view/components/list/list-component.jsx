@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { loadHeroes, deleteHeroes } from '../../../actions/action-creators';
+import { loadHeroes } from '../../../actions/action-creators';
 import heroStore from '../../../stores/hero-store';
 
 export default function HeroList() {
+	debugger;
+
 	const [heroes, setHeroes] = useState(heroStore.getHeroes());
 
 	useEffect(() => {
@@ -27,7 +29,7 @@ export default function HeroList() {
 				heroes.map((hero, index) => (
 					<li key={index}>
 						{hero.name}
-						<button onClick={() => deleteHeroes(hero.id)}>X</button>
+						<butto>X</butto>
 					</li>
 				))}
 		</section>

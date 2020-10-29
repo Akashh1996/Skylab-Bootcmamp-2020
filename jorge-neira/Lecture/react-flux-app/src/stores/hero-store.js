@@ -22,10 +22,6 @@ class HeroStore extends EventEmitter {
 		return this.getHeroes().slice(0, 10);
 	}
 
-	deleteHero() {
-		return this.getHerolist().filter(hero => "as")
-	}
-
 	addEventListener(callback) {
 		this.on(CHANGE, callback);
 	}
