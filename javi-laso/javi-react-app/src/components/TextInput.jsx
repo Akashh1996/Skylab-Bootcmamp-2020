@@ -3,14 +3,12 @@ import { loadHero } from '../actions/action-creators';
 import heroStore from '../stores/hero-store';
 
 function TextInput() {
-	debugger;
 	const [hero, setHero] = useState(heroStore.getHero());
 	const [IdValue, setIdValue] = useState(hero?.id);
 	const [nameValue, setNameValue] = useState(hero?.name);
 	const [lastNameValue, setLastNameValue] = useState(hero?.lastname);
 
 	useEffect(() => {
-		debugger;
 		heroStore.addEventListener(onChange);
 
 		if (!hero) {
@@ -23,7 +21,6 @@ function TextInput() {
 	}, [hero]);
 
 	function onChange() {
-		debugger;
 		const hero = heroStore.getHero();
 		setHero(hero);
 		setIdValue(hero.id);

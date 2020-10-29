@@ -7,7 +7,6 @@ const hero = {
 };
 
 export function loadHero() {
-	debugger;
 	dispatcher.dispatch({
 		type: 'LOAD_HERO',
 		data: hero
