@@ -2,7 +2,6 @@ import actionTypes from './action-types';
 import dispatcher from '../dispatcher/dispatcher';
 
 export async function loadHeroes() {
-	debugger;
 	const response = await fetch('heroes.json');
 	const heroes = await response.json();
 	dispatcher.dispatch({
