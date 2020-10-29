@@ -33,6 +33,7 @@ dispatcher.register((action) => {
             heroStore.emitChange();
             break;
     
+       
         default:
             break;
     }

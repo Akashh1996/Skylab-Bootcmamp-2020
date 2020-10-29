@@ -7,7 +7,6 @@ function HeroList(props) {
     const [heroes, setHeroes] = useState(heroStore.getHeroes());
 
     useEffect(() => {
-        debugger;
         heroStore.addEventListener(handleChange)
         if (heroes.length === 0) {
             loadHeroes();

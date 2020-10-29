@@ -28,11 +28,18 @@ class HeroStore extends EventEmitter {
 const heroStore = new HeroStore();
 
 dispatcher.register((action) => {
+    debugger;
     switch (action.type) {
         case actionTypes.LOAD_HERO:
+            _heroes = action.payload;
             heroStore.emitChange();
             break;
-    
+        case actionTypes.DELETE_HERO:
+            debugger;
+            _heroes = _heroes.filter((hero) => hero.id !== action.payload);
+            heroStore.emitChange();
+            break;
+        
         default:
             break;
     }

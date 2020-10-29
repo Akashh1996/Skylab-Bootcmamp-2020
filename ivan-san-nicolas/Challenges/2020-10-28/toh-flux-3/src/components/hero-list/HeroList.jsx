@@ -1,17 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import dispatcher from '../../dispatcher/dispatcher';
+import {loadHeroes, deleteHero} from '../../actions/hero-actions';
+import heroStore from '../stores/hero-store';
 
-
-function HeroList(props) {
+function HeroList() {
     const [heroes, setHeroes] = useState();
 
     useEffect(() => {
-        if (!heroes) {
+        heroStore.addEventListener(handleChange)
+        if (!heroes || !heroes.length) {
             loadHeroes();
         }
-    })
+    }, [heroes]);
 
-    return <ul></ul>
+    function handleChange() {
+        setHeroes(heroStore.getHeroes())
+    }
+
+    return (    <>
+                {(!heroes || !heroes.length) && <h1>There's no heroes :/</h1>}
+                {(heroes && heroes.length) && heroes.map((hero) => 
+                    <>
+                        <li>{hero.name} ------ <button onClick={() => deleteHero(hero.id)}>X</button></li>
+                    </>
+                )}
+            </>
+
+    )
 }
 
 export default HeroList;

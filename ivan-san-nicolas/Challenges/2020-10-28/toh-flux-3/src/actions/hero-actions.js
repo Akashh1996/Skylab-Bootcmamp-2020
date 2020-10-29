@@ -6,9 +6,18 @@ async function loadHeroes(){
     const heroes = await response.json();
     
     dispatcher.dispatch({
-        type: actionTypes.LOAD_HEROES,
+        type: actionTypes.LOAD_HERO,
         payload: heroes
-    })
+    });
 }
 
-export default loadHeroes;
+async function deleteHero(heroId) {
+    dispatcher.dispatch({
+        type: actionTypes.DELETE_HERO,
+        payload: heroId
+    });
+}
+
+
+
+export {loadHeroes, deleteHero}
