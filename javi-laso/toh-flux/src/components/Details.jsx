@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './Details.css';
 import heroStore from '../stores/hero-store';
@@ -7,7 +7,7 @@ import PowerStatCircle from './PowerStatCircle';
 
 function Details() {
 	const { id } = useParams();
-	const hero = heroStore.getHeroById(+id);
+	const [hero] = useState(heroStore.getHeroById(+id));
 	return (
 		<div className="d-flex flex-column details">
 			<h2 className="mb-4">{hero.name} details!</h2>
