@@ -8,7 +8,8 @@ function Dashboard() {
 
 	useEffect(() => {
 		heroStore.addEventListener(handleChange);
-		if (!heroes || !heroes.length) {
+		document.title = `Principal heroes`;
+		if (!heroes) {
 			loadHeroes();
 		}
 

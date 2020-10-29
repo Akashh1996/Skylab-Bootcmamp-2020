@@ -1,20 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './index.css';
 import HeroList from './components/HeroList';
 import Dashboard from './components/Dashboard';
 import Details from './components/Details';
 import Header from './components/Header';
+import NotFound from './components/NotFound';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<Header />
-			<Route path="/" exact component={Dashboard} />
-			<Route path="/heroes" exact component={HeroList} />
-			<Route path="/heroes/:id" component={Details} />
+			<Switch>
+				<Route path="/" exact component={Dashboard} />
+				<Route path="/heroes" exact component={HeroList} />
+				<Route path="/heroes/:id" component={Details} />
+				<Route component={NotFound} />
+			</Switch>
 		</BrowserRouter>
 	</React.StrictMode>,
 	document.getElementById('root')

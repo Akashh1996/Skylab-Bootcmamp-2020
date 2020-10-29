@@ -3,7 +3,7 @@ import dispatcher from '../dispatcher/dispatcher';
 import actionTypes from '../actions/action-types';
 
 const CHANGE = 'CHANGE';
-let _heroes = [];
+let _heroes;
 
 class HeroStore extends EventEmitter {
 	getHeroes() {
@@ -11,7 +11,11 @@ class HeroStore extends EventEmitter {
 	}
 
 	getTopHeroes() {
-		return this.getHeroes().slice(0, 4);
+		try {
+			return this.getHeroes().slice(0, 4);
+		} catch {
+			return null;
+		}
 	}
 
 	getHeroById(heroId) {

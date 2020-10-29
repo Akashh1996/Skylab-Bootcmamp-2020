@@ -9,7 +9,9 @@ function HeroList() {
 
 	useEffect(() => {
 		heroStore.addEventListener(handleChange);
-		if (!heroes || !heroes.length) {
+		document.title = `List of Heroes`;
+
+		if (!heroes) {
 			loadHeroes();
 		}
 
@@ -26,10 +28,18 @@ function HeroList() {
 		<>
 			<h2 className="mb-4">Heroes List</h2>
 			<ul id="heroes-list">
-				{heroes.map((hero) => {
+				{heroes?.map((hero) => {
 					return <ListElement id={hero.id} name={hero.name} />;
 				})}
 			</ul>
+			<button
+				className="recharge"
+				onClick={() => {
+					loadHeroes();
+				}}
+			>
+				Recharge List
+			</button>
 		</>
 	);
 }
