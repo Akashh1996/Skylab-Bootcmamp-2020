@@ -1,25 +1,19 @@
+import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import './index.css';
-import HeroList from './components/HeroList';
-import Dashboard from './components/Dashboard';
-import HeroDetail from './components/HeroDetail';
-import Header from './components/Header';
-import NotFound from './components/NotFound';
-
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import Dashboard from './components/dashboard/Dashboard';
+import './components/dashboard/dashboard.css';
+import Aside from './components/aside/Aside';
+
 
 ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter>
-			<Header />
-			<hr />
 			<Switch>
 				<Route path="/" exact component={Dashboard} />
-				<Route path="/heroes" exact component={HeroList} />
-				<Route path="/heroes/:heroId" exact component={HeroDetail} />
-				<Route component={NotFound} />
+				<Route path="/aside" exact component={Aside} />
 			</Switch>
 		</BrowserRouter>
 	</React.StrictMode>,

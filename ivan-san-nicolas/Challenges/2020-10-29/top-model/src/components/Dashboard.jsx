@@ -21,13 +21,14 @@ function Dashboard() {
 			loadHeroes();
 		}
 
-		return () => {heroStore.removeEventListener(handleChange)}
-	})
+		return () => { heroStore.removeEventListener(handleChange) }
+	});
 
-    return (<>
-            	{heroes.map((hero) => <p><Link to={`/heroes/:${hero.id}`}>{hero.name}</Link></p>)}
-			</>
-	)
+		return (<div class="dashboard">
+			{heroes.map((hero) => <p><Link to={`/heroes/:${hero.id}`}>{hero.name}</Link></p>)}
+		</div>
+		);
+
 }
 
 export default Dashboard;
