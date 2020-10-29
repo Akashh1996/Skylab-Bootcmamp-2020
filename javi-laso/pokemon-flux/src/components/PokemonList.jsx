@@ -11,22 +11,28 @@ function PokemonList() {
 		if (!pokemonList) {
 			loadPokemons();
 		}
-		debugger;
+
 		return () => {
 			pokemonStore.removeEventListener(handleChange);
 		};
 	}, [pokemonList]);
 
 	function handleChange() {
-		setPokemonList(pokemonStore.getPokemonList());
+		const list = pokemonStore.getPokemonList();
+		setPokemonList(list);
 	}
 
 	return (
-		<ul>
-			{pokemonList?.map((pokemon) => {
-				return <ListElement data={pokemon} />;
-			})}
-		</ul>
+		<>
+			{!pokemonList && <h1>Problema</h1>}
+			{pokemonList && (
+				<ul>
+					{pokemonList.map((pokemon) => {
+						return <ListElement pokemon={pokemon} />;
+					})}
+				</ul>
+			)}
+		</>
 	);
 }
 
