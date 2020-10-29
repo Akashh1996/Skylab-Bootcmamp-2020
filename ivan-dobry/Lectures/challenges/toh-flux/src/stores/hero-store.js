@@ -25,6 +25,18 @@ class HeroStore extends EventEmitter {
 		});
 	}
 
+	getHeroDetail() {
+		let heroString = window.location.href.split('/');
+		let heroId = heroString[heroString.length - 1];
+		return _heroes.find((hero) => {
+			return hero.id === +heroId;
+		});
+	}
+
+	getTopHeroes() {
+		return _heroes.slice(1, 5);
+	}
+
 	addEventListener(callback) {
 		this.on(CHANGE, callback);
 	}

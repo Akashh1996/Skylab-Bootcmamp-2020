@@ -26,7 +26,7 @@ export function createHero(name) {
 	dispatcher.dispatch({
 		type: actionTypes.ADD_HERO,
 		payload: {
-			id: Date.now(), // unique value for the id
+			id: Date.now(),
 			name
 		}
 	});
