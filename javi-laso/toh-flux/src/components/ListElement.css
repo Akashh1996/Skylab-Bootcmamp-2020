@@ -23,3 +23,11 @@
 	width: 60px;
 	text-align: center;
 }
+
+.erase-button {
+	background-color: #607d8b;
+	margin: 7px 15px 7px 0px;
+	width: 60px;
+	text-align: center;
+	padding: 20px;
+}

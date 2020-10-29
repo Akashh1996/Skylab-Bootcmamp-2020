@@ -10,4 +10,11 @@ async function loadHeroes() {
 	});
 }
 
-export { loadHeroes };
+function deleteHero(id) {
+	dispatcher.dispatch({
+		type: actionTypes.DELETE_HERO,
+		payload: id
+	});
+}
+
+export { loadHeroes, deleteHero };

@@ -3,7 +3,7 @@ import DashboardList from './DashboardList';
 import { loadHeroes } from '../actions/hero-actions';
 import heroStore from '../stores/hero-store';
 
-function Dashboard({ list }) {
+function Dashboard() {
 	const [heroes, setHeroes] = useState(heroStore.getTopHeroes());
 
 	useEffect(() => {

@@ -18,6 +18,12 @@ class HeroStore extends EventEmitter {
 		return this.getHeroes().find((element) => element.id === heroId);
 	}
 
+	deleteHero(heroId) {
+		return _heroes.filter((hero) => {
+			return hero.id !== heroId;
+		});
+	}
+
 	getDashOffSetfromPercent(circle, percent) {
 		let radius = circle.getAttribute('r');
 		let circumference = Math.PI * radius * 2;
@@ -55,6 +61,11 @@ dispatcher.register((action) => {
 	switch (action.type) {
 		case actionTypes.LOAD_HEROES:
 			_heroes = action.payload;
+			heroStore.emitChange();
+			break;
+
+		case actionTypes.DELETE_HERO:
+			_heroes = heroStore.deleteHero(action.payload);
 			heroStore.emitChange();
 			break;
 
