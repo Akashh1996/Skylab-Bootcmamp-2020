@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { loadHeroes, deleteHero, createHero } from '../actions/hero-actions';
 import heroStore from '../stores/hero-store';
 
-function HeroList(props) {
+function HeroList() {
 	const [heroes, setHeroes] = useState(heroStore.getHeroes());
 	const [newHero, setNewHero] = useState('');
 

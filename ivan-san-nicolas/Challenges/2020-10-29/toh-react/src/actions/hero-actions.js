@@ -2,7 +2,7 @@ import actionTypes from './action-types';
 import dispatcher from '../dispatcher/dispatcher';
 
 export async function loadHeroes() {
-	const response = await fetch('api/heroes.json');
+	const response = await fetch('/api/heroes.json');
 	const heroes = await response.json();
 
 	dispatcher.dispatch({
@@ -30,4 +30,12 @@ export function createHero(name) {
 			name
 		}
 	});
+}
+
+export async function loadHeroById(heroId) {
+
+	dispatcher.dispatch({
+		type: actionTypes.GET_HERO,
+		payload: heroId
+	})
 }

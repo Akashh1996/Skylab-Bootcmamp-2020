@@ -1,13 +1,28 @@
 import { EventEmitter } from 'events';
 import dispatcher from '../dispatcher/dispatcher';
 import actionTypes from '../actions/action-types';
+import { getHeroById } from '../actions/hero-actions';
 
 const CHANGE = 'CHANGE';
 let _heroes = [];
+let _actualHero;
 
 class HeroStore extends EventEmitter {
 	getHeroes() {
 		return _heroes;
+	}
+
+	getHeroById() {
+
+		return _actualHero;
+	}
+
+	sliceHeroes(amount) {
+		if (!amount) {
+			return _heroes;
+		} else {
+			return _heroes.slice(0, amount);
+		}
 	}
 
 	deleteHero(heroId) {
@@ -56,6 +71,11 @@ dispatcher.register((action) => {
 			break;
 		case actionTypes.UPDATE_HERO:
 			_heroes = heroStore.updateHero(action.payload);
+			heroStore.emitChange();
+			break;
+		
+		case actionTypes.GET_HERO:
+			_actualHero = heroStore.getHeroById(action.payload);
 			heroStore.emitChange();
 			break;
 

@@ -1,5 +1,9 @@
 [
 	{
+		"id": 10,
+		"name": "Ivan-San"
+	},
+	{
 		"id": 11,
 		"name": "Dr Nice"
 	},
@@ -38,9 +42,5 @@
 	{
 		"id": 20,
 		"name": "Tornado"
-	},
-	{
-		"id": 21,
-		"name": "Ivan-San"
 	}
 ]

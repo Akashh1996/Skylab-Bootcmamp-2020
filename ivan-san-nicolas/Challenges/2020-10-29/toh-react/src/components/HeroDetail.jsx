@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { loadHeroes, loadHeroById } from '../actions/hero-actions';
+import heroStore from '../stores/hero-store';
 
-const hero = {
-    id: 12,
-    name: 'Narco',
-    lastname: 'Traficante',
-    superpower: 'Sell drugs'
-}
 
-function HeroDetail() {
+function HeroDetail(props) {
+    
+    const [heroId] = useState(null);
+    const [hero, setHero] = useState(heroStore.getHeroById(props.match.params.heroId));
 
+    function handleChange() {
+        
+    }
+
+    useEffect(() => {
+        heroStore.addEventListener(handleChange);
+        if (heroId && !hero) {
+            loadHeroById();
+        }
+    }, [heroId, hero]);
+    
     return <>
         <h1>Hero Details</h1>
         <p>Id: {hero.id}</p>
