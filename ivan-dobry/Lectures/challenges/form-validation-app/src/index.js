@@ -1,22 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Header from './components/Header';
 import reportWebVitals from './reportWebVitals';
-import Hello from './Hello';
-import Sum from './Sum';
-import ClickCounter from './clickCounter';
-
-const props = {
-	a: 4,
-	b: 2
-};
+import FirstInputSection from './components/FirstInputSection';
+import SecondInputSection from './components/SecondInputSection';
+import ThirdInputSection from './components/ThirdInputSection';
+import FourthInputSection from './components/FourthInputSection';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Hello now={Date()} />
-		<Sum a={4} b={2} />
-		<Sum {...props} />
-		<ClickCounter />
+		<Header />
+		<FirstInputSection />
+		<SecondInputSection />
+		<ThirdInputSection />
+		<FourthInputSection />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
