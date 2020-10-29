@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function HeaderNavigation() {
 	return (
-		<header className="header-nav">
+		<header className="nav-header">
 			<h1>Tour of Heroes</h1>
 			<nav className="nav">
 				<div className="nav-buttons">

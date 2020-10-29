@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import HeaderNavigation from './view/components/header/Header';
 
 ReactDOM.render(
-  <React.StrictMode>
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<HeaderNavigation />
+	</React.StrictMode>,
+	document.getElementById('root')
 );
-
