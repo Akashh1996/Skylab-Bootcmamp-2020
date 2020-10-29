@@ -10,18 +10,30 @@ class HeroStore extends EventEmitter {
 		return _heroes;
 	}
 
-	deleteHero(heroId) {
-		return _heroes.filter((hero) => hero.id !== heroId);
+	getTopHeroes() {
+		return this.getHeroes().slice(0, 4);
 	}
 
-	updateHero(updatedHero) {
-		return _heroes.map((hero) => {
-			if (updatedHero.id === hero.id) {
-				return updatedHero;
-			} else {
-				return hero;
-			}
-		});
+	getHeroById(heroId) {
+		return this.getHeroes().find((element) => element.id === heroId);
+	}
+
+	getDashOffSetfromPercent(circle, percent) {
+		let radius = circle.getAttribute('r');
+		let circumference = Math.PI * radius * 2;
+		percent = percent < 0 ? 0 : percent > 100 ? 100 : percent;
+		let dashOffSet = circumference - (percent / 100) * circumference;
+		let dashArray = circumference;
+		return [dashOffSet, dashArray];
+	}
+
+	setDashParamsInCircle(circle, percent) {
+		const [dashOffSet, dashArray] = this.getDashOffSetfromPercent(
+			circle,
+			percent
+		);
+		circle.style.strokeDashoffset = dashOffSet;
+		circle.style.strokeDasharray = dashArray;
 	}
 
 	addEventListener(callback) {
@@ -43,18 +55,6 @@ dispatcher.register((action) => {
 	switch (action.type) {
 		case actionTypes.LOAD_HEROES:
 			_heroes = action.payload;
-			heroStore.emitChange();
-			break;
-		case actionTypes.DELETE_HERO:
-			_heroes = heroStore.deleteHero(action.payload);
-			heroStore.emitChange();
-			break;
-		case actionTypes.ADD_HERO:
-			_heroes = [..._heroes, action.payload];
-			heroStore.emitChange();
-			break;
-		case actionTypes.UPDATE_HERO:
-			_heroes = heroStore.updateHero(action.payload);
 			heroStore.emitChange();
 			break;
 
