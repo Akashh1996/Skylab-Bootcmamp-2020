@@ -1,8 +1,8 @@
 import dispatcher from '../dispatcher';
 
-const flightOptions = ['Ida y Vuelta', 'Sólo ida', 'Múltiples destinos'];
-const travelers = [1, 2, 3, '3 o más'];
-const classOptions = ["Economic", "Business", "First Class"];
+const flightOptions = ['Ida y Vuelta', 'No vuelvo', 'Múltiples destinos'];
+const travelers = [1, 2, 30, '300 o más'];
+const classOptions = ["Renfe", "Cabify", "Space X"];
 const airports = ["Mars", "Uranus", "Pluto", "Venus", "Corona", "Barcelona", "Viseu", "Skylab", "Cocina", "Camp Nou"];
 
 export function loadDestination() {
