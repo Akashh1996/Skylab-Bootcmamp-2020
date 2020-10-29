@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import HeroList from '../src/components/HeroList';
+import HeroList from './components/HeroList';
 
 ReactDOM.render(
 	<React.StrictMode>

@@ -1,4 +1,4 @@
-import { EventEmitter } from 'event';
+import { EventEmitter } from 'events';
 import dispatcher from '../dispatcher/dispatcher';
 import actionTypes from '../actions/action-types';
 
@@ -23,6 +23,7 @@ class HeroStore extends EventEmitter {
 const heroStore = new HeroStore();
 
 dispatcher.register((action) => {
+	debugger;
 	switch (action.type) {
 		case actionTypes.LOAD_HEROES:
 			_heroes = action.payload;
@@ -32,3 +33,4 @@ dispatcher.register((action) => {
 			break;
 	}
 });
+export default heroStore;
