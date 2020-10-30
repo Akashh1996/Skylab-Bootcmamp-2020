@@ -1,4 +1,5 @@
 import React from 'react';
+import DropDown from './DropDown';
 
 function TypeFlight() {
 
@@ -13,34 +14,19 @@ function TypeFlight() {
             <div id="travel" className="data">
                 <p>
                     <label type="text" for="viaje">{selectOptions[0].type}</label>
-                    <select name="viaje" id="viaje" className="box-options">
-                        <option value="idaYvuelta">{selectOptions[0].options[0]}</option>
-                        <option value="ida">{selectOptions[0].options[1]}</option>
-                        <option value="destMultiples">{selectOptions[0].options[2]}</option>
-                    </select>
+                    <DropDown optionValues={selectOptions[0].options}/>                  
                 </p>
             </div>  
             <div id="passengers" className="data">
                 <p>
                     <label for="pasajeros">{selectOptions[1].type}</label>
-                    <select name="pasajeros" id="pasajeros" className="box-options">
-                        <option value="1">{selectOptions[1].options[0]}</option>
-                        <option value="2">{selectOptions[1].options[1]}</option>
-                        <option value="3">{selectOptions[1].options[2]}</option>
-                        <option value="3">{selectOptions[1].options[3]}</option>
-                        <option value="3">{selectOptions[1].options[4]}</option>
-                    </select>
+                    <DropDown optionValues={selectOptions[1].options}/>
                 </p>
             </div>
             <div id="travelClass" className="data">
                 <p>
                     <label for="traveClass">{selectOptions[2].type}</label>
-                    <select name="lass" id="travelClass" className="box-options" >
-                        <option value="eco" >{selectOptions[2].options[0]}</option>
-                        <option value="premium">{selectOptions[2].options[1]}</option>
-                        <option value="business">{selectOptions[2].options[2]}</option>
-                        <option value="premier">{selectOptions[2].options[3]}</option>
-                    </select>
+                    <DropDown optionValues={selectOptions[2].options}/>
                 </p>
             </div>
         </div>
