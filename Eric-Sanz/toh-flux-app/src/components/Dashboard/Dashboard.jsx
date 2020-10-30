@@ -5,7 +5,7 @@ import '../../TohStyles.css';
 import DashboardTop from './DashboardTop';
 
 function Dashboard() {
-	const [heroes, setHeroes] = useState(storeHeroes.getHeroes());
+	const [heroes, setHeroes] = useState(null);
 
 	useEffect(() => {
 		storeHeroes.addEventListener(onChange);
@@ -15,11 +15,10 @@ function Dashboard() {
 			loadHeroes();
 		}
 
-		return storeHeroes.removeEventListener(onChange);
+		return () => storeHeroes.removeEventListener(onChange);
 	}, [heroes]);
 
 	function onChange() {
-		debugger;
 		setHeroes(storeHeroes.getHeroes());
 	}
 
@@ -28,7 +27,7 @@ function Dashboard() {
 			<h2 className="top.heroes-title">Top Heroes</h2>
 			<div id="top-heroes__list">
 				{heroes &&
-					heroes.map((hero) => {
+					heroes.slice(1, 5).map((hero) => {
 						return <DashboardTop heroName={hero.name} heroId={hero.id} />;
 					})}
 			</div>

@@ -16,7 +16,7 @@ ReactDOM.render(
 			<Switch>
 				<Route path="/Dashboard" component={Dashboard} />
 				<Route path="/List" component={List} />
-				<Route path="/Detail" component={Detail} />
+				<Route path="/Detail/:heroId" component={Detail} />
 			</Switch>
 		</BrowserRouter>
 	</React.StrictMode>,

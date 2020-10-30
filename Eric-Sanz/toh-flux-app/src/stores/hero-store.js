@@ -1,13 +1,19 @@
-import EventEmitter from 'events';
 import dispatcher from '../dispatcher/dispatcher';
 import typeActions from '../actions/type-actions';
 
+import { EventEmitter } from 'events';
+
 const CHANGE = 'CHANGE';
 let _heroes = [];
+let _hero;
 
 class HeroStore extends EventEmitter {
 	getHeroes() {
 		return _heroes;
+	}
+
+	getHero() {
+		return _hero;
 	}
 
 	getHeroById() {
@@ -23,7 +29,6 @@ class HeroStore extends EventEmitter {
 	}
 
 	emitChange() {
-		debugger;
 		this.emit(CHANGE);
 	}
 }
@@ -34,13 +39,15 @@ dispatcher.register((action) => {
 	switch (action.type) {
 		case typeActions.LOAD_HEROES:
 			_heroes = action.data;
-			debugger;
 			storeHeroes.emitChange();
 			break;
 		case typeActions.REMOVE_HEROES:
 			_heroes = storeHeroes.emitChange();
 			break;
-
+		case typeActions.LOAD_HERO:
+			_hero = action.data;
+			storeHeroes.emitChange();
+			break;
 		default:
 			break;
 	}
