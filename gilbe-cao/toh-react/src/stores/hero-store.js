@@ -1,67 +1,87 @@
+/* eslint-disable class-methods-use-this */
 import { EventEmitter } from 'events';
 import dispatcher from '../dispatcher/dispatcher';
 import actionTypes from '../actions/action-types';
 
 const CHANGE = 'CHANGE';
-let _heroes = [];
+let heroes = [];
+let hero;
 
-class HeroStore extends EventEmitter {
-	getHeroes() {
-		return _heroes;
-	}
+export class HeroStore extends EventEmitter {
+  getHeroes() {
+    return heroes;
+  }
 
-	deleteHero(heroId) {
-		return _heroes.filter((hero) => hero.id !== heroId);
-	}
+  getHero() {
+    return hero;
+  }
 
-	updateHero(updatedHero) {
-		return _heroes.map((hero) => {
-			if (updatedHero.id === hero.id) {
-				return updatedHero;
-			} else {
-				return hero;
-			}
-		});
-	}
+  getHeroById(heroId) {
+    return heroes.find((heroFind) => heroFind.id === heroId);
+  }
 
-	addEventListener(callback) {
-		this.on(CHANGE, callback);
-	}
+  deleteHero(heroId) {
+    return heroes.filter((heroFilter) => heroFilter.id !== heroId);
+  }
 
-	removeEventListener(callback) {
-		this.removeListener(CHANGE, callback);
-	}
+  updateHero(updatedHero) {
+    return heroes.map((heroMap) => {
+      if (updatedHero.id === heroMap.id) {
+        return updatedHero;
+      }
+      return hero;
+    });
+  }
 
-	emitChange() {
-		this.emit(CHANGE);
-	}
+  sliceHeroes(amount) {
+    if (!amount) {
+      return [];
+    }
+
+    return heroes.slice(0, amount);
+  }
+
+  addEventListener(callback) {
+    this.on(CHANGE, callback);
+  }
+
+  removeEventListener(callback) {
+    this.removeListener(CHANGE, callback);
+  }
+
+  emitChange() {
+    this.emit(CHANGE);
+  }
 }
 
 const heroStore = new HeroStore();
 
 dispatcher.register((action) => {
-	switch (action.type) {
-		case actionTypes.LOAD_HEROES:
-			_heroes = action.payload;
-			heroStore.emitChange();
-			break;
-		case actionTypes.DELETE_HERO:
-			_heroes = heroStore.deleteHero(action.payload);
-			heroStore.emitChange();
-			break;
-		case actionTypes.ADD_HERO:
-			debugger;
-			_heroes = [..._heroes, action.payload];
-			heroStore.emitChange();
-			break;
-		case actionTypes.UPDATE_HERO:
-			_heroes = heroStore.updateHero(action.payload);
-			heroStore.emitChange();
-			break;
+  switch (action.type) {
+    case actionTypes.LOAD_HEROES:
+      heroes = action.payload;
+      heroStore.emitChange();
+      break;
+    case actionTypes.DELETE_HERO:
+      heroes = heroStore.deleteHero(action.payload);
+      heroStore.emitChange();
+      break;
+    case actionTypes.ADD_HERO:
+      heroes = [...heroes, action.payload];
+      heroStore.emitChange();
+      break;
+    case actionTypes.UPDATE_HERO:
+      heroes = heroStore.updateHero(action.payload);
+      heroStore.emitChange();
+      break;
+    case actionTypes.LOAD_HERO:
+      hero = action.payload;
+      heroStore.emitChange();
+      break;
 
-		default:
-			break;
-	}
+    default:
+      break;
+  }
 });
 
 export default heroStore;
