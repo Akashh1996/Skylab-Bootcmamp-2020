@@ -34,6 +34,7 @@ function Form() {
 		airfranceStore.addEventListener(handleChanges);
 		if (!form) {
 			loadForm1();
+			console.log('Dont have data, loading');
 		} else {
 			console.log(form.nombre);
 		}
