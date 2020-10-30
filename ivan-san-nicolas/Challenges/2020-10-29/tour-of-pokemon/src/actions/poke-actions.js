@@ -10,3 +10,13 @@ export async function loadPokemons() {
         payload: pokemons
     });
 }
+
+export async function loadPokemonById(pokemonId) {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
+    const pokemon = await response.json();
+
+    dispatcher.dispatch({
+        type: actionTypes.GET_ACTUAL_POKEMON,
+        payload: pokemon
+    });
+}

@@ -1,6 +1,7 @@
 import { EventEmitter } from 'events';
 import dispatcher from '../dispatcher';
 import actionTypes from '../actions/action-types';
+
 const CHANGE = 'CHANGE';
 const totalAmount = 893;
 
@@ -46,7 +47,12 @@ dispatcher.register((action) => {
             _pokemons = action.payload;
             pokeStore.emitChange();
             break;
-    
+        
+        case actionTypes.GET_ACTUAL_POKEMON:
+            _actualPokemon = action.payload;
+            pokeStore.emitChange();
+            break;
+        
         default:
             break;
     }
