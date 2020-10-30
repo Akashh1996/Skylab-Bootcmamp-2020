@@ -1,6 +1,12 @@
 body {
 	font-family: sans-serif;
 }
+.deleteButton {
+	width: 170px;
+	margin-bottom: 10px;
+	position: relative;
+	top: -9px;
+}
 
 .main-title {
 	font-size: 30px;
