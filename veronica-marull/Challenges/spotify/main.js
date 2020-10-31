@@ -15,6 +15,7 @@ startbtn.addEventListener('click', function () {
 	options.classList.remove('hidden');
 });
 
+/*
 async function showImageArtistById(artistId) {
 	const artist = await spotiStore.getInfoArtist(artistId);
 	let url = artist.images[0].url;
@@ -24,15 +25,22 @@ async function showImageArtistById(artistId) {
 async function showNameArtistById(artistId) {
 	const artistName = await spotiStore.getInfoArtist(artistId);
 	artist.innerText = artistName.name;
-}
+}*/
 
 //showInfoArtist('66CXWjxzNUsdJxJ2JdwvnR');
-/*
+
 async function getArtistsIds() {
 	const releases = await spotiStore.getNewReleases();
 	for (album of releases.albums.items) {
-        console.log('Album: ', album.name);
-        artist.innerText += album.artists[0].name;*/
+		console.log('Album: ', album.artist.name);
+		console.log('Album: ', album.id);
 
+		artist.innerText += album.artists[0].name;
+	}
+}
+
+getArtistsIds();
+
+/*
 showNameArtistById('2FFrhWZS9vJsh2UvxYPRr6');
-showImageArtistById('2FFrhWZS9vJsh2UvxYPRr6');
+showImageArtistById('2FFrhWZS9vJsh2UvxYPRr6');*/
