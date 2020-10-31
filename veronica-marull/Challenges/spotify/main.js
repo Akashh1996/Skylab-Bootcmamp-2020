@@ -32,7 +32,7 @@ async function showNameArtistById(artistId) {
 async function getArtistsIds() {
 	const releases = await spotiStore.getNewReleases();
 	for (album of releases.albums.items) {
-		console.log('Album: ', album.artist.name);
+		console.log('Album: ', album.name);
 		console.log('Album: ', album.id);
 
 		artist.innerText += album.artists[0].name;
