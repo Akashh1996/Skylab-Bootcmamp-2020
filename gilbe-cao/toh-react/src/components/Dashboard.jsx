@@ -19,12 +19,13 @@ function Dashboard() {
     }
 
     return () => { heroStore.removeEventListener(handleChange); };
-  });
+  }, [heroes]);
   return (
     <>
-      <ul>
-        {heroes.map((hero) => <li key={hero.id}><Link to={`/heroes/${hero.id}`}>{hero.name}</Link></li>)}
-      </ul>
+      {!heroes.length && <h1>There are no heroes!</h1>}
+      {
+        heroes.length && <ul>{heroes.map((hero) => <li key={hero.id}><Link to={`/heroes/${hero.id}`}>{hero.name}</Link></li>)}</ul>
+      }
     </>
   );
 }
