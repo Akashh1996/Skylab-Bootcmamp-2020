@@ -9,6 +9,7 @@ function Dashboard() {
         heroStore.addEventListener(handleChange);
         if (!topHeroes || !topHeroes.length) {
             loadHeroes();
+
         }
 
         return () => {

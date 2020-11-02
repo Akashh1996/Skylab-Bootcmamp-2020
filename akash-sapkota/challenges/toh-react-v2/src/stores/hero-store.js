@@ -25,7 +25,6 @@ class HeroStore extends EventEmitter {
 		return _topHeroes;
 	}
 	getHeroDetail(id) {
-		debugger;
 		_heroDetail = _heroes.find((hero) => hero.id === +id);
 		return _heroDetail;
 	}
