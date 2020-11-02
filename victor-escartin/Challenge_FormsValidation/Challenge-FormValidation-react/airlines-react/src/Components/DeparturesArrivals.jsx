@@ -1,4 +1,5 @@
 import React from 'react';
+import DropDown from './DropDown';
 
 export default function DeparturesArrivals(){
 
@@ -8,23 +9,14 @@ export default function DeparturesArrivals(){
         <div id="landings" class="data">
             <div id="departures" >
                 <span class="material-icons">flight_takeoff</span>
-                <select nameName="departures" id="departures" class="box-options">
-                    <option value="predef">Salidas de *</option>
-                    <option value="Acorunya">{departuresOptions[0].options[1]}</option>
-                    <option value="barcelona">{departuresOptions[0].options[2]}</option>
-                    <option value="madrid">{departuresOptions[0].options[3]}</option>
-                </select>
+                <DropDown optionValues={departuresOptions[0].options}/>
             </div>
             <div id="Arrivals">
                 <span class="material-icons">flight_land</span>
-                <select nameName="arrivals" id="arrivals" class="box-options">
-                    <option value="predef">Salidas de *</option>
-                    <option value="Acorunya">{departuresOptions[0].options[1]}</option>
-                    <option value="barcelona">{departuresOptions[0].options[2]}</option>
-                    <option value="madrid">{departuresOptions[0].options[3]}</option>
-                </select>
+                <DropDown optionValues={departuresOptions[0].options}/>
             </div>
             <br></br>
         </div>
     )
 }
+
