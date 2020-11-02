@@ -1,12 +1,13 @@
 import actionTypes from './action-types';
 import dispatcher from '../dispatcher/dispatcher';
+import axios from 'axios';
 
 async function loadHeroes() {
-	const response = await fetch('/api/heroes.json');
-	const heroes = await response.json();
+	const heroes = await axios('/api/heroes.json');
+	debugger;
 	dispatcher.dispatch({
 		type: actionTypes.LOAD_HEROES,
-		payload: heroes
+		payload: heroes.data
 	});
 }
 
