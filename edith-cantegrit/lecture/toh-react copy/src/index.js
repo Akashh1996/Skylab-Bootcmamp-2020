@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
 	<React.StrictMode>
+        
 		<HeroList />
 	</React.StrictMode>,
 	document.getElementById('root')
