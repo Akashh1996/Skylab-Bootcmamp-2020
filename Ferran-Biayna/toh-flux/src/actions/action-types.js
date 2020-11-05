@@ -1,9 +1,13 @@
 const actionTypes = {
-	load_heroes: 'load_heroes',
-	load_hero: 'load_hero',
-	update_hero: 'update_hero',
-	delete_hero: 'delete_hero',
-	add_hero: 'add_hero'
+	LOAD_HEROES: 'LOAD_HEROES',
+	LOAD_HERO: 'LOAD_HERO',
+	DELETE_HERO: 'DELETE_HERO',
+	ADD_HERO: 'ADD_HERO',
+	UPDATE_HERO: 'UPDATE_HERO',
+	AUTH_LOGIN: 'AUTH_LOGIN',
+	AUTH_LOGIN_ERROR: 'AUTH_LOGIN_ERROR',
+	AUTH_SIGNOUT: 'AUTH_SIGNOUT',
+	AUTH_SIGNOUT_ERROR: 'AUTH_SIGNOUT_ERROR',
 };
 
 export default actionTypes;
