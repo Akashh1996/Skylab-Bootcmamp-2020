@@ -7,15 +7,12 @@ import reportWebVitals from './reportWebVitals';
 import Dashborad from '../src/components/Dashboard';
 import HeroDetails from './components/HeroDetails';
 import NotFound from './components/NotFound';
+import Header from './components/header';
 
 ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter>
-			<nav className="toh-navigation">
-				<Link to="/">Dashboard</Link>
-				{' | '}
-				<Link to="/heroes">Heroes</Link>
-			</nav>
+			<Header />
 			<Switch>
 				<Route path="/" exact component={Dashborad} />
 				<Route path="/heroes" exact component={HeroList} />
