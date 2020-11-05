@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './index.css';
 import HeroList from './components/HeroList';
@@ -10,7 +10,7 @@ import NotFound from './components/NotFound';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
 
-ReactDOM.render(
+render(
   <React.StrictMode>
     <BrowserRouter>
       <Header />

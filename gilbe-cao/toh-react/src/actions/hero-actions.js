@@ -33,9 +33,8 @@ export function createHero(name) {
 }
 
 export async function loadHeroById(heroId) {
-  const response = await fetch('/api/heroes.json');
-  const heroes = await response.json();
-  const hero = heroes.find((heroFind) => heroFind.id === heroId);
+  const { data } = await axios(`/api/heroes.json?heroId=${heroId}`);
+  const hero = data.find((heroFind) => heroFind.id === heroId);
   dispatcher.dispatch({
     type: actionTypes.LOAD_HERO,
     payload: hero,
