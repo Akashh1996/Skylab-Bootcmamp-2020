@@ -3,48 +3,43 @@ import firebase from 'firebase';
 import dispatcher from '../dispatcher/dispatcher';
 import actionTypes from './action-types';
 
+function handleSignIn(user) {
+  const customUserData = {
+    displayName: user.displayName,
+    email: user.email,
+    phoneNumber: user.phoneNumber,
+    photoURL: user.photoURL,
+  };
+  dispatcher.dispatch({
+    type: actionTypes.AUTH_LOGIN,
+    payload: customUserData,
+  });
+}
+
+function handleError(type) {
+  dispatcher.dispatch({
+    type,
+  });
+}
+
 export async function signInWithGoogle() {
   const provider = new firebase.auth.GoogleAuthProvider();
   provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
   try {
     const { user } = await firebase.auth().signInWithPopup(provider);
-    // eslint-disable-next-line no-alert
-    const customUserData = {
-      displayName: user.displayName,
-      email: user.email,
-      phoneNumber: user.phoneNumber,
-      photoURL: user.photoURL,
-    };
-    dispatcher.dispatch({
-      type: actionTypes.AUTH_LOGIN,
-      payload: customUserData,
-    });
+    handleSignIn(user);
   } catch (error) {
-    dispatcher.dispatch({
-      type: actionTypes.AUTH_LOGIN_ERROR,
-    });
+    handleError(actionTypes.AUTH_LOGIN_ERROR);
   }
 }
 
 export async function signInWithEmail(email, password) {
   try {
     const { user } = await firebase.auth().signInWithEmailAndPassword(email, password);
-    // eslint-disable-next-line no-alert
-    const customUserData = {
-      displayName: user.displayName,
-      email: user.email,
-      phoneNumber: user.phoneNumber,
-      photoURL: user.photoURL,
-    };
-    dispatcher.dispatch({
-      type: actionTypes.AUTH_LOGIN,
-      payload: customUserData,
-    });
+    handleSignIn(user);
   } catch (error) {
-    dispatcher.dispatch({
-      type: actionTypes.AUTH_LOGIN_ERROR,
-    });
+    handleError(actionTypes.AUTH_LOGIN_ERROR);
   }
 }
 
@@ -55,8 +50,6 @@ export async function signOut() {
       type: actionTypes.AUTH_SIGNOUT,
     });
   } catch (error) {
-    dispatcher.dispatch({
-      type: actionTypes.AUTH_SIGNOUT_ERROR,
-    });
+    handleError(actionTypes.AUTH_SIGNOUT_ERROR);
   }
 }
