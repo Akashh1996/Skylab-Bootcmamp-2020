@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events';
 import dispatcher from '../dispatcher/dispatcher';
-import actionTypes from "../actions/action-types";
+import actionTypes from '../actions/action-types';
 
 const artists = {
 	Rammstein: '6wWVKhxIU2cEi0K81v7HvP',
@@ -22,7 +22,7 @@ let _artist;
 let _artistTopTracks;
 
 class Store extends EventEmitter {
-  getClientId() {
+	getClientId() {
 		return _clientId;
 	}
 
@@ -32,8 +32,7 @@ class Store extends EventEmitter {
 
 	getToken() {
 		return _spotifyToken;
-  }
-  
+	}
 
 	setArtist(artist) {
 		_artist = artist;
@@ -50,15 +49,14 @@ class Store extends EventEmitter {
 
 const store = new Store();
 
-dispatcher.register((action)=>{
-  switch (action.type) {
-    case value:
-      
-      break;
-  
-    default:
-      break;
-  }
-};
+dispatcher.register((action) => {
+	switch (action.type) {
+		case actionTypes.REQUEST_TOKEN:
+			break;
+
+		default:
+			break;
+	}
+});
 
 export default store;
