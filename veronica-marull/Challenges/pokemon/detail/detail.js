@@ -1,5 +1,3 @@
-//const store = require('../store');
-
 async function drawPokemon(pokeName) {
 	const pokemon = await store.getPokemonDetail(pokeName);
 	if (pokemon) {
@@ -37,7 +35,3 @@ function getPokemonName() {
 }
 
 drawPokemon(getPokemonName());
-
-function log(p1, p2) {
-	console.log(texto);
-}

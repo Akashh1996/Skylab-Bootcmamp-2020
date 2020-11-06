@@ -1,4 +1,3 @@
-const { test, expect } = require('@jest/globals');
 const store = require('./store');
 
 describe('Pokestore', () => {
@@ -18,14 +17,14 @@ describe('Pokestore', () => {
 
 	test('should load pokemons from api', () => {
 		const response = {
-			json: jest.fn().mockReturnValueOnce([{ id: 12, name: 'Narco' }])
+			json: jest.fn().mockReturnValueOnce([{}])
 		};
 		global.fetch = jest
 			.fn()
 			.mockImplementationOnce(() => Promise.resolve(response));
 
 		return store.loadPokemons().then(() => {
-			expect(store.getPokemons()).toEqual([{ id: 12, name: 'Narco' }]);
+			expect(store.getPokemons()).toEqual([{}]);
 		});
 	});
 	/*
