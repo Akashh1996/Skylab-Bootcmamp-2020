@@ -1,6 +1,7 @@
 import './firebase/firebaseIndex';
 import firebase from 'firebase';
 import dispatcher from '../dispatcher/dispatcher';
+import actionTypes from './action-types';
 
 export function signIn(email, password) {
     try {
