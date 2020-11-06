@@ -1,8 +1,8 @@
-import { EventEmitter } from 'event';
+import { EventEmitter } from 'events';
 import dispatcher from '../dispatcher/dispatcher';
 import actionTypes from '../actions/action-types';
 
-const CHANGE = 'AUTH_CHANGE';
+const CHANGE = 'CHANGE';
 let user;
 
 class AuthStore extends EventEmitter {
@@ -30,13 +30,13 @@ dispatcher.register((action) => {
 			user = action.payload;
 			authStore.emitChange();
 			break;
-		case actionTypes.AUTH_SIGOUT:
+		case actionTypes.AUTH_SIGNOUT:
 			user = null;
 			authStore.emitChange();
 			break;
 
 		case actionTypes.AUTH_LOGIN_ERROR:
-		case actionTypes.AUTH_SINGOUT_ERROR:
+		case actionTypes.AUTH_SIGNOUT_ERROR:
 		default:
 			break;
 	}

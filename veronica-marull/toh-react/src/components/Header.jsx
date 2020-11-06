@@ -1,5 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import {
+	signInWithEmail,
+	signInWithGoogle,
+	signOut
+} from '../actions/auth-actions';
+import authStore from '../stores/auth-store';
 
 const hero = {
 	id: 12
@@ -8,11 +14,56 @@ const hero = {
 function Header() {
 	const [user, setUser] = useState(authStore.getUser());
 
+	function handleChange() {
+		setUser(authStore.getUser());
+	}
+
+	useEffect(() => {
+		authStore.addChangeListener(handleChange);
+		return () => authStore.removeChangeListener(handleChange);
+	});
+
+	function getSignInButtons() {
+		return (
+			<>
+				<button
+					type="button"
+					onClick={(event) => {
+						event.preventDefault();
+						signInWithEmail('vero@test.com', '123456');
+					}}
+				>
+					{' '}
+					Email/Password
+				</button>
+				{' | '}
+				<button
+					type="button"
+					onClick={(event) => {
+						event.preventDefault();
+						signInWithGoogle();
+					}}
+				>
+					Google
+				</button>
+				;
+			</>
+		);
+	}
+
 	function isSignInVisible() {
-		return isLogged ? (
-			<Link to="/signout">Sign Out</Link>
+		return user ? (
+			<button
+				type="button"
+				onClick={(event) => {
+					event.preventDefault();
+					signOut();
+				}}
+			>
+				Sign Out
+			</button>
 		) : (
-			<Link to="/signin">Sign In</Link>
+			getSignInButtons()
 		);
 	}
 	return (
@@ -26,6 +77,12 @@ function Header() {
 				<Link to={`/heroes/${hero.id}`}>Narco details</Link>
 				{' | '}
 				{isSignInVisible()}
+				{user && (
+					<span>
+						{' '}
+						{' | '} Welcome {user.email}{' '}
+					</span>
+				)}
 			</nav>
 		</>
 	);
