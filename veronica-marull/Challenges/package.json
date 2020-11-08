@@ -1,12 +1,14 @@
 {
-  "name": "Challenges",
-  "version": "1.0.0",
-  "description": "",
-  "main": "arrayMethod.test.js",
-  "scripts": {
-    "test": "jest"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+	"name": "Challenges",
+	"version": "1.0.0",
+	"description": "",
+	"main": "arrayMethod.test.js",
+	"scripts": {
+		"test": "jest",
+		"test:coverage": "jest --collect-coverage --watchAll",
+		"test:debug": "node --inspect -brk./node_modules/jest/bin/jest.js --runInBand"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
 }

@@ -27,7 +27,7 @@ class SpotifyStore {
 		);
 		return await response.json();
 	}
-
+	/*
 	async getInfoArtist(artistId) {
 		await this.getToken();
 		const artistInfo = await fetch(
@@ -48,14 +48,9 @@ class SpotifyStore {
 			}
 		);
 		return await albumsName.json();
-	}
+	}*/
 }
 
 const spotiStore = new SpotifyStore();
 
-(module.exports = spotiStore), token;
-
-// fetch(URL,{
-//  method: 'GET',
-//  headers: { Authorization: 'Bearer ' + token }
-// }
+module.exports = spotiStore;

@@ -15,28 +15,39 @@
                 <div class="logo"><img class="logo-navbar"src="https://assets.stickpng.com/images/59b5bb466dbe923c39853e00.png"></div>
             </div>
         </nav>
-        <h1>Spotrivia</h1>
+        <h1 id=>Spotrivia</h1>
     </header>
     <main>
+        
+        <div id="game-rules"> Se mostrara el nombre de un artista y su foto, <br/>
+            y debera seleccionar el nombre del album que pertenece al mismo.<br/>
+        Cuando este listo para comenzar haga click en Start!. Suerte!!  </div>
+
+        <br/>
         <div class="startbtn">
             <button type="button" class ="btn" id="start-btn">Start!</button>
         </div>
-        <div class="artist_image">
-            <div id="artist" class="hidden"> </div>
-            <div id="artist_foto" class="hidden"> </div>
-        </div>
-        <div class="abums-options">
-            <form class="hidden" id="options">
-                <label for="album_option" id="album1"></label>
-                <input type="checkbox" id="album_option" value="album"><br><br>
+        
+        <div class="container">
+            <div>
                 
-                <input type="submit" value="Next">
-            </form>
+                <h2 id="artist_name" class="hidden"> </h2>
+                <div id="artist_foto" class="hidden"> </div>
+            </div>
+            <div id="albums_options">
+                
+                
+            </div>
+            <div class="btn-next">
+                <input type="button" value="next" id="btn_next" class="hidden"/>
+            </div>
         </div>
+
     </main>
     <footer>
     </footer>
     <script src= "store.js"></script>
+    <script src= "game.js"></script>
     <script src= "main.js"></script>
 </body>
 
