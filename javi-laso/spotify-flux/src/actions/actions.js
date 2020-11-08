@@ -1,5 +1,9 @@
 import actionTypes from './action-types';
 import dispatcher from '../dispatcher/dispatcher';
+import store from '../stores/principal-store';
+
+const _clientId = '1f98b2a49efb4369b3cfdabe00ab9753';
+const _clientIdSecret = '546ed94bc2ff43c182cf9102a0299a2f';
 
 export async function requestSpotifyToken() {
 	try {
@@ -7,8 +11,7 @@ export async function requestSpotifyToken() {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded',
-				Authorization:
-					'Basic ' + btoa(`${this.getClientId()}:${this.getClientSecret()}`)
+				Authorization: 'Basic ' + btoa(`${_clientId}:${_clientIdSecret}`)
 			},
 			body: 'grant_type=client_credentials'
 		});
@@ -32,13 +35,13 @@ export async function requestArtist(artist) {
 			method: 'GET',
 			headers: {
 				'Content-Type': 'application/json',
-				Authorization: `Bearer ${this.getToken()}`
+				Authorization: `Bearer ${store.getToken()}`
 			}
 		});
 		const artistObject = await response.json();
-
+		console.log(artistObject);
 		dispatcher.dispatch({
-			type: actionTypes.REQUEST_TOKEN,
+			type: actionTypes.REQUEST_ARTIST,
 			payload: artistObject
 		});
 	} catch (error) {
@@ -55,7 +58,7 @@ export async function requestArtistTopTracks(artist) {
 			method: 'GET',
 			headers: {
 				'Content-Type': 'application/json',
-				Authorization: `Bearer ${this.getToken()}`
+				Authorization: `Bearer ${store.getToken()}`
 			}
 		});
 		const artistTracksJson = await response.json();

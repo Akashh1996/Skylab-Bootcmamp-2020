@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import MainPage from './components/mainPage/MainPage';
+import Game from './components/game/Game';
+
 ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<Switch>
-				<Route path="/"></Route>
+				<Route path="/" exact component={MainPage} />
+				<Route path="/game" component={Game} />
 			</Switch>
 		</BrowserRouter>
 	</React.StrictMode>,

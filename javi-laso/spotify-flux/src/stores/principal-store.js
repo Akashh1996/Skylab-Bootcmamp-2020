@@ -15,21 +15,13 @@ const artists = {
 	Within_Temptation: '3hE8S8ohRErocpkY7uJW4a',
 	Sum_41: '0qT79UgT5tY4yudH9VfsdT'
 };
-const _clientId = '05dc5f8122b14c52afb72bb104b0cd15';
-const _clientIdSecret = 'cac1ad72eabb4308aeb18bb6e963405f';
+const CHANGE = 'CHANGE';
 let _spotifyToken;
 let _artist;
 let _artistTopTracks;
+let _randomImageURL;
 
 class Store extends EventEmitter {
-	getClientId() {
-		return _clientId;
-	}
-
-	getClientSecret() {
-		return _clientIdSecret;
-	}
-
 	getToken() {
 		return _spotifyToken;
 	}
@@ -42,8 +34,31 @@ class Store extends EventEmitter {
 		return _artist;
 	}
 
+	getRandomArtistId() {
+		const idValues = Object.values(artists);
+		return idValues[Math.floor(Math.random() * idValues.length)];
+	}
+
 	getArtistTopTracks() {
 		return _artistTopTracks;
+	}
+
+	getRandomImage() {
+		_randomImageURL = _artist?.images.find((element) => element.height >= 160)
+			?.url;
+		return _randomImageURL ? _randomImageURL : null;
+	}
+
+	addEventListener(callback) {
+		this.on(CHANGE, callback);
+	}
+
+	removeEventListener(callback) {
+		this.removeListener(CHANGE, callback);
+	}
+
+	emitChange() {
+		this.emit(CHANGE);
 	}
 }
 
@@ -52,8 +67,13 @@ const store = new Store();
 dispatcher.register((action) => {
 	switch (action.type) {
 		case actionTypes.REQUEST_TOKEN:
+			_spotifyToken = action.payload;
+			store.emitChange();
 			break;
-
+		case actionTypes.REQUEST_ARTIST:
+			_artist = action.payload;
+			store.emitChange();
+			break;
 		default:
 			break;
 	}

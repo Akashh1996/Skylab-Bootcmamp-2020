@@ -1,0 +1,20 @@
+#artist-img {
+	height: 400px;
+	margin: 10px 0px 30px;
+}
+
+.answer-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #1db954;
+	border: none;
+	outline: none;
+	font-size: 40px;
+	font-weight: 700;
+	width: 300px;
+	border-radius: 100px;
+	padding: 25px;
+	margin: 30px 50px;
+	cursor: pointer;
+}

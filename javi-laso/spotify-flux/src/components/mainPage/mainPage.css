@@ -1,0 +1,17 @@
+.explanation {
+	font-size: 30px;
+}
+
+#gameplay-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #1db954;
+	border: none;
+	outline: none;
+	font-size: 50px;
+	font-weight: 700;
+	width: 300px;
+	border-radius: 100px;
+	padding: 25px;
+}

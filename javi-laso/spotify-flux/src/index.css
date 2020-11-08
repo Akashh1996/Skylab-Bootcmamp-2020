@@ -5,6 +5,10 @@
 
 * {
 	box-sizing: border-box;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
 /**
@@ -27,7 +31,7 @@ html {
 body {
 	margin: 0;
 	background-color: black;
-	color: white;
+	font-size: 30px;
 }
 
 /**
@@ -35,7 +39,12 @@ body {
  */
 
 main {
-	display: block;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 50px;
 }
 
 /**
@@ -81,6 +90,12 @@ pre {
 
 a {
 	background-color: transparent;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+	color: inherit;
 }
 
 /**
@@ -354,4 +369,25 @@ template {
 
 [hidden] {
 	display: none;
+}
+
+.flex-spacer1 {
+	flex: 1;
+}
+
+.flex-spacer2 {
+	flex: 2;
+}
+
+.flex-spacer3 {
+	flex: 3;
+}
+
+.horizontal-container {
+	display: flex;
+}
+
+.vertical-container {
+	display: flex;
+	flex-direction: column;
 }
