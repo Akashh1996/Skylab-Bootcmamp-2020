@@ -7,6 +7,7 @@ const _clientIdSecret = '546ed94bc2ff43c182cf9102a0299a2f';
 
 export async function requestSpotifyToken() {
 	try {
+		console.log('Token request');
 		const response = await fetch('https://accounts.spotify.com/api/token', {
 			method: 'POST',
 			headers: {
@@ -30,6 +31,8 @@ export async function requestSpotifyToken() {
 
 export async function requestArtist(artist) {
 	try {
+		debugger;
+		console.log('Artist request');
 		const url = `https://api.spotify.com/v1/artists/${artist}`;
 		const response = await fetch(url, {
 			method: 'GET',
@@ -39,7 +42,7 @@ export async function requestArtist(artist) {
 			}
 		});
 		const artistObject = await response.json();
-		console.log(artistObject);
+
 		dispatcher.dispatch({
 			type: actionTypes.REQUEST_ARTIST,
 			payload: artistObject
@@ -51,9 +54,35 @@ export async function requestArtist(artist) {
 	}
 }
 
+export async function requestOtherArtists(artistIdExcluded) {
+	try {
+		console.log('Other artists request');
+		const otherArtists = [];
+		for (let index = 0; index < 3; index++) {
+			let artistId = store.getRandomArtistIdExcluding(artistIdExcluded);
+			const url = `https://api.spotify.com/v1/artists/${artistId}`;
+			const response = await fetch(url, {
+				method: 'GET',
+				headers: {
+					'Content-Type': 'application/json',
+					Authorization: `Bearer ${store.getToken()}`
+				}
+			});
+			const artistObject = await response.json();
+			otherArtists.push(artistObject);
+		}
+
+		dispatcher.dispatch({
+			type: actionTypes.REQUEST_OTHER_ARTISTS,
+			payload: otherArtists
+		});
+	} catch (error) {}
+}
+
 export async function requestArtistTopTracks(artist) {
 	try {
-		const url = `https://api.spotify.com/v1/artists/${artist}/top-tracks?country=ES`;
+		console.log('Artist top track request');
+		let url = `https://api.spotify.com/v1/artists/${artist}/top-tracks?country=ES`;
 		const response = await fetch(url, {
 			method: 'GET',
 			headers: {
@@ -62,14 +91,67 @@ export async function requestArtistTopTracks(artist) {
 			}
 		});
 		const artistTracksJson = await response.json();
+		const randomSongNumber = Math.floor(
+			Math.random() * artistTracksJson.tracks.length
+		);
+		const randomSong = artistTracksJson.tracks[randomSongNumber];
 
 		dispatcher.dispatch({
-			type: actionTypes.REQUEST_ARTISTS,
-			payload: artistTracksJson['tracks']
+			type: actionTypes.REQUEST_TOP_ARTIST_TRACKS,
+			payload: randomSong
 		});
 	} catch (error) {
 		dispatcher.dispatch({
 			type: actionTypes.ARTISTS_ERROR
 		});
 	}
+}
+
+export async function requestOtherArtistsTopTracks(artists) {
+	try {
+		console.log('Other artists top track request');
+		const artistSongs = [];
+		for (let index = 0; index < 3; index++) {
+			let url = `https://api.spotify.com/v1/artists/${artists[index].id}/top-tracks?country=ES`;
+			const response = await fetch(url, {
+				method: 'GET',
+				headers: {
+					'Content-Type': 'application/json',
+					Authorization: `Bearer ${store.getToken()}`
+				}
+			});
+			const artistTracksJson = await response.json();
+			const randomSongNumber = Math.floor(
+				Math.random() * artistTracksJson.tracks.length
+			);
+			const randomSong = artistTracksJson.tracks[randomSongNumber];
+			artistSongs.push(randomSong);
+		}
+
+		dispatcher.dispatch({
+			type: actionTypes.REQUEST_OTHER_ARTISTS_TOP_ARTIST_TRACKS,
+			payload: artistSongs
+		});
+	} catch (error) {}
+}
+
+export function reset() {
+	console.log('Reset');
+	dispatcher.dispatch({
+		type: actionTypes.RESET_GAME
+	});
+}
+
+export function sumScore() {
+	console.log('Sum score');
+	dispatcher.dispatch({
+		type: actionTypes.SUM_SCORE
+	});
+}
+
+export function sumFails() {
+	console.log('Sum fails');
+	dispatcher.dispatch({
+		type: actionTypes.SUM_FAILS
+	});
 }

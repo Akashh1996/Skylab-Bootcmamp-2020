@@ -16,22 +16,25 @@ const artists = {
 	Sum_41: '0qT79UgT5tY4yudH9VfsdT'
 };
 const CHANGE = 'CHANGE';
-let _spotifyToken;
-let _artist;
-let _artistTopTracks;
-let _randomImageURL;
 
 class Store extends EventEmitter {
-	getToken() {
-		return _spotifyToken;
+	constructor() {
+		super();
+		this.spotifyToken = null;
+		this.artist = null;
+		this.artistTopTracks = null;
+		this.imageURL = null;
+		this.otherArtists = null;
+		this.otherArtistsTopTracks = null;
+		this.score = 0;
+		this.fails = 0;
 	}
-
-	setArtist(artist) {
-		_artist = artist;
+	getToken() {
+		return this.spotifyToken;
 	}
 
 	getArtist() {
-		return _artist;
+		return this.artist;
 	}
 
 	getRandomArtistId() {
@@ -39,14 +42,38 @@ class Store extends EventEmitter {
 		return idValues[Math.floor(Math.random() * idValues.length)];
 	}
 
-	getArtistTopTracks() {
-		return _artistTopTracks;
+	getRandomArtistIdExcluding(artistId) {
+		const idValues = Object.values(artists).filter((idValue) => {
+			return idValue !== artistId;
+		});
+		return idValues[Math.floor(Math.random() * idValues.length)];
 	}
 
-	getRandomImage() {
-		_randomImageURL = _artist?.images.find((element) => element.height >= 160)
-			?.url;
-		return _randomImageURL ? _randomImageURL : null;
+	getArtistTopTrack() {
+		return this.artistTopTracks;
+	}
+
+	getImage() {
+		this.imageURL = this.artist?.images.find(
+			(element) => element.height >= 160
+		)?.url;
+		return this.imageURL ? this.imageURL : null;
+	}
+
+	getOtherArtists() {
+		return this.otherArtists;
+	}
+
+	getOtherArtistsTopTracks() {
+		return this.otherArtistsTopTracks;
+	}
+
+	getScore() {
+		return this.score;
+	}
+
+	getFails() {
+		return this.fails;
 	}
 
 	addEventListener(callback) {
@@ -67,11 +94,49 @@ const store = new Store();
 dispatcher.register((action) => {
 	switch (action.type) {
 		case actionTypes.REQUEST_TOKEN:
-			_spotifyToken = action.payload;
+			debugger;
+			store.spotifyToken = action.payload;
 			store.emitChange();
 			break;
 		case actionTypes.REQUEST_ARTIST:
-			_artist = action.payload;
+			debugger;
+			store.artist = action.payload;
+			store.emitChange();
+			break;
+		case actionTypes.REQUEST_OTHER_ARTISTS:
+			debugger;
+			store.otherArtists = action.payload;
+			store.emitChange();
+			break;
+		case actionTypes.REQUEST_TOP_ARTIST_TRACKS:
+			debugger;
+			store.artistTopTracks = action.payload;
+			store.emitChange();
+			break;
+		case actionTypes.REQUEST_OTHER_ARTISTS_TOP_ARTIST_TRACKS:
+			debugger;
+			store.otherArtistsTopTracks = action.payload;
+			store.emitChange();
+			break;
+		case actionTypes.RESET_GAME:
+			debugger;
+			store.artist = null;
+			debugger;
+			store.otherArtists = null;
+			debugger;
+			store.artistTopTracks = null;
+			debugger;
+			store.otherArtistsTopTracks = null;
+			store.emitChange();
+			break;
+		case actionTypes.SUM_SCORE:
+			debugger;
+			store.score++;
+			store.emitChange();
+			break;
+		case actionTypes.SUM_FAILS:
+			debugger;
+			store.fails++;
 			store.emitChange();
 			break;
 		default:

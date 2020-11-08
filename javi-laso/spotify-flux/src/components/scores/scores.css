@@ -1,0 +1,7 @@
+.absolute-lateral {
+	position: absolute;
+	top: 150px;
+	left: 100px;
+	display: flex;
+	flex-direction: column;
+}

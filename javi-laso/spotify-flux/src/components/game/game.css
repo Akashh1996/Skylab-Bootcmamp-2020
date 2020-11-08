@@ -1,6 +1,19 @@
 #artist-img {
 	height: 400px;
-	margin: 10px 0px 30px;
+	margin: 10px 0px 40px;
+}
+
+.select {
+	margin-bottom: 30px;
+}
+
+.button-container {
+	width: 600px;
+	height: 120px;
+	margin: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .answer-button {
@@ -10,11 +23,50 @@
 	background-color: #1db954;
 	border: none;
 	outline: none;
-	font-size: 40px;
+	font-size: 30px;
 	font-weight: 700;
-	width: 300px;
+	width: 400px;
 	border-radius: 100px;
 	padding: 25px;
-	margin: 30px 50px;
 	cursor: pointer;
+	position: relative;
+	box-shadow: 0 6px 0 0 #157e39, 0 4px 0 1px rgba(0, 0, 0, 0.4);
+	top: 0;
+	transition: top 0.1s ease-out, box-shadow 0.1s ease-in-out;
+}
+
+.answer-button:hover {
+	top: -2px;
+	box-shadow: 0 8px 0 0 #157e39, 0 4px 0 1px rgba(0, 0, 0, 0.4);
+}
+
+.answer-button:active {
+	top: 3px;
+	box-shadow: 0 3px 0 0 #157e39, 0 4px 0 1px rgba(0, 0, 0, 0.4);
+}
+
+.correct-button {
+	transition: 1.5s;
+	top: 0;
+	background-color: #26d864;
+	box-shadow: 0 6px 0 0 #157e39, 0 4px 0 1px rgba(0, 0, 0, 0.4);
+	width: 500px;
+	padding: 45px;
+}
+
+.correct-button:hover {
+	top: 0;
+	box-shadow: 0 6px 0 0 #157e39, 0 4px 0 1px rgba(0, 0, 0, 0.4);
+}
+
+.incorrect-button {
+	transition: 0.2s;
+	top: 0;
+	background-color: #af0202;
+	box-shadow: 0 6px 0 0 #700000, 0 4px 0 1px rgba(0, 0, 0, 0.4);
+}
+
+.incorrect-button:hover {
+	top: 0;
+	box-shadow: 0 6px 0 0 #700000, 0 4px 0 1px rgba(0, 0, 0, 0.4);
 }
