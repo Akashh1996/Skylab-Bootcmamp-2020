@@ -1,0 +1,255 @@
+.book-info {
+	background: rgb(238, 226, 213);
+	padding: 45px 50px 45px;
+}
+
+.book-title {
+	color: rgb(221, 103, 99);
+	font-size: 30px;
+	font-weight: 100;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	text-align: center;
+	margin-bottom: 5px;
+	margin-top: 0;
+	background: rgb(255, 251, 251);
+	border: 1px solid rgba(165, 42, 42, 0.591);
+	border-radius: 10px;
+	padding: 10px 20px;
+}
+
+.book-info__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.book-author-and-cover {
+	width: fit-content;
+	text-align: center;
+}
+
+.book-author {
+	color: rgb(182, 97, 52);
+	font-weight: 100;
+	font-size: 23px;
+	margin: 40px 0 12px;
+}
+
+.book-cover {
+	position: relative;
+	width: fit-content;
+}
+
+.book-cover__photo {
+	width: 200px;
+	height: 306px;
+	border-radius: 10px;
+	position: relative;
+	z-index: 1;
+}
+
+.book-cover__background {
+	width: 190px;
+	height: 300px;
+	border-radius: 10px;
+	background: rgb(180, 105, 64);
+	background: rgba(180, 105, 64, 0.733);
+	position: absolute;
+	top: 20px;
+	left: 23px;
+}
+
+.favorite {
+	color: white;
+	position: absolute;
+	top: 7px;
+	right: 7px;
+	z-index: 1;
+	cursor: pointer;
+	font-size: 30px !important;
+	-webkit-text-stroke: 1px rgba(0, 0, 0, 0.247);
+}
+
+.book-general-info__left-side {
+	padding: 0;
+	margin-top: 55px;
+	width: 85%;
+}
+
+.score-container {
+	display: flex;
+	align-items: flex-end;
+}
+
+.score {
+	color: white;
+	-webkit-text-stroke: 1px rgba(119, 124, 64, 0.767);
+	cursor: pointer;
+}
+
+.numerical-score {
+	margin-left: 10px;
+	font-size: 16px;
+	position: relative;
+	top: 2px;
+}
+
+.category-button {
+	background: rgba(245, 169, 76, 0.664);
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.427);
+	padding: 2.5px 10px;
+	margin: 20px 0;
+	font-size: 19px;
+	letter-spacing: 1px;
+	box-shadow: 1px 1px 3px rgb(143, 75, 75);
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.category-button:focus {
+	outline: none;
+}
+
+.synopsis__title {
+	color: rgba(0, 0, 0, 0.767);
+	padding-left: 10px;
+	margin-bottom: 10px;
+	margin-top: 0;
+	font-size: 19px;
+	font-weight: 600;
+}
+
+.synopsis__description {
+	padding: 10px;
+	text-align: justify;
+	line-height: 23px;
+	max-height: 197px;
+	overflow: scroll;
+	background: rgb(255, 251, 251);
+	border-radius: 10px;
+	border: 1px solid rgba(165, 42, 42, 0.591);
+	font-size: 16px;
+	margin: 0;
+}
+
+.vertical-line-container {
+	display: none;
+}
+
+.book-general-info__right-side {
+	margin-bottom: 15px;
+	margin-top: 45px;
+	padding-top: 25px;
+	width: 60%;
+	border-top: 2px solid rgba(165, 42, 42, 0.591);
+}
+
+.price {
+	text-align: center;
+	font-size: 40px;
+}
+
+.add-to-cart-button {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	background: rgba(245, 76, 76, 0.664);
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.427);
+	padding: 7px 13px;
+	font-size: 19px;
+	letter-spacing: 1px;
+	box-shadow: 1px 1px 3px rgb(143, 75, 75);
+	text-align: center;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+}
+
+.add-to-cart-button:focus {
+	outline: none;
+}
+
+.price,
+.add-to-cart-button {
+	position: relative;
+	top: 30%;
+}
+
+.cart {
+	margin-right: 6px;
+}
+
+@media screen and (min-width: 699px) {
+	.book-info {
+		padding: 60px 100px 40px;
+	}
+
+	.book-title {
+		font-size: 40px;
+	}
+
+	.book-info__wrapper {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.book-general-info__left-side {
+		width: 60%;
+		padding-left: 55px;
+		margin-top: 97px;
+	}
+
+	.book-general-info__right-side {
+		width: 55%;
+		margin: 60px 0 25px;
+		border-top: 2px solid rgba(165, 42, 42, 0.591);
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.book-info__wrapper {
+		flex-wrap: nowrap;
+		align-items: unset;
+	}
+
+	.book-info {
+		padding-bottom: 60px;
+	}
+
+	.vertical-line-container {
+		display: flex;
+		justify-content: flex-end;
+		width: 6%;
+		margin-top: 75px;
+	}
+
+	.vertical-line {
+		border-left: 2px solid rgba(165, 42, 42, 0.591);
+		height: 100%;
+	}
+
+	.book-general-info__left-side {
+		width: 65%;
+		padding-left: 55px;
+		margin-top: 75px;
+	}
+
+	.book-general-info__right-side {
+		width: 35%;
+		margin: 75px 0 0;
+		border: none;
+		min-height: 100%;
+		padding-top: 0;
+	}
+}
