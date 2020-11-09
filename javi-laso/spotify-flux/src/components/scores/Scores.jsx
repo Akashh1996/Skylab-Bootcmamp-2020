@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import store from '../../stores/principal-store';
+import tokenStore from '../../stores/token-store';
 import './scores.css';
 
 export default function Scores() {
-	const [score, setScore] = useState(store.getScore());
-	const [fails, setFails] = useState(store.getFails());
+	const [score, setScore] = useState(tokenStore.getScore());
+	const [fails, setFails] = useState(tokenStore.getFails());
 
 	useEffect(() => {
-		store.addEventListener(scoreChange);
+		tokenStore.addEventListener(scoreChange);
 
 		return () => {
-			store.removeEventListener(scoreChange);
+			tokenStore.removeEventListener(scoreChange);
 		};
 	});
 
 	function scoreChange() {
-		setScore(store.getScore());
-		setFails(store.getFails());
+		setScore(tokenStore.getScore());
+		setFails(tokenStore.getFails());
 	}
 	return (
 		<div className="absolute-lateral">

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import store from '../../stores/principal-store';
+import tokenStore from '../../stores/token-store';
+import artistStore from '../../stores/artist-store';
+import songsStore from '../../stores/songs-store';
 import {
 	requestArtist,
 	requestSpotifyToken,
@@ -12,35 +14,47 @@ import Scores from '../scores/Scores';
 import GameButtons from './GameButtons';
 
 function Game() {
-	const [token, setToken] = useState(store.getToken());
-	const [artistSelected, setArtistSelected] = useState(store.getArtist());
-	const [artistSelectedSong, setArtistSelectedSong] = useState(
-		store.getArtistTopTrack()
+	const [token, setToken] = useState(tokenStore.getToken());
+	const [artistSelected, setArtistSelected] = useState(artistStore.getArtist());
+	const [otherArtists, setOtherArtists] = useState(
+		artistStore.getOtherArtists()
 	);
-	const [otherArtists, setOtherArtists] = useState(store.getOtherArtists());
+	const [artistSelectedSong, setArtistSelectedSong] = useState(
+		songsStore.getArtistTopTrack()
+	);
 	const [otherArtistsSongs, setOtherArtistsSongs] = useState(
-		store.getOtherArtistsTopTracks()
+		songsStore.getOtherArtistsTopTracks()
 	);
 
 	useEffect(() => {
-		debugger;
-		store.addEventListener(handleChange);
-		debugger;
+		tokenStore.addEventListener(tokenChange);
 		if (!token) {
 			requestSpotifyToken();
-		} else if (!artistSelected) {
-			requestArtist(store.getRandomArtistId());
-		} else if (!artistSelectedSong) {
-			requestArtistTopTracks(artistSelected.id);
-		} else if (!otherArtists) {
-			requestOtherArtists(artistSelected.id);
-		} else if (!otherArtistsSongs) {
-			requestOtherArtistsTopTracks(otherArtists);
+		}
+		return () => {
+			tokenStore.removeEventListener(tokenChange);
+		};
+	}, [token]);
+
+	useEffect(() => {
+		artistStore.addEventListener(artistsChange);
+		songsStore.addEventListener(songsChange);
+		debugger;
+		if (token) {
+			if (!artistSelected) {
+				requestArtist(artistStore.getRandomArtistId());
+			} else if (!artistSelectedSong) {
+				requestArtistTopTracks(artistSelected.id);
+			} else if (!otherArtists) {
+				requestOtherArtists(artistSelected.id);
+			} else if (!otherArtistsSongs) {
+				requestOtherArtistsTopTracks(otherArtists);
+			}
 		}
 
 		return () => {
-			debugger;
-			store.removeEventListener(handleChange);
+			artistStore.removeEventListener(artistsChange);
+			songsStore.removeEventListener(songsChange);
 		};
 	}, [
 		token,
@@ -50,18 +64,18 @@ function Game() {
 		otherArtistsSongs
 	]);
 
-	function handleChange() {
-		debugger;
-		setToken(store.getToken());
-		debugger;
-		setArtistSelected(store.getArtist());
-		debugger;
-		setArtistSelectedSong(store.getArtistTopTrack());
-		debugger;
-		setOtherArtists(store.getOtherArtists());
-		debugger;
-		setOtherArtistsSongs(store.getOtherArtistsTopTracks());
-		debugger;
+	function tokenChange() {
+		setToken(tokenStore.getToken());
+	}
+
+	function artistsChange() {
+		setArtistSelected(artistStore.getArtist());
+		setOtherArtists(artistStore.getOtherArtists());
+	}
+
+	function songsChange() {
+		setArtistSelectedSong(songsStore.getArtistTopTrack());
+		setOtherArtistsSongs(songsStore.getOtherArtistsTopTracks());
 	}
 
 	return (
@@ -69,7 +83,7 @@ function Game() {
 			<h1>{artistSelected?.name}</h1>
 			<img
 				id="artist-img"
-				src={store.getImage()}
+				src={artistStore.getImage()}
 				alt={`${artistSelected?.name}`}
 			/>
 			<Scores />

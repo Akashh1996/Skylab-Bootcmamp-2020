@@ -1,9 +1,17 @@
 import actionTypes from './action-types';
 import dispatcher from '../dispatcher/dispatcher';
-import store from '../stores/principal-store';
+import tokenStore from '../stores/token-store';
+import artists from '../stores/artists';
 
 const _clientId = '1f98b2a49efb4369b3cfdabe00ab9753';
 const _clientIdSecret = '546ed94bc2ff43c182cf9102a0299a2f';
+
+function getRandomArtistIdExcluding(artistId) {
+	const idValues = Object.values(artists).filter((idValue) => {
+		return idValue !== artistId;
+	});
+	return idValues[Math.floor(Math.random() * idValues.length)];
+}
 
 export async function requestSpotifyToken() {
 	try {
@@ -31,14 +39,13 @@ export async function requestSpotifyToken() {
 
 export async function requestArtist(artist) {
 	try {
-		debugger;
 		console.log('Artist request');
 		const url = `https://api.spotify.com/v1/artists/${artist}`;
 		const response = await fetch(url, {
 			method: 'GET',
 			headers: {
 				'Content-Type': 'application/json',
-				Authorization: `Bearer ${store.getToken()}`
+				Authorization: `Bearer ${tokenStore.getToken()}`
 			}
 		});
 		const artistObject = await response.json();
@@ -59,13 +66,13 @@ export async function requestOtherArtists(artistIdExcluded) {
 		console.log('Other artists request');
 		const otherArtists = [];
 		for (let index = 0; index < 3; index++) {
-			let artistId = store.getRandomArtistIdExcluding(artistIdExcluded);
+			let artistId = getRandomArtistIdExcluding(artistIdExcluded);
 			const url = `https://api.spotify.com/v1/artists/${artistId}`;
 			const response = await fetch(url, {
 				method: 'GET',
 				headers: {
 					'Content-Type': 'application/json',
-					Authorization: `Bearer ${store.getToken()}`
+					Authorization: `Bearer ${tokenStore.getToken()}`
 				}
 			});
 			const artistObject = await response.json();
@@ -87,7 +94,7 @@ export async function requestArtistTopTracks(artist) {
 			method: 'GET',
 			headers: {
 				'Content-Type': 'application/json',
-				Authorization: `Bearer ${store.getToken()}`
+				Authorization: `Bearer ${tokenStore.getToken()}`
 			}
 		});
 		const artistTracksJson = await response.json();
@@ -117,7 +124,7 @@ export async function requestOtherArtistsTopTracks(artists) {
 				method: 'GET',
 				headers: {
 					'Content-Type': 'application/json',
-					Authorization: `Bearer ${store.getToken()}`
+					Authorization: `Bearer ${tokenStore.getToken()}`
 				}
 			});
 			const artistTracksJson = await response.json();

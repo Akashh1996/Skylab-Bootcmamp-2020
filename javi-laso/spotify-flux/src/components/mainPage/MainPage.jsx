@@ -1,26 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './mainPage.css';
-import store from '../../stores/principal-store';
+import tokenStore from '../../stores/token-store';
 import { requestSpotifyToken } from '../../actions/actions';
 
 function MainPage() {
-	const [token, setToken] = useState(store.getToken());
+	const [token, setToken] = useState(tokenStore.getToken());
 
 	useEffect(() => {
-		store.addEventListener(handleChange);
+		tokenStore.addEventListener(handleChange);
 
 		if (!token) {
 			requestSpotifyToken();
 		}
 
 		return () => {
-			store.removeEventListener(handleChange);
+			tokenStore.removeEventListener(handleChange);
 		};
 	});
 
 	function handleChange() {
-		setToken(store.getToken());
+		setToken(tokenStore.getToken());
 	}
 
 	return (

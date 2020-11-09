@@ -1,33 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import store from '../../stores/principal-store';
+import songsStore from '../../stores/songs-store';
 import { sumScore, sumFails, reset } from '../../actions/actions';
 
 export default function GameButtons() {
 	const [artistSelectedSong, setArtistSelectedSong] = useState(
-		store.getArtistTopTrack()
+		songsStore.getArtistTopTrack()
 	);
 	const [otherArtistsSongs, setOtherArtistsSongs] = useState(
-		store.getOtherArtistsTopTracks()
+		songsStore.getOtherArtistsTopTracks()
 	);
 
 	useEffect(() => {
-		store.addEventListener(handleChange);
+		songsStore.addEventListener(handleChange);
+		debugger;
 
 		if (artistSelectedSong && otherArtistsSongs) {
 			randomSongs();
 		}
+
 		return () => {
-			store.removeEventListener(handleChange);
+			debugger;
+			songsStore.removeEventListener(handleChange);
 		};
 	}, [artistSelectedSong, otherArtistsSongs]);
 
 	function handleChange() {
-		setArtistSelectedSong(store.getArtistTopTrack());
-		setOtherArtistsSongs(store.getOtherArtistsTopTracks());
+		setArtistSelectedSong(songsStore.getArtistTopTrack());
+		setOtherArtistsSongs(songsStore.getOtherArtistsTopTracks());
 	}
 
 	function randomSongs() {
-		debugger;
 		let buttons = document.getElementsByClassName('answer-button');
 		const randomButtonNumber = Math.floor(Math.random() * buttons.length);
 		buttons[randomButtonNumber].innerHTML = artistSelectedSong.name;
@@ -45,7 +47,6 @@ export default function GameButtons() {
 			event.target.className += ' correct-button';
 			sumScore();
 		} else {
-			debugger;
 			const correctButton = Array.prototype.find.call(buttons, (button) => {
 				return button.innerText === artistSelectedSong.name;
 			});
