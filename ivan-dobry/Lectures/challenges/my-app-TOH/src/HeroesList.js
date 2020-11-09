@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import HeroesItem from './HeroesItem';
 import { connect } from 'react-redux';
 import { addHero } from './redux/actions/heroActions';
 import { PropTypes } from 'prop-types';
