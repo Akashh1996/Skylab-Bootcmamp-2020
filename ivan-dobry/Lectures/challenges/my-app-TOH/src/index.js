@@ -6,11 +6,17 @@ import reportWebVitals from './reportWebVitals';
 import Header from './Header';
 import DashBoard from './Dashboard';
 import Detail from './Detail';
+import { Provider } from 'react-redux';
+import configureStore from './redux/configureStore';
+
+const store = configureStore();
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Header />
-		<TourOfHeroes />
+		<Provider store={store}>
+			<Header />
+			<TourOfHeroes />
+		</Provider>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
