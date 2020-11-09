@@ -1,0 +1,30 @@
+#dashboard-list {
+	padding: 0;
+	display: flex;
+	list-style-type: none;
+}
+
+#dashboard-list li {
+	width: 100px;
+	height: 100px;
+	margin-right: 20px;
+	outline: none;
+	border: none;
+	background-color: #607d8b;
+	cursor: pointer;
+}
+
+.dashboard-link {
+	width: 100px;
+	height: 100px;
+	text-decoration: none;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dashboard-link:hover {
+	text-decoration: none;
+	color: white;
+}

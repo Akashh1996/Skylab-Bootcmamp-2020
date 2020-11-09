@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+*,
+*::after,
+*::before {
+  font-family: 'Permanent Marker', cursive;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: #888888;
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .pokemonNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+
+.wrapper .pokemonNav .navBtn {
+  margin: 0 10px;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.wrapper .pokemonList__block {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .pokemonList__block .pokemonList__title {
+  font-size: 50px;
+}
+
+.wrapper .pokemonList__block .pokemonList__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .pokemonList__block .pokemonList__wrapper .pokemonList__items {
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+.wrapper .pokemonList__block .pageBtn {
+  text-align: center;
+  font-size: 20px;
+  margin: 50px;
+  padding: 15px 20px;
+}
+
+.wrapper .pokemonDetail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.wrapper .pokemonDetail .detail-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper .pokemonDetail .detail-box .pokemon-title {
+  font-size: 50px;
+}
+
+.wrapper .pokemonDetail .detail-box .pokemonStat {
+  font-size: 30px;
+}
+
+.wrapper .pokemonDetail .detail-box .pokeStyle {
+  color: red;
+}
+
+.wrapper .pokemonDetail .detail-box .seeAbilities {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.wrapper .pokemonAbilities {
+  max-width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .pokemonAbilities .defaultInfo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.wrapper .pokemonAbilities .defaultInfo-container .pokemonGeneral-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding-left: 50px;
+  font-size: 50px;
+}
+
+.wrapper .pokemonAbilities .defaultInfo-container .pokemonGeneral-container .pokemonAbility-name {
+  color: red;
+}
+
+.wrapper .pokemonAbilities .defaultInfo-container .pokemonGeneral-container .pokemonAbility-info {
+  color: red;
+}
+
+.wrapper .pokemonAbilities .ability-selector {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.wrapper .pokemonAbilities .ability-selector .additional-info__container {
+  font-size: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=style.css.map */

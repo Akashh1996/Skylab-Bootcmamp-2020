@@ -1,0 +1,50 @@
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+	margin-left: 20px;
+}
+
+.header__button {
+	background-color: #eeeeee;
+	border-radius: 3px;
+	border: none;
+	padding: 5px;
+}
+
+.header__button a {
+	font-weight: bold;
+	color: #627f8e;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+.header__actual {
+	color: #31abe9;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.header__button a:hover {
+	color: #0c9de9;
+}
+
+.heroes__list {
+	display: flex;
+	background-color: #eeeeee;
+	width: 150px;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 5px;
+	background: linear-gradient(90deg, #5f7d8c 16%, #eeeeee 11%, #eeeeee 11%);
+	color: black;
+}
+
+a:link {
+	text-decoration: none;
+}

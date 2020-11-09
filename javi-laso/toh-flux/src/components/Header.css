@@ -1,0 +1,18 @@
+#title {
+	color: #969696;
+}
+
+.header-buttons {
+	text-decoration: none;
+	background-color: #eeeeee;
+	color: #547485;
+	width: 100px;
+	text-align: center;
+	padding: 10px;
+	margin: 20px 15px 20px 0px;
+}
+
+.header-buttons:hover {
+	color: #547485;
+	text-decoration: none;
+}

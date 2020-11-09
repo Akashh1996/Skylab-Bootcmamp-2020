@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main id="container">
+        <div class="flex-spacer1"></div>
+        <h1>Spotify Trivial</h1>
+        <span>A continuación, se te presentará un nombre de artista aleatorio y cuatro canciones.</span><br>
+        <span>Deberás seleccionar la única canción de las presentadas que pertenece al artista</span><br>
+        <br>
+        <img id="random-artist-image" src="" alt="">
+        <h3 id="random-artist-name"></h3>
+        <audio controls="controls" src="" id="audio" type="audio/mpeg"></audio>
+        <form id="random-songs" class="vertical-container" action="">
+            <div class="horizontal-container">
+                <div class="vertical-container">
+                    <button type="button" class="button-answer"></button>
+                    <button type="button" class="button-answer"></button>
+                </div>
+                <div class="vertical-container">
+                    <button type="button" class="button-answer"></button>
+                    <button type="button" class="button-answer"></button>
+                </div>
+            </div>
+        </form>
+        <h3 id="is-correct"></h3>
+        <div class="flex-spacer2"></div>
+        <span id="timer"></span>
+        <div class="flex-spacer2"></div>
+    </main>
+    <script src="../../store.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemons</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <img class="pokemon-title" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="Pokemon title">
+    </header>
+    <main>
+        <section class="pokemon-list-wrapper">
+            <h2 class="pokemon-list-title">List of Pokémon</h2>
+            <div id="pokemon-list"></div>
+        </section>
+
+    </main>
+</body>
+<script src="../../store/store.js"></script>
+<script src="list.js"></script>
+<script>
+    const store = new Store();
+    store.loadPokemons().then(() => {
+        const pokemonList = document.getElementById('pokemon-list');
+        if (store.getPokemons()) {
+            const listComponent = new ListComponent(_pokemons.results);
+            listComponent.updateHtmlPokemonList(pokemonList);
+        } else {
+            pokemonList.innerHTML = 'No se ha podido mostrar la lista de Pokémons'
+        }
+    })
+</script>
+</html>

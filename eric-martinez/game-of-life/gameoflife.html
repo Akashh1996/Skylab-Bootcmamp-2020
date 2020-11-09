@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <title>Game of life</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="contentDiv">
+
+    <h1>GAME OF LIFE</h1>
+    <br>
+    <button onclick="randomInit()">START RANDOM GAME</button>
+    <button onclick="pauseGame()">START/PAUSE</button>
+    <button onclick="init()">CLEAR GAME</button>
+  </div>
+
+  <div id="canvas"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+  <script src="gameoflife.js"></script>
+</body>
+</html>
+
