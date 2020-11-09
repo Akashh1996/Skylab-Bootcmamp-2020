@@ -14,7 +14,7 @@ function HeroList({ heroes, actions }) {
         value={newHero}
         placeholder="Enter a new hero name"
       />
-      <button type="button" onClick={() => addHero(newHero)}>Add</button>
+      <button type="button" onClick={() => actions.addHero(newHero)}>Add</button>
       {(!heroes || !heroes.length) && <h1>There are no heroes!</h1>}
       {heroes && heroes.length > 0 && heroes.map((hero) => (
         <li key={hero}>{hero}</li>
