@@ -1,0 +1,84 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.header__container {
+	display: flex;
+	flex-direction: column;
+	border-bottom: 0;
+	border-top: 0;
+	padding: 50px 0 0 0;
+}
+
+.header__image {
+	padding: 9;
+	position: relative;
+	margin-top: 8%;
+	margin-left: 8%;
+}
+
+.header__container__fixed {
+	display: flex;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 50px;
+	background: blanchedalmond;
+}
+
+.header__left {
+	display: flex;
+	align-items: center;
+	width: 20%;
+	background: url(burger_menu.png) no-repeat center;
+}
+
+.header__center {
+	display: flex;
+	background: url(icono_add_2.png) no-repeat;
+	width: 30%;
+	margin-top: 2%;
+	margin-left: 6%;
+}
+
+.header__rigth {
+	display: flex;
+	width: 50%;
+}
+
+.header__rigth__lupa {
+	margin-top: 4%;
+	background: url(icono_lupa.png) no-repeat;
+	width: 30%;
+}
+
+.header__rigth__cart {
+	margin-top: 4%;
+	background: url(icono_cart.png) no-repeat;
+	width: 30%;
+}
+
+.header__rigth__number {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 25px;
+	background-color: rgba(223, 60, 60, 0.75);
+	width: 30%;
+	color: snow;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.top__container {
+	margin-top: 40px;
+	display: flex;
+	width: 100px;
+	overflow-x: hidden;
+	overflow-y: visible;
+	height: 449px;
+}
