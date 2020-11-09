@@ -1,26 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { loadHeroes, deleteHero, createHero } from '../actions/hero-actions';
-import heroStore from '../stores/hero-store';
+import { connect } from "react-redux"
+import { PropTypes } from "prop-types"
+import { bindActionCreators } from 'redux';
+import { addHero } from "../redux/actions/heroActions"
 
-function HeroList() {
-  const [heroes, setHeroes] = useState(heroStore.getHeroes());
+function HeroList({ heroes, actions }) {
   const [newHero, setNewHero] = useState('');
-
-  function handleChange() {
-    setHeroes(heroStore.getHeroes());
-  }
-
-  useEffect(() => {
-    heroStore.addEventListener(handleChange);
-    if (!heroes || !heroes.length) {
-      loadHeroes();
-    }
-
-    return () => {
-      heroStore.removeEventListener(handleChange);
-    };
-  }, [heroes]);
 
   return (
     <>
@@ -29,16 +14,42 @@ function HeroList() {
         value={newHero}
         placeholder="Enter a new hero name"
       />
-      <button type="button" onClick={() => createHero(newHero)}>Add</button>
+      <button type="button" onClick={() => addHero(newHero)}>Add</button>
       {(!heroes || !heroes.length) && <h1>There are no heroes!</h1>}
       {heroes && heroes.length > 0 && heroes.map((hero) => (
-        <li key={hero.id}>
-          <Link to={`/heroes/${hero.id}`}>{hero.name}</Link>
-          <button type="button" onClick={() => deleteHero(hero.id)}>x</button>
-        </li>
+        <li key={hero}>{hero}</li>
       ))}
     </>
   );
 }
 
-export default HeroList;
+/* function mapStateToProps(state) {
+  return {
+    heroes: state.heroes,
+
+  }   --hacer destructing
+} */
+
+HeroList.propTypes = {
+  heroes: PropTypes.shape([]).isRequired,
+  actions: PropTypes.shape({
+    addHero: PropTypes.func.isRequired,
+  }).isRequired
+
+}
+
+function mapStateToProps({ heroes }) {
+  return {
+    heroes,
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators({ addHero }, dispatch)
+  }
+}
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(HeroList);

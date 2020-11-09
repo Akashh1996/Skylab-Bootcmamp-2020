@@ -4,7 +4,7 @@ export function addHero(hero) {
 		hero
 	};
 }
-export function addHero(hero) {
+export function deleteHero(hero) {
 	return {
 		type: 'DELETE_HERO',
 		hero
