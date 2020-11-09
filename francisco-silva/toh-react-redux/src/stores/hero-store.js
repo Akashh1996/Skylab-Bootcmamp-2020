@@ -37,7 +37,6 @@ export class HeroStore extends EventEmitter {
     if (!amount) {
       return [];
     }
-
     return heroes.slice(0, amount);
   }
 

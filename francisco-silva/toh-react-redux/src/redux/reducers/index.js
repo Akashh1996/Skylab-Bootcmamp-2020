@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import heroes from './heroReducer';
 
 const rootReducer = combineReducers({
-	heroes
+  heroes,
 });
 
 export default rootReducer;
