@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Header from './Header';
+import Header from './components/Header';
 import reportWebVitals from './reportWebVitals';
-import DashboardList from './DashboardList';
-import HeroesList from './HeroesList';
-import Details from './Details';
+import HeroesList from './components/HeroesList';
 import store from './store';
 
 const dashboard = store.getTopHeroes();
@@ -15,7 +13,7 @@ const hero = store.getHeroById(4);
 ReactDOM.render(
 	<React.StrictMode>
 		<Header title="" />
-		<Details hero={hero} />
+		<HeroesList list={heroesList} />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
