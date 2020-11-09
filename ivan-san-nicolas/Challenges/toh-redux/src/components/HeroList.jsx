@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { bindActionCreators } from 'redux';
-import { addHero } from '../redux/actions/heroActions';
+import { connect } from 'react-redux';
+import addHero from '../redux/actions/heroActions';
 
-function HeroList({ heroes, actions }) {
+function HeroList({heroes, actions}) {
   const [newHero, setNewHero] = useState('');
 
   return (
@@ -28,7 +28,7 @@ HeroList.propTypes = {
   heroes: PropTypes.shape([]).isRequired,
   actions: PropTypes.shape({
     addHero: PropTypes.func.isRequired,
-  }).isRequired,
+  }).isRequired
 };
 
 function mapStateToProps({ heroes }) {
@@ -39,7 +39,7 @@ function mapStateToProps({ heroes }) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators({ addHero }, dispatch),
+    actions: bindActionCreators({ addHero }, dispatch)
   };
 }
 
