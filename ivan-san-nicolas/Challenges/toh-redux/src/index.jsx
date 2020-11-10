@@ -6,7 +6,7 @@ import { Provider as ReduxProvider } from 'react-redux';
 import configureStore from './redux/configureStore';
 import HeroList from './components/HeroList';
 
-const store = configureStore({ heroes: [] });
+const store = configureStore({ heroesR: {heroes: []} });
 
 ReactDOM.render(
 	<React.StrictMode>

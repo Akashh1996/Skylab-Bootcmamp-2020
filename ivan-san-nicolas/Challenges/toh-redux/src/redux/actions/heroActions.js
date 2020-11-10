@@ -15,12 +15,16 @@ export function deleteHero(hero) {
 	};
 }
 
+export function loadHeroesSuccess(heroes) {
+	return {
+		type: actionTypes.LOAD_HEROES,
+		heroes
+	};
+}
+
 export const loadHeroes = () => async (dispatch) => {
 	const heroesResponse = await axios.get('/api/heroes.json');
 	const heroes = heroesResponse.data;
-	debugger;
-	dispatch({
-		type: actionTypes.LOAD_HEROES,
-		heroes
-	});
+
+	dispatch(loadHeroesSuccess(heroes));
 };
