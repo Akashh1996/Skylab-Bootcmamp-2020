@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import TablePagination from '@material-ui/core/TablePagination';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
-import { bindActionCreators } from 'redux';
+// import { bindActionCreators } from 'redux';
 import { loadCoinsList } from '../../redux/actions/cryptoActions';
 
 const useStyles = makeStyles((theme) => ({
@@ -16,17 +16,21 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-function CryptoList({ currencies, actions }) {
+function CryptoList({ currencies, dispatch }) {
 	debugger;
+	!currencies && dispatch(loadCoinsList(25, 1));
+	const pruebas = currencies;
 	const classes = useStyles();
 	const showRows = useRef([25, 50, 100]);
-	const [cryptoList, setCryptoList] = useState([]);
-	const [currentPage, setCurrentPage] = useState(1);
 	const [pageCount, setPageCount] = useState(0);
+	const [currentPage, setCurrentPage] = useState(1);
 	const [currentItemsPerPage, setCurrentItemsPerPage] = useState(25);
 	const [checkbox, setCheckbox] = useState(false);
 	const [favoriteCurrencies, setFavoriteCurrencies] = useState(
 		cryptoStore.getFavoriteCurrencies
+	);
+	const [cryptoList, setCryptoList] = useState(
+		loadCoinsList(currentItemsPerPage, currentPage)
 	);
 
 	const handleChangeFavorite = () => {
@@ -146,7 +150,7 @@ function CryptoList({ currencies, actions }) {
 					</section>
 				</section>
 			) : (
-				setCryptoList(actions.loadCoinsList(currentItemsPerPage, currentPage))
+				<div>as</div>
 			)}
 		</>
 	);
@@ -159,17 +163,17 @@ CryptoList.propTypes = {
 	}).isRequired
 };
 
-function mapStateToProps({ currencies }) {
+function mapStateToProps(state) {
 	debugger;
 	return {
-		currencies
+		currencyList: state.currencies
 	};
 }
 
 function mapDispatchToProps(dispatch) {
 	debugger;
 	return {
-		actions: bindActionCreators(loadCoinsList(25, 1), dispatch)
+		dispatch
 	};
 }
 
