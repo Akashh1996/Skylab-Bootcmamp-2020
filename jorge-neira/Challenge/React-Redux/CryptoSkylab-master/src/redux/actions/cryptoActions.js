@@ -21,6 +21,26 @@ export async function loadCoinsList(per_page, page) {
 	}
 }
 
+export const addTodo = ({ title, userId }) => {
+	return (dispatch) => {
+		dispatch(addTodoStarted());
+
+		axios
+			.post(`https://jsonplaceholder.typicode.com/todos`, {
+				title,
+				userId,
+				completed: false
+			})
+			.then((res) => {
+				dispatch(addTodoSuccess(res.data));
+			})
+			.catch((err) => {
+				dispatch(addTodoFailure(err.message));
+			});
+	};
+};
+
+
 // function actionSomething(){
 // 	return function(dispatch){
 // 		// acxios
