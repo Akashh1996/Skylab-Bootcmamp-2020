@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { addHero } from '../redux/actions/heroActions';
+import { addHero, getHeroes } from '../redux/actions/heroActions';
 
 function HeroList({ heroes, actions }) {
 	const [newHero, setNewHero] = useState('');
@@ -18,10 +18,17 @@ function HeroList({ heroes, actions }) {
 			<button type="button" onClick={() => actions.addHero(newHero)}>
 				Add
 			</button>
-			{(!heroes || !heroes.length) && <h1>There are no heroes!</h1>}
+			{(!heroes || !heroes.length) && (
+				<>
+					<h1>There are no heroes!</h1>
+					<button type="button" onClick={() => actions.getHeroes()}>
+						Update Heroes
+					</button>
+				</>
+			)}
 			{heroes &&
 				heroes.length > 0 &&
-				heroes.map((hero) => <li key={hero.id}>{hero}</li>)}
+				heroes.map((hero) => <li key={hero.id}>{hero.name}</li>)}
 		</>
 	);
 }
@@ -29,8 +36,9 @@ function HeroList({ heroes, actions }) {
 HeroList.propTypes = {
 	heroes: PropTypes.shape([]).isRequired,
 	actions: PropTypes.shape({
-		addHero: PropTypes.func.isRequired
-	})
+		addHero: PropTypes.func.isRequired,
+		getHeroes: PropTypes.func.isRequired
+	}).isRequired
 };
 
 function mapStateToProps({ heroes }) {
@@ -41,7 +49,7 @@ function mapStateToProps({ heroes }) {
 
 function mapDispatchToProps(dispatch) {
 	return {
-		actions: bindActionCreators({ addHero }, dispatch)
+		actions: bindActionCreators({ addHero, getHeroes }, dispatch)
 	};
 }
 
