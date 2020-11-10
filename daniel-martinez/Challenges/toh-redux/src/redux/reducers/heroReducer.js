@@ -6,7 +6,7 @@ export default function heroReducer(state = [], action) {
 		case 'DELETE_HERO':
 			return state.filter((hero) => hero.id !== action.hero.id);
 
-		case 'GET_HERO':
+		case 'GET_HEROES':
 			return action.heroes;
 
 		default:

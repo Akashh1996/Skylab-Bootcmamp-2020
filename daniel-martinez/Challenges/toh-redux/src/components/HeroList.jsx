@@ -7,7 +7,6 @@ import { addHero, getHeroes } from '../redux/actions/heroActions';
 
 function HeroList({ heroes, actions }) {
 	const [newHero, setNewHero] = useState('');
-
 	return (
 		<>
 			<input
