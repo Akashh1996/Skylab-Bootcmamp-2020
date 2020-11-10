@@ -2,8 +2,14 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const port = process.env.PORT || 3000;
+const { v4: uuidv4 } = require('uuid');
+
+uuidv4();
 
 const app = express();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
 
@@ -34,4 +40,24 @@ app.put('/users/:userId', (req, res) => {
 
 app.delete('/users/:userId', (req, res) => {
 	return res.send(`DELETE HTTP method on user/${req.params.userId} resource`);
+});
+
+app.get('/users', (req, res) => {
+	return res.send(Object.values(users));
+});
+
+app.get('/users/:userId', (req, res) => {
+	return res.send(users[req.params.userId]);
+});
+
+app.post('/messages', (req, res) => {
+	const id = uuidv4();
+	const message = {
+		id,
+		text: req.body.text
+	};
+
+	messages[id] = message;
+
+	return res.send(message);
 });
