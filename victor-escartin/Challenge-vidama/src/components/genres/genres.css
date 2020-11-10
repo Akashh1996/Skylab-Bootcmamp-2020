@@ -1,0 +1,45 @@
+.genres-section {
+	padding: 60px 100px;
+	background: rgb(255, 251, 251);
+}
+
+.comment-section__title-container {
+	margin-bottom: 95px;
+}
+
+.genres-title {
+	font-size: 43px;
+}
+
+@media screen and (min-width: 1024px) {
+	.genres-section {
+		padding: 60px 30px;
+	}
+	.genres-title {
+		font-size: 48px;
+	}
+}
+
+@media screen and (min-width: 1160px) {
+	.genres-section {
+		padding: 60px 80px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.genre_box {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 50px;
+		transition: 0.5s ease ease-in;
+	}
+	.genre_containers {
+		display: flex;
+		width: 50vh;
+		justify-content: space-evenly;
+		background-color: rgb(238, 226, 213);
+		border-radius: 15px;
+		box-shadow: 0 35px 20px #777;
+		margin-bottom: 55px;
+	}
+}

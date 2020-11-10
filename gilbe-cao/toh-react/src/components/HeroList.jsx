@@ -1,44 +1,46 @@
-import React, { useEffect, useState } from 'react';
-import { loadHeroes, deleteHero, createHero } from '../actions/hero-actions';
-import heroStore from '../stores/hero-store';
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { PropTypes } from 'prop-types';
+import { bindActionCreators } from 'redux';
+import { addHero } from '../redux/actions/heroActions';
 
-function HeroList(props) {
-	const [heroes, setHeroes] = useState(heroStore.getHeroes());
-	const [newHero, setNewHero] = useState('');
+function HeroList({ heroes, actions }) {
+  const [newHero, setNewHero] = useState('');
 
-	useEffect(() => {
-		heroStore.addEventListener(handleChange);
-		if (!heroes || !heroes.length) {
-			loadHeroes();
-		}
+  return (
+    <>
+      <input
+        onChange={(event) => setNewHero(event.target.value)}
+        value={newHero}
+        placeholder="Enter a new hero name"
+      />
+      <button type="button" onClick={() => actions.addHero(newHero)}>Add</button>
 
-		return () => {
-			heroStore.removeEventListener(handleChange);
-		};
-	}, [heroes]);
-
-	function handleChange() {
-		setHeroes(heroStore.getHeroes());
-	}
-
-	return (
-		<>
-			<input
-				onChange={(event) => setNewHero(event.target.value)}
-				value={newHero}
-				placeholder="Enter a new hero name"
-			/>
-			<button onClick={() => createHero(newHero)}>Add</button>
-			{(!heroes || !heroes.length) && <h1>There are no heroes!</h1>}
-			{heroes &&
-				heroes.length > 0 &&
-				heroes.map((hero) => (
-					<li key={hero.id}>
-						{hero.name} <button onClick={() => deleteHero(hero.id)}>x</button>
-					</li>
-				))}
-		</>
-	);
+      {(!heroes || !heroes.length) && <h1>There are no heroes!</h1>}
+      {heroes && heroes.length > 0 && heroes.map((hero) => (
+        <li key={hero}>{hero}</li>
+      ))}
+    </>
+  );
 }
 
-export default HeroList;
+HeroList.propTypes = {
+  heroes: PropTypes.shape([]).isRequired,
+  actions: PropTypes.shape({
+    addHero: PropTypes.func.isRequired,
+  }).isRequired,
+};
+
+function mapStateToProps({ heroes }) {
+  return {
+    heroes,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators({ addHero }, dispatch),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(HeroList);

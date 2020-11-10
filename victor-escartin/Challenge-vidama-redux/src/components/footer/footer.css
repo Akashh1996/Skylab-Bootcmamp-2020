@@ -1,0 +1,139 @@
+.footer {
+	background-color: #eeb794;
+	text-align: center;
+	color: rgb(85, 51, 51);
+	padding: 30px 25px 25px;
+}
+
+.contact-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 5px;
+}
+
+.contact-links {
+	display: flex;
+	flex-direction: column;
+}
+
+.vidama-logo {
+	width: 120px;
+	margin-bottom: 13px;
+	border: 1px solid rgb(240, 213, 213);
+	border-radius: 5px;
+	box-shadow: 1px 1px 3px rgb(143, 75, 75);
+}
+
+.vidama-logo-link {
+	width: fit-content;
+}
+
+.contact-links__link {
+	width: fit-content;
+	cursor: pointer;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	padding: 3px 0;
+	transition: 0.15s color ease-out;
+	font-size: 16px;
+}
+
+.contact-links__link:hover {
+	color: rgb(0, 0, 0);
+}
+
+.social-networks {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 50vh;
+	cursor: pointer;
+	border-top: 1px solid rgba(196, 88, 88, 0.591);
+	border-bottom: 1px solid rgba(196, 88, 88, 0.591);
+	padding: 11px 0;
+	margin: 20px 0;
+	color: rgb(126, 62, 62);
+}
+
+.social-networks__network {
+	font-size: 35px;
+	transition: 0.15s color ease-out;
+	line-height: 30.63px;
+}
+
+.GooglePlus-icon:hover {
+	color: rgb(212, 75, 61);
+}
+
+.Facebook-icon:hover {
+	color: rgb(68, 105, 176);
+}
+
+.Youtube-icon:hover {
+	color: rgb(252, 13, 17);
+}
+
+.Twitter-icon:hover {
+	color: rgb(42, 163, 239);
+}
+
+.Pinterest-icon:hover {
+	color: rgb(228, 11, 44);
+}
+
+.Instagram-icon:hover {
+	color: rgb(255, 119, 0);
+}
+
+.footer__copyright {
+	font-size: 16px;
+	line-height: 18px;
+}
+
+@media screen and (min-width: 700px) {
+	.vidama-logo {
+		width: 180px;
+	}
+
+	.contact-info {
+		flex-direction: row;
+		justify-content: center;
+		margin-bottom: 15px;
+	}
+
+	.contact-links {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		cursor: pointer;
+		margin-right: 5%;
+	}
+
+	.contact-links__link {
+		left: 0;
+		transform: translate(0);
+		font-size: 20px;
+		white-space: nowrap;
+	}
+
+	.contact-links__link:not(:last-child) {
+		margin-right: 20px;
+	}
+
+	.social-networks {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		flex-wrap: wrap;
+		margin-left: 5%;
+		border: none;
+		width: fit-content;
+	}
+
+	.social-networks__network {
+		margin: 0 15px;
+	}
+}
