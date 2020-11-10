@@ -10,8 +10,8 @@ const store = configureStore({ heroes: [] });
 
 ReactDOM.render(
 	<React.StrictMode>
-		<ReduxProvider>
-			<HeroList store={store}/>
+		<ReduxProvider store={store}>
+			<HeroList />
 		</ReduxProvider>
 	</React.StrictMode>,
 	document.getElementById('root')
