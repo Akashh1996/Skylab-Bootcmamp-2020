@@ -18,6 +18,8 @@ function disemvowel(str) {
   module.exports = highAndLow;
 
   function findOdd(A) { 
+
+
     var maxNum = 0;
     var count = 0;
     for(var i = 0; i < A.length; i++) {
