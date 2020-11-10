@@ -1,33 +1,41 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { loadHeroes } from '../actions/hero-actions';
-import heroStore from '../stores/hero-store';
+import {connect} from 'react-redux';
+import {PropTypes} from 'prop-types'
+import { bindActionCreators } from 'redux';
+import {addHero, getHeroes} from '../redux/actions/heroActions'
 
-const AMOUNT = 4;
-function Dashboard() {
-  const [heroes, setHeroes] = useState([]);
+function Dashboard({heroes}) {
 
-  function handleChange() {
-    setHeroes(heroStore.sliceHeroes(AMOUNT));
-  }
-
-  useEffect(() => {
-    heroStore.addEventListener(handleChange);
-
-    if (!heroes || !heroes.length) {
-      loadHeroes();
-    }
-
-    return () => { heroStore.removeEventListener(handleChange); };
-  }, [heroes]);
   return (
     <>
       {!heroes.length && <h1>There are no heroes!</h1>}
       {
-        heroes.length && <ul>{heroes.map((hero) => <li key={hero.id}><Link to={`/heroes/${hero.id}`}>{hero.name}</Link></li>)}</ul>
+        heroes.length && <ul>{heroes.slice(0,4).map((hero) => <li key={hero.id}><Link to={`/heroes/${hero.id}`}>{hero.name}</Link></li>)}</ul>
       }
     </>
   );
 }
 
-export default Dashboard;
+Dashboard.propTypes = {
+  heroes: PropTypes.shape([]).isRequired,
+  actions: PropTypes.shape({
+    addHero: PropTypes.func.isRequired,
+    getHeroes: PropTypes.func.isRequired
+  }).isRequired
+}
+
+function mapStateToProps({heroes}) {
+  return {
+    heroes
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return{
+    actions: bindActionCreators({addHero, getHeroes}, dispatch),
+  }
+}
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Dashboard);
