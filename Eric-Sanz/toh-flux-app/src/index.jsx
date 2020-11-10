@@ -8,17 +8,26 @@ import Dashboard from './components/Dashboard/Dashboard';
 import List from './components/List/List';
 import Detail from './components/Detail/Detail';
 import reportWebVitals from './reportWebVitals';
+import { loadHeroes } from './actions/hero-actions';
+import { Provider } from 'react-redux';
+import configureStore from './redux/configureStore';
+
+const store = configureStore();
+
+store.dispatch(loadHeroes());
 
 ReactDOM.render(
 	<React.StrictMode>
-		<BrowserRouter>
-			<Header />
-			<Switch>
-				<Route path="/Dashboard" component={Dashboard} />
-				<Route path="/List" component={List} />
-				<Route path="/Detail/:heroId" component={Detail} />
-			</Switch>
-		</BrowserRouter>
+		<Provider store={store}>
+			<BrowserRouter>
+				<Header />
+				<Switch>
+					<Route path="/Dashboard" component={Dashboard} />
+					<Route path="/List" component={List} />
+					<Route path="/Detail/:heroId" component={Detail} />
+				</Switch>
+			</BrowserRouter>
+		</Provider>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
