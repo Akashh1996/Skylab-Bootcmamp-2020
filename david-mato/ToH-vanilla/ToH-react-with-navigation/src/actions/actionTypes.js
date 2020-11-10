@@ -1,0 +1,8 @@
+const actionTypes = {
+	AUTH_LOGIN: 'AUTH_LOGIN',
+	AUTH_LOGIN_ERROR: 'AUTH_LOGIN_ERROR',
+	AUTH_SIGNOUT: 'AUTH_SIGNOUT',
+	AUTH_SIGNOUT_ERROR: 'AUTH_SIGNOUT_ERROR'
+};
+
+export default actionTypes;
