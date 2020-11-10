@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { bindActionCreators } from 'redux';
 
-import { addHero } from '../redux/actions/heroActions';
+import { addHero, deleteHero } from '../redux/actions/heroActions';
 
 function HeroList({ heroes, actions }) {
 	const [newHero, setNewHero] = useState('');
@@ -22,11 +22,16 @@ function HeroList({ heroes, actions }) {
 			{heroes &&
 				heroes.length > 0 &&
 				heroes.map((hero) => (
-					<li key={hero}>
-						{hero}
-						{/* <button type="submit" onClick={() => actions.deleteHero()}>
-							x
-						</button> */}
+					<li key={hero.id}>
+						{hero.name || hero}
+						{
+							<button
+								type="submit"
+								onClick={() => actions.deleteHero(hero || hero.id)}
+							>
+								x
+							</button>
+						}
 					</li>
 				))}
 		</>
@@ -40,7 +45,6 @@ HeroList.propTypes = {
 };
 
 function mapStateToProps({ heroes }) {
-	console.log(heroes);
 	return {
 		heroes
 	};
@@ -48,7 +52,7 @@ function mapStateToProps({ heroes }) {
 
 function mapDispatchToProps(dispatch) {
 	return {
-		actions: bindActionCreators({ addHero }, dispatch)
+		actions: bindActionCreators({ addHero, deleteHero }, dispatch)
 	};
 }
 
