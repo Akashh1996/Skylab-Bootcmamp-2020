@@ -1,0 +1,236 @@
+.list-wrapper {
+  padding: 5vw;
+}
+
+.list-wrapper .list-table {
+  background-color: #17171a;
+  border-collapse: collapse;
+  margin-bottom: 50px;
+}
+
+.list-wrapper .list-table .list-table-title {
+  margin: 50px 0;
+  font-size: 2rem;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(1n + 0) {
+  padding: 25px 0;
+  border-bottom: 1px solid #575757;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(1n + 1) {
+  padding: 25px 0;
+  border-bottom: 1px solid #575757;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(1n + 2) {
+  padding: 25px 0;
+  border-bottom: 1px solid #575757;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(1n + 3) {
+  padding: 25px 0;
+  border-bottom: 1px solid #575757;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(1n + 4) {
+  padding: 25px 0;
+  border-bottom: 1px solid #575757;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(1n + 5) {
+  padding: 25px 0;
+  border-bottom: 1px solid #575757;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(1n + 6) {
+  padding: 25px 0;
+  border-bottom: 1px solid #575757;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(1n + 7) {
+  padding: 25px 0;
+  border-bottom: 1px solid #575757;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(1n + 0) {
+  text-align: left;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(1n + 1) {
+  text-align: left;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(1n + 2) {
+  text-align: left;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(1n + 4) {
+  text-align: right;
+  padding-right: 15px;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(1n + 5) {
+  text-align: right;
+  padding-right: 15px;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(1n + 6) {
+  text-align: right;
+  padding-right: 15px;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(1n + 7) {
+  text-align: right;
+  padding-right: 15px;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(1) {
+  width: 50px;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(2) {
+  padding: 0 15px;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(3) {
+  padding-right: 15px;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(4) {
+  width: 100px;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(5) {
+  width: 100px;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(6) {
+  width: 220px;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(7) {
+  width: 130px;
+}
+
+.list-wrapper .list-table .list-table-heading tr th:nth-child(8) {
+  width: 200px;
+}
+
+.list-wrapper .list-table .list-table-body tr td:nth-child(1n + 0) {
+  border-bottom: 1px solid #575757;
+  padding: 10px 15px 10px 0;
+}
+
+.list-wrapper .list-table .list-table-body tr td:nth-child(1n + 1) {
+  border-bottom: 1px solid #575757;
+  padding: 10px 15px 10px 0;
+}
+
+.list-wrapper .list-table .list-table-body tr td:nth-child(1n + 2) {
+  border-bottom: 1px solid #575757;
+  padding: 10px 15px 10px 0;
+}
+
+.list-wrapper .list-table .list-table-body tr td:nth-child(1n + 3) {
+  border-bottom: 1px solid #575757;
+  padding: 10px 15px 10px 0;
+}
+
+.list-wrapper .list-table .list-table-body tr td:nth-child(1n + 4) {
+  border-bottom: 1px solid #575757;
+  padding: 10px 15px 10px 0;
+}
+
+.list-wrapper .list-table .list-table-body tr td:nth-child(1n + 5) {
+  border-bottom: 1px solid #575757;
+  padding: 10px 15px 10px 0;
+}
+
+.list-wrapper .list-table .list-table-body tr td:nth-child(1n + 6) {
+  border-bottom: 1px solid #575757;
+  padding: 10px 15px 10px 0;
+}
+
+.list-wrapper .list-table .list-table-body tr td:nth-child(1n + 7) {
+  border-bottom: 1px solid #575757;
+  padding: 10px 15px 10px 0;
+}
+
+.list-wrapper .list-table .list-table-body tr td:nth-child(1n + 4) {
+  text-align: right;
+}
+
+.list-wrapper .list-table .list-table-body tr td:nth-child(1n + 5) {
+  text-align: right;
+}
+
+.list-wrapper .list-table .list-table-body tr td:nth-child(1n + 6) {
+  text-align: right;
+}
+
+.list-wrapper .list-table .list-table-body tr td:nth-child(1n + 7) {
+  text-align: right;
+}
+
+.list-wrapper .list-table .list-table-body tr td:nth-child(1) {
+  text-align: center;
+}
+
+.list-wrapper .list-table .list-table-body tr td:nth-child(2) {
+  text-align: center;
+}
+
+.list-wrapper .list-table .list-table-body tr td:nth-child(3) img {
+  margin: 0;
+}
+
+.list-wrapper .list-table .list-table-body .list-table-row .negative {
+  color: #fd423c;
+}
+
+.list-wrapper .list-table .list-table-body .list-table-row .positive {
+  color: #8aeb3b;
+}
+
+.list-wrapper .list-table .list-table-body .list-table-row .logo-crytolist-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list-wrapper .list-table .list-table-body .list-table-row .logo-crytolist-image > img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+.list-wrapper .list-table .list-table-row:hover {
+  background-color: #171924;
+}
+
+.list-wrapper .pagination {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.list-wrapper .pagination .pagination-buttons {
+  font-size: 2rem;
+}
+
+.list-wrapper .pagination .pagination-selector {
+  position: absolute;
+  right: 100px;
+}
+
+.test {
+  color: white;
+}
+/*# sourceMappingURL=CryptoList.css.map */

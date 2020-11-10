@@ -1,0 +1,122 @@
+$negativeValue: rgb(253, 66, 60);
+$positiveValue: rgb(138, 235, 59);
+
+.list-wrapper {
+	padding: 5vw;
+	.list-table {
+		background-color: #17171a;
+		border-collapse: collapse;
+		margin-bottom: 50px;
+		.list-table-title {
+			margin: 50px 0;
+			font-size: 2rem;
+		}
+		.list-table-heading {
+			tr {
+				@for $borderBottom from 0 to 8 {
+					th:nth-child(1n + #{$borderBottom}) {
+						padding: 25px 0;
+						border-bottom: 1px solid rgb(87, 87, 87);
+					}
+				}
+				@for $leftAlign from 0 to 3 {
+					th:nth-child(1n + #{$leftAlign}) {
+						text-align: left;
+					}
+				}
+				@for $rightAlign from 4 to 8 {
+					th:nth-child(1n + #{$rightAlign}) {
+						text-align: right;
+						padding-right: 15px;
+					}
+				}
+				th:nth-child(1) {
+					width: 50px;
+				}
+				th:nth-child(2) {
+					padding: 0 15px;
+				}
+				th:nth-child(3) {
+					padding-right: 15px;
+				}
+				th:nth-child(4) {
+					width: 100px;
+				}
+				th:nth-child(5) {
+					width: 100px;
+				}
+				th:nth-child(6) {
+					width: 220px;
+				}
+				th:nth-child(7) {
+					width: 130px;
+				}
+				th:nth-child(8) {
+					width: 200px;
+				}
+			}
+		}
+		.list-table-body {
+			tr {
+				@for $tdStyle from 0 to 8 {
+					td:nth-child(1n + #{$tdStyle}) {
+						border-bottom: 1px solid rgb(87, 87, 87);
+						padding: 10px 15px 10px 0;
+					}
+				}
+				@for $rightAlign from 4 to 8 {
+					td:nth-child(1n + #{$rightAlign}) {
+						text-align: right;
+					}
+				}
+				td:nth-child(1) {
+					text-align: center;
+				}
+				td:nth-child(2) {
+					text-align: center;
+				}
+				td:nth-child(3) {
+					img {
+						margin: 0;
+					}
+				}
+			}
+			.list-table-row {
+				.negative {
+					color: $negativeValue;
+				}
+
+				.positive {
+					color: $positiveValue;
+				}
+				.logo-crytolist-image {
+					display: flex;
+					align-items: center;
+				}
+				.logo-crytolist-image > img {
+					width: 30px;
+					margin: 0 10px;
+				}
+			}
+		}
+		.list-table-row:hover {
+			background-color: #171924;
+		}
+	}
+	.pagination {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		.pagination-buttons {
+			font-size: 2rem;
+		}
+		.pagination-selector {
+			position: absolute;
+			right: 100px;
+		}
+	}
+}
+
+.test {
+	color: white;
+}

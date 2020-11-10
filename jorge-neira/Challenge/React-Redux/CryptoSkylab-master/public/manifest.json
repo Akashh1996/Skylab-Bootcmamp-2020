@@ -1,0 +1,8 @@
+{
+  "short_name": "Crypto Skylab App",
+  "name": "Crypto currencies dashbord",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
