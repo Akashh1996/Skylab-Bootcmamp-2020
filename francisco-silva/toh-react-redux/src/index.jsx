@@ -11,8 +11,11 @@ import NotFound from './components/NotFound';
 
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
+import {loadHero} from './redux/actions/heroActions'
 
 const store = configureStore({ heroes: [] });
+
+store.dispatch(loadHero);
 
 render(
   <React.StrictMode>

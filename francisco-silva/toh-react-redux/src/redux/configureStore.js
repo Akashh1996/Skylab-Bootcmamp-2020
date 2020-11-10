@@ -1,14 +1,34 @@
 import { createStore, compose, applyMiddleware } from 'redux';
-import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
-import ReduxThunk from 'redux-thunk';
+// import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
+import thunkMiddleware from 'redux-thunk';
 import rootReducer from './reducers';
 
 export default function configureStore(initialState) {
-	const composeEnhancers =
-		window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-	return createStore(
-		rootReducer,
-		initialState,
-		composeEnhancers(applyMiddleware(reduxImmutableStateInvariant()))
-	);
+  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  return createStore(rootReducer, initialState, composeEnhancers(applyMiddleware(thunkMiddleware)))
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { createStore, compose, applyMiddleware } from 'redux';
+// import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
+// import thunk from 'redux-thunk';
+// import rootReducer from './reducers';
+
+// export default function configureStore(initialState) {
+//   const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+//   return createStore(rootReducer, initialState, composeEnhancers(applyMiddleware(reduxImmutableStateInvariant(), thunk)))
+// }

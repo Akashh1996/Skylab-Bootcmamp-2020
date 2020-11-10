@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { bindActionCreators } from 'redux';
-import { addHero } from '../redux/actions/heroActions';
+import { addHero, loadHero } from '../redux/actions/heroActions';
 
 function HeroList({ heroes, actions }) {
   const [newHero, setNewHero] = useState('');
@@ -15,10 +15,12 @@ function HeroList({ heroes, actions }) {
         placeholder="Enter a new hero name"
       />
       <button type="button" onClick={() => actions.addHero(newHero)}>Add</button>
+      
 
       {(!heroes || !heroes.length) && <h1>There are no heroes!</h1>}
       {heroes && heroes.length > 0 && heroes.map((hero) => (
-        <li key={hero}>{hero}</li>
+        <li key={hero.id}>{hero.name || hero}</li>
+    
       ))}
     </>
   );
@@ -39,7 +41,7 @@ function mapStateToProps({ heroes }) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators({ addHero }, dispatch),
+    actions: bindActionCreators({ addHero, loadHero }, dispatch),
   };
 }
 

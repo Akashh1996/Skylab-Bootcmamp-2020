@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export function addHero(hero) {
   return {
     type: 'ADD_HERO',
@@ -10,4 +12,8 @@ export function deleteHero(hero) {
     type: 'DELETE_HERO',
     hero,
   };
+}
+export async function loadHero(dispatch, getState) {
+    const {data} = await axios(`/api/heroes.json`);
+    dispatch({type: 'LOAD_HERO', data});
 }
