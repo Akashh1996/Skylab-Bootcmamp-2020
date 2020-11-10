@@ -16,6 +16,7 @@ ReactDOM.render(
 			<Switch>
 				<Route path="/" exact component={TopHeroes} />
 				<Route path="/heroes" exact component={HeroList} />
+				
 				<Route path="/heroes/:heroid" component={DetailHero} />
 				<Route component={NotFound} />
 			</Switch>

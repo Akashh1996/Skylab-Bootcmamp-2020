@@ -1,7 +1,11 @@
 import React from 'react';
 
-function Button(props) {
-	return <button id={props.id}>{props.search}</button>;
+function Button({ id, innerText, event }) {
+	return (
+		<button id={id} onClick={() => event()}>
+			{innerText}
+		</button>
+	);
 }
 
 export default Button;
