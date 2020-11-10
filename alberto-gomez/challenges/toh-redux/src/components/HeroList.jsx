@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import { addHero, loadHeroes } from '../redux/actions/heroActions';
 
 function HeroList({ heroes, actions }) {
+	debugger;
 	const [newHero, setNewHero] = useState('');
 
 	return (
@@ -17,14 +18,14 @@ function HeroList({ heroes, actions }) {
 			<button type="button" onClick={() => actions.addHero(newHero)}>
 				Add
 			</button>
-			<button type="button" onClick={() => loadHeroes()}>
+			<button type="button" onClick={() => actions.loadHeroes()}>
 				Load Heroes
 			</button>
 
 			{(!heroes || !heroes.length) && <h1>There are no heroes!</h1>}
 			{heroes &&
 				heroes.length > 0 &&
-				heroes.map((hero) => <li key={hero}>{hero}</li>)}
+				heroes.map((hero) => <li key={hero.id}>{hero.name}</li>)}
 		</>
 	);
 }
