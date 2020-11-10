@@ -6,7 +6,7 @@ export async function loadHeroes() {
 	const heroes = await response.json();
 
 	dispatcher.dispatch({
-		type: actionTypes.load_heroes,
+		type: actionTypes.LOAD_HEROES,
 		payload: heroes
 	});
 }
@@ -23,7 +23,7 @@ export async function loadHeroesById(heroId) {
 	}
 
 	dispatcher.dispatch({
-		type: actionTypes.load_hero,
+		type: actionTypes.LOAD_HERO,
 		payload: hero
 	});
 }
