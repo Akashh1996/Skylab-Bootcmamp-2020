@@ -1,0 +1,34 @@
+h1 {
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: gray;
+    padding-top: 15px;
+}
+
+.dashboard__link {
+    color: rgb(0, 144, 240);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.list__link {
+    color: rgb(110, 140, 156);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.detail__link {
+    color: rgb(110, 140, 156);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.email__btn {
+    margin-left: 10px;
+    font-size: 18px;
+    border-style: none;
+    padding: 10px;
+    color: gray;
+    outline: none;
+}

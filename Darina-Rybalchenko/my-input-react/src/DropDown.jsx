@@ -6,9 +6,10 @@ function DropDown({ labelName, options }) {
 		<>
 			<label className="labelName">{labelName}</label>
 			<select>
-				{options.map((option) => {
-					return <option key={option}>{option}</option>;
-				})}
+				{options &&
+					options.map((option) => {
+						return <option key={option}>{option}</option>;
+					})}
 			</select>
 		</>
 	);

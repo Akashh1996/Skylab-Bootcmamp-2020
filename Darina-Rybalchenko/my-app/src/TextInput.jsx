@@ -1,35 +1,62 @@
-import React, {useState} from 'react'
+import React, { useEffect, useState } from 'react';
+import { loadHero } from './actions/actions-creator';
+import heroStore from './stores/hero-store';
 
 function TextInput() {
-    const [idValue, setIdValue] = useState('12')
-    const [nameValue, setNameValue] = useState('Narco')
+	const [hero, setHero] = useState(heroStore.getHero());
+	const [id, setId] = useState(hero?.id);
+	const [name, setName] = useState(hero?.id);
+	const [lastName, setLastName] = useState(hero?.id);
 
-    return (
-        <>
-        <p>
-            id: 
-        <input 
-        type="text" 
-        value={idValue}
-        onChange={(event) => {
-            setIdValue(event.target.value);
-        }}
-        />
+	useEffect(() => {
+		heroStore.addEventListener(onChange);
+		if (!hero) {
+			loadHero();
+		}
+		return () => {
+			heroStore.removeEventListener(onChange);
+		};
+	}, [hero]);
 
-        </p> 
-        name: 
-        <input 
-        type="text" 
-        value={nameValue}
-        onChange={(event) => {
-            setNameValue(event.target.value);
-        }}
-        />
-        </>
-    
-   
-    )
+	function onChange() {
+		const hero = heroStore.getHero();
+		setHero(hero);
+		setId(hero?.id);
+		setName(hero?.name);
+		setLastName(hero?.lastName);
+	}
+	function handleChange(event, setValue) {
+		setValue(event.target.value);
+	}
+
+	return (
+		<>
+			<p>
+				id:
+				<input
+					type="text"
+					value={id}
+					onChange={(event) => handleChange(event, setId)}
+				/>
+			</p>
+			<p>
+				name:
+				<input
+					type="text"
+					value={name}
+					onChange={(event) => handleChange(event, setName)}
+				/>
+			</p>
+			<p>
+				name:
+				<input
+					type="text"
+					value={lastName}
+					onChange={(event) => handleChange(event, setLastName)}
+				/>
+			</p>
+		</>
+	);
 }
 
-export default TextInput
-
+export default TextInput;
