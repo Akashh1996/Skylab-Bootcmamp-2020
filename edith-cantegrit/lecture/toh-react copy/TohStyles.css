@@ -1,0 +1,95 @@
+.list__heroes-ids {
+	margin-left: -30px;
+	background: rgba(30, 70, 107, 0.7);
+	color: snow;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 35px;
+	border-radius: 3px;
+}
+
+.list__heroes-names {
+	padding-top: 8px;
+	padding-left: 15px;
+	cursor: pointer;
+	display: flex;
+	background-color: #ecebebdc;
+	border-radius: 3px;
+	width: 170px;
+	height: 35px;
+	margin-top: -35px;
+	color: slategrey;
+}
+
+.list__heroes-names:hover {
+	background-color: #cac8c8dc;
+}
+
+.list-heroes__btn {
+	width: 170px;
+	margin-left: 10px;
+	margin-top: 10px;
+	height: 35px;
+}
+
+.list-heroes__btn-name {
+	padding-left: 17px;
+}
+
+.list-title {
+	font-size: 30px;
+}
+
+.list-heroes {
+	display: flex;
+	flex-direction: column;
+	margin-left: 20px;
+}
+
+.top-heroes-container {
+	width: fit-content;
+}
+
+.top-heroes-title {
+	margin-top: 30px;
+	text-align: center;
+	font-size: 30px;
+	color: gray;
+}
+
+.top-hero {
+	font-weight: 600;
+	margin-left: 20px;
+	width: 130px;
+	height: 120px;
+	background: rgba(42, 83, 122, 0.7);
+	text-align: center;
+}
+
+.top-hero:hover {
+	cursor: pointer;
+	background: rgba(73, 137, 197, 0.7);
+}
+
+.top-btn:last-child {
+	margin-right: 0;
+}
+
+.hero-details {
+	margin-bottom: 20px;
+}
+
+.hero-details:first-of-type {
+	margin-top: 20px;
+}
+
+.hero-details span:first-child {
+	color: rgb(68, 100, 116);
+	font-size: 17px;
+}
+
+#hero-name {
+	font-size: 16px;
+}
