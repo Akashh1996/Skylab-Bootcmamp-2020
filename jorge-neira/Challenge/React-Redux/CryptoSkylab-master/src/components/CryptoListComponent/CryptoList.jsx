@@ -169,7 +169,7 @@ function mapStateToProps({ currencies }) {
 function mapDispatchToProps(dispatch) {
 	debugger;
 	return {
-		actions: bindActionCreators({ loadCoinsList }, dispatch)
+		actions: bindActionCreators(loadCoinsList(25, 1), dispatch)
 	};
 }
 

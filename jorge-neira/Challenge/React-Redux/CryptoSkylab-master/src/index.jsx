@@ -5,7 +5,7 @@ import CryptoList from './components/CryptoListComponent/CryptoList';
 import { Provider as ReduxProvider } from 'react-redux';
 import configureStore from './redux/configureStore';
 
-const cryptoStore = configureStore({ currencies: [] });
+const cryptoStore = configureStore();
 
 ReactDOM.render(
 	<React.StrictMode>

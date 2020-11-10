@@ -20,3 +20,16 @@ export async function loadCoinsList(per_page, page) {
 		};
 	}
 }
+
+// function actionSomething(){
+// 	return function(dispatch){
+// 		// acxios
+// 		dispatch(//accion que recibe datos)
+// 	}
+// }
+
+// function loQueSea(data){
+// 	return {
+// 		type
+// 	}
+// }
