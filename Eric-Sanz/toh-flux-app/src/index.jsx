@@ -8,14 +8,13 @@ import Dashboard from './components/Dashboard/Dashboard';
 import List from './components/List/List';
 import Detail from './components/Detail/Detail';
 import reportWebVitals from './reportWebVitals';
-import { loadHeroes } from './actions/hero-actions';
+import { loadHeroes } from './redux/actions/hero-actions';
 import { Provider } from 'react-redux';
 import configureStore from './redux/configureStore';
 
 const store = configureStore();
 
 store.dispatch(loadHeroes());
-
 ReactDOM.render(
 	<React.StrictMode>
 		<Provider store={store}>

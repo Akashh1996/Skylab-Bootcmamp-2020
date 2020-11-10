@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 // import storeHeroes from '../../stores/hero-store';
 import { PropTypes } from 'prop-types';
 import { bindActionCreators } from 'redux';
-import { addHero } from '../../redux/actions/hero-actions';
+import { addHero, loadHeroes } from '../../redux/actions/hero-actions';
 import { connect } from 'react-redux';
 import '../../TohStyles.css';
 
@@ -29,7 +29,7 @@ function List({ heroes, actions }) {
 				{heroes &&
 					heroes.length > 0 &&
 					heroes.map((hero) => (
-						<li key={hero}>{hero}</li>
+						<li key={hero.name}>{hero.name}</li>
 						// <ListItem heroId={hero.id} heroName={hero.name} />
 					))}
 			</div>
@@ -39,7 +39,10 @@ function List({ heroes, actions }) {
 
 List.propTypes = {
 	heroes: PropTypes.shape([]).isRequired,
-	actions: PropTypes.shape({ addHero: PropTypes.func.isRequired }).isRequired
+	actions: PropTypes.shape({
+		addHero: PropTypes.func.isRequired,
+		loadHeroes: PropTypes.func.isRequired
+	}).isRequired
 };
 
 function mapStateToProps({ heroes }) {
@@ -50,7 +53,7 @@ function mapStateToProps({ heroes }) {
 
 function mapDispatchToProps(dispatch) {
 	return {
-		actions: bindActionCreators({ addHero }, dispatch)
+		actions: bindActionCreators({ addHero, loadHeroes }, dispatch)
 	};
 }
 

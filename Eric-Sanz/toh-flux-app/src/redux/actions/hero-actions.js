@@ -3,7 +3,7 @@ import axios from 'axios';
 export function addHero(hero) {
 	return {
 		type: 'ADD_HERO',
-		payload: hero
+		hero
 	};
 }
 
@@ -15,9 +15,9 @@ export function deleteHero(hero) {
 }
 
 export const loadHeroes = () => async (dispatch) => {
-	const heroes = await axios.get('api/heroes.json');
+	const response = await axios.get('./heroes.json');
 	dispatch({
 		type: 'LOAD_HEROES',
-		payload: heroes.data
+		heroes: response.data
 	});
 };
