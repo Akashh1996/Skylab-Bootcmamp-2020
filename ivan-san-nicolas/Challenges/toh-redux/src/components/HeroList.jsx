@@ -19,12 +19,12 @@ function HeroList({heroes, actions}) {
       {(!heroes || !heroes.length) && <h1>There are no heroes!</h1>}
       {heroes && heroes.length > 0 && heroes.map((hero) => (
         <>
-          <li key={hero}>{hero}</li>
+          <li key={hero.name}>{hero.name}</li>
           <button type="button" onClick={() => actions.deleteHero(hero)}>X</button>
         </>
       ))}
 
-      <button type="button" onClick={() => loadHeroes()}>Load Heroes</button>
+      <button type="button" onClick={() => actions.loadHeroes()}>Load Heroes</button>
 
     </>
   );
@@ -39,12 +39,9 @@ HeroList.propTypes = {
   }).isRequired
 };
 
-function mapStateToProps({ heroes, addHero, loadHeroes, deleteHero }) {
+function mapStateToProps({ heroes }) {
   return {
-    heroes,
-    addHero,
-    loadHeroes,
-    deleteHero
+    heroes
   };
 }
 

@@ -4,12 +4,13 @@ export default function heroReducer(state = {}, action) {
 	debugger;
 	switch (action.type) {
 		case actionTypes.ADD_HERO:
-			return { ...state, heroes: [state.heroes, action.hero] };
+			return { ...state, heroes: [...state.heroes, action.hero] };
 		case actionTypes.LOAD_HEROES:
-			return { ...state, heroes: [state.heroes, action.payload] };
+			const heroes = action.heroes;
+			return { ...state, heroes };
 		case actionTypes.DELETE_HERO:
-			const heroes = state.heroes.filter((hero) => hero !== action.hero);
-			return { ...state, heroes: heroes };
+			const newHeroes = state.heroes.filter((hero) => hero !== action.hero);
+			return { ...state, heroes: newHeroes };
 		default:
 			return state;
 	}

@@ -15,12 +15,13 @@ export function deleteHero(hero) {
 	};
 }
 
-export async function loadHeroes() {
-	debugger;
-	const heroesResponse = await axios.get('/api/heroes.json');
-	const heroes = heroesResponse.data;
-	return {
-		type: actionTypes.LOAD_HEROES,
-		heroes
+export function loadHeroes() {
+	return async function (dispatch) {
+		const heroesResponse = await axios.get('/api/heroes.json');
+		const heroes = heroesResponse.data;
+		dispatch({
+			type: actionTypes.LOAD_HEROES,
+			heroes
+		});
 	};
 }
