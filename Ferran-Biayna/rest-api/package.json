@@ -1,0 +1,20 @@
+{
+  "name": "rest-api",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "curl": "^0.1.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "uuid": "^8.3.1"
+  }
+}
