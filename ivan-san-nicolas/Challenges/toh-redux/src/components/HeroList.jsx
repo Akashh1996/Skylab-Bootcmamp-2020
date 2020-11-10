@@ -39,9 +39,10 @@ HeroList.propTypes = {
   }).isRequired
 };
 
-function mapStateToProps({ heroes }) {
+function mapStateToProps(state) {
+  debugger;
   return {
-    heroes
+    heroes: state.heroesR.heroes
   };
 }
 
