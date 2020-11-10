@@ -1,0 +1,67 @@
+import {EventEmitter} from 'events';
+import dispatcher from '../Dispatcher/dispatcher';
+import actionTypes from './../Actions/hero-actiontypes';
+
+const CHANGE= "CHANGE";
+let _heroes = [];
+
+class HeroStore extends EventEmitter{
+    getHeroes(){
+        return _heroes;
+    }
+
+    deleteHero(heroId){
+        return _heroes.filter((hero)=>hero.id !== heroId);
+    }
+
+    updateHero(updatedHero){
+        return _heroes.map((hero) =>{
+            if(updatedHero.id===hero.id){
+                return updatedHero
+            } else {
+                return hero;
+            }
+        });
+    }
+
+    addEventListener(callback){
+        this.on(CHANGE,callback)
+    }
+
+    removeEventListener(callback){
+        this.removeListener(CHANGE,callback)
+    }
+
+    emitChange(){
+        this.emit(CHANGE);
+    }
+};
+
+const heroStore = new HeroStore();
+
+dispatcher.register((action)=>{
+    
+   switch (action.type) {
+       case actionTypes.LOAD_HEROES:
+            _heroes = action.payload;
+            heroStore.emitChange();
+           break;
+       case actionTypes.DELETE_HERO: 
+            _heroes = heroStore.deleteHero(action.payload)
+            heroStore.emitChange();
+           break;
+       case actionTypes.ADD_HERO: 
+            _heroes = [..._heroes,action.payload];
+            heroStore.emitChange();
+           break;
+       case actionTypes.UPDATE_HERO:
+            _heroes= heroStore.updateHero(action.payload);
+            heroStore.emitChange(); 
+           break;
+   
+       default:
+           break;
+   }
+})
+
+export default heroStore;

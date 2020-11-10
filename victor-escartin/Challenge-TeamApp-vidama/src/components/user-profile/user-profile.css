@@ -1,0 +1,157 @@
+body {
+	background-color: rgb(255, 251, 251);
+}
+
+.user-profile {
+	margin-top: 20px;
+	width: 80%;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.main-picture {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	border-radius: 15px;
+}
+
+.user-profile__main-body {
+	width: 85%;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 100px;
+}
+
+.user-profile-picture-and-name {
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+}
+
+.user-profile-name {
+	margin-left: 35px;
+}
+
+.user-profile-picture {
+	border-radius: 50%;
+	width: 200px;
+	margin-right: 20px;
+}
+
+.about-me {
+	margin-top: 30px;
+	border: 1px solid rgba(165, 42, 42, 0.591);
+	border-top: 50px solid rgba(165, 42, 42, 0.591);
+	width: 70%;
+	border-radius: 10px;
+	padding: 0 15px;
+	position: relative;
+	height: fit-content;
+	margin-right: 5px;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.about-me__title {
+	margin-top: 15px;
+	position: absolute;
+	top: -50px;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.about-me__text {
+	margin: 15px 0;
+	font-size: 16px;
+	position: relative;
+	text-align: center;
+}
+
+.my-favorites {
+	margin-top: 40px;
+	border: 1px solid rgba(165, 42, 42, 0.591);
+	border-top: 50px solid rgba(165, 42, 42, 0.591);
+	width: 805px;
+	border-radius: 10px;
+	padding: 0 15px;
+	position: relative;
+	height: 450px;
+	margin-left: 5px;
+	height: fit-content;
+	padding: 25px 20px 17px;
+	display: flex;
+	justify-content: space-evenly;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.my-favorites__title {
+	margin-top: 15px;
+	position: absolute;
+	top: -50px;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.favorite-book__image {
+	border-radius: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.591);
+	height: 230px;
+	width: 150px;
+}
+
+.favorite-book__author__and__title {
+	margin-left: 15px;
+}
+
+.favorite-books {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+
+.favorite-book {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 190px;
+	text-align: center;
+}
+
+.favorite-book-and-author {
+	margin-top: 5px;
+	margin-bottom: 0;
+	font-size: 16px;
+}
+
+.favorite-book-and-author:nth-child(3) {
+	color: rgb(182, 97, 52);
+}
+.favorite-book-and-author:nth-child(2) {
+	margin-top: 9px;
+	color: rgb(221, 103, 99);
+}
+
+@media screen and (max-width: 850px) {
+	.favorite-books {
+		flex-direction: column;
+		width: fit-content;
+	}
+	.my-favorites {
+		width: 320px;
+	}
+
+	.favorite-book {
+		margin-bottom: 20px;
+	}
+	.favorite-book:last-child {
+		margin-bottom: 10px;
+	}
+
+	.about-me {
+		width: 115%;
+	}
+}
