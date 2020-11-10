@@ -1,0 +1,29 @@
+.header-title {
+	font-size: 30px;
+	font-weight: 600;
+	color: rgb(138, 138, 138);
+}
+
+.tab-container {
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 20px;
+	margin-bottom: -10px;
+}
+
+.nav-btn {
+	font-weight: 600;
+	width: 90px;
+	margin-left: 5px;
+	height: 30px;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	color: rgb(117, 121, 124);
+	background: #ccccccdc;
+	cursor: pointer;
+}
+
+.nav-btn:active {
+	color: rgb(26, 176, 202);
+}

@@ -11,8 +11,10 @@ import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
 import { Provider } from "react-redux"
 import configureStore from "./redux/configureStore"
+import { loadHero } from "./redux/actions/heroActions"
 
 let store = configureStore()
+store.dispatch(loadHero)
 
 ReactDOM.render(
   <React.StrictMode>
@@ -32,7 +34,4 @@ ReactDOM.render(
   document.getElementById('root'),
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
