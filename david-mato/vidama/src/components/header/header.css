@@ -1,0 +1,336 @@
+* {
+	box-sizing: border-box;
+}
+
+.info-header {
+	background-color: rgb(255, 251, 251);
+	color: white;
+	padding: 14px 25px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo-box1 {
+	display: none;
+}
+
+.logo-vidama {
+	width: 68.28px;
+	height: 68.28px;
+	border: 1px solid rgb(240, 213, 213);
+	border-radius: 7px;
+	box-shadow: 0 0 2px rgb(143, 75, 75);
+}
+
+.user-login,
+.cart-top {
+	box-shadow: 1px 1px 3px rgb(143, 75, 75);
+	background-color: rgba(245, 76, 76, 0.664);
+	color: white;
+	font-weight: bold;
+	padding: 20px;
+	border-radius: 50%;
+	text-align: center;
+	cursor: pointer;
+	font-size: 25px;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.427);
+}
+
+.user-login {
+	font-size: 65px !important;
+	padding: 0px;
+	margin-right: 10px;
+}
+
+.img-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	color: rgb(110, 108, 108);
+	border: 1px solid rgba(0, 0, 0, 0.466);
+	border-left: none;
+	cursor: pointer;
+	width: 30px;
+	transition: 0.2s color ease-out;
+}
+
+.img-box:hover {
+	color: black;
+}
+
+.search-bar-box {
+	display: flex;
+	width: 40%;
+	justify-content: center;
+	align-items: center;
+	height: 37px;
+}
+
+#search-bar-input {
+	display: block;
+	background-color: white;
+	color: black;
+	border: 1px solid rgba(0, 0, 0, 0.466);
+	border-right: none;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding-left: 12px;
+	font-size: 18px;
+	font-weight: 100;
+	width: 190px;
+}
+
+#search-bar-input:focus {
+	border: 2px solid rgba(0, 0, 0, 0.345);
+	border-right: none;
+	outline: none;
+}
+
+#search-bar-input:focus + .img-box {
+	border: 2px solid rgba(0, 0, 0, 0.342);
+	border-left: none;
+}
+
+.login {
+	display: flex;
+	margin-right: 0px;
+}
+
+.login-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+}
+.user-photo-or-icon {
+	display: flex;
+}
+
+.user-photo-header {
+	width: 67px;
+	border-radius: 50%;
+	margin-right: 14px;
+	position: relative;
+	top: 1px;
+	cursor: pointer;
+}
+
+#users {
+	display: block;
+}
+
+#sign,
+#register {
+	display: none;
+}
+
+.users-icon,
+.shopping-cart-icon {
+	color: #ec8075;
+}
+
+.shopping-cart-text {
+	display: none;
+}
+
+.input-box {
+	display: flex;
+	height: 100%;
+	margin: 0 10px;
+}
+
+.login-background-filter {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.288);
+	z-index: 3;
+	visibility: hidden;
+}
+
+.login-wrapper {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+	border-radius: 20px;
+	background: rgb(255, 254, 254);
+	height: 300px;
+	width: 350px;
+	padding: 30px 50px 50px;
+	outline: 1px solid rgba(165, 42, 42, 0.591);
+	outline-offset: -30px;
+	visibility: hidden;
+}
+
+.closing-tag {
+	position: absolute;
+	top: 7px;
+	top: 8px;
+	right: 5px;
+	border-radius: 6px;
+	border-radius: 5px;
+	background: #efefef;
+	border: 1px solid rgba(0, 0, 0, 0.356);
+	width: 22px;
+	height: 22px;
+	text-align: center;
+	line-height: 22px;
+	cursor: pointer;
+}
+
+.login-password-title {
+	font-size: 22px;
+	color: rgb(85, 51, 51);
+}
+
+.login-password-title:nth-child(3) {
+	margin-top: 20px;
+}
+
+.login-input {
+	width: 190px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid rgb(121, 109, 109);
+	height: 28px;
+	padding-left: 5px;
+}
+
+.login-input:focus {
+	outline: none;
+	border: 2px solid rgba(116, 110, 110, 0.671);
+}
+
+.userLoginButton {
+	position: absolute;
+	bottom: 50px;
+	right: 50px;
+	font-size: 15px;
+	cursor: pointer;
+	border-radius: 5px;
+	padding: 2px 8px;
+	border: 1px solid rgba(0, 0, 0, 0.356);
+	text-align: center;
+	text-transform: uppercase;
+	background: #efefef;
+}
+
+.userLoginButton:focus {
+	outline: none;
+}
+
+@media screen and (min-width: 700px) {
+	.input-box {
+		display: flex;
+		height: 100%;
+		margin-right: 0;
+	}
+
+	.logo-vidama {
+		width: 220px;
+		height: 72px;
+	}
+
+	.info-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.logo-box1 {
+		display: block;
+	}
+
+	.logo-box2 {
+		display: none;
+	}
+
+	.img-box {
+		box-sizing: content-box;
+		background-color: white;
+		color: rgb(110, 108, 108);
+		border: 1px solid rgba(0, 0, 0, 0.466);
+		border-left: none;
+	}
+
+	.search-bar-box {
+		display: flex;
+		width: auto;
+		width: 40%;
+		justify-content: center;
+		align-items: center;
+		height: 37px;
+	}
+
+	#search-bar-input {
+		box-sizing: content-box;
+		display: block;
+		background-color: white;
+		border: 1px solid rgba(0, 0, 0, 0.466);
+		border-right: none;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+		padding-left: 12px;
+		font-size: 18px;
+	}
+
+	.login {
+		display: flex;
+		margin-right: 0px;
+	}
+
+	.login-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: fit-content;
+	}
+
+	/* .login-box > div {
+		margin: 0 2%;
+	} */
+
+	#users {
+		display: none;
+	}
+
+	#sign,
+	#register {
+		display: block;
+	}
+
+	.shopping-cart-icon {
+		color: white;
+	}
+
+	.shopping-cart-text {
+		text-decoration: none;
+		color: white;
+		margin-left: 1vw;
+	}
+
+	.liner-header {
+		height: 10px;
+		background-color: #e65f50;
+	}
+
+	.user-login {
+		margin: 0 15px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	#search-bar-input {
+		width: 250px;
+	}
+	.search-bar-box {
+		width: 40%;
+	}
+}

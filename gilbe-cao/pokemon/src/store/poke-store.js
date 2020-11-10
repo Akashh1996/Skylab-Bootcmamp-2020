@@ -7,7 +7,6 @@ class PokeStore {
 	}
 
 	getPokemon() {
-		debugger;
 
 		return _pokemon;
 	}
@@ -39,7 +38,6 @@ class PokeStore {
 	}
 
 	async loadPokemonsFromAPIx() {
-		debugger;
 		let url = 'https://pokeapi.co/api/v2/pokemon?limit=100&offset=200';
 		try {
 			const response = await fetch(url);
