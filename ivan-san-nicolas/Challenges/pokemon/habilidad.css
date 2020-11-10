@@ -1,0 +1,19 @@
+body {
+  background-color: gray;
+}
+
+body .block {
+  width: auto;
+  height: auto;
+  margin: 50px auto;
+  background-color: antiquewhite;
+  border-radius: 5px;
+}
+
+body .block .block__pokeblock {
+  width: 400px;
+  height: 40px;
+  background-color: darkblue;
+  color: white;
+}
+/*# sourceMappingURL=habilidad.css.map */

@@ -4,8 +4,8 @@ import { PropTypes } from "prop-types"
 import { bindActionCreators } from 'redux';
 import { addHero } from "../redux/actions/heroActions"
 
+
 function HeroList({ heroes, actions }) {
-  debugger
   const [newHero, setNewHero] = useState('');
 
   return (
@@ -19,6 +19,11 @@ function HeroList({ heroes, actions }) {
       {(!heroes || !heroes.length) && <h1>There are no heroes!</h1>}
       {heroes && heroes.length > 0 && heroes.map((hero) => (
         <li key={hero}>{hero}</li>
+
+      {(!heroes || !heroes.length) && <h1>There are no heroes!</h1>}
+
+      {heroes && heroes.length > 0 && heroes.map((hero) => (
+        <li key={hero.id}>{hero.name || hero}</li>
       ))}
     </>
   );
@@ -53,4 +58,17 @@ function mapDispatchToProps(dispatch) {
 
 
 
+export default connect(mapStateToProps, mapDispatchToProps)(HeroList);
+  }).isRequired,
+};
+function mapStateToProps({ heroes }) {
+  return {
+    heroes,
+  };
+}
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators({ addHero }, dispatch),
+  };
+}
 export default connect(mapStateToProps, mapDispatchToProps)(HeroList);
