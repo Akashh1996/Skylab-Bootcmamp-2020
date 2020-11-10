@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { deleteHero, createHero } from '../actions/hero-actions';
 
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
@@ -17,7 +16,7 @@ function HeroList({ heroes, addHero }) {
 				value={newHero}
 				placeholder="Enter a new hero name"
 			/>
-			<button type="button" onClick={() => actions.addHero(newHero)}>
+			<button type="button" onClick={() => addHero(newHero)}>
 				Add
 			</button>
 

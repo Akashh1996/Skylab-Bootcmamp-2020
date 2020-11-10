@@ -1,4 +1,4 @@
-export function addHero(hero) {
+export default function addHero(hero) {
 	return {
 		type: 'ADD_HERO',
 		hero

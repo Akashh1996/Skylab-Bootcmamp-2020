@@ -1,12 +1,12 @@
 import { createStore, compose, applyMiddleware } from 'redux';
-import reduxInmutableStateInvariant from 'redux-inmutable-state-invariant';
-import rootReducer from './heroReducer';
+import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
+import rootReducer from './reducers';
 
 export default function configureStore(initialState) {
 	const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE || compose;
 	return createStore(
 		rootReducer,
 		initialState,
-		composeEnhancers(applyMiddleware(reduxInmutableStateInvariant()))
+		composeEnhancers(applyMiddleware(reduxImmutableStateInvariant()))
 	);
 }
