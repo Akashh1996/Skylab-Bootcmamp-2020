@@ -5,8 +5,6 @@ function fn(seconds) {
 	);
 }
 
-fn(2);
-
 function helloWorld() {
 	let counter = 0;
 
@@ -14,8 +12,10 @@ function helloWorld() {
 		console.log('Hello world');
 		counter += 1;
 		if (counter === 5) {
-			console.log('Done');
 			clearInterval(interval);
+			console.log('Done');
 		}
 	}, 1000);
 }
+
+helloWorld();

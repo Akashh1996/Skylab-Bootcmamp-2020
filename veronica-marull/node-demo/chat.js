@@ -1,6 +1,6 @@
-process.stdin.on('readeble', () => {
+process.stdin.on('readable', () => {
 	const chunk = process.stdin.read();
 	if (chunk !== null) {
-		process.stdout.write('hola');
+		process.stdout.write('hola hola');
 	}
 });
