@@ -5,7 +5,6 @@ import { bindActionCreators } from 'redux';
 import {addHero, getHeroes} from '../redux/actions/heroActions'
 
 function HeroList({heroes, actions}) {
-  debugger
   const [newHero, setNewHero] = useState('');
 
   return (
