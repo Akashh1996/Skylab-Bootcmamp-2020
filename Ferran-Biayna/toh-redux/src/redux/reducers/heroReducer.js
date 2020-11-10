@@ -3,7 +3,7 @@ export default function heroReducer(state = [], action) {
         case 'GET_HEROES':
             return action.heroes
         case 'ADD_HERO':
-            return [...state, action.hero];
+            return [...state, {id: state[state.length-1].id, name: action.hero}];
         case 'DELETE_HERO':
             return state.filter((hero)=> hero.id !== action.hero.id);
 
