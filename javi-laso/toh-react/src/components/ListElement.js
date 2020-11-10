@@ -1,12 +1,12 @@
 import React from 'react';
 import './ListElement.css';
 
-function ListElement({ id, name }) {
+function ListElement({ hero }) {
 	return (
-		<li>
+		<li key={hero}>
 			<a href="#" className="hero-list-element">
-				<span className="a-id">{id}</span>
-				<span>{name}</span>
+				<span className="a-id">{hero}</span>
+				<span>{hero}</span>
 			</a>
 		</li>
 	);

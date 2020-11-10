@@ -1,21 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Header from './Header';
+import Header from './components/Header';
 import reportWebVitals from './reportWebVitals';
-import DashboardList from './DashboardList';
-import HeroesList from './HeroesList';
-import Details from './Details';
-import store from './store';
+import HeroesList from './components/HeroesList';
+import { Provider } from 'react-redux';
+import configureStore from './redux/configureStore';
 
-const dashboard = store.getTopHeroes();
-const heroesList = store.getHeroes();
-const hero = store.getHeroById(4);
+const store = configureStore();
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Header title="" />
-		<Details hero={hero} />
+		<Provider store={store}>
+			<Header title="" />
+			<HeroesList />
+		</Provider>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
