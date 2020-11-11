@@ -64,9 +64,3 @@ function requestHeroesListFailure(error) {
 		error
 	};
 }
-
-export function incrementId() {
-	return {
-		type: actionTypes.INCREMENT_ID
-	};
-}

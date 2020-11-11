@@ -4,7 +4,7 @@ import ListElement from './ListElement';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { bindActionCreators } from 'redux';
-import { addHero, incrementId } from '../redux/actions/heroActions';
+import { addHero } from '../redux/actions/heroActions';
 
 function HeroesList({ heroes, actions }) {
 	const [newHero, setNewHero] = useState('');
@@ -21,7 +21,6 @@ function HeroesList({ heroes, actions }) {
 				type="button"
 				onClick={() => {
 					actions.addHero({ name: newHero });
-					actions.incrementId();
 					setNewHero('');
 				}}
 			>
@@ -53,7 +52,7 @@ function mapStateToProps({ heroReducer }) {
 }
 
 function mapDispatchToProps(dispatch) {
-	return { actions: bindActionCreators({ addHero, incrementId }, dispatch) };
+	return { actions: bindActionCreators({ addHero }, dispatch) };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(HeroesList);
