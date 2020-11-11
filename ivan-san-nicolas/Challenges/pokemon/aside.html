@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon - aside</title>
+    <link rel="stylesheet" href="aside-style.css">
+</head>
+
+<body>
+    <aside class="aside">
+        <header class="aside__header">
+            <h2>Pokemon</h2>
+            <nav class="aside__header__nav">
+                <a class="aside__button" href="dashboard.html">Dashboard</a>
+                <a class="aside__button pokemon-button" href="aside.html" id="actual_nav">Pokemon</a>
+            </nav>
+        </header>
+        <section class="aside__topPokemon">
+            <h2 class="my-pokemon">Pokemon</h2>
+            <section class="aside__topPokemon__blocks" id='aside-pokemon-block'>
+            </section>
+        </section>
+    </aside>
+    <script src="poke-store.js"></script>
+    <script src="aside.js"></script>
+</body>
+
+</html>

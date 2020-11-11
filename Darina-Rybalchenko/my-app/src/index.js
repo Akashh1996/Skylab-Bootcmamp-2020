@@ -4,9 +4,15 @@ import './index.css';
 import reportWebVitals from './reportWebVitals'
 import TextInput from './TextInput'
 
+const hero = {
+  id: 12,
+  name: 'Narco',
+  lastName: 'Traficante'
+}
+
 ReactDOM.render(
   <React.StrictMode>
-    <TextInput />
+    <TextInput value={hero} />
 
   </React.StrictMode>,
   document.getElementById('root')

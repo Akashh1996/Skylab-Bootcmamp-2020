@@ -4,16 +4,19 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './Header/Header.js';
 import List2 from './List/List2';
+import { Provider as ReduxProvider } from 'react-redux';
+import configureStore from './redux/configureStore';
+
+const store = configureStore();
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Header />
-		<List2 />
+		<ReduxProvider store={store}>
+			<Header />
+			<List2 />
+		</ReduxProvider>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

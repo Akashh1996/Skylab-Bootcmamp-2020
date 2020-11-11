@@ -1,7 +1,0 @@
-#heroes-list {
-	list-style-type: none;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: none;
-	height: 79vh;
-}
