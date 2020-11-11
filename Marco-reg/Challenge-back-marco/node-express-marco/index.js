@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 app.get('/', (req, res) => {
-	res.send('Hello World!');
+	res.send('SUP CUNTS');
 });
 app.get('/users', (req, res) => {
 	return res.send('GET HTTP method on user resource');
