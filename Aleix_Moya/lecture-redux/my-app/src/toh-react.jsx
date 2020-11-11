@@ -63,5 +63,5 @@ function mapDispatchToProps(dispatch) {
 		actions: bindActionCreators({ addHero }, dispatch)
 	};
 }
-export default fetchProducts;
-//export default connect(mapStateToProps, mapDispatchToProps)(HeroList);
+//export default fetchProducts;
+export default connect(mapStateToProps, mapDispatchToProps)(HeroList);
