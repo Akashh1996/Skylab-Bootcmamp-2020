@@ -4,7 +4,9 @@ const routerTest = express.Router();
 function routes () {
     routerTest.route('/')
     .get((req, res) => {
-        res.end('Get is working');
+        console.log('Receiving GET request...');
+        const sum = 2 + 2;
+        res.end(`${sum}`);
     })
     .post((requ, res) => {
         res.end('Post is working');
