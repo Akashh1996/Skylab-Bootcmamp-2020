@@ -9,7 +9,6 @@ function routes() {
 	pokeRouter
 		.route('/')
 		.get(async (req, res) => {
-			debugger;
 			console.log(req);
 			const { limit, offset } = req.query;
 			const endpoint = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;

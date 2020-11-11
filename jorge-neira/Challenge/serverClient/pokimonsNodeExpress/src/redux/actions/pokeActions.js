@@ -27,17 +27,14 @@ export function requestPokemons() {
 	return async (dispatch) => {
 		const endpoint = 'http://localhost:1240/pokemons';
 		try {
-			debugger;
 			const pokemons = await axios.get(endpoint, {
 				params: {
 					limit: 10,
 					offset: 1
 				}
 			});
-			debugger;
 			dispatch(requestPokemonsSuccess(pokemons.data.results));
 		} catch (error) {
-			debugger;
 			dispatch(requestPokemonError(error));
 		}
 	};
