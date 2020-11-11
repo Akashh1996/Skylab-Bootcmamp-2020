@@ -47,7 +47,6 @@ HeroList.propTypes = {
 };
 
 function mapStateToProps(state) {
-	debugger;
 	return {
 		heroes: state.heroesR.heroes
 	};
