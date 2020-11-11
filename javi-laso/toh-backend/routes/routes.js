@@ -17,8 +17,13 @@ function routes() {
 		})
 		.post((req, res) => {
 			try {
-				const { id, name } = req.query;
-				jsonData.push({ id, name });
+				const { name } = req.body;
+				const nextId =
+					Math.max.apply(
+						null,
+						jsonData.map((hero) => hero.id)
+					) + 1;
+				jsonData.push({ id: nextId, name });
 				res.status(201);
 				res.send(jsonData);
 			} catch (error) {}
