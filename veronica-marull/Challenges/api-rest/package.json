@@ -1,0 +1,25 @@
+{
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"uuid": "^8.3.1"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.12.3",
+		"@babel/node": "^7.12.6",
+		"@babel/preset-env": "^7.12.1",
+		"nodemon": "^2.0.6"
+	},
+	"name": "api-rest",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"start": "nodemon --exec babel-node src/index.mjs",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": ""
+}
