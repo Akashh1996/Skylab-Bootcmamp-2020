@@ -25,7 +25,7 @@ export function createRandomvariable() {
 
 export function requestPokemons() {
 	return async (dispatch) => {
-		const endpoint = 'https://localhost:1240';
+		const endpoint = 'https://pokeapi.co/api/v2/pokemon?limit=100&offset=200';
 		try {
 			const pokemons = await axios(endpoint);
 			dispatch(requestPokemonsSuccess(pokemons.data.results));
