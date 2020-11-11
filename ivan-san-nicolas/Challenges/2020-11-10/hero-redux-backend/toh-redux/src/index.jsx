@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import configureStore from './redux/configureStore';
 
-const store = configureStore();
+const store = configureStore({heroesR: { heroesArray: [] }});
 
 ReactDOM.render(
   <React.StrictMode>
