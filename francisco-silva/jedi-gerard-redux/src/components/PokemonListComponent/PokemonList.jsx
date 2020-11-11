@@ -1,30 +1,39 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { requestPokemons } from '../../redux/actions/pokeActions';
+import {
+	requestPokemons,
+	createRandomVariable
+} from '../../redux/actions/pokeActions';
 
 function PokemonList({ pokemonList, dispatch }) {
 	if (!pokemonList && !pokemonList?.length) {
 		dispatch(requestPokemons());
 	}
+
 	return (
 		<>
 			{pokemonList &&
 				pokemonList.length &&
-				pokemonList.map((pokemon) => <p>{pokemon.name}</p>)}
+				pokemonList.map((pokemon) => {
+					return <p>{pokemon.name}</p>;
+				})}
 		</>
 	);
 }
 
-function mapStateToProps(state) {
+function mapStateToProps({ pokeReducer }) {
+	debugger;
 	return {
-		pokemonList: state.pokeReducer.pokemonList
+		pokemonList: pokeReducer.pokemonList,
+		randomNumber: pokeReducer.randomNumber
 	};
 }
 
 function mapDispatchToProps(dispatch) {
 	return {
-		actions: bindActionCreators({}, dispatch)
+		actions: bindActionCreators({ createRandomVariable }, dispatch),
+		dispatch
 	};
 }
 

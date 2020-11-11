@@ -1,11 +1,18 @@
 import actionTypes from '../actions/actionTypes';
 
 export default function pokeReducer(state = {}, action) {
-	switch (action.types) {
+	switch (action.type) {
 		case actionTypes.LOAD_POKEMONS:
-			return { ...state, pokemonList: action.pokemonList };
+			// return lo que sea
+			const coso = { ...state, pokemonArray: action.pokemonList };
+			return coso;
 		case actionTypes.LOAD_POKEMONS_ERROR:
-			break;
+			const cosoError = { ...state, error: action.error };
+			return cosoError;
+		case 'RANDOM':
+			const cosoRandom = { ...state, randomNumber: action.randomNumber };
+			debugger;
+			return cosoRandom;
 		default:
 			return state;
 	}
