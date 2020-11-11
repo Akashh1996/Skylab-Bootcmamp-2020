@@ -3,19 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import express from 'express';
+import { Provider } from 'react-redux';
+import configureStore from './redux/configureStore';
 
-const app = express();
-
-app.get('/', (req, res) => {
-	res.send('Hello World!');
-});
-
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+const store = configureStore();
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<Provider store={store}>
+			<App />
+		</Provider>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
