@@ -3,10 +3,21 @@ const cors = require('cors');
 
 const app = express();
 
+const port = process.env.PORT || 1240;
+
 app.use(cors());
 
-app.get('/', (req, res) => {
-	res.send('Hello World!');
+app.get('/', (request, response) => {
+	console.log(request);
+	response.end('Server is up and working!');
 });
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+app.post('/post', (request, response) => {
+	response.send('send 2');
+});
+
+app.put('/post', (request, response) => {
+	response.send('send 3');
+});
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
