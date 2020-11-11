@@ -3,7 +3,8 @@ const heroRouter = express.Router();
 let heroes = require('../api/heroes.json');
 
 function routes() {
-	heroRouter.route('/').get((req, res) => {
+    heroRouter.route('/')
+    .get((req, res) => {
 		res.status(200);
 		res.send(heroes);
     })
@@ -18,6 +19,22 @@ function routes() {
         let newHeroes = heroes.filter((hero) => 
             hero.id !== heroId
         );
+        heroes = [...newHeroes];
+        res.status(200);
+        res.send(heroes);
+    })
+    .put((req, res) => {
+        const heroId = 13;
+        const newName = 'Bombasto Deprecated';
+        let newHeroes = [];
+        heroes.map((hero) => {
+            if(hero.id !== heroId) {
+                newHeroes.push(hero);
+            } else {
+                hero.name = newName;
+                newHeroes.push(hero);
+            }
+        });
         heroes = [...newHeroes];
         res.status(200);
         res.send(heroes);
