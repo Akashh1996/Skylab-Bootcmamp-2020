@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 	next();
 });
 
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 // DATABASE //
 
@@ -114,4 +114,4 @@ app.get('/example', (req, res) => {
 */
 
 // Ponemos el servidor a escuchar en el puerto 3000 y le decimos que cuando se levante imprima el console.log
-app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
