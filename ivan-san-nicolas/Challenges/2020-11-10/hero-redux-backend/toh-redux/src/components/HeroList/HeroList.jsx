@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux';
 import {requestHeroes} from '../../redux/actions/heroActions';
 
 function HeroList(heroesList, dispatch) {
-    debugger;
     if(!heroesList && !heroesList?.length) {
         dispatch(requestHeroes());
     }
@@ -25,7 +24,6 @@ function HeroList(heroesList, dispatch) {
 }
 
 function mapStateToProps({heroesReducer}) {
-    debugger;
     return {
         heroesList: heroesReducer.heroesArray,
     }
