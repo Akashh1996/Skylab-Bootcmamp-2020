@@ -11,7 +11,6 @@ function Dashboard() {
 		storeHeroes.addEventListener(onChange);
 
 		if (!heroes || !heroes.length) {
-			debugger;
 			loadHeroes();
 		}
 
