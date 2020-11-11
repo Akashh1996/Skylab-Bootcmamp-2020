@@ -6,6 +6,7 @@ function routes() {
 	routerTest
 		.route('/')
 		.get((req, res) => {
+			console.log('receiving a Get request...');
 			res.send('Hola, si que funciono');
 		})
 		.post((req, res) => {
