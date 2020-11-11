@@ -11,6 +11,8 @@ import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
 import { Provider } from "react-redux"
 import configureStore from "./redux/configureStore"
+
+let store = configureStore()
 import { loadHero } from "./redux/actions/heroActions"
 
 let store = configureStore()
