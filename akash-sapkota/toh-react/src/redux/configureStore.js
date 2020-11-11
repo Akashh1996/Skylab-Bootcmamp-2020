@@ -9,6 +9,7 @@ export default function configureStore(initialState) {
 	return createStore(
 		rootReducer,
 		initialState,
+		compostEnhancers(applyMiddleware(reduxImmutableStateInvariant()))
 		/* 		compostEnhancers(applyMiddleware(reduxImmutableStateInvariant())),
 		 */ compostEnhancers(applyMiddleware(thunkMiddleWare))
 	);
