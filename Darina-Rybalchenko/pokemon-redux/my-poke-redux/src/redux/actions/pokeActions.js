@@ -26,7 +26,6 @@ export function requestPokemons() {
         } catch (error) {
             dispatch(requestPokemonError(error))
 
-
         }
     }
 }
