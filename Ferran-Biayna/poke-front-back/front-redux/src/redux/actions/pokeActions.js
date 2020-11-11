@@ -4,14 +4,14 @@ import axios from 'axios';
 function requestPokemonsSuccess(pokemonList) {
 	return {
 		type: actionTypes.LOAD_POKEMONS,
-		pokemonList,
+		pokemonList
 	};
 }
 
 function requestPokemonError(error) {
 	return {
 		type: actionTypes.LOAD_POKEMONS_ERROR,
-		error,
+		error
 	};
 }
 
@@ -19,17 +19,21 @@ export function createRandomVariable() {
 	const randomNumber = Math.random();
 	return {
 		type: 'RANDOM',
-		randomNumber,
+		randomNumber
 	};
 }
 
 export function requestPokemons() {
 	return async (dispatch) => {
-		const endpoint = 'https://pokeapi.co/api/v2/pokemon?limit=150&offset=0';
+		const endpoint = 'http://localhost:1240/pokemons';
 		try {
-			const pokemons = await axios(endpoint);
+			const pokemons = await axios(endpoint, {
+				params: { limit: 151, offset: 0 }
+			});
+			debugger
 			dispatch(requestPokemonsSuccess(pokemons.data.results));
 		} catch (error) {
+			debugger
 			dispatch(requestPokemonError(error));
 		}
 	};

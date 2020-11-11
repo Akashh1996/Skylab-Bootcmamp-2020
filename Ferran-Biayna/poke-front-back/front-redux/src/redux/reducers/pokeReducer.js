@@ -4,6 +4,7 @@ export default function pokeReducer(state = {}, action) {
 	switch (action.type) {
 		case actionTypes.LOAD_POKEMONS:
 			// return lo que sea
+			debugger
 			const coso = { ...state, pokemonArray: action.pokemonList };
 			return coso;
 		case actionTypes.LOAD_POKEMONS_ERROR:

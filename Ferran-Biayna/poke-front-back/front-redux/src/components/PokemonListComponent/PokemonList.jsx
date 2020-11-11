@@ -22,10 +22,10 @@ function PokemonList({ pokemonList, dispatch }) {
 	);
 }
 
-function mapStateToProps({ pokeReducer }) {
+function mapStateToProps( {pokeReducer} ) {
 	debugger;
 	return {
-		pokemonList: pokeReducer.pokemonList,
+		pokemonList: pokeReducer.pokemonArray,
 		randomNumber: pokeReducer.randomNumber,
 	};
 }
