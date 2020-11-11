@@ -1,7 +1,6 @@
 import actionTypes from './actionTypes'
 import axios from 'axios'
 
-
 function requestPokemonsSuccess(pokemonList) {
     return {
         type: actionTypes.LOAD_POKEMONS,
