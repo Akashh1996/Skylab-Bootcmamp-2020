@@ -8,9 +8,14 @@ function PokemonList({ pokemonList, dispatch }) {
 		dispatch(requestPokemons());
 	}
 
-	return pokemonList?.map((pokemon) => {
-		return <p>{pokemon.name}</p>;
-	});
+	return (
+		<>
+			{pokemonList &&
+				pokemonList?.map((pokemon) => {
+					return <p>{pokemon.name}</p>;
+				})}
+		</>
+	);
 }
 
 function mapStateToProps(state) {
