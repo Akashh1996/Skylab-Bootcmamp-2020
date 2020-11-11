@@ -1,17 +1,19 @@
 const express = require('express');
-// const cors = require('cors');
-// import { v4 as uuidv4 } from 'uuid';
+const cors = require('cors');
+const bodyParser = require('body-parser');
 
 const app = express();
-const port = process.env.PORT || 2130;
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+const port = process.env.PORT || 4000;
 
 const testRoute = require('../routes/routes')();
 app.use('/', testRoute);
 
-// app.use(cors());
-
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: false }));
+const pokeRoutes = require('../routes/pokeRoutes')();
+app.use('/pokemons', pokeRoutes);
 
 app.listen(port, () => {
 	console.log(`App listening on port ${port}...`);

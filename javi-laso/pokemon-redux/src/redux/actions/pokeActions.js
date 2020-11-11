@@ -17,12 +17,16 @@ function requestPokemonsError(error) {
 
 export function requestPokemons() {
 	return async (dispatch) => {
-		const endpoint = 'https://pokeapi.co/api/v2/pokemon?limit=150&offset=0';
+		const endpoint = 'http://localhost:4000/pokemons';
 
 		try {
-			const pokemons = await axios(endpoint);
+			const pokemons = await axios(endpoint, {
+				params: { limit: 150, offset: 0 }
+			});
+			debugger;
 			dispatch(requestPokemonsSuccess(pokemons.data.results));
 		} catch (error) {
+			debugger;
 			dispatch(requestPokemonsError(error));
 		}
 	};
