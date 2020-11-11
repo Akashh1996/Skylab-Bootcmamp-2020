@@ -6,7 +6,9 @@ function routes() {
 	routerTest
 		.route('/')
 		.get((req, res) => {
-			res.send('Funciona GET');
+			console.log('Receiving a GET request...');
+			const sum = 2 + 2;
+			res.send(`Si esto funciona, la suma es ${sum}`);
 		})
 		.post((req, res) => {
 			res.send('Funciona POST');
