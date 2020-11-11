@@ -15,13 +15,19 @@ function requestPokemonError(error) {
 	};
 }
 
+export function createRandomvariable() {
+	const randomNumber = Math.random();
+	return {
+		type: 'RANDOM',
+		randomNumber
+	};
+}
+
 export function requestPokemons() {
 	return async (dispatch) => {
 		const endpoint = 'https://pokeapi.co/api/v2/pokemon?limit=150&offset=0';
 		try {
 			const pokemons = await axios(endpoint);
-			debugger;
-			//dispatch una accion sincrona de success
 			dispatch(requestPokemonsSuccess(pokemons.data.results));
 		} catch (error) {
 			debugger;
