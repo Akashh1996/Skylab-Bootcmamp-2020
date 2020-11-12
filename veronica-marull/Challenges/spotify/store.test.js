@@ -1,10 +1,10 @@
-const { spotiStore, token } = require('./store');
+const spotiStore = require('./store');
 
 describe('store', () => {
 	let store;
 
 	beforeEach(() => {
-		store = new SpotifyStore();
+		store = spotiStore;
 	});
 
 	test('should be defined', () => {
@@ -12,11 +12,11 @@ describe('store', () => {
 	});
 
 	test('should be a array', () => {
-		expect(store.getNewReleases().toEqual([]));
+		expect(store.getNewReleases().toBe([]));
 	});
 
 	test('shoul load new releases', async () => {
-		const response = { json: jest.fn().alueOnce([{}]) };
+		const response = { json: jest.fn().mockReturnValueOnce([{}]) };
 		global.fecht = jest
 			.fn()
 			.mockReturnValueOnce(() => Promise.resolve(response));

@@ -1,18 +1,18 @@
 const store = require('./store');
 
 describe('Pokestore', () => {
-	let store;
+	let pokeStore;
 
 	beforeEach(() => {
-		store = new Store();
+		pokeStore = store;
 	});
 
 	test('should be defined', () => {
-		expect(store).toBeDefined();
+		expect(pokeStore).toBeDefined();
 	});
 
 	test('should return a array of pokemons', () => {
-		expect(store.getPokemons()).toEqual([]);
+		expect(pokeStore.getPokemons()).toEqual([]);
 	});
 
 	test('should load pokemons from api', () => {
@@ -23,8 +23,8 @@ describe('Pokestore', () => {
 			.fn()
 			.mockImplementationOnce(() => Promise.resolve(response));
 
-		return store.loadPokemons().then(() => {
-			expect(store.getPokemons()).toEqual([{}]);
+		return pokeStore.loadPokemons().then(() => {
+			expect(pokeStore.getPokemons()).toEqual([{}]);
 		});
 	});
 	/*
