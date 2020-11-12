@@ -1,4 +1,4 @@
-export default function sayHi(name) {
+function sayHi(name) {
 	if (!name) {
 		name = 'stranger';
 	}
@@ -6,3 +6,5 @@ export default function sayHi(name) {
 	console.log(`Hi ${name}, welcome to Skylab!`);
 	console.log('*******');
 }
+
+module.exports = sayHi();

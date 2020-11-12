@@ -1,16 +1,22 @@
 {
   "name": "edith-say-hi-from-skylab",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "My first published package",
   "main": "index.js",
   "dependencies": {
+    "eric-martinez-my-first-publish": "^1.0.2",
     "express": "^4.17.1"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["node", "express", "first-project", "npm"],
+  "keywords": [
+    "node",
+    "express",
+    "first-project",
+    "npm"
+  ],
   "author": "Edith Cantegrit",
   "license": "ISC"
 }
