@@ -2,7 +2,6 @@ import actionTypes from './actionTypes';
 import axios from 'axios';
 
 function requestHeroesSuccess(heroesList) {
-    debugger;
     return {
         type: actionTypes.LOAD_HEROES,
         heroesList,
@@ -10,7 +9,6 @@ function requestHeroesSuccess(heroesList) {
 }
 
 function requestHeroesError(error) {
-    debugger;
     return {
         type: actionTypes.LOAD_HEROES_ERROR,
         error,
@@ -30,8 +28,6 @@ export function requestHeroes() {
 }
 
 export function deleteHero(id) {
-    debugger;
-    console.log(`id: ${id}`);
     return async (dispatch) => {
         const endpoint = 'http://localhost:9999/heroes';
         try {
@@ -40,10 +36,10 @@ export function deleteHero(id) {
                     id,
                 }
             });
-            console.log(`${heroes.data}`);
             dispatch(requestHeroesSuccess(heroes.data));
         } catch (error) {
             dispatch(requestHeroesError(error))
         }
     }
 }
+export function addHero()
