@@ -5,6 +5,7 @@ import {requestHeroes} from '../../redux/actions/heroActions';
 
 function HeroList(heroesList, dispatch) {
     if(!heroesList && !heroesList?.length) {
+        debugger;
         dispatch(requestHeroes());
     }
 
@@ -23,9 +24,9 @@ function HeroList(heroesList, dispatch) {
     )
 }
 
-function mapStateToProps({heroesReducer}) {
+function mapStateToProps({heroesR}) {
     return {
-        heroesList: heroesReducer.heroesArray,
+        heroesList: heroesR.heroesArray,
     }
 };
 
