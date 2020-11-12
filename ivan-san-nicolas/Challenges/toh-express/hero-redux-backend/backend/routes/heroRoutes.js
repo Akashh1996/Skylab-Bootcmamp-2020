@@ -9,13 +9,12 @@ function routes() {
 		res.send(heroes);
     })
     .post((req, res) => {
-        const hero = {id: 25, name: 'Iván'};
+        hero = req.query;
         heroes.push(hero);
 		res.status(200);
 		res.send(heroes);
     })
     .delete((req, res) => {
-        console.log(`req: ${req}`);
         const id = req.query;
         const heroId = heroes.findIndex((hero) => hero.id === +id);
         heroes.splice(heroId, 1);
