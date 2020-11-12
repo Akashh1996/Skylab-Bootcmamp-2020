@@ -8,13 +8,3 @@ function passwordGenerator(numOfCharacters) {
 }
 
 module.exports = passwordGenerator;
-
-
-
-const arr = [1, 2, 4, 5, 4, 9, 4, 2, 7]; // 8
-
-function sumCheck(arr, result) {}
-
-for (let index = 0; index < arr.length; index++) {
-
-}
