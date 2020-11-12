@@ -15,7 +15,6 @@ function HeroList(props) {
     function handleChange() {
         setHeroes(heroStore.getHeroes());
     }
-    debugger;
     return (<>
         {(!heroes || !heroes.length) && <h1>No hay Heroes!</h1>}
         {(heroes && heroes.length > 0) && heroes.map(hero => <li>{hero.name}</li>)}
