@@ -1,22 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Header from './components/Header';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
-import HeroesList from './components/HeroesList';
 import { Provider } from 'react-redux';
 import configureStore from './redux/configureStore';
-import { chargeHeroesList } from './redux/actions/heroActions';
 
 const store = configureStore();
-
-store.dispatch(chargeHeroesList());
 
 ReactDOM.render(
 	<React.StrictMode>
 		<Provider store={store}>
-			<Header title="" />
-			<HeroesList />
+			<App />
 		</Provider>
 	</React.StrictMode>,
 	document.getElementById('root')
