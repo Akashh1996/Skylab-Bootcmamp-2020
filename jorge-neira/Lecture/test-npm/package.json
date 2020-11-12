@@ -1,7 +1,7 @@
 {
-  "name": "neira-jorge-skylab",
-  "version": "2.0.0",
-  "description": "First stable version",
+  "name": "pass-gen-skylab",
+  "version": "2.1.0",
+  "description": "Password Generator by quantity of numbers",
   "main": "index.js",
   "keywords": ["node", "express", "server", "jest"],
   "author": "jneira95",
