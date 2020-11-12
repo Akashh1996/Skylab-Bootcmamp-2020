@@ -1,0 +1,14 @@
+{
+  "name": "darina-say-hi-from-skylab",
+  "version": "1.1.2",
+  "description": "My first publish package ever!",
+  "main": "index.js",
+  "keywords": [],
+  "author": "darina rybalchenko",
+  "license": "ISC",
+  "devDependencies": {},
+  "repository": {
+    "type": "module",
+    "url": "index.js"
+  }
+}
