@@ -7,6 +7,7 @@ function routes() {
 	heroesRoute
 		.route('/')
 		.get((req, res) => {
+			console.log(req)
 			res.send(heroes);
 		})
 		.post((req, res) => {

@@ -1,0 +1,21 @@
+{
+  "name": "ferran-say-hi-from-skylab",
+  "version": "0.0.3",
+  "description": "Mi first published package ever!",
+  "main": "index.js",
+  "keywords": [
+    "node",
+    "express",
+    "bootcamp",
+    "skylab",
+    "barcelona"
+  ],
+  "author": "Ferran Biayna",
+  "license": "ISC",
+  "dependencies": {
+    "david-say-hi-from-skylab": "^1.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.13.0"
+  }
+}
