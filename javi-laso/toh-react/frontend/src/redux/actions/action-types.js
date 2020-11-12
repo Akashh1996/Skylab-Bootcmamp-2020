@@ -1,0 +1,8 @@
+const actionTypes = {
+  ADD_HERO: 'ADD_HERO',
+  DELETE_HERO: 'DELETE_HERO',
+  CHARGE_HEROES: 'CHARGE_HEROES',
+  CHARGE_HEROES_ERROR: 'CHARGE_HEROES_ERROR',
+  GET_HERO: 'GET_HERO',
+};
+export default actionTypes;
