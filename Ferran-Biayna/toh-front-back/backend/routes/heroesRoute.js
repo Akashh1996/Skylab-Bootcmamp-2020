@@ -16,7 +16,7 @@ function routes() {
 		.put((req, res) => {
 			const heroId = req.query.id;
 			heroes.map((hero) => {
-				hero.id === heroId ? (hero.name = 'Yorsias') : hero;
+				hero.id === heroId ? (hero.name = 'Skylab') : hero;
 			}) && res.send(heroes);
 		})
 		.delete((req, res) => {
@@ -27,16 +27,14 @@ function routes() {
 					: heroes.findIndex((hero) => hero.id === heroId),
 				1
 			) && res.send(heroes);
-        });
-        
-    	heroesRoute
-		.route('/:heroId')
-		.get((req, res) => {
-            console.log(req)
-            const hero = heroes.find((one_hero) => one_hero.id === +req.params.heroId)
-			res.send(hero);
-		})
-	
+		});
+
+	heroesRoute.route('/:heroId').get((req, res) => {
+		console.log(req);
+		const hero = heroes.find((one_hero) => one_hero.id === +req.params.heroId);
+		res.send(hero);
+	});
+
 	return heroesRoute;
 }
 
