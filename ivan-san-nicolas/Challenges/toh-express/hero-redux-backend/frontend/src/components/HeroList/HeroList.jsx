@@ -17,7 +17,7 @@ function HeroList({ heroesList, dispatch }) {
                 {
                 heroesList.map((hero) => {
                     return (<li>{hero.name} 
-                                <button type="button">delete</button>
+                                <button type="button" onClick={() => deleteHero(hero.id)}>delete</button>
                             </li>)
                 })
                 }
