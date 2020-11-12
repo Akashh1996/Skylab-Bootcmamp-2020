@@ -22,11 +22,21 @@ export function requestHeroes() {
         const endpoint = 'http://localhost:9999/heroes';
         try {
             const heroes = await axios.get(endpoint);
-            debugger;
-            console.log(`heroes in heroActions: ${heroes}`);
             dispatch(requestHeroesSuccess(heroes.data));
         } catch (error) {
             dispatch(requestHeroesError(error));
         }
     };
+}
+
+export function deleteHero() {
+    return async (dispatch) => {
+        const endpoint = 'http://localhost:9999/heroes';
+        try {
+            const heroes = await axios.post(endpoint);
+            dispatch(requestHeroesSuccess(heroes.data));
+        } catch (error) {
+            dispatch(requestHeroesError(heroes.data))
+        }
+    }
 }
