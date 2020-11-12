@@ -30,10 +30,8 @@ export function requestPokemons() {
 			const pokemons = await axios(endpoint, {
 				params: { limit: 151, offset: 0 }
 			});
-			debugger
 			dispatch(requestPokemonsSuccess(pokemons.data.results));
 		} catch (error) {
-			debugger
 			dispatch(requestPokemonError(error));
 		}
 	};
