@@ -10,6 +10,7 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"neira-jorge-skylab": "^2.0.0"
+		"neira-jorge-skylab": "^2.0.0",
+		"pass-gen-skylab": "^2.1.0"
 	}
 }
