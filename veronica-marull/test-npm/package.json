@@ -1,0 +1,26 @@
+{
+	"name": "vero-package",
+	"version": "0.0.1",
+	"description": "\"Mi primer package \"",
+	"main": "index.js",
+	"dependencies": {
+		"express": "^4.17.1"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"test": "test"
+	},
+	"keywords": [
+		"node",
+		"express",
+		"server",
+		"bootcamp",
+		"skylab"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/VeroBru?tab=repositories"
+	},
+	"author": "vero",
+	"license": "ISC"
+}
