@@ -1,0 +1,21 @@
+{
+	"name": "alberto-say-hi-from-skylab",
+	"version": "1.0.2",
+	"description": "Mi primer package a publicar",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"Skylab",
+		"Barcelona",
+		"npm",
+		"package",
+		"bootcamp",
+		"server",
+		"node",
+		"express"
+	],
+	"author": "",
+	"license": "ISC"
+}
