@@ -4,13 +4,11 @@ import { connect } from 'react-redux';
 import { requestPokemons, createRandomVariable } from '../../redux/actions/pokeActions';
 
 function PokemonList({ pokemonList, dispatch, actions }) {
-    debugger
     if (!pokemonList && !pokemonList?.length) {
         dispatch(requestPokemons());
     }
 
-    if (pokemonList?.length) {
-        debugger
+    if (pokemonList?.length) { //sino tiene pokemon list, no comproba length coz si no hay list hara length de undefined
         actions.createRandomVariable()
     }
 
@@ -23,7 +21,6 @@ function PokemonList({ pokemonList, dispatch, actions }) {
     );
 }
 function mapStateToProps(state) {
-    debugger
     return {
         pokemonList: state.pokeReducer.pokemonList
     };
