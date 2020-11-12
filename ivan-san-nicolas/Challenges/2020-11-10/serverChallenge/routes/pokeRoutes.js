@@ -12,7 +12,6 @@ function routes() {
             const pokemons = await axios(endpoint);
             res.status(200);
             res.send(pokemons.data);
-            debugger;
         } catch (error) {
             res.status(409);
             res.send('Error loading the pokemon');
