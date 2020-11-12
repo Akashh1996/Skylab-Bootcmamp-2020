@@ -1,6 +1,6 @@
 {
   "name": "edith-say-hi-from-skylab",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "My first published package",
   "main": "index.js",
   "dependencies": {

@@ -1,6 +1,6 @@
 function sayHi(name) {
 	if (!name) {
-		name = 'stranger';
+		name = 'Hola Eric, te estoy hablando desde el otro lado del mundo';
 	}
 	console.log('**************');
 	console.log(`Hi ${name}, welcome to Skylab!`);
