@@ -13,7 +13,7 @@ const heroListRoute = require('./routes/listRoute');
 heroApp.use('/', heroListRoute);
 
 const heroDetailRoute = require('./routes/detailRoute');
-heroApp.use('/heroes/', heroDetailRoute);
+heroApp.use('/heroes', heroDetailRoute);
 
 heroApp.listen(port, () => {
 	console.log(`HeroApp running on port ${port}...`);
