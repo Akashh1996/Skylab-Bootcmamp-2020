@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "alberto-say-hi-from-skylab": "^1.0.2"
+    "alberto-say-hi-from-skylab": "^1.1.0"
   }
 }
