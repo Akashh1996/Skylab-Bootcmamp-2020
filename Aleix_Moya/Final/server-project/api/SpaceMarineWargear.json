@@ -1,5 +1,5 @@
-{
-    "Absolvor_Bolt_Pistol": {
+[
+    {
         "name": "Absolvor Bolt Pistol",
         "points": 0,
         "Range": 18,
@@ -10,7 +10,7 @@
         "D": 2,
         "Ability": ""
     },
-    "Accelerator_Autocannon": {
+    {
         "name": "Accelerator Autocannon",
         "points": 0,
         "Range": 48,
@@ -21,7 +21,7 @@
         "D": 2,
         "Ability": ""
     },
-    "Assault_Bolter": {
+    {
         "name": "Assault Bolter",
         "points": 0,
         "Range": 18,
@@ -32,7 +32,7 @@
         "D": 1,
         "Ability": ""
     },
-    "Assault_Cannon": {
+    {
         "name": "Assault Cannon",
         "points": 10,
         "Range": 24,
@@ -43,7 +43,7 @@
         "D": 1,
         "Ability": ""
     },
-    "Assault_Plasma_Incinerator": {
+    {
         "name": "Assault Plasma Incinerator",
         "points": 0,
         "Range": 24,
@@ -59,27 +59,29 @@
             "Ability": "1 Mortal wound on 1s to hit"
         }
     },
-    "Astartes_Grenade_Launcher": {
+    {
         "name": "Astartes Grenade Launcher",
         "points": 5,
         "Range": 30,
         "Type": "Assault",
-        "frag":{
-            "NoS": "D6",
-            "S": 3,
-            "Ap": 0,
-            "D": 1,
-            "Ability": "Blast"
-        },
-        "krak":{
-            "NoS": 1,
-            "S": 6,
-            "Ap": -1,
-            "D": "D3",
-            "Ability": ""
+        "profile":{
+            "frag":{
+                "NoS": "D6",
+                "S": 3,
+                "Ap": 0,
+                "D": 1,
+                "Ability": "Blast"
+            },
+            "krak":{
+                "NoS": 1,
+                "S": 6,
+                "Ap": -1,
+                "D": "D3",
+                "Ability": ""
+            }
         }
     },
-    "Astartes_Shotgun":{
+    {
         "name": "Astartes Shotgun",
         "points": 0,
         "Range": 18,
@@ -90,7 +92,7 @@
         "D": 1,
         "Ability": ""
     },
-    "Auto_Boltstorm_Gauntlet":{
+    {
         "name": "Auto Boltstorm Gauntlet",
         "points": 0,
         "Range": 18,
@@ -101,7 +103,7 @@
         "D": 1,
         "Ability": ""
     },
-    "Auto_Bolt_Rifle":{
+    {
         "name": "Auto Bolt Rifle",
         "points": 0,
         "Range": 24,
@@ -112,34 +114,36 @@
         "D": 1,
         "Ability": ""
     },
-    "Bellicatus_Missile_Array": {
+    {
         "name": "Bellicatus Missile Array",
         "points": 0,
         "Range": 48,
         "Type": "Heavy",
-        "frag":{
-            "NoS": "D6",
-            "S": 4,
-            "Ap": 0,
-            "D": 1,
-            "Ability": "Blast"
-        },
-        "icarus":{
-            "NoS": "D3",
-            "S": 7,
-            "Ap": -1,
-            "D": 2,
-            "Ability": "Blast, +1 hit Aircraft"
-        },
-        "krak":{
-            "NoS": 1,
-            "S": 8,
-            "Ap": -2,
-            "D": "D6",
-            "Ability": ""
+        "profile": {
+            "frag":{
+                "NoS": "D6",
+                "S": 4,
+                "Ap": 0,
+                "D": 1,
+                "Ability": "Blast"
+            },
+            "icarus":{
+                "NoS": "D3",
+                "S": 7,
+                "Ap": -1,
+                "D": 2,
+                "Ability": "Blast, +1 hit Aircraft"
+            },
+            "krak":{
+                "NoS": 1,
+                "S": 8,
+                "Ap": -2,
+                "D": "D6",
+                "Ability": ""
+            }
         }
     },
-    "Bolt_Carabine": {
+    {
         "name": "Bolt Carabine",
         "points": 0,
         "Range": 24,
@@ -150,7 +154,7 @@
         "D": 1,
         "Ability": ""
     },
-    "Bolt_Pistol": {
+    {
         "name": "Bolt Pistol",
         "points": 0,
         "Range": 12,
@@ -161,11 +165,12 @@
         "D": 1,
         "Ability": ""
     },
-    "Bolt_Sniper_Rifle": {
+    {
         "name": "Bolt Sniper Rifle",
         "points": 0,
         "Range": 36,
         "Type": "Heavy",
+        "profile":{
         "Executioner_Round":{
             "NoS": 1,
             "S": 5,
@@ -187,8 +192,9 @@
             "D": 2,
             "Ability": "1 Mortal Wound on 6s to wound"
         }
+        }
     },
-    "Boltgun": {
+    {
         "name": "Boltgun",
         "points": 0,
         "Range": 24,
@@ -199,7 +205,7 @@
         "D": 1,
         "Ability": ""
     },
-    "Boltstorm_Gauntlet":{
+    {
         "name": "Boltstorm Gauntlet",
         "points": 0,
         "Range": 12,
@@ -210,7 +216,7 @@
         "D": 1,
         "Ability": ""
     },
-    "Centurion_Missile_Launcher":{
+    {
         "name": "Centurion Missile Launcher",
         "points": 0,
         "Range": 36,
@@ -221,7 +227,7 @@
         "D": "D3",
         "Ability": "Blast"
     },
-    "Cerberus_Launcher":{
+    {
         "name": "Cerberus Launcher",
         "points": 0,
         "Range": 18,
@@ -232,7 +238,7 @@
         "D": 1,
         "Ability": "Blast"
     },
-    "Combi-Bolter":{
+    {
         "name": "Combi-Bolter",
         "points": 0,
         "Range": 24,
@@ -243,9 +249,10 @@
         "D": 1,
         "Ability": ""
     },
-    "Combi-Flamer":{
+    {
         "name": "Combi-Flamer",
         "points": 0,
+        "profile":{
         "bolter":{
             "Range": 24,
             "Type": "Rapidfire",
@@ -263,12 +270,14 @@
             "Ap": 0,
             "D": 1,
             "Ability": "Auto Hit"
+        }
         },
         "Ability": "shoot both -1 to hit"
     },
-    "Combi-Grav":{
+    {
         "name": "Combi-Grav",
         "points": 0,
+        "profile":{
         "bolter":{
             "Range": 24,
             "Type": "Rapidfire",
@@ -288,91 +297,99 @@
             "grav-Effect":{
                 "D": 2
             }
+        }
         },
-        
         "Ability": "shoot both -1 to hit"
     },
-    "Combi-Melta":{
+    {
         "name": "Combi-Melta",
         "points": 0,
-        "bolter":{
-            "Range": 24,
-            "Type": "Rapidfire",
-            "NoS": 1,
-            "S": 4,
-            "Ap": 0,
-            "D": 1,
-            "Ability": ""
-        },
-        "melta":{
-            "Range": 12,
-            "Type": "Assault",
-            "NoS": 1,
-            "S": 8,
-            "Ap": -4,
-            "D": "D6",
-            "Ability": ""
-        },
-        "melta-range":{
-            "Range": 6,
-            "Type": "Assault",
-            "NoS": 1,
-            "S": 8,
-            "Ap": -4,
-            "D": "D6 + 2",
-            "Ability": ""
-        },
-        "Ability": "shoot both -1 to hit"
-    },
-    "Combi-Plasma":{
-        "name": "Combi-Plasma",
-        "points": 0,
-        "bolter":{
-            "Range": 24,
-            "Type": "Rapidfire",
-            "NoS": 1,
-            "S": 4,
-            "Ap": 0,
-            "D": 1,
-            "Ability": ""
-        },
-        "plasma":{
-            "Range": 24,
-            "Type": "Rapidfire",
-            "NoS": 1,
-            "S": 7,
-            "Ap": -3,
-            "D": 1,
-            "Overcharged":{
-                "S": 8,
-                "Ap": -3,
-                "D": 2,
-                "Ability": "Die on 1s to hit"
+        "profile":{
+            "bolter":{
+                "Range": 24,
+                "Type": "Rapidfire",
+                "NoS": 1,
+                "S": 4,
+                "Ap": 0,
+                "D": 1,
+                "Ability": ""
+            },
+            "melta":{
+                "no-melta":{
+                    "Range": 12,
+                    "Type": "Assault",
+                    "NoS": 1,
+                    "S": 8,
+                    "Ap": -4,
+                    "D": "D6",
+                    "Ability": ""
+                },
+                "melta-range":{
+                    "Range": 6,
+                    "Type": "Assault",
+                    "NoS": 1,
+                    "S": 8,
+                    "Ap": -4,
+                    "D": "D6 + 2",
+                    "Ability": ""
+                }
             }
         },
         "Ability": "shoot both -1 to hit"
     },
-    "Cyclone_Missile_Launcher":{
+    {
+        "name": "Combi-Plasma",
+        "points": 0,
+        "profile":{
+            "bolter":{
+                "Range": 24,
+                "Type": "Rapidfire",
+                "NoS": 1,
+                "S": 4,
+                "Ap": 0,
+                "D": 1,
+                "Ability": ""
+            },
+            "plasma":{
+                "Range": 24,
+                "Type": "Rapidfire",
+                "NoS": 1,
+                "S": 7,
+                "Ap": -3,
+                "D": 1,
+                "Overcharged":{
+                    "S": 8,
+                    "Ap": -3,
+                    "D": 2,
+                    "Ability": "Die on 1s to hit"
+                }
+            }
+        },
+        "Ability": "shoot both -1 to hit"
+    },
+    {
         "name": "Cyclone Missile Launcher",
         "points": 0,
         "Range": 36,
         "Type": "Heavy",
-        "frag":{
-            "NoS": "2D6",
-            "S": 4,
-            "Ap": 0,
-            "D": 1,
-            "Ability": "Blast"
-        },
-        "krak":{
-            "NoS": 2,
-            "S": 8,
-            "Ap": -2,
-            "D": "D6",
-            "Ability": ""
-        }
+        "profile":{
+            "frag":{
+                "NoS": "2D6",
+                "S": 4,
+                "Ap": 0,
+                "D": 1,
+                "Ability": "Blast"
+            },
+            "krak":{
+                "NoS": 2,
+                "S": 8,
+                "Ap": -2,
+                "D": "D6",
+                "Ability": ""
+            }
+        }        
     },
-    "Deathwind_Launcher":{
+    {
         "name": "Deathwind Launcher",
         "points": 0,
         "Range": 12,
@@ -383,7 +400,7 @@
         "D": 1,
         "Ability": "Blast"
     },
-    "Demolisher_Cannon":{
+    {
         "name": "Demolisher Cannon",
         "points": 0,
         "Range": 24,
@@ -394,7 +411,7 @@
         "D": "D6",
         "Ability": "Blast"
     },
-    "Executor_Bolt_Rifle": {
+    {
         "name": "Executor Bolt Rifle",
         "points": 0,
         "Range": 42,
@@ -405,7 +422,7 @@
         "D": 2,
         "Ability": ""
     },
-    "Executor_Heavy_Bolter": {
+    {
         "name": "Executor Heavy Bolter",
         "points": 0,
         "Range": 42,
@@ -416,7 +433,7 @@
         "D": 3,
         "Ability": ""
     },
-    "Flamer": {
+    {
         "name": "Flamer",
         "points": 0,
         "Range": 12,
@@ -427,7 +444,7 @@
         "D": 1,
         "Ability": "Auto hit"
     },
-    "Flamerstorm_Cannon": {
+    {
         "name": "Flamestorm Cannon",
         "points": 0,
         "Range": 12,
@@ -438,7 +455,7 @@
         "D": 2,
         "Ability": "Auto hit"
     },
-    "Flamerstorm_Gauntlet": {
+    {
         "name": "Flamestorm Gauntlet",
         "points": 0,
         "Range": 12,
@@ -449,7 +466,7 @@
         "D": 1,
         "Ability": "Auto hit"
     },
-    "Forge_Bolter": {
+    {
         "name": "Forge Bolter",
         "points": 0,
         "Range": 24,
@@ -460,7 +477,7 @@
         "D": 2,
         "Ability": "Can also shoot pistols or grenades"
     },
-    "Frag_Grenades": {
+    {
         "name": "Frag Grenades",
         "points": 0,
         "Range": 6,
@@ -471,7 +488,7 @@
         "D": 1,
         "Ability": "Blast"
     },
-    "Fragstorm_Grenade_Launcher": {
+    {
         "name": "Fragstorm Grenade Launcher",
         "points": 0,
         "Range": 6,
@@ -482,7 +499,7 @@
         "D": 1,
         "Ability": "Blast"
     },
-    "Grav-Cannon":{
+    {
         "name": "Grav-Cannon",
         "points": 0,
         "Range": 30,
@@ -495,7 +512,7 @@
             "D": 2
         }
     },
-    "Grav-Gun":{
+    {
         "name": "Grav-Gun",
         "points": 0,
         "Range": 18,
@@ -508,7 +525,7 @@
             "D": 2
         }
     },
-    "Grav-Pistol":{
+    {
         "name": "Grav-Pistol",
         "points": 0,
         "Range": 12,
@@ -521,7 +538,7 @@
             "D": 2
         }
     },
-    "Grenade_Harness": {
+    {
         "name": "Grenade Harness",
         "points": 0,
         "Range": 12,
@@ -532,7 +549,7 @@
         "D": 1,
         "Ability": "Blast"
     },
-    "Hammerfall_Heavy_Bolter_Array": {
+    {
         "name": "Hammerfall Heavy Bolter Array",
         "points": 0,
         "Range": 36,
@@ -543,7 +560,7 @@
         "D": 2,
         "Ability": "Shoot all enemies in Range"
     },
-    "Hammerfall_Heavy_Flamer_Array": {
+    {
         "name": "Hammerfall Heavy Flamer Array",
         "points": 0,
         "Range": 12,
@@ -554,27 +571,29 @@
         "D": 1,
         "Ability": "Auto hit, Shoot all enemies in Range"
     },
-    "Hammerfall_Missile_Launcher": {
+    {
         "name": "Hammerfall Missile Launcher",
         "points": 0,
         "Range": 72,
         "Type": "Heavy",
-        "frag":{
-            "NoS": "2D6",
-            "S": 6,
-            "Ap": 0,
-            "D": 1,
-            "Ability": "Blast"
-        },
-        "krak":{
-            "NoS": 2,
-            "S": 10,
-            "Ap": -2,
-            "D": "D6",
-            "Ability": ""
-        }
+        "profile":{
+            "frag":{
+                "NoS": "2D6",
+                "S": 6,
+                "Ap": 0,
+                "D": 1,
+                "Ability": "Blast"
+            },
+            "krak":{
+                "NoS": 2,
+                "S": 10,
+                "Ap": -2,
+                "D": "D6",
+                "Ability": ""
+            }
+        }        
     },
-    "Hammerstrike_Missile_Launcher": {
+    {
         "name": "Hammerstrike Missile Launcher",
         "points": 0,
         "Range": 36,
@@ -585,7 +604,7 @@
         "D": 3,
         "Ability": ""
     },
-    "Hand_Flamer": {
+    {
         "name": "Hand Flamer",
         "points": 0,
         "Range": 12,
@@ -596,7 +615,7 @@
         "D": 1,
         "Ability": "Auto hit"
     },
-    "Heavy_Bolt_Pistol": {
+    {
         "name": "Heavy Bolt Pistol",
         "points": 0,
         "Range": 18,
@@ -607,7 +626,7 @@
         "D": 1,
         "Ability": ""
     },
-    "Heavy_Bolt_Rifle": {
+    {
         "name": "Heavy Bolt Rifle",
         "points": 0,
         "Range": 36,
@@ -618,7 +637,7 @@
         "D": 1,
         "Ability": ""
     },
-    "Heavy_Bolter": {
+    {
         "name": "Heavy Bolter",
         "points": 0,
         "Range": 36,
@@ -629,7 +648,7 @@
         "D": 2,
         "Ability": ""
     },
-    "Heavy_Flamer": {
+    {
         "name": "Heavy Flamer",
         "points": 0,
         "Range": 12,
@@ -640,7 +659,7 @@
         "D": 1,
         "Ability": "Auto hit"
     },
-    "Heavy_Laser_Destroyer": {
+    {
         "name": "Heavy Laser Destroyer",
         "points": 0,
         "Range": 72,
@@ -651,29 +670,31 @@
         "D": "D3 + 3",
         "Ability": ""
     },
-    "Heavy_Melta_Rifle": {
+    {
         "name":"Heavy Melta Rifle",
         "points": 0,
         "melta":{
-            "Range": 24,
-            "Type": "Heavy",
-            "NoS": 1,
-            "S": 8,
-            "Ap": -4,
-            "D": "D6 + 2",
-            "Ability": ""
-        },
-        "melta-range":{
-            "Range": 12,
-            "Type": "Heavy",
-            "NoS": 1,
-            "S": 8,
-            "Ap": -4,
-            "D": "D6 + 4",
-            "Ability": ""
+            "no-melta":{
+                "Range": 24,
+                "Type": "Heavy",
+                "NoS": 1,
+                "S": 8,
+                "Ap": -4,
+                "D": "D6 + 2",
+                "Ability": ""
+            },
+            "melta-range":{
+                "Range": 12,
+                "Type": "Heavy",
+                "NoS": 1,
+                "S": 8,
+                "Ap": -4,
+                "D": "D6 + 4",
+                "Ability": ""
+            }
         }
     },
-    "Heavy_Onslaught_Gatling_Cannon": {
+    {
         "name": "Heavy Onslaught Gatling Cannon",
         "points": 0,
         "Range": 30,
@@ -684,7 +705,7 @@
         "D": 1,
         "Ability": ""
     },
-    "Heavy_Plasma_Cannon": {
+    {
         "name": "Heavy Plasma Cannon",
         "points": 0,
         "Range": 36,
@@ -692,7 +713,7 @@
         "NoS": "D3",
         "S": 7,
         "Ap": -3,
-        "D": 2,
+        "D": 1,
         "Ability": "Blast",
         "Overcharged": {
             "S": 8,
@@ -701,7 +722,7 @@
             "Ability": "Blast, 1 Mortal wound on 1s to hit"
         }
     },
-    "Heavy_Plasma_Incinerator": {
+    {
         "name": "Heavy Plasma Incinerator",
         "points": 0,
         "Range": 36,
@@ -718,47 +739,51 @@
             "Ability": "Blast, Die on 1s to hit"
         }
     },
-    "Hellfrost_Cannon": {
+    {
         "name": "Hellfrost Cannon",
         "points": 0,
         "Range": 36,
         "Type": "Heavy",
-        "Dispersed":{
-            "NoS": "D3",
-            "S": 6,
-            "Ap": -2,
-            "D": 1,
-            "Ability": "Blast"
-        },
-        "Focused":{
-            "NoS": 1,
-            "S": 8,
-            "Ap": -4,
-            "D": "D3 + 3",
-            "Ability": ""
+        "profile":{
+            "Dispersed":{
+                "NoS": "D3",
+                "S": 6,
+                "Ap": -2,
+                "D": 1,
+                "Ability": "Blast"
+            },
+            "Focused":{
+                "NoS": 1,
+                "S": 8,
+                "Ap": -4,
+                "D": "D3 + 3",
+                "Ability": ""
+            }
         }
     },
-    "Hellfrost_Pistol": {
+    {
         "name": "Hellfrost Pistol",
         "points": 0,
         "Range": 12,
         "Type": "Pistol",
-        "Dispersed":{
-            "NoS": "D3",
-            "S": 4,
-            "Ap": -2,
-            "D": 1,
-            "Ability": "Blast"
-        },
-        "Focused":{
-            "NoS": 1,
-            "S": 6,
-            "Ap": -4,
-            "D": 3,
-            "Ability": ""
-        }
+        "profile":{
+            "Dispersed":{
+                "NoS": "D3",
+                "S": 4,
+                "Ap": -2,
+                "D": 1,
+                "Ability": "Blast"
+            },
+            "Focused":{
+                "NoS": 1,
+                "S": 6,
+                "Ap": -4,
+                "D": 3,
+                "Ability": ""
+            }
+        }        
     },
-    "Hellstorm_Bolt_Rifle": {
+    {
         "name": "Hellstorm Bolt Rifle",
         "points": 0,
         "Range": 30,
@@ -769,7 +794,7 @@
         "D": 1,
         "Ability": ""
     },
-    "Hellstorm_Heavy_Bolter": {
+    {
         "name": "Hellstorm Heavy Bolter",
         "points": 0,
         "Range": 30,
@@ -780,7 +805,7 @@
         "D": 2,
         "Ability": ""
     },
-    "Hunter_Killer_Missile": {
+    {
         "name": "Hunter Killer Missile",
         "points": 0,
         "Range": 48,
@@ -791,7 +816,7 @@
         "D": "D6",
         "Ability": "Can only be shot once"
     },
-    "Hunter_Slayer_Missile": {
+    {
         "name": "Hunter Slayer Missile",
         "points": 0,
         "Range": 48,
@@ -802,7 +827,7 @@
         "D": "D6",
         "Ability": "Can only be shot once, ignores Line of Sight"
     },
-    "Hurricane_Bolter": {
+    {
         "name": "Hurricane Bolter",
         "points": 0,
         "Range": 24,
@@ -813,7 +838,7 @@
         "D": 1,
         "Ability": ""
     },
-    "Icarus_Ironhail_Heavy_Stubber": {
+    {
         "name": "Icarus Ironhail Heavy Stubber",
         "points": 0,
         "Range": 36,
@@ -824,7 +849,7 @@
         "D": 1,
         "Ability": "+1 hit Aircraft"
     },
-    "Icarus_Rocket_Pod": {
+    {
         "name": "Icarus Rocket Pod",
         "points": 0,
         "Range": 24,
@@ -835,7 +860,7 @@
         "D": 2,
         "Ability": "Blast, +1 hit Aircraft"
     },
-    "Icarus_Stormcannon": {
+    {
         "name": "Icarus Stormcannon",
         "points": 0,
         "Range": 48,
@@ -846,7 +871,7 @@
         "D": 2,
         "Ability": "+1 hit Aircraft"
     },
-    "Incendium_Cannon": {
+    {
         "name": "Incendium Cannon",
         "points": 0,
         "Range": 12,
@@ -857,29 +882,31 @@
         "D": 1,
         "Ability": "Auto hit"
     },
-    "Inferno_Pistol": {
+    {
         "name":"Inferno Pistol",
         "points": 0,
         "melta":{
-            "Range": 6,
-            "Type": "Pistol",
-            "NoS": 1,
-            "S": 8,
-            "Ap": -4,
-            "D": "D6",
-            "Ability": ""
-        },
-        "melta-range":{
-            "Range": 3,
-            "Type": "Pistol",
-            "NoS": 1,
-            "S": 8,
-            "Ap": -4,
-            "D": "D6 + 2",
-            "Ability": ""
+            "no-melta":{
+                "Range": 6,
+                "Type": "Pistol",
+                "NoS": 1,
+                "S": 8,
+                "Ap": -4,
+                "D": "D6",
+                "Ability": ""
+            },
+            "melta-range":{
+                "Range": 3,
+                "Type": "Pistol",
+                "NoS": 1,
+                "S": 8,
+                "Ap": -4,
+                "D": "D6 + 2",
+                "Ability": ""
+            }
         }
     },
-    "Instigator_Bolt_Carabine": {
+    {
         "name": "Instigator Bolt Carabine",
         "points": 0,
         "Range": 24,
@@ -890,7 +917,7 @@
         "D": 2,
         "Ability": ""
     },
-    "Ironhail_Heavy_Stubber": {
+    {
         "name": "Ironhail Heavy Stubber",
         "points": 0,
         "Range": 24,
@@ -901,7 +928,7 @@
         "D": 1,
         "Ability": ""
     },
-    "Ironhail_Skytalon_Array": {
+    {
         "name": "Ironhail Skytalon Array",
         "points": 0,
         "Range": 36,
@@ -912,7 +939,7 @@
         "D": 1,
         "Ability": "+1 hit Aircraft"
     },
-    "Kheres-Pattern_Assault_Cannon": {
+    {
         "name": "Kheres-Pattern Assault Cannon",
         "points": 0,
         "Range": 24,
@@ -923,7 +950,7 @@
         "D": 1,
         "Ability": ""
     },
-    "Krak_Grenades": {
+    {
         "name": "Krak Grenades",
         "points": 0,
         "Range": 6,
@@ -934,7 +961,7 @@
         "D": "D3",
         "Ability": ""       
     },
-    "Krakstorm_Grenade_Launcher": {
+    {
         "name": "Krakstorm Grenade Launcher",
         "points": 0,
         "Range": 18,
@@ -945,7 +972,7 @@
         "D": "D3",
         "Ability": ""        
     },
-    "Las_Fusil": {
+    {
         "name": "Las Fusil",
         "points": 0,
         "Range": 36,
@@ -956,7 +983,7 @@
         "D": 3,
         "Ability": ""        
     },
-    "Las-Talon": {
+    {
         "name": "Las-Talon",
         "points": 0,
         "Range": 24,
@@ -967,7 +994,7 @@
         "D": "D6",
         "Ability": ""        
     },
-    "Lascannon": {
+    {
         "name": "Lascannon",
         "points": 0,
         "Range": 48,
@@ -978,7 +1005,7 @@
         "D": "D6",
         "Ability": ""        
     },
-    "Lancer_Laser_Destroyer ": {
+    {
         "name": "Lancer Laser Destroyer",
         "points": 0,
         "Range": 72,
@@ -989,7 +1016,7 @@
         "D": "D3 + 3",
         "Ability": ""        
     },
-    "Macro_Plasma_Incinerator": {
+    {
         "name": "Macro Plasma Incinerator",
         "points": 0,
         "Range": 36,
@@ -1006,7 +1033,7 @@
             "Ability": "Blast, 1 Mortal wound on 1s to hit"
         }
     },
-    "Marksman_Bolt_Carabine": {
+    {
         "name": "Marksman Bolt Carabine",
         "points": 0,
         "Range": 24,
@@ -1017,7 +1044,7 @@
         "D": 1,
         "Ability": "hit roll of 6 auto wounds"
     },
-    "Master-crafted_Auto_Bolt_Rifle": {
+    {
         "name": "Master-crafted Auto Bolt Rifle",
         "points": 0,
         "Range": 24,
@@ -1028,7 +1055,7 @@
         "D": 2,
         "Ability": ""
     },
-    "Master-crafted_Boltgun": {
+    {
         "name": "Master-crafted Boltgun",
         "points": 0,
         "Range": 24,
@@ -1039,7 +1066,7 @@
         "D": 2,
         "Ability": ""
     },
-    "Master-crafted_Heavy_Bolt_Rifle": {
+    {
         "name": "Master-crafted Heavy Bolt Rifle",
         "points": 0,
         "Range": 36,
@@ -1050,7 +1077,7 @@
         "D": 2,
         "Ability": ""
     },
-    "Master-crafted_Instigator_Bolt_Carabine": {
+    {
         "name": "Master-crafted Instigator Bolt Carabine",
         "points": 0,
         "Range": 24,
@@ -1061,7 +1088,7 @@
         "D": 3,
         "Ability": ""
     },
-    "Master-crafted_Occulus_Bolt_Carabine": {
+    {
         "name": "Master-crafted Occulus Bolt Carabine",
         "points": 0,
         "Range": 24,
@@ -1072,7 +1099,7 @@
         "D": 2,
         "Ability": "ignores benefit of cover"
     },
-    "Master-crafted_Special_Issue_Bolt_Pistol": {
+    {
         "name": "Master-crafted Special Bolt Pistol",
         "points": 0,
         "Range": 12,
@@ -1083,7 +1110,7 @@
         "D": 2,
         "Ability": ""
     },
-    "Master-crafted_Stalker_Bolt_Rifle": {
+    {
         "name": "Master-crafted Stalker Bolt Rifle",
         "points": 0,
         "Range": 24,
@@ -1094,115 +1121,125 @@
         "D": 3,
         "Ability": ""
     },
-    "Melta_Destroyer": {
+    {
         "name":"Melta Destroyer",
         "points": 0,
         "melta":{
-            "Range": 24,
-            "Type": "Heavy",
-            "NoS": 3,
-            "S": 8,
-            "Ap": -4,
-            "D": "D6",
-            "Ability": ""
-        },
-        "melta-range":{
-            "Range": 12,
-            "Type": "Heavy",
-            "NoS": 3,
-            "S": 8,
-            "Ap": -4,
-            "D": "D6 + 2",
-            "Ability": ""
-        }
+            "no-melta":{
+                "Range": 24,
+                "Type": "Heavy",
+                "NoS": 3,
+                "S": 8,
+                "Ap": -4,
+                "D": "D6",
+                "Ability": ""
+            },
+            "melta-range":{
+                "Range": 12,
+                "Type": "Heavy",
+                "NoS": 3,
+                "S": 8,
+                "Ap": -4,
+                "D": "D6 + 2",
+                "Ability": ""
+            }
+        }       
     },
-    "Melta_Rifle": {
+    {
         "name":"Melta Rifle",
         "points": 0,
         "melta":{
-            "Range": 24,
-            "Type": "Assault",
-            "NoS": 1,
-            "S": 8,
-            "Ap": -4,
-            "D": "D6",
-            "Ability": ""
-        },
-        "melta-range":{
-            "Range": 12,
-            "Type": "Assault",
-            "NoS": 1,
-            "S": 8,
-            "Ap": -4,
-            "D": "D6 + 2",
-            "Ability": ""
+            "no-melta":{
+                "Range": 24,
+                "Type": "Assault",
+                "NoS": 1,
+                "S": 8,
+                "Ap": -4,
+                "D": "D6",
+                "Ability": ""
+            },
+            "melta-range":{
+                "Range": 12,
+                "Type": "Assault",
+                "NoS": 1,
+                "S": 8,
+                "Ap": -4,
+                "D": "D6 + 2",
+                "Ability": ""
+            }
         }
     },
-    "Meltagun": {
+    {
         "name":"Meltagun",
         "points": 0,
         "melta":{
-            "Range": 12,
-            "Type": "Assault",
-            "NoS": 1,
-            "S": 8,
-            "Ap": -4,
-            "D": "D6",
-            "Ability": ""
-        },
-        "melta-range":{
-            "Range": 6,
-            "Type": "Assault",
-            "NoS": 1,
-            "S": 8,
-            "Ap": -4,
-            "D": "D6 + 2",
-            "Ability": ""
+            "no-melta":{
+                "Range": 12,
+                "Type": "Assault",
+                "NoS": 1,
+                "S": 8,
+                "Ap": -4,
+                "D": "D6",
+                "Ability": ""
+            },
+            "melta-range":{
+                "Range": 6,
+                "Type": "Assault",
+                "NoS": 1,
+                "S": 8,
+                "Ap": -4,
+                "D": "D6 + 2",
+                "Ability": ""
+            }
         }
     },
-    "Missile_Launcher": {
+    {
         "name": "Missile Launcher",
         "points": 0,
         "Range": 48,
         "Type": "Heavy",
-        "frag":{
-            "NoS": "D6",
-            "S": 4,
-            "Ap": 0,
-            "D": 1,
-            "Ability": "Blast"
-        },
-        "krak":{
-            "NoS": 1,
-            "S": 8,
-            "Ap": -2,
-            "D": "D6",
-            "Ability": ""
+        "profile":{
+            "frag":{
+                "NoS": "D6",
+                "S": 4,
+                "Ap": 0,
+                "D": 1,
+                "Ability": "Blast"
+            },
+            "krak":{
+                "NoS": 1,
+                "S": 8,
+                "Ap": -2,
+                "D": "D6",
+                "Ability": ""
+            }
         }
     },
-    "Multi-Melta": {
+    {
         "name":"Multi-melta",
         "points": 0,
         "melta":{
-            "Range": 24,
-            "Type": "Heavy",
-            "NoS": 2,
-            "S": 8,
-            "Ap": -4,
-            "D": "D6",
-            "Ability": ""
-        },
-        "melta-range":{
-            "Range": 12,
-            "Type": "Heavy",
-            "NoS": 2,
-            "S": 8,
-            "Ap": -4,
-            "D": "D6 + 2",
-            "Ability": ""
+            "no-melta":{
+                "Range": 24,
+                "Type": "Heavy",
+                "NoS": 2,
+                "S": 8,
+                "Ap": -4,
+                "D": "D6",
+                "Ability": ""
+            },
+            "melta-range":{
+                "Range": 12,
+                "Type": "Heavy",
+                "NoS": 2,
+                "S": 8,
+                "Ap": -4,
+                "D": "D6 + 2",
+                "Ability": ""
+            }
         }
     },
-    "Neo-Volkite_Pistol": {
+    {
         "name": "Neo-volkite Pistol",
         "points": 0,
         "Range": 15,
@@ -1213,7 +1250,7 @@
         "D": 2,
         "Ability": ""
     },
-    "Occulus_Bolt_Carabine": {
+    {
         "name": "Occulus Bolt Carabine",
         "points": 0,
         "Range": 24,
@@ -1224,7 +1261,7 @@
         "D": 1,
         "Ability": "ignores benefit of cover"
     },
-    "Onslaught_Gatling_Cannon": {
+    {
         "name": "Onslaught Gatling Cannon",
         "points": 0,
         "Range": 24,
@@ -1235,7 +1272,7 @@
         "D": 1,
         "Ability": ""
     },
-    "Plasma_Blaster": {
+    {
         "name": "Plasma Blaster",
         "points": 0,
         "Range": 18,
@@ -1251,7 +1288,7 @@
             "Ability": "Die on 1s to hit"
         }
     },
-    "Plasma_Cannon": {
+    {
         "name": "Plasma Cannon",
         "points": 0,
         "Range": 36,
@@ -1268,7 +1305,7 @@
             "Ability": "Blast, Die on 1s to hit"
         }
     },
-    "Plasma_Cutter": {
+    {
         "name": "Plasma Cutter",
         "points": 0,
         "Range": 12,
@@ -1284,7 +1321,7 @@
             "Ability": "Die on 1s to hit"
         }
     },
-    "Plasma_Exterminator": {
+    {
         "name": "Plasma Exterminator",
         "points": 0,
         "Range": 18,
@@ -1301,7 +1338,7 @@
             "Ability": "Blast, Die on 1s to hit"
         }
     },
-    "Plasma_Gun": {
+    {
         "name": "Plasma Gun",
         "points": 0,
         "Range": 24,
@@ -1318,7 +1355,7 @@
             "Ability": "Die on 1s to hit"
         }
     },
-    "Plasma_Incinerator": {
+    {
         "name": "Plasma Incinerator",
         "points": 0,
         "Range": 30,
@@ -1335,7 +1372,7 @@
             "Ability": "Die on 1s to hit"
         }
     },
-    "Plasma_Pistol": {
+    {
         "name": "Plasma Pistol",
         "points": 5,
         "Range": 12,
@@ -1351,7 +1388,7 @@
             "Ability": "1 Mortal wound on 1s to hit"
         }
     },
-    "Predator_Autocannon": {
+    {
         "name": "Predator Autocannon",
         "points": 0,
         "Range": 48,
@@ -1362,7 +1399,7 @@
         "D": 3,
         "Ability": ""
     },
-    "Reaper_Autocannon": {
+    {
         "name": "Reaper Autocannon",
         "points": 0,
         "Range": 36,
@@ -1373,7 +1410,7 @@
         "D": 1,
         "Ability": ""
     },
-    "Reductor_Pistol": {
+    {
         "name": "Reductor Pistol",
         "points": 0,
         "Range": 3,
@@ -1384,7 +1421,7 @@
         "D": 2,
         "Ability": ""
     },
-    "Scout_Sniper_Rifle": {
+    {
         "name": "Scout Sniper Rifle",
         "points": 0,
         "Range": 36,
@@ -1395,7 +1432,7 @@
         "D": 1,
         "Ability": "1 Mortal Wound on 6s to wound"
     },
-    "Skyhammer_Missile_Launcher": {
+    {
         "name": "Skyhammer Missile Launcher",
         "points": 0,
         "Range": 60,
@@ -1406,7 +1443,7 @@
         "D": "D3",
         "Ability": "+1 hit Aircraft"
     },
-    "Skyspear_Missile_Launcher": {
+    {
         "name": "Skyspear Missile Launcher",
         "points": 0,
         "Range": 60,
@@ -1421,7 +1458,7 @@
             "Ability": "+2 hit Aircraft"
         }
     },
-    "Special_Issue_Bolt_Carabine": {
+    {
         "name": "Special Issue Bolt Carabine",
         "points": 0,
         "Range": 24,
@@ -1432,4 +1469,739 @@
         "D": 2,
         "Ability": ""
     },
-}
+    {
+        "name": "Special Issue Bolt Pistol",
+        "points": 0,
+        "Range": 12,
+        "Type": "Pistol",
+        "NoS": 1,
+        "S": 4,
+        "Ap": -2,
+        "D": 1,
+        "Ability": ""
+    },
+    {
+        "name": "Special Issue Boltgun",
+        "points": 0,
+        "Range": 30,
+        "Type": "Rapidfire",
+        "NoS": 1,
+        "S": 4,
+        "Ap": -1,
+        "D": 2,
+        "Ability": ""
+    },
+    {
+        "name": "Stalker Bolt Rifle",
+        "points": 0,
+        "Range": 36,
+        "Type": "Heavy",
+        "NoS": 1,
+        "S": 4,
+        "Ap": -2,
+        "D": 2,
+        "Ability": ""
+    },
+    {
+        "name": "Storm Bolter",
+        "points": 0,
+        "Range": 24,
+        "Type": "Rapidfire",
+        "NoS": 2,
+        "S": 4,
+        "Ap": 0,
+        "D": 1,
+        "Ability": ""
+    },
+    {
+        "name": "Stormfury Missile",
+        "points": 0,
+        "Range": 48,
+        "Type": "Heavy",
+        "NoS": 1,
+        "S": 10,
+        "Ap": -3,
+        "D": "D6",
+        "Ability": ""
+    },
+    {
+        "name": "Stormstrike Missile Launcher",
+        "points": 0,
+        "Range": 72,
+        "Type": "Heavy",
+        "NoS": 1,
+        "S": 8,
+        "Ap": -3,
+        "D": 3,
+        "Ability": ""
+    },
+    {
+        "name": "Tempest Bolter",
+        "points": 0,
+        "Range": 30,
+        "Type": "Rapidfire",
+        "NoS": 4,
+        "S": 4,
+        "Ap": -1,
+        "D": 1,
+        "Ability": ""
+    },
+    {
+        "name": "Thunderfire Cannon",
+        "points": 0,
+        "Range": 60,
+        "Type": "Heavy",
+        "NoS": "4D3",
+        "S": 4,
+        "Ap": 0,
+        "D": 1,
+        "Ability": "Blast, ignores Line of Sight"
+    },
+    {
+        "name": "Thunderstrike Las-talon",
+        "points": 0,
+        "Range": 36,
+        "Type": "Heavy",
+        "NoS": 2,
+        "S": 9,
+        "Ap": -3,
+        "D": "D6",
+        "Ability": ""
+    },
+    {
+        "name": "Twin Accelerator Autocannon",
+        "points": 0,
+        "Range": 48,
+        "Type": "Heavy",
+        "NoS": 6,
+        "S": 7,
+        "Ap": -1,
+        "D": 2,
+        "Ability": ""
+    },
+    {
+        "name": "Twin Assault Cannon",
+        "points": 0,
+        "Range": 24,
+        "Type": "Heavy",
+        "NoS": 12,
+        "S": 6,
+        "Ap": -1,
+        "D": 1,
+        "Ability": ""
+    },
+    {
+        "name": "Twin Auto Bolt Rifle",
+        "points": 0,
+        "Range": 24,
+        "Type": "Assault",
+        "NoS": 6,
+        "S": 4,
+        "Ap": 0,
+        "D": 1,
+        "Ability": ""
+    },
+    {
+        "name": "Twin Bolt Rifle",
+        "points": 0,
+        "Range": 30,
+        "Type": "Rapidfire",
+        "NoS": 2,
+        "S": 4,
+        "Ap": -1,
+        "D": 1,
+        "Ability": ""
+    },
+    {
+        "name": "Twin Boltgun",
+        "points": 0,
+        "Range": 24,
+        "Type": "Rapidfire",
+        "NoS": 2,
+        "S": 4,
+        "Ap": 0,
+        "D": 1,
+        "Ability": ""
+    },
+    {
+        "name": "Twin Heavy Bolter",
+        "points": 0,
+        "Range": 36,
+        "Type": "Heavy",
+        "NoS": 6,
+        "S": 5,
+        "Ap": -1,
+        "D": 2,
+        "Ability": ""
+    },
+    {
+        "name": "Twin Heavy Onslaught Gatling Cannon",
+        "points": 0,
+        "Range": 36,
+        "Type": "Heavy",
+        "NoS": 24,
+        "S": 6,
+        "Ap": -1,
+        "D": 1,
+        "Ability": ""
+    },
+    {
+        "name": "Twin Heavy Plasma Cannon",
+        "points": 0,
+        "Range": 36,
+        "Type": "Heavy",
+        "NoS": "2D3",
+        "S": 7,
+        "Ap": -3,
+        "D": 2,
+        "Ability": "Blast",
+        "Overcharged": {
+            "S": 8,
+            "Ap": -3,
+            "D": 3,
+            "Ability": "Blast, 1 Mortal wound on 1s to hit"
+        }
+    },
+    {
+        "name": "Twin Icarus Ironhail Heavy Stubber",
+        "points": 0,
+        "Range": 36,
+        "Type": "Heavy",
+        "NoS": 8,
+        "S": 4,
+        "Ap": -1,
+        "D": 1,
+        "Ability": "+1 hit Aircraft"
+    },
+    {
+        "name": "Twin Ironhail Autocannon",
+        "points": 0,
+        "Range": 24,
+        "Type": "Heavy",
+        "NoS": 6,
+        "S": 7,
+        "Ap": -1,
+        "D": 2,
+        "Ability": ""
+    },
+    {
+        "name": "Twin Ironhail Heavy Stubber",
+        "points": 0,
+        "Range": 24,
+        "Type": "Heavy",
+        "NoS": 8,
+        "S": 4,
+        "Ap": -1,
+        "D": 1,
+        "Ability": ""
+    },
+    {
+        "name": "Twin Las-Talon",
+        "points": 0,
+        "Range": 24,
+        "Type": "Heavy",
+        "NoS": 4,
+        "S": 9,
+        "Ap": -3,
+        "D": "D6",
+        "Ability": ""        
+    },
+    {
+        "name": "Twin Lascannon",
+        "points": 0,
+        "Range": 48,
+        "Type": "Heavy",
+        "NoS": 2,
+        "S": 9,
+        "Ap": -3,
+        "D": "D6",
+        "Ability": ""        
+    },
+    {
+        "name":"Twin Multi-melta",
+        "points": 0,
+        "melta":{
+            "no-melta":{
+                "Range": 24,
+                "Type": "Heavy",
+                "NoS": 4,
+                "S": 8,
+                "Ap": -4,
+                "D": "D6",
+                "Ability": ""
+            },
+            "melta-range":{
+                "Range": 12,
+                "Type": "Heavy",
+                "NoS": 4,
+                "S": 8,
+                "Ap": -4,
+                "D": "D6 + 2",
+                "Ability": ""
+            }
+        }
+    },
+    {
+        "name": "Typhoon Missile Launcher",
+        "points": 0,
+        "Range": 48,
+        "Type": "Heavy",
+        "profile":{
+            "frag":{
+                "NoS": "2D6",
+                "S": 4,
+                "Ap": 0,
+                "D": 1,
+                "Ability": "Blast"
+            },
+            "krak":{
+                "NoS": 2,
+                "S": 8,
+                "Ap": -2,
+                "D": "D6",
+                "Ability": ""
+            }
+        }        
+    },
+    {
+        "name": "Volkite Charger",
+        "points": 0,
+        "Range": 20,
+        "Type": "Heavy",
+        "NoS": 2,
+        "S": 5,
+        "Ap": 0,
+        "D": 2,
+        "Ability": "1 Mortal Wound on 6s to wound"        
+    },
+    {
+        "name": "Whirlwind Castellan Launcher",
+        "points": 0,
+        "Range": 72,
+        "Type": "Heavy",
+        "NoS": "2D6",
+        "S": 6,
+        "Ap": 0,
+        "D": 1,
+        "Ability": "Blast, ignores Line of Sight"        
+    },
+    {
+        "name": "Whirlwind Vengeance Launcher",
+        "points": 0,
+        "Range": 72,
+        "Type": "Heavy",
+        "NoS": "2D3",
+        "S": 7,
+        "Ap": -1,
+        "D": 2,
+        "Ability": "Blast, ignores Line of Sight"        
+    },
+    {
+        "name": "Wrist-Mounted Grenade Launcher",
+        "points": 0,
+        "Range": 12,
+        "Type": "Assault",
+        "NoS": "D3",
+        "S": 4,
+        "Ap": -1,
+        "D": 1,
+        "Ability": "Blast"        
+    },
+    {
+        "name": "Astartes Chainsword",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "User",
+        "Ap": -1,
+        "D": 1,
+        "Ability": "+1 Attack"        
+    },
+    {
+        "name": "Auto Boltstorm Gauntlet",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "x2",
+        "Ap": -3,
+        "D": 2,
+        "Ability": "-1 to Hit"        
+    } , 
+    {
+        "name": "Boltstorm Gauntlet",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "x2",
+        "Ap": -3,
+        "D": 2,
+        "Ability": "-1 to Hit"        
+    },
+    {
+        "name": "Chainfist",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "x2",
+        "Ap": -4,
+        "D": "D3",
+        "Ability": "-1 to Hit",
+        "EffectvsVehicle":{
+            "D": 3
+        }        
+    }, 
+    {
+        "name": "Combat Knife",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "User",
+        "Ap": 0,
+        "D": 1,
+        "Ability": "+1 Attack"        
+    },
+    {
+        "name": "Cozius arcanum",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": 2,
+        "Ap": -1,
+        "D": 2,
+        "Ability": ""        
+    },
+    {
+        "name": "Dreadnought Chainfist",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "x2",
+        "Ap": -4,
+        "D": "2D3",
+        "EffectvsVehicle":{
+            "D": 6
+        }        
+    },
+    {
+        "name": "Dreadnought Combat Weapon",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "x2",
+        "Ap": -3,
+        "D": 3,
+        "Ability":""    
+    },
+    {
+        "name": "Eviscerator",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": 3,
+        "Ap": -4,
+        "D": 2,
+        "Ability":"-1 to Hit"       
+    },
+    {
+        "name": "Executioner Relic Blade",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": 3,
+        "Ap": -3,
+        "D": 2,
+        "Ability":"1 Mortal Wound on 6s to wound"       
+    },
+    {
+        "name": "Fenrisian Great Axe",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "profile":{
+            "Cleve":{
+                "name":"Cleve",
+                "S": 4,
+                "Ap": -3,
+                "D": "D3 + 3",
+                "Ability":"-1 to Hit"
+            },
+            "Scythe":{
+                "name":"Scyth",
+                "S": "User",
+                "Ap": -3,
+                "D": 1,
+                "Ability":"-1 to Hit, x2 Attacs"
+            }
+        }               
+    },
+    {
+        "name": "Flamestorm Gauntlet",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "x2",
+        "Ap": -3,
+        "D": 2,
+        "Ability": "-1 to Hit"        
+    },
+    {
+        "name": "Force Axe",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": 2,
+        "Ap": -2,
+        "D": "D3",
+        "Ability":""       
+    },
+    {
+        "name": "Force Stave",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": 3,
+        "Ap": -1,
+        "D": "D3",
+        "Ability":""       
+    },
+    {
+        "name": "Force Sword",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": 1,
+        "Ap": -3,
+        "D": "D3",
+        "Ability":""       
+    },
+    {
+        "name": "Great Wolf Claw",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": 4,
+        "Ap": -2,
+        "D": 3,
+        "Ability":"Reroll wound roll"       
+    },
+    {
+        "name": "Heavy Thunder Hammer",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "x2",
+        "Ap": -3,
+        "D": 4,
+        "Ability":"-1 to Hit"       
+    },
+    {
+        "name": "Invictor fist",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "x2",
+        "Ap": -3,
+        "D": 3,
+        "Ability":""       
+    },
+    {
+        "name": "Ironclad Combat Weapon",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "x2",
+        "Ap": -3,
+        "D": 3,
+        "Ability":""       
+    },
+    {
+        "name": "Lightning claw (x1)",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "User",
+        "Ap": -2,
+        "D": 1,
+        "Ability":"+1 Atacks, Reroll wound roll"       
+    },
+    {
+        "name": "Lightning claw (x2)",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "User",
+        "Ap": -2,
+        "D": 1,
+        "Ability":"+2 Atacks, Reroll wound roll"       
+    },
+    {
+        "name": "Master-Crafted Power Axe",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": 2,
+        "Ap": -3,
+        "D": 2,
+        "Ability":""       
+    },
+    {
+        "name": "Master-Crafted Power Sword",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": 1,
+        "Ap": -3,
+        "D": 2,
+        "Ability":""       
+    },
+    {
+        "name": "Mechadendrite",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": 1,
+        "Ap": 0,
+        "D": 1,
+        "Ability":"+2 Atacks"       
+    },
+    {
+        "name": "Omnissian Power Axe",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": 2,
+        "Ap": -2,
+        "D": 2,
+        "Ability":""       
+    },
+    {
+        "name": "Paired Combat Blades",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "User",
+        "Ap": -1,
+        "D": 1,
+        "Ability":""       
+    },
+    {
+        "name": "Power Axe",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": 2,
+        "Ap": -2,
+        "D": 1,
+        "Ability":""       
+    },
+    {
+        "name": "Power Fist",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "x2",
+        "Ap": -3,
+        "D": 2,
+        "Ability":"-1 to Hit"       
+    },
+    {
+        "name": "Power Maul",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": 3,
+        "Ap": -1,
+        "D": 1,
+        "Ability":""       
+    },
+    {
+        "name": "Power Sword",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": 1,
+        "Ap": -3,
+        "D": 1,
+        "Ability":""       
+    },
+    {
+        "name": "Redemptor Fist",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "x2",
+        "Ap": -3,
+        "D": "D3 + 3",
+        "Ability":""       
+    },
+    {
+        "name": "Relic Blade",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": 3,
+        "Ap": -3,
+        "D": 2,
+        "Ability":""       
+    },
+    {
+        "name": "Seismic Hammer",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "x2",
+        "Ap": -3,
+        "D": 5,
+        "Ability":"-1 to Hit"       
+    },
+    {
+        "name": "Servo Arm",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "x2",
+        "Ap": -2,
+        "D": 3,
+        "Ability":"Only one Attack"       
+    },
+    {
+        "name": "Siege Drills",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "x2",
+        "Ap": -4,
+        "D": 3,
+        "Ability":""       
+    },
+    {
+        "name": "Tempest Hammer",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "x2",
+        "Ap": -3,
+        "D": 3,
+        "Ability":"-1 to Hit"       
+    },
+    {
+        "name": "Thunder Hammer",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": "x2",
+        "Ap": -2,
+        "D": 3,
+        "Ability":"-1 to Hit"       
+    },
+    {
+        "name": "Xenophase Blade",
+        "points": 0,
+        "Range": "Melee",
+        "Type": "Melee",
+        "S": 1,
+        "Ap": -4,
+        "D": 1,
+        "Ability":"Cannot use Invulnerable saving"       
+    }
+]
