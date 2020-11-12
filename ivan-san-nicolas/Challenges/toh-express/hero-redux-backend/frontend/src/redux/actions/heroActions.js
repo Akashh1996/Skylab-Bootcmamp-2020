@@ -40,7 +40,7 @@ export function deleteHero(id) {
             });
             dispatch(requestHeroesSuccess(heroes.data));
         } catch (error) {
-            dispatch(requestHeroesError(heroes.data))
+            dispatch(requestHeroesError(error))
         }
     }
 }
