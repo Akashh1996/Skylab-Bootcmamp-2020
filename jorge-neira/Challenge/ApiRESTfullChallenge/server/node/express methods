@@ -1,0 +1,36 @@
+Comprehensive list of Node.js/Express response methods and when they must be called:
+Response must be in Head and remains in Head:
+
+res.writeContinue()
+res.statusCode = 404
+res.setHeader(name, value)
+res.getHeader(name)
+res.removeHeader(name)
+res.header(key[, val]) (Express only)
+res.charset = 'utf-8' (Express only; only affects Express-specific methods)
+res.contentType(type) (Express only)
+Response must be in Head and becomes Body:
+
+res.writeHead(statusCode, [reasonPhrase], [headers])
+Response can be in either Head/Body and remains in Body:
+
+res.write(chunk, encoding='utf8')
+Response can be in either Head/Body and becomes Finished:
+
+res.end([data], [encoding])
+Response can be in either Head/Body and remains in its current state:
+
+res.addTrailers(headers)
+Response must be in Head and becomes Finished:
+
+return next([err]) (Connect/Express only)
+Any exceptions within middleware function(req, res, next) (Connect/Express only)
+res.send(body|status[, headers|status[, status]]) (Express only)
+res.attachment(filename) (Express only)
+res.sendfile(path[, options[, callback]]) (Express only)
+res.json(obj[, headers|status[, status]]) (Express only)
+res.redirect(url[, status]) (Express only)
+res.cookie(name, val[, options]) (Express only)
+res.clearCookie(name[, options]) (Express only)
+res.render(view[, options[, fn]]) (Express only)
+res.partial(view[, options]) (Express only)
