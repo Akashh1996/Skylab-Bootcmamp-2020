@@ -5,7 +5,6 @@ import {requestHeroes} from '../../redux/actions/heroActions';
 
 function HeroList(heroesList, dispatch) {
     if(!heroesList && !heroesList?.length) {
-        debugger;
         dispatch(requestHeroes());
     }
 
