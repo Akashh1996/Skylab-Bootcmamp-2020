@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import {requestHeroes} from '../../redux/actions/heroActions';
+import { requestHeroes, deleteHero } from '../../redux/actions/heroActions';
 
 function HeroList({ heroesList, dispatch }) {
     if(!heroesList && !heroesList?.length) {
