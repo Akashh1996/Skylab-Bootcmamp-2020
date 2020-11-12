@@ -1,0 +1,9 @@
+{
+  "name": "neira-jorge-skylab",
+  "version": "2.0.0",
+  "description": "First stable version",
+  "main": "index.js",
+  "keywords": ["node", "express", "server", "jest"],
+  "author": "jneira95",
+  "license": "ISC"
+}
