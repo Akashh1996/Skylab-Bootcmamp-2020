@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon - Detail</title>
+    <link rel="icon" href="https://icon-library.com/images/pokemon-ball-icon/pokemon-ball-icon-28.jpg">
+    <link rel="stylesheet" href="detail-style.css">
+</head>
+
+<body>
+    <section class="pokemon-detail">
+        <header class="pokemon-detail__header">
+            <h2>Pokemon</h2>
+            <nav class="pokemon-detail__header__nav">
+                <a class="pokemon-detail__button" href="dashboard.html">Dashboard</a>
+                <a class="pokemon-detail__button" href="aside.html">Pokemon</a>
+            </nav>
+        </header>
+        <section class="pokemon-detail__topPokemon">
+            <h2 class="pokemon-detail-title" id="pokemon-detail-title"></h2>
+            <section class="pokemon__detail__info" id="pokemon__detail__info">
+                <section class="pokemon__detail__info__block" id="pokemon__detail__info__stats"></section>
+                <div class="pokemon__detail__info__block" id="pokemon-image"></div>
+            </section>
+            <section class="pokemon-detail__info" id="pokemon-detail__properties">
+            </section>
+        </section>
+        <a class="back-button" href="dashboard.html">Back</a>
+    </section>
+    <section class="pokemon-detail" id="pokemon-abilities">
+        <h2 id="pokemon-ability-title"></h2>
+        <span id="pokemon-ability-description"></span>
+    </section>
+    <script src="poke-store.js"></script>
+    <script src="detail.js"></script>
+</body>
+
+</html>

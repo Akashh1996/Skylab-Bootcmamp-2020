@@ -36,12 +36,12 @@ const heroStore = new HeroStore();
 
 dispatcher.register((action) => {
 	switch (action.type) {
-		case actionTypes.load_heroes:
+		case actionTypes.LOAD_HEROES:
 			heroes = action.payload;
 			heroStore.emitChange();
 			break;
 
-		case actionTypes.load_hero:
+		case actionTypes.LOAD_HERO:
 			hero = action.payload;
 			heroStore.emitChange();
 			break;
