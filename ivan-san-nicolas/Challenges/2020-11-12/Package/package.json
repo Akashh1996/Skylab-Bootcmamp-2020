@@ -1,6 +1,6 @@
 {
-  "name": "ivan-san-say-hi-from-slylab",
-  "version": "1.0.1",
+  "name": "ivan-san-say-hi-from-skylab",
+  "version": "1.0.3",
   "description": "My first public package",
   "main": "index.js",
   "keywords": [

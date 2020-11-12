@@ -1,0 +1,16 @@
+{
+  "name": "greet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "greet.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ivan-san-say-hi-from-slylab": "^1.0.2",
+    "marco-say-hi-from-skylab": "^1.0.3"
+  }
+}
