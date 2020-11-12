@@ -251,7 +251,7 @@
     },
     {
         "name": "Combi-Flamer",
-        "points": 0,
+        "points": 5,
         "profile":{
         "bolter":{
             "Range": 24,
@@ -276,7 +276,7 @@
     },
     {
         "name": "Combi-Grav",
-        "points": 0,
+        "points": 5,
         "profile":{
         "bolter":{
             "Range": 24,
@@ -303,7 +303,7 @@
     },
     {
         "name": "Combi-Melta",
-        "points": 0,
+        "points": 5,
         "profile":{
             "bolter":{
                 "Range": 24,
@@ -339,7 +339,7 @@
     },
     {
         "name": "Combi-Plasma",
-        "points": 0,
+        "points": 5,
         "profile":{
             "bolter":{
                 "Range": 24,
@@ -1798,7 +1798,7 @@
     },
     {
         "name": "Wrist-Mounted Grenade Launcher",
-        "points": 0,
+        "points": 5,
         "Range": 12,
         "Type": "Assault",
         "NoS": "D3",
@@ -1839,7 +1839,7 @@
     },
     {
         "name": "Chainfist",
-        "points": 0,
+        "points": 5,
         "Range": "Melee",
         "Type": "Melee",
         "S": "x2",
@@ -2096,7 +2096,7 @@
     },
     {
         "name": "Power Fist",
-        "points": 0,
+        "points": 5,
         "Range": "Melee",
         "Type": "Melee",
         "S": "x2",
@@ -2136,7 +2136,7 @@
     },
     {
         "name": "Relic Blade",
-        "points": 0,
+        "points": 5,
         "Range": "Melee",
         "Type": "Melee",
         "S": 3,
@@ -2186,7 +2186,7 @@
     },
     {
         "name": "Thunder Hammer",
-        "points": 0,
+        "points": 15,
         "Range": "Melee",
         "Type": "Melee",
         "S": "x2",
