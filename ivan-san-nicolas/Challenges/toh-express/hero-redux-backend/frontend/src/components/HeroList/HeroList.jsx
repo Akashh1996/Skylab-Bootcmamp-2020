@@ -5,11 +5,16 @@ import { requestHeroes, deleteHero } from '../../redux/actions/heroActions';
 
 function HeroList({ heroesList, dispatch }) {
     if(!heroesList && !heroesList?.length) {
-        debugger;
         dispatch(requestHeroes());
     }
 
-    console.log(`heroesList in compo: ${heroesList}`);
+    function reallyDeleteHero(hero, id){
+        debugger;
+        console.log(`recieving hero: ${hero}`)
+        console.log(`recieving id: ${id}`)
+        return deleteHero(id);
+    }
+
     return (
         <>
             {heroesList?.length ? (
@@ -17,8 +22,9 @@ function HeroList({ heroesList, dispatch }) {
                 {
                 heroesList.map((hero) => {
                     return (<li>{hero.name} 
-                                <button type="button" onClick={() => deleteHero(hero.id)}>delete</button>
-                            </li>)
+                                <button type="button" onClick={() => dispatch(reallyDeleteHero(hero, hero.id))}>delete</button>
+                            </li>
+                            );
                 })
                 }
             </ul>
@@ -38,7 +44,7 @@ function mapStateToProps({heroesReducer}) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators({requestHeroes}, dispatch),
+        actions: bindActionCreators({requestHeroes, deleteHero}, dispatch),
         dispatch,
     }
 }

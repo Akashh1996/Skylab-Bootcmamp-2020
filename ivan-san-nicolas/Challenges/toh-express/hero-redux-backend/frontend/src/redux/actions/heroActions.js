@@ -30,14 +30,17 @@ export function requestHeroes() {
 }
 
 export function deleteHero(id) {
+    debugger;
+    console.log(`id: ${id}`);
     return async (dispatch) => {
         const endpoint = 'http://localhost:9999/heroes';
         try {
-            const heroes = await axios.post(endpoint, {
+            const heroes = await axios.delete(endpoint, {
                 params: {
                     id,
                 }
             });
+            console.log(`${heroes.data}`);
             dispatch(requestHeroesSuccess(heroes.data));
         } catch (error) {
             dispatch(requestHeroesError(error))

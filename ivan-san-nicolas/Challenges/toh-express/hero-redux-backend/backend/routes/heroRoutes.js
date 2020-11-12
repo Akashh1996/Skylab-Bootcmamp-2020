@@ -15,8 +15,9 @@ function routes() {
 		res.send(heroes);
     })
     .delete((req, res) => {
+        console.log(`req: ${req}`);
         const id = req.query;
-        const heroId = heroes.findIndex((hero) => hero.id === heroId)
+        const heroId = heroes.findIndex((hero) => hero.id === +id);
         heroes.splice(heroId, 1);
         res.status(200);
         res.send(heroes);
