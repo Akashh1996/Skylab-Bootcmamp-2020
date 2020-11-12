@@ -29,11 +29,15 @@ export function requestHeroes() {
     };
 }
 
-export function deleteHero() {
+export function deleteHero(id) {
     return async (dispatch) => {
         const endpoint = 'http://localhost:9999/heroes';
         try {
-            const heroes = await axios.post(endpoint);
+            const heroes = await axios.post(endpoint, {
+                params: {
+                    id,
+                }
+            });
             dispatch(requestHeroesSuccess(heroes.data));
         } catch (error) {
             dispatch(requestHeroesError(heroes.data))
