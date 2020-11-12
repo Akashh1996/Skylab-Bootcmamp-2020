@@ -4,6 +4,8 @@ function sayHi(name) {
     }   
     console.log(`*******************************`);
     console.log(`Hi ${name}! Welcome to Skylab`);
+    console.log(`Did you know that Melendi's real name is Ramón?`);
+    console.log(`Amazing...`);
     console.log(`*******************************`);
 }
 

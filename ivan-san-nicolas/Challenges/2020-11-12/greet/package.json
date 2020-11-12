@@ -10,7 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ivan-san-say-hi-from-slylab": "^1.0.2",
+    "ivan-san-say-hi-from-skylab": "^1.0.4",
     "marco-say-hi-from-skylab": "^1.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
   }
 }
