@@ -20,7 +20,8 @@ function HeroesList({ heroes, actions }) {
 			<button
 				type="button"
 				onClick={() => {
-					actions.addHero(newHero);
+					actions.addHero({ name: newHero });
+					setNewHero('');
 				}}
 			>
 				Add Hero
@@ -37,14 +38,16 @@ function HeroesList({ heroes, actions }) {
 
 HeroesList.propTypes = {
 	heroes: PropTypes.shape([]).isRequired,
+	globalId: PropTypes.number.isRequired,
 	actions: PropTypes.shape({
-		addHero: PropTypes.func.isRequired
+		addHero: PropTypes.func.isRequired,
+		incrementId: PropTypes.func.isRequired
 	}).isRequired
 };
 
-function mapStateToProps({ heroes }) {
+function mapStateToProps({ heroReducer }) {
 	return {
-		heroes
+		heroes: heroReducer
 	};
 }
 
