@@ -8,9 +8,7 @@ app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const port = process.env.PORT || 1200
-
-
+const port = process.env.PORT || 1400
 const pokeRoutes = require("./routes/tohRoutes")()
 
 app.use("/heroes", pokeRoutes)
