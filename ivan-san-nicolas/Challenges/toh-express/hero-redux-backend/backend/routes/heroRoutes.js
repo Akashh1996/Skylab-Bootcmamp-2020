@@ -15,11 +15,9 @@ function routes() {
 		res.send(heroes);
     })
     .delete((req, res) => {
-        const heroId = 12;
-        let newHeroes = heroes.filter((hero) => 
-            hero.id !== heroId
-        );
-        heroes = [...newHeroes];
+        const id = req.query;
+        const heroId = heroes.findIndex((hero) => hero.id === heroId)
+        heroes.splice(heroId, 1);
         res.status(200);
         res.send(heroes);
     })
