@@ -7,4 +7,4 @@ function sayHi(name) {
 	console.log('*******');
 }
 
-module.exports = sayHi();
+module.exports = sayHi;
