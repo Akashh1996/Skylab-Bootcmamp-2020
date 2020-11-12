@@ -9,31 +9,30 @@ function routes() {
 		res.send(heroes);
     })
     .post((req, res) => {
-        hero = req.query;
+        let heroName = req.query;
+        let id = Math.random();
+        let hero = { id: id(), name: heroName }
         heroes.push(hero);
 		res.status(200);
 		res.send(heroes);
     })
     .delete((req, res) => {
-        const id = req.query;
-        const heroId = heroes.findIndex((hero) => hero.id === +id);
+        let id = req.query;
+        let heroId = heroes.findIndex((hero) => hero.id === +id);
         heroes.splice(heroId, 1);
         res.status(200);
         res.send(heroes);
     })
-    .put((req, res) => {
-        const heroId = 13;
-        const newName = 'Bombasto Deprecated';
-        let newHeroes = [];
+    .patch((req, res) => {
+        let id = req.query[0];
+        let name = req.query[1];
         heroes.map((hero) => {
-            if(hero.id !== heroId) {
-                newHeroes.push(hero);
-            } else {
-                hero.name = newName;
-                newHeroes.push(hero);
+            if(hero.id === id){
+                hero.name = name;
+                return hero;
             }
-        });
-        heroes = [...newHeroes];
+            return hero;
+        })
         res.status(200);
         res.send(heroes);
     })

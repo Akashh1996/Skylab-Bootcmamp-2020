@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { requestHeroes, deleteHero, addHeroe } from '../../redux/actions/heroActions';
+import { requestHeroes, deleteHero, addHero, updateHero } from '../../redux/actions/heroActions';
 
 function HeroList({ heroesList, dispatch }) {
     if(!heroesList && !heroesList?.length) {
@@ -12,13 +12,14 @@ function HeroList({ heroesList, dispatch }) {
         <>
             {heroesList?.length ? (
             <>
-                <input value="" onChange={() => dispatch(addHeroe(value))}></input>
+                <input value="" onClick={(event) => dispatch(addHero(event.target.value))}></input>
                 <ul>
                     {
                     heroesList.map((hero) => {
-                        return (<li>{hero.name} 
+                        return (<form>
+                                    <input type="text" onClick={(event) => dispatch(updateHero(event.target.value))}>{hero.name}</input>
                                     <button type="button" onClick={() => dispatch(deleteHero(hero.id))}>delete</button>
-                                </li>
+                                </form>
                                 );
                     })
                     }
@@ -40,7 +41,7 @@ function mapStateToProps({heroesReducer}) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators({requestHeroes, deleteHero}, dispatch),
+        actions: bindActionCreators({requestHeroes, deleteHero, addHero, updateHero}, dispatch),
         dispatch,
     }
 }

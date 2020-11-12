@@ -42,4 +42,35 @@ export function deleteHero(id) {
         }
     }
 }
-export function addHero()
+
+export function addHero(name) {
+    return async (dipstach) =>{
+        const endpoint = 'http://localhost:9999/heroes';
+        try {
+            const heroes = await axios.post(endpoint, {
+                params: {
+                    name,
+                }
+            });
+            dipstach(requestHeroesSuccess(heroes.data))
+        } catch (error) {
+            
+        }
+    }
+}
+
+export function updateHero(name) {
+    return async (dipstach) =>{
+        const endpoint = 'http://localhost:9999/heroes';
+        try {
+            const heroes = await axios.patch(endpoint, {
+                params: {
+                    name,
+                }
+            });
+            dipstach(requestHeroesSuccess(heroes.data))
+        } catch (error) {
+            
+        }
+    }
+}
