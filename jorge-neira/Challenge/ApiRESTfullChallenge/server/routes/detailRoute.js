@@ -4,7 +4,7 @@ const dataJson = require('../api/heroes.json');
 const detailRoute = express.Router();
 
 function routes() {
-	detailRoute.route('/:id').get((req, res) => {
+	detailRoute.route('/heroes').get((req, res) => {
 		console.log(req.params);
 		console.log(req);
 		const { id } = req.params;

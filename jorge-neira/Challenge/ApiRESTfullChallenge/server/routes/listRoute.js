@@ -8,12 +8,10 @@ function routes() {
 		.route('/')
 		.get((req, res) => {
 			try {
-				res.status(200);
-				res.contentType('Content-Type', 'application/json');
-				res.send(dataJson);
+				res.type('application/json');
+				res.json(dataJson);
 			} catch (error) {}
 			res.status(404);
-			res.send('Heroes not founds');
 		})
 		.post((req, res) => {
 			try {
