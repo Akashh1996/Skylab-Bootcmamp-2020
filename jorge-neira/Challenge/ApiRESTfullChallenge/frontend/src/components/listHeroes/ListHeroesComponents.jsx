@@ -15,12 +15,16 @@ function HeroListComponents({ heroes }) {
         <div>
           <h1>Heroes List</h1>
           <span>
-            <input type="text" />
-            <button type="button">X</button>
+            <input type="text" placeholder="Hello" />
+            <button type="button">ADD</button>
+            <button type="button">DEL</button>
+            {/* <span>{heroesList[0].name}</span> */}
             {/* {heroesList.map((hero) => <span>{hero.name}</span>)} */}
           </span>
         </div>
-      ) : <div>Hola</div> }
+      ) : (
+        <div>Hola</div>
+      )}
     </>
   );
 }
@@ -34,7 +38,7 @@ HeroListComponents.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    heroesList: state.heroesList,
+    heroes: state.heroesList,
   };
 }
 

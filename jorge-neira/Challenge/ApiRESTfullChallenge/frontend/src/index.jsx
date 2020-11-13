@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux';
-import HeroListComponent from './components/listHeroes/ListHeroesComponents';
 import configureStore from './redux/configureStore';
+import HeroListComponent from './components/listHeroes/ListHeroesComponents';
 
 const heroStore = configureStore();
 
