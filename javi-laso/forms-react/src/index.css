@@ -57,10 +57,14 @@ textarea {
 	width: 43%;
 }
 
-#search-flight {
+button {
 	border: none;
-	background-color: #d40504;
+	background-color: #373aff;
 	color: white;
 	padding: 15px;
 	box-shadow: 3px 3px 5px gray;
+}
+
+#search-flight {
+	background-color: #d40504;
 }

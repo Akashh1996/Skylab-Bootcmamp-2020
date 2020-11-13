@@ -13,6 +13,9 @@ function Header() {
 				<Link to="/heroes" className="header-buttons">
 					Heroes
 				</Link>
+				<Link to="/login" className="header-buttons">
+					Login
+				</Link>
 			</div>
 		</header>
 	);
