@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const chalk = require('chalk');
+const cors = require('cors');
 const morgan = require('morgan');
 const ItemsStore = require('./src/store/itemsStore');
 const ShoppinCartStore = require('./src/store/shoppingCartStore');
@@ -9,6 +10,8 @@ const shoppinCartRouter = require('./src/routes/shoppingCartRouter')(ShoppinCart
 
 const server = express();
 server.use(morgan('tiny'));
+
+server.use(cors());
 
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(bodyParser.json());

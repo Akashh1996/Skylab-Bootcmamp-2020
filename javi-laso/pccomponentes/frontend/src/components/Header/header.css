@@ -2,7 +2,7 @@
   background-color: #222;
   height: 90px;
   width: 100vw;
-  position: absolute;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,6 +25,8 @@
   height: 40px;
   width: 90px;
   background-color: #f1d600;
+  border-radius: 5px;
   color: #222;
+  font-weight: bold;
 }
 /*# sourceMappingURL=header.css.map */

@@ -1,8 +1,9 @@
+/* eslint-disable no-debugger */
 /* eslint-disable no-console */
 import axios from 'axios';
 import actionTypes from './action-types';
 
-const listUrl = 'http://localhost:2130/list';
+const listUrl = 'http://localhost:2130/';
 const shoppingCartUrl = 'http://localhost:2130/shoppingcart';
 
 function loadItemsSuccess(itemList) {
@@ -12,7 +13,7 @@ function loadItemsSuccess(itemList) {
   };
 }
 
-export function loadItemList() {
+export function loadItemsList() {
   return async (dispatch) => {
     try {
       const itemList = await axios(listUrl);
