@@ -1,27 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { loadHeroes, deleteHero, createHero } from '../actions/action-creators';
-import heroStores from '../stores/heroes-store';
+import React, { useState } from 'react';
 import ListItem from './ListItem';
 import '../style.css';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { deleteHero, addHero } from '../redux/actions/heroActions';
+import {PropTypes} from 'prop-types'
 
-function List2() {
-	const [heroes, setHeroes] = useState(heroStores.getHeroes());
-	const [newHero, setNewHero] = useState('');
+function List2({ heroes, actions }) {
+	const [newHero, setNewHero] = useState();
 
-	useEffect(() => {
-		heroStores.addEventListener(handleChange);
-		if (!heroes || !heroes.length) {
-			loadHeroes();
-		}
-
-		return () => {
-			heroStores.removeEventListener(handleChange);
-		};
-	}, [heroes]);
-
-	function handleChange() {
-		setHeroes(heroStores.getHeroes());
-	}
 	return (
 		<main>
 			<h2 class="list-title">My Heroes</h2>
@@ -30,7 +17,7 @@ function List2() {
 				value={newHero}
 				placeholder="Enter a new hero name"
 			/>
-			<button onClick={() => createHero(newHero)}>Add</button>
+			<button onClick={() => {actions.addHero(newHero); setNewHero('')}}>Add</button>
 			{(!heroes || !heroes.length) && <h1>There are no heroes!</h1>}
 			<div class="list-heroes">
 				{heroes &&
@@ -40,9 +27,7 @@ function List2() {
 							<ListItem heroID={hero.id} heroName={hero.name} />
 							<button
 								className="deleteButton"
-								onClick={() => {
-									deleteHero(hero.id);
-								}}
+								onClick={() => actions.deleteHero(hero.id)}
 							>
 								X
 							</button>
@@ -53,4 +38,24 @@ function List2() {
 	);
 }
 
-export default List2;
+function mapStateToProps({heroes}) {
+	return {
+		heroes
+	};
+}
+
+function mapDispatchToProps(dispatch) {
+	return {
+		actions: bindActionCreators({ deleteHero, addHero }, dispatch)
+	};
+}
+
+List2.propTypes = {
+	heroes: PropTypes.shape([]).isRequired,
+	actions: PropTypes.shape({
+		deleteHero: PropTypes.func.isRequired,
+		addHero: PropTypes.func.isRequired
+	}).isRequired
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(List2);

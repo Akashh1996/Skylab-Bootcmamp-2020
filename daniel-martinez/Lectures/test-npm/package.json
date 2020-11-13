@@ -1,0 +1,18 @@
+{
+  "name": "daniel-martinez-hi-from-skylab",
+  "version": "1.1.0",
+  "description": "My first published pachake ever",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Daniel Martinez",
+  "license": "ISC"
+}
