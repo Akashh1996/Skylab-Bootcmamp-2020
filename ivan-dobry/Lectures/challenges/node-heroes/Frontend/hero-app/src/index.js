@@ -1,18 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import TourOfHeroes from './ToH';
 import reportWebVitals from './reportWebVitals';
 import Header from './Header';
-import DashBoard from './Dashboard';
-import Detail from './Detail';
-import HeroesList from '../../node-heroes/Frontend/hero-app/src/HeroesList';
+import HeroesList from './HeroesList';
 import { Provider } from 'react-redux';
 import configureStore from './redux/configureStore';
 import { addHero, loadHero } from './redux/actions/heroActions';
 
 const store = configureStore();
-store.dispatch(loadHero);
+store.dispatch(loadHero());
 
 ReactDOM.render(
 	<React.StrictMode>

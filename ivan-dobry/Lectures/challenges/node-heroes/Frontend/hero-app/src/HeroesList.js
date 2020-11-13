@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { addHero, loadHero } from './redux/actions/heroActions';
+import { addHero, loadHero } from '../src/redux/actions/heroActions';
 import { PropTypes } from 'prop-types';
 import { bindActionCreators } from 'redux';
 
 function HeroesList({ heroes, actions }) {
 	debugger;
 	const [newHero, setNewHero] = useState('');
-	const [heroesList, setHeroes] = useState(loadHero());
-	return (
+	return ( 
 		<>
 			<input
 				onChange={(event) => setNewHero(event.target.value)}
@@ -18,11 +17,12 @@ function HeroesList({ heroes, actions }) {
 			<button type="button" onClick={() => actions.addHero(newHero)}>
 				Add
 			</button>
-			<div className="heroes__list">
-				{heroesList.map((hero) => (
-					<li key={hero}>{hero}</li>
+			<ul className="heroes__list">		
+				{
+				heroes.map((hero) => (
+					<li key={hero.name}>{hero.name}</li>
 				))}
-			</div>
+			</ul>
 		</>
 	);
 }
@@ -42,7 +42,7 @@ function mapStateToProps({ heroes }) {
 
 function mapDispatchToProps(dispatch) {
 	return {
-		actions: bindActionCreators({ addHero }, dispatch)
+		actions: bindActionCreators({ addHero, loadHero }, dispatch)
 	};
 }
 
