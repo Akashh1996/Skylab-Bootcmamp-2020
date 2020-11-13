@@ -11,7 +11,6 @@ function routes() {
 			response.send(heroes);
 		})
 		.post((request, response) => {
-			// const { id, name } = request.query;
 			const hero = { id: 69, name: 'Ferran' };
 			heroes.push(hero);
 			response.status(200);
@@ -32,7 +31,6 @@ function routes() {
 			response.status(200);
 			response.send(heroes);
 		});
-	// pokeRouter.route('/:pokeid');
 	return heroRouter;
 }
 
