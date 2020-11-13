@@ -7,7 +7,6 @@ const morgan = require('morgan');
 const app = express();
 
 const port = process.env.PORT || 5000;
-
 app.use(morgan('tiny'));
 
 app.use(express.static(path.join(__dirname, '/public/')));
