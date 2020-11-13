@@ -16,7 +16,7 @@ class PokeStore extends EventEmitter {
 	}
 
 	removeEventListener(callback) {
-		this.on(CHANGE, callback);
+		this.removeListener(CHANGE, callback);
 	}
 
 	emitChange() {

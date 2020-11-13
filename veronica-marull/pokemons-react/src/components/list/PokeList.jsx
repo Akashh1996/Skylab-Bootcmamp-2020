@@ -5,7 +5,7 @@ import './pokeList.css';
 
 function PokeList() {
 	const [list, setList] = useState(pokeStore.getPokemons());
-	debugger;
+
 	function handleChange() {
 		setList(pokeStore.getPokemons());
 	}
@@ -22,19 +22,12 @@ function PokeList() {
 
 	return (
 		<>
-			<div>
-				{list ? (
-					list.forEach((pokemon) => (
-						<ul>
-							<li>
-								<a href="*">{pokemon.name}</a>
-							</li>
-						</ul>
-					))
-				) : (
-					<div>Loading</div>
-				)}
-			</div>
+			{list &&
+				list.map((pokemon) => (
+					<ul>
+						<li>{pokemon.name}</li>
+					</ul>
+				))}
 		</>
 	);
 }
