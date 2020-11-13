@@ -1,0 +1,19 @@
+{
+  "name": "ivan-say-hi-from-skylab",
+  "version": "1.1.0",
+  "description": "Mi first published package ever",
+  "main": "index.js",
+  "keywords": [
+    "ivan"
+  ],
+  "author": "ivan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}

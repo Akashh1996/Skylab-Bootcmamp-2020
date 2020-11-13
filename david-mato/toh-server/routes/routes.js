@@ -8,17 +8,21 @@ function routes() {
 	heroRouter
 		.route('/')
 		.get((req, res) => {
-			res.status(400);
+			res.status(200);
 			res.send(heroes);
 		})
 		.post((req, res) => {
-			const { id, name } = req.query;
+			const { name } = req.body;
+			let id;
+			if (name) {
+				id = heroes[heroes.length - 1].id + 1
+			}
 			heroes.push({ id, name });
 			res.send(heroes);
 		})
 		.delete((req, res) => {
 			const { id } = req.query;
-			let hero = heroes.find((hero) => hero.id === id);
+			let hero = heroes.find((hero) => hero.id === +id);
 			if (hero) {
 				heroes.splice(heroes.indexOf(hero), 1);
 			}
