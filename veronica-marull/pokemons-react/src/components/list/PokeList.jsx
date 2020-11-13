@@ -33,3 +33,9 @@ function PokeList() {
 }
 
 export default PokeList;
+
+/*
+`<li><a href="../detail/detail.html?pokeName=${pokemon.name}">
+                                    ${pokemon.name}
+								</a></li>`;
+								*/

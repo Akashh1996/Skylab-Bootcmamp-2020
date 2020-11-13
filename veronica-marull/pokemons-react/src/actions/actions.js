@@ -12,3 +12,17 @@ export async function loadPokemons() {
 		payload: pokemonsResponse.results
 	});
 }
+
+export async function getPokemonsDetail(name) {
+	try {
+		const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}/`);
+		const detail = await response.json();
+
+		dispatcher.dispatch({
+			type: actionTypes.POKEMONS_DETAIL,
+			payload: detail
+		});
+	} catch (error) {
+		console.log('error');
+	}
+}
