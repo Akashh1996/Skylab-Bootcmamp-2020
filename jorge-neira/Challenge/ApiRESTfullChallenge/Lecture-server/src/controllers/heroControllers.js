@@ -1,0 +1,3 @@
+function heroController(hero) {
+  
+}

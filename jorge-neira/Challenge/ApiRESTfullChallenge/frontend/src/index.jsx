@@ -7,6 +7,7 @@ import HeroListComponent from './components/listHeroes/ListHeroesComponents';
 
 const heroStore = configureStore();
 
+debugger;
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={heroStore}>

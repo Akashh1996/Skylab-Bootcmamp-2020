@@ -5,9 +5,9 @@ import { bindActionCreators } from 'redux';
 import loadHeroes from '../../redux/actions/hero-actions';
 
 function HeroListComponents({ heroes, actions }) {
+  debugger;
   const [heroInput, setHeroInput] = useState('');
 
-  // debugger;
   return (
     <>
       <div>
@@ -17,9 +17,14 @@ function HeroListComponents({ heroes, actions }) {
           <button type="button">ADD</button>
           <button type="button">DEL</button>
         </span>
-        <span onLoad={() => actions.loadHeroes()}>
-          {(!heroes || !heroes.length) && <h2>No heroes availables!</h2>}
-          {heroes && heroes.length > 0 && heroes.map((hero) => <li key={hero}>{hero}</li>)}
+        <span>
+          {(!heroes || !heroes.length) && (
+          <div>
+            <h2>No heroes availables!</h2>
+            <button type="button" onClick={() => actions.loadHeroes()}>Load</button>
+          </div>
+          ) }
+          {heroes && heroes.length > 0 && heroes.map((hero) => <li key={hero}>{hero.name}</li>)}
         </span>
       </div>
     </>
@@ -27,10 +32,9 @@ function HeroListComponents({ heroes, actions }) {
 }
 
 HeroListComponents.propTypes = {
-  loadHeroes: PropTypes.shape([]).isRequired,
   heroes: PropTypes.shape([]).isRequired,
   actions: PropTypes.shape({
-    heroesList: PropTypes.func.isRequired,
+    loadHeroes: PropTypes.func.isRequired,
   }).isRequired,
 };
 
