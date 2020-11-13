@@ -6,7 +6,6 @@ import { bindActionCreators } from 'redux';
 import {addHero, getHeroes} from '../redux/actions/heroActions'
 
 function Dashboard({heroes, dispatch}) {
-  debugger
 
   if (!heroes) {
 		dispatch(getHeroes());

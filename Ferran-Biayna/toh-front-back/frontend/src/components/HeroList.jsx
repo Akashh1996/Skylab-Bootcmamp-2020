@@ -10,7 +10,7 @@ function HeroList({heroes, dispatch}) {
   const [Id, setId] = useState('');
 
   if (!heroes || !heroes?.length) {
-		dispatch(getHeroes());
+	  dispatch(getHeroes());
 	}
 
   return (
