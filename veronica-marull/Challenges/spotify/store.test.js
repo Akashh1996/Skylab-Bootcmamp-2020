@@ -20,7 +20,7 @@ describe('store', () => {
 		global.fecht = jest
 			.fn()
 			.mockReturnValueOnce(() => Promise.resolve(response));
-		await store.getNewReleases();
-		expect(store.getNewReleases()).toEqual([{}]);
+		const releases = await store.getNewReleases();
+		expect(releases).toEqual([{}]);
 	});
 });
