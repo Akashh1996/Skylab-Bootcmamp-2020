@@ -12,7 +12,6 @@ function loadHeroesSuccess(heroes) {
 }
 
 export default function loadHeroes() {
-  debugger;
   return async (dispatch) => {
     try {
       // debugger;
