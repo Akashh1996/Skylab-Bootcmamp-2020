@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 const port = process.env.PORT || 1240;
 
 const heroRoutes = require('./routes/heroRoutes')();
-app.use('/heroes', heroRoutes);
+app.use('/', heroRoutes);
 
 app.listen(port, () => {
 	console.log(`Server up in ${port}`);
