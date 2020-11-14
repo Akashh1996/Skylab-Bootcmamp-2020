@@ -4,7 +4,6 @@ import axios from 'axios';
 import actionTypes from './actionTypes';
 
 function requestProductsSuccess(productsList) {
-    debugger;
   return {
     type: actionTypes.LOAD_PRODUCT,
     productsList,

@@ -6,6 +6,7 @@ import ProductList from './components/List/ProductList';
 import Header from './components/Header/Header';
 import reportWebVitals from './reportWebVitals';
 import configureStore from './redux/configureStore';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const store = configureStore();
 
