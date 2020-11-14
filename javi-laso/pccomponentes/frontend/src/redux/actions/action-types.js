@@ -4,7 +4,6 @@ const actionTypes = {
   LOAD_SHOPPING_CART: 'LOAD_SHOPPING_CART',
   PUT_ITEM_IN_CART: 'PUT_ITEM_IN_CART',
   DELETE_ITEM_FROM_CART: 'DELETE_ITEM_FROM_CART',
-
 };
 
 export default actionTypes;

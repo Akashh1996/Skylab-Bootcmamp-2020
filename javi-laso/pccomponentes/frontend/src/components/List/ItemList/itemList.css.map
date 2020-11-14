@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,IAAI,CAAC;EACH,OAAO,EAAE,IAAI;CACd",
+    "mappings": "AAEA,AAAA,IAAI,CAAC;EACH,OAAO,EAAE,iBAAiB;CAC3B;;AAED,AAAA,WAAW,CAAC;EACV,SAAS,ECMO,IAAI;EDLpB,KAAK,EAAE,KAAK;CACb;;AAED,AAAA,KAAK,CAAC;EACJ,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;CAChB",
     "sources": [
-        "itemList.scss"
+        "itemList.scss",
+        "../../../scss-variables/_scss-variables.scss"
     ],
     "names": [],
     "file": "itemList.css"

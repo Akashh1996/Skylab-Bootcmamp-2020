@@ -14,9 +14,9 @@ function ItemList({ items, actions }) {
   return (
     <main>
       <section>
-        <h1>Principal offers</h1>
+        <h1 className="list-title">Principal offers</h1>
         <ul className="list">
-          {items?.length > 0 && items.map((item) => <ListElement item={item} />)}
+          {items?.length > 0 && items.map((item) => <ListElement item={item} key={+item.id} />)}
         </ul>
       </section>
     </main>
@@ -24,10 +24,14 @@ function ItemList({ items, actions }) {
 }
 
 ItemList.propTypes = {
-  items: PropTypes.shape([]).isRequired,
+  items: PropTypes.arrayOf(PropTypes.object),
   actions: PropTypes.shape({
     loadItemsList: PropTypes.func.isRequired,
   }).isRequired,
+};
+
+ItemList.defaultProps = {
+  items: undefined,
 };
 
 function mapStateToProps({ itemsReducer }) {

@@ -1,7 +1,7 @@
 const express = require('express');
 const shoppingCartController = require('../controllers/shoppingCartController');
 
-function routes(ShoppingCartStore) {
+function cartRoutes(ShoppingCartStore) {
   const router = express.Router();
   const shoppingCart = shoppingCartController(ShoppingCartStore);
 
@@ -13,4 +13,4 @@ function routes(ShoppingCartStore) {
   return router;
 }
 
-module.exports = routes;
+module.exports = cartRoutes;

@@ -3,10 +3,10 @@ const bodyParser = require('body-parser');
 const chalk = require('chalk');
 const cors = require('cors');
 const morgan = require('morgan');
-const ItemsStore = require('./src/store/itemsStore');
-const ShoppinCartStore = require('./src/store/shoppingCartStore');
+const ItemsStore = require('./src/stores/itemsStore');
+const ShoppingCartStore = require('./src/stores/shoppingCartStore');
 const itemListRouter = require('./src/routes/itemListRouter')(ItemsStore);
-const shoppinCartRouter = require('./src/routes/shoppingCartRouter')(ShoppinCartStore);
+const shoppingCartRouter = require('./src/routes/shoppingCartRouter')(ShoppingCartStore);
 
 const server = express();
 server.use(morgan('tiny'));
@@ -20,7 +20,7 @@ const port = process.env.PORT || 2130;
 
 server.use('/', itemListRouter);
 
-server.use('/shoppingcart', shoppinCartRouter);
+server.use('/shoppingcart', shoppingCartRouter);
 
 server.listen(port, () => {
   // eslint-disable-next-line no-console

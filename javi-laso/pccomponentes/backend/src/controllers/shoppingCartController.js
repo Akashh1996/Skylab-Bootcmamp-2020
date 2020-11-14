@@ -1,8 +1,10 @@
 function shoppingCarController(ShoppingCartStore) {
   function getMethod(req, res) {
     try {
+      const cartItems = ShoppingCartStore.getItems();
+      console.log(cartItems);
       res.status(200);
-      res.send(ShoppingCartStore.getItems());
+      res.send(cartItems);
     } catch (error) {
       // eslint-disable-next-line no-console
       console.log(error);
@@ -13,7 +15,7 @@ function shoppingCarController(ShoppingCartStore) {
 
   function putMethod(req, res) {
     try {
-      const item = req.query;
+      const { item } = req.body;
       ShoppingCartStore.addItem(item);
       res.status(201);
       res.send(ShoppingCartStore.getItems());

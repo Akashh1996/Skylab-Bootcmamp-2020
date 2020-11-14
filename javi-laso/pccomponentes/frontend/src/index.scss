@@ -4,6 +4,13 @@
    ========================================================================== */
 
 /**
+ * variables
+ */
+
+@import "./scss-variables/_scss-variables.scss";
+ 
+
+/**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
@@ -16,6 +23,8 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  color: $primary-color;
 }
 
 /* Sections
@@ -28,7 +37,8 @@
 body {
   margin: 0;
   position: relative;
-  background-color: #dcdfea;
+  background-color: $back-color;
+  overflow: hidden;
 }
 
 /**
@@ -36,7 +46,12 @@ body {
  */
 
 main {
-  display: block;
+  overflow: auto;
+  position: absolute;
+  width: 100vw;
+  min-height: 100vh;
+  top: $navbar-height;
+  bottom: 0;
 }
 
 /* Grouping content
@@ -348,4 +363,33 @@ template {
 
 [hidden] {
   display: none;
+}
+
+.horizontal-container {
+  display: flex;
+}
+
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-1{
+  flex: 1;
+}
+
+.flex-2{
+  flex: 2;
+}
+
+.flex-3{
+  flex: 3;
+}
+
+.flex-4{
+  flex: 4;
+}
+
+.no-link {
+  color: inherit
 }

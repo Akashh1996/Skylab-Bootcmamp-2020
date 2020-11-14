@@ -36,8 +36,7 @@ export function loadItem(itemId) {
   return async (dispatch) => {
     try {
       const item = await axios(`${listUrl}${itemId}`);
-
-      dispatch(loadItemSuccess(item));
+      dispatch(loadItemSuccess(item.data));
     } catch (error) {
       console.log((error));
     }
@@ -52,9 +51,10 @@ function loadCartSuccess(cartList) {
 }
 
 export function loadShoppingCart() {
+  debugger;
   return async (dispatch) => {
     try {
-      const cartList = await axios(shoppingCartUrl);
+      const cartList = await axios.get(shoppingCartUrl);
 
       dispatch(loadCartSuccess(cartList.data));
     } catch (error) {
@@ -74,10 +74,10 @@ export function putItemInCart(item) {
   return async (dispatch) => {
     try {
       const cartListUpdated = await axios.put(shoppingCartUrl, {
-        params: { item },
+        item,
       });
 
-      dispatch(putItemCartSuccess(cartListUpdated));
+      dispatch(putItemCartSuccess(cartListUpdated.data));
     } catch (error) {
       console.log(error);
     }
