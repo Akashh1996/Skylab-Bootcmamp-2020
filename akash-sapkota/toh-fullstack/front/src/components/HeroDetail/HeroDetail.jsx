@@ -1,15 +1,22 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { requestHeroDetail } from '../../redux/actions/heroAction';
+import { requestHeroDetail, cleanUp } from '../../redux/actions/heroAction';
 
 
-function HeroDetail({ heroDetail, dispatch, actions } ) {
-    const id = window.location.pathname.match(/\d+/)[0] 
-        if (!heroDetail) {
-            dispatch(requestHeroDetail(+id));
-        }
-    
+function HeroDetail({ heroDetail, dispatch, actions , match, state} ) {
+    const [id] = useState(match.params.heroId)
+    /* const id = window.location.pathname.match(/\d+/)[0] */ 
+        useEffect(() => {
+            if (id) {
+                dispatch(requestHeroDetail(+id));
+            }
+
+            return () => actions.cleanUp()
+
+
+        }, [id, dispatch, actions]);
+        
     return (
         <>
             {heroDetail &&
@@ -29,7 +36,7 @@ function mapStateToProps(state) {
 }
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators({ }, dispatch),
+        actions: bindActionCreators({ cleanUp }, dispatch),
         dispatch
     };
 }
