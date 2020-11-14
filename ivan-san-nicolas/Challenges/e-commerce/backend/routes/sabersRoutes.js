@@ -14,7 +14,7 @@ function routes() {
   sabersRouter.route('/:saberName').get((req,res) => {
     console.log(req);
     const saberName = req.params.saberName;
-    const saber = sabers.find((findingSaber) => findingSaber["product-name"] === saberName.toLowerCase());
+    const saber = sabers.find((findingSaber) => findingSaber["product-name"] === saberName);
     res.status(200);
     res.send(saber);
   });
