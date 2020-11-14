@@ -1,6 +1,8 @@
 const actionTypes = {
   LOAD_SABERS: 'LOAD_SABERS',
   LOAD_SABERS_ERROR: 'LOAD_SABERS_ERROR',
+  LOAD_SABER: "LOAD_SABER",
+  LOAD_SABER_ERROR: "LOAD_SABER_ERROR"
 };
 
 export default actionTypes;

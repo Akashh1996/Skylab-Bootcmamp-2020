@@ -8,21 +8,41 @@ function requestSabersSuccess(sabersList) {
   };
 }
 
-function requestSabersError(error) {
+function requestError(error) {
   return {
     type: actionTypes.LOAD_SABERS_ERROR,
     error,
   };
 }
 
-export default function requesSabers() {
+export function requestSabers() {
   return async (dispatch) => {
     const endpoint = 'http://localhost:1240/sabers';
     try {
       const sabers = await axios.get(endpoint);
       dispatch(requestSabersSuccess(sabers.data));
     } catch (error) {
-      dispatch(requestSabersError(error));
+      dispatch(requestError(error));
     }
   };
+}
+
+function requestSaberByNameSuccess(saberItem) {
+  return {
+    type: actionTypes.LOAD_SABER,
+    saberItem,
+  }
+}
+
+export function requestSaberByName(saberName) {
+  debugger;
+  return async (dispatch) => {
+    const endpoint = `http://localhost:1240/sabers/${saberName}`;
+    try {
+      const saber = await axios.get(endpoint);
+      dispatch(requestSaberByNameSuccess(saber.data));
+    } catch (error) {
+      dispatch(requestError(error));
+    }
+  }
 }

@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import configureStore from './redux/configureStore';
 import SabersList from './components/SabersList/SabersList';
+import SaberDetail from './components/SaberDetail/SaberDetail';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
@@ -15,6 +16,7 @@ ReactDOM.render(
       <Provider store={store}>
         <Switch>
           <Route path="/sabers" exact component={SabersList}/>
+          <Route path="/sabers/:saberName" exact component={SaberDetail}/>
         </Switch>
       </Provider>
     </BrowserRouter>

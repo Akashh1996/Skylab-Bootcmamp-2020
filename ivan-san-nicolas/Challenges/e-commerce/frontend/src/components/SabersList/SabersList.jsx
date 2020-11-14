@@ -2,12 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
-import loadSabers from '../../redux/actions/SabersActions';
+import { requestSabers } from '../../redux/actions/SabersActions';
 import './css/SabersList.css';
 
 function SabersList({ sabersList, dispatch }) {
   if (sabersList.length < 1) {
-    dispatch(loadSabers());
+    dispatch(requestSabers());
   }
 
   const loadingGif = {
@@ -23,14 +23,14 @@ function SabersList({ sabersList, dispatch }) {
                 sabersList.map((saber) => {
                     return (
                       <li className="saber-wrapper">
-                        <Link to={`/sabers/detail/${saber["product-name"].toLowerCase()}`} style={{ textDecoration: 'none' }}>
+                        <Link to={`/sabers/${saber["product-name"]}`} style={{ textDecoration: 'none' }}>
                           <p className="saber-title">{saber['product-name']}</p>
                         </Link>
-                        <Link to={`/sabers/detail/${saber["product-name"].toLowerCase()}`}>
+                        <Link to={`/sabers/${saber["product-name"]}`}>
                           <img className="saber-image" src={saber['product-image-url']} alt="saber-img"></img>
                         </Link>
                       </li>
-                            );
+                    );
                 })
                 }
             </ul>
@@ -56,7 +56,7 @@ function mapStateToProps({ sabersReducer }) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators({ loadSabers }, dispatch),
+    actions: bindActionCreators({ requestSabers }, dispatch),
     dispatch,
   };
 }
