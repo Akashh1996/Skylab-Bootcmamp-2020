@@ -2,12 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import PokeList from './components/list/PokeList';
+import Detail from './components/detail/Detail';
 
 import reportWebVitals from './reportWebVitals';
 
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 ReactDOM.render(
 	<React.StrictMode>
-		<PokeList />
+		<BrowserRouter>
+			<Switch>
+				<Route path="/" exact component={PokeList} />
+				<Route path="/pokemon/:pokeName" component={Detail} />
+			</Switch>
+		</BrowserRouter>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
