@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const Product = require('./src/store/productStore');
 const productRouter = require('./src/routes/productRouter')(Product);
+const cartRouter = require('./src/routes/cartRouter')(Product);
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -13,5 +14,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use('/products', productRouter);
+app.use('/cart', cartRouter);
 
 app.listen(port, () => (`Server is running on port ${chalk.blue(port)}`));

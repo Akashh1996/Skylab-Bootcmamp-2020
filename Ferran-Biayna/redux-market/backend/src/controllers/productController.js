@@ -3,12 +3,10 @@ function productController(Product) {
     res.json(req.product);
   }
 
-  function postMethod(req) {
+  function postMethod(req, res) {
     Product.addProduct(+req.params.productId);
-  }
-
-  function deleteMethod(req) {
-    Product.deleteProduct(+req.params.productId);
+    console.log(Product.getCart());
+    res.json(Product.getCart());
   }
 
   function allMiddleware(req, res, next) {
@@ -17,7 +15,7 @@ function productController(Product) {
   }
 
   return {
-    getMethod, postMethod, deleteMethod, allMiddleware,
+    getMethod, postMethod, allMiddleware,
   };
 }
 

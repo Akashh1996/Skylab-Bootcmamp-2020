@@ -1,25 +1,13 @@
-const fetch = require('node-fetch');
+const products = require('../../public/products.json');
 
-let products = null;
 let cart = [];
-
-async function loadProducts() {
-  try {
-    const response = await fetch('/public/heroes.json');
-    products = await response.json();
-    return products;
-  } catch (error) {
-    return `This is an error ${error}`;
-  }
-}
 
 class Product {
   static getProducts() {
-    return loadProducts().then(products);
+    return products;
   }
 
   static getProductById(productId) {
-    this.getProducts();
     return products.find((product) => product.id === productId);
   }
 
@@ -28,7 +16,6 @@ class Product {
   }
 
   static addProduct(productId) {
-    this.getProducts();
     cart.push(products.find((product) => product.id === productId));
   }
 

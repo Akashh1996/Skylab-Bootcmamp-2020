@@ -3,8 +3,13 @@ function cartController(Product) {
     res.json(Product.getCart());
   }
 
+  function deleteMethod(req, res) {
+    Product.deleteProduct(+req.params.productId);
+    res.json(Product.getCart());
+  }
+
   return {
-    getMethod,
+    getMethod, deleteMethod,
   };
 }
 
