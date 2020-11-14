@@ -5,8 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import configureStore from './redux/configureStore';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import HeroDetail from './components/HeroDetail/HeroDetail';
-import HeroList from './components/HeroList/HeroList';
+import ProductDetail from './components/ProductDetail/ProductDetail';
+import ProductList from './components/ProductList/ProductList';
 
 
 const store = configureStore();
@@ -16,8 +16,8 @@ ReactDOM.render(
 		<Provider store={store}>
 			<BrowserRouter>
         <Switch>
-            <Route path = "/" exact component = {HeroList} ></Route>
-            <Route path = "/:heroId" exact component = {HeroDetail} ></Route>
+            <Route path = "/" exact component = {ProductList} ></Route>
+            <Route path = "/:heroId" exact component = {ProductDetail} ></Route>
         </Switch>
       </BrowserRouter>
 		</Provider>

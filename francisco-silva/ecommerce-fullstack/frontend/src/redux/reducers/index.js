@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 //importar todos nouestros reducers
-import heroReducer from './heroReducer';
+import productReducer from './productReducer';
 
-const rootReducer = combineReducers({ heroReducer });
+const rootReducer = combineReducers({ productReducer });
 
 export default rootReducer;

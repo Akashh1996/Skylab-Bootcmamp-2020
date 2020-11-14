@@ -1,12 +1,12 @@
 import './App.css';
-import HeroDetail from './components/HeroDetail/HeroDetail';
-import HeroList from './components/HeroList/HeroList';
+import ProductDetail from './components/ProductDetail/ProductDetail';
+import ProductList from './components/ProductList/HeroList';
 
 
 function App() {
 	return (
-		<HeroList />,
-		<HeroDetail />
+		<ProductList />,
+		<ProductDetail />
 	);
 }
 

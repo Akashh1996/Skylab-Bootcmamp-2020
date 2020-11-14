@@ -28,4 +28,3 @@ function routes() {
   return productRouter;
 }
 module.exports = routes;
-module.exports = routes();
