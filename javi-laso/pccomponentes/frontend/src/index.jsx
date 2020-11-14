@@ -7,7 +7,7 @@ import configureStore from './redux/configureStore';
 import Header from './components/Header/Header';
 import ItemList from './components/List/ItemList/ItemList';
 import Details from './components/Details/Details';
-import ShoppingCart from './components/ShoppingCart/ShoppingCart';
+import ShoppingCart from './components/Cart/ShoppingCart/ShoppingCart';
 
 const store = configureStore();
 
@@ -17,9 +17,9 @@ ReactDOM.render(
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route path="/" exact component={ItemList} />
-          <Route path="/:itemId" exact component={Details} />
           <Route path="/shoppingcart" exact component={ShoppingCart} />
+          <Route path="/:itemId" exact component={Details} />
+          <Route path="/" exact component={ItemList} />
         </Switch>
       </BrowserRouter>
     </Provider>

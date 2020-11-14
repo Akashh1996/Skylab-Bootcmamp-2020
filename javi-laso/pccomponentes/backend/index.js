@@ -9,7 +9,7 @@ const itemListRouter = require('./src/routes/itemListRouter')(ItemsStore);
 const shoppingCartRouter = require('./src/routes/shoppingCartRouter')(ShoppingCartStore);
 
 const server = express();
-server.use(morgan('tiny'));
+server.use(morgan('dev'));
 
 server.use(cors());
 
@@ -18,9 +18,8 @@ server.use(bodyParser.json());
 
 const port = process.env.PORT || 2130;
 
-server.use('/', itemListRouter);
-
 server.use('/shoppingcart', shoppingCartRouter);
+server.use('/', itemListRouter);
 
 server.listen(port, () => {
   // eslint-disable-next-line no-console

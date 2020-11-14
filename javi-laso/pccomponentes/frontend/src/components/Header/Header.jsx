@@ -10,6 +10,7 @@ function Header({ cartSize, actions }) {
   useEffect(() => {
     actions.loadShoppingCart();
   }, []);
+
   return (
     <header>
       <nav className="header__navbar">
@@ -36,7 +37,6 @@ Header.defaultProps = {
 };
 
 function mapStateToProps({ cartReducer }) {
-  debugger;
   return { cartSize: cartReducer.cartSize };
 }
 

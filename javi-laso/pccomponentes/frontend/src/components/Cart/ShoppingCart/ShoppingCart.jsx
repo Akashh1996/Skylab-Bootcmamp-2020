@@ -2,13 +2,16 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
-import ListElement from '../List/ListElement/ListElement';
+import CartElement from '../CartElement/CartElement';
 
 function ShoppingCart({ cartList }) {
   return (
     <main>
-      <ul>
-        {cartList?.length > 0 && cartList.map((cartItem) => <ListElement item={cartItem} />)}
+      <h1 className="mb-4">Your products</h1>
+      <ul className="d-flex flex-column">
+        {cartList?.length === 0
+          ? <h3>You have not chosen products yet</h3>
+          : cartList.map((cartItem) => <CartElement item={cartItem} />)}
       </ul>
     </main>
   );
@@ -19,7 +22,6 @@ ShoppingCart.propTypes = {
 };
 
 function mapStateToProps({ cartReducer }) {
-  debugger;
   return { cartList: cartReducer.cartList };
 }
 

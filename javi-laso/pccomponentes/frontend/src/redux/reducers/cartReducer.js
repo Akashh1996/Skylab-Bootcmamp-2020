@@ -1,7 +1,6 @@
 import actionTypes from '../actions/action-types';
 
 export default function cartReducer(state = { cartList: [], cartSize: 0 }, action) {
-  debugger;
   switch (action.type) {
     case actionTypes.LOAD_SHOPPING_CART:
       return {

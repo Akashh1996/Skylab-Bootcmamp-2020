@@ -51,10 +51,9 @@ function loadCartSuccess(cartList) {
 }
 
 export function loadShoppingCart() {
-  debugger;
   return async (dispatch) => {
     try {
-      const cartList = await axios.get(shoppingCartUrl);
+      const cartList = await axios(shoppingCartUrl);
 
       dispatch(loadCartSuccess(cartList.data));
     } catch (error) {

@@ -2,7 +2,7 @@ let shoppingCart = [];
 
 class ShoppingCartStore {
   static getItems() {
-    return shoppingCart;
+    return JSON.stringify(shoppingCart);
   }
 
   static getItemById(itemId) {

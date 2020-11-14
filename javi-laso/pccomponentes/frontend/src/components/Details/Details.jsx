@@ -10,6 +10,7 @@ import SsdDetails from './SsdDetails/SsdDetails';
 
 function Details({ item, actions, match }) {
   const [id] = useState(match.params.itemId);
+
   useEffect(() => {
     actions.loadItem(id);
   }, []);
