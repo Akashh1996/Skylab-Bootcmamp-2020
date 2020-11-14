@@ -9,6 +9,13 @@ function requestProductsSucces(productList) {
   };
 }
 
+function requestProductDetailSucces(productDetail) {
+  return {
+    type: actionTypes.LOAD_PRODUCT_DETAIL,
+    productDetail,
+  };
+}
+
 function requestProductsError(error) {
   return {
     type: actionTypes.LOAD_PRODUCTS_ERROR,
@@ -25,6 +32,20 @@ export function requestProducts() {
       const products = await axios.get(endpoint);
 
       dispatch(requestProductsSucces(products.data));
+    } catch (error) {
+      dispatch(requestProductsError);
+    }
+  };
+}
+
+// eslint-disable-next-line no-unused-vars
+export function requestProductDetail(detailId) {
+  return async (dispatch) => {
+    const endpoint = `http://localhost:1980/detail?id=${detailId}`;
+    try {
+      const products = await axios.get(endpoint);
+
+      dispatch(requestProductDetailSucces(products.data));
     } catch (error) {
       dispatch(requestProductsError);
     }

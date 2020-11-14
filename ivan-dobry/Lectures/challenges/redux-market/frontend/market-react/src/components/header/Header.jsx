@@ -1,5 +1,6 @@
 import React from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
+import Button from 'react-bootstrap/Button';
 import './Header.css';
 
 function Header() {
@@ -8,7 +9,7 @@ function Header() {
       <Jumbotron>
         <section className="header__market">
           <h1>MARKET SKYLAB</h1>
-          <button className="trolley" type="submit">carrito</button>
+          <Button className="trolley" type="submit">carrito</Button>
         </section> 
       </Jumbotron>
     </>
