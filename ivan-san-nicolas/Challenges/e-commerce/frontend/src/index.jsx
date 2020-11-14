@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import configureStore from './redux/configureStore';
+import Header from './components/Header/Header';
 import SabersList from './components/SabersList/SabersList';
 import SaberDetail from './components/SaberDetail/SaberDetail';
 import reportWebVitals from './reportWebVitals';
@@ -13,6 +14,7 @@ const store = configureStore({ sabersReducer: { sabersArray: [] } });
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+      <Header />
       <Provider store={store}>
         <Switch>
           <Route path="/sabers" exact component={SabersList}/>
