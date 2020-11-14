@@ -13,7 +13,10 @@ function SaberDetail({ saberItem, dispatch, match }) {
     return (
         <>
                 {saberItem ? (saberItem["product-name"] ? (
-                    <p style={{color:"white"}}>{saberItem["product-name"]}</p>
+                    <div>
+                        <img src={saberItem["product-image-url"]} alt={saberItem["product-name"]}/>
+                        <p style={{color:"white"}}>{saberItem["product-name"]}</p>
+                    </div>
                 ) : (
                     <h1 style={{color:"white"}}>There's no saber :\</h1>
                 )) : (
