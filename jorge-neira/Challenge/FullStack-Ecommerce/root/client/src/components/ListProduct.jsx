@@ -5,14 +5,10 @@ import { PropTypes } from 'prop-types';
 import { bindActionCreators } from 'redux';
 import loadProductList from '../redux/actions/productsActions';
 
-function ListAsus({ products, dispatch }) {
-  debugger;
-  // eslint-disable-next-line react/prop-types
+function ListProduct({ products, dispatch }) {
   if (!products) {
-    debugger;
     dispatch.loadProductList();
   }
-  debugger;
   return (
     <div>
       Hello World
@@ -24,24 +20,22 @@ function ListAsus({ products, dispatch }) {
   );
 }
 
-ListAsus.propTypes = {
+ListProduct.propTypes = {
   dispatch: PropTypes.shape({
     loadProductList: PropTypes.func.isRequired,
   }).isRequired,
 };
 
 function mapStateToProps(state) {
-  debugger;
   return {
     products: state.productReducer.productList,
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  debugger;
   return {
     dispatch: bindActionCreators({ loadProductList }, dispatch),
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ListAsus);
+export default connect(mapStateToProps, mapDispatchToProps)(ListProduct);

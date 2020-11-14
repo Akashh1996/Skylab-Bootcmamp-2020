@@ -2,7 +2,6 @@ import axios from 'axios';
 import actionTypes from './actionsTypes';
 
 function loadLaptopListSuccess(productslist) {
-  debugger;
   return {
     type: actionTypes.LOAD_LAPTOP_LIST,
     productslist,
@@ -25,8 +24,6 @@ export default function loadProductList() {
       dispatch(loadLaptopListError({
         type: actionTypes.LOAD_LAPTOP_ERROR,
       }));
-      // eslint-disable-next-line no-console
-      console.log(`------>${error}`);
     }
   };
 }
