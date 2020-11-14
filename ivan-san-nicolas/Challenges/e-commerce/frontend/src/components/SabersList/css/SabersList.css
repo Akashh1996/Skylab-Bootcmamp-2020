@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Star Jedi';
+    src: url('StarJedi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.sabersList-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 170px;
+    padding: 0 40px;
+}
+
+.saber-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+.saber-wrapper:hover {
+    transform: scale(1.07);
+}
+
+.saber-wrapper:hover .saber-title {
+    letter-spacing: 5px;
+}
+
+.saber-title {
+    font-family: 'Star Jedi';
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(228, 228, 228);
+    text-decoration: none;
+    letter-spacing: 2px;
+    border: none;
+    transition: letter-spacing 0.5s;
+}
+
+.saber-image {
+    width: 390px;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 4px 4px 5px rgb(28, 28, 28);
+}
+
+.sabersList-loading-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 130px;
+    color: white;
+    font-weight: 600;
+}
+
+.loading-gif {
+    width: 300px;
+}
+
+@media (max-width: 880px){
+
+    .sabersList-section {
+        flex-direction: column;
+    }
+
+    .saber-image {
+        width: 600px;
+    }
+}

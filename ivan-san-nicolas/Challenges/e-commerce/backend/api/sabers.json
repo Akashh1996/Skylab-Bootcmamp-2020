@@ -1,6 +1,6 @@
 [
   {
-    "product-name":"ARCHON",
+    "product-name":"Archon",
     "product-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/7af47a39217aed67c1f280b5f80ed3d4/archon-4_1296x.jpg",
     "product-black-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/84c06ec88e4e64545f2991a2beb80187/archon-v2_1296x.jpg",
     "product-url":"https://saber-forgers.web.app/anchor",
@@ -19,7 +19,7 @@
     }
   },
   {
-    "product-name":"ARES",
+    "product-name":"Ares",
     "product-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/ba0f2950a7304f053864a24bbeabe217/ares_1296x.jpg",
     "product-black-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/5f930285a742b15aeacce6748b65b48c/ares-v3_52af94ef-09d7-42a7-b805-f938252fe544_1296x.jpg",
     "product-url":"https://saber-forgers.web.app/ares",
@@ -38,7 +38,7 @@
     }
   },
   {
-    "product-name":"EMERALD KNIGHT",
+    "product-name":"Emerald Knight",
     "product-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/e0b70688d93e18fd66d504ece97ee453/eknight-1_1296x.jpg",
     "product-black-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/ddd79260b82737d0cba3c65c2d8cb70a/eknight2_1296x.jpg",
     "product-url":"https://saber-forgers.web.app/emeraldknight",
@@ -58,7 +58,7 @@
     }
   },
   {
-    "product-name":"RENEGADE",
+    "product-name":"Renegade",
     "product-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/9ee8d2f8996bfba943a9deb075792de1/renegade-v1_1296x.jpg",
     "product-black-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/f5acf36b2ae2091a3a442d67772ff483/renegade-5_5b2cad33-d4b7-4b02-9d74-7d7b0c7b2a00_1296x.jpg",
     "product-url":"https://saber-forgers.web.app/renegade",
@@ -78,7 +78,7 @@
     }
   },
   {
-    "product-name":"UNLEASHED",
+    "product-name":"unleashed",
     "product-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/6c7cbf2684bf03c5abf7484433fbf19c/unleashed1_1296x.jpg",
     "product-black-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/da7a62b41b2270128d0acdf4b500f742/DSC_0020_5834cfe3-9fcd-4dcc-b4a1-141847918e91_1296x.JPG",
     "product-url":"https://saber-forgers.web.app/unleashed",
@@ -98,7 +98,7 @@
     }
   },
   {
-    "product-name":"COMMANDO",
+    "product-name":"Commando",
     "product-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/7745257eccf90456f1fb38151f2d0bd4/commando-4_1296x.jpg",
     "product-black-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/7cd214bcac368a9ed6ff630c410469f3/b01_da388342-98ff-4bf0-bece-c4ea07cd71fd_1296x.jpg",
     "product-url":"https://saber-forgers.web.app/commando",
@@ -118,7 +118,7 @@
     }
   },
   {
-    "product-name":"RELIC",
+    "product-name":"Relic",
     "product-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/6130d7c5629d797ba667c4f131e4530d/relic-4_1296x.jpg",
     "product-black-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/5e0f9d58a472c8fe79a902fc0fa3fcb2/b01_d74b1b99-1d8f-447a-81c2-db3434f84e9b_1296x.jpg",
     "product-url":"https://saber-forgers.web.app/relic",
@@ -158,7 +158,7 @@
     }
   },
   {
-    "product-name":"MALEVOLENT",
+    "product-name":"Malevolent",
     "product-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/27c6bf3d9b6743358bef63a0b667c5ed/malevolent-1_80bb7033-83a0-4552-ac06-eceeb445c32d_1296x.jpg",
     "product-black-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/d39251a59fc5675d0f8e971b31a07279/malevolent-5_95f02b13-9bf9-428d-bfba-69b7f135a67e_1296x.jpg",
     "product-url":"https://saber-forgers.web.app/malevolent",

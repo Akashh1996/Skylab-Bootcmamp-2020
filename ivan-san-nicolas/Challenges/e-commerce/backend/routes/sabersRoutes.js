@@ -1,5 +1,5 @@
 const express = require('express');
-const sabers = require('../api/clothes.json');
+const sabers = require('../api/sabers.json');
 
 const sabersRouter = express.Router();
 
