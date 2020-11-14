@@ -7,13 +7,18 @@ const morgan = require('morgan');
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(morgn('dev'));
+app.use(morgan('tiny'));
 
 app.use(express.static(path.join(__dirname, '/public/')));
-app.use('/css', express.static(path.join(__dirname, 'eric-martinez/node-demo/server/node_modules')))
 
 app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname, 'src/view/', '/index.html'));
+})
+app.get('/rakuten', (req, res) => {
+	res.sendFile(path.join(__dirname, 'src/view/', '/rakuten.html'));
+})
+app.get('/lunarillos', (req, res) => {
+	res.sendFile(path.join(__dirname, 'src/view/', '/lunarillos.html'));
 })
 
 
