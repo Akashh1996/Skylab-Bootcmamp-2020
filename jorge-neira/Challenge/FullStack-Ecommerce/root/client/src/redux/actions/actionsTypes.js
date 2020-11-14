@@ -1,0 +1,8 @@
+const actionsTypes = {
+  LOAD_LAPTOP_LIST: 'LOAD_LAPTOP_LIST',
+  LOAD_LAPTOP_BY_ID: 'LOAD_LAPTOP_BY_ID',
+  ADD_PRODUCT_CART: 'ADD_PRODUCT_CART',
+  DELETE_PRODUCT_CART: 'DELETE_PRODUCT_CART',
+};
+
+export default actionsTypes;
