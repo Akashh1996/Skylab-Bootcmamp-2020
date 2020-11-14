@@ -4,44 +4,41 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import getProducts from '../actions/marketActions';
 
-function List({ products, actions }) {
+function List({ products, dispatch }) {
+  if (!products) {
+    dispatch.getProducts();
+  }
+
   return (
     <>
       <h1>Market List</h1>
-      {products && (
-      <ul>
-        <li>List</li>
-      </ul>
+      {(!products) && (
+      <h1>There are no products!</h1>
       )}
-      {(!products || !products.length) && (
-      <>
-        <h1>There are no products!</h1>
-        <button type="button" onClick={() => actions.getProducts()}>
-          Update Products
-        </button>
-      </>
+      {products && (
+        <h2>THERE ARE PRODUCTS!</h2>
       )}
     </>
   );
 }
 
-function mapStateToProps({ products }) {
+List.propTypes = {
+  products: PropTypes.shape({}).isRequired,
+  dispatch: PropTypes.shape({
+    getProducts: PropTypes.func.isRequired,
+  }).isRequired,
+};
+
+function mapStateToProps(state) {
   return {
-    products,
+    products: state.productReducer.productList,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators({ getProducts }, dispatch),
+    dispatch: bindActionCreators({ getProducts }, dispatch),
   };
 }
-
-List.propTypes = {
-  products: PropTypes.shape([]).isRequired,
-  actions: PropTypes.shape({
-    getProducts: PropTypes.func.isRequired,
-  }).isRequired,
-};
 
 export default connect(mapStateToProps, mapDispatchToProps)(List);

@@ -5,10 +5,8 @@ import configureStore from './configureStore';
 // import Header from './components/Header';
 import List from './components/List';
 import './App.css';
-import getProducts from './actions/marketActions';
 
 const store = configureStore();
-store.dispatch(getProducts());
 
 function App() {
   return (
