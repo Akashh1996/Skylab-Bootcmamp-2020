@@ -11,8 +11,9 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: 170px;
-    padding: 0 40px;
+    margin-top: 90px;
+    padding: 40px 40px;
+    position: relative;
 }
 
 .saber-wrapper {
@@ -29,14 +30,16 @@
 }
 
 .saber-wrapper:hover .saber-title {
-    letter-spacing: 5px;
+    letter-spacing: 6px;
 }
 
 .saber-title {
+    margin-top: 10px;
     font-family: 'Star Jedi';
-    font-size: 20px;
-    font-weight: 500;
-    color: rgb(228, 228, 228);
+    font-size: 25px;
+    font-weight: 800;
+    color: rgb(26, 26, 26);
+    -webkit-text-stroke: 1px rgb(232, 232, 232);
     text-decoration: none;
     letter-spacing: 2px;
     border: none;
@@ -44,7 +47,7 @@
 }
 
 .saber-image {
-    width: 390px;
+    width: 350px;
     height: auto;
     border-radius: 30px;
     box-shadow: 4px 4px 5px rgb(28, 28, 28);
