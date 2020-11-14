@@ -21,6 +21,7 @@ function PokeList() {
 	}, [list]);
 
 	return (
+		//llamar a getpokemondetail con el name..
 		<>
 			{list &&
 				list.map((pokemon) => (
@@ -33,9 +34,3 @@ function PokeList() {
 }
 
 export default PokeList;
-
-/*
-`<li><a href="../detail/detail.html?pokeName=${pokemon.name}">
-                                    ${pokemon.name}
-								</a></li>`;
-								*/

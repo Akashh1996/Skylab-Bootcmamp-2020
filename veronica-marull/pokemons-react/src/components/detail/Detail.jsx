@@ -12,7 +12,7 @@ function Detail() {
 	useEffect(() => {
 		pokeStore.addEventListener(handleChange);
 		if (!detail) {
-			pokemonsDetail();
+			pokemonsDetail(name);
 		}
 		return () => {
 			pokeStore.removeEventListener(handleChange);
