@@ -6,6 +6,7 @@ function sayHi(name = 'Cunt') {
 module.exports = sayHi;
 
 function dynamicArgs(...args) {
+  // eslint-disable-next-line no-console
   console.log(args);
 }
 

@@ -1,3 +1,4 @@
+const { default: Axios } = require('axios');
 const express = require('express');
 const heroes = require('../api/heroes.json');
 const heroRouter = express.Router();
@@ -7,10 +8,10 @@ function routes() {
 		res.send(heroes);
 	});
 	heroRouter.route('/').post((req, res) => {
-		const newHero = {
-			id: 22,
-			name: 'Clitoria'
-		};
+		const {heroname, heroid} =req.headers
+		const newHero={
+			name: heroname, id: heroid
+		}
 		heroes.push(newHero);
 		res.send(heroes);
 	});
@@ -24,13 +25,18 @@ function routes() {
 		res.status(200);
 		res.send(heroes);
 	});
-	heroRouter.route(`/heroes/:heroId`).get((req, res) => {
-		const findHero = heroId;
-		heroes.find((i) => i.id === findHero);
-		res.send(findHero);
-	});
+	
+	heroRouter.route("/:heroId").get((req,res)=>{
+        console.log(req);
+        const{heroId} = req.params
+        const index = heroes.findIndex((hero)=> hero.id === +heroId)
+        console.log(index);
+        const heroDetail = heroes[index]
+        res.send(heroDetail)
+     })
 
 	return heroRouter;
 }
 
 module.exports = routes();
+
