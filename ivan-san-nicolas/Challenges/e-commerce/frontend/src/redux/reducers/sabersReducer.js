@@ -8,7 +8,7 @@ export default function sabersReducer(state = {}, action) {
     }
     case actionTypes.LOAD_SABERS_ERROR: {
       console.log(action.error);
-      break;
+      return state;
     }
     case actionTypes.LOAD_SABER:{
       const saber = { ...state, saberItem: action.saberItem }
@@ -16,7 +16,7 @@ export default function sabersReducer(state = {}, action) {
     }
     case actionTypes.LOAD_SABER_ERROR: {
       console.log(action.error);
-      break;
+      return state;
     }
     default:
       return state;
