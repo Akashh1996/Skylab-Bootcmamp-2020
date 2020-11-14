@@ -1,17 +1,11 @@
-/* eslint-disable no-console */
 const express = require('express');
 const chalk = require('chalk');
 const debug = require('debug')('app*');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const morgan = require('morgan');
-const Product = require('./src/stores/productStore');
-const productRouter = require('./src/routes/productsRouter')(Product);
 
 const app = express();
 const port = process.env.PORT || 5000;
-
-app.use(morgan('tiny'));
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -21,7 +15,11 @@ app.get('/', (req, res) => {
   res.send('It works');
 });
 
+const productRouter = require('./src/routes/productsRouter')();
+const basketRouter = require('./src/routes/basketRouter')();
+
 app.use('/list', productRouter);
+app.use('/basket', basketRouter);
 
 app.listen(port, () => {
   // eslint-disable-next-line no-console

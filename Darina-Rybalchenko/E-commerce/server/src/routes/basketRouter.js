@@ -1,24 +1,30 @@
-/* eslint-disable no-console */
 const express = require('express');
-
-const productRouter = express.Router();
 const products = require('../../api/products.json');
 
+const basketRouter = express.Router();
+const productsBasket = [];
+
 function routes() {
-  productRouter
+  basketRouter
     .route('/')
     .get((req, res) => {
       res.status(200);
-      res.json(products);
+      res.json(productsBasket);
     });
-  productRouter
+  basketRouter
     .route('/:productId')
-    .get((req, res) => {
+    .post((req, res) => {
       const product = products.find((element) => element.id === +req.params.productId);
+      productsBasket.push(product);
       res.status(200);
-      res.send(product);
     });
-  return productRouter;
+  basketRouter
+    .route('/:productId')
+    .delete((req, res) => {
+      res.status(200);
+      res.json(productsBasket);
+    });
+  return basketRouter;
 }
 
 module.exports = routes;

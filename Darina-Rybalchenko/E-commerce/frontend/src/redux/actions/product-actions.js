@@ -19,14 +19,11 @@ function requestProductsError(productsListError) {
 }
 
 export default function requestProducts() {
-    debugger;
   return async (dispatch) => {
-      debugger;
     const endpoint = 'http://localhost:5000/list';
     try {
-        debugger;
       const productList = await axios.get(endpoint);
-      debugger;
+
       dispatch(requestProductsSuccess(productList.data));
     } catch (error) {
       dispatch(requestProductsError(error));
