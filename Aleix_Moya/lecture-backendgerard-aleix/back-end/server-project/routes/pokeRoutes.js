@@ -22,6 +22,7 @@ function routes() {
 		.post((req, res) => {
 			console.log('Recieving post');
 		});
+		
 
 	pokeRouter.route('/:pokeid');
 	return pokeRouter;
