@@ -24,7 +24,22 @@ function routes() {
       products.filter((productFilter) => productFilter.id !== newProduct.id);
       res.status(200);
       res.send(products);
+    })
+    .patch((req, res) => {
+      const { id, newName } = req.query;
+      const index = products.findIndex((product) => product.id === +id);
+      products[index].name = newName;
+      res.send(products);
     });
+  productRouter.route('/:productId').get((req, res) => {
+    console.log(req);
+    const { productId } = req.params;
+    const index = products.findIndex((hero) => hero.id === +productId);
+    console.log(index);
+    const heroDetail = products[index];
+    res.send(heroDetail);
+  });
+
   return productRouter;
 }
 module.exports = routes;
