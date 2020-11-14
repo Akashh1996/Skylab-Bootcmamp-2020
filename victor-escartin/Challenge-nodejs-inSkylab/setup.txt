@@ -1,0 +1,8 @@
+START NODE
+npm init --yes
+
+EXPRESS
+npm i express
+
+NODEMON
+npm i nodemon

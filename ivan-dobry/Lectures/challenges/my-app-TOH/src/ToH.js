@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroesList from './HeroesList';
+import HeroesList from '../../node-heroes/Frontend/hero-app/src/HeroesList';
 
 function TourOfHeroes() {
 	const heroes = [
