@@ -1,0 +1,180 @@
+[
+  {
+    "product-name":"ARCHON",
+    "product-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/7af47a39217aed67c1f280b5f80ed3d4/archon-4_1296x.jpg",
+    "product-black-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/84c06ec88e4e64545f2991a2beb80187/archon-v2_1296x.jpg",
+    "product-url":"https://saber-forgers.web.app/anchor",
+    "product-price":149,
+    "product-description":"The Archon blends form and function with subtle grace. The gorgeous brushed shrouds feature highly detailed machining, and the anodized black body provides a beautiful accent.",
+    "colors":["standart","black"],
+    "product-specifications":{
+      "length":"14” (35.5 cm)",
+      "diameter":"",
+      "inner-diameter":"1”",
+      "weight":"14.4 oz",
+      "blade-socket":"Standart",
+      "belt Clip Type":"D Ring + Covertech Knob",
+      "finish":"Black Anodized/Brushed Silver/Chrome",
+      "material":"CNC precision machined Aluminum"
+    }
+  },
+  {
+    "product-name":"ARES",
+    "product-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/ba0f2950a7304f053864a24bbeabe217/ares_1296x.jpg",
+    "product-black-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/5f930285a742b15aeacce6748b65b48c/ares-v3_52af94ef-09d7-42a7-b805-f938252fe544_1296x.jpg",
+    "product-url":"https://saber-forgers.web.app/ares",
+    "product-price":299,
+    "product-description":"The Crystal Ares features a crystal chamber reveal function. Twist the saber and it will open to reveal a quartz energy crystal. It features a hyper durable one piece crystal chamber, detailed crystal holder, and an imported quartz crystal. Showcasing the high level of detail one would expect of a cinema quality prop.",
+    "colors":["standart","black"],
+    "product-specifications":{
+      "Blade Socket Type":"Standart",
+      "Blade Socket Diameter":"1 inch",
+      "Belt Clip Type":"Covertech Knob",
+      "Black anodized":"brushed silver finish",
+      "blade-socket":"Standart",
+      "belt Clip Type":"D Ring + Covertech Knob",
+      "finish":"Black Anodized/Brushed Silver/Chrome",
+      "material":"CNC precision machined aluminium"
+    }
+  },
+  {
+    "product-name":"EMERALD KNIGHT",
+    "product-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/e0b70688d93e18fd66d504ece97ee453/eknight-1_1296x.jpg",
+    "product-black-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/ddd79260b82737d0cba3c65c2d8cb70a/eknight2_1296x.jpg",
+    "product-url":"https://saber-forgers.web.app/emeraldknight",
+    "product-price":149,
+    "product-description":"The Emerald Knight is designed to look like a re-purposed speeder bike handle. The body features a shrouded knurled grip, with activation buttons situated like a speeders acceleration and deceleration controls. Knobs on the emitter simulate elevation controls re-purposed as blade extension controls.",
+    "colors":["standart","black"],
+    "product-specifications":{
+      "Length":"11” (27.94 cm)",
+      "Diameter":"",
+      "Inner Diameter":"1” (2.54 cm)",
+      "Weight":"12.8 oz",
+      "Blade Socket":"Standart",
+      "Socket Size":"1” (2.54 cm)",
+      "Belt Clip Type":"Covertech Knob",
+      "finish":"Black & Silver Anodized/Brushed Silver",
+      "material":"CNC precision machined Aluminum"
+    }
+  },
+  {
+    "product-name":"RENEGADE",
+    "product-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/9ee8d2f8996bfba943a9deb075792de1/renegade-v1_1296x.jpg",
+    "product-black-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/f5acf36b2ae2091a3a442d67772ff483/renegade-5_5b2cad33-d4b7-4b02-9d74-7d7b0c7b2a00_1296x.jpg",
+    "product-url":"https://saber-forgers.web.app/renegade",
+    "product-price":149,
+    "product-description":"The focal point of the hilt is an ergonomic knurled grip, a gorgeous blade shroud provide a vibrant contrast to the sleek design.",
+    "colors":["standart","black"],
+    "product-specifications":{
+      "Length":"10.8” (27.4 cm)",
+      "Diameter":"1.35” (3.4 cm)",
+      "Inner Diameter":"1” (2.54 cm)",
+      "Weight":".82 oz",
+      "Blade Socket":"Standart",
+      "Socket Size":"1” (2.54 cm)",
+      "Belt Clip Type":"Covertech Knob",
+      "finish":"Black Anodized/Brushed silver",
+      "material":"CNC precision machined Aluminum"
+    }
+  },
+  {
+    "product-name":"UNLEASHED",
+    "product-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/6c7cbf2684bf03c5abf7484433fbf19c/unleashed1_1296x.jpg",
+    "product-black-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/da7a62b41b2270128d0acdf4b500f742/DSC_0020_5834cfe3-9fcd-4dcc-b4a1-141847918e91_1296x.JPG",
+    "product-url":"https://saber-forgers.web.app/unleashed",
+    "product-price":249,
+    "product-description":"The Unleashed features four grips. The upper portion of the saber has a stationary crystal chamber, which is the focal point of this gorgeous saber. A genuine quartz crystal matches the blades color. The highly detailed crystal chamber is protected by a silver shroud that features bunny ears, an activation box, and brass pins.",
+    "colors":["standart","black"],
+    "product-specifications":{
+      "Length":"10.8” (27.4 cm)",
+      "Diameter":"1.35” (3.4 cm)",
+      "Inner Diameter":"1” (2.54 cm)",
+      "Weight":".82 oz",
+      "Blade Socket":"Standart",
+      "Socket Size":"1” (2.54 cm)",
+      "Belt Clip Type":"Covertech Knob",
+      "finish":"Black anodized/brushed silver finish",
+      "material":"CNC precision machined Aluminum"
+    }
+  },
+  {
+    "product-name":"COMMANDO",
+    "product-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/7745257eccf90456f1fb38151f2d0bd4/commando-4_1296x.jpg",
+    "product-black-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/7cd214bcac368a9ed6ff630c410469f3/b01_da388342-98ff-4bf0-bece-c4ea07cd71fd_1296x.jpg",
+    "product-url":"https://saber-forgers.web.app/commando",
+    "product-price":149,
+    "product-description":"The Commando was designed around its ergonomic flat profile shape. The body features lathed and milled details with indexing rings for proper grip placement. Oval emitter windows mirror the details on the sabers body and switch section and provide a striking and aggressive accent.",
+    "colors":["standart","black"],
+    "product-specifications":{
+      "Length":"13.2” (33.5 cm)",
+      "Diameter":"1.35” (3.4 cm)",
+      "Inner Diameter":"1” (2.54 cm)",
+      "Weight":"14.4 oz",
+      "Blade Socket":"Standart",
+      "Socket Size":"1” (2.54 cm)",
+      "Belt Clip Type":"Covertech Knob",
+      "finish":"Black Anodized/Brushed Silver",
+      "material":"CNC precision machined Aluminum"
+    }
+  },
+  {
+    "product-name":"RELIC",
+    "product-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/6130d7c5629d797ba667c4f131e4530d/relic-4_1296x.jpg",
+    "product-black-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/5e0f9d58a472c8fe79a902fc0fa3fcb2/b01_d74b1b99-1d8f-447a-81c2-db3434f84e9b_1296x.jpg",
+    "product-url":"https://saber-forgers.web.app/relic",
+    "product-price":299,
+    "product-description":"The Relic  is a cross guard style that uses side blades to protect hands and arms from strikes, they also function as an unexpected offensive weapon in binds and lock ups. This particular hilt features menacing claws and crown style windowed emitters. The grenade style grip provides a secure purchase for a two handed grip and the mace style pommel acts as a counterweight to the cross guard. Hero tier Relic sabers feature a staggered blade ignition. When you turn the saber on the main blade ignites then after a short delay the side blades ignite.",
+    "colors":["standart","black"],
+    "product-specifications":{
+      "Length":"13.2” (33.5 cm)",
+      "Diameter":"1.35” (3.4 cm)",
+      "Inner Diameter":"1” (2.54 cm)",
+      "Weight":"14.4 oz",
+      "Blade Socket":"Standart",
+      "Socket Size":"1” (2.54 cm)",
+      "Belt Clip Type":"Covertech Knob",
+      "finish":"Black anodized/brushed silver finish",
+      "material":"CNC precision machined aluminium"
+    }
+  },
+  {
+    "product-name":"Temple Guard",
+    "product-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/2560dd23aa9dfdf708ee95d8b94478e0/templar-4_1296x.jpg",
+    "product-black-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/fcddbdf8f3e9ca91315c907abe76308d/templar-v2_3a18a508-a472-478c-8275-b3bbf18c8bae_1296x.jpg",
+    "product-url":"https://saber-forgers.web.app/templeguard",
+    "product-price":199,
+    "product-description":"From the lost sanctuaries of the ancient order comes the Temple Guard Battle Staff. This is a weapon from the age of heroes and titans. This saber is constructed from precision machined components designed by our master blade smiths. It is assembled with care at our workshop in Oregon. The new Battle Staff series features a low profile and ergonomic battle staff design. Warrior/Veteran/Champion features one full set of electronics and an additional switch that controls the second emitters LED. Warrior/Veteran/Champion all include in hilt recharge. As always Initiate tier is for the hilt only and does not include electronics. While its important to note that all fencing styles vary and there are exceptions to every rule, as a general guideline if you are wielding a staff this chart will help you select blade sizes.",
+    "colors":["standart","black"],
+    "product-specifications":{
+      "Length":"26.4” (67 cm)",
+      "Diameter":"1.35” (3.4 cm)",
+      "Inner Diameter":"1” (2.54 cm)",
+      "Weight":"14.4 oz",
+      "Blade Socket":"Standart",
+      "Socket Size":"1” (2.54 cm)",
+      "Belt Clip Type":"Covertech Knob",
+      "finish":"Black anodized/brushed silver finish",
+      "material":"CNC precision machined aluminium"
+    }
+  },
+  {
+    "product-name":"MALEVOLENT",
+    "product-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/27c6bf3d9b6743358bef63a0b667c5ed/malevolent-1_80bb7033-83a0-4552-ac06-eceeb445c32d_1296x.jpg",
+    "product-black-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/d39251a59fc5675d0f8e971b31a07279/malevolent-5_95f02b13-9bf9-428d-bfba-69b7f135a67e_1296x.jpg",
+    "product-url":"https://saber-forgers.web.app/malevolent",
+    "product-price":199,
+    "product-description":"From the pyramids of the fallen empire comes the Malevolence Battle Staff. This is a weapon from the age of heroes and titans. This saber is constructed from precision machined components designed by our master blade smiths. It is assembled with care at our workshop in Oregon. The new Battle Staff series features a low profile and ergonomic battle staff design. Warrior/Veteran/Champion features one full set of electronics and an additional switch that controls the second emitters LED. Warrior/Veteran/Champion all include in hilt recharge. As always Initiate tier is for the hilt only and does not include electronics. While its important to note that all fencing styles vary and there are exceptions to every rule, as a general guideline if you are wielding a staff this chart will help you select blade sizes. ",
+    "colors":["standart","black"],
+    "product-specifications":{
+      "Length":"26.4” (67 cm)",
+      "Diameter":"1.35” (3.4 cm)",
+      "Inner Diameter":"1” (2.54 cm)",
+      "Weight":"14.4 oz",
+      "Blade Socket":"Standart",
+      "Socket Size":"1” (2.54 cm)",
+      "Belt Clip Type":"Covertech Knob",
+      "finish":"Black anodized/brushed silver finish",
+      "material":"CNC precision machined aluminium"
+    }
+  }
+]
