@@ -18,13 +18,13 @@ function HeroListComponents({ heroes, actions }) {
           <button type="button">DEL</button>
         </span>
         <span>
-          {(!heroes || !heroes.length) && (
+          <button type="button" onClick={() => actions.loadHeroes()}>Load</button>
+          {/* {(!heroes || !heroes.length) && (
           <div>
             <h2>No heroes availables!</h2>
-            <button type="button" onClick={() => actions.loadHeroes()}>Load</button>
           </div>
           ) }
-          {heroes && heroes.length > 0 && heroes.map((hero) => <li key={hero}>{hero.name}</li>)}
+          {heroes && heroes.length > 0 && heroes.map((hero) => <li key={hero}>{hero.name}</li>)} */}
         </span>
       </div>
     </>
@@ -38,13 +38,15 @@ HeroListComponents.propTypes = {
   }).isRequired,
 };
 
-function mapStateToProps(state) {
+function mapStateToProps({ heroReducer }) {
+  debugger;
   return {
-    heroes: state.heroesList,
+    heroes: heroReducer,
   };
 }
 
 function mapDispatchToProps(dispatch) {
+  debugger;
   return {
     actions: bindActionCreators(loadHeroes, dispatch),
   };
