@@ -169,7 +169,7 @@ class Product {
     return products.find((product) => product.id === productId);
   }
 
-  static seProduct(newProduct) {
+  static setProduct(newProduct) {
     products = products.map((product) => {
       if (product.id === newProduct.id) {
         return newProduct;
