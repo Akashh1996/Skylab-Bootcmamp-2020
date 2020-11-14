@@ -1,16 +1,21 @@
-import axios from 'axios';
+const fetch = require('node-fetch');
 
 let products = null;
 let cart = [];
 
 async function loadProducts() {
-  products = await axios.get('../../public/products.json');
-  return products;
+  try {
+    const response = await fetch('/public/heroes.json');
+    products = await response.json();
+    return products;
+  } catch (error) {
+    return `This is an error ${error}`;
+  }
 }
 
 class Product {
   static getProducts() {
-    return loadProducts();
+    return loadProducts().then(products);
   }
 
   static getProductById(productId) {
