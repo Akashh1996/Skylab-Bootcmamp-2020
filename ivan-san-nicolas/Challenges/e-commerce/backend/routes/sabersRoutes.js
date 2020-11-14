@@ -10,6 +10,13 @@ function routes() {
       res.status(200);
       res.send(sabers);
     });
+
+  sabersRouter.route('/detail/:saberName').get((req,res) => {
+    const saberName = req.params.saberName;
+    const saber = sabers.find((findingSaber) => findingSaber["product-name"] === saberName);
+    res.status(200);
+    res.send(saber);
+  });
   return sabersRouter;
 }
 
