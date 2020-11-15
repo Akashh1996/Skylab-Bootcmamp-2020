@@ -1,0 +1,105 @@
+.saber__detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 150px;
+}
+
+.saber__detail__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-left: 50px;
+}
+
+#saber__detail__image {
+    width: 80%;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 4px 4px 5px rgb(29, 29, 29);
+    transition: transform 0.5s;
+}
+
+#saber__detail__image:hover {
+    transform: scale(1.05);
+}
+
+.saber__detail__properties {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.saber__detail__properties__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    color: black;
+    background-color: aliceblue;
+    border-radius: 3px;
+    box-shadow: 4px 4px 5px rgb(29, 29, 29);
+}
+
+.saber__detail__properties__name {
+    display: flex;
+    justify-content: space-between ;
+    width: 80%;
+}
+
+.saber__detail__properties__specifications {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.specifications-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+}
+
+.even-row {
+    background-color: wheat;
+}
+
+.odd-row {
+    background-color: rgb(179, 216, 245);
+}
+
+.saber__detail__colorButtons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    background-color: rgb(179, 216, 245);
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.saber__detail__colorButtons__button {
+    border-radius: 10px ;
+    padding:8px 30px;
+    cursor: pointer;
+}
+
+.silver-button {
+    color: black;
+    background-color: silver;
+}
+
+.black-button {
+    color: white;
+    background-color: black;
+}
