@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import PokeList from './components/list/PokeList';
 import Detail from './components/detail/Detail';
+import Header from './components/Header';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -10,8 +11,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 ReactDOM.render(
 	<React.StrictMode>
+		<Header />
 		<BrowserRouter>
 			<Switch>
+				<Route path="/" exact component={Header} />
 				<Route path="/" exact component={PokeList} />
 				<Route path="/pokemon/:pokeName" component={Detail} />
 			</Switch>
