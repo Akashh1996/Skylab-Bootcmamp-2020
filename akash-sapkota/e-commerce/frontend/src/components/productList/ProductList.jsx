@@ -27,7 +27,7 @@ function ProductList({ productList, dispatch }) {
 
 ProductList.propTypes = {
   productList: PropTypes.shape([]).isRequired,
-  dispatch: PropTypes.shape().isRequired,
+  dispatch: PropTypes.shape({}).isRequired,
 };
 
 function mapStateToProps(state) {
@@ -41,6 +41,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators({}, dispatch),
+    dispatch,
   };
 }
 export default connect(mapStateToProps, mapDispatchToProps)(ProductList);
