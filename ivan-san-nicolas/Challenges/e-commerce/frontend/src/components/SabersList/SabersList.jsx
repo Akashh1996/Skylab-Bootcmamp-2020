@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
-import { requestSabers } from '../../redux/actions/SabersActions';
+import { requestSabers } from '../../redux/actions/sabersActions';
 import './css/SabersList.css';
 
 function SabersList({ sabersList, dispatch }) {
