@@ -15,7 +15,13 @@ function ListProduct({ products, dispatch }) {
     <div>
       <h1>Asus Market</h1>
       <section>
-        {products && products.map((product) => <ListCreateProduct data={product} />)}
+        {products && products.map((product) => (
+          <ListCreateProduct
+            onAddToCartClicked={() => addToCart(product.id)}
+            data={product}
+            key={product.id}
+          />
+        ))}
       </section>
     </div>
   );

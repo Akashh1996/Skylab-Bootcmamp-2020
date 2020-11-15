@@ -22,7 +22,7 @@ function DetailProduct({ productDetail, dispatch }) {
       debugger;
       dispatch.getDetailProduct(id);
     }
-  }, [id]);
+  }, []);
 
   return (
     <>
@@ -53,6 +53,7 @@ function DetailProduct({ productDetail, dispatch }) {
             {currentDetailData.price}
           </span>
         </div>
+        <button type="button">add</button>
       </>
       )}
     </>
