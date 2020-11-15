@@ -7,6 +7,7 @@ import { PropTypes } from 'prop-types';
 import Image from 'react-bootstrap/Image';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 import { requestProductDetail } from '../../redux/actions/product-actions';
 
 function ProductDetail({ match, product, dispatch }) {
@@ -33,7 +34,14 @@ function ProductDetail({ match, product, dispatch }) {
               {product && product.price}
               €
             </Card.Text>
-            <Button variant="secondary">Add to basket</Button>
+            <Button
+              as={Link}
+              to="/basket"
+              variant="secondary"
+            >
+              Add to basket
+
+            </Button>
           </Card.Body>
         </Card>
       </main>

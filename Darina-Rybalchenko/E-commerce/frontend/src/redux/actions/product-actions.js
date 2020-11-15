@@ -16,6 +16,21 @@ function requestProductDetailSuccess(product) {
     product,
   };
 }
+
+function requestBasketSuccess(basket) {
+  return {
+    type: actionTypes.LOAD_BASKET,
+    basket,
+  };
+}
+
+function loadProductBasketSuccess(productBasket) {
+  return {
+    type: actionTypes.LOAD_PRODUCT_BASKET,
+    productBasket,
+  };
+}
+
 function requestProductsError(productsListError) {
   return {
     type: actionTypes.LOAD_PRODUCT_ERROR,
@@ -44,6 +59,34 @@ export function requestProductDetail(product) {
       debugger;
       const productId = await axios.get(endpoint);
       dispatch(requestProductDetailSuccess(productId.data));
+    } catch (error) {
+      dispatch(requestProductsError(error));
+    }
+  };
+}
+
+export function requestBasket() {
+  debugger;
+  return async (dispatch) => {
+    const endpoint = 'http://localhost:5000/basket';
+    try {
+      debugger;
+      const basket = await axios.get(endpoint);
+      dispatch(requestBasketSuccess(basket.data));
+    } catch (error) {
+      dispatch(requestProductsError(error));
+    }
+  };
+}
+
+export function loadProductBasket(productBasket) {
+  debugger;
+  return async (dispatch) => {
+    const endpoint = `http://localhost:5000/basket/${productBasket}`;
+    try {
+      debugger;
+      const productIdBasket = await axios.post(endpoint);
+      dispatch(loadProductBasketSuccess(productIdBasket.data));
     } catch (error) {
       dispatch(requestProductsError(error));
     }

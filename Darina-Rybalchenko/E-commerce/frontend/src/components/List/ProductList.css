@@ -16,6 +16,7 @@
 }
 
 .product-card {
+    height: 320px;
 	margin: auto;
 	margin-right: 40px;
     border-radius: 8px;
@@ -26,5 +27,5 @@
     text-decoration:none;
 }
 .card-img-top.product-img {
-    width: 150px;
+    width: 10vw;
 }

@@ -40,7 +40,14 @@ function ProductList({ productsList, dispatch }) {
                     {product.price}
                     €
                   </Card.Text>
-                  <Button variant="secondary">Add to basket</Button>
+                  <Button
+                    as={Link}
+                    to="/basket"
+                    variant="secondary"
+                  >
+                    Add to basket
+
+                  </Button>
                 </Card.Body>
               </Card>
 
