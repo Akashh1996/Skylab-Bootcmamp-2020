@@ -45,4 +45,8 @@
     .footer__robot-image{
         width: 100%;
     }
+
+    .footer__contact {
+    padding: 30px 0;
+    }
 }

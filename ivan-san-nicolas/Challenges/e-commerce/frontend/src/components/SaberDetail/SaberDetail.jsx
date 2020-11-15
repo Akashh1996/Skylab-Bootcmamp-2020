@@ -44,7 +44,8 @@ function SaberDetail({ saberItem, dispatch, match }) {
         <>
                 {saberItem ? (saberItem["product-name"] ? (
                     <section className="saber__detail">
-                        <section className="saber__detail__image">
+                        <section className="saber__detail__firstRow">
+                            <section className="saber__detail__image">
                             {saberImage === saberImageBlack ? (
                                 <img src={saberImageBlack} 
                                 alt={saberItem["product-name"]} id="saber__detail__image"/>
@@ -54,7 +55,8 @@ function SaberDetail({ saberItem, dispatch, match }) {
                                 )
                             } 
                         </section>
-                        <section className="saber__detail__properties">
+                            <section className="saber__detail__options">
+                            <section className="saber__detail__properties">
                             <section className="saber__detail__properties__text">
                                 <div className="saber__detail__properties__name">
                                     <p >{saberItem["product-name"]}</p>
@@ -82,9 +84,11 @@ function SaberDetail({ saberItem, dispatch, match }) {
                                 <button type="button" className="saber__detail__colorButtons__button silver-button" onClick={()=> changeColorToSilver(setSaberImage, saberImageSilver, setActualColor, silverColor)}>Silver</button>
                                 <button type="button" className="saber__detail__colorButtons__button black-button" onClick={()=> changeColorToBlack(setSaberImage, saberImageBlack, setActualColor, blackColor)}>Black</button>
                             </section>
-                            <section className="saber__detail__addToCart">
-                                <button type="button" className="addToCart-button" onClick={()=> addToCart(addProductToCart, saberItem["product-name"], actualColor)}>Add to cart</button>
                             </section>
+                        </section>
+                        </section>
+                        <section className="saber__detail__addToCart">
+                            <button type="button" className="addToCart-button" onClick={()=> addToCart(addProductToCart, saberItem["product-name"], actualColor)}>Add to cart</button>
                         </section>
                     </section>
                 ) : (

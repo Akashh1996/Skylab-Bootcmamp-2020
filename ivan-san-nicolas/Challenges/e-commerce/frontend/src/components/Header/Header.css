@@ -58,7 +58,8 @@
 }
 
 @media (max-width: 768px) {
-    .header__logo {
+    .header__logo,
+    .header__login__text {
         display: none;
     }
 
@@ -66,4 +67,8 @@
         justify-content: flex-end;
         width: 45%;
     }
+}
+
+@media (max-width: 544px) {
+
 }

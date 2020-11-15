@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { requestSabers } from '../../redux/actions/sabersActions';
+import FirstRow from './FirstRow/FirstRow';
 import './css/SabersList.css';
 
 function SabersList({ sabersList, dispatch }) {
@@ -17,8 +18,10 @@ function SabersList({ sabersList, dispatch }) {
   return (
     <>
         {sabersList?.length > 0 ? (
-        <>
-            <ul className="sabersList-section">
+          <div className="sabersList-section">
+              <FirstRow />
+              <h1 className="sabersList-section__sabers__title">Sabers</h1>
+            <ul className="sabersList-section__sabers">
                 {
                 sabersList.map((saber) => {
                     return (
@@ -26,7 +29,7 @@ function SabersList({ sabersList, dispatch }) {
                         <Link to={`/sabers/${saber["product-name"]}`} style={{ textDecoration: 'none' }}>
                           <p className="saber-title">{saber['product-name']}</p>
                         </Link>
-                        <Link to={`/sabers/${saber["product-name"]}`}>
+                        <Link to={`/sabers/${saber["product-name"]}`} className="saber-image__link">
                           <img className="saber-image" src={saber['product-image-url']} alt="saber-img"></img>
                         </Link>
                       </li>
@@ -34,7 +37,7 @@ function SabersList({ sabersList, dispatch }) {
                 })
                 }
             </ul>
-        </>
+        </div>
         ) : (
           <div className="sabersList-loading-screen">
             <h1>Loading...</h1>

@@ -18,7 +18,7 @@ function Header() {
                 </Link>
             </section>
             <section className="header__login">
-                <span>Login</span>
+                <span className="header__login__text">Login</span>
                 <img src="https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/95216924a158aa3fa65105c1247d9e93/icons8-male-user-48.png"
                 alt="login-icon" id="header__login__image"/>
             </section>
