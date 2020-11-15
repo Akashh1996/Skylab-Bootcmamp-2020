@@ -1,5 +1,6 @@
+/* eslint-disable no-console */
 /* eslint-disable no-debugger */
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './ProductDetail.css';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -7,16 +8,15 @@ import { PropTypes } from 'prop-types';
 import Image from 'react-bootstrap/Image';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
-import { requestProductDetail } from '../../redux/actions/product-actions';
+/* import axios from 'axios'; */
+import { loadProductBasket, requestProductDetail } from '../../redux/actions/product-actions';
 
 function ProductDetail({ match, product, dispatch }) {
-  const [id] = useState(match.params.productId);
+  const id = match.params.productId;
+
   useEffect(() => {
-    if (id) {
-      dispatch(requestProductDetail(+id));
-    }
-  }, [id, dispatch]);
+    dispatch.requestProductDetail(+id);
+  }, []);
 
   return (
     <>
@@ -35,8 +35,8 @@ function ProductDetail({ match, product, dispatch }) {
               €
             </Card.Text>
             <Button
-              as={Link}
-              to="/basket"
+              onClick={loadProductBasket(id)}
+              className="product-title"
               variant="secondary"
             >
               Add to basket
@@ -55,11 +55,11 @@ ProductDetail.propTypes = {
     'product-name': PropTypes.string.isRequired,
     'product-image-url': PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-
   }).isRequired,
 
   dispatch: PropTypes.shape({
     requestProductDetail: PropTypes.func.isRequired,
+    loadProductBasket: PropTypes.func.isRequired,
   }).isRequired,
 
   match: PropTypes.shape({
@@ -70,14 +70,13 @@ ProductDetail.propTypes = {
 };
 
 function mapStateToProps({ productReducer }) {
-  debugger;
-  return { product: productReducer.productId };
+  return { product: productReducer.product };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators({ }, dispatch),
-    dispatch,
+    dispatch: bindActionCreators({ requestProductDetail, loadProductBasket }, dispatch),
+
   };
 }
 

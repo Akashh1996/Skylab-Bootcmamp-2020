@@ -14,7 +14,6 @@ function routes() {
   productRouter
     .route('/:productId')
     .get((req, res) => {
-      console.log(req.params);
       const product = products.find((element) => element.id === +req.params.productId);
       res.status(200);
       res.send(product);

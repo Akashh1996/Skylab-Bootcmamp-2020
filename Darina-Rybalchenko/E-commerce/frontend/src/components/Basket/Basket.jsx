@@ -1,29 +1,27 @@
-import React from 'react';
+/* eslint-disable no-console */
+/* eslint-disable no-debugger */
+import React, { useEffect } from 'react';
 import './Basket.css';
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { PropTypes } from 'prop-types';
+import { requestBasket } from '../../redux/actions/product-actions';
 
-const product = {
-  id: 1,
-  'product-name': "MEN'S BETTER THAN NAKED&trade; JACKET",
-  'product-image-url': 'http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/mens-better-than-naked-jacket-AVMH_LC9_hero.png',
-  'header-top-right-text': 'Shop All',
-  'header-top-left-text': "Men's",
-  'product-url': 'http://www.thenorthface.com/catalog/sc-gear/men-39-s-better-than-naked-8482-jacket.html',
-  'header-top-right-url': 'http://www.thenorthface.com/en_US/shop-mens/',
-  price: 10,
-};
-
-function Basket() {
+function Basket({ basket, dispatch }) {
+  useEffect(() => {
+    dispatch.requestBasket();
+  }, []);
   return (
     <Card>
       <Card.Body>
-        <Image src={product['product-image-url']} rounded />
-        <Card.Title>{product['product-name']}</Card.Title>
+        <Image src={basket && basket[0]['product-image-url']} rounded />
+        <Card.Title>{basket && basket[0]['product-name']}</Card.Title>
         <Card.Text>
           Price:
-          {product.price}
+          {basket && basket[0].price}
           €
         </Card.Text>
         <Button variant="secondary">Delete from basket</Button>
@@ -32,5 +30,36 @@ function Basket() {
 
   );
 }
+Basket.propTypes = {
+  basket: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    'product-name': PropTypes.string.isRequired,
+    'product-image-url': PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
 
-export default Basket;
+  }).isRequired,
+
+  dispatch: PropTypes.shape({
+    requestBasket: PropTypes.func.isRequired,
+  }).isRequired,
+
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      productId: PropTypes.string.isRequired,
+    }),
+  }).isRequired,
+};
+
+function mapStateToProps({ productReducer }) {
+  console.log(productReducer.basket);
+  return { basket: productReducer.basket };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatch: bindActionCreators({ requestBasket }, dispatch),
+
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Basket);

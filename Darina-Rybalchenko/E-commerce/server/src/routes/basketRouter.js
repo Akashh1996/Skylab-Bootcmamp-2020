@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const express = require('express');
 const products = require('../../api/products.json');
 
@@ -21,11 +22,11 @@ function routes() {
   basketRouter
     .route('/:productId')
     .delete((req, res) => {
-      const productIndex = products.indexOf(products.find(
+      const productIndex = productBasket.indexOf(products.find(
         (product) => product.id === +req.params.productId,
       ));
       if (productIndex > -1) {
-        products.splice(productIndex, 1);
+        productBasket.splice(productIndex, 1);
       }
       res.status(200);
       res.json(productIndex);

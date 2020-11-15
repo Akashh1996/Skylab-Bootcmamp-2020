@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-debugger */
 /* eslint-disable indent */
 import axios from 'axios';
@@ -24,13 +25,6 @@ function requestBasketSuccess(basket) {
   };
 }
 
-function loadProductBasketSuccess(productBasket) {
-  return {
-    type: actionTypes.LOAD_PRODUCT_BASKET,
-    productBasket,
-  };
-}
-
 function requestProductsError(productsListError) {
   return {
     type: actionTypes.LOAD_PRODUCT_ERROR,
@@ -51,12 +45,10 @@ export function requestProducts() {
   };
 }
 
-export function requestProductDetail(product) {
-  debugger;
+export function requestProductDetail(id) {
   return async (dispatch) => {
-    const endpoint = `http://localhost:5000/list/${product}`;
+    const endpoint = `http://localhost:5000/list/${id}`;
     try {
-      debugger;
       const productId = await axios.get(endpoint);
       dispatch(requestProductDetailSuccess(productId.data));
     } catch (error) {
@@ -66,11 +58,9 @@ export function requestProductDetail(product) {
 }
 
 export function requestBasket() {
-  debugger;
   return async (dispatch) => {
     const endpoint = 'http://localhost:5000/basket';
     try {
-      debugger;
       const basket = await axios.get(endpoint);
       dispatch(requestBasketSuccess(basket.data));
     } catch (error) {
@@ -79,14 +69,11 @@ export function requestBasket() {
   };
 }
 
-export function loadProductBasket(productBasket) {
-  debugger;
+export function loadProductBasket(id) {
   return async (dispatch) => {
-    const endpoint = `http://localhost:5000/basket/${productBasket}`;
+    const endpoint = `http://localhost:5000/basket/${id}`;
     try {
-      debugger;
-      const productIdBasket = await axios.post(endpoint);
-      dispatch(loadProductBasketSuccess(productIdBasket.data));
+      await axios.post(endpoint);
     } catch (error) {
       dispatch(requestProductsError(error));
     }
