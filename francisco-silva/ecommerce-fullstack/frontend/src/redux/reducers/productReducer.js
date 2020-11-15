@@ -9,7 +9,8 @@ export default function productReducer(state = [], action) {
             const err = { ...state, error: action.error };
             return { ...state, error: action.error };
         case actionTypes.LOAD_PRODUCT_DETAIL:
-        const detail = {...state, productDetail: action.productDetail }
+        const detail = {...state, productDetail: action.productDetail  }
+        debugger;
         return detail
         default:
             return state;

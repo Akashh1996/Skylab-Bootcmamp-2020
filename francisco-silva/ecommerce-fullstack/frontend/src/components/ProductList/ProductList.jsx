@@ -11,15 +11,17 @@ function ProductList({ productList, dispatch}) {
     if (productList.length <= 0) {
         dispatch(requestProducts());
     }
-  
+    console.log(productList)
     return (
         <div className = "list-wrapper">
             {productList &&
                 productList.length &&
-                productList[0].map((product) => <p key = {product.id}>
+                productList[0].map((product) => <div className="product_wrapper" key = {product.id}>
                 <span><Link to= {`/${product.id}`}>{product["product-name"]}</Link></span>
-                <span>{product.price}</span>
-                </p>
+                <span>{product.price}€</span>
+                <span class="material-icons">shopping_cart</span>
+                <img className="product_img" alt="product-img" src={`${product['product-image-url']}`}></img>
+                </div>
                 )}
         </div>
     );

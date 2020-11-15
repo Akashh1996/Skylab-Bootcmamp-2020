@@ -15,7 +15,7 @@ function requestProductsError(error) {
 }
 export function requestProducts() {
     return async (dispatch) => {
-        debugger;
+        
         const endpoint = 'http://localhost:3020/products';
         try {
             const products = await axios.get(endpoint)
@@ -39,7 +39,8 @@ function requestProductDetailError(error) {
 }
 export function requestProductDetail(id) {
     return async (dispatch) => {
-        const endpoint = `http://localhost:1400/heroes/${id}`;
+        debugger;
+        const endpoint = `http://localhost:3200/products/${id}`;
         try {
             const product = await axios.get(endpoint, {
                 params: {

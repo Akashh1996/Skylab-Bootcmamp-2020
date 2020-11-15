@@ -2,16 +2,22 @@
     display: flex;
     flex-direction: column;
 }
-p{
+.product_wrapper{
     width: 70%;
     display: flex;
     justify-content: space-between;
     background-color: #607D8B;
     margin: 5px auto;
     padding: 20px;
+    height: 100px;
     color: white;
 }
 a{
     text-decoration: none;
     color: white;
+}
+
+.product_img{
+    width: 150px;
+    height: 100px;
 }
