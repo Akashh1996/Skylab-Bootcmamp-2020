@@ -25,8 +25,8 @@ export function requestProducts() {
         }
     };
 }
-function requestProductDetailSuccess(productDetail){
-    return{
+function requestProductDetailSuccess(productDetail) {
+    return {
         type: actionTypes.LOAD_PRODUCT_DETAIL,
         productDetail
     }
@@ -39,11 +39,11 @@ function requestProductDetailError(error) {
 }
 export function requestProductDetail(id) {
     return async (dispatch) => {
-        const endpoint = `http://localhost:3020/heroes/${id}`;
+        const endpoint = `http://localhost:3020/products/${id}`;
         try {
             const product = await axios.get(endpoint, {
                 params: {
-                    productId : id
+                    productId: id
                 }
             })
             dispatch(requestProductDetailSuccess(product.data));

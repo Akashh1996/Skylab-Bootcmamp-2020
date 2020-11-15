@@ -12,7 +12,7 @@ uuidv4();
 const productRoute = require('./routes/productRoute');
 
 app.use('/products', productRoute);
-const testRoute = require('./routes/routes');
+const testRoute = require('./routes/productRoute');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

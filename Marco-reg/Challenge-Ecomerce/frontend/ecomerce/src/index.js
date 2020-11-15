@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import configureStore from './redux/configureStore';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import ProductDetail from './redux/components/ProductsList';
+import ProductDetail from './redux/components/Detail';
 import ProductList from './redux/components/ProductsList';
 const store = configureStore();
 ReactDOM.render(
@@ -14,7 +14,7 @@ ReactDOM.render(
             <BrowserRouter>
         <Switch>
             <Route path = "/" exact component = {ProductList} ></Route>
-            <Route path = "/:heroId" exact component = {ProductDetail} ></Route>
+            <Route path = "/:Id" exact component = {ProductDetail} ></Route>
         </Switch>
       </BrowserRouter>
         </Provider>

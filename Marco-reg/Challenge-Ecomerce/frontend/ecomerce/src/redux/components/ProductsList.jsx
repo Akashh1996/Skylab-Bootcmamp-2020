@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { requestProducts } from '../actions/shopActions';
+import {Link}from 'react-router-dom';
 
 
 
@@ -17,7 +18,8 @@ function ProductList({ productList, dispatch}) {
             {productList &&
                 productList.length &&
                 productList[0].map((product) => {
-                return <p>{product["product-name"]}</p>
+                return <p><Link to={`/${product.id}`}>{product["product-name"]}</Link>
+                <img alt ="image"src={product['product-image-url']}/></p>
                 })}
         </div>
     );
