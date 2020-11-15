@@ -27,6 +27,7 @@
     width: 60%;
     margin: 10px 0;
     padding: 10px 20px;
+    font-weight: 500;
     background-color: aliceblue;
     border-radius: 10px;
     box-shadow: 4px 4px 5px black;
@@ -64,6 +65,7 @@
     margin: 10px auto;
     margin-top: 30px;
     padding: 10px 20px;
+    font-weight: 500;
     background-color: aliceblue;
     border-radius: 10px;
     box-shadow: 4px 4px 5px black;
@@ -73,4 +75,11 @@
     width: 30px;
     height: auto;
     cursor: pointer;
+}
+
+.cart-products__empty {
+    background-color: aliceblue;
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px black;
 }
