@@ -17,13 +17,13 @@
     padding-left: 40px;
 }
 
-#header__icon {
-    width: 10%;
+#header__icon__image {
+    width: 50%;
     height: auto;
-    transition: transform 0.3s;
+    transition: transform 0.7s;
 }
 
-#header__icon:hover {
+#header__icon__image:hover {
     transform: scale(1.1);
 }
 
