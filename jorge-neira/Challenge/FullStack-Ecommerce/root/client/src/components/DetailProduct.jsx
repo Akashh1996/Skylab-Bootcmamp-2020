@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { bindActionCreators } from 'redux';
@@ -11,6 +11,11 @@ function DetailProduct({ productDetail, dispatch }) {
   if (!productDetail) {
     dispatch.getDetailProduct(id);
   }
+
+  useEffect(() => {
+
+  });
+
   return (
     <>
       <h1>{productDetail && productDetail['product-name']}</h1>
@@ -19,11 +24,12 @@ function DetailProduct({ productDetail, dispatch }) {
           <>
             <span>
               Modelo:
+              {' '}
               {productDetail['product-model']}
             </span>
             <br />
             <span>
-              Part/Number
+              Part/Number:
               {' '}
               {productDetail['product-part-number']}
             </span>
