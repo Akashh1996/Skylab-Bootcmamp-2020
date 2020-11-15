@@ -14,8 +14,9 @@ function productRouter(Product) {
   router.route('/:productId')
     .all(product.allMiddleware)
     .get(product.getMethod)
-    .post(product.postMethod)
     .delete(product.deleteMethod);
+  router.route('/cart')
+    .post(product.postMethod);
 
   return router;
 }

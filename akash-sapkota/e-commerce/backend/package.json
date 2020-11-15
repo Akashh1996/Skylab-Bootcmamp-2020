@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "set DEBUG=app & nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --collect-coverage --watch--all"
   },
   "keywords": [],
   "author": "",

@@ -13,6 +13,11 @@ function productController(Product) {
 
     res.json(updatedProduct);
   }
+  function getCartMethod(req, res) {
+    const id = +req.params.productId;
+    Product.addToCart(id);
+    res.send(Product.getProducts());
+  }
 
   function deleteMethod(req, res) {
     const id = +req.params.productId;
@@ -28,7 +33,7 @@ function productController(Product) {
   }
 
   return {
-    getMethod, postMethod, deleteMethod, allMiddleware,
+    getMethod, postMethod, deleteMethod, allMiddleware, getCartMethod,
   };
 }
 
