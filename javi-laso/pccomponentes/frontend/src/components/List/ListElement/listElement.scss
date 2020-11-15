@@ -7,32 +7,24 @@
 
 .card-element {
   display: flex;
+  flex-direction: column;
   border-bottom: 1px solid black;
   border-right: 1px solid black;
-  width: 750px;
-  height: 450px;
+  width: 350px;
+  height: 500px;
   box-shadow: 3px 3px 5px black;
   background-color: white;
   padding: 0px 15px;
 }
 
-.card__principal-info {
-  margin-right: 80px;
-}
-
 .card__img {
   object-fit: contain;
-  height: 400px;
-  width: 400px;
-}
-
-.card__info {
-  margin-left: 40px;
+  height: 300px;
+  width: 300px;
 }
 
 .card__title {
   text-transform: uppercase;
-  margin-bottom: 30px;
   font-size: $secondary-title-font-size;
 }
 
@@ -41,14 +33,13 @@
 }
 
 .card__price {
-  margin-top: 40px;
-  font-size: 45px;
+  font-size: 30px;
 }
 
 .card__name, 
 .card__manufacturer,
 .card__type {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .card__name,

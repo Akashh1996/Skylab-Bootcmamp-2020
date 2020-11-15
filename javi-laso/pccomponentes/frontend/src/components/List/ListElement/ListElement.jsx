@@ -7,12 +7,15 @@ function ListElement({ item }) {
   return (
     <Link to={`/${item.id}`} className="no-link card__margins">
       <li key={+item.id} className="card-element">
-        <img src={item['product-image']} alt="" className="card__img" />
-        <div className="vertical-container card__info mt-5">
+        <img src={item['product-image']} alt={item['product-name']} className="card__img mr-4" />
+        <div className="d-flex flex-column card__info">
+          <div className="flex-1" />
           <h2 className="card__title">{`${item.manufacturer} ${item['product-name']}`}</h2>
-          <span className="card__name">{item['product-name']}</span>
+          <div className="flex-1" />
           <span className="card__type">{item['product-type']}</span>
-          <span className="card__price">{`${item.price.replace('.', ',')}€`}</span>
+          <div className="flex-1" />
+          <span className="card__price">{`${item.price}€`}</span>
+          <div className="flex-2" />
         </div>
       </li>
     </Link>

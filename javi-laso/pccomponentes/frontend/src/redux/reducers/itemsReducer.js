@@ -1,6 +1,8 @@
 import actionTypes from '../actions/action-types';
 
-export default function itemsReducer(state = {}, action) {
+const initialState = {};
+
+export default function itemsReducer(state = initialState, action) {
   switch (action.type) {
     case actionTypes.LOAD_ITEMS_LIST:
       return { ...state, itemList: action.itemList };

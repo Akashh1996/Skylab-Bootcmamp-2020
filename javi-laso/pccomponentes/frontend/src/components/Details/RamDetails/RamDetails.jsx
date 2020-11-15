@@ -5,7 +5,7 @@ function RamDetails({ item }) {
   return (
     <>
       <span>{`Mhz: ${item.mhz}`}</span>
-      <span>{`Capacity: ${item['capacity-gb']} GB`}</span>
+      <span className="ram__capacity">{`Capacity: ${item['capacity-gb']} GB`}</span>
     </>
   );
 }

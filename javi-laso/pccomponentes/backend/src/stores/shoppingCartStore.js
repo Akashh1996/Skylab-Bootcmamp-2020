@@ -1,20 +1,26 @@
-let shoppingCart = [];
+let shoppingCart = {};
 
 class ShoppingCartStore {
   static getItems() {
-    return JSON.stringify(shoppingCart);
-  }
-
-  static getItemById(itemId) {
-    return shoppingCart.find((item) => item.id === itemId);
+    return shoppingCart;
   }
 
   static addItem(item) {
-    shoppingCart = [...shoppingCart, item];
+    if (shoppingCart[`${item.id}`]) {
+      shoppingCart = { ...shoppingCart, [item.id]: [...shoppingCart[`${item.id}`], item] };
+    } else {
+      shoppingCart = { ...shoppingCart, [item.id]: [item] };
+    }
   }
 
   static deleteItem(itemToDelete) {
-    shoppingCart = shoppingCart.filter((item) => item.id !== itemToDelete);
+    if (shoppingCart[`${itemToDelete.id}`] && shoppingCart[`${itemToDelete.id}`].length > 0) {
+      shoppingCart[`${itemToDelete.id}`].pop();
+    }
+  }
+
+  static resetCart() {
+    shoppingCart = {};
   }
 }
 

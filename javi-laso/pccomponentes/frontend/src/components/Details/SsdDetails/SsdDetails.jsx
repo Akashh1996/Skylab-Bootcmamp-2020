@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types';
 function SsdDetails({ item }) {
   return (
     <>
-      <span>{`Capacity: ${item['capacity-gb']} GB`}</span>
+      <span className="ssd__capacity">{`Capacity: ${item['capacity-gb']} GB`}</span>
     </>
   );
 }

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,YAAY,CAAC;EACX,SAAS,EAAE,IAAI;CAChB",
+    "sources": [
+        "shoppingCart.scss",
+        "../../../scss-variables/_scss-variables.scss"
+    ],
+    "names": [],
+    "file": "shoppingCart.css"
+}

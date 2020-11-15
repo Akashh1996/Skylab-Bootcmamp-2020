@@ -40,7 +40,7 @@ function Details({ item, actions, match }) {
             </div>
             <div className="d-flex align-items-center">
               <span className="mr-3">Now:</span>
-              <span className="details__price">{`${item.price.replace('.', ',')}€`}</span>
+              <span className="details__price">{`${item.price}€`}</span>
             </div>
             <div className="flex-2" />
             <span className="details__type">{`${item['product-type']}`}</span>

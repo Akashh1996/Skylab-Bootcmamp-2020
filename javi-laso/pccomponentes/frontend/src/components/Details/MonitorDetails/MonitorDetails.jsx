@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types';
 function MonitorDetails({ item }) {
   return (
     <>
-      <span>{`Screen size: ${item.inches}`}</span>
+      <span className="monitor__size">{`Screen size: ${item.inches}`}</span>
     </>
   );
 }
