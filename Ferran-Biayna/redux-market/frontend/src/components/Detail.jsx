@@ -1,49 +1,47 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import {
-  requestProducts,
+  requestProduct,
   createRandomVariable,
   requestAddProducts,
 } from '../actions/productsActions';
 
-function ProductList({ products, dispatch }) {
-  if (!products && !products?.length) {
-    dispatch(requestProducts());
+function Detail({ product, dispatch }) {
+  if (product?.id !== +window.location.pathname.split('/product/')[1] || !product) {
+    dispatch(requestProduct(window.location.pathname.split('/product/')[1]));
   }
 
   return (
     <>
-      <ol>
-        {products && products.length && products.map((product) => (
-          <li>
+      {product
+          && (
             <div>
-              <Link to={`/product/${product.id}`}><span>{product.name}</span></Link>
+              <p>{`Product ID: #${product.id}`}</p>
+              <span>{`Product Name: ${product.name}`}</span>
               <button type="button" value={product.id} onClick={() => dispatch(requestAddProducts(product.id))}>Add</button>
+              <p>{`Category - ${product.category}`}</p>
               <p><img alt={product.name} src={product.image} /></p>
               <p>{new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(product.price)}</p>
+              <a href={product.url}>More Info</a>
             </div>
-          </li>
-        ))}
-      </ol>
+          )}
     </>
   );
 }
 
-ProductList.propTypes = {
-  products: PropTypes.shape([]).isRequired,
+Detail.propTypes = {
+  product: PropTypes.shape([]).isRequired,
   dispatch: PropTypes.shape([]).isRequired,
   actions: PropTypes.shape({
-    requestProducts: PropTypes.func.isRequired,
-    requestAddProducts: PropTypes.func.isRequired,
+    requestProduct: PropTypes.func.isRequired,
   }).isRequired,
 };
 
 function mapStateToProps({ productsReducer }) {
   return {
-    products: productsReducer.products,
+    product: productsReducer.product,
     randomNumber: productsReducer.randomNumber,
   };
 }
@@ -51,12 +49,11 @@ function mapStateToProps({ productsReducer }) {
 function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators({
-      requestProducts,
+      requestProduct,
       createRandomVariable,
-      requestAddProducts,
     }, dispatch),
     dispatch,
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductList);
+export default connect(mapStateToProps, mapDispatchToProps)(Detail);

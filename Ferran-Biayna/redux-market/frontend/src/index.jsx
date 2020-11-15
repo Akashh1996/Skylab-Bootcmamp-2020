@@ -2,18 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import List from './components/List';
 import reportWebVitals from './reportWebVitals';
-import configureStore from './redux/configureStore';
+import configureStore from './stores/configureStore';
+import CartList from './components/CartList';
+import Detail from './components/Detail';
+import Header from './components/Header';
 
 const store = configureStore();
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+      <Header />
       <Provider store={store}>
-        <App />
+        <Switch>
+          <Route path="/" exact component={List} />
+          <Route path="/product/:productId" exact component={Detail} />
+          <Route path="/cart" exact component={CartList} />
+        </Switch>
       </Provider>
     </BrowserRouter>
   </React.StrictMode>,

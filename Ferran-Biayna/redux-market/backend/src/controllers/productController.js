@@ -5,7 +5,6 @@ function productController(Product) {
 
   function postMethod(req, res) {
     Product.addProduct(+req.params.productId);
-    console.log(Product.getCart());
     res.json(Product.getCart());
   }
 
