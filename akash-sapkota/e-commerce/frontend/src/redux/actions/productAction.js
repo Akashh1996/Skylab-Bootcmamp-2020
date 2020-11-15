@@ -11,6 +11,8 @@ function requestProductSuccess(productList) {
 }
 
 function requestProductsError(error) {
+  // eslint-disable-next-line no-debugger
+  debugger;
   return {
     type: actionTypes.LOAD_PRODUCTS_ERROR,
     error,
@@ -19,7 +21,7 @@ function requestProductsError(error) {
 
 export default function requestProduct() {
   return async (dispatch) => {
-    const endpoint = 'http://localhost:6000/products';
+    const endpoint = 'http://localhost:6000/products/';
     try {
       // eslint-disable-next-line no-debugger
       debugger;

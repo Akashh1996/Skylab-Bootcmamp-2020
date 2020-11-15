@@ -6,7 +6,7 @@ import { PropTypes } from 'prop-types';
 import requestProduct from '../../redux/actions/productAction';
 
 function ProductList({ productList, dispatch }) {
-  if (!productList && productList?.length) {
+  if (!productList && !productList?.length) {
     dispatch(requestProduct());
   }
   return (
