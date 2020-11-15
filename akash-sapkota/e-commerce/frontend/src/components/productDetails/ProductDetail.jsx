@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
+import { Link } from 'react-router-dom';
+
 import { requestProductDetail, cleanUp } from '../../redux/actions/productAction';
 
 function ProductDetail({
@@ -16,36 +18,41 @@ function ProductDetail({
   }, [id, dispatch]);
 
   return (
-    <>
+    <div className="detail_wrapper">
       {productDetail
                && (
-               <div className="detail">
-                 <div className="detail_description">
-                   <h1>
-                     {productDetail.title}
-                   </h1>
-                   <p>
-                     Price:
-                     {' '}
-                     {productDetail.price}
-                   </p>
-                   <p>
-                     Ceategoty :
-                     {' '}
-                     {productDetail.category}
-                   </p>
-                   <p>
-                     Description :
-                     {' '}
-                     {productDetail.description}
-                   </p>
+               <>
+                 <div className="detail">
+                   <div className="detail_description">
+                     <h1>
+                       {productDetail.title}
+                     </h1>
+                     <p>
+                       <u>Price:</u>
+                       {' '}
+                       {productDetail.price}
+                     </p>
+                     <p>
+                       <u>Ceategory :</u>
+                       {' '}
+                       {productDetail.category}
+                     </p>
+                     <p>
+                       <u>Description :</u>
+                       {productDetail.description}
+                     </p>
+                     <Link to="/cart" className="cart">Add To Cart</Link>
+
+                   </div>
+                   <div className="image">
+                     <img src={productDetail.image} alt="detail" />
+                   </div>
+
                  </div>
-                 <div className="image">
-                   <img src={productDetail.image} alt="detail" />
-                 </div>
-               </div>
+                 <Link to="/" className="back">Back</Link>
+               </>
                )}
-    </>
+    </div>
   );
 }
 

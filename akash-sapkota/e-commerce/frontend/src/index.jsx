@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import configureStore from './redux/configureStore';
 import ProductList from './components/productList/ProductList';
 import ProductDetail from './components/productDetails/ProductDetail';
+import PrimarySearchAppBar from './components/Header/Header';
 
 const store = configureStore();
 
@@ -14,6 +15,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
+        <PrimarySearchAppBar />
         <Switch>
           <Route path="/" exact component={ProductList} />
           <Route path="/:productId" exact component={ProductDetail} />

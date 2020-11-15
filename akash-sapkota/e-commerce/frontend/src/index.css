@@ -24,12 +24,46 @@ code {
 img{
   max-width: 100%;
 } 
-a{
-  text-decoration: none;
-  background-color: yellow;
-  margin: 5px 0;
-  padding-left: 10px;
+.list-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+  margin-top: 80px;
 }
+.imageList{
+  width: 200px;
+  height: 250px;
+}
+.detail_navigation{
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  background-color: lightgreen;
+  color: rgb(98, 0, 255);
+  padding: 6px;
+  border-left: 5px solid red;
+}
+
+.detail_wrapper{
+  margin-top: 40px;
+}
+.wrapper{
+  margin: 5px;
+}
+
+.cart, .back{
+  background-color: lightgreen;
+  text-decoration: none;
+  padding: 7px;
+  border: 2px solid red;
+}
+.back{
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 800px) {
   .detail {
     flex-wrap: wrap;
