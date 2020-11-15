@@ -2,7 +2,7 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { requestProductDetail } from '../../redux/actions/productAction';
-
+import './ProductDetail.css';
 
 function ProductDetail({ productDetail, dispatch, actions } ) {
  
@@ -23,8 +23,9 @@ function ProductDetail({ productDetail, dispatch, actions } ) {
                <div className="detail-wrapper">
                    <p>{productDetail[0][id-1]["product-name"]}</p> 
                    <p>price:{productDetail[0][id-1].price}€</p> 
-                    <p>id:{productDetail[0][id-1].id}</p>
-                    <p>{productDetail[0][id-1].id}</p>
+                   <span class="material-icons">shopping_cart</span>
+               
+                
                     <img className="product_img" alt="product-img" src={`${productDetail[0][id-1]["product-image-url"]}`}></img>
                    
                </div>

@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { requestProducts } from '../../redux/actions/productAction';
 import { Link } from 'react-router-dom';
-import './HeroList.css';
+import './ProductList.css';
 
 
 function ProductList({ productList, dispatch}) {

@@ -1,0 +1,24 @@
+.detail-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.detail-wrapper{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #60ab4b;
+    margin: 5px auto;
+    padding: 20px;
+    height: 100px;
+    color: white;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.product_img{
+    width: 150px;
+    height: 100px;
+}
