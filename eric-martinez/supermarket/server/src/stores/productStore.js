@@ -37,6 +37,7 @@ const products = [
     'product-url': 'http://www.thenorthface.com/catalog/sc-gear/enduro-boa.html',
     'header-top-right-url': 'http://www.thenorthface.com/en_US/shop-equipment/',
     price: 13,
+    id: 13,
   },
   {
     'product-name': "MEN'S BETTER THAN NAKED&trade; JACKET",
