@@ -10,7 +10,7 @@ function requestSabersSuccess(sabersList) {
 
 function requestError(error) {
   return {
-    type: actionTypes.LOAD_SABERS_ERROR,
+    type: actionTypes.LOAD_ERROR,
     error,
   };
 }

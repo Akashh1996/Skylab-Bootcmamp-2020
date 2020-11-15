@@ -6,17 +6,13 @@ export default function sabersReducer(state = {}, action) {
       const sabers = { ...state, sabersArray: action.sabersList };
       return sabers;
     }
-    case actionTypes.LOAD_SABERS_ERROR: {
+    case actionTypes.LOAD_ERROR: {
       console.log(action.error);
       return state;
     }
     case actionTypes.LOAD_SABER:{
-      const saber = { ...state, saberItem: action.saberItem }
+      const saber = { ...state, saberItem: action.saberItem };
       return saber;
-    }
-    case actionTypes.LOAD_SABER_ERROR: {
-      console.log(action.error);
-      return state;
     }
     default:
       return state;

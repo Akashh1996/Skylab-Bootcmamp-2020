@@ -6,10 +6,11 @@ import configureStore from './redux/configureStore';
 import Header from './components/Header/Header';
 import SabersList from './components/SabersList/SabersList';
 import SaberDetail from './components/SaberDetail/SaberDetail';
+import Cart from './components/Cart/Cart';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
-const store = configureStore({ sabersReducer: { sabersArray: [] } });
+const store = configureStore({ sabersReducer: { sabersArray: [] }, cartReducer: { cartArray: [] } });
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,6 +20,7 @@ ReactDOM.render(
         <Switch>
           <Route path="/sabers" exact component={SabersList}/>
           <Route path="/sabers/:saberName" exact component={SaberDetail}/>
+          <Route path="/cart" exact component={Cart} />
         </Switch>
       </Provider>
     </BrowserRouter>
