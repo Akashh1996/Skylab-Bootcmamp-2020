@@ -89,6 +89,7 @@
     background-color: rgb(179, 216, 245);
     border-radius: 10px;
     padding: 10px 0;
+    margin-bottom: 30px;
 }
 
 .saber__detail__colorButtons__button {
@@ -105,6 +106,22 @@
 .black-button {
     color: white;
     background-color: black;
+}
+
+.addToCart-button {
+    padding: 20px 45px;
+    color: aliceblue;
+    font-weight: 900;
+    border: none;
+    border-radius: 5px;
+    background-color: #141718;
+    box-shadow: 4px 4px 5px black;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.addToCart-button:hover {
+    transform: scale(1.05);
 }
 
 @media (max-width: 1024px) {
