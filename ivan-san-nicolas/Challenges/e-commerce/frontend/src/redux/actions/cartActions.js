@@ -43,3 +43,15 @@ export function deleteProductFromCart(productName) {
         }
     }
 }
+
+export function addProductToCart(productName, productColor) {
+    return async (dispatch) => {
+        const endpoint = `http://localhost:1240/cart?productName=${productName}&productColor=${productColor}`;
+        try {
+            const cart = await axios.post(endpoint);
+            dispatch(requestCartSuccess(cart.data));
+        } catch (error) {
+            dispatch(requestError(error));
+        }
+    }
+}
