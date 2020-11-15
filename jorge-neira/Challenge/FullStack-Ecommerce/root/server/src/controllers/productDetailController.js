@@ -1,7 +1,7 @@
 function productDetailController(Products) {
   function allMiddleware(req, res, next) {
-    console.log(req);
-    req.detail = Products.getProductById(req.params.productName);
+    console.log(req.query);
+    req.detail = Products.getProductByProductName(req.query['product-model']);
     next();
   }
 

@@ -1,4 +1,3 @@
-const fs = require('fs');
 const products = require('../../api/ecommerce.json');
 
 class Products {
@@ -6,7 +5,7 @@ class Products {
     return products;
   }
 
-  static getProductById(productModel) {
+  static getProductByProductName(productModel) {
     return products.find((product) => product['product-model'] === productModel);
   }
 }

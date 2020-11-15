@@ -29,7 +29,7 @@ function getProductoByIdFailure({ type }) {
   };
 }
 
-export default function loadProductList() {
+export function loadProductList() {
   return async (dispatch) => {
     const endpoint = 'list';
     try {
@@ -43,11 +43,11 @@ export default function loadProductList() {
   };
 }
 
-export function getProductoById(productId) {
+export function getDetailProduct(productModel) {
   return async (dispatch) => {
-    const endpoint = 'detail';
+    const endpoint = 'product';
     try {
-      const productDetail = await axios.get(`${URL}${endpoint}/:${productId}`);
+      const productDetail = await axios.get(`${URL}${endpoint}/:${productModel}`);
       dispatch(getProductoByIdSuccess(productDetail));
     } catch (error) {
       dispatch(getProductoByIdFailure());
