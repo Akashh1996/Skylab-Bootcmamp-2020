@@ -3,17 +3,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { bindActionCreators } from 'redux';
-import { loadProductList, getDetailProduct } from '../redux/actions/productsActions';
+import { loadProductList } from '../redux/actions/productsActions';
 import ListCreateProduct from './ListCreateProduct';
 
 function ListProduct({ products, dispatch }) {
-  debugger;
   if (!products) {
     dispatch.loadProductList();
   }
   return (
     <div>
-      Hello World
+      <h1>Asus Market</h1>
       <section>
         {products && products.map((product) => <ListCreateProduct data={product} />)}
       </section>
@@ -24,12 +23,10 @@ function ListProduct({ products, dispatch }) {
 ListProduct.propTypes = {
   dispatch: PropTypes.shape({
     loadProductList: PropTypes.func.isRequired,
-    getDetailProduct: PropTypes.func.isRequired,
   }).isRequired,
 };
 
 function mapStateToProps(state) {
-  debugger;
   return {
     productDetail: state.productReducer.productDetail,
     products: state.productReducer.productList,
@@ -37,9 +34,8 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  debugger;
   return {
-    dispatch: bindActionCreators({ loadProductList, getDetailProduct }, dispatch),
+    dispatch: bindActionCreators({ loadProductList }, dispatch),
   };
 }
 

@@ -43,11 +43,9 @@ export function loadProductList() {
 }
 
 export function getDetailProduct(productModel) {
-  debugger;
   return async (dispatch) => {
     const endpoint = 'product';
     try {
-      debugger;
       const productDetail = await axios.get(`${URL}${endpoint}/${productModel}`);
       dispatch(getProductoByIdSuccess(productDetail.data));
     } catch (error) {

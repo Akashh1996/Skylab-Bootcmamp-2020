@@ -16,7 +16,7 @@ ReactDOM.render(
       <BrowserRouter>
         <Route path="/" component={MarketHeader} />
         <Route path="/" exact component={ListProduct} />
-        <Route path="/product" exact component={DetailProduct} />
+        <Route path="/product/:id" exact component={DetailProduct} />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,
