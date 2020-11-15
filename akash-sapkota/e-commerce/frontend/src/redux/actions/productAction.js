@@ -2,6 +2,8 @@ import axios from 'axios';
 import actionTypes from './actionTypes';
 
 function requestProductSuccess(productList) {
+  // eslint-disable-next-line no-debugger
+  debugger;
   return {
     type: actionTypes.LOAD_PRODUCTS,
     productList,
@@ -19,6 +21,8 @@ export default function requestProduct() {
   return async (dispatch) => {
     const endpoint = 'http://localhost:6000/products';
     try {
+      // eslint-disable-next-line no-debugger
+      debugger;
       const products = await axios.get(endpoint);
       dispatch(requestProductSuccess(products.data));
     } catch (error) {
@@ -26,3 +30,10 @@ export default function requestProduct() {
     }
   };
 }
+
+/* export default function cleanUp() {
+  return {
+    type: actionTypes.PRODUCT_DETAIL_CLEANUP,
+  };
+}
+ */
