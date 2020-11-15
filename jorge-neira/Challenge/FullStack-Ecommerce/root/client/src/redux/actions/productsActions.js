@@ -1,14 +1,29 @@
 import axios from 'axios';
 import actionTypes from './actionsTypes';
 
-function loadLaptopListSuccess(productslist) {
+const URL = 'http://localhost:5000/';
+
+function loadProductsSuccess(productslist) {
   return {
     type: actionTypes.LOAD_LAPTOP_LIST,
     productslist,
   };
 }
 
-function loadLaptopListError({ type }) {
+function loadProductsFailure({ type }) {
+  return {
+    type,
+  };
+}
+
+function getProductoByIdSuccess({ productDetail }) {
+  return {
+    type: actionTypes.LOAD_LAPTOP_BY_ID,
+    productDetail,
+  };
+}
+
+function getProductoByIdFailure({ type }) {
   return {
     type,
   };
@@ -16,14 +31,26 @@ function loadLaptopListError({ type }) {
 
 export default function loadProductList() {
   return async (dispatch) => {
-    const endpoint = 'http://localhost:5000/list';
+    const endpoint = 'list';
     try {
-      const productsList = await axios.get(endpoint);
-      dispatch(loadLaptopListSuccess(productsList.data));
+      const productsList = await axios.get(`${URL}${endpoint}`);
+      dispatch(loadProductsSuccess(productsList.data));
     } catch (error) {
-      dispatch(loadLaptopListError({
+      dispatch(loadProductsFailure({
         type: actionTypes.LOAD_LAPTOP_ERROR,
       }));
+    }
+  };
+}
+
+export function getProductoById(productId) {
+  return async (dispatch) => {
+    const endpoint = 'detail';
+    try {
+      const productDetail = await axios.get(`${URL}${endpoint}/:${productId}`);
+      dispatch(getProductoByIdSuccess(productDetail));
+    } catch (error) {
+      dispatch(getProductoByIdFailure());
     }
   };
 }
