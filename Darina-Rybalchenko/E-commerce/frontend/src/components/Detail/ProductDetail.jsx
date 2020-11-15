@@ -1,37 +1,39 @@
-import React from 'react';
+/* eslint-disable no-debugger */
+import React, { useState, useEffect } from 'react';
 import './ProductDetail.css';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { PropTypes } from 'prop-types';
 import Image from 'react-bootstrap/Image';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { requestProductDetail } from '../../redux/actions/product-actions';
 
-const productDetail = {
-  id: 1,
-  'product-name': "MEN'S BETTER THAN NAKED&trade; JACKET",
-  'product-image-url': 'http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/mens-better-than-naked-jacket-AVMH_LC9_hero.png',
-  'header-top-right-text': 'Shop All',
-  'header-top-left-text': "Men's",
-  'product-url': 'http://www.thenorthface.com/catalog/sc-gear/men-39-s-better-than-naked-8482-jacket.html',
-  'header-top-right-url': 'http://www.thenorthface.com/en_US/shop-mens/',
-  price: 10,
-};
-function ProductDetail() {
+function ProductDetail({ match, product, dispatch }) {
+  const [id] = useState(match.params.productId);
+  useEffect(() => {
+    if (id) {
+      dispatch(requestProductDetail(+id));
+    }
+  }, [id, dispatch]);
+
   return (
     <>
       <main className="detail">
-        <Image src={productDetail['product-image-url']} rounded />
+        <Image src={product && product['product-image-url']} rounded />
         <Card style={{ width: '18rem' }}>
           <Card.Body>
-            <Card.Title>{productDetail['product-name']}</Card.Title>
+            <Card.Title>{product && product['product-name']}</Card.Title>
             <Card.Text>
               Some quick example text to build on the card title and make up the bulk of
               the cards content.
             </Card.Text>
             <Card.Text>
               Price:
-              {productDetail.price}
+              {product && product.price}
               €
             </Card.Text>
-            <Button variant="primary">Add to basket</Button>
+            <Button variant="secondary">Add to basket</Button>
           </Card.Body>
         </Card>
       </main>
@@ -39,4 +41,36 @@ function ProductDetail() {
   );
 }
 
-export default ProductDetail;
+ProductDetail.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    'product-name': PropTypes.string.isRequired,
+    'product-image-url': PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+
+  }).isRequired,
+
+  dispatch: PropTypes.shape({
+    requestProductDetail: PropTypes.func.isRequired,
+  }).isRequired,
+
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      productId: PropTypes.string.isRequired,
+    }),
+  }).isRequired,
+};
+
+function mapStateToProps({ productReducer }) {
+  debugger;
+  return { product: productReducer.productId };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators({ }, dispatch),
+    dispatch,
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductDetail);

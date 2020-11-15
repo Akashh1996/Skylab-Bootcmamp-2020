@@ -5,7 +5,8 @@ import { PropTypes } from 'prop-types';
 import './ProductList.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import requestProducts from '../../redux/actions/product-actions';
+import { Link } from 'react-router-dom';
+import { requestProducts, requestProductDetail } from '../../redux/actions/product-actions';
 
 function ProductList({ productsList, dispatch }) {
   if (!productsList && !productsList?.length) {
@@ -18,10 +19,21 @@ function ProductList({ productsList, dispatch }) {
           {productsList && productsList.map((product) => (
             <li>
               {' '}
-              <Card className="product-card" style={{ width: '18rem' }}>
+              <Card
+                className="product-card"
+                style={{ width: '18rem' }}
+              >
                 <Card.Img className="product-img" variant="top" src={product['product-image-url']} />
                 <Card.Body>
-                  <Card.Title className="product-title">{product['product-name']}</Card.Title>
+                  <Card.Title
+                    as={Link}
+                    to={`/list/${product.id}`}
+                    onClick={() => requestProductDetail(product.id)}
+                    className="product-title"
+                  >
+                    {product['product-name']}
+
+                  </Card.Title>
                   <Card.Text>Product details</Card.Text>
                   <Card.Text>
                     Price:

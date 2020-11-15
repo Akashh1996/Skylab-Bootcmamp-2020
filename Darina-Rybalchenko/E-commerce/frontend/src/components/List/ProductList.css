@@ -22,7 +22,9 @@
     margin-top: 20px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
+.product-title:hover{
+    text-decoration:none;
+}
 .card-img-top.product-img {
     width: 150px;
 }
