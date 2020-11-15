@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { bindActionCreators } from 'redux';
-import { loadProductList } from '../redux/actions/productsActions';
+import { loadProductList, addProductToCart } from '../redux/actions/productsActions';
 import ListCreateProduct from './ListCreateProduct';
 
 function ListProduct({ products, dispatch }) {
@@ -17,7 +17,7 @@ function ListProduct({ products, dispatch }) {
       <section>
         {products && products.map((product) => (
           <ListCreateProduct
-            onAddToCartClicked={() => addToCart(product.id)}
+            onAddToCartClicked={() => addProductToCart()}
             data={product}
             key={product.id}
           />
@@ -30,6 +30,7 @@ function ListProduct({ products, dispatch }) {
 ListProduct.propTypes = {
   dispatch: PropTypes.shape({
     loadProductList: PropTypes.func.isRequired,
+    addProductToCart: PropTypes.func.isRequired,
   }).isRequired,
 };
 
@@ -41,7 +42,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatch: bindActionCreators({ loadProductList }, dispatch),
+    dispatch: bindActionCreators({ loadProductList, addProductToCart }, dispatch),
   };
 }
 

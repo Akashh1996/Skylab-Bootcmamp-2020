@@ -1,3 +1,4 @@
+/* eslint-disable no-debugger */
 const products = require('../../api/ecommerce.json');
 let cartProducts = require('../../api/cart.json');
 
@@ -14,24 +15,13 @@ class Products {
     return cartProducts;
   }
 
-  static addProductToCart(product) {
-    if (cartProducts.length > 0) {
-      cartProducts = cartProducts.map((cartProduct) => {
-        let updatedProductItem;
-        if (cartProduct.id === product.id) {
-          updatedProductItem = product.items + cartProduct.items;
-          return { ...cartProduct, updatedProductItem };
-        }
-        return updatedProductItem;
-      });
-    } else {
-      cartProducts = [...cartProducts, product];
-    }
-    return cartProducts;
+  static addProductToCart(cartproduct) {
+    cartProducts = [...cartProducts, cartproduct];
   }
 
-  static delProductoFromCard(product) {
-    return cartProducts.push(product);
+  static delProductoFromCart(cartProduct) {
+    cartProducts = cartProducts.filter((currentProduct) => currentProduct.cartId
+    !== cartProduct.cartId);
   }
 }
 

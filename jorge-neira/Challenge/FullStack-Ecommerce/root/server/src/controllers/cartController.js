@@ -11,8 +11,16 @@ function productsListController(Products) {
     res.json(Products.getCurrentCart());
   }
 
+  function deleteMethod(req, res) {
+    const updateCart = {
+      ...req.body,
+    };
+    Products.delProductoFromCart(updateCart);
+    res.json(Products.getCurrentCart());
+  }
+
   return {
-    getMethod, postMethod,
+    getMethod, postMethod, deleteMethod,
   };
 }
 
