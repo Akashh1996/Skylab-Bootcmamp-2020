@@ -7,7 +7,7 @@ function shoppingCarController(ShoppingCartStore) {
   function putMethod(req, res) {
     const { item } = req.body;
     ShoppingCartStore.addItem(item);
-    res.status(204);
+    res.status(200);
     res.send(ShoppingCartStore.getItems());
   }
 

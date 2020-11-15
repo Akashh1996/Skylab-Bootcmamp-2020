@@ -36,7 +36,7 @@ function Details({ item, actions, match }) {
             <div className="flex-2" />
             <div className="d-flex">
               <span className="mr-3">Previous price: </span>
-              <span className="details__prev-price">{`${Math.floor(+(item.price) * 1.4)},00€`}</span>
+              <span className="details__prev-price">{`${Math.floor(+(item.price) * 1.4)}.00€`}</span>
             </div>
             <div className="d-flex align-items-center">
               <span className="mr-3">Now:</span>

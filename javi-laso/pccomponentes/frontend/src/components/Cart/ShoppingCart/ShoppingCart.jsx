@@ -24,7 +24,7 @@ function ShoppingCart({ cartList, cartSize }) {
       </div>
       <ul className="d-flex flex-column">
         {cartSize === 0
-          ? <h3>You have not chosen products yet</h3>
+          ? <h3 className="no-products">You have not chosen products yet</h3>
           : Object.values(cartList)
             .map((arrayOfItems) => {
               if (arrayOfItems.length > 0) {

@@ -93,8 +93,7 @@ export function deleteItemFromCart(item) {
   return async (dispatch) => {
     try {
       const config = { data: item };
-      const cartListUpdated = await axios.delete(shoppingCartUrl,
-        config);
+      const cartListUpdated = await axios.delete(shoppingCartUrl, config);
 
       dispatch(deleteItemCartSuccess(cartListUpdated.data));
     } catch (error) {

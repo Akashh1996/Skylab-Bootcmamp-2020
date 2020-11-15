@@ -1,5 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import './cartElement.css';
@@ -8,10 +9,14 @@ import { putItemInCart, deleteItemFromCart } from '../../../redux/actions/action
 function CartElement({ arrayOfItems, actions }) {
   return (
     <div className="d-flex cart-element">
-      <img src={arrayOfItems[0]['product-image']} alt={arrayOfItems[0]['product-name']} className="cart-element__image" />
+      <Link to={`/${arrayOfItems[0].id}`}>
+        <img src={arrayOfItems[0]['product-image']} alt={arrayOfItems[0]['product-name']} className="cart-element__image" />
+      </Link>
       <div className="d-flex flex-column">
-        <span className="cart-element__title">{`${arrayOfItems[0].manufacturer} ${arrayOfItems[0]['product-name']}`}</span>
-        <span>{`${arrayOfItems[0]['product-type']}`}</span>
+        <Link to={`/${arrayOfItems[0].id}`}>
+          <span className="cart-element__title">{`${arrayOfItems[0].manufacturer} ${arrayOfItems[0]['product-name']}`}</span>
+        </Link>
+        <span className="cart-element__type">{`${arrayOfItems[0]['product-type']}`}</span>
         <div className="flex-1" />
         <span>{`${arrayOfItems[0].price}€`}</span>
         <div className="flex-1" />
@@ -30,6 +35,7 @@ function CartElement({ arrayOfItems, actions }) {
 
 CartElement.propTypes = {
   arrayOfItems: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
     'product-name': PropTypes.string,
     'product-type': PropTypes.string,
     'product-image': PropTypes.string,
