@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { bindActionCreators } from 'redux';
@@ -7,41 +7,54 @@ import { useParams } from 'react-router-dom';
 import { getDetailProduct } from '../redux/actions/productsActions';
 
 function DetailProduct({ productDetail, dispatch }) {
+  debugger;
   const { id } = useParams();
-  if (!productDetail) {
-    dispatch.getDetailProduct(id);
-  }
+  // const [currentDetailData] = useState(productDetail);
+  const currentDetailData = productDetail;
+  const newModel = useRef(id);
+
+  useEffect(() => {
+    if (currentDetailData && newModel.current !== currentDetailData['product-model']) {
+      debugger;
+      dispatch.getDetailProduct(id);
+    }
+    if (!currentDetailData) {
+      debugger;
+      dispatch.getDetailProduct(id);
+    }
+  }, [id]);
+
   return (
     <>
-      <h1>{productDetail && productDetail['product-name']}</h1>
-      <div>
-        {productDetail && (
-          <>
-            <span>
-              Modelo:
-              {productDetail['product-model']}
-            </span>
-            <br />
-            <span>
-              Part/Number
-              {' '}
-              {productDetail['product-part-number']}
-            </span>
-            <br />
-            <span>
-              Serie:
-              {' '}
-              {productDetail['product-serie']}
-            </span>
-            <br />
-            <span>
-              Precio:
-              {' '}
-              {productDetail.price}
-            </span>
-          </>
-        )}
-      </div>
+      {currentDetailData && newModel.current === currentDetailData['product-model'] && (
+      <>
+        <h1>{currentDetailData['product-name']}</h1>
+        <div>
+          <span>
+            Modelo:
+            {currentDetailData['product-model']}
+          </span>
+          <br />
+          <span>
+            Part/Number
+            {' '}
+            {currentDetailData['product-part-number']}
+          </span>
+          <br />
+          <span>
+            Serie:
+            {' '}
+            {currentDetailData['product-serie']}
+          </span>
+          <br />
+          <span>
+            Precio:
+            {' '}
+            {currentDetailData.price}
+          </span>
+        </div>
+      </>
+      )}
     </>
   );
 }

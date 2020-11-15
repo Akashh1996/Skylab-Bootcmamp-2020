@@ -7,6 +7,7 @@ import { loadProductList } from '../redux/actions/productsActions';
 import ListCreateProduct from './ListCreateProduct';
 
 function ListProduct({ products, dispatch }) {
+  debugger;
   if (!products) {
     dispatch.loadProductList();
   }
@@ -28,7 +29,6 @@ ListProduct.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    productDetail: state.productReducer.productDetail,
     products: state.productReducer.productList,
   };
 }

@@ -5,7 +5,7 @@ const URL = 'http://localhost:5000/';
 
 function loadProductsSuccess(productslist) {
   return {
-    type: actionTypes.LOAD_LAPTOP_LIST,
+    type: actionTypes.LOAD_PRODUCT_LIST,
     productslist,
   };
 }
@@ -18,7 +18,7 @@ function loadProductsFailure({ type }) {
 
 function getProductoByIdSuccess(productDetail) {
   return {
-    type: actionTypes.LOAD_LAPTOP_BY_ID,
+    type: actionTypes.LOAD_PRODUCT_BY_MODEL,
     productDetail,
   };
 }
@@ -35,9 +35,7 @@ export function loadProductList() {
       const productsList = await axios.get(`${URL}`);
       dispatch(loadProductsSuccess(productsList.data));
     } catch (error) {
-      dispatch(loadProductsFailure({
-        type: actionTypes.LOAD_LAPTOP_ERROR,
-      }));
+      dispatch(loadProductsFailure());
     }
   };
 }
