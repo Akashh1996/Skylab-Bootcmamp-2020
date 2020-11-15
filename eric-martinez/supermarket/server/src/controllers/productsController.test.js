@@ -11,4 +11,15 @@ describe('heroesController', () => {
 
     expect(res.json).toHaveBeenCalled();
   });
+  test('should call response json on putMethod', () => {
+    const res = {
+      json: jest.fn(),
+    };
+
+    const req = { body: null };
+
+    productsController.putMethod(req, res);
+
+    expect(res.json).toHaveBeenCalled();
+  });
 });

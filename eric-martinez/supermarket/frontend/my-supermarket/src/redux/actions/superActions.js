@@ -58,3 +58,11 @@ export function cleanProductDetail() {
         type: actionTypes.CLEAN_PRODUCT_DETAIL,
     }
 }
+
+export function loadBasket(basketProduct) {
+    debugger;
+    return async (dispatch) => {
+        const endpoint = `http://localhost:5000/products/basket`
+        await axios.put(endpoint, {body: basketProduct});
+    }
+}

@@ -81,6 +81,9 @@ const products = [
   },
 ];
 
+// eslint-disable-next-line no-underscore-dangle
+let _basket = [];
+
 class Product {
   static getProducts() {
     return products;
@@ -88,6 +91,21 @@ class Product {
 
   static getProductById(productId) {
     return products.find((product) => product.id === productId);
+  }
+
+  static getBasket() {
+    console.log(_basket);
+    return _basket;
+  }
+
+  static addProduct(newProduct) {
+    _basket = [..._basket, newProduct];
+    return _basket;
+  }
+
+  static deleteProduct(productId) {
+    _basket = _basket.filter((product) => product.id !== productId);
+    return _basket;
   }
 }
 
