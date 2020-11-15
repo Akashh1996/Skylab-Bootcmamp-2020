@@ -11,3 +11,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.detail{
+  display: flex;
+  padding: 20px;
+}
+.detail_description{
+  width: 70%;
+}
+ .image{
+  width: 30%;
+}
+img{
+  max-width: 100%;
+} 
+a{
+  text-decoration: none;
+  background-color: yellow;
+  margin: 5px 0;
+  padding-left: 10px;
+}
+@media only screen and (max-width: 800px) {
+  .detail {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    
+
+  }
+  .image{
+    width: 60%;
+  }
+}

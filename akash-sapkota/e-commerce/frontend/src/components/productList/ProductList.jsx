@@ -15,10 +15,15 @@ function ProductList({ productList, dispatch }) {
                 && productList.length
                 && productList.map((product) => (
                   <p key={product.id}>
-                    <span><Link to={`/${product.id}`}>{product.name}</Link></span>
-                    <span>{product.id}</span>
-                    <button type="button">x</button>
-
+                    <span>
+                      <Link to={`/${product.id}`}>
+                        <span>
+                          {product.id}
+                          .
+                        </span>
+                        <span>{product.title}</span>
+                      </Link>
+                    </span>
                   </p>
                 ))}
     </div>

@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import configureStore from './redux/configureStore';
 import ProductList from './components/productList/ProductList';
+import ProductDetail from './components/productDetails/ProductDetail';
 
 const store = configureStore();
 
@@ -15,6 +16,7 @@ ReactDOM.render(
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={ProductList} />
+          <Route path="/:productId" exact component={ProductDetail} />
         </Switch>
       </BrowserRouter>
     </Provider>

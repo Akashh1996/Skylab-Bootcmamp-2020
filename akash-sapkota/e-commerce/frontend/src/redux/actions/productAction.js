@@ -21,7 +21,7 @@ function requestProductsError(error) {
 
 export default function requestProduct() {
   return async (dispatch) => {
-    const endpoint = 'http://localhost:6000/products/';
+    const endpoint = 'http://localhost:1400/products/';
     try {
       // eslint-disable-next-line no-debugger
       debugger;
@@ -32,10 +32,44 @@ export default function requestProduct() {
     }
   };
 }
+function requestProductDetailSuccess(productDetail) {
+  // eslint-disable-next-line no-debugger
+  debugger;
+  return {
+    type: actionTypes.LOAD_PRODUCT_DETAIL,
+    productDetail,
+  };
+}
 
-/* export default function cleanUp() {
+function requestProductDetailError(error) {
+  // eslint-disable-next-line no-debugger
+  debugger;
+  return {
+    type: actionTypes.LOAD_PRODUCT_DETAIL_ERROR,
+    error,
+  };
+}
+
+export function requestProductDetail(id) {
+  return async (dispatch) => {
+    const endpoint = `http://localhost:1400/products/${id}`;
+    try {
+      // eslint-disable-next-line no-debugger
+      debugger;
+      const products = await axios.get(endpoint, {
+        params: {
+          productId: id,
+        },
+      });
+      dispatch(requestProductDetailSuccess(products.data));
+    } catch (error) {
+      dispatch(requestProductDetailError(error));
+    }
+  };
+}
+
+export function cleanUp() {
   return {
     type: actionTypes.PRODUCT_DETAIL_CLEANUP,
   };
 }
- */
