@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { requestSaberByName } from '../../redux/actions/SabersActions';
+import { requestSaberByName } from '../../redux/actions/sabersActions';
+import { addProductToCart } from '../../redux/actions/cartActions';
 import './SaberDetail.css';
 
 function SaberDetail({ saberItem, dispatch, match }) {
@@ -18,7 +19,24 @@ function SaberDetail({ saberItem, dispatch, match }) {
     const [saberImage, setSaberImage] = useState(saberItem?["product-image-url"] : null);
 
     let counter = 1;
-    debugger;
+    let actualColor = null;
+    const blackColor = "Black";
+    const silverColor = "Silver";
+
+    function changeColorToBlack(setSaberImage, saberImageBlack, actualColor, blackColor) {
+        actualColor = blackColor;
+        setSaberImage(saberImageBlack);
+    }
+    
+    function changeColorToSilver(setSaberImage, saberImageSilver, actualColor, silverColor) {
+        actualColor = silverColor;
+        setSaberImage(saberImageSilver);
+    }
+
+    function addToCart(addProductToCart, productName, actualColor) {
+        alert("Item added to cart!");
+        dispatch(addProductToCart(productName, actualColor));
+    }
     
     return (
         <>
@@ -59,8 +77,11 @@ function SaberDetail({ saberItem, dispatch, match }) {
                             </section>
                             <section className="saber__detail__colorButtons">
                                 <span>Colors:</span>
-                                <button type="button" className="saber__detail__colorButtons__button silver-button" onClick={()=> setSaberImage(saberImageSilver)}>Silver</button>
-                                <button type="button" className="saber__detail__colorButtons__button black-button" onClick={()=> setSaberImage(saberImageBlack)}>Black</button>
+                                <button type="button" className="saber__detail__colorButtons__button silver-button" onClick={()=> changeColorToSilver(setSaberImage, saberImageSilver, actualColor, silverColor)}>Silver</button>
+                                <button type="button" className="saber__detail__colorButtons__button black-button" onClick={()=> changeColorToBlack(setSaberImage, saberImageBlack, actualColor, blackColor)}>Black</button>
+                            </section>
+                            <section className="saber__detail__addToCart">
+                                <button type="button" className="addToCart-button" onClick={()=> addToCart(addProductToCart, saberItem["product-name"])}>Add to cart</button>
                             </section>
                         </section>
                     </section>
@@ -82,7 +103,7 @@ function mapStateToProps({ sabersReducer }) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators({ requestSaberByName }, dispatch),
+        actions: bindActionCreators({ requestSaberByName, addProductToCart }, dispatch),
         dispatch,
     }
 }
