@@ -1,6 +1,6 @@
 .footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 100%;
     padding: 20px 0;
@@ -12,6 +12,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+    width: 33%;
+    padding: 30px;
     color: aliceblue;
     font-weight: 600;
 }
@@ -25,9 +28,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 33%;
 }
 
 #footer__robot-image {
     width: 100px;
     height: auto;
+}
+
+@media (max-width: 544px) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer__contact,
+    .footer__robot-image{
+        width: 100%;
+    }
 }

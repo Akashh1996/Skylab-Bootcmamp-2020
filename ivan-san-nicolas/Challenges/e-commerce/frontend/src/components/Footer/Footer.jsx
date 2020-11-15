@@ -5,14 +5,16 @@ import './Footer.css'
 function Footer() {
 
     const saberForgeURL = "https://saberforge.com/";
+    const saberForgeText = "saberforge.com";
     const starWarsURL = "https://www.starwars.com/";
+    const starWarsText = "starwars.com";
 
     return (
         <section className="footer">
             <div className="footer__contact">
                 <span>Official Store:</span>
                 <a href={saberForgeURL} target="_blank" rel="noreferrer">
-                    <span>{saberForgeURL}</span>
+                    <span>{saberForgeText}</span>
                 </a>
             </div>
             <div className="footer__robot-image">
@@ -22,7 +24,7 @@ function Footer() {
             <div className="footer__contact">
                 <span>Official Star Wars page:</span>
                 <a href={starWarsURL} target="_blank" rel="noreferrer">
-                    <span>{starWarsURL}</span>
+                    <span>{starWarsText}</span>
                 </a>
             </div>
         </section>
