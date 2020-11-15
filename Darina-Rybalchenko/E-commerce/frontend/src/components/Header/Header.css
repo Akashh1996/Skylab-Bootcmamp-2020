@@ -15,5 +15,11 @@
 .basket {
 	font-size: 50px;
 	color: #544854;
-    
+}
+.link-list{
+	color: #544854;
+}
+.link-list:hover{
+	color: #544854;
+	text-decoration:none;
 }
