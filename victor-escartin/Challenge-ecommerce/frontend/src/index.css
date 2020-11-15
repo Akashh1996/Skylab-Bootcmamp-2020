@@ -3,7 +3,7 @@ html {
   box-sizing: border-box;
 }
 body {
-  background-color: #e4e4e4;
+  background-color: #e2e2e2;
   margin: 0;
   height: 100vh;
   font-size: 1.6rem;
@@ -28,7 +28,7 @@ body {
 }
 header {
   grid-area: header;
-  background-color: #203040;
+  background-color: #235d96;
 }
 main {
   
@@ -37,7 +37,7 @@ main {
 }
 footer {
   grid-area: footer;
-  background-color: #203040;
+  background-color: #235d96;
   color: #ffffff;
 }
 /* Common */
