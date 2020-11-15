@@ -11,15 +11,21 @@ function ProductDetail({ productDetail, dispatch, actions } ) {
         if (!productDetail) {
             dispatch(requestProductDetail(+id));
         }
+       
         console.log(productDetail)
+        console.log(id)
+        console.log(productDetail[0][id-1]["product-name"])
 
     return (
         
         <>
             {productDetail &&
-               <div>
-                   <p> {productDetail.name} </p> 
-                    <p>{productDetail.id}</p>
+               <div className="detail-wrapper">
+                   <p>{productDetail[0][id-1]["product-name"]}</p> 
+                   <p>price:{productDetail[0][id-1].price}€</p> 
+                    <p>id:{productDetail[0][id-1].id}</p>
+                    <p>{productDetail[0][id-1].id}</p>
+                    <img className="product_img" alt="product-img" src={`${productDetail[0][id-1]["product-image-url"]}`}></img>
                    
                </div>
                }

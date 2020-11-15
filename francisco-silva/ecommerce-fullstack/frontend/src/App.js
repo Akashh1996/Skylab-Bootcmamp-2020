@@ -6,7 +6,7 @@ import ProductList from './components/ProductList/HeroList';
 function App() {
 	return (
 		<ProductList />,
-		<ProductDetail />
+		<ProductDetail path="/products/:productId" exact component={ProductDetail} />
 	);
 }
 
