@@ -28,7 +28,7 @@ function DetailProduct({ productDetail, dispatch }) {
       {currentDetailData && newModel.current === currentDetailData['product-model'] && (
       <>
         <h1>{currentDetailData['product-name']}</h1>
-        <div key={currentDetailData.id}>
+        <div key={performance.now()}>
           <span>
             Modelo:
             {currentDetailData['product-model']}
@@ -52,7 +52,14 @@ function DetailProduct({ productDetail, dispatch }) {
             {currentDetailData.price}
           </span>
           <br />
-          {currentDetailData['product-image-url'].map((img) => <img src={img} alt="logo" style={{ width: '300px' }} />)}
+          {currentDetailData['product-image-url'].map((img) => (
+            <img
+              src={img}
+              alt="logo"
+              style={{ width: '300px' }}
+              key={performance.now()}
+            />
+          ))}
         </div>
         <button
           type="button"

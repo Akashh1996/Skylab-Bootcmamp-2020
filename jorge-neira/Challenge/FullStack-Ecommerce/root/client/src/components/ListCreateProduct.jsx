@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 function ListCreateProduct({ data, onAddToCartClicked }) {
-  console.log(data, onAddToCartClicked);
   return (
     <>
-      <div key={Date.now()}>
+      <div key={performance.now()}>
         <Link to={`product/${data['product-model']}`}>
           <span>
             {data['product-name']}
@@ -19,20 +18,11 @@ function ListCreateProduct({ data, onAddToCartClicked }) {
         {' '}
         <button
           type="button"
-          onClick={onAddToCartClicked(
-            {
-              cartId: Date.now(),
-              productName: data['product-name'],
-              productModel: data['product-model'],
-              price: data.price,
-            },
-          )}
+          onClick={onAddToCartClicked}
         >
           Add
-
         </button>
         {' '}
-        <button type="button">del</button>
       </div>
     </>
   );

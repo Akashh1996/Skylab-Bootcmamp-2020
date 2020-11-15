@@ -5,6 +5,8 @@ const initialState = {};
 export default function productReducer(state = initialState, action) {
   debugger;
   switch (action.type) {
+    case actionTypes.LOAD_CART_LIST:
+      return { ...state, cartList: action.cartList };
     case actionTypes.LOAD_PRODUCT_LIST:
       return { ...state, productList: action.productslist };
     case actionTypes.LOAD_PRODUCT_BY_MODEL:

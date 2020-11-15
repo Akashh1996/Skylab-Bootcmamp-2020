@@ -17,9 +17,16 @@ function ListProduct({ products, dispatch }) {
       <section>
         {products && products.map((product) => (
           <ListCreateProduct
-            onAddToCartClicked={() => addProductToCart()}
+            onAddToCartClicked={() => addProductToCart(
+              {
+                cartId: Date.now(),
+                productName: product['product-name'],
+                productModel: product['product-model'],
+                price: product.price,
+              },
+            )}
             data={product}
-            key={product.id}
+            key={performance.now()}
           />
         ))}
       </section>

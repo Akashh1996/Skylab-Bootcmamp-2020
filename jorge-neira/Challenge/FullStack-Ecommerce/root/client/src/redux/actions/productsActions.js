@@ -3,6 +3,13 @@ import actionTypes from './actionsTypes';
 
 const URL = 'http://localhost:5000/';
 
+function getCartList(cartList) {
+  return {
+    type: actionTypes.LOAD_CART_LIST,
+    cartList,
+  };
+}
+
 function addProductToCartSuccess(error) {
   return {
     error,
@@ -67,6 +74,18 @@ export function addProductToCart(product) {
       });
     } catch (error) {
       dispatch(addProductToCartSuccess(error));
+    }
+  };
+}
+
+export function getCurrentCart() {
+  return async (dispatch) => {
+    const endpoint = 'cart';
+    try {
+      const cartList = await axios.get(`${URL}${endpoint}`);
+      dispatch(getCartList(cartList.data));
+    } catch (error) {
+      console.log(error);
     }
   };
 }
