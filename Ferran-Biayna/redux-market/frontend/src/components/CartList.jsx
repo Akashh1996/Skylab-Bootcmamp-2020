@@ -15,25 +15,21 @@ function CartList({ cart, dispatch }) {
   }
 
   return (
-    <>
+    <div>
       {cart && cart.length === 0 ? <p>Empty cart!</p> : (
         <>
           <p>{`Total - ${cart && cart.length && new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(cart.reduce((acc, product) => acc + product.price, 0))}`}</p>
-          <ol>
-            {cart && cart.length && cart.map((product) => (
-              <li>
-                <div>
-                  <Link to={`/product/${product.id}`}><span>{product.name}</span></Link>
-                  <button type="button" value={product.id} onClick={() => dispatch(requestDeleteProduct(product.id))}>x</button>
-                  <p><img alt={product.name} src={product.image} /></p>
-                  <p>{new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(product.price)}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
+          {cart && cart.length && cart.map((product) => (
+            <div>
+              <Link to={`/product/${product.id}`}><span>{product.name}</span></Link>
+              <button type="button" value={product.id} onClick={() => dispatch(requestDeleteProduct(product.id))}>x</button>
+              <p><img alt={product.name} src={product.image} /></p>
+              <p>{new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(product.price)}</p>
+            </div>
+          ))}
         </>
       )}
-    </>
+    </div>
   );
 }
 

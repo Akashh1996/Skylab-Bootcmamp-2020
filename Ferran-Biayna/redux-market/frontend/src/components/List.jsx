@@ -15,20 +15,25 @@ function ProductList({ products, dispatch }) {
   }
 
   return (
-    <>
-      <ol>
-        {products && products.length && products.map((product) => (
-          <li>
-            <div>
-              <Link to={`/product/${product.id}`}><span>{product.name}</span></Link>
-              <button type="button" value={product.id} onClick={() => dispatch(requestAddProducts(product.id))}>Add</button>
-              <p><img alt={product.name} src={product.image} /></p>
-              <p>{new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(product.price)}</p>
-            </div>
-          </li>
-        ))}
-      </ol>
-    </>
+    <div className="list-container">
+      {products && products.length && products.map((product) => (
+        <div className="list-container__products">
+          <Link className="products__links" to={`/product/${product.id}`}>
+            <span>{product.name}</span>
+            <p><img alt={product.name} src={product.image} /></p>
+          </Link>
+          <div className="products__price">
+            {' '}
+            <span>{new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(product.price)}</span>
+            <button type="button" value={product.id} onClick={() => dispatch(requestAddProducts(product.id))}>
+              <span className="material-icons">
+                shopping_cart
+              </span>
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }
 

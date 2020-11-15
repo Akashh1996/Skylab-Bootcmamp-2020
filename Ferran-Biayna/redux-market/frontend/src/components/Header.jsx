@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <>
-      <Link to="/cart"><p>My Cart</p></Link>
-      <Link to="/"><p>Products List</p></Link>
-    </>
+    <div className="header-container">
+      <Link className="header-container__p" to="/cart"><p>MY CART</p></Link>
+      <Link className="header-container__p" to="/"><p>PRODUCTS</p></Link>
+    </div>
   );
 }
 
