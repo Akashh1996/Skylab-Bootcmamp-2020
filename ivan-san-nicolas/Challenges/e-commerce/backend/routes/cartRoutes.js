@@ -16,7 +16,7 @@ function routes() {
     })
     .delete((req, res) => {
         console.log(req);
-        const productName = req.query.productName;
+        const productName = req.query.productName[0];
         const newCart = [];
         let repeatedProducts = 0;
         cart[0]["product-list"].map((product) => {

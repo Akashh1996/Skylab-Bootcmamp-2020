@@ -28,6 +28,7 @@ export function requestCart() {
 }
 
 export function deleteProductFromCart(productName) {
+    console.log(`Product name: ${productName}`);
     return async (dispatch) => {
         const endpoint = `http://localhost:1240/cart?productName=${productName}`;
         try {

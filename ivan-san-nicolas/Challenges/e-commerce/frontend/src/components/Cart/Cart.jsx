@@ -37,7 +37,10 @@ function Cart({ cart, dispatch }) {
                                 <p>Price: {product["product-price"]}$</p>
                             </div>
                             <div className="cart__product__row__section delete_button">
-                                <button>Delete</button>
+                                <div onClick={() => dispatch(deleteProductFromCart(product["product-name"]))}>
+                                    <img src="https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/ed60e36b1ad46c7c1607c8af0c151491/icons8-basura-30.png" 
+                                    alt="delete-product" id="delete-button"/>
+                                </div>
                             </div>
                         </div>
                     );
