@@ -23,7 +23,7 @@ function productController(Product) {
   }
 
   function allMiddleware(req, res, next) {
-    req.product = Product.getProductById(+req.params.heroId);
+    req.product = Product.getProductById(+req.params.productId);
     next();
   }
 

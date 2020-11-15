@@ -10,7 +10,7 @@ const productRouter = require('./src/routes/productRouter')(Product);
 
 const app = express();
 app.use(cors());
-const port = process.env.PORT || 6000;
+const port = process.env.PORT || 1400;
 
 app.use(morgan('tiny'));
 
