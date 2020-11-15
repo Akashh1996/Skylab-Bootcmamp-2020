@@ -3,7 +3,6 @@ import actionTypes from '../actions/actionsTypes';
 const initialState = {};
 
 export default function productReducer(state = initialState, action) {
-  debugger;
   switch (action.type) {
     case actionTypes.LOAD_CART_LIST:
       return { ...state, cartList: action.cartList };

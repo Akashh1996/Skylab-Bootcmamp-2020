@@ -1,4 +1,3 @@
-/* eslint-disable no-debugger */
 const products = require('../../api/ecommerce.json');
 let cartProducts = require('../../api/cart.json');
 

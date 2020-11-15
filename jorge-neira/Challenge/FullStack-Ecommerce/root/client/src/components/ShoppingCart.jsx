@@ -5,7 +5,6 @@ import { PropTypes } from 'prop-types';
 import { getCurrentCart } from '../redux/actions/productsActions';
 
 function ShoppingCart({ cartList, dispatch }) {
-  debugger;
   if (!cartList) {
     dispatch.getCurrentCart();
   }

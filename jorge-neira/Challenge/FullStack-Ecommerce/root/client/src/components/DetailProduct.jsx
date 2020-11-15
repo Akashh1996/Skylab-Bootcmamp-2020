@@ -7,18 +7,15 @@ import { useParams } from 'react-router-dom';
 import { getDetailProduct, addProductToCart } from '../redux/actions/productsActions';
 
 function DetailProduct({ productDetail, dispatch }) {
-  debugger;
   const { id } = useParams();
   const currentDetailData = productDetail;
   const newModel = useRef(id);
 
   useEffect(() => {
     if (currentDetailData && newModel.current !== currentDetailData['product-model']) {
-      debugger;
       dispatch.getDetailProduct(id);
     }
     if (!currentDetailData) {
-      debugger;
       dispatch.getDetailProduct(id);
     }
   }, []);

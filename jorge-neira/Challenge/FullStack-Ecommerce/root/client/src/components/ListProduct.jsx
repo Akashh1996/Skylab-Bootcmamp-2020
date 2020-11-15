@@ -7,7 +7,6 @@ import { loadProductList, addProductToCart } from '../redux/actions/productsActi
 import ListCreateProduct from './ListCreateProduct';
 
 function ListProduct({ products, dispatch }) {
-  debugger;
   if (!products) {
     dispatch.loadProductList();
   }
