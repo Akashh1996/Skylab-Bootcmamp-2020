@@ -4,7 +4,9 @@ const morgan = require('morgan');
 const chalk = require('chalk');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const asusRouter = require('./src/routes/asusRouter.js')();
+const Products = require('./src/stores/marketStore');
+const productsListRouter = require('./src/routes/marketRouter')(Products);
+const productsDetailRouter = require('./src/routes/marketRouter')(Products);
 
 const asusApp = express();
 const port = process.env.PORT || 5000;
@@ -13,9 +15,9 @@ asusApp.use(cors());
 asusApp.use(morgan('tiny'));
 asusApp.use(bodyParser.urlencoded({ extended: true }));
 asusApp.use(bodyParser.json());
-
-asusApp.use('/list', asusRouter);
+asusApp.use('/', productsListRouter);
+asusApp.use('/product', productsDetailRouter);
 
 asusApp.listen(port, () => {
-  debug(`Server is running on port ${chalk.blue(port)}`);
+  debug(`Server is running on port ${chalk.yellowBright(port)}`);
 });
