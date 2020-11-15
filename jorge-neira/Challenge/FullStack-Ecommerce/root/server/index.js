@@ -16,7 +16,7 @@ asusApp.use(morgan('tiny'));
 asusApp.use(bodyParser.urlencoded({ extended: true }));
 asusApp.use(bodyParser.json());
 asusApp.use('/', productsListRouter);
-asusApp.use('/product', productsDetailRouter);
+asusApp.use('/', productsDetailRouter);
 
 asusApp.listen(port, () => {
   debug(`Server is running on port ${chalk.yellowBright(port)}`);

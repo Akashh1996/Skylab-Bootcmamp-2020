@@ -10,7 +10,7 @@ function marketRouter(Products) {
   router.route('/')
     .get(products.getMethod);
 
-  router.route('/:productName')
+  router.route('/product/:productName')
     .all(product.allMiddleware)
     .get(product.getMethod);
 

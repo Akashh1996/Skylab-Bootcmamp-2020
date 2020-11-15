@@ -4,23 +4,19 @@ import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { loadProductList, getDetailProduct } from '../redux/actions/productsActions';
+import ListCreateProduct from './ListCreateProduct';
 
-function ListProduct({ products, productDetail, dispatch }) {
+function ListProduct({ products, dispatch }) {
+  debugger;
   if (!products) {
     dispatch.loadProductList();
-  }
-  if (products) {
-    dispatch.getDetailProduct('H500GV-HC002R');
   }
   return (
     <div>
       Hello World
-      <div>
-        <ul>
-          {products && products.map((product) => <li key={product.id}>{product['product-model']}</li>)}
-        </ul>
-        <span>{productDetail['product-name']}</span>
-      </div>
+      <section>
+        {products && products.map((product) => <ListCreateProduct data={product} />)}
+      </section>
     </div>
   );
 }
@@ -33,6 +29,7 @@ ListProduct.propTypes = {
 };
 
 function mapStateToProps(state) {
+  debugger;
   return {
     productDetail: state.productReducer.productDetail,
     products: state.productReducer.productList,
@@ -40,6 +37,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
+  debugger;
   return {
     dispatch: bindActionCreators({ loadProductList, getDetailProduct }, dispatch),
   };
