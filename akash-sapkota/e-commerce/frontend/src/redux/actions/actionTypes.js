@@ -1,0 +1,7 @@
+const actionTypes = {
+  LOAD_PRODUCTS: 'LOAD_PRODUCTS',
+  LOAD_PRODUCTS_ERROR: 'LOAD_PRODUCTS_ERROR',
+  LOAD_PRODUCT_DETAIL: 'LOAD_PRODUCT_DETAIL',
+};
+
+export default actionTypes;
