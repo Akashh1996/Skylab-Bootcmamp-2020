@@ -12,8 +12,12 @@
     justify-content: space-around;
     align-items: center;
     margin-top: 90px;
+    margin-bottom: 0;
     padding: 40px 40px;
-    position: relative;
+    background-image: url('https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/3519d5d1d40ef65e484e77e98048cd0f/5SCIFI10006B_1480x800_(2).jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .saber-wrapper {

@@ -3,8 +3,11 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: auto;
-    margin-top: 150px;
+    padding: 150px 0 200px 0;
+    background-image: url('https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/6e93ce2caca57e776c98dcc582b132dc/1366_2000.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .saber__detail__image {
@@ -102,4 +105,34 @@
 .black-button {
     color: white;
     background-color: black;
+}
+
+@media (max-width: 1024px) {
+    .saber__detail {
+        flex-direction: column;
+    }
+
+    .saber__detail__image {
+        width: 65%;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+
+    #saber__detail__image {
+        width: 100%;
+    }
+
+    .saber__detail__properties {
+        width: 80%;
+    }
+
+    .saber__detail__properties__text {
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .saber__detail__image {
+        width: 75%;
+    }
 }
