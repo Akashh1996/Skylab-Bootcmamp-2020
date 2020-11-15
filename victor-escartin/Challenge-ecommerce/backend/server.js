@@ -1,8 +1,10 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import path from 'path';
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
+import uploadRouter from './routers/uploadRouter.js';
 
 dotenv.config();
 
@@ -16,11 +18,11 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/skylab', {
   useCreateIndex: true,
 });
 
-
-
-
+app.use('/api/uploads', uploadRouter);
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
+const __dirname = path.resolve();
+app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 app.get('/', (req, res) => {
   res.send('Server is ready');
 });
