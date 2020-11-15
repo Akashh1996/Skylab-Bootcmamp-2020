@@ -1,46 +1,5 @@
 [
   {
-    "product-list": [
-      {
-        "product-name":"Archon",
-        "product-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/7af47a39217aed67c1f280b5f80ed3d4/archon-4_1296x.jpg",
-        "product-black-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/84c06ec88e4e64545f2991a2beb80187/archon-v2_1296x.jpg",
-        "product-url":"https://saber-forgers.web.app/anchor",
-        "product-price":149,
-        "product-description":"The Archon blends form and function with subtle grace. The gorgeous brushed shrouds feature highly detailed machining, and the anodized black body provides a beautiful accent.",
-        "colors":["standart","black"],
-        "actual-color":"Silver",
-        "product-specifications":{
-          "length":"14” (35.5 cm)",
-          "diameter":"",
-          "inner-diameter":"1”",
-          "weight":"14.4 oz",
-          "blade-socket":"Standart",
-          "belt Clip Type":"D Ring + Covertech Knob",
-          "finish":"Black Anodized/Brushed Silver/Chrome",
-          "material":"CNC precision machined Aluminum"
-        }
-      },
-      {
-        "product-name":"Archon",
-        "product-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/7af47a39217aed67c1f280b5f80ed3d4/archon-4_1296x.jpg",
-        "product-black-image-url":"https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/84c06ec88e4e64545f2991a2beb80187/archon-v2_1296x.jpg",
-        "product-url":"https://saber-forgers.web.app/anchor",
-        "product-price":149,
-        "product-description":"The Archon blends form and function with subtle grace. The gorgeous brushed shrouds feature highly detailed machining, and the anodized black body provides a beautiful accent.",
-        "colors":["standart","black"],
-        "actual-color":"Silver",
-        "product-specifications":{
-          "length":"14” (35.5 cm)",
-          "diameter":"",
-          "inner-diameter":"1”",
-          "weight":"14.4 oz",
-          "blade-socket":"Standart",
-          "belt Clip Type":"D Ring + Covertech Knob",
-          "finish":"Black Anodized/Brushed Silver/Chrome",
-          "material":"CNC precision machined Aluminum"
-        }
-      }
-    ]
+    "product-list": []
   }
 ]
