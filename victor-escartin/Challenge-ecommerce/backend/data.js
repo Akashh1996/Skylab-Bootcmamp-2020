@@ -17,7 +17,7 @@ const data = {
   ],
   products: [
     {
-      _id: '1',
+   
       name: "MEN'S BETTER THAN NAKED&trade",
       category: 'Shirts',
       image: "http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/mens-better-than-naked-jacket-AVMH_LC9_hero.png",
@@ -29,7 +29,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '2',
+ 
       name: "WOMEN'S BETTER THAN NAKED&trade",
       category: 'Shirts',
       image: "http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/womens-better-than-naked-jacket-AVKL_NN4_hero.png",
@@ -41,7 +41,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '3',
+  
       name: "WOMEN'S SINGLE-TRACK SHOE",
       category: 'Shirts',
       image: "http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/womens-single-track-shoe-ALQF_JM3_hero.png",
@@ -53,7 +53,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '4',
+  
       name: "Enduro Boa&reg; Hydration Pack",
       category: 'Pants',
       image: "http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/enduro-boa-hydration-pack-AJQZ_JK3_hero.png",
@@ -65,7 +65,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '5',
+
       name: "MEN'S BETTER THAN NAKED&trade",
       category: 'Pants',
       image: "http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/mens-better-than-naked-jacket-AVMH_LC9_hero.png",
@@ -77,7 +77,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '6',
+ 
       name: "WOMEN'S BETTER THAN NAKED&trade",
       category: 'Pants',
       image: "http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/womens-better-than-naked-jacket-AVKL_NN4_hero.png",
@@ -89,7 +89,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '7',
+   
       name: "WOMEN'S SINGLE-TRACK SHOE",
       category: 'Pants',
       image: "http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/womens-single-track-shoe-ALQF_JM3_hero.png",
@@ -101,7 +101,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '8',
+ 
       name: "Enduro Boa&reg; Hydration Pack",
       category: 'Pants',
       image: "http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/enduro-boa-hydration-pack-AJQZ_JK3_hero.png",
