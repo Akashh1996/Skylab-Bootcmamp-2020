@@ -19,7 +19,7 @@ function ProductList({ productList, dispatch}) {
                 productList[0].map((product) => <div className="product_wrapper" key = {product.id}>
                 <span><Link to= {`/${product.id}`}>{product["product-name"]}</Link></span>
                 <span>{product.price}€</span>
-                <span class="material-icons">shopping_cart</span>
+                <span class="material-icons"><Link to= {`/cart`}>shopping_cart</Link></span>
                 <img className="product_img" alt="product-img" src={`${product['product-image-url']}`}></img>
                 </div>
                 )}
