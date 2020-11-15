@@ -19,7 +19,6 @@ function SabersList({ sabersList, dispatch }) {
     <>
         {sabersList?.length > 0 ? (
           <div className="sabersList-section">
-              <FirstRow />
               <h1 className="sabersList-section__sabers__title">Sabers</h1>
             <ul className="sabersList-section__sabers">
                 {
