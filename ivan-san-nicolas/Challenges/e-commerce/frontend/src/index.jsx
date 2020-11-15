@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import configureStore from './redux/configureStore';
+import reportWebVitals from './reportWebVitals';
 import Header from './components/Header/Header';
 import SabersList from './components/SabersList/SabersList';
 import SaberDetail from './components/SaberDetail/SaberDetail';
 import Cart from './components/Cart/Cart';
-import reportWebVitals from './reportWebVitals';
+import Footer from './components/Footer/Footer';
 import './index.css';
 
 const store = configureStore({ sabersReducer: { sabersArray: [] }, cartReducer: { cartArray: [] } });
@@ -23,6 +24,7 @@ ReactDOM.render(
           <Route path="/cart" exact component={Cart} />
         </Switch>
       </Provider>
+      <Footer />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

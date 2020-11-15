@@ -1,0 +1,33 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #2B2F33;
+    border-top: 1.5px solid black;
+}
+
+.footer__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: aliceblue;
+    font-weight: 600;
+}
+
+.footer__contact > a {
+    color: rgb(164, 213, 255);
+    text-decoration: none;
+}
+
+.footer__robot-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer__robot-image {
+    width: 100px;
+    height: auto;
+}
