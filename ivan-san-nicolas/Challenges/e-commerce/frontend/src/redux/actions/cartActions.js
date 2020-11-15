@@ -15,11 +15,27 @@ function requestError(error) {
     }
 }
 
-export default function requestCart() {
+export function requestCart() {
     return async (dispatch) => {
         const endpoint = 'http://localhost:1240/cart';
         try {
             const cart = await axios.get(endpoint);
+            dispatch(requestCartSuccess(cart.data));
+        } catch (error) {
+            dispatch(requestError(error));
+        }
+    }
+}
+
+export function deleteProductFromCart(productName) {
+    return async (dispatch) => {
+        const endpoint = `http://localhost:1240/cart?productName=${productName}`;
+        try {
+            const cart = await axios.delete(endpoint, {
+                params: {
+                    productName,
+                }
+            });
             dispatch(requestCartSuccess(cart.data));
         } catch (error) {
             dispatch(requestError(error));

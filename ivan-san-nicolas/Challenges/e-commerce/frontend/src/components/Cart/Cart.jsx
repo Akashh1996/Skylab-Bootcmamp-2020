@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import requestCart from '../../redux/actions/cartActions';
+import { requestCart, deleteProductFromCart } from '../../redux/actions/cartActions';
 import './Cart.css';
 
 function Cart({ cart, dispatch }) {
@@ -35,6 +35,9 @@ function Cart({ cart, dispatch }) {
                             </div>
                             <div className="cart__product__row__section product__price">
                                 <p>Price: {product["product-price"]}$</p>
+                            </div>
+                            <div className="cart__product__row__section delete_button">
+                                <button>Delete</button>
                             </div>
                         </div>
                     );
@@ -72,7 +75,7 @@ function mapStateToProps({ cartReducer }) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators({ requestCart }, dispatch),
+        actions: bindActionCreators({ requestCart, deleteProductFromCart }, dispatch),
         dispatch,
     }
 }
