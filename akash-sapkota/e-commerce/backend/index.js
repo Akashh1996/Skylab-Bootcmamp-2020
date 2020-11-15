@@ -1,5 +1,5 @@
-const cors = require('cors');
 const express = require('express');
+const cors = require('cors');
 const path = require('path');
 const debug = require('debug')('app');
 const chalk = require('chalk');
@@ -9,10 +9,10 @@ const Product = require('./src/stores/productStore');
 const productRouter = require('./src/routes/productRouter')(Product);
 
 const app = express();
+app.use(cors());
 const port = process.env.PORT || 6000;
 
 app.use(morgan('tiny'));
-app.use(cors);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
