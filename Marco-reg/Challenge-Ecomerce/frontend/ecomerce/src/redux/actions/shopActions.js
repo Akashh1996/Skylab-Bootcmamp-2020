@@ -1,7 +1,7 @@
 import actionTypes from './actionTypes';
 import axios from 'axios';
 function requestProductsSuccess(productList) {
-    debugger;
+    
     return {
         type: actionTypes.LOAD_PRODUCTS,
         productList
@@ -37,18 +37,21 @@ function requestProductDetailError(error) {
         error
     };
 }
-export function requestProductDetail(id) {
+export function requestProductDetail(productId) {
+   
     return async (dispatch) => {
-        const endpoint = `http://localhost:3020/products/${id}`;
+        const endpoint = `http://localhost:3020/products/${productId}`;
         try {
-            const product = await axios.get(endpoint, {
-                params: {
-                    productId: id
-                }
-            })
+            const product = await axios.get(endpoint)
+          
             dispatch(requestProductDetailSuccess(product.data));
         } catch (error) {
             dispatch(requestProductDetailError(error));
         }
     };
+}
+export function cleanProductDetail() {
+    return {
+        type: actionTypes.CLEAN_PRODUCT_DETAIL,
+    }
 }

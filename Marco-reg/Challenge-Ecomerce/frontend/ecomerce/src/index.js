@@ -14,7 +14,7 @@ ReactDOM.render(
             <BrowserRouter>
         <Switch>
             <Route path = "/" exact component = {ProductList} ></Route>
-            <Route path = "/:Id" exact component = {ProductDetail} ></Route>
+            <Route path = "/:productId" exact component = {ProductDetail} ></Route>
         </Switch>
       </BrowserRouter>
         </Provider>

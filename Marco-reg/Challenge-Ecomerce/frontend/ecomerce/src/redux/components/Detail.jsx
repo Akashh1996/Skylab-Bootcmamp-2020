@@ -1,38 +1,37 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { requestProductDetail } from '../../redux/actions/shopActions';
-function ProductDetail({ productDetail, dispatch, actions } ) {
-    const id = window.location.pathname.match(/\d+/)[0]
-    debugger;
-        if (!productDetail) {
-            dispatch(requestProductDetail(+id));
+import { requestProductDetail, cleanProductDetail } from '../actions/shopActions';
+
+
+function Detail({match, productDetail, dispatch, actions }){
+    const [productId] = useState(+match.params.productId);
+    useEffect(() => {
+        if(productId){
+            dispatch(requestProductDetail(productId));
         }
-        
-    return (
+        return () => actions.cleanProductDetail();
+    },[productId, dispatch, actions])
+    return(
         <>
-            {productDetail &&
-               <div className="detail-wrapper">
-                   <p>{productDetail[0][id-1]["product-name"]}</p>
-                   <p>price:{productDetail[0][id-1].price}€</p>
-                    <p>id:{productDetail[0][id-1].id}</p>
-                    <p>{productDetail[0][id-1].id}</p>
-                    <img className="product_img" alt="product-img" src={`${productDetail[0][id-1]["product-image-url"]}`}></img>
-               </div>
-               }
+            {productDetail && 
+            <h1>{productDetail['product-name']}</h1>}
+            {productDetail && 
+            <img src={productDetail['product-image-url']} alt={"product img"}/>}
         </>
-    );
+    )
 }
-function mapStateToProps(state) {
+function mapStateToProps(state){
+    
     return {
-        productDetail: state.productReducer
-    };
+        
+        productDetail: state.productReducer.productDetail,
+    }
 }
-function mapDispatchToProps(dispatch) {
-    debugger;
+function mapDispatchToProps(dispatch){
     return {
-        actions: bindActionCreators({ }, dispatch),
-        dispatch
-    };
+        actions: bindActionCreators({ cleanProductDetail }, dispatch),
+        dispatch,
+    }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(ProductDetail);
+export default connect(mapStateToProps, mapDispatchToProps)(Detail);

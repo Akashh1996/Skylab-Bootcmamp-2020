@@ -2,7 +2,7 @@ import actionTypes from '../actions/actionTypes';
 
 
 export default function productReducer(state = [], action) {
-    debugger
+    
     switch (action.type) {
         case actionTypes.LOAD_PRODUCTS:
             return [ action.productList ];
@@ -12,7 +12,10 @@ export default function productReducer(state = [], action) {
             return { ...state, error: action.error };
         case actionTypes.LOAD_PRODUCT_DETAIL:
         const detail = {...state, productDetail: action.productDetail }
-        return detail
+       
+            return detail
+        case actionTypes.CLEAN_PRODUCT_DETAIL:
+            return {...state, productDetail: null}
         default:
             return state;
     }

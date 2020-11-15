@@ -7,12 +7,12 @@ import {Link}from 'react-router-dom';
 
 
 function ProductList({ productList, dispatch}) {
-    debugger;
+    
     if (productList.length <= 0) {
         dispatch(requestProducts());
     }
     console.log(productList)
-    debugger;
+   
     return (
         <div className = "list-wrapper">
             {productList &&
@@ -25,13 +25,13 @@ function ProductList({ productList, dispatch}) {
     );
 }
 function mapStateToProps(state) {
-   debugger
+   
     return {
         productList: state.productReducer
     };
 }
 function mapDispatchToProps(dispatch) {
-    debugger
+    
     return {
         actions: bindActionCreators({ }, dispatch),
         dispatch
