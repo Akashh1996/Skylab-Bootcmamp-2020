@@ -6,7 +6,7 @@ import { addProductToCart } from '../../redux/actions/cartActions';
 import './SaberDetail.css';
 
 function SaberDetail({ saberItem, dispatch, match }) {
-    debugger;
+    
     const saberName = match?.params?.saberName;
     if(saberItem === undefined) {
         dispatch(requestSaberByName(saberName));
@@ -27,7 +27,7 @@ function SaberDetail({ saberItem, dispatch, match }) {
         actualColor = blackColor;
         setSaberImage(saberImageBlack);
     }
-    
+
     function changeColorToSilver(setSaberImage, saberImageSilver, actualColor, silverColor) {
         actualColor = silverColor;
         setSaberImage(saberImageSilver);
@@ -37,7 +37,7 @@ function SaberDetail({ saberItem, dispatch, match }) {
         alert("Item added to cart!");
         dispatch(addProductToCart(productName, actualColor));
     }
-    
+
     return (
         <>
                 {saberItem ? (saberItem["product-name"] ? (
