@@ -77,20 +77,6 @@
     box-shadow: 4px 4px 5px rgb(28, 28, 28);
 }
 
-.sabersList-loading-screen {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 130px;
-    color: white;
-    font-weight: 600;
-}
-
-.loading-gif {
-    width: 300px;
-}
-
 @media (max-width: 880px){
 
     .sabersList-section {

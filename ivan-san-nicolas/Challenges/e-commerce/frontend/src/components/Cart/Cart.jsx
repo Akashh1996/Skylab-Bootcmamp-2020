@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { requestCart, deleteProductFromCart } from '../../redux/actions/cartActions';
+import LoadingGif from '../LoadingGif/LoadingGif';
 import './Cart.css';
 
 function Cart({ cart, dispatch }) {
@@ -53,9 +54,9 @@ function Cart({ cart, dispatch }) {
                     );
                 })
             ) : (
-                <p>Im sorry friend</p>
+                <LoadingGif />
             ) : (
-                <p>Sooo sorry</p>
+                <h1 className="cart-products__empty">Add some products to buy!</h1>
             )}
         </div>
         <div className="cart__final-buy">

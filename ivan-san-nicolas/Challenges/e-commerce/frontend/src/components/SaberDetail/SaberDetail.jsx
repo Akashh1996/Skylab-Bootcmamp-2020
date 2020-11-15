@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { requestSaberByName } from '../../redux/actions/sabersActions';
 import { addProductToCart } from '../../redux/actions/cartActions';
+import LoadingGif from '../LoadingGif/LoadingGif';
 import './SaberDetail.css';
 
 function SaberDetail({ saberItem, dispatch, match }) {
@@ -92,9 +93,9 @@ function SaberDetail({ saberItem, dispatch, match }) {
                         </section>
                     </section>
                 ) : (
-                    <h1 style={{color:"white"}}>There's no saber :\</h1>
+                    <LoadingGif />
                 )) : (
-                    <h1>There's no saber :/</h1>
+                    <LoadingGif />
                 )
             }
         </>
