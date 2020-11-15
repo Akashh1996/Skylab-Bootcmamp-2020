@@ -10,8 +10,9 @@ function Cart({ cart, dispatch }) {
     }
 
     let totalPrice = 0;
-
     let totalNames = [];
+
+    const silverColor = "Silver";
 
     return (
         <div className="cart-section">
@@ -23,9 +24,15 @@ function Cart({ cart, dispatch }) {
                     return (
                         <div className="cart__product__row">
                             <div className="cart__product__row__section product__image">
-                                <img src={product["product-image-url"]} 
-                                alt={product["product-name"] + "image"}
-                                id="cart__product__row__image"/>
+                                {product["actual-color"] === silverColor ? (
+                                    <img src={product["product-image-url"]} 
+                                    alt={product["product-name"] + "image"}
+                                    id="cart__product__row__image"/>
+                                ) : (
+                                    <img src={product["product-black-image-url"]} 
+                                    alt={product["product-name"] + "image"}
+                                    id="cart__product__row__image"/>
+                                )}
                             </div>
                             <div className="cart__product__row__section product__name">
                                 <p>{product["product-name"]}</p>

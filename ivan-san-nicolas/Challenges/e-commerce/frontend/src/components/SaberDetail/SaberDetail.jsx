@@ -6,7 +6,7 @@ import { addProductToCart } from '../../redux/actions/cartActions';
 import './SaberDetail.css';
 
 function SaberDetail({ saberItem, dispatch, match }) {
-    
+
     const saberName = match?.params?.saberName;
     if(saberItem === undefined) {
         dispatch(requestSaberByName(saberName));
@@ -18,23 +18,25 @@ function SaberDetail({ saberItem, dispatch, match }) {
     let saberImageBlack = saberItem ? saberItem["product-black-image-url"] : null;
     const [saberImage, setSaberImage] = useState(saberItem?["product-image-url"] : null);
 
-    let counter = 1;
-    let actualColor = null;
     const blackColor = "Black";
     const silverColor = "Silver";
+    const [actualColor, setActualColor] = useState(silverColor);
 
-    function changeColorToBlack(setSaberImage, saberImageBlack, actualColor, blackColor) {
-        actualColor = blackColor;
+    let counter = 1;
+
+    function changeColorToBlack(setSaberImage, saberImageBlack, setActualColor, blackColor) {
+        setActualColor(blackColor);
         setSaberImage(saberImageBlack);
     }
 
-    function changeColorToSilver(setSaberImage, saberImageSilver, actualColor, silverColor) {
-        actualColor = silverColor;
+    function changeColorToSilver(setSaberImage, saberImageSilver, setActualColor, silverColor) {
+        setActualColor(silverColor);
         setSaberImage(saberImageSilver);
     }
 
     function addToCart(addProductToCart, productName, actualColor) {
         alert("Item added to cart!");
+        console.log(actualColor);
         dispatch(addProductToCart(productName, actualColor));
     }
 
@@ -77,11 +79,11 @@ function SaberDetail({ saberItem, dispatch, match }) {
                             </section>
                             <section className="saber__detail__colorButtons">
                                 <span>Colors:</span>
-                                <button type="button" className="saber__detail__colorButtons__button silver-button" onClick={()=> changeColorToSilver(setSaberImage, saberImageSilver, actualColor, silverColor)}>Silver</button>
-                                <button type="button" className="saber__detail__colorButtons__button black-button" onClick={()=> changeColorToBlack(setSaberImage, saberImageBlack, actualColor, blackColor)}>Black</button>
+                                <button type="button" className="saber__detail__colorButtons__button silver-button" onClick={()=> changeColorToSilver(setSaberImage, saberImageSilver, setActualColor, silverColor)}>Silver</button>
+                                <button type="button" className="saber__detail__colorButtons__button black-button" onClick={()=> changeColorToBlack(setSaberImage, saberImageBlack, setActualColor, blackColor)}>Black</button>
                             </section>
                             <section className="saber__detail__addToCart">
-                                <button type="button" className="addToCart-button" onClick={()=> addToCart(addProductToCart, saberItem["product-name"])}>Add to cart</button>
+                                <button type="button" className="addToCart-button" onClick={()=> addToCart(addProductToCart, saberItem["product-name"], actualColor)}>Add to cart</button>
                             </section>
                         </section>
                     </section>
