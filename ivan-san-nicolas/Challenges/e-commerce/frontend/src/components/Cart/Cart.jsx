@@ -14,7 +14,7 @@ function Cart({ cart, dispatch }) {
     let totalNames = [];
 
     return (
-        <>
+        <div className="cart-section">
         <div className="cart__products">
             {cart[0] ? cart[0]["product-list"] ? (
                 cart[0]["product-list"].map((product) => {
@@ -66,7 +66,7 @@ function Cart({ cart, dispatch }) {
                 <p>Total Price: {totalPrice}$</p>
             </div>
         </div>
-        </>
+        </div>
     );
 }
 
