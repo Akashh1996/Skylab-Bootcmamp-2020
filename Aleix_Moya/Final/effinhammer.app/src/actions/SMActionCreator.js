@@ -18,8 +18,15 @@ export function loadWargear(wargear) {
 		wargear
 	};
 }
-export const loadWeapons = () => async (dispatch) => {
-	const gunResponse = await axios.get('../data/SpaceMarineWargear.json');
+export function loadWeapons() {
+	return async (dispatch) => {
+		const endpoint = 'http://localhost:2020/';
+		try {
+			const weapons = await axios.get(endpoint);
+			dispatch(loadWargear(weapons));
+		} catch (error) {}
+	};
+	/*const gunResponse = await axios.get('../data/SpaceMarineWargear.json');
 	const Astartes = gunResponse.data;
-	dispatch(loadWargear(Astartes));
-};
+	dispatch(loadWargear(Astartes));*/
+}

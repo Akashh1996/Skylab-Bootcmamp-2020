@@ -1,0 +1,131 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #ebebeb;
+}
+
+.main-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 450px;
+	height: 80vh;
+	margin: 10px auto 0;
+	border: 1px solid gray;
+	border-radius: 10px;
+	font-family: sans-serif;
+	background-color: white;
+}
+
+.first-nav-bar {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	margin: 10px 0 0 10px;
+}
+
+.first-nav-bar h3 {
+	color: #9c9c9c;
+	font-size: 25px;
+}
+
+.first-nav-bar button {
+	padding: 5px 10px;
+	border-style: none;
+	border-radius: 10%;
+	font-weight: bold;
+	background-color: #eeeeee;
+	cursor: pointer;
+	font-size: 15px;
+}
+
+.nav-buttons a {
+	color: #63808f;
+}
+
+.first-nav-bar button:hover {
+	color: #68bfe9;
+}
+
+.my-heroes {
+	color: #9c9c9c;
+	margin: 30px 0 15px 70px;
+	font-size: 25px;
+}
+
+.list-container {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.list-container li {
+	background-color: #eeeeee;
+	padding: 10px 0;
+	border-radius: 10px;
+}
+
+.list-container li:hover {
+	background-color: #bbd8dc;
+	color: white;
+}
+
+.hero-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.hero-complete-list {
+	list-style: none;
+	margin: 15px 0;
+}
+
+.id-span {
+	background-color: #607d8b;
+	padding: 10px 20px;
+	color: white;
+	text-decoration: none;
+	border-radius: 10px 0 0 10px;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	display: block;
+	color: #878787;
+}
+
+a:hover {
+	color: white;
+}
+
+.nav-buttons a:hover {
+	color: #68bfe9;
+}
+
+.name-span {
+	padding: 10px 60px 10px 5px;
+}
+
+.hero-list__footer {
+	display: block;
+}
+
+.hero-list__footer p {
+	margin: 10px 0 10px 25px;
+	font-size: 30px;
+}
+
+.hero-list__footer button {
+	width: 100px;
+	margin-left: 10px;
+	border-style: none;
+	border-radius: 5px;
+	color: #9c9c9c;
+	padding: 10px;
+	font-weight: bold;
+}
