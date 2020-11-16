@@ -1,51 +1,46 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import { requestProductDetail, addCart } from '../../redux/actions/productAction';
+import { requestCart } from '../../redux/actions/productAction';
 
-function ProductDetail({
-  productDetail, dispatch, match, actions,
+function Cart({
+  productCart, dispatch, actions,
 }) {
-  const [id] = useState(match.params.productId);
-  useEffect(() => {
-    if (id) {
-      dispatch(requestProductDetail(+id));
-    }
-  /*   return () => actions.cleanUp(); */
-  }, [id, dispatch]);
+  if (!productCart) {
+    dispatch(actions.requestCart());
+  }
 
   return (
     <div className="detail_wrapper">
-      {productDetail
+      {productCart
                && (
                <>
                  <div className="detail">
                    <div className="detail_description">
                      <h1>
-                       {productDetail.title}
+                       akash sapkota
                      </h1>
                      <p>
                        <u>Price:</u>
                        {' '}
-                       {productDetail.price}
+                       {productCart.price}
                      </p>
                      <p>
                        <u>Ceategory :</u>
                        {' '}
-                       {productDetail.category}
+                       {productCart.category}
                      </p>
                      <p>
                        <u>Description :</u>
-                       {productDetail.description}
+                       {productCart.description}
                      </p>
-                     <Link to="/cart" className="cart" onClick={() => { actions.addCart(productDetail); }}>Add To Cart</Link>
 
                    </div>
                    <div className="image">
-                     <img src={productDetail.image} alt="detail" />
+                     <img src={productCart.image} alt="detail" />
                    </div>
 
                  </div>
@@ -56,8 +51,8 @@ function ProductDetail({
   );
 }
 
-ProductDetail.propTypes = {
-  productDetail: PropTypes.shape({
+Cart.propTypes = {
+  productCart: PropTypes.shape({
     title: 'string',
     id: 1,
     image: 'string',
@@ -71,7 +66,7 @@ ProductDetail.propTypes = {
   }).isRequired,
   actions: PropTypes.shape({
     cleanUp: PropTypes.shape,
-    addCart: PropTypes.shape(),
+    requestCart: PropTypes.shape(),
   }).isRequired,
 };
 
@@ -79,13 +74,13 @@ function mapStateToProps(state) {
   // eslint-disable-next-line no-debugger
   debugger;
   return {
-    productDetail: state.productReducer.productDetail,
+    productCart: state.productReducer.productCart,
   };
 }
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators({ addCart }, dispatch),
+    actions: bindActionCreators({ requestCart }, dispatch),
     dispatch,
   };
 }
-export default connect(mapStateToProps, mapDispatchToProps)(ProductDetail);
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);

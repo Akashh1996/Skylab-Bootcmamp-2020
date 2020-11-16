@@ -12,6 +12,12 @@ export default function productReducer(state = {}, action) {
       return { ...state, productDetail: action.error };
     case actionTypes.PRODUCT_DETAIL_CLEANUP:
       return { ...state, productDetail: null };
+    case actionTypes.ADD_ITEM_CART:
+      return { ...state, productCart: action.productCart };
+    case actionTypes.LOAD_PRODUCT_CART:
+      // eslint-disable-next-line no-debugger
+      debugger;
+      return { ...state, productCart: action.productCart };
     default:
       return state;
   }
