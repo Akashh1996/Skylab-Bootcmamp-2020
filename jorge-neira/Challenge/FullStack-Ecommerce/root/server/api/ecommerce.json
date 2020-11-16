@@ -1,0 +1,221 @@
+[
+   {
+      "id":1,
+      "product-name":"ProArt StudioBook One W590",
+      "product-general-specs":{
+         "screen":"15.6'' - 39,62cm, UHD 3840X2160 16:9 300nits Antireflejos Adobe:100%",
+         "cpu":"Intel® Core™ i9-9980HK 2.4 GHz (16M Caché, hasta 5.0 GHz, 8 núcleos)",
+         "memory-ram":"DDR4 64GB (DDR4 64GB)",
+         "storage":"1TB PCIE G3 SSD",
+         "gpu":"NVIDIA® Quadro® RTX 6000 (24GB GDDR6)",
+         "os":"Windows 10 Pro",
+         "color":"Gris Estrella"
+      },
+      "product-model":"W590G6T-HI004R",
+      "product-part-number":"90NB0Q81-M01050",
+      "product-image-url":[
+         "https://dlcdnwebimgs.asus.com/gain/02a3c08c-b301-481d-bd8c-6ae6f2f27fb9/",
+         "https://dlcdnwebimgs.asus.com/gain/a85168c8-dce0-48bb-8c2a-76fb1de64810/",
+         "https://dlcdnwebimgs.asus.com/gain/91b1b453-47a6-4990-9641-8ab1e3466646/"
+      ],
+      "product-serie":"ProArt StudioBook",
+      "price":11849
+   },
+   {
+      "id":2,
+      "product-name":"ProArt StudioBook 15 H500",
+      "product-general-specs":{
+         "screen":"15.6'' - 39,62cm, UHD 3840X2160 16:9 400nits Antireflejos Adobe:100%",
+         "cpu":"Intel® Core™ i7-9750H 2.6 GHz (12M Caché, hasta 4.5 GHz, 6 núcleos)",
+         "memory-ram":"DDR4 16GB (DDR4 16GB)",
+         "storage":"1TB PCIE G3 SSD",
+         "gpu":"NVIDIA® GeForce® RTX 2060 (6GB GDDR6)",
+         "os":"Windows 10 Pro",
+         "color":"Gris Estrella"
+      },
+      "product-model":"H500GV-HC002R",
+      "product-part-number":"90NB0QH1-M00290",
+      "product-image-url":[
+         "https://www.asus.com/media/global/gallery/ty56gvmgyieun6n0_setting_xxx_0_90_end_1000.png",
+         "https://www.asus.com/media/global/gallery/0imgslkex5em2yi5_setting_xxx_0_90_end_1000.png",
+         "https://www.asus.com/media/global/gallery/im2scc4mykgtpdpt_setting_xxx_0_90_end_1000.png"
+      ],
+      "product-serie":"ProArt StudioBook",
+      "price":2379
+   },
+   {
+      "id":3,
+      "product-name":"ProArt StudioBook 17 H700",
+      "product-general-specs":{
+         "screen":"17'' - 43,18cm, WUXGA 1920X1200 16:10 300nits Antireflejos DCI-P3:95%",
+         "cpu":"Intel® Core™ i7-9750H 2.6 GHz (12M Caché, hasta 4.5 GHz, 6 núcleos)",
+         "memory-ram":"DDR4 16GB (Módulo DRAM(DDR4)/2666/16G)",
+         "storage":"1TB PCIE G3 SSD",
+         "gpu":"NVIDIA® Quadro® T1000 (4GB GDDR5)",
+         "os":"Windows 10 Pro",
+         "color":"Gris Estrella"
+      },
+      "product-model":"W700G1T-AV046R",
+      "product-part-number":"90NB0NX2-M01850",
+      "product-image-url":[
+         "https://estore.asus.com/es/media/catalog/product/w/7/w700_star_grey_web_25_4.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439",
+         "https://estore.asus.com/es/media/catalog/product/w/7/w700_star_grey_web_12_4.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439",
+         "https://estore.asus.com/es/media/catalog/product/a/7/a70fa42933c494faba1ba6151c607e3e.png?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439"
+      ],
+      "product-serie":"ProArt StudioBook",
+      "price":2309
+   },
+   {
+      "id":4,
+      "product-name":"ZenBook Pro Duo UX581",
+      "product-general-specs":{
+         "screen":"15.6'' - 39,62cm, OLED UHD 3840X2160 16:9 400nits Antireflejos DCI-P3:100%",
+         "cpu":"Intel® Core™ i7-10750H 2.6 GHz (12M Caché, hasta 5.0 GHz, 6 núcleos)",
+         "memory-ram":"DDR4 16GB (DDR4 16GB)",
+         "storage":"1TB PCIE G3 SSD",
+         "gpu":"NVIDIA® GeForce® RTX 2060 (6GB GDDR6)",
+         "os":"Windows 10 Pro",
+         "color":"Azul Celestial"
+      },
+      "product-model":"UX581LV-H2001R",
+      "product-part-number":"90NB0RQ1-M01390",
+      "product-image-url":[
+         "https://estore.asus.com/es/media/catalog/product/u/x/ux581_celestial_blue_01_1200x1200_1_2.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439",
+         "https://estore.asus.com/es/media/catalog/product/u/x/ux581_celestial_blue_02_1200x1200_1_2.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439",
+         "https://estore.asus.com/es/media/catalog/product/u/x/ux581_celestial_blue_03_1200x1200_1_2.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439"
+      ],
+      "product-serie":"ZenBook",
+      "price":2890
+   },
+   {
+      "id":5,
+      "product-name":"Zenbook Flip 13 UX363 (11th gen Intel)",
+      "product-general-specs":{
+         "screen":"13.3'' - 33,78cm, FHD 1920X1080 16:9 300nits Antireflejos NTSC:72%",
+         "cpu":"Intel® Core™ i5-1135G7 2.4 GHz (8M Caché, hasta 4.2 GHz, 4 núcleos)",
+         "memory-ram":"LPDDR4X 8GB (LPDDR4X 8GB)",
+         "storage":"512GB PCIE G3 SSD",
+         "gpu":"Intel Iris Xᵉ Graphics",
+         "os":"Windows 10 Pro",
+         "color":"Gris Pino"
+      },
+      "product-model":"UX363EA-EM087T",
+      "product-part-number":"90NB0RZ1-M04320",
+      "product-image-url":[
+         "https://estore.asus.com/es/media/catalog/product/6/0/603ccdc1c0726821a3090f2ba1eb17b8.png?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439",
+         "https://estore.asus.com/es/media/catalog/product/9/0/90nb0rz1-m04320-1.png?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439",
+         "https://estore.asus.com/es/media/catalog/product/9/0/90nb0rz1-m04320-2.png?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439"
+      ],
+      "product-serie":"ZenBook",
+      "price":1199
+   },
+   {
+      "id":6,
+      "product-name":"ZenBook S UX393EA",
+      "product-general-specs":{
+         "screen":"13.9'' - 35,31cm, 3300X2200 3:2 500nits Antireflejos DCI-P3:100%",
+         "cpu":"Intel® Core™ i7-1165G7 2.8 GHz (12M Caché, hasta 4.7 GHz, 4 núcleos)",
+         "memory-ram":"LPDDR4X 16GB (LPDDR4X 16GB)",
+         "storage":"512GB PCIE G3 SSD",
+         "gpu":"Intel® Iris™ Plus Graphics",
+         "os":"Windows 10 Pro",
+         "color":"Negro Jade"
+      },
+      "product-model":"UX393EA-HK003T",
+      "product-part-number":"90NB0S71-M00950",
+      "product-image-url":[
+         "https://estore.asus.com/es/media/catalog/product/6/1/61637ca2989f67a1727668ee5b24bae3.png?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439",
+         "https://estore.asus.com/es/media/catalog/product/9/0/90nb0s71-m00950-2.png?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439",
+         "https://estore.asus.com/es/media/catalog/product/9/0/90nb0s71-m00950-3.png?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439"
+      ],
+      "price":1599
+   },
+   {
+      "id":7,
+      "product-name":"ZenBook 14 UX425 (Intel de 11ª Gen)",
+      "product-general-specs":{
+         "screen":"14.0'' - 35,56cm, FHD 1920X1080 16:9(1W) 400nits Antireflejos NTSC:72%",
+         "cpu":"Intel® Core™ i5-1135G7 2.4 GHz (8M Caché, hasta 4.2 GHz, 4 núcleos)",
+         "memory-ram":"LPDDR4X 8GB (LPDDR4X 8GB)",
+         "storage":"512GB PCIE G3 SSD",
+         "gpu":"Intel Iris Xᵉ Graphics",
+         "os":"Windows 10 Home",
+         "color":"Gris Pino"
+      },
+      "product-model":"UX425EA-HM038T",
+      "product-part-number":"90NB0SM1-M01230",
+      "product-image-url":[
+         "https://estore.asus.com/es/media/catalog/product/u/x/ux425_pinegrey_np_01.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439",
+         "https://estore.asus.com/es/media/catalog/product/u/x/ux425_pinegrey_np_02.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439",
+         "https://estore.asus.com/es/media/catalog/product/u/x/ux425_pinegrey_np_03.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439"
+      ],
+      "product-serie":"ZenBook",
+      "price":1099
+   },
+   {
+      "id":8,
+      "product-name":"ASUS ExpertBook B9450FA-BM0184R",
+      "product-general-specs":{
+         "screen":"14.0'' - 35,56cm, FHD 1920X1080 16:9 300nits Antireflejos NTSC:72%",
+         "cpu":"Intel® Core™ i7-10510U 1.8 GHz (8M Caché, hasta 4.9 GHz, 4 núcleos)",
+         "memory-ram":"LPDDR3 16GB (LPDDR3 16GB)",
+         "storage":"1TB PCIE G3 SSD",
+         "gpu":"Intel® UHD Graphics",
+         "os":"Windows 10 Pro",
+         "color":"Negro Estrella"
+      },
+      "product-model":"B9450FA-BM0184R",
+      "product-part-number":"90NX02K1-M02070",
+      "product-image-url":[
+         "https://estore.asus.com/es/media/catalog/product/u/x/ux425_pinegrey_np_01.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439",
+         "https://estore.asus.com/es/media/catalog/product/u/x/ux425_pinegrey_np_02.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439",
+         "https://estore.asus.com/es/media/catalog/product/u/x/ux425_pinegrey_np_03.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439"
+      ],
+      "product-serie":"ExperBook",
+      "price":1699
+   },
+   {
+      "id":9,
+      "product-name":"ASUS Chromebook Flip C436",
+      "product-general-specs":{
+         "screen":"14.0'' - 35,56cm, FHD 1920X1080 16:9 300nits Antireflejos NTSC:72%",
+         "cpu":"Intel® Core™ i5-10210U 1.6 GHz (6M Caché, hasta 4.2 GHz, 4 núcleos)",
+         "memory-ram":"LPDDR3 16GB (LPDDR3 16GB)",
+         "storage":"512GB PCIE G3 SSD",
+         "gpu":"Intel® UHD Graphics",
+         "os":"Chrome",
+         "color":"Blanco Aerogel"
+      },
+      "product-model":"Z7400FF-E10109",
+      "product-part-number":"90NX0PS1-M01300",
+      "product-image-url":[
+         "https://estore.asus.com/es/media/catalog/product/c/4/c436_z7400_aerogel_white_01_copy_2_1200x1200.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439",
+         "https://estore.asus.com/es/media/catalog/product/c/4/c436_z7400_aerogel_white_01_copy_3_1200x1200.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439",
+         "https://estore.asus.com/es/media/catalog/product/c/4/c436_z7400_aerogel_white_01_copy_4_1200x1200.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439"
+      ],
+      "product-serie":"ChromeBook",
+      "price":1199
+   },
+   {
+      "id":10,
+      "product-name":"ASUS Chromebook Flip C433",
+      "product-general-specs":{
+         "screen":"14.0'' - 35,56cm, FHD 1920X1080 16:9 250nits Antireflejos NTSC:45%",
+         "cpu":"Intel® Core™ m3-8100Y 1.1 GHz (4M Caché, hasta 3.4 GHz, 2 núcleos)",
+         "memory-ram":"LPDDR3 8GB (LPDDR3 8GB)",
+         "storage":"64GB EMMC",
+         "gpu":"Intel® HD Graphics 615",
+         "os":"Chrome",
+         "color":"Plata"
+      },
+      "product-model":"Z3400FT-AJ0111",
+      "product-part-number":"90NX02G1-M01120",
+      "product-image-url":[
+         "https://estore.asus.com/es/media/catalog/product/c/4/c433_z3400_silver_blue_01_1200x1200.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439",
+         "https://estore.asus.com/es/media/catalog/product/c/4/c433_z3400_silver_blue_02_1200x1200.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439",
+         "https://estore.asus.com/es/media/catalog/product/c/4/c433_z3400_silver_blue_03_1200x1200.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439"
+      ],
+      "product-serie":"ChromeBook",
+      "price":599
+   }
+]
