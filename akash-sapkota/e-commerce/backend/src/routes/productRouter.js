@@ -1,22 +1,26 @@
 const express = require('express');
 const productController = require('../controllers/productController');
 const productsController = require('../controllers/productsController');
+const cartController = require("../controllers/cartController")
 
 function productRouter(Product) {
   const router = express.Router();
   const product = productController(Product);
   const products = productsController(Product);
+  const cart = cartController(Product)
 
-  router.route('/')
+ 
+  router.route('/select/:productId')
+    .all(product.allMiddleware)
+    .get(product.getMethod)
+  router.route('/cart')
+    .post(cart.postMethod)
+    .get(cart.getMethod);
+
+    router.route('/')
     .get(products.getMethod)
     .put(products.putMethod);
 
-  router.route('/:productId')
-    .all(product.allMiddleware)
-    .get(product.getMethod)
-    .delete(product.deleteMethod);
-  router.route('/cart')
-    .post(product.postMethod);
 
   return router;
 }
