@@ -17,6 +17,4 @@ const marketRoutes = require('./routes/marketRoutes')();
 
 app.use('/', marketRoutes);
 
-app.listen(port, () => {
-  console.log(`Server up in port ${port}`);
-});
+module.exports = app;
