@@ -21,7 +21,6 @@ describe('Strict equals', () => {
 
     test('0 and -0 to be true', () => {
         expect(strictEquals(0, -0)).toBe(true);
-        debugger;
     });
 
     test('-0 and 0 to be true', () => {
