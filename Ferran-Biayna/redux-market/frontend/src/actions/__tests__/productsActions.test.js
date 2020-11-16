@@ -17,5 +17,8 @@ describe('productsActions', () => {
     test('should call axios just once', () => {
       expect(axios.mock.calls.length).toBe(1);
     });
+    test('should call axios just once', () => {
+      expect(axios.mock.calls.length).toBe(1);
+    });
   });
 });
