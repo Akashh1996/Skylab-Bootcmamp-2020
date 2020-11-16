@@ -1,19 +1,36 @@
 const express = require('express');
+const path = require('path');
 const cors = require('cors');
+
+const chalk = require('chalk');
+const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const { v4: uuidv4 } = require('uuid');
-const productRoute = require('./routes/productsRoutes')();
-
-const port = process.env.PORT || 3020;
-
-require('dotenv').config();
+const Product = require('./src/stores/productStore');
+const productRouter = require('./src/routes/productRouter')(Product);
+const Cart = require('./src/stores/cartStore');
+const cartRouter = require('./src/routes/cartRouter')(Cart);
 
 const app = express();
-uuidv4();
-
 app.use(cors());
-app.use(bodyParser.json());
+const port = process.env.PORT || 2319;
+
+app.use(morgan('tiny'));
+
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/products', productRoute);
-// eslint-disable-next-line no-console
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.use(bodyParser.json());
+
+app.use(express.static(path.join(__dirname, '/public/')));
+app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css')));
+app.use('/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/views', 'index.html'));
+});
+
+app.use('/products', productRouter);
+app.use('/cart', cartRouter);
+
+app.listen(port, () => {
+  // eslint-disable-next-line no-console
+  console.log(`Server is running on port ${chalk.blue(port)}`);
+});

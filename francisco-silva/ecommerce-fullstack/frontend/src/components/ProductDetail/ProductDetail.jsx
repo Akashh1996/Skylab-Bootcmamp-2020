@@ -15,6 +15,7 @@ function ProductDetail({ productDetail, dispatch, actions }) {
             debugger
             dispatch(requestProductDetail(+id));
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id])
     console.log(productDetail)
 

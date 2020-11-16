@@ -7,6 +7,7 @@ function requestProductsSuccess(productList) {
     };
 }
 function requestProductsError(error) {
+    debugger
     return {
         type: actionTypes.LOAD_PRODUCTS_ERROR,
         error
@@ -15,11 +16,14 @@ function requestProductsError(error) {
 export function requestProducts() {
     return async (dispatch) => {
 
-        const endpoint = 'http://localhost:3020/products';
+        const endpoint = 'http://localhost:2319/products';
         try {
-            const products = await axios.get(endpoint)
+            const products = await axios.get(endpoint);
+            debugger
             dispatch(requestProductsSuccess(products.data));
         } catch (error) {
+            console.log(error)
+            debugger
             dispatch(requestProductsError(error));
         }
     };
@@ -38,7 +42,8 @@ function requestProductDetailError(error) {
 }
 export function requestProductDetail(id) {
     return async (dispatch) => {
-        const endpoint = `http://localhost:3020/products/${id}`;
+        const endpoint = `http://localhost:2319/products/${id}`;
+        debugger
         try {
             const product = await axios.get(endpoint, {
                 params: {

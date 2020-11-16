@@ -11,7 +11,7 @@ function ProductList({ productList, dispatch}) {
     if (!productList || productList.length <= 0) {
         dispatch(requestProducts());
     }
-    debugger;
+    
     console.log(productList)
     return (
         <div className = "list-wrapper">
@@ -28,7 +28,7 @@ function ProductList({ productList, dispatch}) {
     );
 }
 function mapStateToProps(state) {
-   
+   debugger
     return {
         productList: state.productReducer.productList
     };
@@ -40,3 +40,5 @@ function mapDispatchToProps(dispatch) {
     };
 }
 export default connect(mapStateToProps, mapDispatchToProps)(ProductList);
+
+
