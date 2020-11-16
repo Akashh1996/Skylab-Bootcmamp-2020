@@ -13,14 +13,18 @@ function productsRouter(Product) {
 
   router.route('/')
     .get(products.getMethod);
-  router.route('/:productId')
+
+  router.route('/select/:productId')
     .all(product.allMiddleware)
     .get(product.getMethod);
+
   router.route('/basket')
     .get(basket.getMethod)
     .put(basket.putMethod);
+
   router.route('/basket/:productId')
     .delete(deleteBasket.deleteMethod);
+
   return router;
 }
 

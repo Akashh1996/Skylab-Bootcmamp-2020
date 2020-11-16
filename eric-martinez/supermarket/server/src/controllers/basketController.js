@@ -1,6 +1,5 @@
 function basketController(Product) {
   function getMethod(req, res) {
-    console.log('hola caracola');
     res.json(Product.getBasket());
   }
   function putMethod(req, res) {
@@ -8,7 +7,6 @@ function basketController(Product) {
 
     res.json(Product.getBasket());
   }
-
   return {
     getMethod, putMethod,
   };

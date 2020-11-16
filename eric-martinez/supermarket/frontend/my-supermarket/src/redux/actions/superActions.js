@@ -43,7 +43,7 @@ function requestProductError(error) {
 
 export function requestProduct(productId){
     return async (dispatch) => {
-        const endpoint = `http://localhost:5000/products/${productId}`
+        const endpoint = `http://localhost:5000/products/select/${productId}`
         try {
             const product = await axios.get(endpoint);
             dispatch(requestProductSuccess(product.data));
@@ -59,10 +59,19 @@ export function cleanProductDetail() {
     }
 }
 
+function requestBasketSuccess(basket) {
+    debugger;
+    return{
+        type: actionTypes.LOAD_BASKET,
+        basket
+    }
+}
+
 export function loadBasket(basketProduct) {
     debugger;
     return async (dispatch) => {
         const endpoint = `http://localhost:5000/products/basket`
-        await axios.put(endpoint, {body: basketProduct});
+        const basket = await axios.put(endpoint, {basketProduct});
+        dispatch(requestBasketSuccess(basket.data));
     }
 }

@@ -94,7 +94,6 @@ class Product {
   }
 
   static getBasket() {
-    console.log(_basket);
     return _basket;
   }
 

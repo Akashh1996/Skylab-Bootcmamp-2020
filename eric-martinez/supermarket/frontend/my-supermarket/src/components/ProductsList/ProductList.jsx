@@ -13,7 +13,7 @@ if(!productsList && !productsList?.length){
                 {<h1>Products List</h1>}
                 {(productsList && productsList.length && 
                     productsList.map((product) => {
-                    return <li key={product.id}><Link to={`products/${product.id}`}>{product['product-name']}</Link><button type="button" onClick={ () => dispatch(loadBasket(product))}>Add</button></li>
+                    return <li key={product.id}><Link to={`products/select/${product.id}`}>{product['product-name']}</Link><button type="button" onClick={ () => dispatch(loadBasket(product))}>Add</button></li>
                     }))}
                 
         </>

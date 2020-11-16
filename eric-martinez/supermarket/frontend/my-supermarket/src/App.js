@@ -10,7 +10,7 @@ function App() {
     <Header />
       <Switch>
         <Route path="/products" exact component={ProductList}/>
-        <Route path="/products/:productId" exact component={ProductDetail}/>
+        <Route path="/products/select/:productId" exact component={ProductDetail}/>
       </Switch>
     </BrowserRouter>
   );
