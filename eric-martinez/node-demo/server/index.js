@@ -1,20 +1,27 @@
-const http = require('http');
+const express = require('express');
+const path = require('path');
+const debug = require('debug')('app');
+const chalk = require('chalk');
+const morgan = require('morgan');
 
-//req y res son streams
-const requestListener = (req, res) => {
-	console.warn(res, { depth: 0 });
-	// res.end('Mi server funciona');
-	// res.end es lo mismo que write + end;
+const app = express();
+const port = process.env.PORT || 5000;
 
-	res.write('Skylab mola!');
-	res.end();
-};
+app.use(morgan('tiny'));
 
-const server = http.createServer();
-server.on('request', requestListener);
+app.use(express.static(path.join(__dirname, '/public/')));
 
-const port = process.env.PORT || 4242;
+app.get('/', (req, res) => {
+	res.sendFile(path.join(__dirname, 'src/view/', '/index.html'));
+})
+app.get('/rakuten', (req, res) => {
+	res.sendFile(path.join(__dirname, 'src/view/', '/rakuten.html'));
+})
+app.get('/lunarillos', (req, res) => {
+	res.sendFile(path.join(__dirname, 'src/view/', '/lunarillos.html'));
+})
 
-server.listen(port, () => {
-	console.log(`Server is running in port ${port}...`);
+
+app.listen(port, () => {
+	debug(`Server is running in port ${chalk.green(port)}...`);
 });

@@ -1,0 +1,79 @@
+[
+    {
+    "name": "Primaris Captain",
+    "power": 5,
+    "points": 90,
+    "stats":{
+        "M": 6,
+        "WS": 2,
+        "BS": 2,
+        "S": 4,
+        "T": 4,
+        "W": 6,
+        "A": 5,
+        "Ld": 9,
+        "S+": 3,
+        "S++": 4,
+        "S+++": 7
+    },
+    "wargear":{
+        "Bolt_Pistol": {
+            "name": "Bolt Pistol",
+            "points": 0,
+            "Range": 12,
+            "Type": "Pistol",
+            "NoS": 1,
+            "S": 4,
+            "Ap": 0,
+            "D": 1,
+            "Ability": ""
+        },
+        "Plasma_Pistol": {
+            "name": "Plasma Pistol",
+            "points": 5,
+            "Range": 12,
+            "Type": "Pistol",
+            "NoS": 1,
+            "S": 7,
+            "Ap": -3,
+            "D": 1,
+            "Ability": ""
+        },"Overcharged_Plasma_Pistol": {
+            "name": "Plasma Pistol",
+            "points": 5,
+            "Range": 12,
+            "Type": "Pistol",
+            "NoS": 1,
+            "S": 8,
+            "Ap": -3,
+            "D": 2,
+            "Ability": -1
+        },
+        "Heavy_Bolt_Pistol": {
+            "name": "Heavy Bolt Pistol",
+            "points": 0,
+            "Range": 18,
+            "Type": "Pistol",
+            "NoS": 1,
+            "S": 4,
+            "Ap": -1,
+            "D": 1,
+            "Ability": ""
+        },
+        "Master-crafted_Auto_Bolt_Rifle": {
+            "name": "Master-crafted Auto Bolt Rifle",
+            "points": 0,
+            "Range": 24,
+            "Type": "Assault",
+            "NoS": 3,
+            "S": 4,
+            "Ap": 0,
+            "D": 2,
+            "Ability": ""
+        }
+
+    },
+    "ability":{},
+    "modifiers":{}
+    }
+]

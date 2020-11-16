@@ -10,22 +10,25 @@ function routes() {
 			res.send(heroes);
 		})
 		.post((req, res) => {
-			const hero = req.query;
+			const hero = req.body.params;
 			heroes.push(hero) && res.send(heroes);
 		})
 		.put((req, res) => {
-			const heroId = req.query.id;
+			const heroId = +req.body.params.id;
+			const heroName = req.body.params.name;
 			heroes.map((hero) => {
-				hero.id === heroId ? (hero.name = 'Skylab') : hero;
+				hero.id === heroId ? (hero.name = heroName) : hero;
 			}) && res.send(heroes);
 		})
 		.delete((req, res) => {
-			const heroId = req.query.id;
+			const heroId = +req.query.id;
 			heroes.splice(
 				heroes.findIndex((hero) => hero.id === heroId) === -1
 					? 0
 					: heroes.findIndex((hero) => hero.id === heroId),
-				1
+					heroes.findIndex((hero) => hero.id === heroId) === -1
+					? 0
+					: 1,
 			) && res.send(heroes);
 		});
 

@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
 import {PropTypes} from 'prop-types'
 import { bindActionCreators } from 'redux';
 import {addHero, getHeroes} from '../redux/actions/heroActions'
 
-function Dashboard({heroes}) {
+function Dashboard({heroes, dispatch}) {
+
+  if (!heroes) {
+		dispatch(getHeroes());
 
   return (
     <>
@@ -27,13 +30,14 @@ Dashboard.propTypes = {
 
 function mapStateToProps({heroes}) {
   return {
-    heroes
+    heroes: heroes.list
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return{
     actions: bindActionCreators({addHero, getHeroes}, dispatch),
+    dispatch
   }
 }
 
