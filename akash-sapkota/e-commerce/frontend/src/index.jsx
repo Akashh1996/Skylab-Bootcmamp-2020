@@ -8,7 +8,7 @@ import configureStore from './redux/configureStore';
 import ProductList from './components/productList/ProductList';
 import ProductDetail from './components/productDetails/ProductDetail';
 import PrimarySearchAppBar from './components/Header/Header';
-import Cart from './components/cart/Cart';
+import Cart from './components/Cart/Cart';
 
 const store = configureStore();
 
@@ -19,8 +19,8 @@ ReactDOM.render(
         <PrimarySearchAppBar />
         <Switch>
           <Route path="/" exact component={ProductList} />
-          <Route path="/:productId" exact component={ProductDetail} />
           <Route path="/cart" exact component={Cart} />
+          <Route path="/:productId" exact component={ProductDetail} />
         </Switch>
       </BrowserRouter>
     </Provider>

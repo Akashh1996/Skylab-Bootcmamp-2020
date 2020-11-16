@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
@@ -6,67 +6,43 @@ import { Link } from 'react-router-dom';
 
 import { requestCart } from '../../redux/actions/productAction';
 
-function Cart({
-  productCart, dispatch, actions,
-}) {
+function Cart({ productCart, actions }) {
   if (!productCart) {
-    dispatch(actions.requestCart());
+    actions.requestCart();
   }
+  useEffect(() => {
+    actions.requestCart();
+  }, []);
 
   return (
-    <div className="detail_wrapper">
+    <div className="detail_wrapper" style={{ marginTop: '100px' }}>
       {productCart
-               && (
-               <>
-                 <div className="detail">
-                   <div className="detail_description">
-                     <h1>
-                       akash sapkota
-                     </h1>
-                     <p>
-                       <u>Price:</u>
-                       {' '}
-                       {productCart.price}
-                     </p>
-                     <p>
-                       <u>Ceategory :</u>
-                       {' '}
-                       {productCart.category}
-                     </p>
-                     <p>
-                       <u>Description :</u>
-                       {productCart.description}
-                     </p>
-
-                   </div>
-                   <div className="image">
-                     <img src={productCart.image} alt="detail" />
-                   </div>
+               && productCart.map((product) => (
+                 <div key={performance.now()}>
+                   {product.title}
+                   {' '}
+                   <button type="button">x</button>
+                   {' '}
 
                  </div>
-                 <Link to="/" className="back">Back</Link>
-               </>
-               )}
+               ))}
+      <Link to="/" className="back">Back</Link>
+
     </div>
   );
 }
 
 Cart.propTypes = {
-  productCart: PropTypes.shape({
-    title: 'string',
-    id: 1,
-    image: 'string',
-    price: 1,
-    description: 'ghj',
-    category: 'hgjh',
-  }).isRequired,
-  dispatch: PropTypes.shape({}).isRequired,
-  match: PropTypes.shape({
-    params: {},
-  }).isRequired,
+  productCart: PropTypes.shape(
+    [
+      {
+        title: PropTypes.string.isRequired,
+        map: PropTypes.func.isRequired,
+      },
+    ],
+  ).isRequired,
   actions: PropTypes.shape({
-    cleanUp: PropTypes.shape,
-    requestCart: PropTypes.shape(),
+    requestCart: PropTypes.func.isRequired,
   }).isRequired,
 };
 
@@ -80,7 +56,6 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators({ requestCart }, dispatch),
-    dispatch,
   };
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);

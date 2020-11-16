@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import axios from 'axios';
+import { func } from 'prop-types';
 import actionTypes from './actionTypes';
 
 function requestProductSuccess(productList) {
@@ -73,8 +74,6 @@ function addCartSuccess(productCart) {
 }
 
 function addCartError(error) {
-  // eslint-disable-next-line no-debugger
-  debugger;
   return {
     type: actionTypes.ADD_ITEM_CART_ERROR,
     error,
@@ -87,26 +86,22 @@ export function addCart(product) {
     try {
       // eslint-disable-next-line no-debugger
       debugger;
-      const products = await axios.post(endpoint, product);
-      dispatch(addCartSuccess(products.data));
+      await axios.post(endpoint, { ...product });
+      // dispatch(addCartSuccess(products.data));
     } catch (error) {
       dispatch(addCartError(error));
     }
   };
 }
 
-function requestCartSuccess(productList) {
-  // eslint-disable-next-line no-debugger
-  debugger;
+function requestCartSuccess(productCart) {
   return {
     type: actionTypes.LOAD_PRODUCT_CART,
-    productList,
+    productCart,
   };
 }
 
 function requestCartError(error) {
-  // eslint-disable-next-line no-debugger
-  debugger;
   return {
     type: actionTypes.LOAD_PRODUCTS_ERROR,
     error,
@@ -124,5 +119,12 @@ export function requestCart() {
     } catch (error) {
       dispatch(requestCartError(error));
     }
+  };
+}
+
+export function deleteProductCart(productId) {
+  return async (dispatch) => {
+    const endpoint = `http://localhost:1400/products/cart${productId}`;
+    await axios.delete(endpoint);
   };
 }
