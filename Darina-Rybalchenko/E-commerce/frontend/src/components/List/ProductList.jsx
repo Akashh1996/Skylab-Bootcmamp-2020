@@ -5,12 +5,13 @@ import { PropTypes } from 'prop-types';
 import './ProductList.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
-import { requestProducts, requestProductDetail } from '../../redux/actions/product-actions';
+import { requestProducts, requestProductDetail, loadProductBasket } from '../../redux/actions/product-actions';
 
 function ProductList({ productsList, dispatch }) {
   if (!productsList && !productsList?.length) {
-    dispatch(requestProducts());
+    dispatch.requestProducts();
   }
   return (
     <>
@@ -41,8 +42,8 @@ function ProductList({ productsList, dispatch }) {
                     €
                   </Card.Text>
                   <Button
-                    as={Link}
-                    to="/basket"
+                    onClick={loadProductBasket(product.id)}
+                    className="product-title"
                     variant="secondary"
                   >
                     Add to basket
@@ -68,5 +69,10 @@ function mapStateToProps({ productReducer }) {
   debugger;
   return { productsList: productReducer.productsArray };
 }
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatch: bindActionCreators({ loadProductBasket, requestProducts }, dispatch),
 
-export default connect(mapStateToProps)(ProductList);
+  };
+}
+export default connect(mapStateToProps, mapDispatchToProps)(ProductList);

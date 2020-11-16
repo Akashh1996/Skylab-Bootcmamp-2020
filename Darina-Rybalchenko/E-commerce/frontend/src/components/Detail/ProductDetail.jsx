@@ -8,7 +8,6 @@ import { PropTypes } from 'prop-types';
 import Image from 'react-bootstrap/Image';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-/* import axios from 'axios'; */
 import { loadProductBasket, requestProductDetail } from '../../redux/actions/product-actions';
 
 function ProductDetail({ match, product, dispatch }) {

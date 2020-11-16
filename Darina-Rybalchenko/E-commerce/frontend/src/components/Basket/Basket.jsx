@@ -15,29 +15,39 @@ function Basket({ basket, dispatch }) {
     dispatch.requestBasket();
   }, []);
   return (
-    <Card>
-      <Card.Body>
-        <Image src={basket && basket[0]['product-image-url']} rounded />
-        <Card.Title>{basket && basket[0]['product-name']}</Card.Title>
-        <Card.Text>
-          Price:
-          {basket && basket[0].price}
-          €
-        </Card.Text>
-        <Button variant="secondary">Delete from basket</Button>
-      </Card.Body>
-    </Card>
+    <main>
+      <ul>
+        {basket && basket.map((product) => (
+          <li>
 
+            <Card>
+              <Card.Body>
+                <Image src={product && product['product-image-url']} rounded />
+                <Card.Title>{product && product['product-name']}</Card.Title>
+                <Card.Text>
+                  Price:
+                  {product && product.price}
+                  €
+                </Card.Text>
+                <Button variant="secondary">Delete from basket</Button>
+              </Card.Body>
+            </Card>
+          </li>
+        ))}
+      </ul>
+    </main>
   );
 }
 Basket.propTypes = {
-  basket: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    'product-name': PropTypes.string.isRequired,
-    'product-image-url': PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
+  basket: PropTypes.shape([
+    {
+      id: PropTypes.number.isRequired,
+      'product-name': PropTypes.string.isRequired,
+      'product-image-url': PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
 
-  }).isRequired,
+    },
+  ]).isRequired,
 
   dispatch: PropTypes.shape({
     requestBasket: PropTypes.func.isRequired,
@@ -51,7 +61,6 @@ Basket.propTypes = {
 };
 
 function mapStateToProps({ productReducer }) {
-  console.log(productReducer.basket);
   return { basket: productReducer.basket };
 }
 

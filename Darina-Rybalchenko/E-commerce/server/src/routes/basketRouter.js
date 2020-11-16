@@ -22,11 +22,11 @@ function routes() {
   basketRouter
     .route('/:productId')
     .delete((req, res) => {
-      const productIndex = productBasket.indexOf(products.find(
+      const productIndex = productsBasket.indexOf(products.find(
         (product) => product.id === +req.params.productId,
       ));
       if (productIndex > -1) {
-        productBasket.splice(productIndex, 1);
+        productsBasket.splice(productIndex, 1);
       }
       res.status(200);
       res.json(productIndex);
