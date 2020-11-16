@@ -1,11 +1,12 @@
 const express = require('express');
 const listController = require('../controllers/listController');
 
+const router = express.Router();
+
 function myRouter(Wargear) {
-  const router = express.Router();
   const listWargear = listController(Wargear);
 
-  router.route('/list')
+  router.route('/')
     .get(listWargear.getMethod)
     .put(listWargear.putMethod);
 

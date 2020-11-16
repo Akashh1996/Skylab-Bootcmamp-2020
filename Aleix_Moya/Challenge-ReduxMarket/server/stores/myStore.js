@@ -1,10 +1,10 @@
-const allProducts = require('../api/customApi.json');
+const list = require('../api/customApi.json');
 
 let savedProducts = [];
 
 class Wargear {
   static getWargear() {
-    return allProducts;
+    return list;
   }
 
   static addToCarrito(weapon) {
