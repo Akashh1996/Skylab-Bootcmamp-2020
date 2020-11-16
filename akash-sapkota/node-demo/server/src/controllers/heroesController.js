@@ -1,6 +1,12 @@
 function heroesController(Hero) {
   function getMethod(req, res) {
-    res.json(Hero.getHeroes());
+    const query = {}; // no necesito buscar un heroe por eso envio todo y pongo query vacio
+    Hero.find(query, (errorFindHeroes, heroes) => {
+      if (errorFindHeroes) {
+        res.send(errorFindHeroes);
+      }
+      res.json(heroes);
+    });
   }
 
   function putMethod(req, res) {
