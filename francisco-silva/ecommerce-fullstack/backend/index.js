@@ -5,14 +5,15 @@ const cors = require('cors');
 const chalk = require('chalk');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const Product = require('./src/stores/productStore');
+const mongoose = require('mongoose');
+const Product = require('./src/models/productModel');
 const productRouter = require('./src/routes/productRouter')(Product);
-const Cart = require('./src/stores/cartStore');
-const cartRouter = require('./src/routes/cartRouter')(Cart);
 
 const app = express();
 app.use(cors());
 const port = process.env.PORT || 2319;
+
+mongoose.connect('mongodb://localhost/productsdb');
 
 app.use(morgan('tiny'));
 
@@ -28,7 +29,6 @@ app.get('/', (req, res) => {
 });
 
 app.use('/products', productRouter);
-app.use('/cart', cartRouter);
 
 app.listen(port, () => {
   // eslint-disable-next-line no-console

@@ -1,7 +1,12 @@
 function productsController(Product) {
   function getMethod(req, res) {
-    console.log('ENTRO EN EL GET DE /');
-    res.json(Product.getProducts());
+    const query = {};
+    Product.find(query, (errorFindProducts, products) => {
+      if (errorFindProducts) {
+        res.send(errorFindProducts);
+      }
+      res.json(products);
+    });
   }
 
   function putMethod(req, res) {
