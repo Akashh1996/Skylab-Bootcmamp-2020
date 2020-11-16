@@ -1,0 +1,18 @@
+.product__card {
+    max-width: 300px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.card__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add__button {
+    margin-top: 0;
+    margin-bottom: 50px;
+    max-width: 300px;
+    min-width: 300px;
+}

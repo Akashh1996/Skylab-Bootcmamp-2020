@@ -4,11 +4,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import configureStore from './redux/configureStore';
 import MarketList from './components/marketList/MarketList';
 import DetailProduct from './components/detail/Detail';
+import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 import Header from './components/header/Header';
 
 const store = configureStore();
@@ -18,12 +19,9 @@ ReactDOM.render(
     <Provider store={store}>
       <BrowserRouter>
         <Header />
-        <Switch>
-          <Route path="/" exact component={MarketList} />
-        </Switch>
-        <Switch>
-          <Route path="/detail/:detailId" exact component={DetailProduct} />
-        </Switch>
+        <Route path="/" exact component={MarketList} />
+        <Route path="/detail/:detailId" exact component={DetailProduct} />
+        <Route path="/shoppingCart" exact component={ShoppingCart} />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,

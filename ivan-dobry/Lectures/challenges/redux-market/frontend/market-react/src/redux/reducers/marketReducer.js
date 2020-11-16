@@ -12,6 +12,11 @@ export default function marketReducer(state = {}, action) {
       return productDetail;
     }
 
+    case actionTypes.LOAD_SHOPPING_LIST: {
+      const shoppingList = { ...state, shoppingArray: action.shoppingList };
+      return shoppingList;
+    }
+
     case actionTypes.LOAD_PRODUCTS_ERROR: {
       const productError = { ...state, error: action.error };
       return productError;
