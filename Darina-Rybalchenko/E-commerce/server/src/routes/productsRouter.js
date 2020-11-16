@@ -1,24 +1,21 @@
-/* eslint-disable no-console */
 const express = require('express');
 
-const productRouter = express.Router();
-const products = require('../../api/products.json');
+const productController = require('../controllers/productController');
+const productsController = require('../controllers/productsController');
 
-function routes() {
-  productRouter
-    .route('/')
-    .get((req, res) => {
-      res.status(200);
-      res.json(products);
-    });
-  productRouter
-    .route('/:productId')
-    .get((req, res) => {
-      const product = products.find((element) => element.id === +req.params.productId);
-      res.status(200);
-      res.send(product);
-    });
-  return productRouter;
+function productRouter(Product) {
+  const router = express.Router();
+  const product = productController(Product);
+  const products = productsController(Product);
+
+  router.route('/')
+    .get(products.getMethod);
+
+  router.route('/:productId')
+    .all(product.allMiddleware)
+    .get(product.getMethod);
+
+  return router;
 }
 
-module.exports = routes;
+module.exports = productRouter;

@@ -1,37 +1,21 @@
 /* eslint-disable no-console */
 const express = require('express');
-const products = require('../../api/products.json');
+const basketController = require('../controllers/basketController');
+const basketProductController = require('../controllers/basketProductController');
 
-const basketRouter = express.Router();
-const productsBasket = [];
+function basketRouter(Product) {
+  const router = express.Router();
+  const basket = basketController(Product);
+  const basketProduct = basketProductController(Product);
 
-function routes() {
-  basketRouter
-    .route('/')
-    .get((req, res) => {
-      res.status(200);
-      res.json(productsBasket);
-    });
-  basketRouter
-    .route('/:productId')
-    .post((req, res) => {
-      const product = products.find((element) => element.id === +req.params.productId);
-      productsBasket.push(product);
-      res.status(200);
-    });
-  basketRouter
-    .route('/:productId')
-    .delete((req, res) => {
-      const productIndex = productsBasket.indexOf(products.find(
-        (product) => product.id === +req.params.productId,
-      ));
-      if (productIndex > -1) {
-        productsBasket.splice(productIndex, 1);
-      }
-      res.status(200);
-      res.json(productIndex);
-    });
-  return basketRouter;
+  router.route('/')
+    .get(basket.getMethod);
+
+  router.route('/:productId')
+    .all(basketProduct.allMiddleware)
+    .post(basketProduct.postMethod);
+
+  return router;
 }
 
-module.exports = routes;
+module.exports = basketRouter;

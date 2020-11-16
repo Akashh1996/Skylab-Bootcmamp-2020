@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 /* eslint-disable no-debugger */
-/* eslint-disable indent */
 import axios from 'axios';
 import actionTypes from './actionTypes';
 
