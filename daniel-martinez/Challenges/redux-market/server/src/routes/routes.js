@@ -1,18 +1,25 @@
 const express = require('express');
-// const productController = require('../controllers/productController');
+const productController = require('../controllers/productController');
 const listController = require('../controllers/listController');
+const cartController = require('../controllers/cartController');
 
 function routes(Product) {
   const router = express.Router();
-  // const product = productController(Product);
+  const product = productController(Product);
   const list = listController(Product);
+  const cart = cartController(Product);
 
-  router.route('/')
+  router.route('/products')
     .get(list.getMethod);
 
-  /* router.route('/:productId')
+  router.route('/products/:productId')
     .all(product.allMiddleware)
-    .get(product.getMethod); */
+    .get(product.getMethod);
+
+  router.route('/cart')
+    .get(cart.getMethod)
+    .put(cart.putMethod)
+    .delete(cart.deleteMethod);
 
   return router;
 }
