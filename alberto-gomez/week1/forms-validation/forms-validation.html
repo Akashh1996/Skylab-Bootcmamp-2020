@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>HTML Forms</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1>HTML Forms</h1>
+
+		<label for="search">Search:</label>
+		<input
+			type="text"
+			name="search"
+			id="search"
+			placeholder="Search here..."
+			required
+			minlength="7"
+			maxlength="10"
+		/>
+
+		<br />
+		<br />
+
+		<label for="visitors">Visitors:</label>
+		<input
+			type="number"
+			name="visitors"
+			id="visitors"
+			placeholder="How many people to lunch"
+			required
+			min="1"
+			max="5"
+		/>
+
+		<br />
+		<br />
+
+		<label for="Description:">Description:</label>
+		<textarea name="description" id="description" cols="30" rows="3"></textarea>
+
+		<br />
+		<br />
+
+		<label for="age">Age:</label>
+		<select name="age" id="age">
+			<option value="1">Uno</option>
+			<option value="2">Dos</option>
+			<option value="3">Tres</option>
+		</select>
+
+		<br />
+		<br />
+
+		<fieldset>
+			<legend>Frameworks</legend>
+			<label for="angular">Angular</label>
+			<input type="checkbox" name="frameworks" id="angular" value="angular" />
+			<label for="react">React</label>
+			<input type="checkbox" name="frameworks" id="react" value="react" />
+			<label for="vue">Vue</label>
+			<input type="checkbox" name="frameworks" id="vue" value="vue" />
+		</fieldset>
+
+		<br />
+		<br />
+
+		<fieldset>
+			<legend>Te gusta GIT?</legend>
+			<label for="gitlovertrue">True</label>
+			<input type="radio" name="gitlover" id="gitlovertrue" value="true" />
+			<label for="gitloverfalse">False</label>
+			<input type="radio" name="gitlover" id="gitloverfalse" value="false" />
+		</fieldset>
+
+		<br />
+		<br />
+	</body>
+</html>
