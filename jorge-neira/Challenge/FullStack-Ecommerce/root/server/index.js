@@ -7,6 +7,7 @@ const cors = require('cors');
 const Products = require('./src/stores/marketStore');
 const productsListRouter = require('./src/routes/marketRouter')(Products);
 const productsDetailRouter = require('./src/routes/marketRouter')(Products);
+const shoppingCart = require('./src/routes/marketRouter')(Products);
 
 const asusApp = express();
 const port = process.env.PORT || 5000;
@@ -17,6 +18,7 @@ asusApp.use(bodyParser.urlencoded({ extended: true }));
 asusApp.use(bodyParser.json());
 asusApp.use('/', productsListRouter);
 asusApp.use('/', productsDetailRouter);
+asusApp.use('/', shoppingCart);
 
 asusApp.listen(port, () => {
   debug(`Server is running on port ${chalk.yellowBright(port)}`);

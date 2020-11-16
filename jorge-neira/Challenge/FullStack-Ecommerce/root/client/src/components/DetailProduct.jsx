@@ -1,53 +1,77 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { useParams } from 'react-router-dom';
-import { getDetailProduct } from '../redux/actions/productsActions';
+import { getDetailProduct, addProductToCart } from '../redux/actions/productsActions';
 
 function DetailProduct({ productDetail, dispatch }) {
   const { id } = useParams();
-  if (!productDetail) {
-    dispatch.getDetailProduct(id);
-  }
+  const currentDetailData = productDetail;
+  const newModel = useRef(id);
 
   useEffect(() => {
-
-  });
+    if (currentDetailData && newModel.current !== currentDetailData['product-model']) {
+      dispatch.getDetailProduct(id);
+    }
+    if (!currentDetailData) {
+      dispatch.getDetailProduct(id);
+    }
+  }, []);
 
   return (
     <>
-      <h1>{productDetail && productDetail['product-name']}</h1>
-      <div>
-        {productDetail && (
-          <>
-            <span>
-              Modelo:
-              {' '}
-              {productDetail['product-model']}
-            </span>
-            <br />
-            <span>
-              Part/Number:
-              {' '}
-              {productDetail['product-part-number']}
-            </span>
-            <br />
-            <span>
-              Serie:
-              {' '}
-              {productDetail['product-serie']}
-            </span>
-            <br />
-            <span>
-              Precio:
-              {' '}
-              {productDetail.price}
-            </span>
-          </>
-        )}
-      </div>
+      {currentDetailData && newModel.current === currentDetailData['product-model'] && (
+      <>
+        <h1>{currentDetailData['product-name']}</h1>
+        <div key={performance.now()}>
+          <span>
+            Modelo:
+            {currentDetailData['product-model']}
+          </span>
+          <br />
+          <span>
+            Part/Number
+            {' '}
+            {currentDetailData['product-part-number']}
+          </span>
+          <br />
+          <span>
+            Serie:
+            {' '}
+            {currentDetailData['product-serie']}
+          </span>
+          <br />
+          <span>
+            Precio:
+            {' '}
+            {currentDetailData.price}
+          </span>
+          <br />
+          {currentDetailData['product-image-url'].map((img) => (
+            <img
+              src={img}
+              alt="logo"
+              style={{ width: '300px' }}
+              key={performance.now()}
+            />
+          ))}
+        </div>
+        <button
+          type="button"
+          onClick={() => dispatch.addProductToCart({
+            cartId: Date.now(),
+            productName: currentDetailData['product-name'],
+            productModel: currentDetailData['product-model'],
+            price: currentDetailData.price,
+          })}
+        >
+          add
+
+        </button>
+      </>
+      )}
     </>
   );
 }
@@ -55,6 +79,7 @@ function DetailProduct({ productDetail, dispatch }) {
 DetailProduct.propTypes = {
   dispatch: PropTypes.shape({
     getDetailProduct: PropTypes.func.isRequired,
+    addProductToCart: PropTypes.func.isRequired,
   }).isRequired,
 };
 
@@ -66,7 +91,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatch: bindActionCreators({ getDetailProduct }, dispatch),
+    dispatch: bindActionCreators({ getDetailProduct, addProductToCart }, dispatch),
   };
 }
 

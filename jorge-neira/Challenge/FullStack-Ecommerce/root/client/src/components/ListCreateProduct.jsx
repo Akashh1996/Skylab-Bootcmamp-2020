@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-function ListCreateProduct({ data }) {
+function ListCreateProduct({ data, onAddToCartClicked }) {
   return (
     <>
-      <div key={Date.now()}>
+      <div key={performance.now()}>
         <Link to={`product/${data['product-model']}`}>
           <span>
             {data['product-name']}
@@ -16,9 +16,13 @@ function ListCreateProduct({ data }) {
           </span>
         </Link>
         {' '}
-        <button type="button">Add</button>
+        <button
+          type="button"
+          onClick={onAddToCartClicked}
+        >
+          Add
+        </button>
         {' '}
-        <button type="button">del</button>
       </div>
     </>
   );
@@ -30,6 +34,7 @@ ListCreateProduct.propTypes = {
     'product-model': PropTypes.string.isRequired,
     'product-name': PropTypes.string.isRequired,
   }).isRequired,
+  onAddToCartClicked: PropTypes.func.isRequired,
 };
 
 export default ListCreateProduct;
