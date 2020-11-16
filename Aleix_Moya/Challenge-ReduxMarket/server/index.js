@@ -19,10 +19,7 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/', 'index.html'));
-});
-app.use('/list', myRouter);
+app.use('/', myRouter);
 
 app.listen(port, () => {
   debug(`Server go brrr on port ${chalk.blueBright(port)}`);

@@ -8,6 +8,8 @@ import reportWebVitals from './reportWebVitals';
 import ProductList from './components/list/productList';
 import ProductDetail from './components/detail/productDetail';
 import ProductFav from './components/fav/productFav';
+import DatasheetList from './components/datasheetList/datasheetList';
+import DatasheetDetail from './components/datasheetDetail/datasheetDetail';
 
 const store = configureStore();
 
@@ -16,9 +18,11 @@ ReactDOM.render(
     <Provider store={store}>
       <BrowserRouter>
         <Switch>
-          <Route path="/" exact component={ProductList} />
-          <Route path="/:productName" exact component={ProductDetail} />
+          <Route path="/list" exact component={ProductList} />
+          <Route path="/list/:productName" exact component={ProductDetail} />
           <Route path="/fav/myfav" exact component={ProductFav} />
+          <Route path="/datasheets" exact component={DatasheetList} />
+          <Route path="/datasheets/:productName" exact component={DatasheetDetail} />
         </Switch>
       </BrowserRouter>
     </Provider>

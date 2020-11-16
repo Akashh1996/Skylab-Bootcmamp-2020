@@ -14,7 +14,7 @@ function productDetail({
   productList, actions, dispatch,
 }) {
   let name = window.location.pathname;
-  name = name.replaceAll('%', ' ').replaceAll('20', '').replaceAll('/', '');
+  name = name.replaceAll('%', ' ').replaceAll('20', '').replaceAll('/', '').replaceAll('list', '');
   if (typeof (productList) === 'undefined') {
     dispatch(requestList());
   }
@@ -22,9 +22,10 @@ function productDetail({
     <>
       <h1 id="title">Detail</h1>
       <nav>
-        <p id="linkList"><Link id="fav" to="/fav">Fav</Link></p>
+
+        <p id="linkList"><Link id="datasheet" to="/fav/myfav">Fav</Link></p>
         <p id="linkList"> | </p>
-        <p id="linkList"><Link id="list" to="/">Return to List</Link></p>
+        <p id="linkList"><Link id="list" to="/list">Return to List</Link></p>
       </nav>
       <div id="list-wrapper">
         {productList
@@ -255,6 +256,38 @@ function productDetail({
                       <td>{`${item.profile.Focused.D}`}</td>
                       <td>{`${item.profile.Focused.Ability}`}</td>
                     </tr>}
+                </table>
+                <br />
+                <table>
+                  <tr>
+                    <th> </th>
+                    <th>Number of Shots</th>
+                    <th>Possibility to Hit</th>
+                    <th>Number of Hits</th>
+                    <th>Possibility to Wound</th>
+                    <th>Number of Wounds</th>
+                    <th>Possibility to Save</th>
+                    <th>Number Unsaved Wounds</th>
+                    <th>Wounds inflicted</th>
+                    <th>Post Saved Rules</th>
+                    <th>Dead Miniatures</th>
+                    <th>Post Shooting Rules </th>
+                  </tr>
+                  <tr>
+                    <td> </td>
+                    {item.NoS !== undefined ? <td>{`${item.NoS}`}</td> : <td />}
+                    {item.Range === 'Melee'
+                      ? (item.Range ? (<td>{`${item.Range}`}</td>) : <td> </td>)
+                      : (item.Range ? (<td>{`${item.Range}"`}</td>) : <td> </td>)}
+                    {item.Type ? <td>{`${item.Type}`}</td> : <td />}
+                    {item.Type === 'Melee'
+                      ? (item.NoS ? (<td>{`${item.NoS}`}</td>) : <td>None</td>)
+                      : (item.NoS ? (<td>{`${item.NoS}`}</td>) : <td> </td>)}
+                    {item.S ? <td>{`${item.S}`}</td> : <td />}
+                    {item.Ap ? <td>{`${item.Ap}`}</td> : <td />}
+                    {item.D ? <td>{`${item.D}`}</td> : <td />}
+                    {item.Ability ? <td>{`${item.Ability}`}</td> : <td />}
+                  </tr>
                 </table>
               </>
             );

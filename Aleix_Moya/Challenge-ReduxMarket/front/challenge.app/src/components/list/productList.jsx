@@ -18,13 +18,14 @@ function productList({ productList, actions, dispatch }) {
     <>
       <h1 id="title">List</h1>
       <nav>
-        <p id="linkList"><Link id="fav" to="/fav/myfav">Fav</Link></p>
+        <p id="linkList"><Link id="fav" to="/datasheets">Datasheet</Link></p>
+        <p id="linkList"><Link id="datasheet" to="/fav/myfav">Fav</Link></p>
       </nav>
       <div id="list-wrapper">
         {productList
         && productList?.length && productList.map((item) => <p key={item.name}>
           <span id="list">
-            <Link id="list" to={`/${item.name}`}>
+            <Link id="list" to={`list/${item.name}`}>
               <p id="textList">
                 <span>{` ${item.name}` }</span>
               </p>

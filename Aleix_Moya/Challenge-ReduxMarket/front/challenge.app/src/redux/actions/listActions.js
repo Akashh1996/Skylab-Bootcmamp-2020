@@ -18,6 +18,19 @@ function requestBackendError(error) {
     error,
   };
 }
+function requestDatasheetBackendSuccess(datasheet) {
+  return {
+    type: actionTypes.LOAD_DATASHEET,
+    datasheet,
+  };
+}
+
+function requestDatasheetBackendError(error) {
+  return {
+    type: actionTypes.LOAD_DATASHEET_ERROR,
+    error,
+  };
+}
 
 function addToCarritoSuccess(updatedCarritoList) {
   return {
@@ -40,6 +53,17 @@ export function requestList() {
       dispatch(requestBackendSuccess(productList.data));
     } catch (error) {
       dispatch(requestBackendError(error));
+    }
+  };
+}
+export function requestDatasheet() {
+  return async (dispatch) => {
+    const endpoint = 'http://localhost:2000/datasheet';
+    try {
+      const datasheet = await axios.get(endpoint);
+      dispatch(requestDatasheetBackendSuccess(datasheet.data));
+    } catch (error) {
+      dispatch(requestDatasheetBackendError(error));
     }
   };
 }

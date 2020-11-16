@@ -127,20 +127,20 @@
                 "D": 1,
                 "Ability": "Blast"
             },
-            "krak":{
-                "NoS": 1,
-                "S": 8,
-                "Ap": -2,
-                "D": "D6",
-                "Ability": ""
-            },
             "icarus":{
                 "NoS": "D3",
                 "S": 7,
                 "Ap": -1,
                 "D": 2,
                 "Ability": "Blast, +1 hit Aircraft"
-            }            
+            },
+            "krak":{
+                "NoS": 1,
+                "S": 8,
+                "Ap": -2,
+                "D": "D6",
+                "Ability": ""
+            }
         }
     },
     {
@@ -294,10 +294,9 @@
             "S": 5,
             "Ap": -3,
             "D": 1,
-            "grav_Effect":{
+            "grav-Effect":{
                 "D": 2
             }
-            
         }
         },
         "Ability": "shoot both -1 to hit"
@@ -316,7 +315,7 @@
                 "Ability": ""
             },
             "melta":{
-                "noMelta":{
+                "no-melta":{
                     "Range": 12,
                     "Type": "Assault",
                     "NoS": 1,
@@ -325,7 +324,7 @@
                     "D": "D6",
                     "Ability": ""
                 },
-                "meltaRange":{
+                "melta-range":{
                     "Range": 6,
                     "Type": "Assault",
                     "NoS": 1,
@@ -509,7 +508,7 @@
         "S": 5,
         "Ap": -3,
         "D": 1,
-        "grav_Effect":{
+        "grav-Effect":{
             "D": 2
         }
     },
@@ -522,7 +521,7 @@
         "S": 5,
         "Ap": -3,
         "D": 1,
-        "grav_Effect":{
+        "grav-Effect":{
             "D": 2
         }
     },
@@ -535,7 +534,7 @@
         "S": 5,
         "Ap": -3,
         "D": 1,
-        "grav_Effect":{
+        "grav-Effect":{
             "D": 2
         }
     },
@@ -675,7 +674,7 @@
         "name":"Heavy Melta Rifle",
         "points": 0,
         "melta":{
-            "noMelta":{
+            "no-melta":{
                 "Range": 24,
                 "Type": "Heavy",
                 "NoS": 1,
@@ -684,7 +683,7 @@
                 "D": "D6 + 2",
                 "Ability": ""
             },
-            "meltaRange":{
+            "melta-range":{
                 "Range": 12,
                 "Type": "Heavy",
                 "NoS": 1,
@@ -887,7 +886,7 @@
         "name":"Inferno Pistol",
         "points": 0,
         "melta":{
-            "noMelta":{
+            "no-melta":{
                 "Range": 6,
                 "Type": "Pistol",
                 "NoS": 1,
@@ -896,7 +895,7 @@
                 "D": "D6",
                 "Ability": ""
             },
-            "meltaRange":{
+            "melta-range":{
                 "Range": 3,
                 "Type": "Pistol",
                 "NoS": 1,
@@ -1026,14 +1025,14 @@
         "S": 8,
         "Ap": -4,
         "D": 2,
+        "Ability": "Blast",
         "Overcharged": {
             "S": 8,
             "Ap": -4,
             "D": 3,
             "Ability": "Blast, 1 Mortal wound on 1s to hit"
-        },
-        "Ability": "Blast"
-    },    
+        }
+    },
     {
         "name": "Marksman Bolt Carabine",
         "points": 0,
@@ -1126,7 +1125,7 @@
         "name":"Melta Destroyer",
         "points": 0,
         "melta":{
-            "noMelta":{
+            "no-melta":{
                 "Range": 24,
                 "Type": "Heavy",
                 "NoS": 3,
@@ -1135,7 +1134,7 @@
                 "D": "D6",
                 "Ability": ""
             },
-            "meltaRange":{
+            "melta-range":{
                 "Range": 12,
                 "Type": "Heavy",
                 "NoS": 3,
@@ -1150,7 +1149,7 @@
         "name":"Melta Rifle",
         "points": 0,
         "melta":{
-            "noMelta":{
+            "no-melta":{
                 "Range": 24,
                 "Type": "Assault",
                 "NoS": 1,
@@ -1159,7 +1158,7 @@
                 "D": "D6",
                 "Ability": ""
             },
-            "meltaRange":{
+            "melta-range":{
                 "Range": 12,
                 "Type": "Assault",
                 "NoS": 1,
@@ -1174,7 +1173,7 @@
         "name":"Meltagun",
         "points": 0,
         "melta":{
-            "noMelta":{
+            "no-melta":{
                 "Range": 12,
                 "Type": "Assault",
                 "NoS": 1,
@@ -1183,7 +1182,7 @@
                 "D": "D6",
                 "Ability": ""
             },
-            "meltaRange":{
+            "melta-range":{
                 "Range": 6,
                 "Type": "Assault",
                 "NoS": 1,
@@ -1220,7 +1219,7 @@
         "name":"Multi-melta",
         "points": 0,
         "melta":{
-            "noMelta":{
+            "no-melta":{
                 "Range": 24,
                 "Type": "Heavy",
                 "NoS": 2,
@@ -1229,7 +1228,7 @@
                 "D": "D6",
                 "Ability": ""
             },
-            "meltaRange":{
+            "melta-range":{
                 "Range": 12,
                 "Type": "Heavy",
                 "NoS": 2,
@@ -1722,7 +1721,7 @@
         "name":"Twin Multi-melta",
         "points": 0,
         "melta":{
-            "noMelta":{
+            "no-melta":{
                 "Range": 24,
                 "Type": "Heavy",
                 "NoS": 4,
@@ -1731,7 +1730,7 @@
                 "D": "D6",
                 "Ability": ""
             },
-            "meltaRange":{
+            "melta-range":{
                 "Range": 12,
                 "Type": "Heavy",
                 "NoS": 4,

@@ -1,10 +1,15 @@
-const list = require('../api/customApi.json');
+const datasheet = require('../api/SpaceMarine.json');
+const list = require('../api/SpaceMarineWargear.json');
 
 let savedProducts = [];
 
 class Wargear {
   static getWargear() {
     return list;
+  }
+
+  static getDatasheet() {
+    return datasheet;
   }
 
   static addToCarrito(weapon) {
