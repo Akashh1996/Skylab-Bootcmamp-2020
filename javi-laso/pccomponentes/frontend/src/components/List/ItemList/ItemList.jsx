@@ -5,8 +5,9 @@ import { PropTypes } from 'prop-types';
 import ListElement from '../ListElement/ListElement';
 import { loadItemsList } from '../../../redux/actions/actions';
 import './itemList.css';
+import Filter from '../Filter/Filter';
 
-function ItemList({ items, actions }) {
+function ItemList({ items, filteredList, actions }) {
   const [stateItems] = useState(items);
   useEffect(() => {
     if (!items || stateItems !== items) {
@@ -18,8 +19,11 @@ function ItemList({ items, actions }) {
     <main>
       <section>
         <h1 className="list-title">Principal offers</h1>
+        <Filter />
         <ul className="list">
-          {items?.length > 0 && items.map((item) => <ListElement item={item} key={+item.id} />)}
+          { filteredList
+            ? filteredList.map((item) => <ListElement item={item} key={+item.id} />)
+            : items?.length > 0 && items.map((item) => <ListElement item={item} key={+item.id} />)}
         </ul>
       </section>
     </main>
@@ -28,17 +32,22 @@ function ItemList({ items, actions }) {
 
 ItemList.propTypes = {
   items: PropTypes.arrayOf(PropTypes.object),
+  filteredList: PropTypes.arrayOf(PropTypes.object),
   actions: PropTypes.shape({
     loadItemsList: PropTypes.func.isRequired,
   }).isRequired,
 };
 
 ItemList.defaultProps = {
+  filteredList: undefined,
   items: undefined,
 };
 
 function mapStateToProps({ itemsReducer }) {
-  return { items: itemsReducer.itemList };
+  return {
+    items: itemsReducer.itemList,
+    filteredList: itemsReducer.filteredList,
+  };
 }
 
 function mapDispatchToProps(dispatch) {

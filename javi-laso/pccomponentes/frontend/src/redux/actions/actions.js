@@ -101,3 +101,10 @@ export function deleteItemFromCart(item) {
     }
   };
 }
+
+export function filterItems(productType) {
+  return {
+    type: actionTypes.FILTER_ITEMS,
+    productType,
+  };
+}
