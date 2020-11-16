@@ -35,7 +35,6 @@ function requestSaberByNameSuccess(saberItem) {
 }
 
 export function requestSaberByName(saberName) {
-  debugger;
   return async (dispatch) => {
     const endpoint = `http://localhost:1240/sabers/${saberName}`;
     try {

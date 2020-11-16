@@ -1,0 +1,16 @@
+{
+  "name": "ivan-san-say-hi-from-skylab",
+  "version": "1.0.4",
+  "description": "My first public package",
+  "main": "index.js",
+  "keywords": [
+    "skylab",
+    "npm",
+    "coding",
+    "javascript",
+    "package",
+    "node"
+  ],
+  "author": "Iván San",
+  "license": "ISC"
+}

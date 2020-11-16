@@ -7,7 +7,7 @@ const heroRouter = express.Router();
 function routes() {
 	heroRouter
 		.route('/')
-		.get((req, res) => {
+		.get(async (req, res) => {
 			res.status(200);
 			res.send(heroes);
 		})

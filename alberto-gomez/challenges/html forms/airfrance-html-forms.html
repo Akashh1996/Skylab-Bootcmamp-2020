@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>AirFrance HTML Forms</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<img
+			src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Air_France_Logo.svg/1920px-Air_France_Logo.svg.png"
+			alt="airfrance-logo"
+			class="af-logo"
+		/>
+		<form action="#" id="flight-request">
+			<fieldset class="bg-first-container">
+				<legend>Book a flight</legend>
+				<div class="trip-range-class-container">
+					<div class="trip-container">
+						<label for="trip">Trip:</label>
+						<select name="trip" id="trip" required>
+							<option value="1go">one-way ticket</option>
+							<option value="2go">round-trip ticket</option>
+						</select>
+					</div>
+					<br />
+					<br />
+					<div>
+						<label for="passenger-age-range">Range age:</label>
+						<select name="age-range" id="age-range" required>
+							<option value="baby">Baby (0 - 23 months)</option>
+							<option value="child">Child (2 - 11 years)</option>
+							<option value="teenager">Teenager ( 12 - 24 years)</option>
+							<option value="adult">Adult (25 - 64 years)</option>
+							<option value="senior">Senior (over 65 years)</option>
+						</select>
+					</div>
+					<br />
+					<br />
+					<div>
+						<label for="flight-class">Class:</label>
+						<select name="flight-class" id="flight-class" required>
+							<option value="economy">ECONOMY</option>
+							<option value="prem-economy">PREMIUM ECONOMY</option>
+							<option value="business">BUSINESS</option>
+							<option value="premiere">LA PREMIÈRE</option>
+						</select>
+					</div>
+				</div>
+
+				<br />
+				<br />
+
+				<div class="flight-route-professional">
+					<div class="flight-route">
+						<label for="departure">Departure:</label>
+						<select name="airport" id="departure" required>
+							<option value="mad">
+								Aeropuerto Adolfo Suárez Madrid Barajas (MAD)
+							</option>
+							<option value="bcn">
+								Josep Tarradellas Barcelona El Prat (BCN)
+							</option>
+							<option value="pmi">Palma de Mallorca (PMI)</option>
+							<option value="agp">Málaga-Costa del Sol (AGP)</option>
+							<option value="alc">Alicante-Elche (ALC)</option>
+						</select>
+						<label for="arrival">Arrival:</label>
+						<select name="airport" id="departure" required>
+							<option value="mad">
+								Aeropuerto Adolfo Suárez Madrid Barajas (MAD)
+							</option>
+							<option value="bcn">
+								Josep Tarradellas Barcelona El Prat (BCN)
+							</option>
+							<option value="pmi">Palma de Mallorca (PMI)</option>
+							<option value="agp">Málaga-Costa del Sol (AGP)</option>
+							<option value="alc">Alicante-Elche (ALC)</option>
+						</select>
+					</div>
+
+					<br />
+					<br />
+
+					<fieldset class="pro-pass">
+						<legend>Professional Passenger</legend>
+						<div class="answers">
+							<div class="answer">
+								<label for="true">Yes</label>
+								<input type="radio" name="status-pp" id="true" required />
+							</div>
+							<div class="answer">
+								<label for="false">No</label>
+								<input type="radio" name="status-pp" id="false" required />
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<legend>Passenger</legend>
+				<div class="name-age-sugg">
+					<div class="name-age">
+						<label for="name">Name:</label>
+						<input type="text" id="name" required />
+
+						<label for="age">Age:</label>
+						<input
+							type="number"
+							name="age"
+							id="age"
+							required
+							min="0"
+							max="99"
+						/>
+					</div>
+
+					<div class="sugg">
+						<label for="suggestions">Suggestions:</label>
+						<textarea
+							name="suggestions"
+							id="suggestions"
+							cols="50"
+							rows="5"
+							placeholder="Please, specify your suggestions for the flight"
+							style="resize: none"
+						></textarea>
+					</div>
+				</div>
+
+				<fieldset>
+					<legend>Contact information</legend>
+					<label for="email">Email address:</label>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+						required
+					/>
+					<label for="phone">Phone number:</label>
+					(<input
+						type="tel"
+						name="tel1"
+						id="phone"
+						pattern="[0-9]{4}"
+						placeholder="####"
+						aria-label="4-digit prefix"
+						size="3"
+						maxlength="4"
+						required
+					/>)-
+					<input
+						type="tel"
+						name="tel2"
+						id="phone"
+						pattern="[0-9]{9}"
+						placeholder="#########"
+						aria-label="9-digit number"
+						size="8"
+						maxlength="9"
+						required
+					/>
+				</fieldset>
+			</fieldset>
+
+			<div class="terms-conditions">
+				<input type="checkbox" name="terms" id="terms" required />
+				<label for="terms">
+					<small>I am agree with terms and conditions.</small>
+				</label>
+			</div>
+		</form>
+		<button type="submit" id="sub-button" form="flight-request">
+			Available flights
+		</button>
+	</body>
+</html>
