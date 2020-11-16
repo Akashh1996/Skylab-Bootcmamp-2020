@@ -1,0 +1,207 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	background-color: black;
+}
+
+main {
+	position: relative;
+	height: calc(100vh - 100px);
+}
+
+/* HEADER */
+
+.spotrivia-title-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	background-color: rgb(47, 213, 102);
+}
+
+.spotrivia-title-container {
+	position: relative;
+	font-family: sans-serif;
+}
+
+.spotrivia-title {
+	font-size: 60px;
+	letter-spacing: -2px;
+}
+
+.spotify-logo {
+	width: 60px;
+	border-radius: 50%;
+	position: absolute;
+	left: -70px;
+	top: 2px;
+}
+
+/* PLAY BUTTON */
+
+.play-button {
+	background-color: rgb(0, 0, 0);
+	border-radius: 20px;
+	border: 3px solid rgb(226, 226, 226);
+	position: absolute;
+	top: 50%;
+	left: 48.5%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	padding: 0px 35px 0 10px;
+}
+
+.play-button:focus {
+	outline: none;
+}
+
+.play-symbol {
+	width: 115px;
+}
+
+.play {
+	font-family: serif;
+	font-size: 70px;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: rgb(47, 213, 102);
+}
+
+/* QUESTIONS */
+
+.question-container {
+	position: relative;
+	width: fit-content;
+	align-items: center;
+}
+
+.question-container,
+.right-and-wrong-answers__wrapper {
+	border: 3px solid rgb(255, 255, 255);
+	height: 176px;
+	top: 15%;
+	left: 48.5%;
+	transform: translate(-50%);
+	padding: 10px 20px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.select-song-text,
+.right-and-wrong-answers__wrapper {
+	color: white;
+	font-size: 35px;
+	letter-spacing: 0.1px;
+}
+
+.singer {
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.singer-photo {
+	width: 100px;
+	border-radius: 50%;
+}
+
+.singer-name {
+	font-size: 40px;
+	color: rgb(47, 213, 102);
+	margin-left: 20px;
+}
+
+/* SONG OPTIONS */
+
+.song-options {
+	width: fit-content;
+	position: relative;
+	top: 30%;
+	left: 49.5%;
+	transform: translate(-50%);
+	display: flex;
+}
+
+.song-option {
+	border: none;
+	width: 190px;
+	height: 90px;
+	border-radius: 20px;
+	font-size: 22px;
+	font-family: serif;
+	font-weight: 600;
+	padding: 0 10px;
+	cursor: pointer;
+}
+
+.song-option:focus {
+	outline: none;
+}
+
+.song-option:not(:last-child) {
+	margin-right: 70px;
+}
+
+/* TIMER */
+
+.timer {
+	color: rgb(47, 213, 102);
+	font-size: 85px;
+	position: absolute;
+	top: 13%;
+	left: 87%;
+	border-bottom: 3px solid white;
+	width: 85px;
+	text-align: center;
+	height: 96px;
+}
+
+/* HIDDEN DISPLAY */
+
+.timer,
+.question-container,
+.song-options {
+	visibility: hidden;
+}
+
+/* GAME RESULTS */
+
+.right-and-wrong-answers__wrapper {
+	position: absolute;
+	border: 3px solid white;
+	width: 270px;
+	justify-content: space-around;
+	padding-right: 30px;
+	padding-left: 40px;
+	visibility: hidden;
+}
+
+.right-and-wrong-answers__container {
+	position: relative;
+}
+
+.right-and-wrong-answers__text {
+	border-bottom: 2px solid white;
+}
+
+.num-of-right-answers,
+.num-of-wrong-answers {
+	font-size: 55px;
+	position: absolute;
+	right: 0px;
+	top: -10px;
+}
+
+.num-of-right-answers {
+	color: rgb(47, 213, 102);
+}
+
+.num-of-wrong-answers {
+	color: red;
+}

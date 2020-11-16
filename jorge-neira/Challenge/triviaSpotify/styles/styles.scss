@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap');
+
+$textColor: #fff;
+$primaryColor: #1db954;
+$SecondaryColor: #212121;
+$darkColor: #121212;
+$lightDarkColor: #535353;
+$lightColor: #b3b3b3;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0%;
+	font-family: 'Signika', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+.btn {
+	cursor: pointer;
+	border-radius: 35px;
+	border: none;
+	outline: none;
+	background: none;
+	color: $textColor;
+	font-size: 25px;
+	padding: 10px;
+}
+.btn:hover {
+	background: $SecondaryColor;
+	color: $primaryColor;
+}
+
+body {
+	height: 100vh;
+	background-color: $darkColor;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.logo {
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding: 50px;
+	}
+	.artist-dashboard-wrapper {
+		display: flex;
+		max-width: 700px;
+		.artist__block {
+			.artists__images {
+				position: relative;
+				cursor: pointer;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				align-items: center;
+				height: 700px;
+				.artist-img__item {
+					box-shadow: 1px 1px 16px -2px rgba(0, 0, 0, 0.3);
+					width: 200px;
+					height: 200px;
+					overflow: hidden;
+					border-radius: 50%;
+					.artist-photo {
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+	.spotify-gameboard {
+		color: $textColor;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		.gameboard-artist-info {
+			display: flex;
+			align-items: center;
+			width: 450px;
+			justify-content: space-between;
+			margin-bottom: 20px;
+			.artist-info-primary {
+				display: flex;
+				flex-direction: column;
+				.artist-info-name {
+					font-size: xx-large;
+					text-transform: uppercase;
+				}
+				.artist-info-followers {
+					font-size: x-large;
+					.artist-followers {
+						font-size: large;
+						color: $primaryColor;
+					}
+				}
+			}
+			.artist-info-secondary {
+				.artist-info-listGenres {
+					font-size: 20px;
+					li {
+						padding-bottom: 6px;
+						color: $lightColor;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+		.gameboard-artist-image__container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			.gameboard-artist__img {
+				box-shadow: 1px 1px 16px -2px rgba(0, 0, 0, 0.3);
+				border-radius: 50%;
+				width: 450px;
+				margin-bottom: 20px;
+			}
+			.gameboard-artist__preview {
+				margin-bottom: 30px;
+				outline: none;
+				.gameboard-artist__audio {
+					margin: 10px;
+					width: 450px;
+				}
+			}
+		}
+	}
+	.gameControls {
+		width: 60vw;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		.gameboard-buttons {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.gameboard-status-button {
+			display: flex;
+			flex-direction: column;
+			.statusScore {
+				font-size: 30px;
+			}
+		}
+	}
+}

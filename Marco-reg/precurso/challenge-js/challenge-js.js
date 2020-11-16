@@ -1,5 +1,5 @@
 function checkForEquality(a,b){
-    console.log(a,b)
+    
     if (a == b){
         if(typeof(a) == "string" && typeof(b)=="string"){
             return true;
@@ -17,7 +17,15 @@ function checkForEquality(a,b){
         return false;
     }   
 }
-checkForEquality(true,"a");
+checkForEquality(1,1);
+checkForEquality("a","a");
+checkForEquality(NaN,NaN);
+checkForEquality(0,-0);
+checkForEquality(-0,0);
+checkForEquality(1,'1');
+checkForEquality(true,false);
+checkForEquality(false,false);
+checkForEquality('water','oil');
 
 ///clone 
 
@@ -28,7 +36,4 @@ function clone(x){
     const noClone=Object.assign({},x,{wheels:5 ,color:"blue",passangers:2});
     return noClone;
 }
-console.log(car);
-console.log(clone(car));
-console.log(car);
 

@@ -1,0 +1,13 @@
+.section__detail {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card__detail {
+    max-width: 300px;
+}
+
+.title__section {
+    text-align: center;
+}

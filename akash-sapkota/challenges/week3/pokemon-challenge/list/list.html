@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="list.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../detail/detail.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="nav">
+            <div class="nav_logo" style="width: 15%;">
+                <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" width="100%" alt=""></a>
+            </div>
+           
+        </div>
+    
+    <ul id="pokeMon"></ul>
+
+    <div class="error" style="color: white; text-align: center;"></div>
+
+    <div style="width: 30%; margin: auto; " class="errorImage" >
+        <img src="https://media.giphy.com/media/p3n6WxKCgy1sOPjB0W/giphy.gif" alt="">
+    </div>
+    
+
+    </nav>
+
+    <script src="../store.js"></script>
+    <script src="./list.js"></script>
+    <script>
+         /* store.getpokemonData().then(() => {
+                const pokemonList = store.getpokemonList();
+                console.log(pokemonList);
+                const pokemonComponent = new PokemonComponent (pokemonList);
+                if(pokemonList){
+                    let element = document.getElementById("pokeMon")
+                    pokemonComponent.updatePokemonList(element)
+                }
+                
+ 
+            });  */
+
+             (async () =>{
+                await store.getpokemonData()
+                const pokemonList =   store.getpokemonList();
+                console.log(pokemonList);
+                const pokemonComponent = new PokemonComponent (pokemonList);
+                if(pokemonList.length>0){
+                    let element = document.getElementById("pokeMon")
+                    pokemonComponent.updatePokemonList(element)
+                }else{
+                    document.querySelector(".error").innerHTML = "<h1>Holy cow !! Server Crashed Again</h1>"
+                    document.querySelector(".errorImage").style.display = "block"
+                }
+
+            })() 
+            
+    </script>
+    

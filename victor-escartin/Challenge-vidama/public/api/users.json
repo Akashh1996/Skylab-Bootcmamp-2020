@@ -1,0 +1,80 @@
+[
+	{
+		"login": "dmatochoya",
+		"password": "123",
+		"id": "skdjhfgsjdhfbs",
+		"name": "David Mato",
+		"profilePicture": "https://ca.slack-edge.com/T0SJKHBFZ-U015FLDERHN-4d50b04e62d5-512",
+		"mainPhoto": "https://imagenesbonitas.co/wp-content/uploads/2018/01/f1b138d29288f25bee7d0e33bcfb7879.jpg",
+		"aboutMe": "Hi there! I love reading in my spare time. As someone once said, books are good company, in sad times and happy times, for books are people – people who have managed to stay alive by hiding between the covers of a book.",
+		"myFavourites": [
+			{
+				"image": "http://books.google.com/books/content?id=mZunDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72X7XFWxzT1IvpsSxdgcYlhlVvb7buQ_Vppr_4YRHwEmCkRnbVMF25NZvS9ErzQ4oGIw_UkHWCwYvAfUcALZHUUokKj05lmAPJ1CeU5DuKoN7AaY4hDORa0GkiTOY5UHFPftZLJ&source=gbs_api",
+				"title": "The Catcher in the Rye",
+				"author": "J. D. Salinger"
+			},
+			{
+				"image": "http://books.google.com/books/content?id=StnyCxWTERAC&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72XnrCu0XEQxRF3QD9zA_brszQCjjJKwChLOrVULrGlBL-xjOAgl3p2a5Z53UM4onuOn-OkgwM6KUio-wJGjjZAx6aZmG1ckYWPQPv_LUNwGdQhy-WJMD_YJ2Pq9YrcfIPn-rqi&source=gbs_api",
+				"title": "Jonathan Livingston Seagull",
+				"author": "Richard Bach"
+			},
+			{
+				"image": "http://books.google.com/books/content?id=rXYdGATpigsC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72mjdkC3yNMDLYHyb2BCi4B3R3lrQMaRoq4LdcejKjglDJAAUtzIDcT8SM4VbiBx7gmP0R8HEh8QOIB9Ozu4MH1gYHiP6iQch5J4Q9bBbGjjBae0KIuFZtce3--u-fz7R-g2EMV&source=gbs_api",
+				"title": "Dune",
+				"author": "Frank Herbert"
+			}
+		]
+	},
+	{
+		"login": "marco",
+		"password": "1234",
+		"id": "sasadasdgsjdhfbs",
+		"name": "Marco Regueiro",
+		"profilePicture": "https://ca.slack-edge.com/T0SJKHBFZ-U0160LS69N3-ec49942c1891-512",
+		"mainPhoto": "https://blogthinkbig.com/wp-content/uploads/sites/4/2018/07/V%C3%ADa-L%C3%A1ctea-portada-espacio-universo.jpg?resize=1200%2C428",
+		"aboutMe": "Hi there! I love reading in my spare time. As someone once said, outside of a dog, a book is a man's best friend.",
+		"myFavourites": [
+			{
+				"image": "http://books.google.com/books/content?id=mZunDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72X7XFWxzT1IvpsSxdgcYlhlVvb7buQ_Vppr_4YRHwEmCkRnbVMF25NZvS9ErzQ4oGIw_UkHWCwYvAfUcALZHUUokKj05lmAPJ1CeU5DuKoN7AaY4hDORa0GkiTOY5UHFPftZLJ&source=gbs_api",
+				"title": "The Catcher in the Rye",
+				"author": "J. D. Salinger"
+			},
+			{
+				"image": "http://books.google.com/books/content?id=StnyCxWTERAC&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72XnrCu0XEQxRF3QD9zA_brszQCjjJKwChLOrVULrGlBL-xjOAgl3p2a5Z53UM4onuOn-OkgwM6KUio-wJGjjZAx6aZmG1ckYWPQPv_LUNwGdQhy-WJMD_YJ2Pq9YrcfIPn-rqi&source=gbs_api",
+				"title": "Jonathan Livingston Seagull",
+				"author": "Richard Bach"
+			},
+			{
+				"image": "http://books.google.com/books/content?id=rXYdGATpigsC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72mjdkC3yNMDLYHyb2BCi4B3R3lrQMaRoq4LdcejKjglDJAAUtzIDcT8SM4VbiBx7gmP0R8HEh8QOIB9Ozu4MH1gYHiP6iQch5J4Q9bBbGjjBae0KIuFZtce3--u-fz7R-g2EMV&source=gbs_api",
+				"title": "Dune",
+				"author": "Frank Herbert"
+			}
+		]
+	},
+	{
+		"login": "victor",
+		"password": "12345",
+		"id": "skdjhsdfsdfsdafgsjdhfbs",
+		"name": "Victor Escartín",
+		"profilePicture": "https://ca.slack-edge.com/T0SJKHBFZ-U014SQASY1K-5294ab1e4563-512",
+		"mainPhoto": "https://imagenesbonitas.co/wp-content/uploads/2018/01/Portadas-Twitter-1500x500-Nuevas-2.jpg",
+		"aboutMe": "Hi there! I love reading in my spare time. As someone once said, take a good book to bed with you — books do not snore.",
+		"myFavourites": [
+			{
+				"image": "http://books.google.com/books/content?id=mZunDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72X7XFWxzT1IvpsSxdgcYlhlVvb7buQ_Vppr_4YRHwEmCkRnbVMF25NZvS9ErzQ4oGIw_UkHWCwYvAfUcALZHUUokKj05lmAPJ1CeU5DuKoN7AaY4hDORa0GkiTOY5UHFPftZLJ&source=gbs_api",
+				"title": "The Catcher in the Rye",
+				"author": "J. D. Salinger"
+			},
+			{
+				"image": "http://books.google.com/books/content?id=StnyCxWTERAC&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72XnrCu0XEQxRF3QD9zA_brszQCjjJKwChLOrVULrGlBL-xjOAgl3p2a5Z53UM4onuOn-OkgwM6KUio-wJGjjZAx6aZmG1ckYWPQPv_LUNwGdQhy-WJMD_YJ2Pq9YrcfIPn-rqi&source=gbs_api",
+				"title": "Jonathan Livingston Seagull",
+				"author": "Richard Bach"
+			},
+			{
+				"image": "http://books.google.com/books/content?id=rXYdGATpigsC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72mjdkC3yNMDLYHyb2BCi4B3R3lrQMaRoq4LdcejKjglDJAAUtzIDcT8SM4VbiBx7gmP0R8HEh8QOIB9Ozu4MH1gYHiP6iQch5J4Q9bBbGjjBae0KIuFZtce3--u-fz7R-g2EMV&source=gbs_api",
+				"title": "Dune",
+				"author": "Frank Herbert"
+			}
+		]
+	}
+]

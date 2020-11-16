@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="../../styles.css" />
 	</head>
 	<body>
+		<h1>Tour of Heroes</h1>
 		<nav>
 			<a href="../dashboard/dashboard.html">Dashboard</a>
 			<a href="../heroes/heroes.html">Heroes</a>
@@ -28,32 +29,35 @@
 		<script src="../../store.js"></script>
 		<script src="./detail.js"></script>
 		<script>
-			const heroId = getHeroId(location);
-			const hero = store.getHeroById(heroId);
-			let detailComponent = new DetailComponent(hero);
+			(async function dum() {
+				await store.loadHeroes();
+				const heroId = getHeroId(location);
+				const hero = store.getHeroById(heroId);
+				let detailComponent = new DetailComponent(hero);
 
-			if (hero) {
-				let idElement = document.getElementById('detail-title');
-				detailComponent.updateHtmlValue(
-					idElement,
-					'innerHTML',
-					detailComponent.hero.name
-				);
+				if (hero) {
+					let idElement = document.getElementById('detail-title');
+					detailComponent.updateHtmlValue(
+						idElement,
+						'innerHTML',
+						detailComponent.hero.name
+					);
 
-				idElement = document.getElementById('hero-id__value');
-				detailComponent.updateHtmlValue(
-					idElement,
-					'innerHTML',
-					detailComponent.hero.id
-				);
+					idElement = document.getElementById('hero-id__value');
+					detailComponent.updateHtmlValue(
+						idElement,
+						'innerHTML',
+						detailComponent.hero.id
+					);
 
-				nameElement = document.getElementById('hero-name__input');
-				detailComponent.updateHtmlValue(
-					nameElement,
-					'value',
-					detailComponent.hero.name
-				);
-			}
+					nameElement = document.getElementById('hero-name__input');
+					detailComponent.updateHtmlValue(
+						nameElement,
+						'value',
+						detailComponent.hero.name
+					);
+				}
+			})();
 		</script>
 	</body>
 </html>

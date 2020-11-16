@@ -1,0 +1,22 @@
+.remove__button {
+    margin-top: 0;
+    margin-bottom: 50px;
+    max-width: 300px;
+    min-width: 300px;
+}
+
+.total-price {
+    margin-bottom: 30px;
+    max-width: 300px;
+    min-width: 300px;
+}
+
+.price__text {
+    margin: auto;
+    text-align: center;
+    font-size: 15px;
+}
+
+.title__section {
+    text-align: center;
+}

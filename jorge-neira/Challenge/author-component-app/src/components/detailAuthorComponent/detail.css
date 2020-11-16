@@ -1,0 +1,21 @@
+.detail-container {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.listItem {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	width: 500px;
+	height: 50px;
+	margin-bottom: 15px;
+	background-color: rgb(225, 225, 251);
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+.listItem:hover {
+	background-color: rgb(197, 197, 241);
+}

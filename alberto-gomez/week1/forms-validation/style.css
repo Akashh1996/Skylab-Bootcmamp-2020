@@ -1,0 +1,11 @@
+input:valid {
+	border: 2px solid green;
+}
+
+input:invalid {
+	border: 2px solid red;
+}
+
+.sugg > textarea {
+	font-family: Arial, Helvetica, sans-serif;
+}

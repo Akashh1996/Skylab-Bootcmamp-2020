@@ -1,0 +1,18 @@
+body {
+    background-color: gray;
+    
+    .block {
+        width: auto;
+        height: auto;
+        margin: 50px auto;
+        background-color: antiquewhite;
+        border-radius: 5px;
+
+        .block__pokeblock {
+            width: 400px;
+            height: 40px;
+            background-color: darkblue;
+            color: white;
+        }
+    }
+}

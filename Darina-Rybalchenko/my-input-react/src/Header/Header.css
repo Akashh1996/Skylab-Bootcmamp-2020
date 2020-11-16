@@ -1,0 +1,14 @@
+header {
+    margin-top: 50px;
+    height: 80px;
+    border-bottom: 2px solid silver;
+}
+
+button {
+    margin-top: 20px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    border: none;
+    color: rgb(25, 26, 75);
+    background: none;
+}
