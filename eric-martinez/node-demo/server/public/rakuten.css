@@ -1,0 +1,372 @@
+body.container {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	background-color: rgba(14, 14, 14);
+	font-family: NotoSans-Regular, Arial, sans-serif;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+.nav {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 52px;
+	background: #000;
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0.8) 0,
+		rgba(0, 0, 0, 0.7) 20%,
+		rgba(0, 0, 0, 0.4) 50%,
+		transparent 100%
+	);
+}
+.nav__items {
+	display: block;
+	display: flex;
+	flex-direction: row;
+	height: 45px;
+	position: relative;
+	margin: 0 auto;
+	padding: 10px 10px 0;
+	max-width: 1680px;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav__items__logo__ {
+	height: 40px;
+	width: 140px;
+}
+
+.logo__img {
+	width: 120px;
+}
+
+.nav__items__search {
+	display: flex;
+	height: 30px;
+	justify-content: end;
+	align-items: center;
+	width: 30px;
+}
+
+.nav__menu {
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	height: 50px;
+	width: 100%;
+	background-color: black;
+	bottom: 0;
+	margin-bottom: 0;
+}
+.nav__items__links {
+	display: none;
+}
+.nav__items__search {
+	display: none;
+}
+.nav__items__links__entrar {
+	display: none;
+}
+.nav__items__links__search {
+	display: none;
+}
+.nav__items__links__button {
+	display: none;
+}
+.nav__items__links__register__button {
+	display: none;
+}
+.nav_menu--row {
+	display: flex;
+	flex-direction: row;
+	height: 45px;
+	padding: 10px;
+	width: 100%;
+}
+
+.nav__menu__items {
+	width: 100%;
+
+	height: 45px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.nav__menu__secccion {
+	display: block;
+	font-weight: bold;
+	font-size: 10px;
+	color: rgb(150, 150, 150);
+	font-family: NotoSans-Bold, Arial, sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+}
+.nav__menu__items:hover {
+	color: yellow;
+}
+.header__img {
+	height: auto;
+}
+.header__img--size {
+	width: 100%;
+	height: auto;
+}
+.seccion__item {
+	margin-left: 5px;
+}
+.seccion__items_list {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+}
+
+.seccion__items {
+	display: flex;
+	flex-direction: row;
+	height: auto;
+	max-height: 170px;
+	margin-top: 35px;
+	width: auto;
+	overflow: auto;
+}
+
+.scrollable {
+	position: absolute;
+	right: 0;
+	display: flex;
+	align-items: center;
+	height: 300px;
+	max-height: 170px;
+	width: 65px;
+	overflow: auto;
+	background: linear-gradient(
+		to left,
+		rgba(23, 23, 23, 0.95) 0,
+		transparent 100%
+	);
+}
+.scrollable__cinema {
+	position: absolute;
+	right: 0;
+	display: flex;
+	align-items: center;
+	height: 250px;
+	max-height: 300px;
+	width: 65px;
+	overflow: auto;
+	background: linear-gradient(
+		to left,
+		rgba(23, 23, 23, 0.95) 0,
+		transparent 100%
+	);
+}
+.seccion__items__img {
+	height: auto;
+	height: -webkit-fill-available;
+	width: auto;
+}
+
+.seccion__items__img:hover {
+	border: 4px solid yellow;
+}
+
+.seccion__items__img--fist {
+	height: -webkit-fill-available;
+	margin-left: 20px;
+}
+.seccion__items__img--fist:hover {
+	border: 4px solid yellow;
+}
+
+.seccion__items__img--last {
+	height: -webkit-fill-available;
+	margin-right: 20px;
+}
+.seccion__items__img--last:hover {
+	border: 4px solid yellow;
+}
+
+.seccion__title {
+	margin-left: 20px;
+	font-size: 16px;
+	color: white;
+	font-weight: bold;
+}
+
+.seccion__cinema {
+	display: flex;
+	flex-direction: row;
+	margin-left: 10px;
+	margin-bottom: 50px;
+}
+
+.seccion__cinema__top-films {
+	height: auto;
+	max-height: 250px;
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+}
+
+.seccion__cinema__top-films__img {
+	margin-left: 10px;
+}
+
+.seccion__cinema__items__img {
+	height: -webkit-fill-available;
+}
+.seccion__cinema__items__img:hover {
+	border: 4px solid yellow;
+}
+.seccion__cinema__items__img--last {
+	margin-right: 20px;
+	height: -webkit-fill-available;
+}
+.seccion__free {
+	display: flex;
+	flex-direction: row;
+	margin-left: 10px;
+	margin-bottom: 100px;
+}
+
+.footerBlock {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 0;
+	background-color: black;
+}
+
+.footerBlock__information {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-size: 14px;
+	padding: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: black;
+}
+
+.footer__logo {
+	height: auto;
+	max-height: 30px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+.links {
+	display: inline-block;
+	color: lightgray;
+	text-decoration: none;
+	line-height: 20px;
+	margin-left: 10px;
+}
+.wrapper {
+	margin-bottom: 20px;
+}
+.footerBlock__information__rakuten {
+	margin-bottom: 50px;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-left: 0;
+	color: #737373;
+	text-transform: initial;
+}
+
+@media screen and (min-width: 967px) {
+	.nav {
+		position: fixed;
+		background: black;
+	}
+	.nav__menu {
+		display: none;
+	}
+
+	.nav__items__links--right {
+		display: flex;
+		flex-direction: row;
+	}
+	.nav__items__links--left {
+		display: flex;
+		flex-direction: row;
+	}
+	.nav__items__links {
+		display: flex;
+		align-items: center;
+	}
+	.nav__items__links__text {
+		color: white;
+		font-weight: bold;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	.nav__items__links__text:hover {
+		color: yellow;
+	}
+	.nav__items__links__text--GREY {
+		color: grey;
+		font-weight: bold;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	.nav__items__links__text--GREY:hover {
+		color: yellow;
+	}
+	.nav__items__links__entrar {
+		display: block;
+		display: flex;
+		align-items: center;
+	}
+	.nav__items__links__search {
+		display: list-item;
+	}
+	.nav__items__links__register__button {
+		display: block;
+		background: yellow;
+		font-weight: bold;
+		border-radius: 3px 3px 3px 3px;
+		-moz-border-radius: 3px 3px 3px 3px;
+		-webkit-border-radius: 3px 3px 3px 3px;
+		border: 0px solid #000000;
+		border: 0;
+		height: -webkit-fill-available;
+		margin-right: 10px;
+	}
+	.nav__items__links__search {
+		margin-left: 5px;
+		border: 0;
+		padding-left: 10px;
+		height: 40px;
+		background-color: #333;
+		border-radius: 2px;
+	}
+	.search__box__input {
+		border: 0;
+		padding-left: 10px;
+		height: 40px;
+		background-color: #333;
+		border-radius: 2px;
+	}
+	.header__img {
+		padding-top: 52px;
+	}
+	.seccion__cinema__items__img :hover {
+		border: 4px solid yellow;
+	}
+}

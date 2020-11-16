@@ -1,0 +1,15 @@
+.sabersList-loading-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 200px 0;
+    color: aliceblue;
+    background-color: #0E2444;
+    font-weight: 600;
+}
+
+.loading-gif {
+    width: 300px;
+}

@@ -12,11 +12,8 @@ import Header from './components/Header';
 
 import { Provider as ReduxProvider } from 'react-redux';
 import  configureStore  from './redux/configureStore';
-import { getHeroes } from './redux/actions/heroActions';
 
 const store = configureStore();
-
-store.dispatch(getHeroes())
 
 render(
 	<React.StrictMode>
