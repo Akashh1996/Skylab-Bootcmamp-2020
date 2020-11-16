@@ -11,10 +11,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Header />
 		<BrowserRouter>
+			<Header />
 			<Switch>
-				<Route path="/" exact component={Header} />
 				<Route path="/" exact component={PokeList} />
 				<Route path="/pokemon/:pokeName" component={Detail} />
 			</Switch>

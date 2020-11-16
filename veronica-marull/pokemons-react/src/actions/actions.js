@@ -5,7 +5,7 @@ export async function loadPokemons() {
 	const response = await fetch('https://pokeapi.co/api/v2/pokemon');
 	const pokemonsResponse = await response.json();
 
-	console.log(pokemonsResponse.results);
+	//console.log(pokemonsResponse.results);
 
 	dispatcher.dispatch({
 		type: actionTypes.LOAD_POKEMONS,
@@ -13,10 +13,11 @@ export async function loadPokemons() {
 	});
 }
 
-export async function getPokemonsDetail(name) {
+export async function loadPokemonsDetail(name) {
 	try {
 		const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}/`);
 		const detail = await response.json();
+		//console.log(detail);
 
 		dispatcher.dispatch({
 			type: actionTypes.POKEMONS_DETAIL,
