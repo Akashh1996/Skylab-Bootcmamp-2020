@@ -1,11 +1,18 @@
-function basketProductController(Product) {
+function basketProductController(Basket, Product) {
   function allMiddleware(req, res, next) {
-    req.product = Product.getProductById(+req.params.productId);
+    req.product = +req.params.productId;
     next();
   }
-  function postMethod(req) {
-    const id = +req.params.productId;
-    Product.addProductToBasket(id);
+
+  async function postMethod(req, res) {
+    const query = { id: req.product };
+    const productFounded = await Product.findOne(query, (errorFindProduct, product) => {
+      if (errorFindProduct) {
+        res.send(errorFindProduct);
+      }
+      res.json(product);
+    });
+    Basket.create({ id: productFounded.id, 'product-name': productFounded['product-name'] });
   }
 
   function deleteMethod(req, res) {
