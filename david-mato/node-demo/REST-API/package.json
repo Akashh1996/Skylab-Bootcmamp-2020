@@ -1,0 +1,17 @@
+{
+  "name": "mynodejsapp",
+  "version": "1.0.0",
+  "description": "Simple node app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "dmatochoya",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}

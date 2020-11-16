@@ -1,0 +1,44 @@
+REACT
+npm i react
+
+REACT DOM
+npm i react-dom
+
+REACT ROUTER DOM
+npm i react-router-dom
+
+AXIOS
+npm i axios
+
+REDUX
+npm i redux
+
+REDUX THUNKS
+npm i thunks
+
+EXPRESS (servidor backend)
+npm install EXPRESS
+
+EXPRESS ASYNC HANDLER (Gestionar errores y excepciones en funciones asincronas)
+npm install --save express-async-handler
+
+NODEMON (actualizador de server)
+npm i nodemon
+
+ESLINT (formateador de código)
+npm i eslint
+
+BCRYPTJS (creador de código encriptado para generar IDs)
+npm i bcryptjs
+
+DOTENV (localizador entornos .env para datos que no deben ser mostrados en el código)
+npm i dotenv
+
+JSONWEBTOKEN (Generador de tokens- Autenticación y administración)
+npm i jsonwebtoken
+
+MONGOOSE (gestión de MongoDB con entornos asíncronos)
+npm i mongoose
+
+MULTER (permite descargar archivos- Subir fotos a la imagen de producto)
+npm i multer

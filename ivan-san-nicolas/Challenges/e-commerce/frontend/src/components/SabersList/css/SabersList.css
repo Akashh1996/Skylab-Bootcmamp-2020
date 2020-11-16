@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'Star Jedi';
+    src: url('StarJedi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.sabersList-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+    background-image: url('https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/3519d5d1d40ef65e484e77e98048cd0f/5SCIFI10006B_1480x800_(2).jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cart-button-link {
+    position: fixed;
+    margin: 40px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: rgb(24, 24, 24);
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.sabersList-section__sabers__title {
+    margin-top: 100px;
+    font-size: 50px;
+    font-family: 'Star Jedi';
+    color: rgb(26, 26, 26);
+    -webkit-text-stroke: 1px rgb(232, 232, 232);
+}
+
+.sabersList-section__sabers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 20px 0;
+    background-image: url('https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/3519d5d1d40ef65e484e77e98048cd0f/5SCIFI10006B_1480x800_(2).jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.saber-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+.saber-wrapper:hover {
+    transform: scale(1.07);
+}
+
+.saber-wrapper:hover .saber-title {
+    letter-spacing: 6px;
+}
+
+.saber-title {
+    margin-top: 10px;
+    font-family: 'Star Jedi';
+    font-size: 25px;
+    font-weight: 800;
+    color: rgb(26, 26, 26);
+    -webkit-text-stroke: 1px rgb(232, 232, 232);
+    text-decoration: none;
+    letter-spacing: 2px;
+    border: none;
+    transition: letter-spacing 0.5s;
+}
+
+.saber-image {
+    width: 350px;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 4px 4px 5px rgb(28, 28, 28);
+}
+
+@media (max-width: 880px){
+
+    .sabersList-section {
+        flex-direction: column;
+    }
+
+    .saber-image {
+        width: 70%;
+    }
+
+    .saber-image__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
