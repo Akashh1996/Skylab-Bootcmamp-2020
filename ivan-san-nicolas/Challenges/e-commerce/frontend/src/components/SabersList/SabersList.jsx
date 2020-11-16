@@ -16,6 +16,12 @@ function SabersList({ sabersList, dispatch }) {
     <>
         {sabersList?.length > 0 ? (
           <div className="sabersList-section">
+              <div className="cart-button-link">
+                <Link to={"/cart"}>
+                  <img src="https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/2108a82b4ba215ac9f894f55acfc5668/icons8-carrito-de-compras-50.png"
+                  alt="cart-icon"/>
+                </Link>
+              </div>
               <h1 className="sabersList-section__sabers__title">Sabers</h1>
             <ul className="sabersList-section__sabers">
                 {

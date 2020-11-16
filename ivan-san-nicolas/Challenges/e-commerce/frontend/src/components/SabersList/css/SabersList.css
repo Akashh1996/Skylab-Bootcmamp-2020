@@ -18,6 +18,18 @@
     background-size: cover;
 }
 
+.cart-button-link {
+    position: fixed;
+    margin: 40px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: rgb(24, 24, 24);
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    cursor: pointer;
+}
+
 .sabersList-section__sabers__title {
     margin-top: 100px;
     font-size: 50px;
