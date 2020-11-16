@@ -11,7 +11,6 @@ export default function pokeReducer(state = {}, action) {
 			return cosoError;
 		case 'RANDOM':
 			const cosoRandom = { ...state, randomNumber: action.randomNumber };
-			debugger;
 			return cosoRandom;
 		default:
 			return state;
