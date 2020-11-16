@@ -27,7 +27,6 @@ function HeroList({ pokemonList, dispatch, props }) {
     );
 }
 function mapStateToProps(state) {
-    debugger
     return {
         pokemonList: state.heroReducer.pokemonList
     };
