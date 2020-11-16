@@ -15,7 +15,7 @@ function requestProductsError(error) {
 }
 export function requestProducts() {
     return async (dispatch) => {
-        debugger;
+        
         const endpoint = 'http://localhost:3020/products';
         try {
             const products = await axios.get(endpoint)
