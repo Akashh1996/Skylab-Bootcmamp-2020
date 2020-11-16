@@ -2,9 +2,20 @@
   "name": "frontend",
   "version": "0.1.0",
   "jest": {
-    "verbose": true,
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "@babel/plugin-transform-runtime"
+        ]
+      }
     }
   },
   "private": true,
@@ -23,6 +34,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "redux": "^4.0.5",
+    "redux-mock-store": "^1.5.4",
     "redux-thunk": "^2.3.0",
     "web-vitals": "^0.2.4"
   },
@@ -51,9 +63,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
     "babel-jest": "^26.6.3",
-    "babel-loader": "^8.2.1",
     "eslint": "^7.13.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-base": "^14.2.1",

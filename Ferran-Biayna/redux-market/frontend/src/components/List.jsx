@@ -5,7 +5,6 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import {
   requestProducts,
-  createRandomVariable,
   requestAddProducts,
 } from '../actions/productsActions';
 
@@ -57,7 +56,6 @@ function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators({
       requestProducts,
-      createRandomVariable,
       requestAddProducts,
     }, dispatch),
     dispatch,

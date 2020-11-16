@@ -29,10 +29,11 @@ function requestProductError(error) {
   };
 }
 
-function requestAddProductsSuccess(products) {
+function requestAddProductsSuccess(product) {
+  debugger;
   return {
     type: actionTypes.ADD_PRODUCT,
-    products,
+    product,
   };
 }
 
@@ -96,8 +97,9 @@ export function requestProduct(productId) {
 export function requestAddProducts(productId) {
   return async (dispatch) => {
     try {
-      const products = await axios.post(`http://localhost:5000/products/${productId}`);
-      dispatch(requestAddProductsSuccess(products.data));
+      const product = await axios.post(`http://localhost:5000/products/${productId}`);
+      debugger;
+      dispatch(requestAddProductsSuccess(product.data));
     } catch (error) {
       dispatch(requestAddProductsError(error));
     }
@@ -123,13 +125,5 @@ export function requestDeleteProduct(productId) {
     } catch (error) {
       dispatch(requestDeleteProductError(error));
     }
-  };
-}
-
-export function createRandomVariable() {
-  const randomNumber = Math.random();
-  return {
-    type: 'RANDOM',
-    randomNumber,
   };
 }

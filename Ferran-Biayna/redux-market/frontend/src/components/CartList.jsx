@@ -5,18 +5,17 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import {
   requestCart,
-  createRandomVariable,
   requestDeleteProduct,
 } from '../actions/productsActions';
 
 function CartList({ cart, dispatch }) {
-  if (!cart && !cart?.length) {
+  if (!cart) {
     dispatch(requestCart());
   }
 
   return (
     <div className="cart-container">
-      {cart && cart.length === 0 ? <p>Empty cart!</p> : (
+      {!cart && cart?.length === 0 ? <p>Empty cart!</p> : (
         <>
           <p>{`Total - ${cart && cart.length && new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(cart.reduce((acc, product) => acc + product.price, 0))}`}</p>
           {cart && cart.length && cart.map((product) => (
@@ -53,7 +52,6 @@ function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators({
       requestCart,
-      createRandomVariable,
       requestDeleteProduct,
     }, dispatch),
     dispatch,

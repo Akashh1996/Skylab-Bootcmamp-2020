@@ -5,7 +5,7 @@ function productController(Product) {
 
   function postMethod(req, res) {
     Product.addProduct(+req.params.productId);
-    res.json(Product.getCart());
+    res.json(Product.getProductById(+req.params.productId));
   }
 
   function allMiddleware(req, res, next) {

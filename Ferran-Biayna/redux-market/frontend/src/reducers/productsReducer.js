@@ -17,7 +17,7 @@ export default function productsReducer(state = {}, action) {
       answer = { ...state, error: action.error };
       return answer;
     case actionTypes.ADD_PRODUCT:
-      answer = { ...state };
+      answer = { ...state, cart: [...state.cart, action.product] };
       return answer;
     case actionTypes.ADD_PRODUCT_ERROR:
       answer = { ...state };
@@ -33,6 +33,9 @@ export default function productsReducer(state = {}, action) {
       return answer;
     case actionTypes.DELETE_PRODUCT_ERROR:
       answer = { ...state, error: action.error };
+      return answer;
+    case actionTypes.CLEAN_STATE:
+      answer = { ...state, product: null };
       return answer;
     default:
       return state;

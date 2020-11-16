@@ -18,7 +18,7 @@ describe('cartController', () => {
     };
 
     const req = {
-      params: { productId: '1' },
+      params: { productId: 1 },
     };
 
     cartController.deleteMethod(req, res);
