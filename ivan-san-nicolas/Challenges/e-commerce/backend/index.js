@@ -3,7 +3,8 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const Sabers = require('./stores/saberStore.js');
 const sabersRoutes = require('./routes/sabersRoutes')(Sabers);
-const cartRoutes = require('./routes/cartRoutes')();
+const Cart = require('./stores/cartStore');
+const cartRoutes = require('./routes/cartRoutes')(Cart);
 
 const app = express();
 
