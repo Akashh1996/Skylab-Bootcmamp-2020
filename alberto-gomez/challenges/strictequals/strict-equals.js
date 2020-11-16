@@ -11,10 +11,4 @@ function strictEquals (a, b) {
   return result
 }
 
-// CLONE WITHOUT MUTATION
-
-function cloneObject (objx) {
-  objResult = {};
-  Object.assign(objResult, objx);
-  return objResult;
-}
+module.exports = strictEquals;
