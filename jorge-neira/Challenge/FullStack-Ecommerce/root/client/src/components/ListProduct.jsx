@@ -16,14 +16,7 @@ function ListProduct({ products, dispatch }) {
       <section>
         {products && products.map((product) => (
           <ListCreateProduct
-            onAddToCartClicked={() => addProductToCart(
-              {
-                cartId: Date.now(),
-                productName: product['product-name'],
-                productModel: product['product-model'],
-                price: product.price,
-              },
-            )}
+            onAddToCartClicked={(data) => addProductToCart(data)}
             data={product}
             key={performance.now()}
           />
@@ -41,6 +34,8 @@ ListProduct.propTypes = {
 };
 
 function mapStateToProps(state) {
+  // eslint-disable-next-line no-debugger
+  debugger;
   return {
     products: state.productReducer.productList,
   };

@@ -18,7 +18,13 @@ function ListCreateProduct({ data, onAddToCartClicked }) {
         {' '}
         <button
           type="button"
-          onClick={onAddToCartClicked}
+          key={performance.now()}
+          onClick={onAddToCartClicked({
+            cartId: Date.now(),
+            productName: data['product-name'],
+            productModel: data['product-model'],
+            price: data.price,
+          })}
         >
           Add
         </button>

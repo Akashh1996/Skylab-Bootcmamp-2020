@@ -89,3 +89,19 @@ export function getCurrentCart() {
     }
   };
 }
+
+export function delProductFromCart(cartId) {
+  // eslint-disable-next-line no-debugger
+  debugger;
+  return async (dispatch) => {
+    const endpoint = 'cart';
+    try {
+      await axios.delete(`${URL}${endpoint}`, {
+        data: { cartId },
+      });
+      dispatch(getCurrentCart());
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}

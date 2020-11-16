@@ -1,23 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { PropTypes } from 'prop-types';
-import { getCurrentCart } from '../redux/actions/productsActions';
+import { getCurrentCart, delProductFromCart } from '../redux/actions/productsActions';
 
-function ShoppingCart({ cartList, dispatch }) {
-  if (!cartList) {
+// eslint-disable-next-line react/prop-types
+function ShoppingCart({ currentCart = [], dispatch }) {
+  // eslint-disable-next-line no-debugger
+  debugger;
+  // eslint-disable-next-line no-debugger
+  if (currentCart.length < 0) {
     dispatch.getCurrentCart();
   }
+  useEffect(() => {
+    dispatch.getCurrentCart();
+  }, []);
 
   return (
     <>
-      {cartList
-        ? cartList.map((cartProduct) => (
-          <div key={performance.now()}>
-            {`${cartProduct.productName} 
-        ${cartProduct.productModel} 
-        Price: ${cartProduct.price}€`}
-          </div>
+      {(currentCart && currentCart > 0)
+        ? currentCart.map((cartProduct) => (
+          <>
+            <div key={performance.now()}>
+              {`${cartProduct.productName} 
+            ${cartProduct.productModel} 
+            Price: ${cartProduct.price}€`}
+            </div>
+            <button
+              type="button"
+              key={performance.now()}
+              onClick={() => dispatch.delProductFromCart(cartProduct.cartId)}
+            >
+              del
+            </button>
+          </>
         ))
         : <div>No hay articulos disponibles</div> }
     </>
@@ -25,21 +41,24 @@ function ShoppingCart({ cartList, dispatch }) {
 }
 
 ShoppingCart.propTypes = {
+  // currentCart: PropTypes.shape({}).isRequired,
   dispatch: PropTypes.shape({
     getCurrentCart: PropTypes.func.isRequired,
+    delProductFromCart: PropTypes.func.isRequired,
   }).isRequired,
-  cartList: PropTypes.shape([]).isRequired,
 };
 
 function mapStateToProps(state) {
+  // eslint-disable-next-line no-debugger
+  debugger;
   return {
-    cartList: state.productReducer.cartList,
+    currentCart: state.productReducer.cartList,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatch: bindActionCreators({ getCurrentCart }, dispatch),
+    dispatch: bindActionCreators({ getCurrentCart, delProductFromCart }, dispatch),
   };
 }
 
