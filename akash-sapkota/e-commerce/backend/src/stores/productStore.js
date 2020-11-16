@@ -26,7 +26,7 @@ class Product {
   }
 
   static deleteProduct(productId) {
-    products = products.filter((product) => product.id !== productId);
+    cart = cart.filter((item) => item.id !== productId);
   }
 
   static getCart(){
@@ -34,7 +34,6 @@ class Product {
   }
   static addProduct(newProduct) {
     cart = [...cart, newProduct];
-    return cart
   }
 }
 

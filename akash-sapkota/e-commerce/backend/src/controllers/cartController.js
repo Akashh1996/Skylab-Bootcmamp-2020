@@ -3,6 +3,7 @@ function cartController(Product){
        res.json(Product.getCart())
     }
     function postMethod(req,res){
+        console.log(req.body);
         Product.addProduct(req.body)
         res.json(Product.getCart())
     }
