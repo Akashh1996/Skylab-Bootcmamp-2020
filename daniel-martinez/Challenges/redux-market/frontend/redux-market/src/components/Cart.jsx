@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -8,9 +8,9 @@ import functions from '../functions/Functions';
 import './Cart.css';
 
 function Cart({ cartProducts, dispatch }) {
-  if (!cartProducts) {
+  useEffect(() => {
     dispatch.getCartProducts();
-  }
+  }, [dispatch]);
 
   return (
     <>
@@ -19,7 +19,7 @@ function Cart({ cartProducts, dispatch }) {
       {(!cartProducts || cartProducts.length < 1) && (
       <h2>There are no products!</h2>
       )}
-      {cartProducts && (
+      {cartProducts && cartProducts.length > 0 && (
         <ul>
           {functions.getProductList(cartProducts, 'cart')}
         </ul>

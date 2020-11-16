@@ -1,6 +1,6 @@
 const products = require('../../public/products.json');
 
-const cart = [];
+let cart = [];
 
 class Product {
   static getProducts() {
@@ -20,7 +20,7 @@ class Product {
   }
 
   static deleteFromCart(product) {
-    cart.filter((productFilter) => productFilter['product-name'] !== product['product-name']);
+    cart = cart.filter((productFilter) => productFilter?.id !== product.id);
   }
 }
 

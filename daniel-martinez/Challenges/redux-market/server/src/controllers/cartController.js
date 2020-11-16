@@ -1,18 +1,37 @@
-function cartController(Product) {
+function cartController(Cart) {
   function getMethod(req, res) {
-    res.json(Product.getCart());
+    const query = {};
+    Cart.find(query, (errorFindProducts, cartProducts) => {
+      if (errorFindProducts) {
+        res.send(errorFindProducts);
+      }
+      res.json(cartProducts);
+    });
   }
 
   function putMethod(req, res) {
-    Product.addToCart(req.body);
-
-    res.json(Product.getCart());
+    const query = req.body;
+    Cart.create(query, (errorFindProducts, cartProduct) => {
+      if (errorFindProducts) {
+        res.send(errorFindProducts);
+      }
+      res.json(cartProduct);
+    });
   }
 
   function deleteMethod(req, res) {
-    Product.deleteFromCart(req.body);
-
-    res.json(Product.getCart());
+    const query = req.body;
+    Cart.findOneAndRemove(query, (errorFindProducts, cartProducts) => {
+      if (errorFindProducts) {
+        res.send(errorFindProducts);
+      }
+      Cart.find({}, (errorFinding, cartList) => {
+        if (errorFinding) {
+          res.send(errorFindProducts);
+        }
+        res.json(cartList);
+      });
+    });
   }
 
   return { getMethod, putMethod, deleteMethod };

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import actionTypes from './action-types';
 
-function getProductsSucceed(products) {
+export function getProductsSucceed(products) {
   return {
     type: actionTypes.GET_PRODUCTS,
     products,
@@ -12,7 +12,7 @@ export const getProducts = () => async (dispatch) => {
   dispatch(getProductsSucceed(response.data));
 };
 
-function getProductSucceed(product) {
+export function getProductSucceed(product) {
   return {
     type: actionTypes.GET_PRODUCT,
     product,
@@ -21,10 +21,10 @@ function getProductSucceed(product) {
 
 export const getProduct = (productId) => async (dispatch) => {
   const response = await axios.get(`http://localhost:5000/products/${productId}`);
-  dispatch(getProductSucceed(response.data));
+  dispatch(getProductSucceed(response.data['0']));
 };
 
-function getCartSucceed(cartProducts) {
+export function getCartSucceed(cartProducts) {
   return {
     type: actionTypes.GET_CART_PRODUCTS,
     cartProducts,
@@ -44,7 +44,7 @@ export const addToCart = (product) => async () => {
 };
 
 export const deleteFromCart = (product) => async () => {
-  const cartProducts = await axios.delete('http://localhost:5000/cart', product);
+  const cartProducts = await axios.delete('http://localhost:5000/cart', { data: product });
   return {
     type: actionTypes.DELETE_FROM_CART,
     cartProducts,

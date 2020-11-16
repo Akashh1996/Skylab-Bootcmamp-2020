@@ -1,14 +1,15 @@
 function productController(Product) {
-  function allMiddleware(req, res, next) {
-    req.product = Product.getProductById(+req.params.productId);
-    next();
-  }
-
   function getMethod(req, res) {
-    res.json(req.product);
+    const query = { id: req.params.productId };
+    Product.find(query, (errorFindProducts, products) => {
+      if (errorFindProducts) {
+        res.send(errorFindProducts);
+      }
+      res.json(products);
+    });
   }
 
-  return { allMiddleware, getMethod };
+  return { getMethod };
 }
 
 module.exports = productController;

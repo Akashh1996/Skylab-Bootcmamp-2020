@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes, { number } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -9,13 +9,13 @@ import Functions from '../functions/Functions';
 function Detail({ match, product, dispatch }) {
   const productId = +match.params.product;
 
-  if (!product) {
+  useEffect(() => {
     dispatch.getProduct(productId);
-  }
+  }, [dispatch]);
 
   return (
     <>
-      {product && product['product-name'] && (
+      {product && (
         <>
           <Header />
           <section id="product">
@@ -23,7 +23,7 @@ function Detail({ match, product, dispatch }) {
             <img className="li-image" alt={product['product-name']} src={product['product-image-url']} />
             <p id="product-name">{`${Functions.getProductName(product)}`}</p>
             <p>{`${product.price}€`}</p>
-            {Functions.cartButton()}
+            {Functions.cartButton(product)}
           </section>
         </>
       )}

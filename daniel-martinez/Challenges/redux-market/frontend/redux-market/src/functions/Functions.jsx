@@ -8,7 +8,7 @@ export default class Functions {
   }
 
   static getProductName(product) {
-    return product['product-name'].replace(/&trade;|&reg;/g, ' – ').toLowerCase();
+    return product['product-name']?.replace(/&trade;|&reg;/g, ' – ').toLowerCase();
   }
 
   static cartButton(product) {
@@ -38,7 +38,7 @@ export default class Functions {
                 {this.getProductName(product)}
                 <br />
                 <br />
-                <p className="li-price">{`${product.price.toFixed(2)} €`}</p>
+                <p className="li-price">{`${product.price?.toFixed(2)} €`}</p>
               </li>
             </Link>
             {compo === 'list'
