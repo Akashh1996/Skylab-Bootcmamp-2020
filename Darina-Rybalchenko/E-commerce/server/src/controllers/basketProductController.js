@@ -1,13 +1,19 @@
 function basketProductController(Product) {
-  function postMethod(req) {
-    const id = +req.params.productId;
-    Product.addProductToBasket(id);
-  }
   function allMiddleware(req, res, next) {
     req.product = Product.getProductById(+req.params.productId);
     next();
   }
-  return { postMethod, allMiddleware };
+  function postMethod(req) {
+    const id = +req.params.productId;
+    Product.addProductToBasket(id);
+  }
+
+  function deleteMethod(req, res) {
+    const id = +req.params.productId;
+    Product.deleteProductFromBasket(id);
+    res.json(Product.getBasket());
+  }
+  return { postMethod, allMiddleware, deleteMethod };
 }
 
 module.exports = basketProductController;

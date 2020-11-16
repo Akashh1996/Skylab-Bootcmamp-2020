@@ -1,6 +1,6 @@
 const products = require('../../api/products.json');
 
-let basket = [];
+const basket = [];
 
 class Product {
   static getProducts() {
@@ -21,7 +21,12 @@ class Product {
   }
 
   static deleteProductFromBasket(productId) {
-    basket = basket.filter((product) => product.id !== productId);
+    const productIndex = basket.indexOf(products.find(
+      (product) => product.id === productId,
+    ));
+    if (productIndex > -1) {
+      basket.splice(productIndex, 1);
+    }
   }
 }
 

@@ -13,7 +13,8 @@ function basketRouter(Product) {
 
   router.route('/:productId')
     .all(basketProduct.allMiddleware)
-    .post(basketProduct.postMethod);
+    .post(basketProduct.postMethod)
+    .delete(basketProduct.deleteMethod);
 
   return router;
 }
