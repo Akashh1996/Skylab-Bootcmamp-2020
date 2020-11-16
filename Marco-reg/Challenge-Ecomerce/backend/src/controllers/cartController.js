@@ -1,14 +1,40 @@
-function cartController(Product) {
+function cartController(Cart) {
   function getMethod(req, res) {
-    res.json(Product.getCart());
+    const query = {};
+    Cart.find(query, (errorFindProducts, cartProducts) => {
+      if (errorFindProducts) {
+        res.send(errorFindProducts);
+      }
+      res.json(cartProducts);
+    });
   }
-  function postMethod(req, res) {
-    Product.addProduct(req.body);
-    res.json(Product.getCart());
+
+  function putMethod(req, res) {
+    const query = req.body;
+    Cart.create(query, (errorFindProducts, cartProduct) => {
+      if (errorFindProducts) {
+        res.send(errorFindProducts);
+      }
+      res.json(cartProduct);
+    });
   }
-  return {
-    getMethod, postMethod,
-  };
+
+  function deleteMethod(req, res) {
+    const query = req.body;
+    Cart.findOneAndRemove(query, (errorFindProducts, cartProducts) => {
+      if (errorFindProducts) {
+        res.send(errorFindProducts);
+      }
+      Cart.find({}, (errorFinding, cartList) => {
+        if (errorFinding) {
+          res.send(errorFindProducts);
+        }
+        res.json(cartList);
+      });
+    });
+  }
+
+  return { getMethod, putMethod, deleteMethod };
 }
 
 module.exports = cartController;

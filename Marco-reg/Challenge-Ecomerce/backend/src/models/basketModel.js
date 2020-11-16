@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const { Schema, model } = mongoose;
-const basketSchema = new Schema({
+const cartSchema = new Schema({
   id: { type: Number },
   'product-name': { type: String },
   'product-image-url': { type: String },
@@ -11,4 +11,4 @@ const basketSchema = new Schema({
   'header-top-right-url': { type: String },
   price: { type: Number },
 });
-module.exports = model('basket', basketSchema);
+module.exports = model('Cart', cartSchema);

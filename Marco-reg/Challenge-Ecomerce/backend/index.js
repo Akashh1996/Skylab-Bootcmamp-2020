@@ -8,8 +8,8 @@ const debug = require('debug')('app');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const Product = require('./src/models/productModel');
-const Basket = require('./src/models/basketModel');
-const testRoute = require('./src/routes/productRoutes')(Product, Basket);
+const Cart = require('./src/models/basketModel');
+const testRoute = require('./src/routes/productRoutes')(Product, Cart);
 
 const app = express();
 app.use(cors());
