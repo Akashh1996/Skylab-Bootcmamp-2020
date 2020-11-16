@@ -8,15 +8,16 @@ import './ProductList.css';
 
 function ProductList({ productList, dispatch}) {
     
-    if (productList.length <= 0) {
+    if (!productList || productList.length <= 0) {
         dispatch(requestProducts());
     }
+    debugger;
     console.log(productList)
     return (
         <div className = "list-wrapper">
             {productList &&
-                productList.length &&
-                productList[0].map((product) => <div className="product_wrapper" key = {product.id}>
+                productList.length >= 1 &&
+                productList.map((product) => <div className="product_wrapper" key = {product.id}>
                 <span><Link to= {`/${product.id}`}>{product["product-name"]}</Link></span>
                 <span>{product.price}€</span>
                 <span class="material-icons"><Link to= {`/cart`}>shopping_cart</Link></span>
@@ -27,13 +28,12 @@ function ProductList({ productList, dispatch}) {
     );
 }
 function mapStateToProps(state) {
-   debugger
+   
     return {
-        productList: state.productReducer
+        productList: state.productReducer.productList
     };
 }
 function mapDispatchToProps(dispatch) {
-    debugger
     return {
         actions: bindActionCreators({ }, dispatch),
         dispatch

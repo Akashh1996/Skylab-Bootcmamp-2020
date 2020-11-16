@@ -22,3 +22,7 @@ a{
     width: 150px;
     height: 100px;
 }
+
+button {
+    background-color: black;
+}

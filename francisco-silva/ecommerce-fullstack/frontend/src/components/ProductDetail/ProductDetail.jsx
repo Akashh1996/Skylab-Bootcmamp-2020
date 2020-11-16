@@ -1,49 +1,47 @@
-import React from 'react';
+import React , {useEffect} from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { requestProductDetail } from '../../redux/actions/productAction';
 import './ProductDetail.css';
+import { Link } from 'react-router-dom';
 
-function ProductDetail({ productDetail, dispatch, actions } ) {
- 
-    const id = window.location.pathname.match(/\d+/)[0] 
-    debugger;
-        if (!productDetail) {
+function ProductDetail({ productDetail, dispatch, actions }) {
+
+    const id = window.location.pathname.match(/\d+/)[0]
+
+    useEffect(()=>{
+        
+        if (id) {
+            debugger
             dispatch(requestProductDetail(+id));
         }
-       
-        console.log(productDetail)
-        console.log(id)
-        console.log(productDetail[0][id-1]["product-name"])
+    }, [id])
+    console.log(productDetail)
 
     return (
-        
+
         <>
-            {productDetail &&
-               <div className="detail-wrapper">
-                   <p>{productDetail[0][id-1]["product-name"]}</p> 
-                   <p>price:{productDetail[0][id-1].price}€</p> 
-                   <span class="material-icons">shopping_cart</span>
-               
-                
-                    <img className="product_img" alt="product-img" src={`${productDetail[0][id-1]["product-image-url"]}`}></img>
-                   
-               </div>
-               }
+            {productDetail?.price &&
+                <div className="detail-wrapper">
+                    <p>{productDetail["product-name"]}</p>
+                    <p>price:{productDetail.price}€</p>
+                    <span class="material-icons">shopping_cart</span>
+                    <img className="product_img" alt="product-img" src={`${productDetail["product-image-url"]}`}></img>
+                    <button><Link to= {`/`}>back</Link></button>
+                </div>
+            }
         </>
     );
 }
 function mapStateToProps(state) {
-
+    debugger
     return {
-        
-        productDetail: state.productReducer
+        productDetail: state.productReducer.productDetail
     };
 }
 function mapDispatchToProps(dispatch) {
-    debugger;
     return {
-        actions: bindActionCreators({ }, dispatch),
+        actions: bindActionCreators({}, dispatch),
         dispatch
     };
 }

@@ -1,7 +1,6 @@
 import actionTypes from './actionTypes';
 import axios from 'axios';
 function requestProductsSuccess(productList) {
-    debugger;
     return {
         type: actionTypes.LOAD_PRODUCTS,
         productList
@@ -15,7 +14,7 @@ function requestProductsError(error) {
 }
 export function requestProducts() {
     return async (dispatch) => {
-        
+
         const endpoint = 'http://localhost:3020/products';
         try {
             const products = await axios.get(endpoint)
@@ -25,8 +24,8 @@ export function requestProducts() {
         }
     };
 }
-function requestProductDetailSuccess(productDetail){
-    return{
+function requestProductDetailSuccess(productDetail) {
+    return {
         type: actionTypes.LOAD_PRODUCT_DETAIL,
         productDetail
     }
@@ -39,14 +38,13 @@ function requestProductDetailError(error) {
 }
 export function requestProductDetail(id) {
     return async (dispatch) => {
-        debugger;
-        const endpoint = `http://localhost:3200/products/${id}`;
+        const endpoint = `http://localhost:3020/products/${id}`;
         try {
             const product = await axios.get(endpoint, {
                 params: {
-                    productId : id
+                    productId: id
                 }
-            })
+            })   
             dispatch(requestProductDetailSuccess(product.data));
         } catch (error) {
             dispatch(requestProductDetailError(error));
