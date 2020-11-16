@@ -103,7 +103,7 @@ class Product {
   }
 
   static deleteProduct(productId) {
-    _basket = _basket.filter((product) => product.id !== productId);
+    _basket = _basket.filter((product) => product.basketProduct.cartId !== productId);
     return _basket;
   }
 }

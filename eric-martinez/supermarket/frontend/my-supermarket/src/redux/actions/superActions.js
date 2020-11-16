@@ -59,19 +59,32 @@ export function cleanProductDetail() {
     }
 }
 
+export function putBasket(basketProduct) {
+    return async (dispatch) => {
+        const endpoint = `http://localhost:5000/products/basket`
+        await axios.put(endpoint, {basketProduct});
+    }
+}
+
 function requestBasketSuccess(basket) {
-    debugger;
     return{
         type: actionTypes.LOAD_BASKET,
         basket
     }
 }
 
-export function loadBasket(basketProduct) {
+export function getBasket() {
+    return async (dispatch) => {
+        const endpoint = 'http://localhost:5000/products/basket/'
+            const basket = await axios.get(endpoint);
+            dispatch(requestBasketSuccess(basket.data))
+    }
+}
+
+export function deleteProduct(productId) {
     debugger;
     return async (dispatch) => {
-        const endpoint = `http://localhost:5000/products/basket`
-        const basket = await axios.put(endpoint, {basketProduct});
-        dispatch(requestBasketSuccess(basket.data));
+        const endpoint = `http://localhost:5000/products/basket/${productId}`;
+        await axios.delete(endpoint);
     }
 }
