@@ -1,12 +1,15 @@
 const express = require('express');
+const fs = require('fs')
 
 const routerTest = express.Router();
+
+const file = 'index.js'
 
 function routes() {
 	routerTest
 		.route('/')
 		.get((req, res) => {
-			res.end('Hola, funciona el GET');
+			res.sendFile();
 		})
 		.post((req, res) => {
 			res.end('Hola, funciona el POST');
