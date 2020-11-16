@@ -1,0 +1,31 @@
+.list {
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+	list-style-type: none;
+	padding: 0;
+}
+
+.product-title {
+    color: #544854;
+}
+
+.button_cart {
+    background-color: #544854;
+}
+
+.product-card {
+    height: 320px;
+	margin: auto;
+	margin-right: 40px;
+    border-radius: 8px;
+    margin-top: 20px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.product-title:hover{
+    text-decoration:none;
+}
+.card-img-top.product-img {
+    width: 10vw;
+}
