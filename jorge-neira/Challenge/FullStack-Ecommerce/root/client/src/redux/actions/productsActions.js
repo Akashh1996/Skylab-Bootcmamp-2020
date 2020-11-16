@@ -1,3 +1,4 @@
+/* eslint-disable no-debugger */
 import axios from 'axios';
 import actionTypes from './actionsTypes';
 
@@ -7,12 +8,6 @@ function getCartList(cartList) {
   return {
     type: actionTypes.LOAD_CART_LIST,
     cartList,
-  };
-}
-
-function addProductToCartSuccess(error) {
-  return {
-    error,
   };
 }
 
@@ -66,14 +61,16 @@ export function getDetailProduct(productModel) {
 }
 
 export function addProductToCart(product) {
-  return async (dispatch) => {
+  debugger;
+  return async () => {
     const endpoint = 'cart';
     try {
+      debugger;
       await axios.post(`${URL}${endpoint}`, {
         ...product,
       });
     } catch (error) {
-      dispatch(addProductToCartSuccess(error));
+      console.log(error);
     }
   };
 }
@@ -99,7 +96,7 @@ export function delProductFromCart(cartId) {
       await axios.delete(`${URL}${endpoint}`, {
         data: { cartId },
       });
-      dispatch(getCurrentCart());
+      await dispatch(getCurrentCart());
     } catch (error) {
       console.log(error);
     }

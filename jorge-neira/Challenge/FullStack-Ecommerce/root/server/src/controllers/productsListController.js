@@ -1,8 +1,13 @@
 function productsListController(Products) {
   function getMethod(req, res) {
-    res.json(Products.getProducts());
+    const query = {};
+    Products.find(query, (errorFindProduct, products) => {
+      if (errorFindProduct) {
+        res.send(errorFindProduct);
+      }
+      res.json(products);
+    });
   }
-
   return {
     getMethod,
   };

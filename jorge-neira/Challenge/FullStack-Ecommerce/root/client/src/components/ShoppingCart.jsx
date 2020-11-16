@@ -5,20 +5,18 @@ import { PropTypes } from 'prop-types';
 import { getCurrentCart, delProductFromCart } from '../redux/actions/productsActions';
 
 // eslint-disable-next-line react/prop-types
-function ShoppingCart({ currentCart = [], dispatch }) {
+function ShoppingCart({ currentCart, dispatch }) {
   // eslint-disable-next-line no-debugger
   debugger;
   // eslint-disable-next-line no-debugger
-  if (currentCart.length < 0) {
-    dispatch.getCurrentCart();
-  }
   useEffect(() => {
     dispatch.getCurrentCart();
+    console.log('hola');
   }, []);
 
   return (
     <>
-      {(currentCart && currentCart > 0)
+      {(currentCart)
         ? currentCart.map((cartProduct) => (
           <>
             <div key={performance.now()}>
@@ -41,11 +39,17 @@ function ShoppingCart({ currentCart = [], dispatch }) {
 }
 
 ShoppingCart.propTypes = {
-  // currentCart: PropTypes.shape({}).isRequired,
+  currentCart: PropTypes.shape({
+    map: PropTypes.func.isRequired,
+  }),
   dispatch: PropTypes.shape({
     getCurrentCart: PropTypes.func.isRequired,
     delProductFromCart: PropTypes.func.isRequired,
   }).isRequired,
+};
+
+ShoppingCart.defaultProps = {
+  currentCart: undefined,
 };
 
 function mapStateToProps(state) {
