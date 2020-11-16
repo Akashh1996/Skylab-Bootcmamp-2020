@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
@@ -7,8 +7,11 @@ import { loadItemsList } from '../../../redux/actions/actions';
 import './itemList.css';
 
 function ItemList({ items, actions }) {
+  const [stateItems] = useState(items);
   useEffect(() => {
-    actions.loadItemsList();
+    if (!items || stateItems !== items) {
+      actions.loadItemsList();
+    }
   }, []);
 
   return (

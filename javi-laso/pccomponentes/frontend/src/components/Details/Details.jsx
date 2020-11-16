@@ -12,7 +12,9 @@ function Details({ item, actions, match }) {
   const [id] = useState(match.params.itemId);
 
   useEffect(() => {
-    actions.loadItem(id);
+    if (!item || item.id !== id) {
+      actions.loadItem(id);
+    }
   }, []);
 
   return (
@@ -58,6 +60,7 @@ function Details({ item, actions, match }) {
 
 Details.propTypes = {
   item: PropTypes.shape({
+    id: PropTypes.string,
     'product-type': PropTypes.string,
     'product-name': PropTypes.string,
     'product-image': PropTypes.string,
