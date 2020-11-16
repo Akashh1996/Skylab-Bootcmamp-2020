@@ -1,0 +1,16 @@
+{
+  "name": "aleix-salutes-you-from-skylab",
+  "version": "1.1.0",
+  "description": "Mi primer package json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Aleix",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {}
+}
