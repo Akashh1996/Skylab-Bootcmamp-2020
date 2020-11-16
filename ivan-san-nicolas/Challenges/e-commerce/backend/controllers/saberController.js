@@ -1,17 +1,20 @@
 function saberController(Sabers) {
     function getMethod(req, res) {
-        res.status(200);
-        res.send(req.product);
-    }
-
-    function allMidleware(req, res, next) {
-        req.product = Sabers.getSaberByName(req.params.saberName);
-        next();
+        console.log(req);
+        const saberName = req.params.saberName;
+        const query = { "product-name": saberName };
+        Sabers.find(query, (errorFindingSaber, saber) => {
+            if(errorFindingSaber) {
+                res.send(errorFindingSaber);
+            } else {
+                res.status(200);
+                res.send(saber);
+            }
+        });
     }
 
     return {
         getMethod,
-        allMidleware,
     }
 }
 
