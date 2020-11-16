@@ -1,6 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const Sabers = require('./stores/saberStore.js');
+const sabersRoutes = require('./routes/sabersRoutes')(Sabers);
+const cartRoutes = require('./routes/cartRoutes')();
 
 const app = express();
 
@@ -9,8 +12,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const port = process.env.PORT || 1240;
-const sabersRoutes = require('./routes/sabersRoutes')();
-const cartRoutes = require('./routes/cartRoutes')();
 
 app.use('/sabers', sabersRoutes);
 app.use('/cart', cartRoutes);

@@ -11,7 +11,6 @@ function routes() {
         res.send(cart);
     })
     .post((req, res) => {
-        console.log(req);
         const productName = req.query.productName;
         const productColor = req.query.productColor;
         let cartProduct = null;
@@ -27,7 +26,6 @@ function routes() {
         res.send(cart);
     })
     .delete((req, res) => {
-        console.log(req);
         const productName = req.query.productName[0];
         const newCart = [];
         let repeatedProducts = 0;
@@ -38,7 +36,6 @@ function routes() {
                 repeatedProducts++;
             }
         });
-        console.log(newCart);
         cart[0]["product-list"] = newCart;
         res.status(200);
         res.send(cart);
