@@ -4,10 +4,10 @@ import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import { requestCart } from '../../redux/actions/productAction';
+import { requestCart, deleteProductCart } from '../../redux/actions/productAction';
 
-function Cart({ productCart, actions }) {
-  if (!productCart) {
+function Cart({ productCartList, actions }) {
+  if (!productCartList) {
     actions.requestCart();
   }
   useEffect(() => {
@@ -16,12 +16,12 @@ function Cart({ productCart, actions }) {
 
   return (
     <div className="detail_wrapper" style={{ marginTop: '100px' }}>
-      {productCart
-               && productCart.map((product) => (
+      {productCartList
+               && productCartList.map((product) => (
                  <div key={performance.now()}>
                    {product.title}
                    {' '}
-                   <button type="button">x</button>
+                   <button type="button" onClick={() => actions.deleteProductCart(product.id)}>x</button>
                    {' '}
 
                  </div>
@@ -33,7 +33,7 @@ function Cart({ productCart, actions }) {
 }
 
 Cart.propTypes = {
-  productCart: PropTypes.shape(
+  productCartList: PropTypes.shape(
     [
       {
         title: PropTypes.string.isRequired,
@@ -43,6 +43,8 @@ Cart.propTypes = {
   ).isRequired,
   actions: PropTypes.shape({
     requestCart: PropTypes.func.isRequired,
+    deleteProductCart: PropTypes.func.isRequired,
+
   }).isRequired,
 };
 
@@ -50,12 +52,12 @@ function mapStateToProps(state) {
   // eslint-disable-next-line no-debugger
   debugger;
   return {
-    productCart: state.productReducer.productCart,
+    productCartList: state.productReducer.productCartList,
   };
 }
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators({ requestCart }, dispatch),
+    actions: bindActionCreators({ requestCart, deleteProductCart }, dispatch),
   };
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);

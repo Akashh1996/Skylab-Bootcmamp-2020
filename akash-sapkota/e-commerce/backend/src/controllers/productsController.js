@@ -1,6 +1,12 @@
 function productsController(Product) {
   function getMethod(req, res) {
-    res.json(Product.getProducts());
+    const query = {};
+    Product.find(query, (errorFindProducts, products) => {
+      if (errorFindProducts) {
+        res.send(errorFindProducts);
+      }
+      res.json(products);
+    });
   }
 
   function putMethod(req, res) {

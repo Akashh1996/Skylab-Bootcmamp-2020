@@ -25,27 +25,27 @@ function ProductDetail({
                  <div className="detail">
                    <div className="detail_description">
                      <h1>
-                       {productDetail.title}
+                       {productDetail[0].title}
                      </h1>
                      <p>
                        <u>Price:</u>
                        {' '}
-                       {productDetail.price}
+                       {productDetail[0].price}
                      </p>
                      <p>
                        <u>Ceategory :</u>
                        {' '}
-                       {productDetail.category}
+                       {productDetail[0].category}
                      </p>
                      <p>
                        <u>Description :</u>
-                       {productDetail.description}
+                       {productDetail[0].description}
                      </p>
-                     <Link to="/cart" className="cart" onClick={() => { actions.addCart(productDetail); }}>Add To Cart</Link>
+                     <Link to="/cart" className="cart" onClick={() => { actions.addCart(productDetail[0]); }}>Add To Cart</Link>
 
                    </div>
                    <div className="image">
-                     <img src={productDetail.image} alt="detail" />
+                     <img src={productDetail[0].image} alt="detail" />
                    </div>
 
                  </div>
@@ -57,27 +57,32 @@ function ProductDetail({
 }
 
 ProductDetail.propTypes = {
-  productDetail: PropTypes.shape({
-    title: 'string',
-    id: 1,
-    image: 'string',
-    price: 1,
-    description: 'ghj',
-    category: 'hgjh',
-  }).isRequired,
-  dispatch: PropTypes.shape({}).isRequired,
+  productDetail: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string,
+    id: PropTypes.number,
+    image: PropTypes.string,
+    price: PropTypes.number,
+    description: PropTypes.string,
+    category: PropTypes.string,
+  })),
+  dispatch: PropTypes.func.isRequired,
   match: PropTypes.shape({
-    params: {},
+
+    params: PropTypes.shape({
+      productId: PropTypes.string.isRequired,
+    }),
   }).isRequired,
   actions: PropTypes.shape({
-    cleanUp: PropTypes.shape,
-    addCart: PropTypes.shape(),
+    cleanUp: PropTypes.func,
+    addCart: PropTypes.func,
   }).isRequired,
 };
 
+ProductDetail.defaultProps = {
+  productDetail: undefined,
+};
+
 function mapStateToProps(state) {
-  // eslint-disable-next-line no-debugger
-  debugger;
   return {
     productDetail: state.productReducer.productDetail,
   };

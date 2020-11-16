@@ -1,14 +1,27 @@
-function cartController(Product){
-    function getMethod(req,res){
-       res.json(Product.getCart())
-    }
+const { red } = require("chalk")
+
+function cartController(Cart){
+    
     function postMethod(req,res){
-        console.log(req.body);
-        Product.addProduct(req.body)
-        res.json(Product.getCart())
+        let product = req.body
+        product = {...product, _id: null}
+        Cart.create(product, (error, product)=>{
+            if(error){
+                res.send(error)
+            }
+            res.send(product)
+        })
+    }
+    function getMethod(req,res){
+        Cart.find({}, (error,cart)=>{
+            if(error){
+                red.send(error)
+            }
+            res.send(cart)
+        })
     }
     return {
-        getMethod, postMethod
+         postMethod, getMethod
     }
 }
 module.exports = cartController

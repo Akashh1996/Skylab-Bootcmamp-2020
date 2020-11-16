@@ -1,6 +1,23 @@
 function productController(Product) {
   function getMethod(req, res) {
-    res.json(req.product);
+/*     req.id = +req.params.productId
+ */    const query = {id : req.id};
+    
+    Product.find(query, (errorFindProducts, product) => {
+      if (errorFindProducts) {
+        res.send(errorFindProducts);
+      }
+      res.json(product);
+    });
+  }
+  function deleteMethod(req,res){
+    const query = {id: req.id}
+    Product.deleteOne(query, (error, product)=>{
+      if(error){
+        res.send(error)
+      }
+      res.send("deleted")
+    })
   }
 
   function postMethod(req, res) {
@@ -19,16 +36,8 @@ function productController(Product) {
     res.send(Product.getProducts());
   }
 
-  function deleteMethod(req, res) {
-    const id = +req.params.productId;
-
-    Product.deleteProduct(id);
-
-    res.json(Product.getProducts());
-  }
-
   function allMiddleware(req, res, next) {
-    req.product = Product.getProductById(+req.params.productId);
+    req.id = +req.params.productId;
     next();
   }
 

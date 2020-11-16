@@ -5,12 +5,17 @@ const debug = require('debug')('app');
 const chalk = require('chalk');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const Product = require('./src/stores/productStore');
-const productRouter = require('./src/routes/productRouter')(Product);
+const mongoose = require("mongoose")
+const Product = require('./src/models/productModel');
+/* const Product = require('./src/stores/productStore'); */
+const Cart = require("./src/models/cartModel")
+const productRouter = require('./src/routes/productRouter')(Product, Cart);
 
 const app = express();
 app.use(cors());
 const port = process.env.PORT || 1400;
+
+mongoose.connect("mongodb://localhost/marketdb")
 
 app.use(morgan('tiny'));
 

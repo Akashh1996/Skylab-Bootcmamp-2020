@@ -80,24 +80,24 @@ function addCartError(error) {
   };
 }
 
-export function addCart(product) {
+export function addCart(cartProduct) {
   return async (dispatch) => {
     const endpoint = 'http://localhost:1400/products/cart';
     try {
-      // eslint-disable-next-line no-debugger
+    // eslint-disable-next-line no-debugger
       debugger;
-      await axios.post(endpoint, { ...product });
-      // dispatch(addCartSuccess(products.data));
+      const addCartProduct = await axios.post(endpoint, cartProduct);
+      dispatch(addCartSuccess(addCartProduct.data));
     } catch (error) {
       dispatch(addCartError(error));
     }
   };
 }
 
-function requestCartSuccess(productCart) {
+function requestCartSuccess(productCartList) {
   return {
     type: actionTypes.LOAD_PRODUCT_CART,
-    productCart,
+    productCartList,
   };
 }
 
@@ -124,7 +124,7 @@ export function requestCart() {
 
 export function deleteProductCart(productId) {
   return async (dispatch) => {
-    const endpoint = `http://localhost:1400/products/cart${productId}`;
+    const endpoint = `http://localhost:1400/products/cart/${productId}`;
     await axios.delete(endpoint);
   };
 }
