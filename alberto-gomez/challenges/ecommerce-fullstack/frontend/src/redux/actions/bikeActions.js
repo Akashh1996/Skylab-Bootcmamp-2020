@@ -15,23 +15,96 @@ function requestComponentsError(error) {
     }
 }
 
+function requestSingleComponentSuccess(componentItem) {
+    return {
+        type: actionTypes.LOAD_SINGLE_COMPONENT,
+        componentItem
+    }
+}
+
+function requestSingleComponentError(error) {
+    return {
+        type: actionTypes.LOAD_SINGLE_COMPONENT_ERROR,
+        error
+    }
+}
+
+function requestCartSuccess(componentCart) {
+    return {
+        type: actionTypes.LOAD_SHOPPING_CART,
+        componentCart
+    }
+}
+
+function requestCartError(error) {
+    return {
+        type: actionTypes.LOAD_SHOPPING_CART,
+        error
+    }
+}
+
 export function requestComponents(){
-    debugger
-    return (dispatch) => { // al estar el json en local, la función no es asíncrona
-        const endpoint = '../../api/products.json';
+    debugger;
+    return async (dispatch) => {
+        const endpoint = 'http://localhost:5000/components';
 
         try {
-            const components = axios.get(endpoint);
+            const components = await axios.get(endpoint);
             // dispatch una acción "sincrona"
             debugger
-            dispatch(requestComponentsSuccess(components.data));
-            return 
+            dispatch(requestComponentsSuccess(components.data)); 
         } catch (error) {
             debugger
             // Dispatchamos una accion "sincrona" de error
             dispatch(requestComponentsError(error));
         }
+    }
+}
 
+export function requestSingleComponent(itemId){
+    debugger;
+    return async (dispatch) => {
+        const endpoint = `http://localhost:5000/components/${itemId}`;
 
+        try {
+            const component = await axios.get(endpoint);
+            debugger;
+            dispatch(requestSingleComponentSuccess(component.data))
+        } catch (error) {
+            debugger
+            // Dispatchamos una accion "sincrona" de error
+            dispatch(requestSingleComponentError(error));
+        }
+    }
+}
+
+export function addToCart(itemId) {
+    debugger;
+    const endpoint = `http://localhost:5000/components/${itemId}`;
+    return async (dispatch) => {
+        try {
+            // MODIFICAR
+            const component = await axios.POST(endpoint);
+            debugger;
+            dispatch(...)
+        } catch (error) {
+            
+        }
+    }
+}
+
+export function requestCart(){
+    debugger;
+    return async (dispatch) => {
+        const endpoint = `http://localhost:5000/cart/items`;
+
+        try {
+            const component = await axios.get(endpoint);
+            debugger;
+            dispatch(requestCartSuccess(component.data))
+        } catch (error) {
+            debugger;
+            dispatch(requestCartError(error))
+        }
     }
 }

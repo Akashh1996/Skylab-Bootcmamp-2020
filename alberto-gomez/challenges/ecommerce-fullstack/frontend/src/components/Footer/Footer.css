@@ -1,0 +1,30 @@
+footer {
+    background: linear-gradient(to bottom, #fb9d23 0%,#ffc578 100%);
+    padding: 20px 0;
+}
+
+h5 {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+p {
+    text-align: center;
+    color: white;
+}
+
+.fa {
+    font-size: 40px;
+    margin-left: 10px;
+    align-self: center;
+    color: white;
+
+}
+
+.about-us-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

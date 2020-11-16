@@ -1,0 +1,38 @@
+.detail-container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 100px 0;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.detail-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+h4 {
+    font-size: x-large;
+    margin-bottom: 5px;
+}
+
+.header-top-left-text {
+    color: rgb(44, 44, 44);
+    text-align: left;
+    margin-block-start: 0;
+}
+
+.price-container {
+    color: black;
+    margin-top: 50px
+}
+
+.add-cart {
+    margin-left: 20px;
+}
+
+.image-detail {
+    width: 400px;
+    height: auto;
+}

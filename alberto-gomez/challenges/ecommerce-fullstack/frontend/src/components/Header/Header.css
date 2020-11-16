@@ -1,0 +1,105 @@
+.header__main-container {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom, #ffc578 0%,#fb9d23 100%);
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+}
+
+.header__navigation-bar {
+    width: 70%;
+}
+
+.header__navigation-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 0;
+}
+
+.header__navigation-items a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    margin-right: 20px;
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.2s;
+}
+
+.header__navigation-item--anchor {
+    list-style: none;
+}
+
+.header__navigation-items a:hover {
+    background: linear-gradient(to bottom, #f2825b 0%,#e55b2b 50%,#f07146 100%);
+    transform: scale(1.1);
+}
+
+#components ,#shopping-cart {
+    text-decoration: none;
+}
+
+.components, .shopping-cart {
+    display: flex;
+    align-items: center;
+}
+
+.material-icons {
+    margin-right: 10px;
+    padding: 0;
+    font-size: 20px
+}
+
+.bike-shop-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    margin-left: 20px
+}
+
+.bike-logo {
+    width: 100px;
+}
+
+.bike-shop-brand h1 {
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 849px) {
+    .bike-shop-brand h1 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .header__navigation-items a {
+        border: none;
+        padding: 20px;
+        /* margin: 20px; */
+        border-radius: 30px;
+    }
+
+    .header__navigation-item--anchor{
+        display: none;
+    }
+
+    .header__navigation-items span {
+        margin-right: 0;
+        text-align: center;
+    }
+
+
+}
