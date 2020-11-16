@@ -1,11 +1,13 @@
-export default function heroReducer(state = [], action) {
+export default function heroReducer(state = {}, action) {
     switch (action.type) {
-        case 'GET_HEROES':
-            return action.heroes
+        case 'LOAD_HEROES':
+            return {...state, list: action.heroes}
         case 'ADD_HERO':
-            return [...state, {id: state[state.length-1].id, name: action.hero}];
+            return {...state, list: action.heroes};
+        case 'CHANGE_HERO':
+            return {...state, list: action.heroes};
         case 'DELETE_HERO':
-            return state.filter((hero)=> hero.id !== action.hero.id);
+            return {...state, list: action.heroes};
 
         default:
             return state;

@@ -9,7 +9,13 @@ import HeroDetail from './components/HeroDetail/HeroDetail';
 import HeroList from './components/HeroList/HeroList';
 
 
-const store = configureStore();
+const myInitialState={
+	heroReducer:{
+		akash: 'Gerard'
+	}
+}
+
+const store = configureStore(myInitialState);
 
 ReactDOM.render(
 	<React.StrictMode>

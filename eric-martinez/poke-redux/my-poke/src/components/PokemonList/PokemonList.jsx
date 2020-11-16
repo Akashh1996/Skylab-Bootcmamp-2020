@@ -12,7 +12,7 @@ function PokemonList({ pokemonList, dispatch }) {
 		<>
 			{pokemonList &&
 				pokemonList.length &&
-				pokemonList.map((pokemon) => <p>{pokemon.name}</p>)}
+				pokemonList.map((pokemon) => <p key={pokemon.name}>{pokemon.name}</p>)}
 		</>
 	);
 }
