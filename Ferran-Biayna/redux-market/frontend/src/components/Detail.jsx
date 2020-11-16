@@ -14,7 +14,7 @@ function Detail({ product, dispatch }) {
   }
 
   return (
-    <>
+    <div className="detail-container">
       {product
           && (
             <div>
@@ -27,7 +27,7 @@ function Detail({ product, dispatch }) {
               <a href={product.url}>More Info</a>
             </div>
           )}
-    </>
+    </div>
   );
 }
 

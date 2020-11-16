@@ -30,7 +30,7 @@ body {
   color: rgb(85, 7, 7)
 }
 
-.list-container {
+.list-container, .detail-container, .cart-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -44,11 +44,11 @@ body {
   align-items: center;
   margin-bottom: 40px;
   cursor: pointer;
-  transition: all .2s ease-in-out
+  transition: all .1s ease-in-out
 }
 
 .list-container__products:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .products__price {
