@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="detail.css" />
+		<title>Tour of Superheroes - Detail</title>
+	</head>
+	<body>
+		<header></header>
+
+		<main class="main-content">
+			<div class="first-nav-bar">
+				<h3>Tour of Superheroes</h3>
+				<div class="nav-buttons">
+					<button>Dashboard</button>
+					<button>Heroes</button>
+				</div>
+			</div>
+			<div class="hero-detail">
+				<h3><span id="hero-name"></span> details!</h3>
+				<form action="">
+					<div class="id-input">
+						<label for="">id</label>
+						<p id="id-number"></p>
+					</div>
+					<div class="name-input">
+						<label for="">name</label>
+						<input type="text" id="hero-name-input" />
+					</div>
+				</form>
+			</div>
+			<button onclick="goBack()">Back</button>
+		</main>
+		<script src="./detail-store.js"></script>
+		<script src="../../hero-location.js"></script>
+		<script src="./print-detail.js"></script>
+		<script>
+			function goBack() {
+				window.history.back();
+			}
+		</script>
+	</body>
+</html>
