@@ -1,21 +1,21 @@
 const Product = require('../stores/productStore');
 const productController = require('./productController')(Product);
 
-describe('heroController', () => {
+describe('productController', () => {
   test('should call response json on getMethod', () => {
     const res = {
       json: jest.fn(),
     };
 
-    productController.getMethod({ hero: null }, res);
+    productController.getMethod({ product: null }, res);
 
     expect(res.json).toHaveBeenCalled();
   });
   test('should call next on allMiddleware', () => {
     const req = {
-      hero: null,
+      product: null,
       params: {
-        heroId: null,
+        productId: null,
       },
     };
 

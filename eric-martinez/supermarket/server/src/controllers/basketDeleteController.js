@@ -1,8 +1,6 @@
 function basketDeleteController(Product) {
   function deleteMethod(req, res) {
     const productId = (+req.params.productId);
-    // eslint-disable-next-line no-console
-    console.log(req.body);
     Product.deleteProduct(productId);
 
     res.json(Product.getBasket());

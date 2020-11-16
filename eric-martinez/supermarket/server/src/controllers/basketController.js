@@ -3,7 +3,6 @@ function basketController(Product) {
     res.json(Product.getBasket());
   }
   function putMethod(req, res) {
-    console.log(req.body);
     Product.addProduct(req.body);
 
     res.json(Product.getBasket());

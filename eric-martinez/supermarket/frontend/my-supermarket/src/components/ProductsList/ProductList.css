@@ -1,0 +1,9 @@
+h1 {
+    margin-left: 20px;
+    color: black;
+}
+li {
+    list-style: none;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}

@@ -1,15 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Header.css';
 
 function Header() {
-
   return (
     <>
-      <h1>SUPERMARKET</h1>
+      <h1>NORTH FACE OUTLET</h1>
       <nav className="super-navigation">
-        <Link to="/products">Products</Link>
-        {' | '}
-        <Link to="/products/basket">Basket</Link>
+        <Link to="/products">New Releases</Link>
+        <Link to="/products/basket">
+        <span class="material-icons">
+        shopping_cart
+        </span>
+        </Link>
       </nav>
     </>
   );
