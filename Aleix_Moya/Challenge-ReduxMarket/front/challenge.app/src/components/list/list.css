@@ -1,0 +1,19 @@
+#title{
+    margin-left: 48%;
+}
+#list{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+#textList{
+    margin-left: 5px;
+}
+#shoppingButton{
+    margin-top: 17px;
+    margin-left: 50%;
+}
+#linkList{
+    margin-left: 2%;
+}
