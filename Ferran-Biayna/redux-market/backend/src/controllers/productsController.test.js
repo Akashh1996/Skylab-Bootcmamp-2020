@@ -1,4 +1,4 @@
-const Product = require('../store/productStore');
+const Product = require('../../models/productModel');
 const productsController = require('./productsController')(Product);
 
 describe('productsController', () => {
@@ -7,8 +7,26 @@ describe('productsController', () => {
       json: jest.fn(),
     };
 
-    productsController.getMethod({ cart: null }, res);
+    Product.find = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(false, 'products');
+    });
+
+    productsController.getMethod({ products: null }, res);
 
     expect(res.json).toHaveBeenCalled();
+  });
+
+  test('should call error on getMethod', () => {
+    const res = {
+      send: jest.fn(),
+    };
+
+    Product.find = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(true, 'errorFindProducts');
+    });
+
+    productsController.getMethod({ products: null }, res);
+
+    expect(res.send).toHaveBeenCalled();
   });
 });

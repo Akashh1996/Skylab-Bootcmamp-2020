@@ -1,3 +1,4 @@
+/* eslint-disable dot-notation */
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -17,11 +18,11 @@ function CartList({ cart, dispatch }) {
     <div className="cart-container">
       {!cart && cart?.length === 0 ? <p>Empty cart!</p> : (
         <>
-          <p>{`Total - ${cart && cart.length && new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(cart.reduce((acc, product) => acc + product.price, 0))}`}</p>
+          <p>{`Total - ${cart && cart.length && new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(cart.reduce((acc, product) => acc + +product.price, 0))}`}</p>
           {cart && cart.length && cart.map((product) => (
             <div>
-              <Link to={`/product/${product.id}`}><span>{product.name}</span></Link>
-              <button type="button" value={product.id} onClick={() => dispatch(requestDeleteProduct(product.id))}>x</button>
+              <Link to={`/product/${product.id}}`}><span>{product.name}</span></Link>
+              <button type="button" value={product.id} onClick={() => dispatch(requestDeleteProduct(product['_id']))}>x</button>
               <p><img alt={product.name} src={product.image} /></p>
               <p>{new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(product.price)}</p>
             </div>

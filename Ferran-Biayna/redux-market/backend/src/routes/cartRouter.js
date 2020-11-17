@@ -1,9 +1,9 @@
 const express = require('express');
 const cartController = require('../controllers/cartController');
 
-function cartRouter(Product) {
+function cartRouter(Product, Cart) {
   const router = express.Router();
-  const cart = cartController(Product);
+  const cart = cartController(Product, Cart);
 
   router.route('/')
     .get(cart.getMethod);

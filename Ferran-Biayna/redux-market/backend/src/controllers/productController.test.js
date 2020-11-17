@@ -1,42 +1,38 @@
-const Product = require('../store/productStore');
+const Product = require('../../models/productModel');
 const productController = require('./productController')(Product);
 
 describe('productController', () => {
   test('should call response json on getMethod', () => {
+    const req = {
+      params: { productId: '1' },
+    };
     const res = {
       json: jest.fn(),
     };
 
-    productController.getMethod({ cart: null }, res);
+    Product.findOne = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(false, 'product');
+    });
+
+    productController.getMethod(req, res);
 
     expect(res.json).toHaveBeenCalled();
   });
 
-  test('should call response json on postMethod', () => {
+  test('should call error on getMethod', () => {
+    const req = {
+      params: { productId: '1' },
+    };
     const res = {
-      json: jest.fn(),
+      send: jest.fn(),
     };
 
-    const req = {
-      params: { productId: '1' },
-    };
+    Product.findOne = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(true, 'errorFindProduct');
+    });
 
-    productController.postMethod(req, res);
+    productController.getMethod(req, res);
 
-    expect(res.json).toHaveBeenCalled();
-  });
-
-  test('should call response json on allMiddleware', () => {
-    const next = jest.fn();
-
-    const res = null;
-
-    const req = {
-      params: { productId: '1' },
-    };
-
-    productController.allMiddleware(req, res, next);
-
-    expect(next).toHaveBeenCalled();
+    expect(res.send).toHaveBeenCalled();
   });
 });
