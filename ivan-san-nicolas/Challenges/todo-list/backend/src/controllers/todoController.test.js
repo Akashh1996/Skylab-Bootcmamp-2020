@@ -40,4 +40,55 @@ describe('todoController deleteMethod', () => {
     todoController.deleteMethod(req, res);
     expect(res.json).toHaveBeenCalled();
   });
+  test('should call res.send when there is an error in deleteMethod', () => {
+    const req = {
+      body: {
+        todoId: 1,
+      },
+    };
+    const res = {
+      send: jest.fn(),
+    };
+    Todo.deleteOne = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(true);
+    });
+    todoController.deleteMethod(req, res);
+    expect(res.send).toHaveBeenCalled();
+  });
+});
+
+describe('todoController patchMethod', () => {
+  test('should call res.json without error in patchMethod', () => {
+    const req = {
+      body: {
+        todoId: 1,
+        todoNewName: 'Skylab-updated',
+      },
+    };
+    const res = {
+      json: jest.fn(),
+    };
+    Todo.findOneAndUpdate = jest.fn();
+    Todo.findOne = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(null, {});
+    });
+    todoController.patchMethod(req, res);
+    expect(res.json).toHaveBeenCalled();
+  });
+  test('should call res.send when there is an error in patchMethod', () => {
+    const req = {
+      body: {
+        todoId: 1,
+        todoNewName: 'Skylab-updated',
+      },
+    };
+    const res = {
+      send: jest.fn(),
+    };
+    Todo.findOneAndUpdate = jest.fn();
+    Todo.findOne = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(true, {});
+    });
+    todoController.patchMethod(req, res);
+  });
 });
