@@ -1,6 +1,12 @@
 function heroesController(Hero) {
   function getMethod(req, res) {
-    res.json(Hero.getHeroes());
+    const query = {};
+    Hero.find(query, (errorFindHeroes, heroes) => {
+      if (errorFindHeroes) {
+        res.send(errorFindHeroes);
+      }
+      res.json(heroes);
+    });
   }
 
   function putMethod(req, res) {
