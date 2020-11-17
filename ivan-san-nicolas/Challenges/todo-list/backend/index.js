@@ -18,5 +18,5 @@ app.use(bodyParser.json());
 app.use('/', todoRouter);
 
 app.listen(port, () => {
-    debug(`Server working in port ${port}`);
+  debug(`Server working in port ${port}`);
 });
