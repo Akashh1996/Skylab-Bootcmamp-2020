@@ -1,17 +1,15 @@
 const express = require('express');
-const toDoController = require('../controllers/toDoController');
+const ListController = require('../controllers/ListController');
 
 function toDoRouter(ToDo) {
   const router = express.Router();
-  const toDo = toDoController(ToDo);
+  const list = ListController(ToDo);
 
   router.route('/')
-    .get(toDo.getMethod)
-    .post(toDo.postMethod);
-
-  router.route('/:toDoId')
-    .put(toDo.putMethod)
-    .delete(toDo.deleteMethod);
+    .get(list.getMethod)
+    .post(list.postMethod)
+    .put(list.putMethod)
+    .delete(list.deleteMethod);
 
   return router;
 }

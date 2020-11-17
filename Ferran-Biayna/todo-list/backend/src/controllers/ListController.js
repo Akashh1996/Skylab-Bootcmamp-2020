@@ -1,4 +1,5 @@
-function toDoController(ToDo) {
+/* eslint-disable no-underscore-dangle */
+function ListController(ToDo) {
   function getMethod(req, res) {
     ToDo.find({}, (errorFindList, toDoList) => (errorFindList
       ? res.send(errorFindList)
@@ -10,16 +11,15 @@ function toDoController(ToDo) {
       ? res.send(errorAddNewItem)
       : res.json(newToDo)));
   }
-
-  function putMethod(req, res) {
-    ToDo.findByIdAndUpdate(req.params.toDoId, req.body,
+  function putMethod({ body }, res) {
+    ToDo.findByIdAndUpdate(body._id, body,
       (errorUpdateItem, toDoList) => (errorUpdateItem
         ? res.send(errorUpdateItem)
         : res.json(toDoList)));
   }
 
-  function deleteMethod({ params }, res) {
-    ToDo.findByIdAndRemove(params.toDoId, (errorDeleteItem) => (errorDeleteItem
+  function deleteMethod({ body }, res) {
+    ToDo.findByIdAndRemove(body._id, (errorDeleteItem) => (errorDeleteItem
       ? res.send(errorDeleteItem)
       : res.json('Deleted Successfully!')));
   }
@@ -28,4 +28,4 @@ function toDoController(ToDo) {
   };
 }
 
-module.exports = toDoController;
+module.exports = ListController;
