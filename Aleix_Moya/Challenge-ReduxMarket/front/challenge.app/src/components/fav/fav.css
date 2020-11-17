@@ -1,0 +1,35 @@
+table, td, th {
+    border: 1px solid black;
+  }
+#title{
+    margin-left: 47%;
+}
+#list{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+#textList{
+    margin-left: 5px;
+}
+#shoppingButton{
+    margin-top: 17px;
+    margin-left: 5px;
+    max-height: 20px;
+}
+#table{
+    margin-left:auto;
+    margin-right:auto;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+}
+#linkList{
+    margin-left: 2%;
+}
+#updateButton{
+    margin-left: 50%;
+    margin-right: auto;
+}
