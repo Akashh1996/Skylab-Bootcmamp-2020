@@ -6,7 +6,7 @@
   "scripts": {
     "start": "DEBUG=app nodemon index.js",
     "debug": "node --inspect-brk index.js -- runInBand",
-    "test": "jest --collect-coverage --watch"
+    "test": "jest --collect-coverage --watchAll"
   },
   "keywords": [],
   "author": "",

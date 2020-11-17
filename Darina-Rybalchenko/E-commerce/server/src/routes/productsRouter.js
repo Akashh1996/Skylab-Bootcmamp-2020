@@ -12,7 +12,6 @@ function productRouter(Products) {
     .get(products.getMethod);
 
   router.route('/:productId')
-    .all(product.allMiddleware)
     .get(product.getMethod);
 
   return router;

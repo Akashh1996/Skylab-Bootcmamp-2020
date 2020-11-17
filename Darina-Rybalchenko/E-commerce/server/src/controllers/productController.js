@@ -1,7 +1,8 @@
+/* eslint-disable no-console */
 function productController(Products) {
   function getMethod(req, res) {
-    const query = { id: req.product };
-    Products.find(query, (errorFindProducts, product) => {
+    const query = { id: +req.params.productId };
+    Products.findOne(query, (errorFindProducts, product) => {
       if (errorFindProducts) {
         res.send(errorFindProducts);
       }
@@ -9,13 +10,7 @@ function productController(Products) {
       console.log('product', product);
     });
   }
-
-  function allMiddleware(req, res, next) {
-    req.product = +req.params.productId;
-    console.log('req.product', req.product);
-    next();
-  }
-  return { getMethod, allMiddleware };
+  return { getMethod };
 }
 
 module.exports = productController;
