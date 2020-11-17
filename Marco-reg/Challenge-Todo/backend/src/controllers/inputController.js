@@ -18,8 +18,17 @@ function InputsController(Input) {
       return res.json(inputs);
     });
   }
+  function deleteMethod(req, res) {
+    const query = req.body;
+    Input.findByIdAndRemove(query, (errorDelete) => {
+      if (errorDelete) {
+        return res.send(errorDelete);
+      }
+      return res.json(query);
+    });
+  }
   return {
-    getMethod, putMethod,
+    getMethod, putMethod, deleteMethod,
   };
 }
 module.exports = InputsController;

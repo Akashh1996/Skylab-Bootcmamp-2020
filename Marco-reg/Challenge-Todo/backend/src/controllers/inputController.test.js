@@ -48,4 +48,26 @@ describe('InputController', () => {
     inputController.putMethod(req, res);
     expect(res.json).toHaveBeenCalled();
   });
+  it('call the deleteMethod', () => {
+    const req = { body: {} };
+    const res = {
+      send: jest.fn(),
+    };
+    Input.findByIdAndRemove = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(true);
+    });
+    inputController.deleteMethod(req, res);
+    expect(res.send).toHaveBeenCalled();
+  });
+  it('call the deleteMethod', () => {
+    const req = { body: {} };
+    const res = {
+      json: jest.fn(),
+    };
+    Input.findByIdAndRemove = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(false);
+    });
+    inputController.deleteMethod(req, res);
+    expect(json.send).toHaveBeenCalled();
+  });
 });
