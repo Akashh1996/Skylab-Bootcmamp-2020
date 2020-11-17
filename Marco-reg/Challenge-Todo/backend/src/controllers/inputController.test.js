@@ -70,4 +70,26 @@ describe('InputController', () => {
     inputController.deleteMethod(req, res);
     expect(json.send).toHaveBeenCalled();
   });
+  it('call the UpdateMethod', () => {
+    const req = { params: { id: 1 } };
+    const res = {
+      send: jest.fn(),
+    };
+    Input.findByIdAndUpdate = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(true, {});
+    });
+    inputController.updateMethod(req, res);
+    expect(res.send).toHaveBeenCalled();
+  });
+  it('call the UpdateMethod', () => {
+    const req = { params: { id: 1 } };
+    const res = {
+      send: jest.fn(),
+    };
+    Input.findByIdAndUpdate = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(false, {});
+    });
+    inputController.updateMethod(req, res);
+    expect(res.send).toHaveBeenCalled();
+  });
 });

@@ -10,7 +10,8 @@ function inputRouter(Input) {
     .delete(input.deleteMethod);
   router.route('/')
     .get(input.getMethod)
-    .put(input.putMethod);
+    .put(input.putMethod)
+    .post(input.updateMethod);
 
   return router;
 }

@@ -27,8 +27,17 @@ function InputsController(Input) {
       return res.json(query);
     });
   }
+  function updateMethod(req, res) {
+    const query = req.params.id;
+    Input.findByIdAndUpdate(query, (errorUpdate, input) => {
+      if (errorUpdate) {
+        return res.send(errorUpdate);
+      }
+      return res.send(input);
+    });
+  }
   return {
-    getMethod, putMethod, deleteMethod,
+    getMethod, putMethod, deleteMethod, updateMethod,
   };
 }
 module.exports = InputsController;
