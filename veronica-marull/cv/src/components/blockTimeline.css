@@ -1,0 +1,9 @@
+.block {
+    display: flex;
+
+}
+
+.left, .right, .title{
+    padding: 10px;
+    margin: 5px;
+}

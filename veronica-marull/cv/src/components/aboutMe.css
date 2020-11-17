@@ -1,0 +1,21 @@
+.container_aboutme {
+    padding: 10px;
+    
+    width: 900px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    
+    
+}
+
+.nameh1 {
+    text-align: right;
+}
+
+
+
+

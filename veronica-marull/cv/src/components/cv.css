@@ -1,0 +1,45 @@
+.nav {
+    display: flex;
+}
+
+aside {
+    width: 10%;
+    background-color: white;
+}
+main {
+    flex: 1;
+    overflow: auto;
+}
+
+.name {
+    padding: 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.name, nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.name p {
+    font-size: 20px;
+}
+
+nav div {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid #F5F5F5;
+    
+
+}
+
+nav div:hover {
+    background-color: #FCFCFC;
+}
+main {
+    background-color: #F5F5F5;
+}
+.contact{
+    border-bottom: 1px solid #F5F5F5;
+}

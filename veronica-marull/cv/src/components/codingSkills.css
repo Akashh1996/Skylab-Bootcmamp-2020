@@ -1,0 +1,9 @@
+.skills_container {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    
+}
+progress {
+    width: 250px;
+}
