@@ -183,11 +183,395 @@
             "Combi-Plasma",
             "Combi-Melta",
             "Chainfist",
+            "Power Axe",
+            "Power Maul",
             "Relic Blade",
             "Wrist-Mounted Grenade Launcher"
         ],
         "ability":{},
         "modifiers":{}
+    },
+    {
+        "name": "Captain",
+        "slot": "HQ",
+        "power": 5,
+        "points": 80,
+        "stats":{
+            "M": 6,
+            "WS": 2,
+            "BS": 2,
+            "S": 4,
+            "T": 4,
+            "W": 5,
+            "A": 4,
+            "Ld": 9,
+            "Sv": 3,
+            "SInv": 4,
+            "SFNP": 7
+        },
+        "wargear" :[
+            "Bolt Pistol",
+            "Master-Crafted Boltgun",
+            "Astartes Chainsword",
+            "Xenophase blade",
+            "Power Axe",
+            "Power Maul",
+            "Jump pack",
+            "Storm Shield",
+            "Grav-Pistol",
+            "Hand Flamer",
+            "Frag Grenades",
+            "Krak Grenades",
+            "Inferno Pistol",
+            "Plasma Pistol",
+            "Power Sword",                
+            "Combi-Bolter",
+            "Lightning Claw (x1)",
+            "Lightning Claw (x2)",                
+            "Power Fist",
+            "Thunder Hammer",             
+            "Combi-Flamer",
+            "Combi-Grav",
+            "Combi-Plasma",
+            "Combi-Melta",
+            "Relic Blade"
+        ],
+        "ability":{},
+        "modifiers":{}
+    },
+    {
+        "name": "Captain on Bike",
+        "slot": "HQ",
+        "power": 6,
+        "points": 100,
+        "stats":{
+            "M": 14,
+            "WS": 2,
+            "BS": 2,
+            "S": 4,
+            "T": 5,
+            "W": 6,
+            "A": 4,
+            "Ld": 9,
+            "Sv": 3,
+            "SInv": 4,
+            "SFNP": 7
+        },
+        "wargear" :[
+            "Bolt Pistol",
+            "Master-Crafted Boltgun",
+            "Astartes Chainsword",
+            "Power Axe",
+            "Power Maul",
+            "Twin Boltgun",
+            "Storm Shield",
+            "Grav-Pistol",
+            "Hand Flamer",
+            "Frag Grenades",
+            "Krak Grenades",
+            "Inferno Pistol",
+            "Plasma Pistol",
+            "Power Sword",                
+            "Combi-Bolter",
+            "Lightning Claw (x1)",
+            "Lightning Claw (x2)",                
+            "Power Fist",
+            "Thunder Hammer",            
+            "Combi-Flamer",
+            "Combi-Grav",
+            "Combi-Plasma",
+            "Combi-Melta"
+        ],
+        "ability":{
+            "Turbo-Boost": "add 6'' when advanciong"
+        },
+        "modifiers":{}
+    },
+    {
+        "name": "Primaris Lieutenant",
+        "slot": "HQ",
+        "power": 4,
+        "points": 75,
+        "stats":{
+            "M": 6,
+            "WS": 2,
+            "BS": 2,
+            "S": 4,
+            "T": 4,
+            "W": 5,
+            "A": 4,
+            "Ld": 8,
+            "Sv": 3,
+            "SInv": 7,
+            "SFNP": 7
+        },
+        "wargear" :[
+            "Bolt Pistol",
+            "Master-Crafted Auto Bolt Rifle",
+            "Master-Crafted Stalker Bolt Rifle",
+            "Neo-Volkite Pistol",
+            "Special Issue Bolt Carabine",
+            "Master-Crafted Power Axe",
+            "Master-Crafted Power Sword",
+            "Astartes Chainsword",
+            "Storm Shield",
+            "Frag Grenades",
+            "Krak Grenades"
+        ],
+        "ability":{},
+        "modifiers":{}
+    },
+    {
+        "name": "Lieutenant in Reiver Armour",
+        "slot": "HQ",
+        "power": 4,
+        "points": 75,
+        "stats":{
+            "M": 6,
+            "WS": 2,
+            "BS": 2,
+            "S": 4,
+            "T": 4,
+            "W": 5,
+            "A": 4,
+            "Ld": 8,
+            "Sv": 3,
+            "SInv": 7,
+            "SFNP": 7
+        },
+        "wargear" :[
+            "Master-Crafted Issue Bolt Pistol",
+            "Combat Knife",
+            "Frag Grenades",
+            "Krak Grenades"
+        ],
+        "ability":{},
+        "modifiers":{
+            "Terror Troops": "-2 Ld"
+        }
+    },
+    {
+        "name": "Lieutenant",
+        "slot": "HQ",
+        "power": 4,
+        "points": 70,
+        "stats":{
+            "M": 6,
+            "WS": 2,
+            "BS": 2,
+            "S": 4,
+            "T": 4,
+            "W": 4,
+            "A": 3,
+            "Ld": 8,
+            "Sv": 3,
+            "SInv": 7,
+            "SFNP": 7
+        },
+        "wargear" :[
+            "Bolt Pistol",
+            "Master-Crafted Boltgun",
+            "Astartes Chainsword",
+            "Jump pack",
+            "Grav-Pistol",
+            "Hand Flamer",
+            "Frag Grenades",
+            "Krak Grenades",
+            "Inferno Pistol",
+            "Plasma Pistol",
+            "Power Axe",
+            "Power Maul",
+            "Power Sword",                
+            "Combi-Bolter",
+            "Lightning Claw (x1)",
+            "Lightning Claw (x2)",                
+            "Power Fist",
+            "Thunder Hammer",             
+            "Combi-Flamer",
+            "Combi-Grav",
+            "Combi-Plasma",
+            "Combi-Melta"
+        ],
+        "ability":{},
+        "modifiers":{}
+    },         
+    {
+        "name": "Lieutenant in Phobos Armour",
+        "slot": "HQ",
+        "power": 4,
+        "points": 80,
+        "stats":{
+            "M": 6,
+            "WS": 2,
+            "BS": 2,
+            "S": 4,
+            "T": 4,
+            "W": 5,
+            "A": 4,
+            "Ld": 8,
+            "Sv": 3,
+            "SInv": 7,
+            "SFNP": 7
+        },
+        "wargear" :[
+            "Bolt Pistol",
+            "Master-Crafted Occulus Bolt Carabine",
+            "Paired Combat Blades",
+            "Frag Grenades",
+            "Krak Grenades"
+        ],
+        "ability":{},
+        "modifiers":{}
+    },
+    {
+        "name": "Primaris Librarian",
+        "slot": "HQ",
+        "power": 5,
+        "points": 95,
+        "stats":{
+            "M": 6,
+            "WS": 3,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 5,
+            "A": 4,
+            "Ld": 9,
+            "Sv": 3,
+            "SInv": 7,
+            "SFNP": 7
+        },
+        "wargear" :[
+            "Bolt Pistol",
+            "Force Sword",
+            "Frag Grenades",
+            "Krak Grenades"
+        ],
+        "ability":{
+            "Psychic Hood": "+1 Deny The Witch",
+            "Psyker": {
+                "Smite": {
+                    "Range": 18,
+                    "WC": 5,
+                    "Damage": "D3",
+                    "Overdrive": {
+                        "WC": 11,
+                        "Damage": "D6"                        
+                    },
+                    "Description" :"5+ D3 Mortal Wounds, 11+ D6 mortal Wounds"
+                },
+                "Librarius Discipline": {
+                    "Psychic Power 1": "",
+                    "Psychic Power 2": ""
+                },
+                "Deny": 1
+            }
+        },
+        "modifiers":{}
+    },
+    {
+        "name": "Librarian",
+        "slot": "HQ",
+        "power": 5,
+        "points": 90,
+        "stats":{
+            "M": 6,
+            "WS": 3,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 4,
+            "A": 3,
+            "Ld": 9,
+            "Sv": 3,
+            "SInv": 7,
+            "SFNP": 7
+        },
+        "wargear" :[
+            "Bolt Pistol",
+            "Force Stave",
+            "Force Axe",
+            "Force Sword",
+            "Frag Grenades",
+            "Krak Grenades",
+            "Boltgun",                
+            "Combi-Flamer",
+            "Combi-Grav",
+            "Combi-Plasma",
+            "Combi-Melta",
+            "Storm Bolter",
+            "Hand Flamer",
+            "Grav-Pistol",
+            "Inferno Pistol",
+            "Plasma Pistol",
+            "Jump pack"
+        ],
+        "ability":{
+            "Psychic Hood": "+1 Deny The Witch",
+            "Psyker": {
+                "Smite": {
+                    "Range": 18,
+                    "WC": 5,
+                    "Damage": "D3",
+                    "Overdrive": {
+                        "WC": 11,
+                        "Damage": "D6"                        
+                    },
+                    "Description" :"5+ D3 Mortal Wounds, 11+ D6 mortal Wounds"
+                },
+                "Librarius Discipline": {
+                    "Psychic Power 1": "",
+                    "Psychic Power 2": ""
+                },
+                "Deny": 1
+            }
+        },
+        "modifiers":{}
+    },
+    {
+        "name": "Librarian in Phobos Armour",
+        "slot": "HQ",
+        "power": 5,
+        "points": 95,
+        "stats":{
+            "M": 6,
+            "WS": 3,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 5,
+            "A": 4,
+            "Ld": 9,
+            "Sv": 3,
+            "SInv": 7,
+            "SFNP": 7
+        },
+        "wargear" :[
+            "Bolt Pistol",
+            "Force Sword",
+            "Frag Grenades",
+            "Krak Grenades"
+        ],
+        "ability":{
+            "Psychic Hood": "+1 Deny The Witch",
+            "Psyker": {
+                "Smite": {
+                    "Range": 18,
+                    "WC": 5,
+                    "Damage": "D3",
+                    "Overdrive": {
+                        "WC": 11,
+                        "Damage": "D6"                        
+                    },
+                    "Description" :"5+ D3 Mortal Wounds, 11+ D6 mortal Wounds"
+                },
+                "Librarius Discipline": {
+                    "Psychic Power 1": "",
+                    "Psychic Power 2": ""
+                },
+                "Deny": 1
+            }
+        },
+        "modifiers":{}
     }
-
 ]

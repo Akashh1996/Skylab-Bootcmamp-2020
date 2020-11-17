@@ -24,7 +24,7 @@ function productFav({ showFav, actions, dispatch }) {
         {showFav
         && showFav?.length && showFav.map((item) => <p key={item.name}>
           <span id="list">
-            <Link id="list" to={`/${item.name}`}>
+            <Link id="list" to={`/list/${item.name}`}>
               <p id="textList">
                 <span>{` ${item.name}` }</span>
               </p>

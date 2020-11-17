@@ -1241,7 +1241,7 @@
     },
     {
         "name": "Neo-volkite Pistol",
-        "points": 0,
+        "points": 15,
         "Range": 15,
         "Type": "Pistol",
         "NoS": 1,
@@ -2036,7 +2036,7 @@
     },
     {
         "name": "Master-Crafted Power Axe",
-        "points": 0,
+        "points": 5,
         "Range": "Melee",
         "Type": "Melee",
         "S": 2,
