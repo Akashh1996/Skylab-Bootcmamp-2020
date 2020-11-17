@@ -3,8 +3,8 @@ import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import {
   getProduct, getProducts, getProductsSucceed, getProductSucceed, getCartSucceed, getCartProducts,
+  addToCart,
 } from '../actions/marketActions';
-import { addToCart } from '../../../../server/src/store/productStore';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);

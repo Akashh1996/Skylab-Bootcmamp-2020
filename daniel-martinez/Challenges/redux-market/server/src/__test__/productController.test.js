@@ -2,30 +2,41 @@ const Product = require('../models/productModel');
 const productController = require('../controllers/productController')(Product);
 
 describe('productController', () => {
-  test.skip('should call response json on getMethod', () => {
+  afterEach(() => {
+    Product.mockRestore();
+  });
+
+  test('should call response json on getMethod', () => {
     const res = {
+      send: jest.fn(),
       json: jest.fn(),
     };
 
     const req = {
-      product: {},
+      params: { productId: null },
     };
+
+    Product.find = jest.fn().mockImplementationOnce((query, callback) => { callback(false, {}); });
 
     productController.getMethod(req, res);
 
     expect(res.json).toHaveBeenCalled();
   });
 
-  test.skip('should call next on allMiddleWare', () => {
+  test('should call response json on getMethod', () => {
+    const res = {
+      send: jest.fn(),
+      json: jest.fn(),
+    };
+
     const req = {
-      product: {},
       params: { productId: null },
     };
 
-    const next = jest.fn();
+    Product.find = jest.fn().mockImplementationOnce((query, callback) => { callback(true, {}); });
 
-    productController.allMiddleware(req, null, next);
+    productController.getMethod(req, res);
 
-    expect(next).toHaveBeenCalled();
+    expect(res.send).toHaveBeenCalled();
   });
 });

@@ -21,7 +21,11 @@ export default class Functions {
 
   static deleteButton(product) {
     return (
-      <button type="button" className="li-cross" onClick={deleteFromCart(product)}>
+      <button
+        type="button"
+        className="li-cross"
+        onClick={deleteFromCart(product)}
+      >
         <img src="https://img.icons8.com/emoji/48/000000/cross-mark-emoji.png" alt="cross-icon" className="cross__icon" />
       </button>
     );

@@ -15,7 +15,7 @@ export default function productReducer(state = [], action) {
       return { ...state, cartProducts: action.cartProducts };
 
     case actionTypes.DELETE_FROM_CART:
-      return { cartProducts: action.cartProducts };
+      return { ...state, cartProducts: action.cartProducts };
 
     default:
       return state;

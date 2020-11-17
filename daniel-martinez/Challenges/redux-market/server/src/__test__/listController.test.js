@@ -11,8 +11,13 @@ const productData = {
   'header-top-right-url': 'http://www.thenorthface.com/en_US/shop-mens/',
   price: 28,
 };
+// mongoose test done with the tutorial: https://medium.com/javascript-in-plain-english/how-i-setup-unit-test-for-mongodb-using-jest-mongoose-103b772ee164
 
 describe('listontroller', () => {
+  afterEach(() => {
+    Product.mockRestore();
+  });
+
   beforeAll(async () => {
     // eslint-disable-next-line no-underscore-dangle
     await mongoose.connect(global.__MONGO_URI__, { useNewUrlParser: true }, (err) => {

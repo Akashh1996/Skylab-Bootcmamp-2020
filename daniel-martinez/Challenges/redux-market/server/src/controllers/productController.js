@@ -3,9 +3,9 @@ function productController(Product) {
     const query = { id: req.params.productId };
     Product.find(query, (errorFindProducts, products) => {
       if (errorFindProducts) {
-        res.send(errorFindProducts);
+        return res.send(errorFindProducts);
       }
-      res.json(products);
+      return res.json(products);
     });
   }
 
