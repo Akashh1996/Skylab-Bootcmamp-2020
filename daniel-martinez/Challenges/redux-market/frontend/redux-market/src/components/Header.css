@@ -1,0 +1,32 @@
+#header {
+    display: flex;
+    background-color: wheat;
+    border-bottom: 1px solid black;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+header > a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.flex-spacer {
+    flex: 1;
+}
+
+#market-title {
+    font-size: 40px;
+    padding: 20px;
+}
+
+#header__cart {
+    height: fit-content;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+#header__cart:hover {
+    background-color: rgb(196, 196, 196);
+}
