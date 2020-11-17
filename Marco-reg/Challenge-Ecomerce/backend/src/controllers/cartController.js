@@ -3,19 +3,20 @@ function cartController(Cart) {
     const query = {};
     Cart.find(query, (errorFindProducts, cartProducts) => {
       if (errorFindProducts) {
-        res.send(errorFindProducts);
+        return res.send(errorFindProducts);
       }
-      res.json(cartProducts);
+      return res.json(cartProducts);
     });
   }
 
   function putMethod(req, res) {
     const query = req.body;
+    console.log(req);
     Cart.create(query, (errorFindProducts, cartProduct) => {
       if (errorFindProducts) {
-        res.send(errorFindProducts);
+        return res.send(errorFindProducts);
       }
-      res.json(cartProduct);
+      return res.json(cartProduct);
     });
   }
 
@@ -23,14 +24,9 @@ function cartController(Cart) {
     const query = req.body;
     Cart.findOneAndRemove(query, (errorFindProducts, cartProducts) => {
       if (errorFindProducts) {
-        res.send(errorFindProducts);
+        return res.send(errorFindProducts);
       }
-      Cart.find({}, (errorFinding, cartList) => {
-        if (errorFinding) {
-          res.send(errorFindProducts);
-        }
-        res.json(cartList);
-      });
+      return res.json(cartProducts);
     });
   }
 

@@ -7,20 +7,14 @@ function productsController(Product) {
         return res.send(errorFindProducts);
       }
 
-      return res.json(products);
+      return res.send(products);
     });
   }
 
   function putMethod(req, res) {
-    const query1 = req.body.productId;
-    const query2 = req.body;
-    Product.findByIdAndUpdate(query1, query2, { new: true }, (error, updateProduct) => {
-      if (error) {
-        res.send(error);
-      } else {
-        res.send(updateProduct);
-      }
-    });
+    Product.addProduct(req.body);
+
+    res.json(Product.getproducts());
   }
 
   return {

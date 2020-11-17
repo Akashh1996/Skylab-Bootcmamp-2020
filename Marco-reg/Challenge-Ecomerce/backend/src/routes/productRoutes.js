@@ -14,15 +14,16 @@ function productRouter(Product, Cart) {
     .get(products.getMethod)
     .put(products.putMethod);
 
+  router.route('/cart')
+    .get(cart.getMethod)
+    .put(cart.putMethod)
+    .delete(cart.deleteMethod);
+
   router.route('/:productId')
     .all(product.allMiddleware)
     .get(product.getMethod)
     .post(product.postMethod)
     .delete(product.deleteMethod);
-  router.route('/cart')
-    .get(cart.getMethod)
-    .put(cart.putMethod)
-    .delete(cart.deleteMethod);
 
   return router;
 }
