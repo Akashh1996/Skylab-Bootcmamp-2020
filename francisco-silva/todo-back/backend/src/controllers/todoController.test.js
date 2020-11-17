@@ -62,4 +62,49 @@ describe('todoController', () => {
     todoController.deleteMethod(req, res);
     expect(res.send.mock.calls.length).toBe(1);
   });
+  test('should call response send on deleteMethod', () => {
+    const res = {
+      send: jest.fn(),
+    };
+    const req = {
+      params: {
+        idItem: '1',
+      },
+    };
+    Todo.findByIdAndRemove = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(false);
+    });
+    todoController.deleteMethod(req, res);
+    expect(res.send.mock.calls.length).toBe(1);
+  });
+  test('should call response send on updateMethod', () => {
+    const res = {
+      send: jest.fn(),
+    };
+    const req = {
+      params: {
+        id: '1',
+      },
+    };
+    Todo.findByIdAndUpdate = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(true);
+    });
+    todoController.updateMethod(req, res);
+    expect(res.send.mock.calls.length).toBe(1);
+  });
+  test('should call response send on updateMethod', () => {
+    const res = {
+      send: jest.fn(),
+    };
+    const req = {
+      params: {
+        id: '1',
+      },
+    };
+    Todo.findByIdAndUpdate = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(false);
+    });
+    todoController.updateMethod(req, res);
+    expect(res.send.mock.calls.length).toBe(1);
+  });
 });
