@@ -1,5 +1,18 @@
 /* eslint-disable linebreak-style */
 function heroController(Hero) {
+  function allMiddleware(req, res, next) {
+    const heroNumId = +req.params.heroId;
+    const query = { id: heroNumId };
+    Hero.findOne(query, (errorFindHero, hero) => {
+      if (errorFindHero) {
+        res.send(errorFindHero);
+      } else {
+        res.json(hero);
+        next();
+      }
+    });
+  }
+
   function getMethod(req, res) {
     const heroNumId = +req.params.heroId;
     const query = { id: heroNumId };
@@ -13,14 +26,16 @@ function heroController(Hero) {
   }
 
   function postMethod(req, res) {
-    const updatedHero = {
-      ...req.hero,
-      ...req.body,
-    };
-
-    Hero.setHero(updatedHero);
-
-    res.send(updatedHero);
+    const heroNumId = +req.params.heroId;
+    const query = { id: heroNumId };
+    const option = { new: true };
+    Hero.findOneAndUpdate(query, option, (errorFindHero, hero) => {
+      if (errorFindHero) {
+        res.send(errorFindHero);
+      } else {
+        res.json(hero);
+      }
+    });
   }
 
   function deleteMethod(req, res) {
@@ -35,13 +50,8 @@ function heroController(Hero) {
     });
   }
 
-  /*   function allMiddleware(req, res, next) {
-    req.hero = Hero.getHeroById(+req.params.heroId);
-    next();
-  } */
-
   return {
-    getMethod, postMethod, deleteMethod, /* allMiddleware */
+    getMethod, postMethod, deleteMethod, allMiddleware,
   };
 }
 

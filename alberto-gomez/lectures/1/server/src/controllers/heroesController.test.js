@@ -1,5 +1,5 @@
 /* eslint-disable linebreak-style */
-const Hero = require('../stores/heroStore');
+const Hero = require('../models/heroModel');
 const heroesController = require('./heroesController')(Hero);
 
 describe('heroesController', () => {

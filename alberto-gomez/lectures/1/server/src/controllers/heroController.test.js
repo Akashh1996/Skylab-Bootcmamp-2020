@@ -59,4 +59,60 @@ describe('heroController', () => {
 
     expect(res.send).toHaveBeenCalled();
   });
+
+  test('should call response json when findOne goes well', () => {
+    const res = {
+      json: jest.fn(),
+    };
+
+    Hero.findOne = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(false, {});
+    });
+
+    heroController.allMiddleware({ id: null, params: { heroId: 1 } }, res);
+
+    expect(res.json).toHaveBeenCalled();
+  });
+
+  test('should call response json when findOne throws error', () => {
+    const res = {
+      json: jest.fn(),
+    };
+
+    Hero.findOne = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(true, {});
+    });
+
+    heroController.allMiddleware({ id: null, params: { heroId: 1 } }, res);
+
+    expect(res.send).toHaveBeenCalled();
+  });
+
+  test('should call response json when findOneAndUpdate goes well', () => {
+    const res = {
+      json: jest.fn(),
+    };
+
+    Hero.findOneAndUpdate = jest.fn().mockImplementationOnce((query, option, callback) => {
+      callback(false, {});
+    });
+
+    heroController.postMethod({ id: null, params: { heroId: 1 } }, res);
+
+    expect(res.json).toHaveBeenCalled();
+  });
+
+  test('should call response json when findOneAndUpdate throws error', () => {
+    const res = {
+      json: jest.fn(),
+    };
+
+    Hero.findOneAndUpdate = jest.fn().mockImplementationOnce((query, option, callback) => {
+      callback(true, {});
+    });
+
+    heroController.postMethod({ id: null, params: { heroId: 1 } }, res);
+
+    expect(res.send).toHaveBeenCalled();
+  });
 });
