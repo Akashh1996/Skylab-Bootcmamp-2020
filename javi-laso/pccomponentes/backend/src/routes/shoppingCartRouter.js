@@ -7,7 +7,7 @@ function cartRoutes(cartItemSchema) {
 
   router.route('/')
     .get(shoppingCart.getMethod)
-    .put(shoppingCart.putMethod)
+    .patch(shoppingCart.patchMethod)
     .delete(shoppingCart.deleteMethod);
 
   return router;

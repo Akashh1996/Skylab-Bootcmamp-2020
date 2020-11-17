@@ -14,7 +14,7 @@ const shoppingCartRouter = require('./src/routes/shoppingCartRouter')(cartItemSc
 const server = express();
 const port = process.env.PORT || 2130;
 
-mongoose.connect('mongodb://localhost/pccodb');
+mongoose.connect('mongodb://localhost/pccodb', { useNewUrlParser: true, useUnifiedTopology: true });
 
 server.use(morgan('dev'));
 

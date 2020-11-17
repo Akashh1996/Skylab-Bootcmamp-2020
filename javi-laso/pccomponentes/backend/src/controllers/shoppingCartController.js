@@ -1,24 +1,27 @@
 function shoppingCarController(cartItemSchema) {
   function getMethod(req, res) {
-    cartItemSchema.find({}, (error, cart) => {
+    cartItemSchema.find({}, (error, cartList) => {
       if (error) {
         res.send(error);
       } else {
-        res.send(cart);
+        res.send(cartList);
       }
     });
   }
 
-  function putMethod(req, res) {
-    let { item } = req.body;
-    item = { ...item, _id: null };
-    cartItemSchema.create(item, (error, newItem) => {
+  function patchMethod(req, res) {
+    const { item, cartList } = req.body;
+    delete item._id;
+    const query = {}
+    const conditionToUpdate = { `${cartList[item.id]}`: [...cartList[`${item.id}`], item] }
+    const patchCallback = (error, newItem) => {
       if (error) {
         res.send(error);
       } else {
         res.send(newItem);
       }
-    });
+    }
+    cartItemSchema.updateOne(query, conditionToUpdate, patchCallback);
   }
 
   function deleteMethod(req, res) {
@@ -31,7 +34,7 @@ function shoppingCarController(cartItemSchema) {
     });
   }
 
-  return { getMethod, putMethod, deleteMethod };
+  return { getMethod, patchMethod, deleteMethod };
 }
 
 module.exports = shoppingCarController;

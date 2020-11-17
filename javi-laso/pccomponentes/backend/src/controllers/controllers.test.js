@@ -3,6 +3,9 @@ const itemsMongoController = require('./itemsMongoController')(itemSchema);
 const cartItemSchema = require('../models/cartItemSchema');
 const shoppingCarController = require('./shoppingCartController')(cartItemSchema);
 
+jest.mock('../models/itemSchema');
+jest.mock('../models/cartItemSchema');
+
 describe('itemsMongoController', () => {
   let res;
   let req;

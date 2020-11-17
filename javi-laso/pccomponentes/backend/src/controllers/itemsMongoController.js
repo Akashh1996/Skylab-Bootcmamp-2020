@@ -1,46 +1,52 @@
 function itemsMongoController(itemSchema) {
   function getMethod(req, res) {
     const query = {};
-    itemSchema.find(query, (errorFindItems, items) => {
+    const findCallback = (errorFindItems, items) => {
       if (errorFindItems) {
         res.send(errorFindItems);
       } else {
         res.json(items);
       }
-    });
+    };
+    itemSchema.find(query, findCallback);
   }
 
   function postMethod(req, res) {
     const item = req.body;
-    itemSchema.create(item, (error, newItem) => {
+    const createCallBack = (error, newItem) => {
       if (error) {
         res.send(error);
       } else {
         res.send(newItem);
       }
-    });
+    };
+    itemSchema.create(item, createCallBack);
   }
 
   function deleteMethod(req, res) {
     const item = req.body;
-    itemSchema.deleteMany({ 'product-type': item['product-type'] }, (error) => {
+    const query = { 'product-type': item['product-type'] };
+    const deleteCallback = (error) => {
       if (error) {
         res.send(error);
       } else {
         res.send('Deleted');
       }
-    });
+    };
+    itemSchema.deleteMany(query, deleteCallback);
   }
 
   function patchMethod(req, res) {
     const item = req.body;
-    itemSchema.updateOne({ id: item.id }, { 'product-name': 'Caca' }, (error) => {
+    const query = { id: item.id };
+    const patchCallback = (error) => {
       if (error) {
         res.send(error);
       } else {
         res.send('Updated');
       }
-    });
+    };
+    itemSchema.updateOne(query, { 'product-name': 'Caca' }, patchCallback);
   }
 
   function getByIdMethod(req, res) {

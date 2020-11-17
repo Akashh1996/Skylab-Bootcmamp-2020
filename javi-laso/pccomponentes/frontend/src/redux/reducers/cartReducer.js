@@ -24,7 +24,6 @@ export default function cartReducer(state = initialState, action) {
       if (state.cartList[`${id}`]) {
         state.cartList[`${id}`] = [...state.cartList[`${id}`], action.cartItem];
       }
-      debugger;
       return {
         ...state,
         cartList: { ...state.cartList, [`${id}`]: [...state.cartList[`${id}`], action.cartItem] },
