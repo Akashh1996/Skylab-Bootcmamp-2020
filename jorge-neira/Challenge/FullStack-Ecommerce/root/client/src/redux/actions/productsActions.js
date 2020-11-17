@@ -1,4 +1,4 @@
-/* eslint-disable no-debugger */
+/* eslint-disable no-console */
 import axios from 'axios';
 import actionTypes from './actionsTypes';
 
@@ -18,22 +18,10 @@ function loadProductsSuccess(productslist) {
   };
 }
 
-function loadProductsFailure({ type }) {
-  return {
-    type,
-  };
-}
-
 function getProductoByIdSuccess(productDetail) {
   return {
     type: actionTypes.LOAD_PRODUCT_BY_MODEL,
     productDetail,
-  };
-}
-
-function getProductoByIdFailure({ type }) {
-  return {
-    type,
   };
 }
 
@@ -43,7 +31,7 @@ export function loadProductList() {
       const productsList = await axios.get(`${URL}`);
       dispatch(loadProductsSuccess(productsList.data));
     } catch (error) {
-      dispatch(loadProductsFailure());
+      console.log(error);
     }
   };
 }
@@ -54,21 +42,6 @@ export function getDetailProduct(productModel) {
     try {
       const productDetail = await axios.get(`${URL}${endpoint}/${productModel}`);
       dispatch(getProductoByIdSuccess(productDetail.data));
-    } catch (error) {
-      dispatch(getProductoByIdFailure());
-    }
-  };
-}
-
-export function addProductToCart(product) {
-  debugger;
-  return async () => {
-    const endpoint = 'cart';
-    try {
-      debugger;
-      await axios.post(`${URL}${endpoint}`, {
-        ...product,
-      });
     } catch (error) {
       console.log(error);
     }
@@ -87,16 +60,27 @@ export function getCurrentCart() {
   };
 }
 
+export function addProductToCart(product) {
+  return async () => {
+    const endpoint = 'cart';
+    try {
+      await axios.post(`${URL}${endpoint}`, {
+        ...product,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
+
 export function delProductFromCart(cartId) {
-  // eslint-disable-next-line no-debugger
-  debugger;
   return async (dispatch) => {
     const endpoint = 'cart';
     try {
       await axios.delete(`${URL}${endpoint}`, {
         data: { cartId },
       });
-      await dispatch(getCurrentCart());
+      dispatch(getCurrentCart());
     } catch (error) {
       console.log(error);
     }

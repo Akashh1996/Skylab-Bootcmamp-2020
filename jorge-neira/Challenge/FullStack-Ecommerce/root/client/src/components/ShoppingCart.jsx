@@ -2,38 +2,33 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { PropTypes } from 'prop-types';
+import { nanoid } from 'nanoid/non-secure';
 import { getCurrentCart, delProductFromCart } from '../redux/actions/productsActions';
 
-// eslint-disable-next-line react/prop-types
 function ShoppingCart({ currentCart, dispatch }) {
-  // eslint-disable-next-line no-debugger
-  debugger;
-  // eslint-disable-next-line no-debugger
   useEffect(() => {
     dispatch.getCurrentCart();
-    console.log('hola');
   }, []);
-
   return (
     <>
       {(currentCart)
         ? currentCart.map((cartProduct) => (
           <>
-            <div key={performance.now()}>
+            <div key={nanoid()}>
               {`${cartProduct.productName} 
             ${cartProduct.productModel} 
             Price: ${cartProduct.price}€`}
             </div>
             <button
               type="button"
-              key={performance.now()}
+              key={nanoid()}
               onClick={() => dispatch.delProductFromCart(cartProduct.cartId)}
             >
               del
             </button>
           </>
         ))
-        : <div>No hay articulos disponibles</div> }
+        : <div key={nanoid()}>No hay articulos disponibles</div> }
     </>
   );
 }
@@ -41,6 +36,7 @@ function ShoppingCart({ currentCart, dispatch }) {
 ShoppingCart.propTypes = {
   currentCart: PropTypes.shape({
     map: PropTypes.func.isRequired,
+    length: PropTypes.number.isRequired,
   }),
   dispatch: PropTypes.shape({
     getCurrentCart: PropTypes.func.isRequired,
@@ -53,8 +49,6 @@ ShoppingCart.defaultProps = {
 };
 
 function mapStateToProps(state) {
-  // eslint-disable-next-line no-debugger
-  debugger;
   return {
     currentCart: state.productReducer.cartList,
   };

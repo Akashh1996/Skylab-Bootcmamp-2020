@@ -14,7 +14,7 @@ describe('Test product detail controllers', () => {
       },
     };
     Product.findOne = jest.fn().mockImplementationOnce((query, callback) => {
-      callback();
+      callback(null, null);
     });
     // act
     productDetailController.getMethod(req, res);
@@ -33,7 +33,7 @@ describe('Test product detail controllers', () => {
       },
     };
     Product.findOne = jest.fn().mockImplementationOnce((query, callback) => {
-      callback(true);
+      callback(true, null);
     });
     // act
     productDetailController.getMethod(req, res);
