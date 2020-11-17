@@ -31,11 +31,11 @@ function todoController(Todo) {
 
   function putMethod(req, res) {
     const query = req.body;
-    Todo.create(query, (errorPutItem, item) => {
+    Todo.create(query, (errorPutItem, todo) => {
       if (errorPutItem) {
-        res.send(errorPutItem);
+        return res.send(errorPutItem);
       }
-      res.json(item);
+      return res.json(todo);
     });
   }
 

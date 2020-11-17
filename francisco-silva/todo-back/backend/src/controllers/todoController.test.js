@@ -1,79 +1,65 @@
 /* eslint-disable no-undef */
+const { timeStamp } = require('console');
 const Todo = require('../models/todoModel');
 const todoController = require('./todoController')(Todo);
 
-describe('deleteMethod', () => {
-  test('should call send when there is an error', () => {
-    const res = { send: jest.fn() };
+describe('todoController', () => {
+  it('should call response send on get when there is an error', () => {
+    const res = {
+      send: jest.fn(),
+    };
+    Todo.find = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(true, {});
+    });
+    todoController.getMethod({ input: null }, res);
+    expect(res.send).toHaveBeenCalled();
+  });
+  it('should call response send on get when there is not an error', () => {
+    const res = {
+      json: jest.fn(),
+    };
+    Todo.find = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(false, {});
+    });
+    todoController.getMethod({ input: null }, res);
+    expect(res.json).toHaveBeenCalled();
+  });
+  it('call the response send on putMethod when there is an error', () => {
+    const req = { body: { id: 12 } };
+    const res = {
+      send: jest.fn(),
+    };
+    Todo.create = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(true, {});
+    });
+    todoController.putMethod(req, res);
+    expect(res.send).toHaveBeenCalled();
+  });
+  it('call the response send on putMethod when there is not error', () => {
+    const req = { body: { id: 12 } };
+    const res = {
+      json: jest.fn(),
+    };
+    Todo.create = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(false, {});
+    });
+    todoController.putMethod(req, res);
+    expect(res.json).toHaveBeenCalled();
+  });
+
+  test('should call response send on deleteMethod', () => {
+    const res = {
+      send: jest.fn(),
+    };
+    const req = {
+      params: {
+        idItem: '1',
+      },
+    };
     Todo.findByIdAndRemove = jest.fn().mockImplementationOnce((query, callback) => {
       callback(true);
     });
-    todoController.deleteMethod({}, res);
-    expect(res.send).toHaveBeenCalled();
-  });
-});
-
-describe('getMethod', () => {
-  test('should call send when there is an error', () => {
-    const res = { send: jest.fn() };
-
-    Product.find = jest.fn().mockImplementationOnce((query, callback) => {
-      callback(true, {});
-    });
-
-    productController.getMethod({}, res);
-    expect(res.send).toHaveBeenCalled();
-  });
-  test('should call json when there is not an error', () => {
-    const res = { json: jest.fn() };
-
-    Product.find = jest.fn().mockImplementationOnce((query, callback) => {
-      callback(false, {});
-    });
-    productController.getMethod({}, res);
-    expect(res.json).toHaveBeenCalled();
-  });
-});
-
-describe('deleteMethod', () => {
-  test('should call send when there is an error', () => {
-    const res = { send: jest.fn() };
-    const req = {
-      params: {
-        productId: 2,
-      },
-    };
-    Product.deleteOne = jest.fn().mockImplementationOnce((query, callback) => {
-      callback(true, {});
-    });
-    productController.deleteMethod(req, res);
-    expect(res.send).toHaveBeenCalled();
-  });
-  test('should call send when there is not an errror', () => {
-    const res = { send: jest.fn() };
-    const req = {
-      params: {
-        productId: 2,
-      },
-    };
-    Product.deleteOne = jest.fn().mockImplementationOnce((query, callback) => {
-      callback(false, {});
-    });
-    productController.deleteMethod(req, res);
-    expect(res.send).toHaveBeenCalled();
-  });
-});
-
-describe('allMiddleware', () => {
-  test('should call next', () => {
-    const req = {
-      params: {
-        productId: 3,
-      },
-    };
-    const res = { send: jest.fn() };
-    const next = jest.fn();
-    productController.allMiddleware(req, res, next);
-    expect(next).toHaveBeenCalled();
+    todoController.deleteMethod(req, res);
+    expect(res.send.mock.calls.length).toBe(1);
   });
 });
