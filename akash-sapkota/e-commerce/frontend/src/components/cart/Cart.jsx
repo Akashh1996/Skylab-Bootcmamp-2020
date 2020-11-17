@@ -6,13 +6,11 @@ import { Link } from 'react-router-dom';
 
 import { requestCart, deleteProductCart } from '../../redux/actions/productAction';
 
-function Cart({ productCartList, actions }) {
-  if (!productCartList) {
-    actions.requestCart();
-  }
+function Cart({ productCartList, actions, dispatch }) {
   useEffect(() => {
-    actions.requestCart();
-  }, []);
+    /* actions.requestCart(); */
+    dispatch(requestCart());
+  }, [dispatch]);
 
   return (
     <div className="detail_wrapper" style={{ marginTop: '100px' }}>
@@ -23,7 +21,11 @@ function Cart({ productCartList, actions }) {
                    {' '}
                    <button
                      type="button"
-                     onClick={() => actions.deleteProductCart(product.id)}
+                     onClick={() => {
+                       actions.deleteProductCart(product.id);
+                       actions.requestCart();
+                     }}
+
                    >
                      x
 
@@ -52,6 +54,7 @@ Cart.propTypes = {
     deleteProductCart: PropTypes.func.isRequired,
 
   }).isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 function mapStateToProps(state) {
@@ -64,6 +67,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators({ requestCart, deleteProductCart }, dispatch),
+    dispatch,
   };
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);

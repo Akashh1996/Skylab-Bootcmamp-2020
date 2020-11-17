@@ -126,5 +126,6 @@ export function deleteProductCart(productId) {
   return async (dispatch) => {
     const endpoint = `http://localhost:1400/products/cart/${productId}`;
     await axios.delete(endpoint);
-  };
+    /*     dispatch(requestCart());
+ */ };
 }
