@@ -23,7 +23,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, '/public/')));
-
+/* console.log("this is dirname", __dirname);
+ */
 app.use('/products', productRouter);
 
 app.listen(port, () => {
