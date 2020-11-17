@@ -27,55 +27,32 @@ export function requestItems() {
 	};
 }
 
-function deleteItemsSuccess(items) {
-  return {
-    type: actionTypes.DELETE_ITEM,
-    items,
-  };
-}
-
-function deleteItemsError(error) {
-  return {
-    type: actionTypes.DELETE_ITEM_ERROR,
-    error,
-  };
-}
-
 export function deleteItems(itemId) {
   return async (dispatch) => {
   const endpoint = `http://localhost:5000/todolist/${itemId}`;
   try {
-    const items = await axios.delete(endpoint);
-    dispatch(deleteItemsSuccess(items.data));
+    await axios.delete(endpoint);
+    
   } catch (error) {
-    dispatch(deleteItemsError(error));
+    dispatch((error));
   }
 };
-}
-
-function putItemsSuccess(items) {
-  return {
-    type: actionTypes.PUT_ITEM,
-    items,
-  };
-}
-
-function putItemsError(error) {
-  return {
-    type: actionTypes.PUT_ITEM_ERROR,
-    error,
-  };
 }
 
 export function putItems(item) {
-  let {_id, ...newItem} = item;
+  const newItem = {"item": item};
   return async (dispatch) => {
   const endpoint = `http://localhost:5000/todolist/`;
   try {
-    const items = await axios.put(endpoint, { ...newItem });
-    dispatch(putItemsSuccess(items.data));
+    await axios.put(endpoint, newItem);
   } catch (error) {
-    dispatch(putItemsError(error));
+    dispatch((error));
   }
 };
+}
+
+export function cleanProductDetail() {
+  return {
+    type: actionTypes.CLEAN_PRODUCT_DETAIL,
+  };
 }
