@@ -6,9 +6,9 @@ function cartRouter(Cart) {
     const cart = cartController(Cart);
 
     router.route('/')
-    .get(cart.getMethod)
-    .post(cart.postMethod)
-    .delete(cart.deleteMethod);
+    .get(cart.getMethod);
+   /*  .post(cart.postMethod)
+    .delete(cart.deleteMethod); */
 
     return router;
 }

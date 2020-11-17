@@ -23,4 +23,4 @@ const saberSchema = new Schema({
     },
 });
 
-module.exports = model('Sabers', saberSchema);
+module.exports = model('sabers', saberSchema);

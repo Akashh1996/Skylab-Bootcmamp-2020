@@ -1,6 +1,5 @@
 function saberController(Sabers) {
     function getMethod(req, res) {
-        console.log(req);
         const saberName = req.params.saberName;
         const query = { "product-name": saberName };
         Sabers.find(query, (errorFindingSaber, saber) => {

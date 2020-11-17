@@ -1,10 +1,17 @@
 function cartController(Cart) {
     function getMethod(req, res) {
-        res.status(200);
-        res.send(Cart.getCart());
+        const query = {};
+        Cart.find(query, (errorFindingCart, cart) => {
+            if(errorFindingCart) {
+                res.send(errorFindingCart);
+            } else {
+                res.status(200);
+                res.send(cart);
+            }
+        });
     }
 
-    function postMethod(req, res) {
+    /* function postMethod(req, res) {
         const productName = req.query.productName;
         const productColor = req.query.productColor;
         let cartProduct = null;
@@ -37,11 +44,11 @@ function cartController(Cart) {
         res.status(200);
         res.send(cart);
     }
-
+ */
     return {
         getMethod,
-        postMethod,
-        deleteMethod,
+        /* postMethod,
+        deleteMethod, */
     }
 }
 
