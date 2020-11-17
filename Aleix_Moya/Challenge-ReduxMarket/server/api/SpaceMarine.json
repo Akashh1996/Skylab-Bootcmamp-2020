@@ -4,6 +4,8 @@
         "slot": "HQ",
         "power": 5,
         "points": 90,
+        "Number": 1,
+        "Max-Number": 1,
         "stats":{
             "M": 6,
             "WS": 2,
@@ -37,6 +39,8 @@
         "slot": "HQ",
         "power": 6,
         "points": 105,
+        "Number": 1,
+        "Max-Number": 1,
         "stats":{
             "M": 5,
             "WS": 2,
@@ -64,6 +68,8 @@
         "slot": "HQ",
         "power": 5,
         "points": 95,
+        "Number": 1,
+        "Max-Number": 1,
         "stats":{
             "M": 6,
             "WS": 2,
@@ -93,6 +99,8 @@
         "slot": "HQ",
         "power": 6,
         "points": 115,
+        "Number": 1,
+        "Max-Number": 1,
         "stats":{
             "M": 5,
             "WS": 2,
@@ -118,6 +126,8 @@
         "slot": "HQ",
         "power": 6,
         "points": 100,
+        "Number": 1,
+        "Max-Number": 1,
         "stats":{
             "M": 5,
             "WS": 2,
@@ -156,6 +166,8 @@
         "slot": "HQ",
         "power": 6,
         "points": 100,
+        "Number": 1,
+        "Max-Number": 1,
         "stats":{
             "M": 5,
             "WS": 2,
@@ -196,6 +208,8 @@
         "slot": "HQ",
         "power": 5,
         "points": 80,
+        "Number": 1,
+        "Max-Number": 1,
         "stats":{
             "M": 6,
             "WS": 2,
@@ -244,6 +258,8 @@
         "slot": "HQ",
         "power": 6,
         "points": 100,
+        "Number": 1,
+        "Max-Number": 1,
         "stats":{
             "M": 14,
             "WS": 2,
@@ -292,6 +308,8 @@
         "slot": "HQ",
         "power": 4,
         "points": 75,
+        "Number": 1,
+        "Max-Number": 1,
         "stats":{
             "M": 6,
             "WS": 2,
@@ -326,6 +344,8 @@
         "slot": "HQ",
         "power": 4,
         "points": 75,
+        "Number": 1,
+        "Max-Number": 1,
         "stats":{
             "M": 6,
             "WS": 2,
@@ -355,6 +375,8 @@
         "slot": "HQ",
         "power": 4,
         "points": 70,
+        "Number": 1,
+        "Max-Number": 1,
         "stats":{
             "M": 6,
             "WS": 2,
@@ -400,6 +422,8 @@
         "slot": "HQ",
         "power": 4,
         "points": 80,
+        "Number": 1,
+        "Max-Number": 1,
         "stats":{
             "M": 6,
             "WS": 2,
@@ -428,6 +452,8 @@
         "slot": "HQ",
         "power": 5,
         "points": 95,
+        "Number": 1,
+        "Max-Number": 1,
         "stats":{
             "M": 6,
             "WS": 3,
@@ -474,6 +500,8 @@
         "slot": "HQ",
         "power": 5,
         "points": 90,
+        "Number": 1,
+        "Max-Number": 1,
         "stats":{
             "M": 6,
             "WS": 3,
@@ -533,6 +561,8 @@
         "slot": "HQ",
         "power": 5,
         "points": 95,
+        "Number": 1,
+        "Max-Number": 1,
         "stats":{
             "M": 6,
             "WS": 3,
@@ -572,6 +602,475 @@
                 "Deny": 1
             }
         },
+        "modifiers":{}
+    },
+    {
+        "name": "Librarian in Terminator Armour",
+        "slot": "HQ",
+        "power": 6,
+        "points": 105,
+        "Number": 1,
+        "Max-Number": 1,
+        "stats":{
+            "M": 5,
+            "WS": 3,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 5,
+            "A": 3,
+            "Ld": 9,
+            "Sv": 2,
+            "SInv": 5,
+            "SFNP": 7
+        },
+        "wargear" :[
+            "Force Stave",
+            "Force Axe",
+            "Force Sword",         
+            "Combi-Flamer",
+            "Combi-Grav",
+            "Combi-Plasma",
+            "Combi-Melta",
+            "Storm Bolter"
+        ],
+        "ability":{
+            "Psychic Hood": "+1 Deny The Witch",
+            "Psyker": {
+                "Smite": {
+                    "Range": 18,
+                    "WC": 5,
+                    "Damage": "D3",
+                    "Overdrive": {
+                        "WC": 11,
+                        "Damage": "D6"                        
+                    },
+                    "Description" :"5+ D3 Mortal Wounds, 11+ D6 mortal Wounds"
+                },
+                "Librarius Discipline": {
+                    "Psychic Power 1": "",
+                    "Psychic Power 2": ""
+                },
+                "Deny": 1
+            }
+        },
+        "modifiers":{}
+    },
+    {
+        "name": "Primaris Chaplin",
+        "slot": "HQ",
+        "power": 5,
+        "points": 85,
+        "Number": 1,
+        "Max-Number": 1,
+        "stats":{
+            "M": 6,
+            "WS": 2,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 5,
+            "A": 4,
+            "Ld": 9,
+            "Sv": 3,
+            "SInv": 4,
+            "SFNP": 7
+        },
+        "wargear" :[
+            "Absolvor Bolt Pistol",
+            "Crozius Arcanum",
+            "Frag Grenades",
+            "Krak Grenades"
+        ],
+        "ability":{
+            "Litanies": {
+                "LitanyOfHate": "Reroll hit roll",
+                "KnownLitany": {
+                    "LitanyOne":""
+                }
+            }
+        },
+        "modifiers":{}
+    },
+    {
+        "name": "Primaris Chaplin on a Bike",
+        "slot": "HQ",
+        "power": 6,
+        "points": 115,
+        "Number": 1,
+        "Max-Number": 1,
+        "stats":{
+            "M": 14,
+            "WS": 2,
+            "BS": 3,
+            "S": 4,
+            "T": 5,
+            "W": 7,
+            "A": 4,
+            "Ld": 9,
+            "Sv": 3,
+            "SInv": 4,
+            "SFNP": 7
+        },
+        "wargear" :[
+            "Absolvor Bolt Pistol",
+            "Twin Bolt Rifle",
+            "Crozius Arcanum",
+            "Frag Grenades",
+            "Krak Grenades"
+        ],
+        "ability":{
+            "Turbo-Boost": "add 6'' when advanciong",
+            "Litanies": {
+                "LitanyOfHate": "Reroll hit roll",
+                "KnownLitany": {
+                    "LitanyOne":""
+                }
+            }
+        },
+        "modifiers":{}
+    },
+    {
+        "name": "Chaplin in Terminator Armour",
+        "slot": "HQ",
+        "power": 6,
+        "points": 95,
+        "Number": 1,
+        "Max-Number": 1,
+        "stats":{
+            "M": 5,
+            "WS": 2,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 5,
+            "A": 3,
+            "Ld": 9,
+            "Sv": 2,
+            "SInv": 4,
+            "SFNP": 7
+        },
+        "wargear" :[
+            "Combi-Flamer",
+            "Combi-Grav",
+            "Combi-Plasma",
+            "Combi-Melta",
+            "Storm Bolter",
+            "Crozius Arcanum",
+            "Frag Grenades",
+            "Krak Grenades"
+        ],
+        "ability":{
+            "Litanies": {
+                "LitanyOfHate": "Reroll hit roll",
+                "KnownLitany": {
+                    "LitanyOne":""
+                }
+            }
+        },
+        "modifiers":{}
+    },
+    {
+        "name": "Chaplin",
+        "slot": "HQ",
+        "power": 5,
+        "points": 80,
+        "Number": 1,
+        "Max-Number": 1,
+        "stats":{
+            "M": 6,
+            "WS": 2,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 4,
+            "A": 3,
+            "Ld": 9,
+            "Sv": 3,
+            "SInv": 4,
+            "SFNP": 7
+        },
+        "wargear" :[
+            "Bolt Pistol",
+            "Boltgun",
+            "Hand Flamer",
+            "Grav-Pistol",
+            "Inferno Pistol",
+            "Plasma Pistol",
+            "Combi-Flamer",
+            "Combi-Grav",
+            "Combi-Plasma",
+            "Combi-Melta",
+            "Storm Bolter",
+            "Crozius Arcanum",
+            "Power Fist",
+            "Frag Grenades",
+            "Krak Grenades",
+            "Jump pack"
+        ],
+        "ability":{
+            "Litanies": {
+                "LitanyOfHate": "Reroll hit roll",
+                "KnownLitany": {
+                    "LitanyOne":""
+                }
+            }
+        },
+        "modifiers":{}
+    },
+    {
+        "name": "Primaris Techmarine",
+        "slot": "HQ",
+        "power": 4,
+        "points": 80,
+        "Number": 1,
+        "Max-Number": 1,
+        "stats":{
+            "M": 6,
+            "WS": 3,
+            "BS": 2,
+            "S": 4,
+            "T": 4,
+            "W": 5,
+            "A": 4,
+            "Ld": 8,
+            "Sv": 2,
+            "SInv": 7,
+            "SFNP": 7
+        },
+        "wargear" :[
+            "Grav-Pistol",
+            "Forge Bolter",
+            "Mechadendrite",
+            "Servo arm",
+            "Omnissian Power Axe",
+            "Frag Grenades",
+            "Krak Grenades"
+        ],
+        "ability":{},
+        "modifiers":{}
+    },
+    {
+        "name": "Servitors",
+        "slot": "Elite",
+        "power": 2,
+        "points": 30,
+        "Number": 4,
+        "Max-Number": 4,
+        "stats":{
+            "M": 5,
+            "WS": 5,
+            "BS": 5,
+            "S": 3,
+            "T": 3,
+            "W": 1,
+            "A": 1,
+            "Ld": 6,
+            "Sv": 4,
+            "SInv": 7,
+            "SFNP": 7
+        },
+        "wargear" :[
+            "Servo arm",
+            "Heavy Bolter",
+            "Multi-melta",
+            "Plasma Cannon"
+        ],
+        "ability":{
+            "Mindlock": "BS = 4+, WS = 4+, Ld = 9"
+        },
+        "modifiers":{}
+    },
+    {
+        "name": "Techmarine",
+        "slot": "HQ",
+        "power": 4,
+        "points": 70,
+        "Number": 1,
+        "Max-Number": 1,
+        "stats":{
+            "M": 6,
+            "WS": 3,
+            "BS": 2,
+            "S": 4,
+            "T": 4,
+            "W": 4,
+            "A": 3,
+            "Ld": 8,
+            "Sv": 2,
+            "SInv": 7,
+            "SFNP": 7
+        },
+        "wargear" :[
+            "Bolt Pistol",
+            "Boltgun",
+            "Hellfrost Pistol",
+            "Plasma Cutter",
+            "Combi-Flamer",
+            "Combi-Grav",
+            "Combi-Plasma",
+            "Combi-Melta",
+            "Storm Bolter",
+            "Plasma Pistol",
+            "Hand Flamer",
+            "Inferno Pistol",
+            "Grav-Pistol",
+            "Forge Bolter",
+            "Mechadendrite",
+            "Servo arm",
+            "Omnissian Power Axe",
+            "Tempest Hammer",
+            "Frag Grenades",
+            "Krak Grenades"
+        ],
+        "ability":{},
+        "modifiers":{}
+    },
+    {
+        "name": "Intercessor Squad",
+        "slot": "Troop",
+        "power": 5,
+        "points": 20,
+        "Number": 4,
+        "Max-Number": 9,
+        "stats":{
+            "M": 6,
+            "WS": 3,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 2,
+            "A": 2,
+            "Ld": 7,
+            "Sv": 3,
+            "SInv": 7,
+            "SFNP": 7
+        },
+        "Sargent": 1,
+        "Sargent Stats":{
+            "M": 6,
+            "WS": 3,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 2,
+            "A": 3,
+            "Ld": 8,
+            "Sv": 3,
+            "SInv": 7,
+            "SFNP": 7
+        },
+        "wargear" :[
+            ["Auto Bolt Rifle", "Bolt Rifle", "Staker Bolt Rifle"],
+            "Bolt Pistol",
+            "Frag Grenades",
+            "Krak Grenades"
+        ],
+        "Sargent wargear" :[
+            ["Auto Bolt Rifle", "Bolt Rifle", "Staker Bolt Rifle", "Power Fist, Bolt Pitol", "Thunder Hammer, Bolt Pitol", "Power Sword, Bolt Pitol", "Astartes Chainsword, Bolt Pitol", "Astartes Chainsword, Hand Flamer", "Astartes Chainsword, Plasma Pitol"],
+            "Astartes Grenade Launcher",
+            "Bolt Pistol",
+            "Frag Grenades",
+            "Krak Grenades"
+        ],
+        "ability":{},
+        "modifiers":{}
+    },
+    {
+        "name": "Assault Intercessor Squad",
+        "slot": "Troop",
+        "power": 5,
+        "points": 19,
+        "Number": 4,
+        "Max-Number": 9,
+        "stats":{
+            "M": 6,
+            "WS": 3,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 2,
+            "A": 2,
+            "Ld": 7,
+            "Sv": 3,
+            "SInv": 7,
+            "SFNP": 7
+        },
+        "Sargent": 1,
+        "Sargent Stats":{
+            "M": 6,
+            "WS": 3,
+            "BS": 3,
+            "S": 4,
+            "T": 4,
+            "W": 2,
+            "A": 3,
+            "Ld": 8,
+            "Sv": 3,
+            "SInv": 7,
+            "SFNP": 7
+        },
+        "wargear" :[
+            ["Heavy Bolt Pistol, Astartes Chainsword"],
+            "Frag Grenades",
+            "Krak Grenades"
+        ],
+        "Sargent wargear" :[
+            ["Heavy Bolt Pistol, Astartes Chainsword", "Hand Flamer, Astartes Chainsword", "Plasma Pistol, Astartes Chainsword", "Heavy Bolt Pistol, Power Fist", "Heavy Bolt Pistol, Power Sword", "Heavy Bolt Pistol, Thunder Hammer"],
+            "Frag Grenades",
+            "Krak Grenades"
+        ],
+        "ability":{},
+        "modifiers":{}
+    },
+    {
+        "name": "Heavy Intercessor Squad",
+        "slot": "Troop",
+        "power": 7,
+        "points": 28,
+        "Number": 4,
+        "Max-Number": 9,
+        "stats":{
+            "M": 5,
+            "WS": 3,
+            "BS": 3,
+            "S": 4,
+            "T": 5,
+            "W": 3,
+            "A": 2,
+            "Ld": 7,
+            "Sv": 3,
+            "SInv": 7,
+            "SFNP": 7
+        },
+        "Sargent": 1,
+        "Sargent Stats":{
+            "M": 5,
+            "WS": 3,
+            "BS": 3,
+            "S": 4,
+            "T": 5,
+            "W": 3,
+            "A": 3,
+            "Ld": 8,
+            "Sv": 3,
+            "SInv": 7,
+            "SFNP": 7
+        },
+        "wargear" :[
+            ["Hellstorm Bolt Rifle", "Heavy Bolt Rifle", "Executor Bolt Rifle"],
+            "Bolt Pistol",
+            "Frag Grenades",
+            "Krak Grenades"
+        ],
+        "Sargent wargear" :[
+            ["Hellstorm Heavy Rifle", "Heavy Bolter", "Executor Heavy Bolt Rifle"],
+            "Astartes Grenade Launcher",
+            "Bolt Pistol",
+            "Frag Grenades",
+            "Krak Grenades"
+        ],
+        "ability":{},
         "modifiers":{}
     }
 ]

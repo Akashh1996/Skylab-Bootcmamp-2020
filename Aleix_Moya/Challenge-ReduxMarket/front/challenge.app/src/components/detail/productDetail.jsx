@@ -65,14 +65,15 @@ function productDetail({
                       ? (item.NoS ? (<td>{`${item.NoS}`}</td>) : <td>None</td>)
                       : (item.NoS ? (<td>{`${item.NoS}`}</td>) : <td> </td>)}
                     {item.S ? <td>{`${item.S}`}</td> : <td />}
-                    {item.Ap ? <td>{`${item.Ap}`}</td> : <td />}
+                    {console.log(item.Ap)}
+                    {typeof (item.Ap) === 'number' ? <td>{`${item.Ap}`}</td> : <td />}
                     {item.D ? <td>{`${item.D}`}</td> : <td />}
                     {item.Ability ? <td>{`${item.Ability}`}</td> : <td />}
                   </tr>
                   {item.Overcharged
                     && <tr>
                       <td>
-                        {`Profile: ${Object.getOwnPropertyNames(item)[8]}`}
+                        {`Profile: ${Object.getOwnPropertyNames(item)[9]}`}
                         {' '}
                       </td>
                       <td> </td>

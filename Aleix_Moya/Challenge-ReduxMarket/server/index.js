@@ -5,13 +5,19 @@ const chalk = require('chalk');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const Wargear = require('./stores/myStore');
+const mongoose = require('mongoose');
+const Wargear = require('./models/WModel');
+// eslint-disable-next-line spaced-comment
+//const Wargear = require('./stores/myStore');
 const myRouter = require('./routes/myRouter')(Wargear);
 
 const app = express();
 const port = process.env.PORT || 2000;
 
+mongoose.connect('mongodb://localhost/wargeardb');
+
 app.use(cors());
+
 app.use(morgan('tiny'));
 
 app.use(bodyParser.urlencoded({ extended: true }));

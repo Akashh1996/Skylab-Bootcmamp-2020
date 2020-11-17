@@ -12,8 +12,6 @@ const weaponSchema = new Schema({
   Ap: { type: Number },
   D: { type: Schema.Types.Mixed },
   Ability: { type: String },
-  Overcharged: { type: Object },
-  profile: { type: Object },
 });
 
-module.exports = model('Wargear', weaponSchema);
+module.exports = model('wargears', weaponSchema);
