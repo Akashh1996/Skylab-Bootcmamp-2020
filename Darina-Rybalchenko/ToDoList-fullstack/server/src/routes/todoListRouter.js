@@ -6,7 +6,11 @@ function todoListRouter(TodoList) {
   const todoList = todoListController(TodoList);
 
   router.route('/')
-    .get(todoList.getMethod);
+    .get(todoList.getMethod)
+    .put(todoList.putMethod)
+    .post(todoList.postMethod)
+    .delete(todoList.deleteMethod);
+
   return router;
 }
 
