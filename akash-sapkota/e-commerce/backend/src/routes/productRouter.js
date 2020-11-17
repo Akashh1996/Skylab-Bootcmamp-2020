@@ -23,7 +23,6 @@ function productRouter(Product, Cart) {
 
     router.route('/')
     .get(products.getMethod)
-    .put(products.putMethod);
 
 
     router.route("/cart/:productId")

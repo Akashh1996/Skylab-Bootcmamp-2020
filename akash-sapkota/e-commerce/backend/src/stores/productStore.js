@@ -1,4 +1,4 @@
-let products = require('../../public/products.json');
+/* let products = require('../../public/products.json');
 
 let cart = [];
 
@@ -38,3 +38,4 @@ class Product {
 }
 
 module.exports = Product;
+ */

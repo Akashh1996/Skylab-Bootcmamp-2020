@@ -2,8 +2,9 @@ function productController(Product) {
   function getMethod(req, res) {
 /*     req.id = +req.params.productId
  */    const query = {id : req.id};
+
     
-    Product.find(query, (errorFindProducts, product) => {
+    Product.findOne(query, (errorFindProducts, product) => {
       if (errorFindProducts) {
         res.send(errorFindProducts);
       }
@@ -30,19 +31,13 @@ function productController(Product) {
 
     res.json(updatedProduct);
   }
-  function getCartMethod(req, res) {
-    const id = +req.params.productId;
-    Product.addToCart(id);
-    res.send(Product.getProducts());
-  }
-
   function allMiddleware(req, res, next) {
     req.id = +req.params.productId;
     next();
   }
 
   return {
-    getMethod, postMethod, deleteMethod, allMiddleware, getCartMethod,
+    getMethod, postMethod, deleteMethod, allMiddleware,
   };
 }
 

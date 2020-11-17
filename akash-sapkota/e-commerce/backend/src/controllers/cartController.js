@@ -8,8 +8,9 @@ function cartController(Cart){
         Cart.create(product, (error, product)=>{
             if(error){
                 res.send(error)
+            }else{ 
+                res.send(product)
             }
-            res.send(product)
         })
     }
     function getMethod(req,res){
