@@ -1,26 +1,30 @@
-const Hero = require('../stores/productStore');
-const heroesController = require('./productsController')(Hero);
+const Product = require('../models/productModel');
+const productsController = require('./productsController')(Product);
 
 describe('productsController', () => {
-  test('should call response json on getMethod', () => {
+  test('should call response send on getMethod when find throws error', () => {
     const res = {
-      json: jest.fn(),
+      send: jest.fn(),
     };
 
-    heroesController.getMethod(null, res);
+    Product.find = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(true, 'myProducts');
+    });
+    productsController.getMethod({ product: null }, res);
 
-    expect(res.json).toHaveBeenCalled();
+    expect(res.send).toHaveBeenCalled();
   });
 
-  test('should call response json on putMethod', () => {
+  test('should call response json on getMethod when find goes niceee', () => {
     const res = {
-      json: jest.fn(),
+      send: jest.fn(),
     };
 
-    const req = { body: null };
+    Product.find = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(false, 'myProducts');
+    });
+    productsController.getMethod({ product: null }, res);
 
-    heroesController.putMethod(req, res);
-
-    expect(res.json).toHaveBeenCalled();
+    expect(res.send).toHaveBeenCalled();
   });
 });

@@ -34,3 +34,7 @@ app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.log(`Server is running on port ${chalk.blue(port)}`);
 });
+
+/* >>> PARA LEVANTAR MONGO <<<<
+ mongod --dbpath /usr/local/var/mongodb --logpath /usr/local/var/log/mongodb/mongo.log --fork
+*/

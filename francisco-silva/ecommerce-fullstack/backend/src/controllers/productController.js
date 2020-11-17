@@ -1,6 +1,14 @@
 function productController(Product) {
   function getMethod(req, res) {
-    res.json(req.product);
+    const query = {
+      id: req.product,
+    };
+    Product.find(query, (errorFindProducts, product) => {
+      if (errorFindProducts) {
+        return res.send(errorFindProducts);
+      }
+      return res.json(product);
+    });
   }
 
   function postMethod(req, res) {
@@ -17,13 +25,17 @@ function productController(Product) {
   function deleteMethod(req, res) {
     const id = +req.params.productId;
 
-    Product.deleteProduct(id);
-
-    res.json(Product.getProducts());
+    Product.deleteOne({ id }, (errorDelete, product) => {
+      if (errorDelete) {
+        return res.send(errorDelete);
+      }
+      return res.send(product);
+    });
   }
 
   function allMiddleware(req, res, next) {
-    req.product = Product.getProductById(+req.params.productId);
+    req.product = +req.params.productId;
+
     next();
   }
 

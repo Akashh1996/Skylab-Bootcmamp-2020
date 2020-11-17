@@ -1,12 +1,8 @@
 function productsController(Product) {
   function getMethod(req, res) {
     const query = {};
-    Product.find(query, (errorFindProducts, products) => {
-      if (errorFindProducts) {
-        res.send(errorFindProducts);
-      }
-      res.json(products);
-    });
+    // eslint-disable-next-line max-len
+    Product.find(query, (errorFindProducts, products) => (errorFindProducts ? res.send(errorFindProducts) : res.send(products)));
   }
 
   function putMethod(req, res) {

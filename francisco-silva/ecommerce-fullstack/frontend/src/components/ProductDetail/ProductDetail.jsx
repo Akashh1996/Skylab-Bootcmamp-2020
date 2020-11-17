@@ -19,15 +19,16 @@ function ProductDetail({ productDetail, dispatch, actions }) {
     }, [id])
     console.log(productDetail)
 
+
     return (
 
         <>
-            {productDetail?.price &&
+            {productDetail &&
                 <div className="detail-wrapper">
-                    <p>{productDetail["product-name"]}</p>
-                    <p>price:{productDetail.price}€</p>
-                    <span class="material-icons">shopping_cart</span>
-                    <img className="product_img" alt="product-img" src={`${productDetail["product-image-url"]}`}></img>
+                    <p>{productDetail[0]["product-name"]}</p>
+                    <p>price:{productDetail[0].price}€</p>
+                    <span className="material-icons">shopping_cart</span>
+                    <img className="product_img" alt="product-img" src={`${productDetail[0]["product-image-url"]}`}></img>
                     <button><Link to= {`/`}>back</Link></button>
                 </div>
             }
