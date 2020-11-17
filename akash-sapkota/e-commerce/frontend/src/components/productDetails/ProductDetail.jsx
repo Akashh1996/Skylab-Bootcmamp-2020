@@ -25,27 +25,27 @@ function ProductDetail({
                  <div className="detail">
                    <div className="detail_description">
                      <h1>
-                       {productDetail[0].title}
+                       {productDetail.title}
                      </h1>
                      <p>
                        <u>Price:</u>
                        {' '}
-                       {productDetail[0].price}
+                       {productDetail.price}
                      </p>
                      <p>
                        <u>Ceategory :</u>
                        {' '}
-                       {productDetail[0].category}
+                       {productDetail.category}
                      </p>
                      <p>
                        <u>Description :</u>
-                       {productDetail[0].description}
+                       {productDetail.description}
                      </p>
-                     <Link to="/cart" className="cart" onClick={() => { actions.addCart(productDetail[0]); }}>Add To Cart</Link>
+                     <Link to="/cart" className="cart" onClick={() => { actions.addCart(productDetail); }}>Add To Cart</Link>
 
                    </div>
                    <div className="image">
-                     <img src={productDetail[0].image} alt="detail" />
+                     <img src={productDetail.image} alt="detail" />
                    </div>
 
                  </div>

@@ -21,7 +21,13 @@ function Cart({ productCartList, actions }) {
                  <div key={performance.now()}>
                    {product.title}
                    {' '}
-                   <button type="button" onClick={() => actions.deleteProductCart(product.id)}>x</button>
+                   <button
+                     type="button"
+                     onClick={() => actions.deleteProductCart(product.id)}
+                   >
+                     x
+
+                   </button>
                    {' '}
 
                  </div>
