@@ -13,12 +13,12 @@ function Basket({ basketList, actions, dispatch }) {
       <h1>Basket</h1>
       {(basketList && basketList.length
                     && basketList.map((product) => (
-                      <li key={product.basketProduct.cartId}>
-                        {product.basketProduct['product-name']}
+                      <li key={product.id}>
+                        {product['product-name']}
                         <button
                           type="submit"
                           onClick={() => {
-                            actions.deleteProduct(product.basketProduct.cartId);
+                            actions.deleteProduct(product.id);
                             actions.getBasket();
                           }}
                         >

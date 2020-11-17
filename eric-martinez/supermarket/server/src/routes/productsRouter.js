@@ -4,12 +4,12 @@ const productsController = require('../controllers/productsController');
 const basketController = require('../controllers/basketController');
 const basketDeleteController = require('../controllers/basketDeleteController');
 
-function productsRouter(Product) {
+function productsRouter(Product, BasketProduct) {
   const router = express.Router();
   const product = productController(Product);
   const products = productsController(Product);
-  const basket = basketController(Product);
-  const deleteBasket = basketDeleteController(Product);
+  const basket = basketController(BasketProduct);
+  const deleteBasket = basketDeleteController(BasketProduct);
 
   router.route('/')
     .get(products.getMethod);
@@ -23,6 +23,7 @@ function productsRouter(Product) {
     .put(basket.putMethod);
 
   router.route('/basket/:productId')
+    .all(deleteBasket.allMiddleware)
     .delete(deleteBasket.deleteMethod);
 
   return router;

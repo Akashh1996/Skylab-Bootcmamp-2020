@@ -1,12 +1,16 @@
-function basketDeleteController(Product) {
+function basketDeleteController(BasketProduct) {
   function deleteMethod(req, res) {
-    const productId = (+req.params.productId);
-    Product.deleteProduct(productId);
+    const query = { id: req.product };
 
-    res.json(Product.getBasket());
+    BasketProduct.deleteOne(query, (errorFindProducts) => {
+      if (errorFindProducts) {
+        res.send(errorFindProducts);
+      }
+      res.send('deleted');
+    });
   }
   function allMiddleware(req, res, next) {
-    req.product = Product.getProductById(+req.params.productId);
+    req.product = +req.params.productId;
     next();
   }
   return {

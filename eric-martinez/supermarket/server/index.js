@@ -4,12 +4,17 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const debug = require('debug')('app');
 const chalk = require('chalk');
-const Product = require('./src/stores/productStore');
-const productsRouter = require('./src/routes/productsRouter')(Product);
+// const Product = require('./src/stores/productStore');
+const mongoose = require('mongoose');
+const Product = require('./src/models/productModel');
+const BasketProduct = require('./src/models/basketModel');
+const productsRouter = require('./src/routes/productsRouter')(Product, BasketProduct);
 
 const app = express();
 app.use(cors());
 const port = process.env.PORT || 5000;
+
+mongoose.connect('mongodb://localhost/marketdb');
 
 app.use(morgan('tiny'));
 

@@ -60,9 +60,10 @@ export function cleanProductDetail() {
 }
 
 export function putBasket(basketProduct) {
+  let {_id, ...newBasketProduct} = basketProduct;
   return async (dispatch) => {
     const endpoint = 'http://localhost:5000/products/basket';
-    await axios.put(endpoint, { basketProduct });
+    await axios.put(endpoint, { ...newBasketProduct });
   };
 }
 

@@ -1,9 +1,15 @@
 function productController(Product) {
   function getMethod(req, res) {
-    res.json(req.product);
+    const query = { id: req.product };
+    Product.findOne(query, (errorFindProducts, product) => {
+      if (errorFindProducts) {
+        res.send(errorFindProducts);
+      }
+      res.json(product);
+    });
   }
   function allMiddleware(req, res, next) {
-    req.product = Product.getProductById(+req.params.productId);
+    req.product = +req.params.productId;
     next();
   }
   return {

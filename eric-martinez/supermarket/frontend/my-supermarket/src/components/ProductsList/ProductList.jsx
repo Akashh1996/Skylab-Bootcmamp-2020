@@ -15,7 +15,7 @@ function ProductsList({ productsList, dispatch }) {
                     && productsList.map((product) => (
                       <li key={product.id}>
                         <Link to={`products/select/${product.id}`}>{product['product-name']}</Link>
-                        <button type="button" onClick={() => dispatch(putBasket({ ...product, cartId: Date.now() }))}>
+                        <button type="button" onClick={() => dispatch(putBasket({ ...product}))}>
                         <span class="material-icons">
                           add_shopping_cart
                         </span>

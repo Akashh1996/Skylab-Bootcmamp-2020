@@ -3,11 +3,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { requestProduct, cleanProductDetail } from '../../redux/actions/superActions';
 
-function ProductDetail({
-  match, product, dispatch, actions,
-}) {
+function ProductDetail({match, product, dispatch, actions}) {
   const [productId] = useState(+match.params.productId);
-
   useEffect(() => {
     if (productId) {
       dispatch(requestProduct(productId));
