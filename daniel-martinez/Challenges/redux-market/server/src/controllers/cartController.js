@@ -3,9 +3,9 @@ function cartController(Cart) {
     const query = {};
     Cart.find(query, (errorFindProducts, cartProducts) => {
       if (errorFindProducts) {
-        res.send(errorFindProducts);
+        return res.send(errorFindProducts);
       }
-      res.json(cartProducts);
+      return res.json(cartProducts);
     });
   }
 
@@ -13,23 +13,23 @@ function cartController(Cart) {
     const query = req.body;
     Cart.create(query, (errorFindProducts, cartProduct) => {
       if (errorFindProducts) {
-        res.send(errorFindProducts);
+        return res.send(errorFindProducts);
       }
-      res.json(cartProduct);
+      return res.json(cartProduct);
     });
   }
 
   function deleteMethod(req, res) {
     const query = req.body;
-    Cart.findOneAndRemove(query, (errorFindProducts, cartProducts) => {
+    Cart.findOneAndRemove(query, (errorFindProducts) => {
       if (errorFindProducts) {
-        res.send(errorFindProducts);
+        return res.send(errorFindProducts);
       }
-      Cart.find({}, (errorFinding, cartList) => {
+      return Cart.find({}, (errorFinding, cartList) => {
         if (errorFinding) {
-          res.send(errorFindProducts);
+          return res.send(errorFindProducts);
         }
-        res.json(cartList);
+        return res.json(cartList);
       });
     });
   }
