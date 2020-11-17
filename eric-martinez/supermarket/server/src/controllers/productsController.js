@@ -3,9 +3,9 @@ function productsController(Product) {
     const query = {};
     Product.find(query, (errorFindProducts, products) => {
       if (errorFindProducts) {
-        res.send(errorFindProducts);
+        return res.send(errorFindProducts);
       }
-      res.json(products);
+      return res.json(products);
     });
   }
   return {
