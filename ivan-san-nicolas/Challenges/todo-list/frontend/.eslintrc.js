@@ -6,11 +6,18 @@ module.exports = {
     jest: true,
   },
   extends: [
-    'airbnb-base',
+    'plugin:react/recommended',
+    'airbnb',
   ],
   parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
     ecmaVersion: 12,
   },
+  plugins: [
+    'react',
+  ],
   rules: {
     'no-debugger': 1,
     'no-console': 1,
