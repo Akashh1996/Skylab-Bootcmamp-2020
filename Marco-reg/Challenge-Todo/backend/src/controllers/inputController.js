@@ -5,7 +5,7 @@ function InputsController(Input) {
       if (errorFindInput) {
         return res.send(errorFindInput);
       }
-      console.log(inputs);
+
       return res.json(inputs);
     });
   }
