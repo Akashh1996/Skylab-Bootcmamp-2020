@@ -4,7 +4,6 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const debug = require('debug')('app');
 const chalk = require('chalk');
-// const Product = require('./src/stores/productStore');
 const mongoose = require('mongoose');
 const Product = require('./src/models/productModel');
 const BasketProduct = require('./src/models/basketModel');
