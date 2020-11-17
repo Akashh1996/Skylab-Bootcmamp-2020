@@ -1,0 +1,9 @@
+const actionTypes = {
+  GET_PRODUCTS: 'GET_PRODUCTS',
+  GET_PRODUCT: 'GET_PRODUCT',
+  GET_CART_PRODUCTS: 'GET_CART_PRODUCTS',
+  ADD_TO_CART: 'ADD_TO_CART',
+  DELETE_FROM_CART: 'DELETE_FROM_CART',
+};
+
+export default actionTypes;
