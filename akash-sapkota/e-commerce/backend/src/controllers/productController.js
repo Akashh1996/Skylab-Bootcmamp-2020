@@ -1,14 +1,13 @@
 function productController(Product) {
   function getMethod(req, res) {
-/*     req.id = +req.params.productId
- */    const query = {id : req.id};
+  const query = {id : req.id};
 
     
     Product.findOne(query, (errorFindProducts, product) => {
       if (errorFindProducts) {
-        res.send(errorFindProducts);
+       return res.send(errorFindProducts);
       }
-      res.json(product);
+       return res.json(product);
     });
   }
   function deleteMethod(req,res){
