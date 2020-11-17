@@ -95,11 +95,13 @@ describe('patchMethod', () => {
       send: jest.fn(),
     };
 
+    const req = { query: { id: '' }, value: '' };
+
     items.findByIdAndUpdate = jest.fn().mockImplementationOnce((id, value, callback) => {
       callback(true);
     });
 
-    listController.patchMethod({ query: { id: '' } }, { value: '' }, res);
+    listController.patchMethod(req, res);
 
     expect(res.send).toHaveBeenCalled();
   });
@@ -109,11 +111,13 @@ describe('patchMethod', () => {
       send: jest.fn(),
     };
 
+    const req = { query: { id: '' }, value: '' };
+
     items.findByIdAndUpdate = jest.fn().mockImplementationOnce((id, value, callback) => {
       callback(false);
     });
 
-    listController.patchMethod({ query: { id: '' } }, { value: '' }, res);
+    listController.patchMethod(req, res);
 
     expect(res.send).toHaveBeenCalled();
   });
