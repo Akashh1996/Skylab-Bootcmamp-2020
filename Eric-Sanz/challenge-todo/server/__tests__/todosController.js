@@ -97,4 +97,32 @@ describe('todosController', () => {
       expect(res.send).toHaveBeenCalled();
     });
   });
+
+  describe('deleteMethod', () => {
+    test('Should call res json on deleteMethod', () => {
+      const req = { body: { _id: '' } };
+      const res = { json: jest.fn() };
+
+      Todo.findByIdAndRemove.mockImplementationOnce((query, body, callback) => {
+        callback(false, {});
+      });
+
+      todosController.deleteMethod(req, res);
+
+      expect(res.json).toHaveBeenCalled();
+    });
+
+    test('Should call res send on deleteMethod', () => {
+      const req = { body: { _id: '' } };
+      const res = { send: jest.fn() };
+
+      Todo.findByIdAndRemove.mockImplementationOnce((query, body, callback) => {
+        callback(true, {});
+      });
+
+      todosController.deleteMethod(req, res);
+
+      expect(res.send).toHaveBeenCalled();
+    });
+  });
 });

@@ -7,23 +7,18 @@ function todosController(Todo) {
   }
 
   function putMethod({ body }, res) {
-    Todo.create(body, (errorAddNewTodos, newTodo) => ((errorAddNewTodos)
-      ? res.send(errorAddNewTodos) : res.json(`${newTodo} added succesfully`)));
+    Todo.create(body, (errorAddNewTodo, newTodo) => ((errorAddNewTodo)
+      ? res.send(errorAddNewTodo) : res.json(`${newTodo} added succesfully`)));
   }
 
   function postMethod({ body }, res) {
-    Todo.findByIdAndUpdate(body._id, body, (errorModifiedTodos, modifiedTodo) => (
-      (errorModifiedTodos) ? res.send(errorModifiedTodos) : res.json(`${modifiedTodo} modified succesfully`)));
+    Todo.findByIdAndUpdate(body._id, body, (errorModifiedTodo, modifiedTodo) => (
+      (errorModifiedTodo) ? res.send(errorModifiedTodo) : res.json(`${modifiedTodo} modified succesfully`)));
   }
 
   function deleteMethod({ body }, res) {
-    Todo.findByIdAndRemove(body._id, body, (errorFindTodos, removeTodo) => {
-      if (errorFindTodos) {
-        res.send(errorFindTodos);
-      } else {
-        res.json(removeTodo);
-      }
-    });
+    Todo.findByIdAndRemove(body._id, body, (errorDeleteTodo, removeTodo) => (
+      (errorDeleteTodo) ? res.send(errorDeleteTodo) : res.json(`${removeTodo} deleted succesfully`)));
   }
 
   return {
