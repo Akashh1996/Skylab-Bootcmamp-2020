@@ -16,7 +16,7 @@ function cartController(Cart){
     function getMethod(req,res){
         Cart.find({}, (error,cart)=>{
             if(error){
-                red.send(error)
+                ress.send(error)
             }
             res.send(cart)
         })
