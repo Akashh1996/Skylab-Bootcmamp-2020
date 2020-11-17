@@ -11,7 +11,6 @@ function heroesController(Hero) {
   }
 
   function putMethod(req, res) {
-    console.log(req);
     const heroNumId = +req.query.id;
     const heroNameName = req.query.name;
     const query = { id: heroNumId, name: heroNameName };
@@ -19,7 +18,7 @@ function heroesController(Hero) {
       if (errorFindHero) {
         res.send(errorFindHero);
       } else {
-        res.send(hero);
+        res.json(hero);
       }
     });
   }

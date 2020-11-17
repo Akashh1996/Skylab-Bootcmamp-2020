@@ -7,7 +7,7 @@ function heroController(Hero) {
       if (errorFindHeroes) {
         res.send(errorFindHeroes);
       } else {
-        res.send(hero);
+        res.json(hero);
       }
     });
   }
@@ -20,7 +20,7 @@ function heroController(Hero) {
 
     Hero.setHero(updatedHero);
 
-    res.json(updatedHero);
+    res.send(updatedHero);
   }
 
   function deleteMethod(req, res) {
@@ -30,7 +30,7 @@ function heroController(Hero) {
       if (errorFindHero) {
         res.send(errorFindHero);
       } else {
-        res.send(hero);
+        res.json(hero);
       }
     });
   }

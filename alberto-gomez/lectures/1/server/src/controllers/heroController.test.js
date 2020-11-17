@@ -1,94 +1,62 @@
-const Hero = require('../stores/heroStore');
+/* eslint-disable linebreak-style */
+/* const { test, jest, expect } = require('@jest/globals'); */
+const Hero = require('../models/heroModel');
 const heroController = require('./heroController')(Hero);
 
 describe('heroController', () => {
-  test('should call response json on getMethod', () => {
+  test('should call response send when find throws error', () => {
+    const res = {
+      send: jest.fn(),
+    };
+
+    Hero.find = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(true, {});
+    });
+
+    heroController.getMethod({ id: null, params: { heroId: 1 } }, res);
+
+    expect(res.send).toHaveBeenCalled();
+  });
+
+  test('should call response send when find goes well', () => {
     const res = {
       json: jest.fn(),
     };
 
-    heroController.getMethod({ hero: null }, res);
+    Hero.find = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(false, {});
+    });
 
-    expect(res.json).toHaveBeenCalled();
+    heroController.getMethod({ id: null, params: { heroId: 1 } }, res);
+
+    expect(res.send).toHaveBeenCalled();
   });
 
-  test('should call response json on postMethod', () => {
+  test('should call response send when findAndRemove throws error', () => {
+    const res = {
+      send: jest.fn(),
+    };
+
+    Hero.findOneAndRemove = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(true, {});
+    });
+
+    heroController.deleteMethod({ id: null, params: { heroId: 1 } }, res);
+
+    expect(res.send).toHaveBeenCalled();
+  });
+
+  test('should call response send when findAndRemove goes well', () => {
     const res = {
       json: jest.fn(),
     };
 
-    const req = {
-      hero: {
-        id: 12,
-      },
-      body: {},
-    };
+    Hero.findOneAndRemove = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(false, {});
+    });
 
-    heroController.postMethod(req, res);
+    heroController.deleteMethod({ id: null, params: { heroId: 1 } }, res);
 
-    expect(res.json).toHaveBeenCalled();
-  });
-
-  test('should call response json on deleteMethod', () => {
-    const res = {
-      json: jest.fn(),
-    };
-
-    const req = {
-      params: {
-        heroId: 12,
-      },
-    };
-
-    heroController.deleteMethod(req, res);
-
-    expect(res.json).toHaveBeenCalled();
-  });
-
-  test('should call response json on deleteMethod with null id', () => {
-    const res = {
-      json: jest.fn(),
-    };
-
-    const req = {
-      params: {
-        heroId: null,
-      },
-    };
-
-    heroController.deleteMethod(req, res);
-
-    expect(res.json).toHaveBeenCalled();
-  });
-
-  test('should call response json on deleteMethod with string id', () => {
-    const res = {
-      json: jest.fn(),
-    };
-
-    const req = {
-      params: {
-        heroId: 'asd',
-      },
-    };
-
-    heroController.deleteMethod(req, res);
-
-    expect(res.json).toHaveBeenCalled();
-  });
-
-  test('should call next on allMiddleware', () => {
-    const req = {
-      hero: null,
-      params: {
-        heroId: null,
-      },
-    };
-
-    const next = jest.fn();
-
-    heroController.allMiddleware(req, null, next);
-
-    expect(next).toHaveBeenCalled();
+    expect(res.send).toHaveBeenCalled();
   });
 });
