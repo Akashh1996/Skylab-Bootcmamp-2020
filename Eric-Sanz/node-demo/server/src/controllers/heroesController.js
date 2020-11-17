@@ -6,8 +6,9 @@ function heroesController(Hero) {
   }
 
   function putMethod(req, res) {
-    const query = {};
-    Hero.create(query, (errorFindHeroes, newHero) => {
+    const newHero = { id: req.body.id, name: req.body.name };
+
+    Hero.create(newHero, (errorFindHeroes) => {
       if (errorFindHeroes) {
         res.send(errorFindHeroes);
       } else {

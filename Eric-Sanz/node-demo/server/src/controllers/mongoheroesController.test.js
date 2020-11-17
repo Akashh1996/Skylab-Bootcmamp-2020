@@ -2,7 +2,7 @@ const Hero = require('../models/heroModel');
 const heroesController = require('./heroesController')(Hero);
 
 describe('mongodb heroes controller', () => {
-  test('should call getMethod on mongoose', () => {
+  test('should call getMethod', () => {
     const res = {
       json: jest.fn(),
     };

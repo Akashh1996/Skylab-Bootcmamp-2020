@@ -3,15 +3,28 @@ function heroController(Hero) {
     res.json(req.hero);
   }
 
+  function allMiddleware(req, res, next) {
+    const query = { id: +req.params.heroId };
+    Hero.findOne(query, (errorFindHeroes, hero) => {
+      if (errorFindHeroes) {
+        return res.send(errorFindHeroes);
+      }
+      req.hero = hero;
+      return next();
+    });
+  }
+
   function postMethod(req, res) {
-    const updatedHero = {
-      ...req.hero,
-      ...req.body,
-    };
+    const searchQuery = { id: req.hero.id };
+    const updateQuery = { name: req.body.name };
 
-    Hero.setHero(updatedHero);
-
-    res.json(updatedHero);
+    Hero.findOneAndUpdate(searchQuery, updateQuery, (errorFindHeroes, modifiedHero) => {
+      if (errorFindHeroes) {
+        res.send(errorFindHeroes);
+      } else {
+        res.json(modifiedHero);
+      }
+    });
   }
 
   function deleteMethod(req, res) {
@@ -20,11 +33,6 @@ function heroController(Hero) {
     Hero.deleteHero(id);
 
     res.json(Hero.getHeroes());
-  }
-
-  function allMiddleware(req, res, next) {
-    req.hero = Hero.getHeroById(+req.params.heroId);
-    next();
   }
 
   return {
