@@ -1,15 +1,20 @@
 const express = require('express');
-const itemsController = require('../controllers/itemsController');
+// const itemsController = require('../controllerks/itemsController');
+const itemsMongoController = require('../controllers/itemsMongoController');
 
-function itemsRouter(ItemsStore) {
+function itemsRouter(itemSchema) {
   const router = express.Router();
-  const items = itemsController(ItemsStore);
+  // const items = itemsController(ItemsStore);
+  const itemsMongo = itemsMongoController(itemSchema);
 
   router.route('/')
-    .get(items.getMethod);
+    .get(itemsMongo.getMethod)
+    .post(itemsMongo.postMethod)
+    .delete(itemsMongo.deleteMethod)
+    .patch(itemsMongo.patchMethod);
 
   router.route('/:itemId')
-    .get(items.getByIdMethod);
+    .get(itemsMongo.getByIdMethod);
 
   return router;
 }

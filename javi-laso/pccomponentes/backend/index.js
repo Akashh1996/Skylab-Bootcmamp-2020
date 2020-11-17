@@ -3,20 +3,25 @@ const bodyParser = require('body-parser');
 const chalk = require('chalk');
 const cors = require('cors');
 const morgan = require('morgan');
-const ItemsStore = require('./src/stores/itemsStore');
-const ShoppingCartStore = require('./src/stores/shoppingCartStore');
-const itemListRouter = require('./src/routes/itemListRouter')(ItemsStore);
-const shoppingCartRouter = require('./src/routes/shoppingCartRouter')(ShoppingCartStore);
+// const ItemsStore = require('./src/stores/itemsStore');
+const mongoose = require('mongoose');
+const itemSchema = require('./src/models/itemSchema');
+// const ShoppingCartStore = require('./src/stores/shoppingCartStore');
+const itemListRouter = require('./src/routes/itemListRouter')(itemSchema);
+const cartItemSchema = require('./src/models/cartItemSchema');
+const shoppingCartRouter = require('./src/routes/shoppingCartRouter')(cartItemSchema);
 
 const server = express();
+const port = process.env.PORT || 2130;
+
+mongoose.connect('mongodb://localhost/pccodb');
+
 server.use(morgan('dev'));
 
 server.use(cors());
 
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(bodyParser.json());
-
-const port = process.env.PORT || 2130;
 
 server.use('/shoppingcart', shoppingCartRouter);
 server.use('/', itemListRouter);
