@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 function todosController(Todo) {
   function getMethod(req, res) {
     const query = {};
@@ -6,7 +7,7 @@ function todosController(Todo) {
   }
 
   function putMethod(req, res) {
-    const newTodo = { input: req.body };
+    const newTodo = req.body;
 
     Todo.create(newTodo, (errorFindTodos) => {
       if (errorFindTodos) {
@@ -17,8 +18,28 @@ function todosController(Todo) {
     });
   }
 
+  function postMethod({ body }, res) {
+    Todo.findByIdAndUpdate(body._id, body, (errorFindTodos, modifiedTodo) => {
+      if (errorFindTodos) {
+        res.send(errorFindTodos);
+      } else {
+        res.json(modifiedTodo);
+      }
+    });
+  }
+
+  function deleteMethod({ body }, res) {
+    Todo.findByIdAndRemove(body._id, body, (errorFindTodos, removeTodo) => {
+      if (errorFindTodos) {
+        res.send(errorFindTodos);
+      } else {
+        res.json(removeTodo);
+      }
+    });
+  }
+
   return {
-    getMethod, putMethod,
+    getMethod, putMethod, postMethod, deleteMethod,
   };
 }
 
