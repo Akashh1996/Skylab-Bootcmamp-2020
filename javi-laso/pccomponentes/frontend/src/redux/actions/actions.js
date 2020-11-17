@@ -61,31 +61,32 @@ export function loadShoppingCart() {
   };
 }
 
-export function putItemCartSuccess(cartList) {
+export function putItemCartSuccess(cartItem) {
   return {
     type: actionTypes.PUT_ITEM_IN_CART,
-    cartList,
+    cartItem,
   };
 }
 
 export function putItemInCart(item) {
   return async (dispatch) => {
+    debugger;
     try {
-      const cartListUpdated = await axios.put(shoppingCartUrl, {
+      const newCartItem = await axios.put(shoppingCartUrl, {
         item,
       });
 
-      dispatch(putItemCartSuccess(cartListUpdated.data));
+      dispatch(putItemCartSuccess(newCartItem.data));
     } catch (error) {
       console.log(error);
     }
   };
 }
 
-export function deleteItemCartSuccess(cartList) {
+export function deleteItemCartSuccess(cartItem) {
   return {
     type: actionTypes.DELETE_ITEM_FROM_CART,
-    cartList,
+    cartItem,
   };
 }
 
@@ -93,9 +94,9 @@ export function deleteItemFromCart(item) {
   return async (dispatch) => {
     try {
       const config = { data: item };
-      const cartListUpdated = await axios.delete(shoppingCartUrl, config);
+      await axios.delete(shoppingCartUrl, config);
 
-      dispatch(deleteItemCartSuccess(cartListUpdated.data));
+      dispatch(deleteItemCartSuccess(item));
     } catch (error) {
       console.log(error);
     }
