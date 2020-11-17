@@ -31,33 +31,90 @@ describe('todoController', () => {
       expect(res.json).toHaveBeenCalled();
     });
   });
-  describe('deleteMethod', () => {
-    test('should throw error in deleteMethod', () => {
+  describe('putMethod', () => {
+    test('should call response json on putMethod', () => {
       const res = {
+        json: jest.fn(),
         send: jest.fn(),
       };
       const req = {
-        body: {
-          _id: '1234',
-        },
+        body: {},
       };
-      Todo.findByIdAndRemove = jest.fn().mockImplementationOnce((query, callback) => {
-        callback(true, {});
+      Todo.create.mockImplementationOnce((query, callback) => {
+        callback(null, null);
       });
-
-      todoController.getMethod(null, res);
-      expect(res.send).toHaveBeenCalled();
+      todoController.putMethod(req, res);
+      expect(res.json.mock.calls.length).toBe(1);
     });
-    /*  test('should call res.json', () => {
+    test('should call response send on putMethod', () => {
       const res = {
         json: jest.fn(),
+        send: jest.fn(),
       };
-      Todo.find = jest.fn().mockImplementationOnce((query, callback) => {
+      const req = {
+        body: {},
+      };
+      Todo.create.mockImplementationOnce((query, callback) => {
+        callback(true, null);
+      });
+      todoController.putMethod(req, res);
+      expect(res.send.mock.calls.length).toBe(1);
+    });
+  });
+  describe('PostMethod', () => {
+    test('should throw error while calling post method', () => {
+      const req = {
+        body: {},
+      };
+      const res = {
+        send: jest.fn(),
+      };
+      Todo.findByIdAndUpdate.mockImplementationOnce((query, query1, callback) => {
+        callback(true, null);
+      });
+      todoController.postMethod(req, res);
+      expect(res.send).toHaveBeenCalled();
+    });
+    test('should send updated todo on calling', () => {
+      const req = {
+        body: {},
+      };
+      const res = {
+        send: jest.fn(),
+      };
+      Todo.findByIdAndUpdate.mockImplementationOnce((query, query1, callback) => {
         callback(false, {});
       });
-
-      todoController.getMethod(null, res);
-      expect(res.json).toHaveBeenCalled();
-    }); */
+      todoController.postMethod(req, res);
+      expect(res.send).toHaveBeenCalled();
+    });
+  });
+  describe('deleteMethod', () => {
+    test('should throw error on res.send', () => {
+      const req = {
+        body: {},
+      };
+      const res = {
+        send: jest.fn(),
+      };
+      Todo.findByIdAndRemove.mockImplementationOnce((query, query1, callback) => {
+        callback(true, null);
+      });
+      todoController.deleteMethod(req, res);
+      expect(res.send).toHaveBeenCalled();
+    });
+    test('should throw error on res.send', () => {
+      const req = {
+        body: {},
+      };
+      const res = {
+        send: jest.fn(),
+      };
+      Todo.findByIdAndRemove.mockImplementationOnce((query, query1, callback) => {
+        callback(false, {});
+      });
+      todoController.deleteMethod(req, res);
+      expect(res.send).toHaveBeenCalled();
+    });
   });
 });
