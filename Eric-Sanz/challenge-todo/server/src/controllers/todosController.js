@@ -2,20 +2,13 @@
 function todosController(Todo) {
   function getMethod(req, res) {
     const query = {};
-    Todo.find(query, (errorFindTodos, todos) => ((errorFindTodos)
-      ? res.send(errorFindTodos) : res.json(todos)));
+    Todo.find(query, (errorGetTodos, todos) => ((errorGetTodos)
+      ? res.send(errorGetTodos) : res.json(todos)));
   }
 
-  function putMethod(req, res) {
-    const newTodo = req.body;
-
-    Todo.create(newTodo, (errorFindTodos) => {
-      if (errorFindTodos) {
-        res.send(errorFindTodos);
-      } else {
-        res.json(newTodo);
-      }
-    });
+  function putMethod({ body }, res) {
+    Todo.create(body, (errorAddNewTodos, newTodo) => ((errorAddNewTodos)
+      ? res.send(errorAddNewTodos) : res.json(newTodo)));
   }
 
   function postMethod({ body }, res) {

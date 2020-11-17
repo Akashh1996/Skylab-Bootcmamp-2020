@@ -39,6 +39,34 @@ describe('todosController', () => {
   });
 
   describe('putMethod', () => {
-    test('Should ');
+    test('Should call res json on putMehod', () => {
+      const req = { body: '' };
+      const res = {
+        json: jest.fn(),
+      };
+
+      Todo.create.mockImplementationOnce((query, callback) => {
+        callback(false, {});
+      });
+
+      todosController.putMethod(req, res);
+
+      expect(res.json).toHaveBeenCalled();
+    });
+
+    test('Should call res send on putMehod', () => {
+      const req = { body: '' };
+      const res = {
+        send: jest.fn(),
+      };
+
+      Todo.create.mockImplementationOnce((query, callback) => {
+        callback(true, {});
+      });
+
+      todosController.putMethod(req, res);
+
+      expect(res.send).toHaveBeenCalled();
+    });
   });
 });
