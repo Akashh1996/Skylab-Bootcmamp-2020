@@ -2,14 +2,18 @@ function basketProductController(Basket, Product) {
   async function postMethod(req, res) {
     const query = { id: +req.params.productId };
 
-    const productFounded = await Product.findOne(query, (errorFindProduct, product) => {
+    await Product.findOne(query, (errorFindProduct, product) => {
       if (errorFindProduct) {
-        res.send(errorFindProduct);
+        return res.send(errorFindProduct);
       }
-      res.json(product);
-    });
-    Basket.create({
-      id: productFounded.id, 'product-name': productFounded['product-name'], 'product-image-url': productFounded['product-image-url'], price: productFounded.price,
+      Basket.create({
+        id: product.id, 'product-name': product['product-name'], 'product-image-url': product['product-image-url'], price: product.price,
+      }, (createError, createdBasket) => {
+        if (createError) {
+          return res.send(createError);
+        }
+        return res.json(createdBasket);
+      });
     });
   }
 
@@ -17,9 +21,9 @@ function basketProductController(Basket, Product) {
     const query = +req.params.productId;
     Basket.findOneAndRemove(query, (errorFindProduct, product) => {
       if (errorFindProduct) {
-        res.send(errorFindProduct);
+        return res.send(errorFindProduct);
       }
-      res.json(product);
+      return res.json(product);
     });
   }
   return { postMethod, deleteMethod };
