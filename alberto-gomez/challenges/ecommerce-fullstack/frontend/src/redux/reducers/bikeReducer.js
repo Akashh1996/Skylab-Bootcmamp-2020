@@ -25,6 +25,10 @@ export default function bikeReducer(state = {}, action) {
             // return lo que sea
             const cartCompoState = {...state, componentCart: action.componentCart}
             return cartCompoState;
+
+        case actionTypes.ADD_TO_CART:
+            const addToCartState = {...state, componentAddCart: action.componentAddCart}
+            return addToCartState;
     
         default:
             return state;

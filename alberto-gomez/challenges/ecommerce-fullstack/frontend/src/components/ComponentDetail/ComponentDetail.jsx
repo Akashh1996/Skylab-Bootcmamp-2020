@@ -4,7 +4,7 @@ import {requestSingleComponent, addToCart} from '../../redux/actions/bikeActions
 import './ComponentDetail.css';
 import {bindActionCreators} from 'redux'
 
-function ComponentItem({componentItem, dispatch}) {
+function ComponentItem({componentItem, dispatch, actions}) {
 
     const cardId = window.location.pathname.split('/')[2];
 
@@ -22,7 +22,8 @@ function ComponentItem({componentItem, dispatch}) {
             <h4>{componentItem["product-name"]}</h4>
             <p className="header-top-left-text">{componentItem["header-top-left-text"]}</p>
 
-            <p className="price-container">Price: <span className="price">${componentItem.price.toFixed(2)}</span><button className="add-cart" onClick={dispatch(addToCart(cardId))}>Add to Cart</button></p>
+            <p className="price-container">Price: <span className="price">${componentItem.price.toFixed(2)}</span><button className="add-cart" onClick={() => {dispatch(addToCart(cardId));
+            alert("Added to cart!");}}>Add to Cart</button></p>
             </div>
         </div>
         }
@@ -37,6 +38,7 @@ function mapStateToProps({bikeReducer}) {
 }
 
 function mapDispatchToProps(dispatch) {
+    debugger;
     return {
         actions: bindActionCreators({addToCart}, dispatch),
         dispatch,

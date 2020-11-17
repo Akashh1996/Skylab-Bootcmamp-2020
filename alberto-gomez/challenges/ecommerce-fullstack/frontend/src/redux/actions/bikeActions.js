@@ -43,6 +43,19 @@ function requestCartError(error) {
     }
 }
 
+function addToCartSuccess(componentAddCart) {
+    return {
+        type: actionTypes.ADD_TO_CART,
+        componentAddCart
+    }
+}
+function addToCartError(error) {
+    return {
+        type: actionTypes.ADD_TO_CART_ERROR,
+        error
+    }
+}
+
 export function requestComponents(){
     debugger;
     return async (dispatch) => {
@@ -84,11 +97,11 @@ export function addToCart(itemId) {
     return async (dispatch) => {
         try {
             // MODIFICAR
-            const component = await axios.POST(endpoint);
+            const component = await axios.post(endpoint);
             debugger;
-            dispatch(...)
+            dispatch(addToCartSuccess(component.data))
         } catch (error) {
-            
+            dispatch(addToCartError(error))
         }
     }
 }
@@ -96,12 +109,12 @@ export function addToCart(itemId) {
 export function requestCart(){
     debugger;
     return async (dispatch) => {
-        const endpoint = `http://localhost:5000/cart/items`;
+    const endpoint = `http://localhost:5000/cart/items`;
 
         try {
             const component = await axios.get(endpoint);
             debugger;
-            dispatch(requestCartSuccess(component.data))
+            dispatch(requestCartSuccess(component.data[0]['shopping-cart']))
         } catch (error) {
             debugger;
             dispatch(requestCartError(error))
