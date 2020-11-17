@@ -7,7 +7,8 @@ function inputRouter(Input) {
   const input = inputController(Input);
 
   router.route('/')
-    .get(input.getMethod);
+    .get(input.getMethod)
+    .put(input.putMethod);
 
   return router;
 }
