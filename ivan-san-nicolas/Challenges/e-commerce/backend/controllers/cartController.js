@@ -1,8 +1,3 @@
-function generateObject(originalObject){
-
-}
-
-
 function cartController(Cart, Sabers) {
     function getMethod(req, res) {
         const query = {};
