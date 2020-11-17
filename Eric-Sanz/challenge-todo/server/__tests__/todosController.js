@@ -69,4 +69,32 @@ describe('todosController', () => {
       expect(res.send).toHaveBeenCalled();
     });
   });
+
+  describe('postMethod', () => {
+    test('Should call res json on postMethod', () => {
+      const req = { body: { _id: '' } };
+      const res = { json: jest.fn() };
+
+      Todo.findByIdAndUpdate.mockImplementationOnce((query, body, callback) => {
+        callback(false, {});
+      });
+
+      todosController.postMethod(req, res);
+
+      expect(res.json).toHaveBeenCalled();
+    });
+
+    test('Should call res send on postMethod', () => {
+      const req = { body: { _id: '' } };
+      const res = { send: jest.fn() };
+
+      Todo.findByIdAndUpdate.mockImplementationOnce((query, body, callback) => {
+        callback(true, {});
+      });
+
+      todosController.postMethod(req, res);
+
+      expect(res.send).toHaveBeenCalled();
+    });
+  });
 });
