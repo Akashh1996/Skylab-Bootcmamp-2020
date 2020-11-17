@@ -75,14 +75,14 @@ describe('inputsController tests', () => {
   describe('patchMethod', () => {
     beforeEach(() => {
       res = { send: jest.fn() };
-      req = { body: { input: null } };
-      result = {};
+      req = { body: { input: {_id: null}, newInput: {text:null} } };
+      response = {};
     });
 
     test('if there is an error should call res.send with the error', () => {
       error = true;
-      inputsSchema.updateOne = jest.fn().mockImplementationOnce((query, callback) => {
-        callback(error, result);
+      inputsSchema.updateOne = jest.fn().mockImplementationOnce((query, change, callback) => {
+        callback(error, response);
       });
 
       inputsController.patchMethod(req, res);
@@ -90,13 +90,43 @@ describe('inputsController tests', () => {
       expect(res.send).toHaveBeenCalledWith(error);
     });
 
-    test('should call res.send with the result if there is no error', () => {
+    test('should call res.send with the response if there is no error', () => {
       error = false;
-      inputsSchema.updateOne = jest.fn().mockImplementationOnce((query, callback) => {
-        callback(error, result);
+      inputsSchema.updateOne = jest.fn().mockImplementationOnce((query, change, callback) => {
+        callback(error, response);
       });
 
       inputsController.patchMethod(req, res);
+
+      expect(res.send).toHaveBeenCalledWith(result);
+    });
+  });
+
+  describe('deleteMethod', () => {
+    beforeEach(() => {
+      res = { send: jest.fn() };
+      req = { body: { input: {_id: null} } };
+      response = {};
+    });
+
+    test('if there is an error should call res.send with the error', () => {
+      error = true;
+      inputsSchema.deleteOne = jest.fn().mockImplementationOnce((query, callback) => {
+        callback(error, response);
+      });
+
+      inputsController.deleteMethod(req, res);
+
+      expect(res.send).toHaveBeenCalledWith(error);
+    });
+
+    test('should call res.send with the response if there is no error', () => {
+      error = false;
+      inputsSchema.deleteOne = jest.fn().mockImplementationOnce((query, callback) => {
+        callback(error, response);
+      });
+
+      inputsController.deleteMethod(req, res);
 
       expect(res.send).toHaveBeenCalledWith(result);
     });

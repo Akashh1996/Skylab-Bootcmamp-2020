@@ -12,12 +12,17 @@ function inputsController(inputsSchema) {
   }
 
   function patchMethod(req, res) {
-    const { input } = req.body;
+    const { input, newInput } = req.body;
     const query = { _id: input._id };
+    const change = { text: newInput.text };
+    const patchCallback = (error, response) => (error ? res.send(error) : res.send(response));
+    inputsSchema.updateOne(query, change, patchCallback);
   }
 
   function deleteMethod(req, res) {
-
+    const { _id } = req.body;
+    const deleteCallback = (error, deletedItem) => error ? res.send(error) : res.send(deletedItem)
+    inputsSchema.findByIdAndDelete(_id, deleteCallback)
   }
 
   return {
