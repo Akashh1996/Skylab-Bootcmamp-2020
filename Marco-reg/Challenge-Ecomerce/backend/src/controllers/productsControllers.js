@@ -4,16 +4,23 @@ function productsController(Product) {
     const query = {};
     Product.find(query, (errorFindProducts, products) => {
       if (errorFindProducts) {
-        res.send(errorFindProducts);
+        return res.send(errorFindProducts);
       }
-      res.json(products);
+
+      return res.json(products);
     });
   }
 
   function putMethod(req, res) {
-    Product.addProduct(req.body);
-
-    res.json(Product.getproducts());
+    const query1 = req.body.productId;
+    const query2 = req.body;
+    Product.findByIdAndUpdate(query1, query2, { new: true }, (error, updateProduct) => {
+      if (error) {
+        res.send(error);
+      } else {
+        res.send(updateProduct);
+      }
+    });
   }
 
   return {
