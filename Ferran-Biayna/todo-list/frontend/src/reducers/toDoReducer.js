@@ -1,12 +1,27 @@
+import actionTypes from '../actions/actionTypes';
+
+let answer = null;
+
 export default function toDoReducer(state = {}, action) {
   switch (action.type) {
-    case 'LOAD_LIST':
-      return { ...state, toDoList: action.list };
-    case 'ADD_ITEM':
-      return { ...state, toDoList: action.item };
-    case 'DELETE_ITEM':
-      return { ...state, toDoList: action.item };
-
+    case actionTypes.LOAD_LIST:
+      answer = { ...state, list: action.list };
+      return answer;
+    case actionTypes.LOAD_LIST_ERROR:
+      answer = { ...state, error: action.error };
+      return answer;
+    case actionTypes.ADD_ITEM:
+      answer = { ...state, list: [...state.list, action.item] };
+      return answer;
+    case actionTypes.ADD_ITEM_ERROR:
+      answer = { ...state };
+      return answer;
+    case actionTypes.DELETE_ITEM:
+      answer = { ...state, list: action.list };
+      return answer;
+    case actionTypes.DELETE_ITEM_ERROR:
+      answer = { ...state, error: action.error };
+      return answer;
     default:
       return state;
   }

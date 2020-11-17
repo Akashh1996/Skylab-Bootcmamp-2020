@@ -57,7 +57,7 @@ export function requestList() {
 export function requestAddItem(item) {
   return async (dispatch) => {
     try {
-      const newItem = await axios.post('http://localhost:5000/todo', { item });
+      const newItem = await axios.post('http://localhost:5000/todo', { description: item });
       dispatch(requestAddItemSuccess(newItem.data));
     } catch (error) {
       dispatch(requestAddItemError(error));
@@ -68,7 +68,7 @@ export function requestAddItem(item) {
 export function requestDeleteItem(item) {
   return async (dispatch) => {
     try {
-      const newList = await axios.delete('http://localhost:5000/todo', { item });
+      const newList = await axios.delete('http://localhost:5000/todo', item);
       dispatch(requestDeleteItemSuccess(newList.data));
     } catch (error) {
       dispatch(requestDeleteItemError(error));

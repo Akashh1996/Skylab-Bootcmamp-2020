@@ -15,7 +15,7 @@ function ToDoList({ list, dispatch }) {
   }
 
   return (
-    <>
+    <div className="list-container">
       <input
         onChange={(event) => setnewItem(event.target.value)}
         value={newItem}
@@ -37,7 +37,7 @@ function ToDoList({ list, dispatch }) {
           </>
         ))}
       </ol>
-    </>
+    </div>
 
   );
 }
