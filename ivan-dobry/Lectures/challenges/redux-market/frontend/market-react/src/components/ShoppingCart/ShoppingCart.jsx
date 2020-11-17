@@ -1,7 +1,7 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable no-debugger */
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useEffect } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import './ShoppingCart.css';
@@ -12,6 +12,9 @@ import { Link } from 'react-router-dom';
 import { requestShoppingList, removeShoppingList } from '../../redux/actions/marketActions';
 
 function ShoppingCart({ shoppingList, dispatch }) {
+  useEffect(() => {
+    dispatch(requestShoppingList());
+  }, []);
   debugger;
   if (!shoppingList && !shoppingList?.length) {
     dispatch(requestShoppingList());
