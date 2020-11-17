@@ -30,7 +30,7 @@ function requestProductError(error) {
 }
 
 function requestAddProductsSuccess(product) {
-  debugger;
+  console.log('Success');
   return {
     type: actionTypes.ADD_PRODUCT,
     product,
@@ -94,13 +94,16 @@ export function requestProduct(productId) {
   };
 }
 
-export function requestAddProducts(productId) {
+export function requestAddProducts(Addproduct) {
+  const { _id, ...restProduct } = Addproduct;
   return async (dispatch) => {
     try {
-      const product = await axios.post(`http://localhost:5000/products/${productId}`);
       debugger;
-      dispatch(requestAddProductsSuccess(product.data));
+      const newProduct = await axios.post('http://localhost:5000/products', { ...restProduct });
+      debugger;
+      dispatch(requestAddProductsSuccess(newProduct.data));
     } catch (error) {
+      debugger;
       dispatch(requestAddProductsError(error));
     }
   };

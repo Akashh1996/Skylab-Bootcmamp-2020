@@ -1,6 +1,5 @@
-const Product = require('../../models/productModel');
 const Cart = require('../../models/cartModel');
-const cartController = require('./cartController')(Product, Cart);
+const cartController = require('./cartController')(Cart);
 
 describe('cartController', () => {
   test('should call response json on getMethod', () => {
@@ -35,11 +34,13 @@ describe('cartController', () => {
       json: jest.fn(),
     };
 
+    const req = { params: { productId: '1' } };
+
     Cart.findByIdAndRemove = jest.fn().mockImplementationOnce((query, callback) => {
       callback(false, 'Eliminado');
     });
 
-    cartController.deleteMethod({ cart: null }, res);
+    cartController.deleteMethod(req, res);
 
     expect(res.json).toHaveBeenCalled();
   });
@@ -49,11 +50,13 @@ describe('cartController', () => {
       send: jest.fn(),
     };
 
-    Cart.find = jest.fn().mockImplementationOnce((query, callback) => {
+    const req = { params: { productId: '1' } };
+
+    Cart.findByIdAndRemove = jest.fn().mockImplementationOnce((query, callback) => {
       callback(true, 'errorAddProduct');
     });
 
-    cartController.deleteMethod({ cart: null }, res);
+    cartController.deleteMethod(req, res);
 
     expect(res.send).toHaveBeenCalled();
   });

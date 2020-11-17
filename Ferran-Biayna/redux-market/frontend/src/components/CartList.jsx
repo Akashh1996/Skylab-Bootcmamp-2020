@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable dot-notation */
 import React from 'react';
 import { PropTypes } from 'prop-types';
@@ -22,7 +23,7 @@ function CartList({ cart, dispatch }) {
           {cart && cart.length && cart.map((product) => (
             <div>
               <Link to={`/product/${product.id}}`}><span>{product.name}</span></Link>
-              <button type="button" value={product.id} onClick={() => dispatch(requestDeleteProduct(product['_id']))}>x</button>
+              <button type="button" value={product.id} onClick={() => dispatch(requestDeleteProduct(product._id), requestCart())}>x</button>
               <p><img alt={product.name} src={product.image} /></p>
               <p>{new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(product.price)}</p>
             </div>

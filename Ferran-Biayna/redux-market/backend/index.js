@@ -7,7 +7,7 @@ const cors = require('cors');
 const Product = require('./models/productModel');
 const Cart = require('./models/cartModel');
 const productRouter = require('./src/routes/productRouter')(Product, Cart);
-const cartRouter = require('./src/routes/cartRouter')(Product, Cart);
+const cartRouter = require('./src/routes/cartRouter')(Cart);
 
 const app = express();
 app.use(cors());

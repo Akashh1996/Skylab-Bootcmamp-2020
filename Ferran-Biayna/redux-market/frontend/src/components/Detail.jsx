@@ -7,9 +7,10 @@ import {
   requestAddProducts,
 } from '../actions/productsActions';
 
-function Detail({ product, dispatch }) {
+function Detail({ product, dispatch, actions }) {
+  debugger;
   if (product?.id !== +window.location.pathname.split('/product/')[1] || !product) {
-    dispatch(requestProduct(window.location.pathname.split('/product/')[1]));
+    actions.requestProduct(window.location.pathname.split('/product/')[1]);
   }
 
   return (
@@ -19,7 +20,7 @@ function Detail({ product, dispatch }) {
             <div>
               <p>{`Product ID: #${product.id}`}</p>
               <span>{`Product Name: ${product.name}`}</span>
-              <button type="button" value={product.id} onClick={() => dispatch(requestAddProducts(product.id))}>Add</button>
+              <button type="button" value={product.id} onClick={() => dispatch(requestAddProducts(product))}>Add</button>
               <p>{`Category - ${product.category}`}</p>
               <p><img alt={product.name} src={product.image} /></p>
               <p>{new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(product.price)}</p>
@@ -49,6 +50,7 @@ function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators({
       requestProduct,
+      requestAddProducts,
     }, dispatch),
     dispatch,
   };

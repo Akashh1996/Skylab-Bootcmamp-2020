@@ -1,23 +1,14 @@
-function cartController(Product, Cart) {
+function cartController(Cart) {
   function getMethod(req, res) {
-    const query = {};
-    Cart.find(query, (errorFindCart, cart) => {
-      if (errorFindCart) {
-        res.send(errorFindCart);
-      } else {
-        res.json(cart);
-      }
-    });
+    Cart.find({}, (errorFindCart, cart) => (errorFindCart
+      ? res.send(errorFindCart)
+      : res.json(cart)));
   }
 
-  async function deleteMethod(req, res) {
-    await Cart.findByIdAndRemove(req.params.productId, (errorAddProduct) => {
-      if (errorAddProduct) {
-        res.send(errorAddProduct);
-      } else {
-        res.json('Eliminado');
-      }
-    });
+  function deleteMethod(req, res) {
+    Cart.findByIdAndRemove(req.params.productId, (errorDeleteProduct) => (errorDeleteProduct
+      ? res.send(errorDeleteProduct)
+      : res.json(null)));
   }
   return {
     getMethod, deleteMethod,

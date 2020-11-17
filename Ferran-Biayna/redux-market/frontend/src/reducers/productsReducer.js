@@ -3,6 +3,7 @@ import actionTypes from '../actions/actionTypes';
 let answer = null;
 
 export default function productsReducer(state = {}, action) {
+  debugger;
   switch (action.type) {
     case actionTypes.LOAD_PRODUCTS:
       answer = { ...state, products: action.products };
@@ -18,6 +19,7 @@ export default function productsReducer(state = {}, action) {
       return answer;
     case actionTypes.ADD_PRODUCT:
       answer = { ...state, cart: [...state.cart, action.product] };
+      debugger;
       return answer;
     case actionTypes.ADD_PRODUCT_ERROR:
       answer = { ...state };

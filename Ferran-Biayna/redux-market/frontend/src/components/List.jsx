@@ -9,6 +9,7 @@ import {
 } from '../actions/productsActions';
 
 function ProductList({ products, dispatch }) {
+  debugger;
   if (!products && !products?.length) {
     dispatch(requestProducts());
   }
@@ -24,7 +25,7 @@ function ProductList({ products, dispatch }) {
           <div className="products__price">
             {' '}
             <span>{new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(product.price)}</span>
-            <button type="button" value={product.id} onClick={() => dispatch(requestAddProducts(product.id))}>
+            <button type="button" value={product.id} onClick={() => dispatch(requestAddProducts(product))}>
               <span className="material-icons">
                 shopping_cart
               </span>

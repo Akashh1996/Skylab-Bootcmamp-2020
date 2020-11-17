@@ -1,5 +1,6 @@
 const Product = require('../../models/productModel');
-const productController = require('./productController')(Product);
+const Cart = require('../../models/cartModel')
+const productController = require('./productController')(Product, Cart);
 
 describe('productController', () => {
   test('should call response json on getMethod', () => {
@@ -32,6 +33,40 @@ describe('productController', () => {
     });
 
     productController.getMethod(req, res);
+
+    expect(res.send).toHaveBeenCalled();
+  });
+
+  test('should call response json on postMethod', () => {
+    const req = {
+      body: { id: '1' },
+    };
+    const res = {
+      json: jest.fn(),
+    };
+
+    Cart.create = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(false, 'newProduct');
+    });
+
+    productController.postMethod(req, res);
+
+    expect(res.json).toHaveBeenCalled();
+  });
+
+  test('should call error on postMethod', () => {
+    const req = {
+      body: { id: '1' },
+    };
+    const res = {
+      send: jest.fn(),
+    };
+
+    Cart.create = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(true, 'errorAddProduct');
+    });
+
+    productController.postMethod(req, res);
 
     expect(res.send).toHaveBeenCalled();
   });

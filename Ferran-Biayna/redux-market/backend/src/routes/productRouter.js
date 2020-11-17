@@ -12,8 +12,7 @@ function productRouter(Product, Cart) {
     .post(product.postMethod);
 
   router.route('/:productId')
-    .get(product.getMethod)
-    .post(product.postMethod);
+    .get(product.getMethod);
 
   return router;
 }
