@@ -47,6 +47,7 @@ ProductList.propTypes = {
 };
 
 function mapStateToProps({ productsReducer }) {
+  debugger;
   return {
     products: productsReducer.products,
     randomNumber: productsReducer.randomNumber,

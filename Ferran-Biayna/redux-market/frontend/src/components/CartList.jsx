@@ -44,6 +44,7 @@ CartList.propTypes = {
 };
 
 function mapStateToProps({ productsReducer }) {
+  debugger;
   return {
     cart: productsReducer.cart,
     randomNumber: productsReducer.randomNumber,
