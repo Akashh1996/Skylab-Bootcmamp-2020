@@ -1,22 +1,27 @@
+/* eslint-disable linebreak-style */
 const express = require('express');
-const cors = require('cors');
-require('dotenv').config();
 
-const port = process.env.PORT || 3020;
-const { v4: uuidv4 } = require('uuid');
+const cors = require('cors');
 const bodyParser = require('body-parser');
+const debug = require('debug')('app');
+
+const morgan = require('morgan');
+const mongoose = require('mongoose');
+const Product = require('./src/models/productModel');
+const Cart = require('./src/models/basketModel');
+const testRoute = require('./src/routes/productRoutes')(Product, Cart);
 
 const app = express();
 app.use(cors());
-uuidv4();
-const productRoute = require('./routes/productRoute');
+const port = process.env.PORT || 3020;
 
-app.use('/products', productRoute);
-const testRoute = require('./routes/productRoute');
+mongoose.connect('mongodb://localhost:27017/marketdb');
+app.use(morgan('tiny'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use('/', testRoute);
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+// app.use('/', testRoute);
+app.use('/products', testRoute);
+
+app.listen(port, () => debug(`Example app listening on port ${port}!`));
