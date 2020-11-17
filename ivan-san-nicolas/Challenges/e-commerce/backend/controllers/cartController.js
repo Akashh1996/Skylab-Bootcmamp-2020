@@ -1,4 +1,9 @@
-function cartController(Cart) {
+function generateObject(originalObject){
+
+}
+
+
+function cartController(Cart, Sabers) {
     function getMethod(req, res) {
         const query = {};
         Cart.find(query, (errorFindingCart, cart) => {
@@ -11,23 +16,25 @@ function cartController(Cart) {
         });
     }
 
-    /* function postMethod(req, res) {
+    function postMethod(req, res) {
         const productName = req.query.productName;
         const productColor = req.query.productColor;
-        let cartProduct = null;
-        const sabers = Cart.getSabers();
-        sabers.map((product) => {
-            if(product["product-name"] === productName) {
-                let newProduct = product;
-                newProduct["actual-color"] = productColor;
-                cartProduct = newProduct;
+        const query = { ["product-name"]: productName };
+        
+        Sabers.findOne(query, (errorFindingSaber, saber) => {
+            if(errorFindingSaber){
+            return res.send(errorFindingSaber)
+            } else {
+                saber["actual-color"] = productColor;
+                const conditionToUpdate = { productList: [...productList, saber]};
+                const query = { };
+                Cart.updateOne(query, conditionToUpdate, (errorCreatingSaber, cart) => {
+                    errorCreatingSaber ? res.send(errorCreatingSaber) : res.json(cart)
+                });
             }
         });
-        Cart.addProductToCart(cartProduct);
-        res.status(200);
-        res.send(Cart.getCart());
     }
-
+    /*
     function deleteMethod(req, res) {
         const productName = req.query.productName[0];
         const newCart = [];
@@ -47,8 +54,8 @@ function cartController(Cart) {
  */
     return {
         getMethod,
-        /* postMethod,
-        deleteMethod, */
+        postMethod,
+       /* deleteMethod, */
     }
 }
 

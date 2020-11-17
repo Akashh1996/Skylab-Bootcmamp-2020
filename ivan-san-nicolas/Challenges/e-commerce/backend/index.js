@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const Sabers = require('./models/saberModel');
 const sabersRoutes = require('./routes/sabersRoutes')(Sabers);
 const Cart = require('./models/cartModel');
-const cartRoutes = require('./routes/cartRoutes')(Cart);
+const cartRoutes = require('./routes/cartRoutes')(Cart, Sabers);
 
 
 const app = express();
