@@ -26,10 +26,22 @@ function todoController(Todo) {
     });
   }
 
+  function postMethod(req, res) {
+    const { newId } = req.body;
+    const { newTodo } = req.body;
+    const { todoList } = req.body;
+    const query = [];
+    const conditionToUpdate = [...todoList, { id: newId, name: newTodo }];
+    Todo.updateOne(query, conditionToUpdate, (errorCreatingTodo, todos) => {
+      errorCreatingTodo ? res.send(errorCreatingTodo) : res.json(todos);
+    });
+  }
+
   return {
     getMethod,
     deleteMethod,
     patchMethod,
+    postMethod,
   };
 }
 

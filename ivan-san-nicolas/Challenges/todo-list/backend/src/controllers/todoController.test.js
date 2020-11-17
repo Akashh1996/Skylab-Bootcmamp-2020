@@ -92,3 +92,40 @@ describe('todoController patchMethod', () => {
     todoController.patchMethod(req, res);
   });
 });
+
+describe('todoController postMethod', () => {
+  test('should call res.json in postMethod', () => {
+    const req = {
+      body: {
+        newId: 20,
+        newTodo: 'newTodo',
+        todoList: [],
+      },
+    };
+    const res = {
+      json: jest.fn(),
+    };
+    Todo.updateOne = jest.fn().mockImplementationOnce((query, condition, callback) => {
+      callback(null, {});
+    });
+    todoController.postMethod(req, res);
+    expect(res.json).toHaveBeenCalled();
+  });
+  test('should call res.send when there is an error', () => {
+    const req = {
+      body: {
+        newId: 20,
+        newTodo: 'newTodo',
+        todoList: [],
+      },
+    };
+    const res = {
+      send: jest.fn(),
+    };
+    Todo.updateOne = jest.fn().mockImplementationOnce((query, condition, callback) => {
+      callback(true, {});
+    });
+    todoController.postMethod(req, res);
+    expect(res.send).toHaveBeenCalled();
+  });
+});
