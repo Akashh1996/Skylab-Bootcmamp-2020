@@ -28,6 +28,5 @@ app.use('/list', productRouter);
 app.use('/basket', basketRouter);
 
 app.listen(port, () => {
-  // eslint-disable-next-line no-console
   debug(`Server is running on port ${chalk.blue(port)}`);
 });

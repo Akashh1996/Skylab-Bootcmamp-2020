@@ -12,7 +12,6 @@ function basketRouter(Basket, Product) {
     .get(basket.getMethod);
 
   router.route('/:productId')
-    .all(basketProduct.allMiddleware)
     .post(basketProduct.postMethod)
     .delete(basketProduct.deleteMethod);
 
