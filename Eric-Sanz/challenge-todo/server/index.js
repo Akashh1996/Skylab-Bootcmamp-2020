@@ -4,7 +4,7 @@ const chalk = require('chalk');
 const morgan = require('morgan');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+const { connect } = require('mongoose');
 const Todo = require('./src/models/todoModel');
 const todoRouter = require('./src/routes/todoRouter')(Todo);
 
@@ -13,7 +13,7 @@ const port = process.env.PORT || 5000;
 
 app.use(cors());
 
-mongoose.connect('mongodb://localhost/todoListdb');
+connect('mongodb://localhost/todoListdb');
 
 app.use(morgan('tiny'));
 
