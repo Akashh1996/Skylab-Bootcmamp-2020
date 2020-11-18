@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import axios from 'axios';
 import actionTypes from './actionTypes';
 
@@ -55,7 +54,7 @@ export function addTodo(todoToCreate) {
       const newTodo = await axios.post(URL, { ...todoToCreate });
       dispatch(addTodoSuccess(newTodo));
     } catch (error) {
-      console.log(error);
+      dispatch(errorRequest(error));
     }
   };
 }
@@ -65,7 +64,7 @@ export function deleteTodo(todoToDelete) {
       const deletedTodo = axios.delete(URL, { ...todoToDelete });
       dispatch(deleteTodoSuccess(deletedTodo));
     } catch (error) {
-      console.log(error);
+      dispatch(errorRequest(error));
     }
   };
 }
@@ -75,7 +74,7 @@ export function updateTodo(todoToUpdate) {
       const updatedTodo = axios.patch(URL, { ...todoToUpdate });
       dispatch(updateTodoSuccess(updatedTodo));
     } catch (error) {
-      console.log(error);
+      dispatch(errorRequest(error));
     }
   };
 }
