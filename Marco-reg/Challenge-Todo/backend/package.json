@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "set DEBUG=app &&nodemon index.js",
-    "test": "jest --collect-coverage --watch"
+    "start": "set DEBUG=app && nodemon index.js",
+    "test": "jest --collect-coverage --watchAll"
   },
   "keywords": [],
   "author": "",
