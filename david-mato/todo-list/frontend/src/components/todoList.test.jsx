@@ -4,10 +4,11 @@ import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import TodoList from './TodoList';
+import { deleteTodoListItem } from '../redux/actions/todoListActions';
 
 jest.mock('../redux/actions/todoListActions');
 
-const initialState = [{ todoList: [{}] }];
+const initialState = { todoList: [{}] };
 
 const buildStore = configureStore([thunk]);
 
@@ -27,10 +28,10 @@ describe('TodoList', () => {
     expect(document.querySelector('.title').textContent).toBe('TODO LIST');
   });
 
-  // test('should call deleteTodoListItem on click', () => {
-  //   render(<TodoList />, { wrapper: Wrapper });
+  test('should call deleteTodoListItem on click', () => {
+    render(<TodoList />, { wrapper: Wrapper });
 
-  //   document.querySelector('.delete-button').click();
-  //   expect(deleteTodoListItem).toHaveBeenCalled();
-  // });
+    document.querySelector('.delete-button').click();
+    expect(deleteTodoListItem).toHaveBeenCalled();
+  });
 });
