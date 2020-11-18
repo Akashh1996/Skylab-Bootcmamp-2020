@@ -28,7 +28,7 @@ function InputsController(Input) {
     });
   }
   function updateMethod(req, res) {
-    const query = req.params.id;
+    const query = req.body.id;
     Input.findByIdAndUpdate(query, (errorUpdate, input) => {
       if (errorUpdate) {
         return res.send(errorUpdate);
