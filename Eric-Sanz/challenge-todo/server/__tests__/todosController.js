@@ -23,7 +23,7 @@ describe('todosController', () => {
       expect(res.json).toHaveBeenCalled();
     });
 
-    test('Should call res send in the getMethod', () => {
+    test('Should call res send in the getMethod if there is an error', () => {
       const res = {
         send: jest.fn(),
       };
@@ -54,7 +54,7 @@ describe('todosController', () => {
       expect(res.json).toHaveBeenCalled();
     });
 
-    test('Should call res send on putMehod', () => {
+    test('Should call res send on putMehod if there is an error', () => {
       const req = { body: '' };
       const res = {
         send: jest.fn(),
@@ -84,7 +84,7 @@ describe('todosController', () => {
       expect(res.json).toHaveBeenCalled();
     });
 
-    test('Should call res send on postMethod', () => {
+    test('Should call res send on postMethod if there is an error', () => {
       const req = { body: { _id: '' } };
       const res = { send: jest.fn() };
 
@@ -112,7 +112,7 @@ describe('todosController', () => {
       expect(res.json).toHaveBeenCalled();
     });
 
-    test('Should call res send on deleteMethod', () => {
+    test('Should call res send on deleteMethod if there is an error', () => {
       const req = { body: { _id: '' } };
       const res = { send: jest.fn() };
 
