@@ -13,8 +13,9 @@ const app = express();
 
 app.use(cors());
 const port = process.env.PORT || 5000;
+const URLdb = process.env.DB || 'mongodb://localhost/todolist';
 
-connect('mongodb://localhost/todolist');
+connect(URLdb){ useNewUrlParser: true } ;
 
 app.use(morgan('tiny'));
 
