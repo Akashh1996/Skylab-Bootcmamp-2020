@@ -1,11 +1,9 @@
-
 .portfolio_title {
     padding: 10px;
     margin-left: 5px;
     
     
 }
-
 
 .portfolio {
     background-color: white;
@@ -25,3 +23,13 @@
     margin: 5px;
 }
 
+.images {
+    display: flex;
+    justify-content: center;
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 1199px) {}
+ 
+
+@media screen and (min-width: 1200px) {}

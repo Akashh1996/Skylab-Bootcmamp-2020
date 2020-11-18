@@ -32,16 +32,28 @@ function Cv() {
 						</p>
 					</div>
 					<nav className="nav_aside">
-						<div>About Me</div>
-						<div>Resume</div>
-						<div>Portfolio</div>
-						<div className="contact_nav">Contact</div>
+						<div>
+							<a href="#about">About Me</a>
+						</div>
+						<div>
+							<a href="#resume">Resume</a>
+						</div>
+						<div>
+							<a href="#portfolio">Portfolio</a>
+						</div>
+						<div className="contact_nav">
+							<a href="#contact">Contact</a>
+						</div>
 					</nav>
 				</aside>
 				<main>
+					<a name="about"></a>
 					<AboutMe />
+					<a name="resume"></a>
 					<Resume />
+					<a name="portfolio"></a>
 					<Portfolio />
+					<a name="contact"></a>
 					<Contact />
 				</main>
 			</div>
