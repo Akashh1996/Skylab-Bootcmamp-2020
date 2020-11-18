@@ -27,7 +27,6 @@ return (
 function mapStateToProps({toDoListReducer}) {
     return {
         toDoList: toDoListReducer.toDoList,
-        itemDelete: toDoListReducer.itemDelete
     };
 }
 
