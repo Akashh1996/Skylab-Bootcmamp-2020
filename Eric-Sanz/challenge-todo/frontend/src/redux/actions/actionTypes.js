@@ -1,0 +1,10 @@
+const actionTypes = {
+  GET_TODO: 'GET_TODO',
+  GET_TODO_ERROR: 'GET_TODO_ERROR',
+  ADD_TODO: 'ADD_TODO',
+  ADD_TODO_ERROR: 'ADD_TODO_ERROR',
+  DELETE_TODO: 'DELETE_TODO',
+  DELETE_TODO_ERROR: 'DELETE_TODO_ERROR',
+};
+
+export default actionTypes;

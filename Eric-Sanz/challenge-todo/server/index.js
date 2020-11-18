@@ -10,10 +10,11 @@ const todoRouter = require('./src/routes/todoRouter')(Todo);
 
 const app = express();
 const port = process.env.PORT || 5000;
+const dbURL = process.env.dbURL || 'mongodb://localhost/todoListdb';
 
 app.use(cors());
 
-connect('mongodb://localhost/todoListdb');
+connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(morgan('tiny'));
 
