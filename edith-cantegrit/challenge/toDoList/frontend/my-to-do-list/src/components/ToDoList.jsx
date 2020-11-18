@@ -4,7 +4,6 @@ import {
     deleteItemfromToDoList,
 	requestLoadToDoList
 } from '../redux/actions/toDoList-actions';
-import { Form } from 'react-bootstrap';
 
 function ToDoList({toDoList, dispatch}) {
     if(!toDoList && !toDoList?.length) {

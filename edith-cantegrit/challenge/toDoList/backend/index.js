@@ -15,7 +15,7 @@ app.use(cors());
 const port = process.env.PORT || 5000;
 const URLdb = process.env.DB || 'mongodb://localhost/todolist';
 
-connect(URLdb){ useNewUrlParser: true } ;
+connect(URLdb, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(morgan('tiny'));
 
