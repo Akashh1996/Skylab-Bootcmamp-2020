@@ -13,7 +13,7 @@ describe('listController', () => {
         callback(true, {});
       });
 
-      listController.getMethod({ task: 'Hello' }, res);
+      listController.getMethod(null, res);
 
       expect(res.send).toHaveBeenCalled();
     });
