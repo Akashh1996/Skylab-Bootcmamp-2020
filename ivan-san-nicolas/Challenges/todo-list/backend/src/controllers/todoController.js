@@ -16,12 +16,11 @@ function todoController(Todo) {
   }
 
   function patchMethod(req, res) {
-    const { todoId } = req.body;
-    const { todoNewName } = req.body;
+    const { todoId, todoNewName } = req.body;
     const query = { id: +todoId };
     const update = { name: todoNewName };
     Todo.findOneAndUpdate(query, update, (errorUpdatingTodo, updatedInput) => {
-      errorUpdatingTodo ? res.send(errorUpdatingTodo) : res.send(updatedInput);
+      errorUpdatingTodo ? res.send(errorUpdatingTodo) : res.json(updatedInput);
     });
   }
 

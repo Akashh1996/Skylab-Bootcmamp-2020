@@ -68,8 +68,7 @@ describe('todoController patchMethod', () => {
     const res = {
       json: jest.fn(),
     };
-    Todo.findOneAndUpdate = jest.fn();
-    Todo.findOne = jest.fn().mockImplementationOnce((query, callback) => {
+    Todo.findOneAndUpdate = jest.fn().mockImplementationOnce((query, update, callback) => {
       callback(null, {});
     });
     todoController.patchMethod(req, res);
@@ -85,8 +84,7 @@ describe('todoController patchMethod', () => {
     const res = {
       send: jest.fn(),
     };
-    Todo.findOneAndUpdate = jest.fn();
-    Todo.findOne = jest.fn().mockImplementationOnce((query, callback) => {
+    Todo.findOneAndUpdate = jest.fn().mockImplementationOnce((query, update, callback) => {
       callback(true, {});
     });
     todoController.patchMethod(req, res);
@@ -99,13 +97,12 @@ describe('todoController postMethod', () => {
       body: {
         newId: 20,
         newTodo: 'newTodo',
-        todoList: [],
       },
     };
     const res = {
       json: jest.fn(),
     };
-    Todo.updateOne = jest.fn().mockImplementationOnce((query, condition, callback) => {
+    Todo.create = jest.fn().mockImplementationOnce((newInput, callback) => {
       callback(null, {});
     });
     todoController.postMethod(req, res);
@@ -116,13 +113,12 @@ describe('todoController postMethod', () => {
       body: {
         newId: 20,
         newTodo: 'newTodo',
-        todoList: [],
       },
     };
     const res = {
       send: jest.fn(),
     };
-    Todo.updateOne = jest.fn().mockImplementationOnce((query, condition, callback) => {
+    Todo.create = jest.fn().mockImplementationOnce((query, callback) => {
       callback(true, {});
     });
     todoController.postMethod(req, res);
