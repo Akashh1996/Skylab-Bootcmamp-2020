@@ -1,17 +1,19 @@
 import actionTypes from '../actions/action-types';
 
 export default function toDoListReducer(state={}, action) {
+    let loading = '';
     switch(action.type) {
         case actionTypes.LOAD_TO_DO_LIST:
-            const loadingList = {...state, toDoList: action.toDoList};
-            return loadingList;
+            loading = {...state, toDoList: action.toDoList};
+            break;
         case actionTypes.LIST_ERROR:
-            const loadingError = {...state, loadingError: action.loadingError};
-            return loadingError;
+            loading = {...state, loadingError: action.loadingError};
+            break;
         case actionTypes.ITEM_DELETE:
-            const loadingItemDelete = {...state, itemDelete: action.itemDelete};
-            return loadingItemDelete
+            loading = {...state, itemDelete: action.itemDelete};
+            break;
         default:
-            return state;
+            loading = state;
     }
+    return loading
 }
