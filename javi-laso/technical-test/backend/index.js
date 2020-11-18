@@ -1,15 +1,16 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const mongoose = require('mongoose');
+const {connect} = require('mongoose');
 const morgan = require('morgan');
 const inputsSchema = require('./src/models/inputsSchema');
 const inputsRouter = require('./src/routes/inputsRouter')(inputsSchema);
 
 const server = express();
 const port = process.env.PORT || 2130;
+const dbUrl = process.env.DBURL || 'mongodb://localhost/technicaltestdb'
 
-mongoose.connect('mongodb://localhost/technicaltestdb', { useNewUrlParser: true, useUnifiedTopology: true });
+connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 
 server.use(morgan('dev'));
 
