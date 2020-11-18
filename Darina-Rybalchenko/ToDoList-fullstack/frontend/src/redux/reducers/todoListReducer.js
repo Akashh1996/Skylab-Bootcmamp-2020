@@ -1,5 +1,4 @@
-/* eslint-disable no-case-declarations */
-import actionTypes from '../actionTypes';
+import actionTypes from '../actions/actionTypes';
 
 export default function todoListReducer(state = {}, action) {
   switch (action.type) {

@@ -1,10 +1,8 @@
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable no-undef */
 import React from 'react';
 import { unmountComponentAtNode, render } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import { BrowserRouter } from 'react-router-dom';
-import TodoList from './TodoLIst';
+import TodoList from './TodoList';
 
 describe('TodoList', () => {
   let container;

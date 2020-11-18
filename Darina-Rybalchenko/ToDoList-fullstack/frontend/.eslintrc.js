@@ -18,5 +18,8 @@ module.exports = {
     'react',
   ],
   rules: {
+    'no-case-declarations': 0,
+    'no-undef': 0,
+    'react/jsx-filename-extension': 0,
   },
 };

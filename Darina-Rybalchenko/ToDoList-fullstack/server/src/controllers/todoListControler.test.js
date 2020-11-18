@@ -15,10 +15,10 @@ describe('todoListController', () => {
       todoListController.getMethod(null, res);
       expect(res.json).toHaveBeenCalled();
     });
+
     test('should call res.json with error', () => {
       const res = {
         json: jest.fn(),
-        send: jest.fn(),
       };
       TodoList.find = jest.fn().mockImplementationOnce((query, callback) => {
         callback(true, {});
@@ -28,11 +28,11 @@ describe('todoListController', () => {
       expect(res.json).toHaveBeenCalled();
     });
   });
+
   describe('PUT Method', () => {
     test('should call json', () => {
       const res = {
         json: jest.fn(),
-        send: jest.fn(),
       };
       const req = {
         body: '1',
@@ -44,9 +44,9 @@ describe('todoListController', () => {
       todoListController.putMethod(req, res);
       expect(res.json).toHaveBeenCalled();
     });
-    test('should call json', () => {
+
+    test('should call json with error', () => {
       const res = {
-        json: jest.fn(),
         send: jest.fn(),
       };
       const req = {
@@ -60,10 +60,10 @@ describe('todoListController', () => {
       expect(res.send).toHaveBeenCalled();
     });
   });
+
   describe('POST Method', () => {
     test('should call json', () => {
       const res = {
-        json: jest.fn(),
         send: jest.fn(),
       };
       const req = {
@@ -76,9 +76,9 @@ describe('todoListController', () => {
       todoListController.postMethod(req, res);
       expect(res.send).toHaveBeenCalled();
     });
-    test('should call json', () => {
+
+    test('should call json with error', () => {
       const res = {
-        json: jest.fn(),
         send: jest.fn(),
       };
       const req = {
@@ -92,10 +92,10 @@ describe('todoListController', () => {
       expect(res.send).toHaveBeenCalled();
     });
   });
+
   describe('DELETE Method', () => {
     test('should call json', () => {
       const res = {
-        json: jest.fn(),
         send: jest.fn(),
       };
       const req = {
@@ -108,9 +108,9 @@ describe('todoListController', () => {
       todoListController.deleteMethod(req, res);
       expect(res.send).toHaveBeenCalled();
     });
-    test('should call json', () => {
+
+    test('should call json with  error', () => {
       const res = {
-        json: jest.fn(),
         send: jest.fn(),
       };
       const req = {
