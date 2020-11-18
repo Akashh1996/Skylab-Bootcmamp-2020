@@ -14,10 +14,10 @@ function inputsController(inputsSchema) {
 
   function patchMethod(req, res) {
     const { input, newInput } = req.body;
-    const query = { _id: input._id };
+    const { _id } = input;
     const change = { text: newInput.text };
-    const patchCallback = (error, response) => (error ? res.send(error) : res.send(response));
-    inputsSchema.updateOne(query, change, patchCallback);
+    const patchCallback = (error, updatedItem) => (error ? res.send(error) : res.send(updatedItem));
+    inputsSchema.findByIdAndUpdate(_id, change, patchCallback);
   }
 
   function deleteMethod(req, res) {
