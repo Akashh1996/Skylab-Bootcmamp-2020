@@ -30,3 +30,5 @@ const data= [
       income: "2048M$"
     }
   ]
+
+  export default data;
