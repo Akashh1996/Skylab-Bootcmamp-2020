@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.wrapper{
+  background-color: rgb(198, 218, 198);
+  display: grid;
+  width: 70%;
+  margin: auto;
+}
+input{
+  height: 30px;
+  border: 1px solid red;
+}
+button{
+  margin: auto;
+  width: 100%;
+}
+.list{
+  margin: auto;
+  padding: 4px 0;
+}
+.list>div{
+  margin: auto;
+  padding: 4px 0;
+}
