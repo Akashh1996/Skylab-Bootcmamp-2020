@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const debug = require('debug')('app');
 const chalk = require('chalk');
+const cors = require('cors');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -15,6 +16,8 @@ const port = process.env.PORT || 3333;
 mongoose.connect('mongodb://localhost/todolistdb');
 
 app.use(morgan('tiny'));
+
+app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
