@@ -26,8 +26,6 @@ export default function addTodo(newTodo) {
   };
 }
 function loadTodoSuccess(todoList) {
-  // eslint-disable-next-line no-debugger
-  debugger;
   return {
     type: actiontypes.LOAD_TODO,
     todoList,
@@ -45,10 +43,6 @@ export function loadTodo() {
     const endpoint = 'http://localhost:8000/todo';
     try {
       const loadTodoList = await axios.get(endpoint);
-
-      // eslint-disable-next-line no-debugger
-      debugger;
-
       dispatch(loadTodoSuccess(loadTodoList.data));
     } catch (error) {
       dispatch(loadTodoError(error));
