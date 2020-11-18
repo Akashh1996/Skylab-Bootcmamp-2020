@@ -63,4 +63,8 @@
 .anchors {
     text-decoration: none;
     color: inherit;
+    background-color: rgb(69, 138, 150);
+    color: white;
+    padding: 20px;
+    margin: 20px;
 }
