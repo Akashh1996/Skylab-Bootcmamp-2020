@@ -10,12 +10,15 @@ import ItemList from './ItemList';
 
 jest.mock('../../../redux/actions/actions');
 
-const initialState = { itemsReducer: { itemList: [{ id: '1' }] } };
-
 const buildStore = configureStore([thunk]);
 
 describe('ItemList', () => {
-  beforeEach(() => {
+  afterAll(() => {
+    jest.resetAllMocks();
+  });
+
+  test('should render the title', () => {
+    const initialState = { itemsReducer: { itemList: [{ id: '1' }] } };
     const store = buildStore(initialState);
     store.dispatch = jest.fn();
     // eslint-disable-next-line react/prop-types
@@ -28,13 +31,43 @@ describe('ItemList', () => {
     );
 
     render(<ItemList />, { wrapper: Wrapper });
-  });
 
-  test('should render the title', () => {
     expect(document.querySelector('.list-title').textContent).toBe('Principal offers');
   });
 
-  test('should call loadItemsList action', () => {
+  test('should call loadItemsList action if the list is empty', () => {
+    const initialState = { itemsReducer: { itemList: null } };
+    const store = buildStore(initialState);
+    store.dispatch = jest.fn();
+    // eslint-disable-next-line react/prop-types
+    const Wrapper = ({ children }) => (
+      <Provider store={store}>
+        <BrowserRouter>
+          {children}
+        </BrowserRouter>
+      </Provider>
+    );
+
+    render(<ItemList />, { wrapper: Wrapper });
+
     expect(loadItemsList).toHaveBeenCalled();
+  });
+
+  test('should render if there is a filteredList', () => {
+    const initialState = { itemsReducer: { filteredList: [{}] } };
+    const store = buildStore(initialState);
+    store.dispatch = jest.fn();
+    // eslint-disable-next-line react/prop-types
+    const Wrapper = ({ children }) => (
+      <Provider store={store}>
+        <BrowserRouter>
+          {children}
+        </BrowserRouter>
+      </Provider>
+    );
+
+    render(<ItemList />, { wrapper: Wrapper });
+
+    expect(document.querySelector('.list-title').textContent).toBe('Principal offers');
   });
 });
