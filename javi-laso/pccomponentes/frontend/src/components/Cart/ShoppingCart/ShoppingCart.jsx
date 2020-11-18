@@ -22,25 +22,24 @@ function ShoppingCart({ cartList, cartSize }) {
       <ul className="d-flex flex-column">
         {cartSize === 0
           ? <h3 className="no-products">You have not chosen products yet</h3>
-          : Object.values(cartList)
-            .map((product) => {
-              if (product.quantity > 0) {
-                return (
-                  <CartElement
-                    product={product}
-                    key={performance.now() * Math.random()}
-                  />
-                );
-              }
-              return null;
-            })}
+          : cartList.map((product) => {
+            if (product.quantity > 0) {
+              return (
+                <CartElement
+                  product={product}
+                  key={performance.now() * Math.random()}
+                />
+              );
+            }
+            return null;
+          })}
       </ul>
     </main>
   );
 }
 
 ShoppingCart.propTypes = {
-  cartList: PropTypes.shape({}).isRequired,
+  cartList: PropTypes.arrayOf(PropTypes.object).isRequired,
   cartSize: PropTypes.number.isRequired,
 };
 
