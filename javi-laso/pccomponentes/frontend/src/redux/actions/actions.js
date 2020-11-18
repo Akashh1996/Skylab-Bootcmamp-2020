@@ -5,6 +5,8 @@ import actionTypes from './action-types';
 const listUrl = 'http://localhost:2130/';
 const shoppingCartUrl = 'http://localhost:2130/shoppingcart';
 
+// const user = 'user1';
+
 export function loadItemsSuccess(itemList) {
   return {
     type: actionTypes.LOAD_ITEMS_LIST,
@@ -72,7 +74,7 @@ export function putItemInCart(item) {
   return async (dispatch) => {
     debugger;
     try {
-      const newCartItem = await axios.put(shoppingCartUrl, {
+      const newCartItem = await axios.patch(shoppingCartUrl, {
         item,
       });
 
@@ -92,11 +94,12 @@ export function deleteItemCartSuccess(cartItem) {
 
 export function deleteItemFromCart(item) {
   return async (dispatch) => {
+    debugger;
     try {
       const config = { data: item };
-      await axios.delete(shoppingCartUrl, config);
+      const { data } = await axios.delete(shoppingCartUrl, config);
 
-      dispatch(deleteItemCartSuccess(item));
+      dispatch(deleteItemCartSuccess(data));
     } catch (error) {
       console.log(error);
     }
