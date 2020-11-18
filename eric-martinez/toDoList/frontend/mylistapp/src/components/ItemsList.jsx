@@ -16,6 +16,14 @@ function ItemsList({ items, actions, dispatch }) {
   return (
     <>
       <h1>{"ToDoList"}</h1>
+      <input onChange={event => setInputItem(event.target.value)} />
+      {(inputItem && inputItem.length
+        && <button type="button" onClick={() => {
+          actions.putItems(inputItem)
+          actions.cleanProductDetail()}}>
+            Add
+          </button>)}
+
       {(items && items.length
                     && items.map((item) => (
                       <li key={item._id}>
@@ -27,13 +35,6 @@ function ItemsList({ items, actions, dispatch }) {
                         </button>
                       </li>
                     )))}
-      <input onChange={event => setInputItem(event.target.value)} />
-      {(inputItem && inputItem.length
-        && <button type="button" onClick={() => {
-          actions.putItems(inputItem)
-          actions.cleanProductDetail()}}>
-            Add
-          </button>)}
     </>
   );
 }
