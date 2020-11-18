@@ -7,13 +7,13 @@ const bodyParser = require('body-parser');
 /* const Hero = require('./src/stores/heroStore');
  */
 const mongoose = require('mongoose');
-const Hero = require('./src/models/heroModel');
+const Hero = require('./src/models/superHeroModel');
 const heroRouter = require('./src/routes/heroRouter')(Hero);
 
 const app = express();
 const port = process.env.PORT || 5000;
 
-mongoose.connect('mongodb://localhost/heroesdb');
+mongoose.connect('mongodb://localhost/superherodb');
 
 app.use(morgan('tiny'));
 
