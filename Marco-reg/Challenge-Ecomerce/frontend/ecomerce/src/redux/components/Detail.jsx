@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { requestProductDetail, cleanProductDetail } from '../actions/shopActions';
+import { Button } from '@material-ui/core';
 
 
 function Detail({match, productDetail, dispatch, actions }){
@@ -15,9 +16,11 @@ function Detail({match, productDetail, dispatch, actions }){
     return(
         <>
             {productDetail && 
-            <h1>{productDetail['product-name']}</h1>}
+            <h1>{productDetail[0]['product-name']}</h1>}
             {productDetail && 
-            <img src={productDetail['product-image-url']} alt={"product img"}/>}
+            <img src={productDetail[0]['product-image-url']} alt={"product img"}/>}
+            <Button color="primary">ADD TO CART</Button>
+
         </>
     )
 }
