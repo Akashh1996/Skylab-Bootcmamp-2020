@@ -72,7 +72,6 @@ export function putItemCartSuccess(cartItem) {
 
 export function putItemInCart(item) {
   return async (dispatch) => {
-    debugger;
     try {
       const newCartItem = await axios.patch(shoppingCartUrl, {
         item,
@@ -94,7 +93,6 @@ export function deleteItemCartSuccess(cartItem) {
 
 export function deleteItemFromCart(item) {
   return async (dispatch) => {
-    debugger;
     try {
       const config = { data: item };
       const { data } = await axios.delete(shoppingCartUrl, config);
