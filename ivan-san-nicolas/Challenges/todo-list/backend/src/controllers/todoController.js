@@ -26,12 +26,9 @@ function todoController(Todo) {
   }
 
   function postMethod(req, res) {
-    const { newId } = req.body;
-    const { newTodo } = req.body;
-    const { todoList } = req.body;
-    const query = [];
-    const conditionToUpdate = [...todoList, { id: newId, name: newTodo }];
-    Todo.updateOne(query, conditionToUpdate, (errorCreatingTodo, todos) => {
+    const { newId, newTodo } = req.body;
+    const newInput = { id: newId, name: newTodo };
+    Todo.create(newInput, (errorCreatingTodo, todos) => {
       errorCreatingTodo ? res.send(errorCreatingTodo) : res.json(todos);
     });
   }
