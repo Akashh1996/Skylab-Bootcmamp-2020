@@ -1,18 +1,24 @@
 const Product = require('../../models/laptopModel');
 const productDetailController = require('../productDetailController')(Product);
 
-describe('Test product detail controllers', () => {
-  test('Test Get Methods happy path', () => {
-    // arrange
-    const res = {
+describe('Detail Controllers', () => {
+  let req;
+  let res;
+
+  beforeEach(() => {
+    res = {
       send: jest.fn(),
       json: jest.fn(),
     };
-    const req = {
+    req = {
       params: {
         productName: 'H500GV-HC002R',
       },
     };
+  });
+
+  test('GET Methods should return json if no error occurs', () => {
+    // arrange
     Product.findOne = jest.fn().mockImplementationOnce((query, callback) => {
       callback(null, null);
     });
@@ -20,18 +26,11 @@ describe('Test product detail controllers', () => {
     productDetailController.getMethod(req, res);
     // assert
     expect(res.json).toHaveBeenCalled();
+    expect(res.json.mock.calls.length).toBe(1);
   });
-  test('Test Get Methods no happy path', () => {
+
+  test('GET Methods should return send if error occurs', () => {
     // arrange
-    const res = {
-      send: jest.fn(),
-      json: jest.fn(),
-    };
-    const req = {
-      params: {
-        productName: 'H500GV-HC002R',
-      },
-    };
     Product.findOne = jest.fn().mockImplementationOnce((query, callback) => {
       callback(true, null);
     });
@@ -39,5 +38,6 @@ describe('Test product detail controllers', () => {
     productDetailController.getMethod(req, res);
     // assert
     expect(res.send).toHaveBeenCalled();
+    expect(res.send.mock.calls.length).toBe(1);
   });
 });

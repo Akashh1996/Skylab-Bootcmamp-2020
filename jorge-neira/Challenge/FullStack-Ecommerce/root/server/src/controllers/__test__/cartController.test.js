@@ -3,99 +3,93 @@ const productDetailController = require('../cartController')(Cart);
 
 jest.mock('../../models/cartModel');
 
-describe('Test cart controllers', () => {
-  test('Test GET Methods happy path', () => {
-    // arrange
-    const res = {
+describe('Cart Controllers', () => {
+  let res;
+  let req;
+  beforeEach(() => {
+    res = {
       json: jest.fn(),
-    };
-    Cart.find.mockImplementationOnce((query, callback) => {
-      callback(null, null);
-    });
-    // act
-    productDetailController.getMethod(null, res);
-    // assert
-    expect(res.json).toHaveBeenCalled();
-  });
-
-  test('Test GET Methods not happy path', () => {
-    // arrange
-    const res = {
       send: jest.fn(),
     };
-    Cart.find.mockImplementationOnce((query, callback) => {
-      callback(true, null);
-    });
-    // act
-    productDetailController.getMethod(null, res);
-    // assert
-    expect(res.send.mock.calls.length).toBe(1);
+    req = {
+      body: {
+        _id: 999,
+      },
+    };
   });
 
-  test('Test POST Methods happy path', () => {
+  describe('GET Methods', () => {
+    test('should return json request if no error occurs', () => {
     // arrange
-    const res = {
-      json: jest.fn(),
-    };
-    const req = {
-      body: {},
-    };
-
-    Cart.create.mockImplementationOnce((query, callback) => {
-      callback(null, null);
+      Cart.find.mockImplementationOnce((query, callback) => {
+        callback(null, null);
+      });
+      // act
+      productDetailController.getMethod(null, res);
+      // assert
+      expect(res.json).toHaveBeenCalled();
+      expect(res.json.mock.calls.length).toBe(1);
     });
-    productDetailController.postMethod(req, res);
 
-    expect(res.json).toHaveBeenCalled();
+    test('should return send if error occurs', () => {
+    // arrange
+      Cart.find.mockImplementationOnce((query, callback) => {
+        callback(true, null);
+      });
+      // act
+      productDetailController.getMethod(null, res);
+      // assert
+      expect(res.send).toHaveBeenCalled();
+      expect(res.send.mock.calls.length).toBe(1);
+    });
   });
+  describe('POST Methods', () => {
+    test('should return json if no error occurs', () => {
+    // arrange
+      Cart.create.mockImplementationOnce((query, callback) => {
+        callback(null, null);
+      });
+      // act
+      productDetailController.postMethod(req, res);
+      // assert
+      expect(res.json).toHaveBeenCalled();
+      expect(res.json.mock.calls.length).toBe(1);
+    });
 
-  test('Test POST Methods not happy path', () => {
+    test('should return send if error occurs', () => {
     // arrange
-    const res = {
-      send: jest.fn(),
-    };
-    const req = {
-      body: {},
-    };
-    // act
-    Cart.create.mockImplementationOnce((query, callback) => {
-      callback(true);
+      Cart.create.mockImplementationOnce((query, callback) => {
+        callback(true, null);
+      });
+      // act
+      productDetailController.postMethod(req, res);
+      // assert
+      expect(res.send).toHaveBeenCalled();
+      expect(res.send.mock.calls.length).toBe(1);
     });
-    productDetailController.postMethod(req, res);
-    // assert
-    expect(res.send).toHaveBeenCalled();
   });
-
-  test('Test Delete Methods happy path', () => {
+  describe('DELETE Methods', () => {
+    test('should return send if error occurs', () => {
     // arrange
-    const res = {
-      send: jest.fn(),
-    };
-    const req = {
-      body: { cartId: 1 },
-    };
-    // act
-    Cart.deleteOne.mockImplementationOnce((query, callback) => {
-      callback(true, null);
+      Cart.deleteOne.mockImplementationOnce((query, callback) => {
+        callback(true, null);
+      });
+      // act
+      productDetailController.deleteMethod(req, res);
+      // assert
+      expect(res.send).toHaveBeenCalled();
+      expect(res.send.mock.calls.length).toBe(1);
     });
-    productDetailController.deleteMethod(req, res);
-    // assert
-    expect(res.send).toHaveBeenCalled();
-  });
-  test('Test Delete Methods happy path', () => {
+    test('should return send if no error occurs', () => {
     // arrange
-    const res = {
-      json: jest.fn(),
-    };
-    const req = {
-      body: { cartId: 1 },
-    };
-    // act
-    Cart.deleteOne.mockImplementationOnce((query, callback) => {
-      callback(null, null);
+      Cart.deleteOne.mockImplementationOnce((query, callback) => {
+        callback(null, null);
+      });
+      // act
+      productDetailController.deleteMethod(req, res);
+      // assert
+      expect(res.json).toHaveBeenCalled();
+      expect(res.json.mock.calls.length).toBe(1);
     });
-    productDetailController.deleteMethod(req, res);
-    // assert
-    expect(res.json.mock.calls.length).toBe(1);
   });
 });
