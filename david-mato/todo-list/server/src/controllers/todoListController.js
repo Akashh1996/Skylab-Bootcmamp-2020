@@ -15,13 +15,6 @@ function todoListController(TodoList) {
     }
 
     TodoList.create(query, findCallback);
-    // const product = new Products(req.body);
-    // product.save((error, post) => {
-    //   if (error) {
-    //     return next(error);
-    //   }
-    //   return res.json(post);
-    // });
   }
 
   function putMethod(req, res) {

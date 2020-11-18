@@ -1,4 +1,3 @@
-// import '../style.css';
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';

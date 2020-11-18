@@ -13,13 +13,6 @@ ReactDOM.render(
   <React.StrictMode>
     <ReduxProvider store={store}>
       <TodoList />
-      {/* <BrowserRouter>
-        <Switch>
-          <Route path="/" exact component={Landing} />
-          <Route path="/detail/:productId" exact component={Detail} />
-          <Route path="/cart" exact component={Cart} />
-        </Switch>
-      </BrowserRouter> */}
     </ReduxProvider>
   </React.StrictMode>,
   document.getElementById('root'),

@@ -114,12 +114,12 @@ describe('productsController', () => {
   });
 
   describe('deleteMethod', () => {
-    test('should call res.send when there is an error', () => {
+    test('should call res.json when there is an error', () => {
       const req = {
         body: { id: null },
       };
       const res = {
-        send: jest.fn(),
+        json: jest.fn(),
       };
 
       TodoList.findByIdAndDelete = jest.fn().mockImplementationOnce((query, callback) => {
@@ -128,10 +128,10 @@ describe('productsController', () => {
 
       controller.deleteMethod(req, res);
 
-      expect(res.send).toHaveBeenCalled();
+      expect(res.json).toHaveBeenCalled();
     });
 
-    test('should call res.send3', () => {
+    test('should call res.send', () => {
       const req = {
         body: { id: null },
       };
