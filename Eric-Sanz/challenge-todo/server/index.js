@@ -2,6 +2,7 @@ const express = require('express');
 const debug = require('debug')('app');
 const chalk = require('chalk');
 const morgan = require('morgan');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const Todo = require('./src/models/todoModel');
@@ -9,6 +10,8 @@ const todoRouter = require('./src/routes/todoRouter')(Todo);
 
 const app = express();
 const port = process.env.PORT || 5000;
+
+app.use(cors());
 
 mongoose.connect('mongodb://localhost/todoListdb');
 
