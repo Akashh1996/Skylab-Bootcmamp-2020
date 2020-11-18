@@ -1,15 +1,19 @@
 import actionTypes from '../actions/actionTypes';
 
 export default function todoReducer(state = {}, action) {
+  let newState = null;
   switch (action.type) {
     case actionTypes.LOAD__LIST: {
-      const todos = { ...state, todoList: action.todoList };
-      return todos;
+      newState = { ...state, todoList: action.todoList };
+      break;
     }
     case actionTypes.LOAD_ERROR: {
-      return console.log(action.error);
+      newState = { ...state, todoListError: action.error };
+      break;
     }
     default:
-      return state;
+      newState = {...state};
+      break;
   }
+  return newState;
 }
