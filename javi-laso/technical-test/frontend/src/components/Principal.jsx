@@ -1,28 +1,33 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './principal.css';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
-import { getInputs, deleteInput } from '../redux/actions/actions';
+import { getInputs, deleteInput, addInput } from '../redux/actions/actions';
 
 function Principal({ inputList, actions }) {
+  const [inputValue, setInputValue] = useState('');
   useEffect(() => {
     if (inputList.length === 0) {
       actions.getInputs();
     }
   }, []);
 
+  function changeValue(event) {
+    setInputValue(event.target.value.trim());
+  }
+
   return (
     <div className="App">
       <h1 className="title">Todo list</h1>
-      <input type="text" />
-      <input type="submit" />
+      <input type="text" value={inputValue} id="input-text" onChange={changeValue} />
+      <input type="submit" value="Add toDo" id="submit-button" onClick={() => { actions.addInput({ text: inputValue }); setInputValue(''); }} />
       <ul className="list">
         {inputList && inputList.map((inputItem) => (
-          <>
-            <li key={Date.now()}>{inputItem.text}</li>
+          <li key={Date.now() * Math.random()}>
+            <span key={Date.now() * Math.random()}>{inputItem.text}</span>
             <button key={Date.now() * Math.random()} type="button" className="button-delete" onClick={() => actions.deleteInput(inputItem)}>Remove</button>
-          </>
+          </li>
         ))}
       </ul>
     </div>
@@ -34,6 +39,7 @@ Principal.propTypes = {
   actions: PropTypes.shape({
     getInputs: PropTypes.func.isRequired,
     deleteInput: PropTypes.func.isRequired,
+    addInput: PropTypes.func.isRequired,
   }).isRequired,
 };
 
@@ -46,7 +52,7 @@ function mapStateToProps({ inputsReducer }) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return { actions: bindActionCreators({ getInputs, deleteInput }, dispatch) };
+  return { actions: bindActionCreators({ getInputs, deleteInput, addInput }, dispatch) };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Principal);

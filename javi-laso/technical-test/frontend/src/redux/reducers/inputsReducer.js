@@ -10,6 +10,8 @@ export default function inputsReducer(state = initialState, action) {
         const { _id } = inputItem;
         return _id !== action.deletedItemId;
       });
+    case actionTypes.ADD_INPUT:
+      return [...state, action.addedItem];
     default:
       return state;
   }

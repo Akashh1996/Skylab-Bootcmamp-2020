@@ -6,9 +6,10 @@ function inputsController(inputsSchema) {
   }
 
   function postMethod(req, res) {
-    const { input } = req.body;
+    const { text } = req.body;
+    const inputObject = {text}
     const createCallback = (error, newItem) => (error ? res.send(error) : res.send(newItem));
-    inputsSchema.create(input, createCallback);
+    inputsSchema.create(inputObject, createCallback);
   }
 
   function patchMethod(req, res) {

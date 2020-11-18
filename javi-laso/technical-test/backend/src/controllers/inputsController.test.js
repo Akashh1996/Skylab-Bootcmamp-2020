@@ -45,7 +45,7 @@ describe('inputsController tests', () => {
   describe('postMethod', () => {
     beforeEach(() => {
       res = { send: jest.fn() };
-      req = { body: { input: null } };
+      req = { body: { text: null } };
       result = {};
     });
 
@@ -105,13 +105,13 @@ describe('inputsController tests', () => {
   describe('deleteMethod', () => {
     beforeEach(() => {
       res = { send: jest.fn() };
-      req = { body: { input: {_id: null} } };
+      req = { body: { _id: null } };
       response = {};
     });
 
     test('if there is an error should call res.send with the error', () => {
       error = true;
-      inputsSchema.deleteOne = jest.fn().mockImplementationOnce((query, callback) => {
+      inputsSchema.findByIdAndDelete = jest.fn().mockImplementationOnce((id, callback) => {
         callback(error, response);
       });
 
@@ -122,7 +122,7 @@ describe('inputsController tests', () => {
 
     test('should call res.send with the response if there is no error', () => {
       error = false;
-      inputsSchema.deleteOne = jest.fn().mockImplementationOnce((query, callback) => {
+      inputsSchema.findByIdAndDelete = jest.fn().mockImplementationOnce((id, callback) => {
         callback(error, response);
       });
 
