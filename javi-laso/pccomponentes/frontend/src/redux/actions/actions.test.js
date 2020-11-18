@@ -80,12 +80,12 @@ describe('FrontEnd actions', () => {
   describe('putItemInCart', () => {
     beforeEach(async () => {
       fakeData = { data: { id: 1 } };
-      axios.put.mockImplementationOnce(() => Promise.resolve(fakeData));
+      axios.patch.mockImplementationOnce(() => Promise.resolve(fakeData));
       await store.dispatch(actions.putItemInCart(fakeData));
     });
 
     test('should call axios', () => {
-      expect(axios.put).toHaveBeenCalledWith(shoppingCartUrl, { item: fakeData });
+      expect(axios.patch).toHaveBeenCalledWith(shoppingCartUrl, { item: fakeData });
     });
   });
 
@@ -106,6 +106,12 @@ describe('FrontEnd actions', () => {
 
     test('should call axios', () => {
       expect(axios.delete).toHaveBeenCalledWith(shoppingCartUrl, config);
+    });
+  });
+
+  describe('filterItems', () => {
+    test('should return action with type FILTER_ITEMS', () => {
+      expect(actions.filterItems(null).type).toBe(actionTypes.FILTER_ITEMS);
     });
   });
 });
