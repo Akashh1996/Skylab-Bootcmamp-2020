@@ -1,30 +1,29 @@
-/* eslint-disable no-console */
 function cartController(Carts) {
   function getMethod(req, res) {
     const query = {};
-    Carts.find(query, (errorFindProduct, productDoc) => (
-      errorFindProduct
-        ? res.send(errorFindProduct) : res.json(productDoc)
+    Carts.find(query, (errorOnFind, productDoc) => (
+      errorOnFind
+        ? res.send(errorOnFind)
+        : res.json(productDoc)
     ));
   }
 
   function postMethod(req, res) {
-    const updateCart = {
+    const newItem = {
       ...req.body,
     };
-    Carts.create(updateCart, (errCreateUpdate) => (errCreateUpdate
-      ? res.send(errCreateUpdate)
-      : res.json(updateCart)));
+    Carts.create(newItem, (errorOnCreate) => (
+      errorOnCreate
+        ? res.send(errorOnCreate)
+        : res.json(newItem)));
   }
 
   function deleteMethod(req, res) {
-    const updateCart = {
-      ...req.body,
-    };
-    console.log(updateCart);
-    Carts.deleteOne(updateCart, (errorDelete) => (
-      errorDelete
-        ? res.send(errorDelete) : res.json(updateCart)));
+    const { _id } = req.body;
+    Carts.deleteOne(_id, (errorOnDelete) => (
+      errorOnDelete
+        ? res.send(errorOnDelete)
+        : res.json(_id)));
   }
 
   return {
