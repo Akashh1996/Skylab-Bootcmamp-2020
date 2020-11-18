@@ -9,22 +9,14 @@ function todosListController(Todos) {
     ));
   }
 
-  function postMethod(req, res) {
-    const createTodo = {
-      ...req.body,
-    };
-
-    Todos.create(createTodo, (errorCreateTodo) => (errorCreateTodo
+  function postMethod({ body }, res) {
+    Todos.create(body, (errorCreateTodo) => (errorCreateTodo
       ? res.send(errorCreateTodo)
-      : res.json({ ...createTodo, status: 'Created' })));
+      : res.json({ ...body, status: 'Created' })));
   }
 
   function patchMethod(req, res) {
-    const bodyContent = {
-      ...req.body,
-    };
-    const { todoId } = bodyContent;
-    const { todoDescription } = bodyContent;
+    const { todoId, todoDescription } = req.body;
 
     Todos.findOneAndUpdate(
       { todoId },
@@ -37,15 +29,11 @@ function todosListController(Todos) {
     );
   }
 
-  function deleteMethod(req, res) {
-    const todoToDelete = {
-      ...req.body,
-    };
-
-    Todos.deleteOne(todoToDelete, (errorOnDelte) => (
+  function deleteMethod({ body }, res) {
+    Todos.deleteOne(body, (errorOnDelte) => (
       errorOnDelte
         ? res.send(errorOnDelte)
-        : res.json({ ...todoToDelete, state: 'Deleted' })));
+        : res.json({ ...body, state: 'Deleted' })));
   }
 
   return {
