@@ -9,13 +9,16 @@ describe('inputsController tests', () => {
   let result;
   let error;
 
+  beforeEach(()=> {
+    res = { send: jest.fn(), json: jest.fn() };
+  })
+
   afterAll(() => {
     inputsSchema.mockRestore();
   });
 
   describe('getMethod', () => {
     beforeEach(() => {
-      res = { send: jest.fn(), json: jest.fn() };
       result = {};
     });
 
@@ -44,7 +47,6 @@ describe('inputsController tests', () => {
 
   describe('postMethod', () => {
     beforeEach(() => {
-      res = { send: jest.fn() };
       req = { body: { text: null } };
       result = {};
     });
@@ -74,15 +76,14 @@ describe('inputsController tests', () => {
 
   describe('patchMethod', () => {
     beforeEach(() => {
-      res = { send: jest.fn() };
       req = { body: { input: {_id: null}, newInput: {text:null} } };
-      response = {};
+      updatedItem = {};
     });
 
     test('if there is an error should call res.send with the error', () => {
       error = true;
-      inputsSchema.updateOne = jest.fn().mockImplementationOnce((query, change, callback) => {
-        callback(error, response);
+      inputsSchema.findByIdAndUpdate = jest.fn().mockImplementationOnce((query, change, callback) => {
+        callback(error, updatedItem);
       });
 
       inputsController.patchMethod(req, res);
@@ -90,10 +91,10 @@ describe('inputsController tests', () => {
       expect(res.send).toHaveBeenCalledWith(error);
     });
 
-    test('should call res.send with the response if there is no error', () => {
+    test('should call res.send with the updatedItem if there is no error', () => {
       error = false;
-      inputsSchema.updateOne = jest.fn().mockImplementationOnce((query, change, callback) => {
-        callback(error, response);
+      inputsSchema.findByIdAndUpdate = jest.fn().mockImplementationOnce((query, change, callback) => {
+        callback(error, updatedItem);
       });
 
       inputsController.patchMethod(req, res);
@@ -104,7 +105,6 @@ describe('inputsController tests', () => {
 
   describe('deleteMethod', () => {
     beforeEach(() => {
-      res = { send: jest.fn() };
       req = { body: { _id: null } };
       response = {};
     });
