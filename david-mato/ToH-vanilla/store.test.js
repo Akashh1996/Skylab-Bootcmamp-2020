@@ -1,18 +1,12 @@
 const store = require('./store')
 
 describe('store', () => {
-<<<<<<< HEAD
-=======
-    const heroes = store.getHeroes();
-
->>>>>>> d00f4693d2b6469579a6af8ee7745a1ba010e68d
     test('should create', () => {
         expect(store).toBeDefined();
     })
 
     describe('getHeroes', () => {
         test('should call getHeroes and return an array of heroes', () => {
-<<<<<<< HEAD
             expect(store.getHeroes()).toEqual([
                 { id: 11, name: 'Dr Nice' },
                 { id: 12, name: 'Narco' },
@@ -30,34 +24,14 @@ describe('store', () => {
     describe('getHeroById', () => {
         test('should call getHeroById and return one heroe', () => {
             expect(store.getHeroById(12)).toEqual({ id: 12, name: 'Narco' });
-=======
-            expect(store.getHeroes()).toEqual(heroes);
-        })
-    })
-    describe('getHeroById', () => {
-        test('should call getHeroById and return one hero', () => {
-            // act
-            const response = store.getHeroById(5);
-
-            // assert
-            expect(response).toEqual(heroes[4]);
->>>>>>> d00f4693d2b6469579a6af8ee7745a1ba010e68d
         })
     })
     describe('getTopHeroes', () => {
         test('should call getTopHeroes and return', () => {
-<<<<<<< HEAD
             expect(store.getTopHeroes()).toEqual([{ id: 12, name: 'Narco' },
             { id: 13, name: 'Bombasto' },
             { id: 14, name: 'Celeritas' },
             { id: 15, name: 'Magneta' }]);
-=======
-            // act
-            const response = store.getTopHeroes();
-
-            // assert
-            expect(response).toEqual(heroes.slice(1, 5));
->>>>>>> d00f4693d2b6469579a6af8ee7745a1ba010e68d
         })
     })
 })
