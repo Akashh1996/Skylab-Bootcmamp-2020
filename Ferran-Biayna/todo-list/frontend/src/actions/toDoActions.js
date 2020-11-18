@@ -31,10 +31,10 @@ function requestAddItemError(error) {
   };
 }
 
-function requestUpdateItemSuccess(UpdatedItem) {
+function requestUpdateItemSuccess(updatedItem) {
   return {
     type: actionTypes.UPDATE_ITEM,
-    UpdatedItem,
+    updatedItem,
   };
 }
 
@@ -45,10 +45,10 @@ function requestUpdateItemError(error) {
   };
 }
 
-function requestDeleteItemSuccess(DeletedItem) {
+function requestDeleteItemSuccess(deletedItem) {
   return {
     type: actionTypes.DELETE_ITEM,
-    DeletedItem,
+    deletedItem,
   };
 }
 
@@ -62,8 +62,8 @@ function requestDeleteItemError(error) {
 export function requestList() {
   return async (dispatch) => {
     try {
-      const list = await axios.get(backURL);
-      dispatch(requestListSuccess(list.data));
+      const listToDo = await axios.get(backURL);
+      dispatch(requestListSuccess(listToDo.data));
     } catch (error) {
       dispatch(requestListError(error));
     }
@@ -84,8 +84,8 @@ export function requestAddItem(item) {
 export function requestUpdateItem(item) {
   return async (dispatch) => {
     try {
-      const UpdatedItem = await axios.put(backURL, item);
-      dispatch(requestUpdateItemSuccess(UpdatedItem.data));
+      const updatedItem = await axios.put(backURL, item);
+      dispatch(requestUpdateItemSuccess(updatedItem.data));
     } catch (error) {
       dispatch(requestUpdateItemError(error));
     }
@@ -95,8 +95,8 @@ export function requestUpdateItem(item) {
 export function requestDeleteItem(item) {
   return async (dispatch) => {
     try {
-      const DeletedItem = await axios.delete(backURL, item);
-      dispatch(requestDeleteItemSuccess(DeletedItem.data));
+      const deletedItem = await axios.delete(backURL, { data: item });
+      dispatch(requestDeleteItemSuccess(deletedItem.data));
     } catch (error) {
       dispatch(requestDeleteItemError(error));
     }

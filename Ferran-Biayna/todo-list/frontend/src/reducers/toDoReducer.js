@@ -10,19 +10,20 @@ export default function toDoReducer(state = {}, action) {
       answer = { ...state, error: action.error };
       break;
     case actionTypes.ADD_ITEM:
-      answer = { ...state, list: [...state.list, action.item] };
+      answer = { ...state, list: [...state.list, action.newItem] };
       break;
     case actionTypes.ADD_ITEM_ERROR:
       answer = { ...state };
       break;
     case actionTypes.UPDATE_ITEM:
-      answer = { ...state, list: action.item };
+      answer = { ...state, list: action.updatedItem };
       break;
     case actionTypes.UPDATE_ITEM_ERROR:
       answer = { ...state };
       break;
     case actionTypes.DELETE_ITEM:
-      answer = { ...state, list: action.item };
+      debugger;
+      answer = { ...state, list: state.filter(action.deletedItem) };
       break;
     case actionTypes.DELETE_ITEM_ERROR:
       answer = { ...state, error: action.error };

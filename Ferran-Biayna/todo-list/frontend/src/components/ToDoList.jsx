@@ -6,6 +6,7 @@ import {
 } from '../actions/toDoActions';
 
 function ToDoList({ list, dispatch }) {
+  debugger;
   const [newItem, setnewItem] = useState('');
 
   useEffect(() => {
@@ -23,10 +24,10 @@ function ToDoList({ list, dispatch }) {
       />
       <button type="button" onClick={() => dispatch(requestAddItem(newItem))}>Add</button>
 
-      {(!list || !list.length) && <h1>There is no list!</h1>}
+      {(!list || !list?.length) && <h1>There is no list!</h1>}
 
       <ol>
-        {list && list.length > 0 && list.map((item) => (
+        {list && list?.length > 0 && list?.map((item) => (
           <>
             <li>
               <span>
