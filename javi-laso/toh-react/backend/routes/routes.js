@@ -1,83 +1,20 @@
-const express = require('express');
-const jsonData = require('../api/heroes.json');
+const { Router } = require('express');
+const heroController = require('../controllers/heroController');
 
-const heroRoutes = express.Router();
+const heroRoutes = Router();
 
-function routes() {
-	heroRoutes
-		.route('/')
-		.get((req, res) => {
-			try {
-				res.status(200);
-				res.send(jsonData);
-			} catch (error) {
-				res.status(400);
-				res.send('Error loading heroes b');
-			}
-		})
-		.post((req, res) => {
-			try {
-				const { name } = req.body;
-				const nextId =
-					Math.max(...jsonData.map((hero) => hero.id)
-					) + 1;
-				jsonData.push({ id: nextId, name });
-				res.status(201);
-				res.send(jsonData);
-			} catch (error) {}
-		})
-		.delete((req, res) => {
-			const { idHero } = req.query;
-			const heroId = jsonData.findIndex((hero) => hero.id === +idHero);
-			jsonData.splice(heroId, 1);
-			res.status(200);
-			res.send(jsonData);
-		})
-		.patch((req, res) => {
-			const { id, name } = req.query;
-			const heroId = jsonData.findIndex((hero) => hero.id === +id);
-			jsonData[heroId].name = name;
-			res.status(200);
-			res.send(jsonData);
-		});
+function routes(superHeroSchema, cartSchema) {
+  const hero = heroController(superHeroSchema, cartSchema);
 
-	heroRoutes
-		.route('/:id')
-		.get((req, res) => {
-			const { id } = req.params;
-			const heroObject = jsonData.find((hero) => {
-				return hero.id === +id;
-			});
+  heroRoutes
+    .route('/')
+    .get(hero.getMethod);
 
-			if (heroObject) {
-				res.status(200);
-				res.send(heroObject);
-			} else {
-				res.status(200);
-				res.send('There is no hero with this id');
-			}
-		})
-		.delete((req, res) => {
-			const { id } = req.params;
-			const heroId = jsonData.findIndex((hero) => {
-				return hero.id === +id;
-			});
-			try {
-				if (heroId >= 0) {
-					jsonData.splice(heroId, 1);
-					res.status(200);
-					res.send(jsonData);
-				} else {
-					res.status(204);
-					res.send(`There is no hero with id ${id}`);
-				}
-			} catch (error) {
-				res.status(404);
-				res.send('Error deleting');
-			}
-		});
+  heroRoutes
+    .route('/cars')
+    .get(hero.getCarsMethod);
 
-	return heroRoutes;
+  return heroRoutes;
 }
 
 module.exports = routes;
