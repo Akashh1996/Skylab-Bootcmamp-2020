@@ -38,6 +38,7 @@ export function requestSaberByName(saberName) {
   return async (dispatch) => {
     const endpoint = `http://localhost:1240/sabers/${saberName}`;
     try {
+      debugger;
       const saber = await axios.get(endpoint);
       dispatch(requestSaberByNameSuccess(saber.data));
     } catch (error) {

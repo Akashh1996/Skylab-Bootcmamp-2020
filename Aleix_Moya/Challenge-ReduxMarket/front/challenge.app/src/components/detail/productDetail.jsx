@@ -15,6 +15,7 @@ function productDetail({
 }) {
   let name = window.location.pathname;
   name = name.replaceAll('%', ' ').replaceAll('20', '').replaceAll('/', '').replaceAll('list', '');
+
   if (typeof (productList) === 'undefined') {
     dispatch(requestList());
   }
@@ -22,7 +23,6 @@ function productDetail({
     <>
       <h1 id="title">Detail</h1>
       <nav>
-
         <p id="linkList"><Link id="datasheet" to="/fav/myfav">Fav</Link></p>
         <p id="linkList"> | </p>
         <p id="linkList"><Link id="list" to="/list">Return to List</Link></p>
@@ -74,6 +74,7 @@ function productDetail({
                     && <tr>
                       <td>
                         {`Profile: ${Object.getOwnPropertyNames(item)[9]}`}
+
                         {' '}
                       </td>
                       <td> </td>

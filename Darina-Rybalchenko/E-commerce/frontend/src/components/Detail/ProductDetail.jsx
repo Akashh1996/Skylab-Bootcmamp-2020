@@ -11,10 +11,13 @@ import Button from 'react-bootstrap/Button';
 import { loadProductBasket, requestProductDetail } from '../../redux/actions/product-actions';
 
 function ProductDetail({ match, product, dispatch }) {
-  const id = match.params.productId;
+  debugger;
+  const id = +match.params.productId;
+  console.log(match);
 
   useEffect(() => {
-    dispatch.requestProductDetail(+id);
+    debugger;
+    dispatch.requestProductDetail(id);
   }, []);
 
   return (
@@ -69,10 +72,13 @@ ProductDetail.propTypes = {
 };
 
 function mapStateToProps({ productReducer }) {
+  debugger;
+  console.log(productReducer);
   return { product: productReducer.product };
 }
 
 function mapDispatchToProps(dispatch) {
+  debugger;
   return {
     dispatch: bindActionCreators({ requestProductDetail, loadProductBasket }, dispatch),
 

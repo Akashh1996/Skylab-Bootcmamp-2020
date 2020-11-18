@@ -87,7 +87,6 @@ class SpotifyStore {
 	}
 
 	async getRandomSongFromTopTracks(artist) {
-		debugger;
 		await this.requestArtistTopTracks(artist);
 		const topTracks = this.getArtistTopTracks();
 		const number = Math.floor(Math.random() * topTracks.length);

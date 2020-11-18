@@ -1,6 +1,12 @@
-function basketController(Product) {
+function basketController(Basket) {
   function getMethod(req, res) {
-    res.json(Product.getBasket());
+    const query = {};
+    Basket.find(query, (errorFindProduct, basket) => {
+      if (errorFindProduct) {
+        res.send(errorFindProduct);
+      }
+      res.json(basket);
+    });
   }
   return { getMethod };
 }

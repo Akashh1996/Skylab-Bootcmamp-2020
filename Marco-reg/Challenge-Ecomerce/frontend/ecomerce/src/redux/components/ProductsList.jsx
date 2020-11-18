@@ -7,8 +7,10 @@ import {Link}from 'react-router-dom';
 
 
 function ProductList({ productList, dispatch}) {
+   
     
-    if (productList.length <= 0) {
+    if (!productList || productList?.length <= 0) {
+        debugger
         dispatch(requestProducts());
     }
     console.log(productList)
@@ -17,17 +19,18 @@ function ProductList({ productList, dispatch}) {
         <div className = "list-wrapper">
             {productList &&
                 productList.length &&
-                productList[0].map((product) => {
+                productList.map((product) => {
                 return <p><Link to={`/${product.id}`}>{product["product-name"]}</Link>
-                <img alt ="image"src={product['product-image-url']}/></p>
+                <img alt="product-img" src={product['product-image-url']}/></p>
                 })}
         </div>
     );
 }
 function mapStateToProps(state) {
+    debugger;
    
     return {
-        productList: state.productReducer
+        productList: state.productReducer.productList
     };
 }
 function mapDispatchToProps(dispatch) {

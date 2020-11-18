@@ -1,49 +1,40 @@
+/* eslint-disable array-callback-return */
 /* eslint-disable no-debugger */
 /* eslint-disable no-console */
 const express = require('express');
-const products = require('../public/store.json');
+const productController = require('../controllers/productController');
+const productsController = require('../controllers/productsController');
+const shoppingController = require('../controllers/shoppingController');
 
-const marketRouter = express.Router();
+let shoppingList = [];
 
-let shoppingList = []
+function routes(markets) {
+  const marketRouter = express.Router();
+  const product = productController(markets);
+  const products = productsController(markets);
+  const shopping = shoppingController(markets);
 
-function routes() {
   marketRouter.route('/')
-    .get((req, res) => {
-      res.send(products);
-      console.log('getting products data...');
-    });
+    .get(products.getMethod);
 
-    marketRouter.route('/detail')
-    .get((req, res) => {
-      products.map((product) => {
-       if (product.id === +req.query.id) {
-        res.send(product)
-       }
-      })
-      console.log('getting product detail data...');
-    });
+  marketRouter.route('/detail')
+    .get(product.getMethod);
 
-    marketRouter.route('/shoppingCart')
-    .get((req, res) => {
-      res.send(shoppingList)
-      console.log('getting shopping cart data...');
-    })
+  marketRouter.route('/shoppingCart')
+    .get(shopping.getMethod)
     .put((req, res) => {
       console.log('Adding shopping cart data...');
-      products.map((product) => {
-        if(product.id === +req.query.id) {
-          shoppingList.push(product)
-          res.send(shoppingList)
+      products.map((element) => {
+        if (element.id === +req.query.id) {
+          shoppingList.push(element);
+          res.send(shoppingList);
         }
-      })
+      });
     })
     .delete((req, res) => {
-      console.log('deleting a product from shopping list ...')
-      shoppingList = shoppingList.filter((element) => {
-        return element.id !== +req.query.id
-      })
-      res.send(shoppingList)
+      console.log('deleting a product from shopping list ...');
+      shoppingList = shoppingList.filter((element) => element.id !== +req.query.id);
+      res.send(shoppingList);
     });
   return marketRouter;
 }
