@@ -2,17 +2,24 @@ import actionTypes from '../actions/action-types';
 
 const initialState = [];
 export default function inputsReducer(state = initialState, action) {
+  let newState;
   switch (action.type) {
     case actionTypes.GET_INPUTS:
-      return action.inputList;
+      newState = action.inputList;
+      break;
     case actionTypes.DELETE_INPUT:
-      return state.filter((inputItem) => {
+      newState = state.filter((inputItem) => {
         const { _id } = inputItem;
         return _id !== action.deletedItemId;
       });
+      break;
     case actionTypes.ADD_INPUT:
-      return [...state, action.addedItem];
+      newState = [...state, action.addedItem];
+      break;
     default:
-      return state;
+      newState = state;
+      break;
   }
+
+  return newState;
 }
