@@ -13,7 +13,7 @@ function TodoList({ todoList, actions }) {
       <input
         onChange={(event) => setNewTodoListItem(event.target.value)}
         value={newTodoListItem}
-        placeholder="Enter a new hero name"
+        placeholder="Enter a new todo list item"
       />
       <button
         type="button"

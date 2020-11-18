@@ -4,7 +4,6 @@ import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import TodoList from './TodoList';
-// import { deleteTodoListItem } from '../redux/actions/todoListActions';
 
 jest.mock('../redux/actions/todoListActions');
 
