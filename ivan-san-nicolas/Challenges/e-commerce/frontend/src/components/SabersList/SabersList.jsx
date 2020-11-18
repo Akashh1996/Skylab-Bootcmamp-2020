@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { requestSabers } from '../../redux/actions/sabersActions';
-import FirstRow from './FirstRow/FirstRow';
 import LoadingGif from '../LoadingGif/LoadingGif'
 import './css/SabersList.css';
 

@@ -11,7 +11,6 @@ function sabersRouter(Sabers) {
     .get(sabers.getMethod);
 
   router.route('/:saberName')
-  .all(saber.allMidleware)
   .get(saber.getMethod);
 
   return router;

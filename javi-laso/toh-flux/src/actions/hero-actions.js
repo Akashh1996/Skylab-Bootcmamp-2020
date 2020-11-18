@@ -4,7 +4,6 @@ import axios from 'axios';
 
 async function loadHeroes() {
 	const heroes = await axios('/api/heroes.json');
-	debugger;
 	dispatcher.dispatch({
 		type: actionTypes.LOAD_HEROES,
 		payload: heroes.data
