@@ -1,3 +1,11 @@
+# Skylab FullStack Ecommerce Challenge
+
+This project is build with React | Redux | Express | MongoDB | Mongoose
+
+React App is running on [http://localhost:3000](http://localhost:3000)
+
+Express Server is running on [http://localhost:5000] API Routes GET Current shopping cart /cart | GET product detail [/product/:productModel]
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
