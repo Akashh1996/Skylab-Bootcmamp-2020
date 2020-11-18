@@ -14,7 +14,7 @@ const initialState = { };
 
 const buildStore = configureStore([thunk]);
 
-describe('ItemList', () => {
+describe('CartElement', () => {
   beforeEach(() => {
     const store = buildStore(initialState);
     store.dispatch = jest.fn();
@@ -27,7 +27,7 @@ describe('ItemList', () => {
       </Provider>
     );
 
-    render(<CartElement arrayOfItems={[{ 'product-name': 'fakeName', manufacturer: 'ABC' }]} />, { wrapper: Wrapper });
+    render(<CartElement product={{ product: { 'product-name': 'fakeName', manufacturer: 'ABC' }, quantity: 1 }} />, { wrapper: Wrapper });
   });
 
   test('should render the title', () => {
