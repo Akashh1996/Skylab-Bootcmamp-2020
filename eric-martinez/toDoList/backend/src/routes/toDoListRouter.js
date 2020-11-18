@@ -1,9 +1,9 @@
-const express = require('express');
+const { Router } = require('express');
 const itemController = require('../controllers/itemController');
 const itemDeleteController = require('../controllers/itemDeleteController');
 
 function itemsRouter(Items) {
-  const router = express.Router();
+  const router = Router();
   const item = itemController(Items);
   const deleteItem = itemDeleteController(Items);
 

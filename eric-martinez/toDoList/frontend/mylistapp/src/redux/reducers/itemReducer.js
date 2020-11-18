@@ -1,14 +1,18 @@
 import actionTypes from '../actions/actionTypes';
 
 export default function superReducer(state = {}, action) {
+    let loading ='';
     switch (action.type) {
         case actionTypes.LOAD_TODOLIST:
-            return {...state, items: action.items}
+            loading = {...state, items: action.items}
+            break;
         case actionTypes.LOAD_TODOLIST_ERROR:
             break;
         case actionTypes.CLEAN_PRODUCT_DETAIL:
-            return {...state, items: null}
+            loading = {...state, items: null}
+            break;
         default:
-            return state;
-    }
+            loading = state;
+        }
+        return loading;
 }

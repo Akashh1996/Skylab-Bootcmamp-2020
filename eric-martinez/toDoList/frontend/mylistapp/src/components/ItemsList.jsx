@@ -10,7 +10,7 @@ function ItemsList({ items, actions, dispatch }) {
     if (!items && !items?.length) {
       dispatch(requestItems());
     }
-  },[dispatch, items])
+  },[dispatch,items])
 
   
   return (
@@ -38,9 +38,9 @@ function ItemsList({ items, actions, dispatch }) {
     </>
   );
 }
-function mapStateToProps(state) {
+function mapStateToProps({itemReducer}) {
   return {
-    items: state.itemReducer.items,
+    items: itemReducer.items,
   };
 }
 function mapDispatchToProps(dispatch) {

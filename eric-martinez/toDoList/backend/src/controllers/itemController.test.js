@@ -6,7 +6,6 @@ jest.mock('../models/toDoListModel');
 describe('itemController', () => {
   test('should call response json on getMethod when find throws error', () => {
     const res = {
-      send: jest.fn(),
       json: jest.fn(),
     };
     Item.find.mockImplementationOnce((query, callback) => {
@@ -17,10 +16,9 @@ describe('itemController', () => {
 
     expect(res.json.mock.calls.length).toBe(1);
   });
-  test('should call response json on getMethod when find throws error', () => {
+  test('should call response send on getMethod when find throws error', () => {
     const res = {
       send: jest.fn(),
-      json: jest.fn(),
     };
     Item.find.mockImplementationOnce((query, callback) => {
       callback(true, null);

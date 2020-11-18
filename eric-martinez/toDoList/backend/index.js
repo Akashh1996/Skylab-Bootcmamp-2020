@@ -12,7 +12,7 @@ const app = express();
 app.use(cors());
 const port = process.env.PORT || 5000;
 
-mongoose.connect('mongodb://localhost/toDoListdb');
+mongoose.connect('mongodb://localhost/toDoListdb', { useNewUrlParser: true }, { useUnifiedTopology: true });
 
 app.use(morgan('tiny'));
 

@@ -1,6 +1,8 @@
 import actionTypes from './actionTypes';
 import axios from 'axios';
 
+const urlDB = 'http://localhost:5000/todolist/'
+
 function requestItemsSuccess(items) {
     return {
       type: actionTypes.LOAD_TODOLIST,
@@ -17,7 +19,7 @@ function requestItemsSuccess(items) {
 
 export function requestItems() {
     return async (dispatch) => {
-		const endpoint = 'http://localhost:5000/todolist/';
+		const endpoint = urlDB;
 		try {
       const items = await axios.get(endpoint);
 			dispatch(requestItemsSuccess(items.data));
@@ -29,10 +31,9 @@ export function requestItems() {
 
 export function deleteItems(itemId) {
   return async (dispatch) => {
-  const endpoint = `http://localhost:5000/todolist/${itemId}`;
+  const endpoint =`${urlDB}/${itemId}`;
   try {
     await axios.delete(endpoint);
-    
   } catch (error) {
     dispatch((error));
   }
@@ -42,7 +43,7 @@ export function deleteItems(itemId) {
 export function putItems(item) {
   const newItem = {"item": item};
   return async (dispatch) => {
-  const endpoint = `http://localhost:5000/todolist/`;
+  const endpoint = urlDB;
   try {
     await axios.put(endpoint, newItem);
   } catch (error) {
