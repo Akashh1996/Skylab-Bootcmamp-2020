@@ -9,7 +9,6 @@ import {
 } from '../actions/productsActions';
 
 function ProductList({ products, dispatch }) {
-  debugger;
   if (!products && !products?.length) {
     dispatch(requestProducts());
   }
