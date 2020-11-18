@@ -4,16 +4,19 @@ const todosController = require('../src/controllers/todosController')(Todo);
 jest.mock('../src/models/todoModel');
 
 describe('todosController', () => {
+  let res;
+  beforeEach(() => {
+    res = {
+      json: jest.fn(),
+      send: jest.fn(),
+    };
+  });
   afterEach(() => {
     Todo.mockRestore();
   });
 
   describe('getMethod', () => {
     test('should call res json on getMethod', () => {
-      const res = {
-        json: jest.fn(),
-      };
-
       Todo.find.mockImplementationOnce((query, callback) => {
         callback(false, {});
       });
@@ -24,10 +27,6 @@ describe('todosController', () => {
     });
 
     test('Should call res send in the getMethod if there is an error', () => {
-      const res = {
-        send: jest.fn(),
-      };
-
       Todo.find.mockImplementationOnce((query, callback) => {
         callback(true, {});
       });
@@ -41,9 +40,6 @@ describe('todosController', () => {
   describe('putMethod', () => {
     test('Should call res json on putMehod', () => {
       const req = { body: '' };
-      const res = {
-        json: jest.fn(),
-      };
 
       Todo.create.mockImplementationOnce((query, callback) => {
         callback(false, {});
@@ -56,9 +52,6 @@ describe('todosController', () => {
 
     test('Should call res send on putMehod if there is an error', () => {
       const req = { body: '' };
-      const res = {
-        send: jest.fn(),
-      };
 
       Todo.create.mockImplementationOnce((query, callback) => {
         callback(true, {});
@@ -73,7 +66,6 @@ describe('todosController', () => {
   describe('postMethod', () => {
     test('Should call res json on postMethod', () => {
       const req = { body: { _id: '' } };
-      const res = { json: jest.fn() };
 
       Todo.findByIdAndUpdate.mockImplementationOnce((query, body, callback) => {
         callback(false, {});
@@ -86,7 +78,6 @@ describe('todosController', () => {
 
     test('Should call res send on postMethod if there is an error', () => {
       const req = { body: { _id: '' } };
-      const res = { send: jest.fn() };
 
       Todo.findByIdAndUpdate.mockImplementationOnce((query, body, callback) => {
         callback(true, {});
@@ -101,7 +92,6 @@ describe('todosController', () => {
   describe('deleteMethod', () => {
     test('Should call res json on deleteMethod', () => {
       const req = { body: { _id: '' } };
-      const res = { json: jest.fn() };
 
       Todo.findByIdAndRemove.mockImplementationOnce((query, body, callback) => {
         callback(false, {});
@@ -114,7 +104,6 @@ describe('todosController', () => {
 
     test('Should call res send on deleteMethod if there is an error', () => {
       const req = { body: { _id: '' } };
-      const res = { send: jest.fn() };
 
       Todo.findByIdAndRemove.mockImplementationOnce((query, body, callback) => {
         callback(true, {});
