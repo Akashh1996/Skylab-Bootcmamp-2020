@@ -4,11 +4,11 @@ export default function todoReducer(state = {}, action) {
   let newState = null;
   switch (action.type) {
     case actionTypes.LOAD__LIST: {
-      const newState = { ...state, todoList: action.todoList };
+      newState = { ...state, todoList: action.todoList };
       break;
     }
     case actionTypes.LOAD_ERROR: {
-      const newState = { ...state, todoListError: action.error };
+      newState = { ...state, todoListError: action.error };
       break;
     }
     default:
