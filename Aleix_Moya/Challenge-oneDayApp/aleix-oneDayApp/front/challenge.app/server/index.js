@@ -7,8 +7,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const Wargear = require('./models/WModel');
-// eslint-disable-next-line spaced-comment
-//const Wargear = require('./stores/myStore');
 const myRouter = require('./routes/myRouter')(Wargear);
 
 const app = express();

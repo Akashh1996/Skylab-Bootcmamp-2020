@@ -19,7 +19,6 @@ function productList({ productList, actions, dispatch }) {
       <h1 id="title">List</h1>
       <nav>
         <p id="linkList"><Link id="fav" to="/datasheets">Datasheet</Link></p>
-        <p id="linkList"><Link id="datasheet" to="/fav/myfav">Fav</Link></p>
       </nav>
       <div id="list-wrapper">
         {productList
