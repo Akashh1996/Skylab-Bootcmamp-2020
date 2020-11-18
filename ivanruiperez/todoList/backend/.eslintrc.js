@@ -12,5 +12,7 @@ module.exports = {
     ecmaVersion: 12,
   },
   rules: {
+    'no-debugger': 0,
+    'no-console': 0,
   },
 };
