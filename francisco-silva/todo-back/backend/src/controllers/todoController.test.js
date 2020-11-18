@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-const { timeStamp } = require('console');
 const Todo = require('../models/todoModel');
 const todoController = require('./todoController')(Todo);
 
@@ -47,7 +45,7 @@ describe('todoController', () => {
     expect(res.json).toHaveBeenCalled();
   });
 
-  test('should call response send on deleteMethod', () => {
+  test('should call response send on deleteMethod when there is an error', () => {
     const res = {
       send: jest.fn(),
     };
@@ -62,7 +60,7 @@ describe('todoController', () => {
     todoController.deleteMethod(req, res);
     expect(res.send.mock.calls.length).toBe(1);
   });
-  test('should call response send on deleteMethod', () => {
+  test('should call response send on deleteMethod when there is not an error', () => {
     const res = {
       send: jest.fn(),
     };
@@ -77,7 +75,7 @@ describe('todoController', () => {
     todoController.deleteMethod(req, res);
     expect(res.send.mock.calls.length).toBe(1);
   });
-  test('should call response send on updateMethod', () => {
+  test('should call response send on updateMethod when there is an error', () => {
     const res = {
       send: jest.fn(),
     };
@@ -92,7 +90,7 @@ describe('todoController', () => {
     todoController.updateMethod(req, res);
     expect(res.send.mock.calls.length).toBe(1);
   });
-  test('should call response send on updateMethod', () => {
+  test('should call response send on updateMethod when there is not an error', () => {
     const res = {
       send: jest.fn(),
     };
