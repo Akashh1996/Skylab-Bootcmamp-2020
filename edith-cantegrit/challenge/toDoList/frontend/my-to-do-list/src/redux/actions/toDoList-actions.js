@@ -1,6 +1,30 @@
 import axios from 'axios';
 import actionTypes from './action-types';
 
+
+function removeItemSuccess(itemDelete) {
+    return {
+        type: actionTypes.ITEM_DELETE,
+        itemDelete
+    }
+}
+
+
+function toDoListSuccess(toDoList) {
+    return {
+        type: actionTypes.LOAD_TO_DO_LIST,
+        toDoList
+    }
+
+}
+
+function toDoListError(errorList) {
+    return {
+        type: actionTypes.LIST_ERROR,
+        errorList
+    }
+}
+
 export function requestLoadToDoList() {
     return async(dispatch) => {
     const endpointList = 'http://localhost:5000/todolist/';
@@ -23,28 +47,5 @@ export function deleteItemfromToDoList(itemID) {
         } catch(error) {
             dispatch(error)
         } 
-    }
-}
-
-function removeItemSuccess(itemDelete) {
-    return {
-        type: actionTypes.ITEM_DELETE,
-        itemDelete
-    }
-}
-
-
-function toDoListSuccess(toDoList) {
-    return {
-        type: actionTypes.LOAD_TO_DO_LIST,
-        toDoList
-    }
-
-}
-
-function toDoListError(errorList) {
-    return {
-        type: actionTypes.LIST_ERROR,
-        errorList
     }
 }
