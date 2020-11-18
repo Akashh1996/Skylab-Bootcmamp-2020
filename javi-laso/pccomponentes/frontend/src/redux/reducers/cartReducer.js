@@ -29,12 +29,8 @@ export default function cartReducer(state = initialState, action) {
     case actionTypes.DELETE_ITEM_FROM_CART:
       index = state.cartList
         .findIndex((cartItem) => cartItem.product._id === action.cartItem.product._id);
-      if (index >= 0) {
-        newCartList = [...state.cartList];
-        newCartList.splice(index, 1, action.cartItem);
-      } else {
-        newCartList = [...state.cartList, action.cartItem];
-      }
+      newCartList = [...state.cartList];
+      newCartList.splice(index, 1, action.cartItem);
       return {
         ...state,
         cartList: newCartList,
