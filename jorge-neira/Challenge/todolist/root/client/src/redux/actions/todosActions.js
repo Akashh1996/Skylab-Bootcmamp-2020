@@ -17,21 +17,21 @@ export function loadTodosSuccess(todos) {
   };
 }
 
-function addTodoSuccess(newTodo) {
+export function addTodoSuccess(newTodo) {
   return {
     type: actionTypes.ADD_TODO,
     newTodo,
   };
 }
 
-function deleteTodoSuccess(deletedTodo) {
+export function deleteTodoSuccess(deletedTodo) {
   return {
     type: actionTypes.DELETE_TODO,
     deletedTodo,
   };
 }
 
-function updateTodoSuccess(updatedTodo) {
+export function updateTodoSuccess(updatedTodo) {
   return {
     type: actionTypes.UPDATE_TODO,
     updatedTodo,

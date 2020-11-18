@@ -22,15 +22,28 @@ describe('async actions', () => {
       body: { todos: ['do something'] },
       headers: { 'content-type': 'application/json' },
     });
+    const todos = { todoId: 1, todoDescription: 'String' };
 
-    const expectedActions = [
-      { type: actionTypes.LOAD_TODOS, body: { todos: ['do something'] } },
-    ];
-    const store = mockStore({ todos: [] });
-    axios.get.mockImplementationOnce(() => Promise.resolve('done'));
+    const expectedActions = {
+      type: actionTypes.LOAD_TODOS,
+      todos,
+    };
+    const store = mockStore({ todos: {} });
+    axios.get.mockImplementationOnce(() => Promise.resolve({ ...testData }));
     await store.dispatch(actions.loadTodos()).then(() => {
       // return of async actions
       expect(store.getActions()).toEqual(expectedActions);
     });
+  });
+});
+
+describe('actions', () => {
+  test('Should create an action to add a todo', () => {
+    const todos = { todoId: 1, todoDescription: 'String' };
+    const expectedAction = {
+      type: actionTypes.LOAD_TODOS,
+      todos,
+    };
+    expect(actions.loadTodosSuccess(todos)).toEqual(expectedAction);
   });
 });
