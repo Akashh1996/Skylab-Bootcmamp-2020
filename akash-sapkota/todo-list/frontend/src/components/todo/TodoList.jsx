@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
@@ -8,11 +7,8 @@ import addTodo, { loadTodo } from '../../redux/actions/todoAction';
 function TodoList({ actions, todoList }) {
   const [newTodo, setNewTodo] = useState('');
   useEffect(() => {
-    // eslint-disable-next-line react/prop-types
-    if (!todoList && !todoList?.length) {
-      actions.loadTodo();
-    }
-  }, [todoList]);
+    actions.loadTodo();
+  }, [todoList?.length]);
   return (
     <div className="wrapper">
       <input
@@ -24,7 +20,6 @@ function TodoList({ actions, todoList }) {
         type="button"
         onClick={() => {
           actions.addTodo({ name: newTodo });
-          actions.loadTodo();
         }}
       >
         Add
@@ -51,16 +46,11 @@ TodoList.propTypes = {
     addTodo: PropTypes.func.isRequired,
     loadTodo: PropTypes.func.isRequired,
   }).isRequired,
-  todoList: PropTypes.shape({
-    state: PropTypes.shape({ }),
-    map: PropTypes.func.isRequired,
-  }).isRequired,
+  todoList: PropTypes.arrayOf(PropTypes.object).isRequired,
 
 };
 
 function mapStateToProps(state) {
-  // eslint-disable-next-line no-debugger
-  debugger;
   return {
     todoList: state.todoReducer.todoList,
   };
