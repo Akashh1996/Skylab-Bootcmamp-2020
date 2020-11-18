@@ -11,6 +11,7 @@ function TodoList({ todoList, actions }) {
     <>
       <h1 className="title">TODO LIST</h1>
       <input
+        className="add-input"
         onChange={(event) => setNewTodoListItem(event.target.value)}
         value={newTodoListItem}
         placeholder="Enter a new todo list item"

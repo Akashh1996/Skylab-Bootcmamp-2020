@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
@@ -35,5 +35,11 @@ describe('TodoList', () => {
   test('should call deleteTodoListItem on click', () => {
     document.querySelector('.add-button').click();
     expect(addTodoListItem).toHaveBeenCalled();
+  });
+
+  test('should keep a $ in front of the input', () => {
+    const input = document.querySelector('.add-input');
+    fireEvent.change(input, { target: { value: '23' } });
+    expect(input.value).toBe('23');
   });
 });
