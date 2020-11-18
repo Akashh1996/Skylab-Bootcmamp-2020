@@ -41,8 +41,8 @@ function todoListController(TodoList) {
   return {
     getMethod,
     postMethod,
-    putMethod,
     deleteMethod,
+    putMethod,
   };
 }
 

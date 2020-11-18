@@ -19,8 +19,8 @@ export function requestTodoListError(error) {
 
 export function requestTodoList() {
   return async (dispatch) => {
-    const { data } = await axios.get(url);
     try {
+      const { data } = await axios.get(url);
       dispatch(requestTodoListSuccess(data));
     } catch (error) {
       dispatch(requestTodoListError(error));
@@ -44,8 +44,8 @@ export function postTodoListItemError(error) {
 
 export function addTodoListItem(newTodoListItem) {
   return async (dispatch) => {
-    const { data } = await axios.post(url, { todoListItem: newTodoListItem });
     try {
+      const { data } = await axios.post(url, { todoListItem: newTodoListItem });
       dispatch(postTodoListItemSuccess(data));
     } catch (error) {
       dispatch(postTodoListItemError(error));
@@ -69,9 +69,8 @@ export function deleteTodoListItemError(error) {
 
 export function deleteTodoListItem(removeTodoListItem) {
   return async (dispatch) => {
-    const { data } = await axios.delete(url, { data: removeTodoListItem });
-    const { _id } = data;
     try {
+      const { data: { _id } } = await axios.delete(url, { data: removeTodoListItem });
       dispatch(deleteTodoListItemSuccess(_id));
     } catch (error) {
       dispatch(deleteTodoListItemError(error));
