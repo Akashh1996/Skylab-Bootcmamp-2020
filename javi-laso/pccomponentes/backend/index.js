@@ -3,18 +3,17 @@ const bodyParser = require('body-parser');
 const chalk = require('chalk');
 const cors = require('cors');
 const morgan = require('morgan');
-// const ItemsStore = require('./src/stores/itemsStore');
 const mongoose = require('mongoose');
 const itemSchema = require('./src/models/itemSchema');
-// const ShoppingCartStore = require('./src/stores/shoppingCartStore');
 const itemListRouter = require('./src/routes/itemListRouter')(itemSchema);
-const cartItemSchema = require('./src/models/cartItemSchema');
-const shoppingCartRouter = require('./src/routes/shoppingCartRouter')(cartItemSchema);
+const cartSchema = require('./src/models/cartSchema');
+const shoppingCartRouter = require('./src/routes/shoppingCartRouter')(cartSchema);
 
 const server = express();
 const port = process.env.PORT || 2130;
+const dbUrl = process.env.DBURL || 'mongodb://localhost/pccodb';
 
-mongoose.connect('mongodb://localhost/pccodb', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 
 server.use(morgan('dev'));
 
