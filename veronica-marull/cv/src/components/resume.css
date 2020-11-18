@@ -2,10 +2,12 @@
     padding: 10px;
     margin: 5px;
 }
+
 .resume_container hr {
     margin: 5px;
     
 }
+
 .resume_container {
     width: 800px;
     height: auto;
@@ -17,6 +19,9 @@
 
 .main {
     display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
 }
 
 .resume_title {
@@ -32,10 +37,46 @@
     height: 500px;
     margin-left: 10px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-y: auto;
+    
     
     
 }
 
 .skills {
     padding-left: 100px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1199px) {
+    .main {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        height: auto;
+    }
+    
+}
+ 
+
+@media screen and (min-width: 1200px) {
+
+	.main {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        height: auto;
+    }
+
+    .resume {
+        
+        overflow-y: hidden;
+        overflow-x: hidden;
+        
+        
+    }
+
+
 }

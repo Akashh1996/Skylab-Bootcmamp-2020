@@ -4,7 +4,7 @@ import './blockTimeline.css';
 function BlockTimeline({ title, year, place, titleDescription, description }) {
 	return (
 		<>
-			<div clasName="title">
+			<div className="title">
 				<h3 className="title">{title}</h3>
 			</div>
 			<div className="block">

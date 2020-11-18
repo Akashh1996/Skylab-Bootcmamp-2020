@@ -26,12 +26,16 @@ main {
     font-size: 20px;
 }
 
-nav div {
+.nav_aside div {
     padding-top: 15px;
     padding-bottom: 15px;
     border-top: 1px solid #F5F5F5;
     
 
+}
+
+aside {
+    display: none;
 }
 
 nav div:hover {
@@ -40,6 +44,41 @@ nav div:hover {
 main {
     background-color: #F5F5F5;
 }
-.contact{
+.contact_nav{
     border-bottom: 1px solid #F5F5F5;
 }
+
+.nav_mobile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.nav_mobile div{
+    margin-top: 5px;
+    padding: 0px;
+}
+.burger_menu{
+    font-size: 50px;
+}
+
+
+
+
+@media screen and (min-width: 600px) and (max-width: 1199px) {}
+ 
+
+@media screen and (min-width: 1200px) {
+
+	.nav_mobile{
+        display: none;
+    }
+
+    aside{
+        display: block;
+    }
+
+
+}
+

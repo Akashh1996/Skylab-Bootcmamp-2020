@@ -28,7 +28,13 @@ function Resume() {
 	let skills = {
 		skill1: { name: 'HTML', level: '50' },
 		skill2: { name: 'CSS', level: '50' },
-		skill3: { name: 'JavaScript', level: '50' }
+		skill3: { name: 'JavaScript', level: '50' },
+		skill4: { name: 'Git & Github', level: '50' },
+		skill5: { name: 'Flexbox', level: '50' },
+		skill6: { name: 'Material Design', level: '50' },
+		skill7: { name: 'JEST', level: '50' },
+		skill8: { name: 'React', level: '50' },
+		skill9: { name: 'Firebase', level: '50' }
 	};
 
 	return (
@@ -69,6 +75,30 @@ function Resume() {
 						<CodingSkills
 							skill={skills.skill3.name}
 							level={skills.skill3.level}
+						/>
+						<CodingSkills
+							skill={skills.skill4.name}
+							level={skills.skill4.level}
+						/>
+						<CodingSkills
+							skill={skills.skill5.name}
+							level={skills.skill5.level}
+						/>
+						<CodingSkills
+							skill={skills.skill6.name}
+							level={skills.skill6.level}
+						/>
+						<CodingSkills
+							skill={skills.skill7.name}
+							level={skills.skill7.level}
+						/>
+						<CodingSkills
+							skill={skills.skill8.name}
+							level={skills.skill8.level}
+						/>
+						<CodingSkills
+							skill={skills.skill9.name}
+							level={skills.skill9.level}
 						/>
 					</div>
 				</div>

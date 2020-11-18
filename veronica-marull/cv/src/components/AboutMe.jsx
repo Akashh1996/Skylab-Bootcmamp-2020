@@ -14,6 +14,7 @@ function AboutMe() {
 						sagittis nisi, eu semper nisl. Cras ut dictum nisl.
 					</p>
 				</div>
+				<div></div>
 			</div>
 		</>
 	);
