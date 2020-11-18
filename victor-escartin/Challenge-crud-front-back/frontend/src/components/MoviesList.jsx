@@ -12,7 +12,6 @@ const MoviesList = () => (
         <button className="btn btn-primary">Modificar</button>
         <button className="btn btn-danger">Eliminar</button>
       </li>
-
     </ul>
   ))
 );

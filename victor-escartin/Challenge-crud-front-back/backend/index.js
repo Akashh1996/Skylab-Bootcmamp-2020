@@ -4,14 +4,15 @@ const debug = require('debug')('app');
 const chalk = require('chalk');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+const {connect} = require('mongoose');
 const Movie = require('./src/models/movieModel');
 const movieRouter = require('./src/routes/movieRouter')(Movie);
 
 const app = express();
 const port = process.env.PORT || 5000;
+const dataBase = process.env.MOVIESDB || 'mongodb://localhost/moviesdb'
 
-mongoose.connect('mongodb://localhost/moviesdb',{
+connect(dataBase,{
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
@@ -27,7 +28,6 @@ app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dis
 app.use('/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')));
 
 app.get('/', (req, res) => {
-  // res.send('Server is ready');
   res.sendFile(path.join(__dirname, 'src/views', 'index.html'));
 });
 

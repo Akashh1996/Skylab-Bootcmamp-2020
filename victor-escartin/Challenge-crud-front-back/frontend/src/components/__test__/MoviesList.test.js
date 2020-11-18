@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-filename-extension */
 import { render, unmountComponentAtNode } from 'react-dom';
 import React from 'react';
 import { act } from 'react-dom/test-utils';

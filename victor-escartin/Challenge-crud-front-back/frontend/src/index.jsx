@@ -17,3 +17,6 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root'),
 );
+
+export const ReactStrictMode = <React.StrictMode />;
+export const rootElement = document.getElementById('root');
