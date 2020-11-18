@@ -15,7 +15,6 @@ class Store {
         const url = '../../api/superHeroData.json';
         const response = await fetch(url);
         const heroes = await response.json();
-        debugger;
         _heroes = heroes;
     }
 

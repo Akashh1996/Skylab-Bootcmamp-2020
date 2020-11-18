@@ -1,13 +1,16 @@
-function productController(Product) {
+/* eslint-disable no-console */
+function productController(Products) {
   function getMethod(req, res) {
-    res.json(req.product);
+    const query = { id: +req.params.productId };
+    Products.findOne(query, (errorFindProducts, product) => {
+      if (errorFindProducts) {
+        res.send(errorFindProducts);
+      }
+      res.json(product);
+      console.log('product', product);
+    });
   }
-
-  function allMiddleware(req, res, next) {
-    req.product = Product.getProductById(+req.params.productId);
-    next();
-  }
-  return { getMethod, allMiddleware };
+  return { getMethod };
 }
 
 module.exports = productController;

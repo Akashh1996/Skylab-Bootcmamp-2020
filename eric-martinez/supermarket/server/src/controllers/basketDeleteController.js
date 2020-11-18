@@ -4,9 +4,9 @@ function basketDeleteController(BasketProduct) {
 
     BasketProduct.deleteOne(query, (errorFindProducts) => {
       if (errorFindProducts) {
-        res.send(errorFindProducts);
+        return res.send(errorFindProducts);
       }
-      res.send('deleted');
+      return res.send('deleted');
     });
   }
   function allMiddleware(req, res, next) {

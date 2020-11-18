@@ -7,17 +7,18 @@ import LoadingGif from '../LoadingGif/LoadingGif';
 import './SaberDetail.css';
 
 function SaberDetail({ saberItem, dispatch, match }) {
-
     const saberName = match?.params?.saberName;
+    const saber = saberItem ? saberItem[0] : null;
+
     if(saberItem === undefined) {
         dispatch(requestSaberByName(saberName));
-    }else if(saberItem["product-name"] !== saberName){
+    }else if(saber["product-name"] !== saberName){
         dispatch(requestSaberByName(saberName));
     }
 
-    let saberImageSilver = saberItem ? saberItem["product-image-url"] : null;
-    let saberImageBlack = saberItem ? saberItem["product-black-image-url"] : null;
-    const [saberImage, setSaberImage] = useState(saberItem?["product-image-url"] : null);
+    let saberImageSilver = saber ? saber["product-image-url"] : null;
+    let saberImageBlack = saber ? saber["product-black-image-url"] : null;
+    const [saberImage, setSaberImage] = useState(saber?[0]["product-image-url"] : null);
 
     const blackColor = "Black";
     const silverColor = "Silver";
@@ -43,16 +44,16 @@ function SaberDetail({ saberItem, dispatch, match }) {
 
     return (
         <>
-                {saberItem ? (saberItem["product-name"] ? (
+                {saber ? (saber["product-name"] ? (
                     <section className="saber__detail">
                         <section className="saber__detail__firstRow">
                             <section className="saber__detail__image">
                             {saberImage === saberImageBlack ? (
                                 <img src={saberImageBlack} 
-                                alt={saberItem["product-name"]} id="saber__detail__image"/>
+                                alt={saber["product-name"]} id="saber__detail__image"/>
                                 ) : (
                                     <img src={saberImageSilver} 
-                                    alt={saberItem["product-name"]} id="saber__detail__image"/>    
+                                    alt={saber["product-name"]} id="saber__detail__image"/>    
                                 )
                             } 
                         </section>
@@ -60,21 +61,21 @@ function SaberDetail({ saberItem, dispatch, match }) {
                             <section className="saber__detail__properties">
                             <section className="saber__detail__properties__text">
                                 <div className="saber__detail__properties__name">
-                                    <p >{saberItem["product-name"]}</p>
-                                    <p >{saberItem["product-price"]} $</p>
+                                    <p >{saber["product-name"]}</p>
+                                    <p >{saber["product-price"]} $</p>
                                 </div>
                                 <div className="saber__detail__properties__description">
-                                    <p >{saberItem["product-description"]}</p>
+                                    <p >{saber["product-description"]}</p>
                                 </div>
                                 <div className="saber__detail__properties__specifications">
                                     {
-                                        Object.keys(saberItem["product-specifications"]).map((specification) => {
+                                        Object.keys(saber["product-specifications"]).map((specification) => {
                                         if(counter % 2 === 0) {
                                             counter++;
-                                            return <p className="specifications-row even-row">{specification} : {saberItem["product-specifications"][specification]}</p>
+                                            return <p className="specifications-row even-row">{specification} : {saber["product-specifications"][specification]}</p>
                                         } else {
                                             counter++;
-                                            return <p className="specifications-row odd-row">{specification} : {saberItem["product-specifications"][specification]}</p>
+                                            return <p className="specifications-row odd-row">{specification} : {saber["product-specifications"][specification]}</p>
                                         }
                                     })
                                     }
@@ -89,7 +90,7 @@ function SaberDetail({ saberItem, dispatch, match }) {
                         </section>
                         </section>
                         <section className="saber__detail__addToCart">
-                            <button type="button" className="addToCart-button" onClick={()=> addToCart(addProductToCart, saberItem["product-name"], actualColor)}>Add to cart</button>
+                            <button type="button" className="addToCart-button" onClick={()=> addToCart(addProductToCart, saber["product-name"], actualColor)}>Add to cart</button>
                         </section>
                     </section>
                 ) : (
