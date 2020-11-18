@@ -3,23 +3,23 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tour of Heroes</title>
+        <title class="title">Tour of Heroes</title>
         <link rel="stylesheet" href="dashboard.css">
-	</head>
+    </head>
 	<body>
-        <body>
-            <h2 class="title">Tour of Heroes</h2>
-            <button class="heroesDash">
-                <a class="heroesDash" href="../list/list.html">Heroes list</a>
-            </button>  
-         
-            <div id="heroesList">
-               
-            </div>
-        </body>
+        <header>
+                <a class="heroesDash" href="../list/list.html">Heroes list</a>  
+        </header>
+        <h2 class="title">Tour of Heroes</h2>
+        
+        
+        <div id="heroesDashboard">
+
+        </div>
+    
+        <script src="../../utils/get-hero-id.js"></script>
+        <script src="../../superHeroList.js"></script>
+        <script src="../../store.js"></script>
+        <script src="./dashboard.js"></script>
     </body>
-    <script src="../../utils/get-hero-id.js"></script>
-    <script src="../../superHeroList.js"></script>
-	<script src="../../store.js"></script>
-	<script src="./dashboard.js"></script>
 </html>
