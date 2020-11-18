@@ -4,7 +4,6 @@ const listController = require('./listController')(Tvshows);
 describe('listController', () => {
   test('getMethod should res a json', () => {
     const res = {
-      send: jest.fn(),
       json: jest.fn(),
     };
 
@@ -16,7 +15,6 @@ describe('listController', () => {
   test('getMethod should send an error', () => {
     const res = {
       send: jest.fn(),
-      json: jest.fn(),
     };
 
     Tvshows.find = jest.fn().mockImplementationOnce((query, callback) => callback(true, []));
@@ -26,7 +24,6 @@ describe('listController', () => {
   });
   test('putMethod should res a json', () => {
     const res = {
-      send: jest.fn(),
       json: jest.fn(),
     };
 
@@ -42,7 +39,6 @@ describe('listController', () => {
   test('putMethod should res an error', () => {
     const res = {
       send: jest.fn(),
-      json: jest.fn(),
     };
 
     const req = {
@@ -57,7 +53,6 @@ describe('listController', () => {
   test('getMethod should send an error', () => {
     const res = {
       send: jest.fn(),
-      json: jest.fn(),
     };
 
     Tvshows.find = jest.fn().mockImplementationOnce((query, callback) => callback(true, []));
@@ -67,7 +62,6 @@ describe('listController', () => {
   });
   test('deleteMethod should res a json', () => {
     const res = {
-      send: jest.fn(),
       json: jest.fn(),
     };
 
@@ -85,7 +79,6 @@ describe('listController', () => {
   test('deleteMethod should send an error', () => {
     const res = {
       send: jest.fn(),
-      json: jest.fn(),
     };
 
     const req = {

@@ -2,7 +2,7 @@ function listController(Tvshows) {
   function getMethod(req, res) {
     const query = {};
     Tvshows.find(query, (errorFindTvShow, tvshows) => {
-      let response = '';
+      let response = null;
       switch (!errorFindTvShow) {
         case false:
           response = res.send(errorFindTvShow);
