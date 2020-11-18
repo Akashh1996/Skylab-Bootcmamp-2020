@@ -5,7 +5,7 @@ const debug = require('debug')('app');
 const chalk = require('chalk');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+const { connect } = require('mongoose');
 const Todo = require('./src/models/todoModel');
 const todoRouter = require('./src/routes/todoRouter')(Todo);
 
@@ -13,7 +13,8 @@ const app = express();
 app.use(cors());
 const port = process.env.PORT || 7777;
 
-mongoose.connect('mongodb://localhost/tododb');
+const DBURL = 'mongodb://localhost/tododb';
+connect(DBURL);
 
 app.use(morgan('tiny'));
 

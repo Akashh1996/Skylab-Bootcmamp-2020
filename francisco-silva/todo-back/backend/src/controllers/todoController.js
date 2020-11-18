@@ -1,42 +1,31 @@
 function todoController(Todo) {
   function getMethod(req, res) {
     const query = {};
-    Todo.find(query, (errorFindProducts, todo) => {
-      if (errorFindProducts) {
-        return res.send(errorFindProducts);
-      }
-      return res.json(todo);
-    });
+    Todo.find(query, (errorFindProducts, todo) => (
+      errorFindProducts ? res.send(errorFindProducts) : res.json(todo)
+    ));
   }
 
   function deleteMethod(req, res) {
     const query = req.params.id;
-    Todo.findByIdAndRemove(query, (errorDelete) => {
-      if (errorDelete) {
-        return res.send(errorDelete);
-      }
-      return res.send('delete');
-    });
+    Todo.findByIdAndRemove(query, (errorDelete) => (
+      errorDelete ? res.send(errorDelete) : res.send('delete')
+    ));
   }
 
   function updateMethod(req, res) {
     const query = req.params.id;
-    Todo.findByIdAndUpdate(query, (errorUpdate, todo) => {
-      if (errorUpdate) {
-        return res.send(errorUpdate);
-      }
-      return res.send(todo);
-    });
+    Todo.findByIdAndUpdate(query, (errorUpdate, todo) => (
+      errorUpdate ? res.send(errorUpdate) : res.send(todo)
+
+    ));
   }
 
   function putMethod(req, res) {
     const query = req.body;
-    Todo.create(query, (errorPutItem, todo) => {
-      if (errorPutItem) {
-        return res.send(errorPutItem);
-      }
-      return res.json(todo);
-    });
+    Todo.create(query, (errorPutItem, todo) => (
+      errorPutItem ? res.send(errorPutItem) : res.json(todo)
+    ));
   }
 
   return {
