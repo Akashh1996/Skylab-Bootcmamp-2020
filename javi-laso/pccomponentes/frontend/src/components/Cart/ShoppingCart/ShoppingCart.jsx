@@ -5,11 +5,8 @@ import CartElement from '../CartElement/CartElement';
 import './shoppingCart.css';
 
 function ShoppingCart({ cartList, cartSize }) {
-  function calculateTotalPrice(cart) {
-    let totalPrice = 0;
-    Object.values(cart).forEach((arrayOfItems) => {
-      totalPrice = arrayOfItems.reduce((acc, cur) => acc + +cur.price, totalPrice);
-    });
+  function calculateTotalPrice(cartArray) {
+    const totalPrice = cartArray.reduce((acc, cur) => acc + cur.product.price * cur.quantity, 0);
 
     return totalPrice;
   }
@@ -26,9 +23,14 @@ function ShoppingCart({ cartList, cartSize }) {
         {cartSize === 0
           ? <h3 className="no-products">You have not chosen products yet</h3>
           : Object.values(cartList)
-            .map((arrayOfItems) => {
-              if (arrayOfItems.length > 0) {
-                return <CartElement arrayOfItems={arrayOfItems} key={arrayOfItems[0].id} />;
+            .map((product) => {
+              if (product.quantity > 0) {
+                return (
+                  <CartElement
+                    product={product}
+                    key={performance.now() * Math.random()}
+                  />
+                );
               }
               return null;
             })}
