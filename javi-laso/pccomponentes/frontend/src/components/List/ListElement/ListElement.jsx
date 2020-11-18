@@ -4,7 +4,6 @@ import './listElement.css';
 import { PropTypes } from 'prop-types';
 
 function ListElement({ item }) {
-  console.log(item);
   return (
     <Link to={`/${item.id}`} className="no-link card__margins">
       <li key={+item.id} className="card-element">
