@@ -5,3 +5,5 @@ const actionTypes = {
   UPDATE_ITEM: 'UPDATE_ITEM',
   LOAD_LIST_ERROR: 'LOAD_LIST_ERROR',
 };
+
+export default actionTypes;
