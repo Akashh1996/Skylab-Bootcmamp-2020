@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
-import { bindActionCreators } from 'redux';
 import {
   requestAddItem, requestDeleteItem, requestList,
 } from '../actions/toDoActions';
 
 function ToDoList({ list, dispatch }) {
-  debugger;
   const [newItem, setnewItem] = useState('');
 
-  if (!list || !list?.length || list === 'Deleted Successfully!') {
-    dispatch(requestList());
-  }
+  useEffect(() => {
+    if (!list || !list?.length) {
+      dispatch(requestList());
+    }
+  }, [list?.length]);
 
   return (
     <div className="list-container">
@@ -23,7 +23,7 @@ function ToDoList({ list, dispatch }) {
       />
       <button type="button" onClick={() => dispatch(requestAddItem(newItem))}>Add</button>
 
-      {(!list || !list.length) && <h1>There are no list!</h1>}
+      {(!list || !list.length) && <h1>There is no list!</h1>}
 
       <ol>
         {list && list.length > 0 && list.map((item) => (
@@ -44,7 +44,7 @@ function ToDoList({ list, dispatch }) {
 
 ToDoList.propTypes = {
   list: PropTypes.shape([]).isRequired,
-  dispatch: PropTypes.shape([]).isRequired,
+  dispatch: PropTypes.shape(() => {}).isRequired,
   actions: PropTypes.shape({
     requestAddItem: PropTypes.func.isRequired,
     requestDeleteItem: PropTypes.func.isRequired,
@@ -53,19 +53,9 @@ ToDoList.propTypes = {
 };
 
 function mapStateToProps({ toDoReducer }) {
-  debugger;
   return {
     list: toDoReducer.list,
   };
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators({
-      requestAddItem, requestDeleteItem, requestList,
-    }, dispatch),
-    dispatch,
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ToDoList);
+export default connect(mapStateToProps)(ToDoList);

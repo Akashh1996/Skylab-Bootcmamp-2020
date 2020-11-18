@@ -71,7 +71,7 @@ describe('toDoActions', () => {
   describe('requestUpdateItem - promise resolve', () => {
     beforeEach(async () => {
       axios.post.mockImplementationOnce(() => Promise.resolve({ _id: '1', description: 'Skylab mola!' }));
-      await store.dispatch(requestUpdateItem({ _id: '1', description: 'Skylab mola!' }));
+      await store.dispatch(requestUpdateItem());
     });
 
     test('should call axios', () => {

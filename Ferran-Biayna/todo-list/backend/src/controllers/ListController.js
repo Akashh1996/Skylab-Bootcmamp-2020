@@ -19,6 +19,7 @@ function ListController(ToDo) {
   }
 
   function deleteMethod(req, res) {
+    console.log(req.body);
     ToDo.findByIdAndRemove(req.body, (errorDeleteItem) => (errorDeleteItem
       ? res.send(errorDeleteItem)
       : res.json('Deleted Successfully!')));

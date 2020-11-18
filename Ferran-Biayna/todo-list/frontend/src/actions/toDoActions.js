@@ -1,10 +1,12 @@
 import axios from 'axios';
 import actionTypes from './actionTypes';
 
-function requestListSuccess(list) {
+const backURL = 'http://localhost:5000/todo/';
+
+function requestListSuccess(listToDo) {
   return {
     type: actionTypes.LOAD_LIST,
-    list,
+    listToDo,
   };
 }
 
@@ -15,10 +17,10 @@ function requestListError(error) {
   };
 }
 
-function requestAddItemSuccess(item) {
+function requestAddItemSuccess(newItem) {
   return {
     type: actionTypes.ADD_ITEM,
-    item,
+    newItem,
   };
 }
 
@@ -29,10 +31,10 @@ function requestAddItemError(error) {
   };
 }
 
-function requestUpdateItemSuccess(item) {
+function requestUpdateItemSuccess(UpdatedItem) {
   return {
     type: actionTypes.UPDATE_ITEM,
-    item,
+    UpdatedItem,
   };
 }
 
@@ -43,10 +45,10 @@ function requestUpdateItemError(error) {
   };
 }
 
-function requestDeleteItemSuccess(item) {
+function requestDeleteItemSuccess(DeletedItem) {
   return {
     type: actionTypes.DELETE_ITEM,
-    item,
+    DeletedItem,
   };
 }
 
@@ -60,8 +62,8 @@ function requestDeleteItemError(error) {
 export function requestList() {
   return async (dispatch) => {
     try {
-      const List = await axios.get('http://localhost:5000/todo');
-      dispatch(requestListSuccess(List.data));
+      const list = await axios.get(backURL);
+      dispatch(requestListSuccess(list.data));
     } catch (error) {
       dispatch(requestListError(error));
     }
@@ -71,7 +73,7 @@ export function requestList() {
 export function requestAddItem(item) {
   return async (dispatch) => {
     try {
-      const newItem = await axios.post('http://localhost:5000/todo', { description: item });
+      const newItem = await axios.post(backURL, { description: item });
       dispatch(requestAddItemSuccess(newItem.data));
     } catch (error) {
       dispatch(requestAddItemError(error));
@@ -82,8 +84,8 @@ export function requestAddItem(item) {
 export function requestUpdateItem(item) {
   return async (dispatch) => {
     try {
-      const newList = await axios.put('http://localhost:5000/todo', item);
-      dispatch(requestUpdateItemSuccess(newList.data));
+      const UpdatedItem = await axios.put(backURL, item);
+      dispatch(requestUpdateItemSuccess(UpdatedItem.data));
     } catch (error) {
       dispatch(requestUpdateItemError(error));
     }
@@ -93,8 +95,8 @@ export function requestUpdateItem(item) {
 export function requestDeleteItem(item) {
   return async (dispatch) => {
     try {
-      const newList = await axios.delete('http://localhost:5000/todo', item);
-      dispatch(requestDeleteItemSuccess(newList.data));
+      const DeletedItem = await axios.delete(backURL, item);
+      dispatch(requestDeleteItemSuccess(DeletedItem.data));
     } catch (error) {
       dispatch(requestDeleteItemError(error));
     }
