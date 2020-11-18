@@ -38,7 +38,6 @@ export function requestLoadToDoList() {
 }
 
 export function deleteItemfromToDoList(itemID) {
-    debugger;
     return async(dispatch) => {
     const endpointItem = `http://localhost:5000/todolist/${itemID}`;
         try {
