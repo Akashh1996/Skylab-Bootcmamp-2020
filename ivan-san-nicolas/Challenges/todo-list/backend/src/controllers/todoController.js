@@ -18,11 +18,10 @@ function todoController(Todo) {
   function patchMethod(req, res) {
     const { todoId } = req.body;
     const { todoNewName } = req.body;
-    const query = { todoId };
+    const query = { id: +todoId };
     const update = { name: todoNewName };
-    Todo.findOneAndUpdate(query, update);
-    Todo.findOne(query, (errorFindingTodo, todo) => {
-      errorFindingTodo ? res.send(errorFindingTodo) : res.json(todo);
+    Todo.findOneAndUpdate(query, update, (errorUpdatingTodo, updatedInput) => {
+      errorUpdatingTodo ? res.send(errorUpdatingTodo) : res.send(updatedInput);
     });
   }
 

@@ -7,7 +7,9 @@ function todoRouter(Todo) {
 
   router.route('/')
     .get(todo.getMethod)
-    .delete(todo.deleteMethod);
+    .delete(todo.deleteMethod)
+    .patch(todo.patchMethod)
+    .post(todo.postMethod);
 
   return router;
 }
