@@ -6,7 +6,7 @@ import {
   loadTodos, addTodo, deleteTodo, updateTodo,
 } from '../redux/actions/todosActions';
 
-function TodoList({ loadedTodos, actions }) {
+function TodoListComponent({ loadedTodos, actions }) {
   const [inputTodo, setInputTodo] = useState('Todo Description');
 
   if (!loadedTodos) {
@@ -31,14 +31,14 @@ function TodoList({ loadedTodos, actions }) {
   );
 }
 
-TodoList.propTypes = {
+TodoListComponent.propTypes = {
   loadedTodos: PropTypes.arrayOf(PropTypes.object),
   actions: PropTypes.shape({
     loadTodos: PropTypes.func.isRequired,
   }).isRequired,
 };
 
-TodoList.defaultProps = {
+TodoListComponent.defaultProps = {
   loadedTodos: [],
 };
 
@@ -59,4 +59,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
+export default connect(mapStateToProps, mapDispatchToProps)(TodoListComponent);
