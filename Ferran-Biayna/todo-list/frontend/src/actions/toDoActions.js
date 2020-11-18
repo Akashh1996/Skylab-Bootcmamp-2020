@@ -29,6 +29,20 @@ function requestAddItemError(error) {
   };
 }
 
+function requestUpdateItemSuccess(item) {
+  return {
+    type: actionTypes.UPDATE_ITEM,
+    item,
+  };
+}
+
+function requestUpdateItemError(error) {
+  return {
+    type: actionTypes.UPDATE_ITEM_ERROR,
+    error,
+  };
+}
+
 function requestDeleteItemSuccess(item) {
   return {
     type: actionTypes.DELETE_ITEM,
@@ -61,6 +75,17 @@ export function requestAddItem(item) {
       dispatch(requestAddItemSuccess(newItem.data));
     } catch (error) {
       dispatch(requestAddItemError(error));
+    }
+  };
+}
+
+export function requestUpdateItem(item) {
+  return async (dispatch) => {
+    try {
+      const newList = await axios.put('http://localhost:5000/todo', item);
+      dispatch(requestUpdateItemSuccess(newList.data));
+    } catch (error) {
+      dispatch(requestUpdateItemError(error));
     }
   };
 }

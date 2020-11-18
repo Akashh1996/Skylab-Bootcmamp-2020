@@ -2,7 +2,7 @@ import axios from 'axios';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import {
-  requestList, requestAddItem, requestDeleteItem,
+  requestList, requestAddItem, requestUpdateItem, requestDeleteItem,
 } from '../toDoActions';
 
 const middlewares = [thunk];
@@ -58,6 +58,34 @@ describe('toDoActions', () => {
     beforeEach(async () => {
       axios.post.mockImplementationOnce(() => Promise.rejected({ description: 'Skylab mola!' }));
       await store.dispatch(requestAddItem());
+    });
+
+    test('should call axios', () => {
+      expect(axios.post).toHaveBeenCalled();
+    });
+    test('should call axios just once', () => {
+      expect(axios.post.mock.calls[0].length).toBe(2);
+    });
+  });
+
+  describe('requestUpdateItem - promise resolve', () => {
+    beforeEach(async () => {
+      axios.post.mockImplementationOnce(() => Promise.resolve({ _id: '1', description: 'Skylab mola!' }));
+      await store.dispatch(requestUpdateItem({ _id: '1', description: 'Skylab mola!' }));
+    });
+
+    test('should call axios', () => {
+      expect(axios.post).toHaveBeenCalled();
+    });
+    test('should call axios just once', () => {
+      expect(axios.post.mock.calls[0].length).toBe(2);
+    });
+  });
+
+  describe('requestUpdateItem - promise rejected', () => {
+    beforeEach(async () => {
+      axios.post.mockImplementationOnce(() => Promise.rejected({ _id: '1', description: 'Skylab mola!' }));
+      await store.dispatch(requestUpdateItem());
     });
 
     test('should call axios', () => {
