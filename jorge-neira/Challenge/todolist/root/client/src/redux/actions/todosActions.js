@@ -1,3 +1,4 @@
+/* eslint-disable no-debugger */
 import axios from 'axios';
 import actionTypes from './actionTypes';
 
@@ -39,6 +40,7 @@ export function updateTodoSuccess(updatedTodo) {
 }
 
 export function loadTodos() {
+  debugger;
   return async (dispatch) => {
     try {
       const { data } = await axios.get(endpointURL);

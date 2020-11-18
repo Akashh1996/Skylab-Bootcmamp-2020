@@ -1,24 +1,25 @@
+/* eslint-disable no-debugger */
 import actionTypes from '../actions/actionTypes';
 
-const initialState = {
-  todosData: {},
-  error: {},
-};
+// const initialState = {
+//   todosData: {},
+//   error: {},
+// };
 
-export default function todosReducer(state = initialState, action) {
+export default function todosReducer(state = {}, action) {
   const {
-    type, loadedTodos, addTodo, updateTodo, deleteTodo, error,
+    type, todos, newTodo, updatedTodo, deletedTodo, error,
   } = action;
-
+  debugger;
   switch (type) {
     case actionTypes.LOAD_TODOS:
-      return { ...state, loadedTodos };
+      return { ...state, todos };
     case actionTypes.ADD_TODO:
-      return { ...state, addTodo };
+      return { ...state, newTodo };
     case actionTypes.UPDATE_TODO:
-      return { ...state, updateTodo };
+      return { ...state, updatedTodo };
     case actionTypes.DELETE_TODO:
-      return { ...state, deleteTodo };
+      return { ...state, deletedTodo };
     case actionTypes.ERROR_REQUEST:
       return { ...state, errorRequest: error };
     default:
