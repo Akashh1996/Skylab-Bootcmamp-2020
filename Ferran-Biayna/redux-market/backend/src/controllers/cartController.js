@@ -10,9 +10,9 @@ function cartController(Cart) {
 
   function deleteMethod({ body }, res) {
     Cart.findOneAndUpdate(body, { $inc: { quantity: -1 } }, { upsert: true, new: true },
-      (errorUpdatedProduct, UpdatedProduct) => (errorUpdatedProduct
-        ? res.send(errorUpdatedProduct)
-        : res.json(UpdatedProduct)));
+      (errorDeleteCart, deletedProduct) => (errorDeleteCart
+        ? res.send(errorDeleteCart)
+        : res.json(deletedProduct)));
   }
 
   return {
