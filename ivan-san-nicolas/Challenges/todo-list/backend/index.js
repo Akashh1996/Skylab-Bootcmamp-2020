@@ -9,7 +9,8 @@ const todoRouter = require('./src/routes/todoRouter')(Todo);
 const app = express();
 const port = process.env.PORT || 3333;
 
-connect('mongodb://localhost/todo');
+const DataBaseURL = process.env.URL || 'mongodb://localhost/todo';
+connect(DataBaseURL);
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
