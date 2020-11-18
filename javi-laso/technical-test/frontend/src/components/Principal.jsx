@@ -8,9 +8,7 @@ import { getInputs, deleteInput, addInput } from '../redux/actions/actions';
 function Principal({ inputList, actions }) {
   const [inputValue, setInputValue] = useState('');
   useEffect(() => {
-    if (inputList.length === 0) {
-      actions.getInputs();
-    }
+    if (inputList.length === 0) actions.getInputs();
   }, []);
 
   function changeValue(event) {
