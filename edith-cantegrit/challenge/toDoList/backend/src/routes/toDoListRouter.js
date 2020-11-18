@@ -1,9 +1,9 @@
-const express = require('express');
+const { Router } = require('express');
 const toDoListController = require('../controllers/toDoListController');
 const itemDeleteController = require('../controllers/itemDeleteController');
 
 function toDoListRouter(Items) {
-    const router =  express.Router();
+    const router =  Router();
     const todolist = toDoListController(Items);
     const itemdelete = itemDeleteController(Items)
 
