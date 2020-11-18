@@ -6,7 +6,7 @@ function itemDeleteController(Items) {
             if(errorFindItems) {
                 return res.send(errorFindItems)
             }
-            return res.send('supprimé')
+            return res.send('delete')
         })
     }
 
