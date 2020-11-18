@@ -1,9 +1,11 @@
 .heroesDash {
     border-style: none;
+    font-family: Arial, Helvetica, sans-serif;
     color: rgb(86, 119, 138);
     font-weight: bold;
-    margin-left: 5px;
+    margin-left: 10%;
     text-decoration: none;
+    padding: 10px;
 }
 
 .heroesDash:hover {
@@ -14,7 +16,8 @@
 
 .title {
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(170, 165, 165);
+    color: rgb(61, 59, 73);
+    text-align: center;
 }
 
 .titleSection {
