@@ -6,17 +6,21 @@ const initialState = {
 };
 
 export default function todosReducer(state = initialState, action) {
-  switch (action.type) {
+  const {
+    type, loadedTodos, addTodo, updateTodo, deleteTodo, error,
+  } = action;
+
+  switch (type) {
     case actionTypes.LOAD_TODOS:
-      return { ...state, loadTodos: action.loadedTodos };
+      return { ...state, loadedTodos };
     case actionTypes.ADD_TODO:
-      return { ...state, addTodo: action.addTodo };
+      return { ...state, addTodo };
     case actionTypes.UPDATE_TODO:
-      return { ...state, updateTodo: action.deleteTodo };
+      return { ...state, updateTodo };
     case actionTypes.DELETE_TODO:
-      return { ...state, deleteTodo: action.updateTodo };
+      return { ...state, deleteTodo };
     case actionTypes.ERROR_REQUEST:
-      return { ...state, errorRequest: action.error };
+      return { ...state, errorRequest: error };
     default:
       return state;
   }
