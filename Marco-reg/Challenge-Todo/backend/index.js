@@ -3,15 +3,16 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const debug = require('debug')('app');
 const morgan = require('morgan');
-const mongoose = require('mongoose');
+const { connect } = require('mongoose');
 const Input = require('./src/models/inputModel');
 const inputRouter = require('./src/routes/inputRoutes')(Input);
 
+const dbURL = process.env.DBURL || 'mongodb://localhost/ToDo';
 const app = express();
 app.use(cors());
 const port = process.env.PORT || 1220;
 
-mongoose.connect('mongodb://localhost/ToDo');
+connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true });
 app.use(morgan('tiny'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
