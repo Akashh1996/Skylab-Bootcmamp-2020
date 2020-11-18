@@ -15,6 +15,6 @@ module.exports = {
     'linebreak-style': 0,
     'global-require': 0,
     'eslint linebreak-style': [0, 'error', 'windows'],
-    'no-underscore-dangle': 'allow',
+    'no-underscore-dangle': [2, { allow: ['_id'] }],
   },
 };
