@@ -1,15 +1,20 @@
+/* eslint-disable no-underscore-dangle */
 function cartController(Cart) {
   function getMethod(req, res) {
-    Cart.find({}, (errorFindCart, cart) => (errorFindCart
-      ? res.send(errorFindCart)
-      : res.json(cart)));
+    Cart.find({})
+      .populate('cartProduct')
+      .exec((errorFindCart, cart) => (errorFindCart
+        ? res.send(errorFindCart)
+        : res.json(cart)));
   }
 
-  function deleteMethod(req, res) {
-    Cart.findByIdAndRemove(req.params.productId, (errorDeleteProduct) => (errorDeleteProduct
-      ? res.send(errorDeleteProduct)
-      : res.json(null)));
+  function deleteMethod({ body }, res) {
+    Cart.findOneAndUpdate(body, { $inc: { quantity: -1 } }, { upsert: true, new: true },
+      (errorUpdatedProduct, UpdatedProduct) => (errorUpdatedProduct
+        ? res.send(errorUpdatedProduct)
+        : res.json(UpdatedProduct)));
   }
+
   return {
     getMethod, deleteMethod,
   };

@@ -4,9 +4,9 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const Product = require('./models/productModel');
 const Cart = require('./models/cartModel');
-const productRouter = require('./src/routes/productRouter')(Product, Cart);
+const Products = require('./models/productModel');
+const productRouter = require('./src/routes/productRouter')(Products, Cart);
 const cartRouter = require('./src/routes/cartRouter')(Cart);
 
 const app = express();
