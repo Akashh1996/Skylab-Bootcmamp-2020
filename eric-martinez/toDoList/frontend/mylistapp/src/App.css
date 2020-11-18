@@ -1,0 +1,36 @@
+html {
+  height: 100%;
+  background: black;
+}
+
+body {
+  height: 100%;
+}
+
+#root{
+  height: 100%;
+  color: white
+}
+
+h1 {
+  margin-left: 20px;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+li {
+  list-style: none;
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+
+input {
+  height: 20px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+}
+
+button {
+  margin-left: 10px;
+}
