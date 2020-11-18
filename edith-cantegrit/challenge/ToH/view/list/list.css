@@ -2,14 +2,19 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 .title {
-    color: rgb(170, 165, 165);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(61, 59, 73);
+    text-align: center;
 }
 
 .heroesDash {
     border-style: none;
+    font-family: Arial, Helvetica, sans-serif;
     color: rgb(86, 119, 138);
     font-weight: bold;
-    text-decoration: none;;
+    margin-left: 10%;
+    text-decoration: none;
+    padding: 10px;
 }
 
 .heroesDash:hover {
@@ -17,6 +22,12 @@ body {
     background-color: rgb(221, 213, 213);
 }
 
+.list {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
 
 
 .titleSection {
@@ -27,7 +38,9 @@ body {
     color: grey;
     margin-top: 30px;
     margin-left: 15px;
+    text-align: center;
 }
+
 
 .buttonHero{
     display: flex;
