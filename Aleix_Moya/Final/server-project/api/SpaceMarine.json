@@ -1,0 +1,187 @@
+[
+    {
+        "name": "Primaris Captain",
+        "power": 5,
+        "points": 90,
+        "stats":{
+            "M": 6,
+            "WS": 2,
+            "BS": 2,
+            "S": 4,
+            "T": 4,
+            "W": 6,
+            "A": 5,
+            "Ld": 9,
+            "S+": 3,
+            "S++": 4,
+            "S+++": 7
+        },
+        "wargear" :[
+            "Bolt Pistol",
+            "Plasma Pistol",
+            "Heavy Bolt Pistol",
+            "Master-Crafted_Auto_Bolt_Rifle",
+            "Frag Grenades",
+            "Krak Grenades",
+            "Powerfist",
+            "Master-Crafted Power Sword",
+            "Relic Shield",
+            "Master-Crafted Stalker Bolt Rifle"
+        ],
+        "ability":{},
+        "modifiers":{}
+    },
+    {
+        "name": "Captain with Master-Crafted Heavy Bolt Rifle",
+        "power": 6,
+        "points": 105,
+        "stats":{
+            "M": 5,
+            "WS": 2,
+            "BS": 2,
+            "S": 4,
+            "T": 5,
+            "W": 7,
+            "A": 5,
+            "Ld": 9,
+            "S+": 3,
+            "S++": 4,
+            "S+++": 7
+        },
+        "wargear" :[
+            "Master-Crafted Heavy Bolt Rifle",
+            "Frag Grenades",
+            "Krak Grenades",
+            "Master-Crafted Power Sword"
+        ],
+        "ability":{},
+        "modifiers":{}
+    },
+    {
+        "name": "Captain in Phobos Armour",
+        "power": 5,
+        "points": 95,
+        "stats":{
+            "M": 6,
+            "WS": 2,
+            "BS": 2,
+            "S": 4,
+            "T": 4,
+            "W": 6,
+            "A": 5,
+            "Ld": 9,                
+            "S+": 3,
+            "S++": 4,
+            "S+++": 7
+        },
+        "wargear" :[
+            "Bolt Pistol",
+            "Master-Crafted Instigator Bolt Carabine",
+            "Combat Knife",
+            "Frag Grenades",                
+            "Krak Grenades",
+            "Camo Cloak"
+        ],
+        "ability":{},
+        "modifiers":{}
+    },
+    {
+        "name": "Captain in Gravis Armour",
+        "power": 6,
+        "points": 115,
+        "stats":{
+            "M": 5,
+            "WS": 2,
+            "BS": 2,
+            "S": 4,
+            "T": 5,
+            "W": 7,
+            "A": 5,
+            "Ld": 9,                
+            "S+": 3,
+            "S++": 4,
+            "S+++": 7
+        },
+        "wargear" :[
+            "Boltstorm Gauntlet",
+            "Master-Crafted Power Sword"
+        ],
+        "ability":{},            
+        "modifiers":{}
+    },
+    {
+        "name": "Captain in Terminator Armour",
+        "power": 6,
+        "points": 100,
+        "stats":{
+            "M": 5,
+            "WS": 2,
+            "BS": 2,
+            "S": 4,
+            "T": 4,
+            "W": 6,
+            "A": 4,
+            "Ld": 9,
+            "S+": 2,
+            "S++": 4,
+            "S+++": 7
+        },
+        "wargear" :[
+            "Storm Bolter",
+            "Power Sword",                
+            "Combi-Bolter",
+            "Lightning Claw (x1)",
+            "Lightning Claw (x2)",                
+            "Power Fist",
+            "Thunder Hammer",
+            "Storm Shield",                
+            "Combi-Flamer",
+            "Combi-Grav",
+            "Combi-Plasma",
+            "Combi-Melta",
+            "Chainfist",
+            "Relic Blade",
+            "Wrist-Mounted Grenade Launcher"
+        ],
+        "ability":{},
+        "modifiers":{}
+    },
+    {
+        "name": "Captain in Terminator Armour",
+        "power": 6,
+        "points": 100,
+        "stats":{
+            "M": 5,
+            "WS": 2,
+            "BS": 2,
+            "S": 4,
+            "T": 4,
+            "W": 6,
+            "A": 4,
+            "Ld": 9,
+            "S+": 2,
+            "S++": 4,
+            "S+++": 7
+        },
+        "wargear" :[
+            "Storm Bolter",
+            "Power Sword",                
+            "Combi-Bolter",
+            "Lightning Claw (x1)",
+            "Lightning Claw (x2)",                
+            "Power Fist",
+            "Thunder Hammer",
+            "Storm Shield",                
+            "Combi-Flamer",
+            "Combi-Grav",
+            "Combi-Plasma",
+            "Combi-Melta",
+            "Chainfist",
+            "Relic Blade",
+            "Wrist-Mounted Grenade Launcher"
+        ],
+        "ability":{},
+        "modifiers":{}
+    },
+
+]

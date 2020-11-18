@@ -1,0 +1,431 @@
+/* IVAN && ERIC */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font: 12px/1.55 'Source Sans Pro', sans-serif;
+	margin: auto;
+	width: 90%;
+}
+
+.margin {
+	margin-left: 5px;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+div {
+	display: block;
+}
+
+.col1-layout .col-main,
+.header,
+#nav,
+.footer-wrapper,
+.container-home,
+.max-width-wrapper {
+	max-width: 325px;
+	margin: 0 auto;
+}
+.header-container-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background: #f8f8f8;
+	z-index: 5000;
+}
+
+header {
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	z-index: 995;
+}
+
+.header .header_toplinks {
+	overflow: hidden;
+}
+
+.header .mainicons {
+	display: none;
+}
+
+.header .header_toplinks .block-cart {
+	float: right;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+li {
+	text-align: -webkit-match-parent;
+}
+
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+
+a {
+	color: #ff5959;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.header .header_toplinks .block-cart .micarrito {
+	padding: 0px;
+	margin: 0 0px 0 0;
+}
+
+.header .header_toplinks .block-cart .micarrito .top-link-cart {
+	display: block;
+	float: right;
+}
+
+.header .header_toplinks .block-cart .micarrito .top-link-cart span {
+	display: block;
+	float: right;
+	width: 50px;
+	height: 50px;
+	background: #ff5959;
+	margin: 0;
+	position: relative;
+}
+
+.header .header_toplinks .block-cart .micarrito .top-link-cart span span.qty {
+	position: absolute;
+	font-family: 'Myriad Pro', 'Myriad Web', 'Tahoma', 'Helvetica', 'Arial',
+		sans-serif;
+	font-size: 20px;
+	color: #fff;
+	background: none;
+	display: block;
+	height: auto;
+	margin: 0;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.header .header_toplinks .block-cart .micarrito .top-link-cart {
+	display: block;
+	float: right;
+}
+
+.header .header_toplinks .block-cart .micarrito .top-link-cart span {
+	display: block;
+	float: right;
+	width: 50px;
+	height: 50px;
+	background: #ff5959;
+	margin: 0;
+	position: relative;
+}
+
+.header .header_toplinks .block-cart .micarrito .top-link-cart.mycart .icon {
+	background: #fff
+		url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -66px
+		10px no-repeat;
+	margin: 0;
+	position: relative;
+}
+
+.header .header_toplinks .block-cart .micarrito .top-link-cart span span.cart {
+	position: absolute;
+	background: none;
+	display: block;
+	height: auto;
+	margin: 0;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.header .mobile_serarch_icon {
+	float: right;
+	width: 50px;
+	height: 50px;
+	text-indent: -99999px;
+	background: #bbb8b6
+		url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg) -304px
+		12px no-repeat;
+	cursor: pointer;
+}
+
+.header .links {
+	float: right;
+	margin: 0;
+}
+
+.header .links li {
+	float: left;
+	font-size: 11px;
+	background: none;
+	padding: 0 8px 0 7px;
+}
+
+.header .links a {
+	color: #666666;
+	text-decoration: none;
+}
+
+.header .header_toplinks .links li {
+	padding: 0px;
+	margin: 0;
+}
+
+.header .header_toplinks .links li a {
+	display: block;
+	float: left;
+	line-height: 50px;
+	font-weight: 400;
+	color: #2e2925;
+	font-size: 13px;
+	text-transform: uppercase;
+	text-indent: -9999px;
+	width: 50px;
+}
+
+.header .header_toplinks .links li a .icon {
+	display: block;
+	float: left;
+	line-height: 46px;
+	margin-right: 10px;
+}
+
+.header .header_toplinks .links .login_link .icon {
+	width: 27px;
+	height: 27px;
+	background: url(https://www.marialunarillos.com/skin/frontend/default/newdesign2017/images/sprite.svg)
+		0 0 no-repeat;
+	margin: 10px;
+}
+.subheader {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+.logo {
+	margin-top: 70px;
+}
+.logo1 {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+/* IVAND && VICTOR */
+
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+img {
+	max-width: 100%;
+}
+
+.icon {
+	text-align: center;
+}
+
+.container__title {
+	display: flex;
+	justify-content: center;
+}
+
+.section__title {
+	display: flex;
+	margin-bottom: 67px;
+	line-height: 22px;
+	font-size: 15px;
+	font-weight: 900;
+	letter-spacing: 6px;
+	color: #2e2925;
+	border-top: solid;
+	border-bottom: solid;
+	margin-top: 50px;
+	justify-content: center;
+	width: 70%;
+}
+
+.ingredients__images img {
+	width: 100%;
+	height: 100%;
+}
+
+.ingredients__images--big {
+	padding: 7.5px;
+	max-height: 140px;
+	overflow: hidden;
+	border: 0;
+	max-width: 100%;
+	position: relative;
+}
+
+.ingredients__images--small {
+	padding: 7.5px;
+	max-height: 140px;
+	overflow: hidden;
+	border: 0;
+	max-width: 100%;
+	position: relative;
+}
+
+.ingredients__images--text {
+	bottom: 0;
+	left: 7.5px;
+	background: rgba(255, 255, 255, 0.8);
+	width: 50%;
+	margin: 0;
+	position: absolute;
+	padding: 2%;
+}
+
+.ingredients__images h2 {
+	color: #67635f;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+.btn {
+	background: #ff5959;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 70px;
+	padding: 5%;
+	box-sizing: content-box;
+	width: 80%;
+}
+
+#ingredients__btn {
+	width: 40%;
+}
+
+#blog__btn {
+	width: 40%;
+}
+
+.text__btn {
+	background-color: #ff5959;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 500;
+	padding: 1%;
+}
+
+.foodTitle {
+	font-size: small;
+	font-weight: bolder;
+	color: grey;
+	background-color: white;
+	padding: 5%;
+}
+
+.autor {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: white;
+}
+
+.name {
+	margin-left: 5%;
+	background-color: white;
+}
+
+.recipes__examples {
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
+
+#item__post-2,
+#item__post-3 {
+	display: none;
+}
+
+@media screen and (min-width: 700px) {
+	#item__post-2,
+	#item__post-3 {
+		display: block;
+	}
+	.bigFlex {
+		display: flex;
+		flex-direction: row;
+	}
+	.smallFlex {
+		display: flex;
+		flex-direction: column;
+	}
+	.ingredients__images--big {
+		max-height: none;
+		height: 100%;
+		width: 100%;
+	}
+
+	.ingredients__images--small {
+		max-height: none;
+		height: 100%;
+		width: 100%;
+	}
+
+	.smallW {
+		max-height: none;
+		min-height: 1px;
+		float: left;
+		padding: 7.5px;
+		margin: 0;
+		float: left;
+	}
+
+	.bigW {
+		max-height: none;
+		min-height: 1px;
+		float: left;
+		padding: 7.5px;
+		margin: 0;
+		float: left;
+	}
+
+	.smallW img {
+		height: 100%;
+	}
+
+	.recipes__examples img {
+		max-height: 100%;
+	}
+
+	.ingredients__images--text::after {
+		content: '';
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-bottom: 150px solid rgba(255, 255, 255, 0.8);
+		border-right: 100px solid transparent;
+		position: absolute;
+		right: -100px;
+		top: 0;
+	}
+}

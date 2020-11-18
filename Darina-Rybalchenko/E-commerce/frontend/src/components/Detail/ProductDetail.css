@@ -1,0 +1,13 @@
+.detail {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    justify-content: center;
+}
+.rounded {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    width: 350px;
+}
+.card {
+    margin-left: 30px;
+}

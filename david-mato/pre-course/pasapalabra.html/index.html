@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasapalabra</title>
+    <link rel="stylesheet" type="text/css" href="./reset-stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="./pasapalabra.js" async></script>
+</head>
+<body>
+    <div id="display">
+        <h1>pasapalabra</h1>
+        <p id="timer">150</p>
+        <div id="letter">
+            <p id="inside">A</p>
+        </div>
+        <p id="right-answers">0</p>
+        <span><img src="instructions.png" id="instructions-icon" alt="instructions"></span>
+        <div id="instructions">
+            <h3><u>INSTRUCCIONES</u></h3>
+            <ul>
+                <li>Dispones de 150 segundos en el contador.</li>
+                <li>Para introducir una respuesta, pulsa Enter &#8629.</li>
+                <li>Si quieres dejar una palabra para la siguiente ronda, pulsa el botón de <strong>PASAPALABRA</strong> o escribe <em>pasapalabra</em>.</li>
+                <li>En cualquier momento puedes terminar la partida, solo tienes que pulsar el botón de <strong>END</strong> o escribir <em>end</em>.</li>
+            </ul>
+        </div>
+        <form id="user-name" onsubmit="return false">
+            <input type="text" id="name" autocomplete="off" placeholder="Introduce tu nombre de usuario">
+        </form>
+        <div id="start"><img src="play.png" id="play-symbol" alt="play"><span id="play">JUGAR</span></div>
+        <div id="countdown"></div>
+        <div id="hidden-display">
+            <div id="questions">
+                <p id="question"></p>
+            </div>
+            <form id="filter-form" onsubmit="return false">
+                <input type="text" id="input" autocomplete="off" placeholder="Escribe aquí tu respuesta">
+            </form>
+            <p id="pasapalabra">PASAPALABRA</p>
+            <p id="end">END</p>
+        </div> 
+        <h3 id="ranking-title">RANKING</h3> 
+        <div id="ranking"><ol id="ranking-list"></ol><hr>
+            <div id="outer-box">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                      <div class="flip-box-front">
+                        <img id="arrow" src="arrow.png" alt="arrow">
+                      </div>
+                      <div class="flip-box-back">
+                        <img id="arrow2" src="arrow2.png" alt="arrow-reverse">
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pokémon - Detail</title>
+		<link
+			rel="icon"
+			href="https://www.flaticon.es/svg/static/icons/svg/743/743977.svg"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div>
+			<header>
+				<div class="poke">
+					<img
+						src="https://www.flaticon.es/svg/static/icons/svg/743/743977.svg"
+						width="20"
+					/>
+					<h1>Pokédex</h1>
+				</div>
+				<nav class="navigation">
+					<a href="./list.html" class="nav-button">List of Pokémon</a>
+				</nav>
+			</header>
+			<main>
+				<div class="hero-info">
+					<img id="hero" />
+					<div class="info">
+						<h2 class="detail-heroes-title">Pokémon - Detail</h2>
+						<div class="id">
+							<label for="id-text" class="id-label">Id: </label>
+							<span id="id-text" class="name-text"></span>
+						</div>
+						<div class="name">
+							<label for="name-text" class="id-label">Name: </label>
+							<input value="" id="name-text" class="name-text" />
+						</div>
+					</div>
+				</div>
+				<div class="description">
+					<h2 class="top-heroes-title">Base Stats</h2>
+					<div id="box-all"></div>
+					<h2 class="top-heroes-title">Types</h2>
+					<div id="types"></div>
+					<h2 class="top-heroes-title">Abilities</h2>
+					<div id="abilities"></div>
+					<h2 class="top-heroes-title">Moves</h2>
+					<div id="moves"></div>
+				</div>
+			</main>
+		</div>
+		<script src="store.js"></script>
+		<script>
+			let id = +window.location.search.replace('?id=', '');
+
+			document.getElementById('id-text').innerHTML = id;
+
+			(async () => {
+				const form = await store.loadformPokemon(id);
+				if (typeof form === 'string') {
+					document.getElementById('hero').src = form;
+				} else {
+					document.getElementById('hero').src = form.sprites.front_default;
+				}
+            })();
+
+            (async () => {
+				const pokemon = await store.loadPokemon(id);
+				if (typeof pokemon === 'string') {
+                    document.getElementById('name-text').value = pokemon;
+                    document.getElementById('name-text').value = pokemon;
+                    document.getElementById('box-all').innerHTML = pokemon;
+                    document.getElementById('types').innerHTML = pokemon;
+				    document.getElementById('abilities').innerHTML = pokemon;
+				    document.getElementById('moves').innerHTML = pokemon;
+				} else {
+                    document.getElementById('name-text').value = pokemon.name;
+                    document.getElementById('box-all').innerHTML = store.statsPokemon(pokemon);
+                    document.getElementById('types').innerHTML = store.descriptionPokemon(pokemon,'types','type');
+				    document.getElementById('abilities').innerHTML = store.abilityAnchorPokemon(id,pokemon,'abilities','ability');
+				    document.getElementById('moves').innerHTML = store.descriptionPokemon(pokemon,'moves','move');
+				}
+            })();
+		</script>
+	</body>
+</html>

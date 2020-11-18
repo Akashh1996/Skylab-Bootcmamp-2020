@@ -1,0 +1,50 @@
+.nav{
+    display: flex;
+    align-items: center;
+    background-color: #A594C2;
+    flex-direction: row;
+}
+.nav-link{
+    color: white;
+}
+.nav-menu{
+    font-weight: bold;
+}
+#nav-link-active{
+    padding: 10px 50px;
+    width: 120px;
+}
+
+.list-group-item{
+    background-color: #cf4622;
+    color: white;
+}
+h1{
+    font-weight: bold;
+    position: relative;
+    right: 200px;    
+}
+
+h2{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h4{
+    padding: 10px 35px
+}
+
+.title{
+    text-align: right;
+}
+/*HOLLY GRAIL*/
+.main {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    /* justify-content: center;  */
+}
+
+.texto{
+    text-align: justify;
+}

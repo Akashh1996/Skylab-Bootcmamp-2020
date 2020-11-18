@@ -1,0 +1,87 @@
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+		'Lucida Sans', Arial, sans-serif;
+}
+
+.trip-range-class-container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.flight-route-professional {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.flight-route {
+	display: flex;
+	flex-direction: column;
+}
+
+.af-logo {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.pro-pass {
+	align-self: flex-end;
+}
+
+.name-age-sugg {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.name-age {
+	display: flex;
+	flex-direction: column;
+}
+
+.sugg {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+#sub-button {
+	margin: 20px auto 0;
+	width: 150px;
+}
+
+input:invalid {
+	border: 2px solid red;
+}
+
+.terms-conditions {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.answers {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.answer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.terms-conditions {
+	margin-top: 10px;
+}
+
+.sugg > textarea {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+		'Lucida Sans', Arial, sans-serif;
+	font-style: italic;
+}

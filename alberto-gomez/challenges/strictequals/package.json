@@ -1,0 +1,16 @@
+{
+  "name": "strictequals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "challenge-13-10.js",
+  "scripts": {
+    "test": "jest",
+    "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.5.3"
+  }
+}

@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading {
+    background-color: #9679b3;
+    display: flex;
+    height: 50px;
+    width: 100%;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-bar-item {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 25%;
+}
+
+.cake-logo-wrapper {
+    width: 25%;
+}
+
+.cake-logo {
+    width: 18%;
+}
+
+.mainContent {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper-main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+}
+
+.wrapper-left-content {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.wrapper-right-content {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo {
+    width: 90%;
+}
+
+.brouse-our-pies {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.list-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.list-group-item {
+    color: white;
+    font-size: 20px;
+    background-color: red;
+    height: 40px;
+    width: 90%;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 30px;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(150, 121, 179);
+}
+
+.bethany-picture-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.bethany-picture, .bethany-foto-description {
+    width: 90%;
+}
+
+.wrapper-text-history {
+    text-align: left;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.promotion-sections {
+    display: flex;
+    justify-content: center;
+}
+
+.wraper-promotions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.promotion-picture-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.promotion-picture {
+    width: 90%;
+}
+
+h3 {
+    text-align: center;
+    font-weight: bold;
+}
+
+h4 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.contact-us {
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 700px) {
+    h1 {
+        font-size: 20px;
+    }
+    .list-group-item {
+        font-size: 12px;
+    }
+    .wrapper-main-content {
+        flex-direction: column;
+    }
+    .wrapper-main-content, .wrapper-left-content, .wrapper-right-content {
+        width: 100%;
+    }
+    .logo {
+        width: 30%;
+    }
+    .cake-logo-wrapper {
+        width: 26%;
+    }
+}

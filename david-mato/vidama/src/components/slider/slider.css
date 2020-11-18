@@ -1,0 +1,125 @@
+.recommendations {
+	background: rgb(238, 226, 213);
+	padding: 60px 0;
+}
+
+.recommendations-title {
+	margin-top: 0;
+	text-align: center;
+	background: rgb(238, 226, 213) !important;
+	font-size: 45px;
+}
+
+.recommended-books {
+	position: relative;
+	overflow: hidden;
+	left: 50%;
+	transform: translate(-50%);
+	width: 100%;
+}
+
+.scrollable-list {
+	border-radius: 10px;
+	padding: 0 40px;
+	transition: transform 0.5s;
+}
+
+.scrollable-list__row {
+	display: flex;
+}
+
+.arrow-container {
+	height: 100%;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	outline: none;
+	z-index: 1;
+	background: rgb(238, 226, 213);
+	padding: 0 5px;
+}
+
+.right-arrow-container {
+	right: 0px;
+	border-right: 1px solid rgb(238, 226, 213);
+	border-left: 1px solid rgba(165, 42, 42, 0.591);
+	box-shadow: -1px 0 2px rgba(0, 0, 0, 0.591);
+}
+
+.left-arrow-container {
+	box-shadow: 1px 0 2px rgba(0, 0, 0, 0.591);
+	border-right: 1px solid rgba(165, 42, 42, 0.591);
+	visibility: hidden;
+}
+
+.arrow-left,
+.arrow-right {
+	border-radius: 50%;
+	background: rgba(245, 169, 76, 0.664);
+	padding: 15px;
+	box-shadow: 0px 1px 3px rgb(143, 75, 75);
+	cursor: pointer;
+}
+
+.item-carousel {
+	margin: 0 50px;
+	color: black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.book-link {
+	text-decoration: none !important;
+	border: 1px solid rgba(165, 42, 42, 0.591);
+	background: rgb(255, 251, 251);
+	margin: 20px;
+	border-radius: 10px;
+	width: 210px;
+	height: 310px;
+	padding: 21px 0 10px;
+	box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.575);
+	position: relative;
+}
+
+.item-title {
+	text-align: center;
+	width: 200px;
+	font-size: 16px;
+	color: rgb(221, 103, 99);
+	margin-top: 5px;
+}
+
+.item-price {
+	font-size: 15px;
+	color: rgba(0, 0, 0, 0.658);
+}
+
+.item-image {
+	width: 150px;
+	height: 230px;
+	border-radius: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.591);
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.466);
+}
+
+.book-hover-filter {
+	border-radius: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.103);
+	visibility: hidden;
+}
+
+.book-link:hover > .book-hover-filter {
+	visibility: visible;
+}
+
+@media screen and (min-width: 700px) {
+	.recommendations-title {
+		font-size: 50px;
+	}
+}

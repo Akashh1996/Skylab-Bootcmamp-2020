@@ -1,0 +1,137 @@
+body {
+	font-family: sans-serif;
+}
+.deleteButton {
+	width: 170px;
+	margin-bottom: 10px;
+	position: relative;
+	top: -9px;
+}
+
+.main-title {
+	font-size: 30px;
+	color: rgb(166, 166, 166);
+	font-weight: 600;
+}
+
+.nav-buttons {
+	background-color: rgb(238, 238, 238);
+	text-decoration: none;
+	color: rgb(93, 120, 133);
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-size: 20px;
+	margin-right: 5px;
+}
+
+.top-heroes-wrapper {
+	width: fit-content;
+}
+
+.top-heroes-title {
+	margin-top: 30px;
+	text-align: center;
+	font-size: 30px;
+	color: gray;
+}
+
+.top-heroes-buttons {
+	text-decoration: none;
+	color: white;
+	background-color: rgb(93, 120, 133);
+	float: left;
+	height: 145px;
+	width: 180px;
+	margin: 0 40px 40px 0;
+	text-align: center;
+	line-height: 145px;
+	font-size: 19px;
+	font-weight: 600;
+	vertical-align: middle;
+}
+
+.top-heroes-buttons:last-child {
+	margin-right: 0;
+}
+
+.list-title,
+.detail-title-wrapper {
+	font-weight: 100;
+	font-size: 30px;
+}
+
+.list-heroes {
+	display: flex;
+	flex-direction: column;
+	margin-left: 5px;
+}
+
+.list-heroes__buttons {
+	text-decoration: none;
+	color: rgb(130, 130, 130);
+	font-size: 18px;
+	background: rgb(238, 238, 238);
+	width: 170px;
+	height: 35px;
+	line-height: 40px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
+.list-heroes__buttons--id {
+	color: white;
+	background-color: rgb(96, 125, 139);
+	position: relative;
+	left: 0;
+	float: left;
+	height: 100%;
+	width: 35px;
+	line-height: 35px;
+	border-radius: 5px 0 0 5px;
+	text-align: center;
+	font-size: 16px;
+}
+
+.list-heroes__buttons--name {
+	padding-left: 17px;
+}
+
+.back-button {
+	border: none;
+	color: rgb(141, 137, 137);
+	border-radius: 5px;
+	margin-top: 30px;
+	padding: 5px 13px;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+.back-button:focus {
+	outline: none;
+}
+
+.hero-characteristic {
+	margin-bottom: 20px;
+}
+
+.hero-characteristic:first-of-type {
+	margin-top: 20px;
+}
+
+.hero-characteristic span:first-child {
+	color: rgb(68, 100, 116);
+	font-size: 17px;
+}
+
+.hero-subproperties-list__suproperty {
+	margin-bottom: 6px;
+	margin-left: 20px;
+}
+
+#hero-img {
+	margin-bottom: 25px;
+}
+
+#hero-name__input {
+	font-size: 16px;
+}

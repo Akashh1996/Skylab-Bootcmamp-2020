@@ -1,0 +1,7 @@
+.top-heroes {
+	display: flex;
+}
+
+.top-heroes > li {
+	list-style: none;
+}

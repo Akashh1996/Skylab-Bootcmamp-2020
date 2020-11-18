@@ -1,0 +1,33 @@
+.hero-list-element {
+	display: flex;
+	cursor: pointer;
+	text-decoration: none;
+	color: #afafaf;
+	background-color: #eeeeee;
+	width: 70vw;
+	margin: 7px 15px 7px 0px;
+	border-radius: 10px;
+}
+
+.hero-list-element:hover {
+	text-decoration: none;
+	color: #afafaf;
+}
+
+.hero-list-element span {
+	padding: 20px;
+}
+
+.a-id {
+	background-color: #607d8b;
+	width: 60px;
+	text-align: center;
+}
+
+.erase-button {
+	background-color: #607d8b;
+	margin: 7px 15px 7px 0px;
+	width: 60px;
+	text-align: center;
+	padding: 20px;
+}

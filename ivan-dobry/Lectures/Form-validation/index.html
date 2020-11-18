@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<title>Document</title>
+	</head>
+	<body>
+		<form class="rowValidaton">
+			<label for="viaje">Viaje</label>
+			<input
+				type="text"
+				name="viaje"
+				id="viaje"
+				list="viajes"
+				required
+				placeholder="Ida y vuelta"
+			/>
+			<datalist id="viajes">
+				<option value="Ida y vuelta">Ida y vuelta</option>
+				<option valeue="Ida">Ida</option>
+				<option value="vuelta">vuelta</option>
+			</datalist>
+
+			<label for="Pasajeros">Pasajeros</label>
+			<input
+				type="text"
+				name="Pasajeros"
+				id="Pasajeros"
+				list="Pasajero"
+				placeholder="1 Pasajero"
+				required
+			/>
+			<datalist id="Pasajero">
+				<option>1 Pasajero</option>
+				<option>2 Pasajeros</option>
+				<option>3 Pasajeros</option>
+			</datalist>
+
+			<label for="clase">clase</label>
+			<input
+				type="text"
+				name="clase"
+				id="clase"
+				list="clases"
+				required
+				placeholder="Economy"
+			/>
+			<datalist id="clases">
+				<option>Economy</option>
+				<option>Luxury</option>
+			</datalist>
+		</form>
+		<form class="rowValidaton2">
+			<label for="salida"></label>
+			<span class="material-icons"> flight_takeoff </span>
+			<input id="salida" name="salida" placeholder="Salida de" required />
+
+			<label for="llegada"></label>
+			<span class="material-icons"> flight_land </span>
+			<input id="llegada" name="llegada" placeholder="LLegada a" required />
+		</form>
+
+		<form class="rowValidaton">
+			<label for="fechas"></label>
+			<span class="material-icons"> calendar_today </span>
+			<input
+				type="text"
+				name="fechas"
+				id="fechas"
+				placeholder="Fechas de viaje"
+				required
+			/>
+		</form>
+		<form class="rowValidaton">
+			<label for="switch">Viaje personal</label>
+			<label class="switch">
+				<input type="checkbox" />
+				<span class="slider round"></span>
+			</label>
+		</form>
+
+		<form class="rowValidaton">
+			<label for="name">Nombre</label>
+			<input type="text" name="name" id="name" required />
+			<label for="apellido">Apellido</label>
+			<input type="text" name="apellido" id="apellido" required />
+		</form>
+
+		<form class="rowValidaton">
+			<label for="description">Description</label>
+			<textarea
+				name="description"
+				id="description"
+				cols="30"
+                rows="10"
+			></textarea>
+		</form>
+
+		<form class="rowValidaton">
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email" pattern="{4,30}" required />
+
+			<label for="phone">Telefono</label>
+			<input
+				type="tel"
+				id="phone"
+				name="phone"
+				pattern="[0-9]{4,15}"
+				required
+			/>
+			</label>
+        </form>
+        <button class='buyButton'>Buy Flight</button>
+	</body>
+</html>

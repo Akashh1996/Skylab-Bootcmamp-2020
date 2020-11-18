@@ -1,0 +1,25 @@
+div {
+	color: blue;
+}
+
+div li {
+	font-style: italic;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+	p {
+		background-color: blue;
+		font-size: 20px;
+		margin: 0 16px;
+		width: 80%;
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+	p {
+		background-color: black;
+		font-size: 30px;
+		margin: 0 32px;
+		width: calc(100vw / 2);
+	}
+}

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: url(./background.jpg) no-repeat center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-container {
+    display: grid;
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 90px);
+}
+
+.calculator-container > button {
+    margin: 5px;
+    outline: none;
+    background-color: #8cffda;
+    border-radius: 20px;
+    border: 1.8px solid #FFD700;
+    color: #8447ff;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+button.operand {
+    background-color: rgb(255,215,0);
+    background-color: #8447ff;
+    color: #8cffda;
+}
+
+.first-span {
+    grid-column: 1 / span 2;
+}
+
+.second-span {
+    grid-column: span 2;
+}
+
+.calculator-display {
+    margin: 5px;
+    border: 1.8px solid #FFD700;
+    background-color: rgba(0, 0, 0, .75);
+    border-radius: 20px;
+    grid-column: span 4;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-value, .current-value {
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+} 
+
+.current-value {
+    font-size: 2rem;
+    font-weight: bold;
+}
+

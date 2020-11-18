@@ -1,0 +1,71 @@
+div {
+	color: blue;
+}
+
+/*div > li {
+	solo afecta a los hijos directos
+	font-style: italic;
+}*/
+
+
+li.italic {
+	font-style: italic;
+}
+
+#morespecific {
+	background-color: red;
+	border: 3px solid black;
+}
+
+#skiing {
+	font-size: 100px;
+	margin-top: 2%;
+}
+
+.specific {
+	background-color: gray;
+	border: none !important; /*El important passa por encima de todo*/
+}
+
+.material-icons {
+	font-size: 60px;
+}
+
+p {
+	background-color: blue;
+	color: white;
+	padding: 5px;
+}
+
+@media screen and (max-width: 599px) {
+	.specific {
+		background-color: blue;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+	.specific {
+		background-color: pink;
+		font-size: 20px;
+		margin: 0 32px;
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+	.specific {
+		background-color: black;
+		font-size: 30px;
+		margin: 0 32px;
+		width: calc(100vw / 2); /*Es posible trabajar con calculos*/
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.specific {
+		background-color: yellow;
+		font-size: 40px;
+		margin: 0 64px;
+		width: 30%;
+	}
+}
