@@ -1,37 +1,34 @@
 function shoppingCarController(cartItemSchema) {
   function getMethod(req, res) {
-    cartItemSchema.find({}, (error, cartList) => {
-      if (error) {
-        res.send(error);
-      } else {
-        res.send(cartList);
-      }
-    });
+    const query = { };
+    const getCallBack = (error, cartList) => (error ? res.send(error) : res.send(cartList));
+    cartItemSchema.find(query)
+      .populate('product')
+      .exec(getCallBack);
   }
 
   function patchMethod(req, res) {
-    const { item, cartList } = req.body;
-    delete item._id;
-    const query = {}
-    const conditionToUpdate = { `${cartList[item.id]}`: [...cartList[`${item.id}`], item] }
-    const patchCallback = (error, newItem) => {
-      if (error) {
-        res.send(error);
-      } else {
-        res.send(newItem);
-      }
-    }
-    cartItemSchema.updateOne(query, conditionToUpdate, patchCallback);
+    const { item } = req.body;
+    const query = { product: item._id };
+    const update = { $inc: { quantity: 1 } };
+    const patchCallback = (error, newItem) => (error ? res.send(error) : res.send(newItem));
+    cartItemSchema.findOneAndUpdate(query, update, { upsert: true, new: true })
+      .populate('product')
+      .exec(patchCallback);
   }
 
   function deleteMethod(req, res) {
     const item = req.body;
-    cartItemSchema.deleteOne({ id: item.id }, (error, deletedItem) => {
-      if (error) {
-        res.send(error);
-      }
-      res.send(deletedItem);
-    });
+    const query = { product: item._id };
+    const update = { $inc: { quantity: -1 } };
+    const deleteCallback = (error, deletedItem) => (
+      error
+        ? res.send(error)
+        : res.send(deletedItem)
+    );
+    cartItemSchema.findOneAndUpdate(query, update, { new: true })
+      .populate('product')
+      .exec(deleteCallback);
   }
 
   return { getMethod, patchMethod, deleteMethod };
