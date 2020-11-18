@@ -17,6 +17,7 @@ function TodoList({ todoList, actions }) {
       />
       <button
         type="button"
+        className="add-button"
         onClick={() => { actions.addTodoListItem(newTodoListItem); setNewTodoListItem(''); }}
       >
         Add
