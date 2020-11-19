@@ -1,8 +1,9 @@
+/* eslint-disable no-debugger */
 /* eslint-disable no-console */
 import axios from 'axios';
 import actionTypes from './actionsTypes';
 
-const URL = 'http://localhost:5000/';
+const endpointAPI = 'http://localhost:5000/';
 
 function getCartList(cartList) {
   return {
@@ -26,9 +27,10 @@ function getProductoByIdSuccess(productDetail) {
 }
 
 export function loadProductList() {
+  debugger;
   return async (dispatch) => {
     try {
-      const productsList = await axios.get(`${URL}`);
+      const productsList = await axios.get(`${endpointAPI}`);
       dispatch(loadProductsSuccess(productsList.data));
     } catch (error) {
       console.log(error);
@@ -40,7 +42,7 @@ export function getDetailProduct(productModel) {
   return async (dispatch) => {
     const endpoint = 'product';
     try {
-      const productDetail = await axios.get(`${URL}${endpoint}/${productModel}`);
+      const productDetail = await axios.get(`${endpointAPI}${endpoint}/${productModel}`);
       dispatch(getProductoByIdSuccess(productDetail.data));
     } catch (error) {
       console.log(error);
@@ -52,7 +54,7 @@ export function getCurrentCart() {
   return async (dispatch) => {
     const endpoint = 'cart';
     try {
-      const cartList = await axios.get(`${URL}${endpoint}`);
+      const cartList = await axios.get(`${endpointAPI}${endpoint}`);
       dispatch(getCartList(cartList.data));
     } catch (error) {
       console.log(error);
@@ -64,7 +66,7 @@ export function addProductToCart(product) {
   return async () => {
     const endpoint = 'cart';
     try {
-      await axios.post(`${URL}${endpoint}`, {
+      await axios.post(`${endpointAPI}${endpoint}`, {
         ...product,
       });
     } catch (error) {
@@ -77,7 +79,7 @@ export function delProductFromCart(cartId) {
   return async (dispatch) => {
     const endpoint = 'cart';
     try {
-      await axios.delete(`${URL}${endpoint}`, {
+      await axios.delete(`${endpointAPI}${endpoint}`, {
         data: { cartId },
       });
       dispatch(getCurrentCart());
