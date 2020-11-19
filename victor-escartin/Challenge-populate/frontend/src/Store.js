@@ -1,8 +1,9 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import {
   createStore, compose, applyMiddleware, combineReducers,
 } from 'redux';
 import thunk from 'redux-thunk';
-import { userListReducer } from './reducers/userReducers';
+import { userListReducer } from './reducers/userReducer';
 
 const initialState = {};
 const reducer = combineReducers({

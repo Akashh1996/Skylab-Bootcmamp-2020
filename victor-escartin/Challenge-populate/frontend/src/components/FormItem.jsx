@@ -9,7 +9,7 @@ function FormItem(props) {
   return (
     <div key={user._id} className="form-item">
       <div className="card mb-3">
-        <div className="row no-gutters">
+        <div className="row">
           <div className="col-md-4">
             <img src="https://librenoticias.com/wp-content/uploads/2020/08/default-user-image-400x400.png" className="card-img" alt="..." />
           </div>
