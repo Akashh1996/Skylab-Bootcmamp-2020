@@ -11,13 +11,14 @@ function UserList({ userList, dispatch }) {
   }, []);
 
   return (
-    <main>
+    <main className="p-4">
       <h1>User List</h1>
       <ul>
         {userList && userList.length && userList.map((user) => (
-          <li key={performance.now * Math.random()}>
-            <span>{user.name}</span>
-            <span>{user.age}</span>
+          <li key={performance.now * Math.random()} className="d-flex flex-column mb-5">
+            <span className="mr-2">{`Name: ${user.name}`}</span>
+            <span>{`Age: ${user.age}`}</span>
+            <span>{`Address: ${user.address.street} ${user.address.number}, ${user.address.city}, ${user.address.country.name}`}</span>
           </li>
         ))}
       </ul>
