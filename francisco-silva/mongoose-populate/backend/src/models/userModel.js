@@ -3,7 +3,7 @@ const { Schema, model } = require('mongoose');
 const userSchema = new Schema({
   name: { type: String },
   age: { type: Number },
-  adrees: { type: Schema.Types.ObjectId, ref: 'Story' },
+  address: { type: Schema.Types.ObjectId, ref: 'address' },
 });
 
-model.exports = model('User', userSchema);
+module.exports = model('user', userSchema);
