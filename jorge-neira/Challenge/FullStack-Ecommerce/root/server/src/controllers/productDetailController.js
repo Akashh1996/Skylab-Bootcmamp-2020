@@ -1,8 +1,9 @@
 function productDetailController(Laptop) {
   function getMethod({ params }, res) {
-    const model = { 'product-model': params.productName };
+    const model = { _id: params.productName };
+    console.log(Laptop);
     Laptop.findOne(model)
-      .populate('product-general-specs')
+      .populate('generalSpecs')
       .exec(
         ((errorFindProduct, products) => (
           errorFindProduct

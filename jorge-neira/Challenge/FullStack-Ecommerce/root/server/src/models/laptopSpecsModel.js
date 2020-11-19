@@ -11,4 +11,4 @@ const productGeneralSpecsSchema = new Schema({
   color: String,
 });
 
-module.exports = model('product-general-specs', productGeneralSpecsSchema, 'laptopspecs');
+module.exports = model('laptopspec', productGeneralSpecsSchema, 'laptopspecs');
