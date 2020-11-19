@@ -5,10 +5,11 @@ const chalk = require('chalk');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const { connect } = require('mongoose');
-const Products = require('./src/models/laptopModel');
+const Laptops = require('./src/models/laptopModel');
 const Carts = require('./src/models/cartModel');
-const productsListRouter = require('./src/routes/marketRouter')(Products);
-const productsDetailRouter = require('./src/routes/marketRouter')(Products);
+const Specs = require('./src/models/laptopSpecsModel');
+const laptopsListRouter = require('./src/routes/laptopsRouter')(Laptops);
+const laptopDetailRouter = require('./src/routes/laptopRouter')(Laptops, Specs);
 const shoppingCart = require('./src/routes/cartRouter')(Carts);
 
 const ecommerceApp = express();
@@ -21,8 +22,8 @@ connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true });
 ecommerceApp.use(cors());
 ecommerceApp.use(bodyParser.urlencoded({ extended: true }));
 ecommerceApp.use(bodyParser.json());
-ecommerceApp.use('/', productsListRouter);
-ecommerceApp.use('/', productsDetailRouter);
+ecommerceApp.use('/', laptopsListRouter);
+ecommerceApp.use('/', laptopDetailRouter);
 ecommerceApp.use('/', shoppingCart);
 
 ecommerceApp.listen(port, () => {
