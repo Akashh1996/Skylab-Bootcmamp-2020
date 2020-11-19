@@ -3,7 +3,7 @@ const countriesModel = require('../models/countriesModel');
 /* eslint-disable no-underscore-dangle */
 function AddressesController(Addresses) {
   function getMethod(req, res) {
-    Addresses.find({}).populate({ path: 'countries', model: countriesModel })
+    Addresses.find({}).populate({ path: 'country', model: countriesModel })
       .exec((errorFindAddresses, addresses) => (errorFindAddresses
         ? res.send(errorFindAddresses)
         : res.json(addresses)));
