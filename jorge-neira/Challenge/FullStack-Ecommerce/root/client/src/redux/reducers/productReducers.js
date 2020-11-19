@@ -1,10 +1,9 @@
-/* eslint-disable no-debugger */
 import actionTypes from '../actions/actionsTypes';
 
 const initialState = {
-  // cartList: [],
-  // productList: [],
-  // productDetail: [],
+  cartList: [],
+  productList: [],
+  productDetail: [],
 };
 
 export default function productReducer(state = initialState, action) {
@@ -12,7 +11,6 @@ export default function productReducer(state = initialState, action) {
     type, cartList, productList, productDetail,
   } = action;
   let updateState;
-  debugger;
   switch (type) {
     case actionTypes.LOAD_CART_LIST:
       updateState = { ...state, cartList };
