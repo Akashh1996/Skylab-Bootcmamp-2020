@@ -27,7 +27,6 @@ function getProductoByIdSuccess(productDetail) {
 }
 
 export function loadProductList() {
-  debugger;
   return async (dispatch) => {
     try {
       const productsList = await axios.get(`${endpointAPI}`);
