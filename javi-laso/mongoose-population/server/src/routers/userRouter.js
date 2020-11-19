@@ -1,13 +1,13 @@
 const { Router } = require('express');
 const userController = require('../controllers/userController');
 
-function userRouter(userSchema, countrySchema) {
+function userRouter(userSchema, addressSchema, countrySchema) {
   const router = Router();
-  const controller = userController(userSchema, countrySchema);
+  const controller = userController(userSchema, addressSchema, countrySchema);
 
   router.route('/')
     .get(controller.getUsersMethod)
-    .post(controller.postUsersMethod);
+    .put(controller.putUsersMethod);
 
   return router;
 }
