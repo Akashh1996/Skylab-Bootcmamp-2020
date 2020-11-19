@@ -45,11 +45,7 @@ describe('userController', () => {
         save: jest.fn().mockImplementationOnce((callback) => callback()),
       });
 
-      const req = {
-        send: {
-          body: null,
-        },
-      };
+      const req = {};
 
       const res = {
         json: jest.fn(),
