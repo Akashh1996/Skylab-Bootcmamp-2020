@@ -5,11 +5,11 @@ import './index.css';
 import configureStore from './redux/configureStore';
 import App from './App';
 
-const store = configureStore();
+const userStore = configureStore();
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <Provider store={userStore}>
       <App />
     </Provider>
   </React.StrictMode>,
