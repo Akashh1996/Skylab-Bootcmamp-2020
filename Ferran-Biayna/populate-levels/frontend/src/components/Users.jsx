@@ -7,48 +7,52 @@ requestUsersList
 
 function Users({ usersList, dispatch }) {
   useEffect(() => {
-    if (!usersList || !usersList?.length) {
+    if (!usersList || usersList?.length === 0) {
       dispatch(requestUsersList());
     }
   }, [usersList?.length]);
 
   return (
     <div className="list-container">
-      {/* <input
-        onChange={(event) => setnewItem(event.target.value)}
-        value={newItem}
-        placeholder="Enter a new item"
-      />
-      <button type="button" onClick={() => dispatch(requestAddItem(newItem))}>Add</button> */}
-
       {(!usersList || !usersList.length) && <h1>There is no list!</h1>}
-
-      <ul>
-        {usersList && usersList.length > 0 && usersList.map((item) => (
-          <>
-            <div>
-              <h3>User</h3>
-              <p>
-                <p>{item.name}</p>
-                <p>{item.age}</p>
-              </p>
-              {/* <button value={item.description} type="button"
-              onClick={() => dispatch(requestDeleteItem(item))}>x</button> */}
-            </div>
-          </>
-        ))}
-      </ul>
+      {usersList && usersList.length > 0 && usersList.map((item) => (
+        <>
+          <div>
+            <ol>
+              <li>USER - INFO</li>
+              <ul>
+                <li>{`Name: ${item.name}`}</li>
+                <li>{`Age: ${item.age}`}</li>
+                <li>Address:</li>
+                <ul>
+                  <li>{`Street: ${item.address.street}`}</li>
+                  <li>{`Number: ${item.address.number}`}</li>
+                  <li>{`City: ${item.address.city}`}</li>
+                  <li>Country:</li>
+                  <ul>
+                    <li>{`Code: ${item.address.country.code}`}</li>
+                    <li>{`Name: ${item.address.country.name}`}</li>
+                  </ul>
+                </ul>
+              </ul>
+            </ol>
+          </div>
+        </>
+      ))}
     </div>
-
   );
 }
 
 Users.propTypes = {
-  usersList: PropTypes.shape([]).isRequired,
-  dispatch: PropTypes.shape(() => {}).isRequired,
+  usersList: PropTypes.shape([]),
+  dispatch: PropTypes.func.isRequired,
   actions: PropTypes.shape({
     requestUsersList: PropTypes.func.isRequired,
   }).isRequired,
+};
+
+Users.defaultProps = {
+  usersList: null,
 };
 
 function mapStateToProps({ usersReducer }) {
