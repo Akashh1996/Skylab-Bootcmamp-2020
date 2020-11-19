@@ -1,25 +1,13 @@
 const express = require('express');
-
-const router = express.Router();
+const addressController = require('../controller/addressController');
 
 function AddressRouter(Address) {
-  router.get('/', (req, res) => {
-    const query = {};
-    Address.find(query, (error, addresses) => (
-      error
-        ? res.send(error)
-        : res.json(addresses)
-    ));
-  });
+  const router = express.Router();
+  const address = addressController(Address);
 
-  router.put('/', (req, res) => {
-    const address = new Address(req.body);
-    address.save((error, addressSaved) => (
-      error
-        ? res.send(error)
-        : res.json(addressSaved)
-    ));
-  });
+  router.route('/')
+    .get(address.getMethod)
+    .put(address.putMethod);
 
   return router;
 }

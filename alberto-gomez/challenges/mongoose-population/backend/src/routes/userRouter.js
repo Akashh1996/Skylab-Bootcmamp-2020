@@ -1,33 +1,13 @@
 const express = require('express');
-const countryModel = require('../models/countryModel');
-
-const router = express.Router();
+const userController = require('../controller/userController');
 
 function UserRouter(User) {
-  router.get('/', (req, res) => {
-    const query = {};
-    User.find(query).populate({
-      path: 'address',
-      populate: {
-        path: 'country',
-        model: countryModel,
-      },
-    })
-      .exec((error, users) => (
-        error
-          ? res.send(error)
-          : res.json(users)
-      ));
-  });
+  const router = express.Router();
+  const user = userController(User);
 
-  router.put('/', (req, res) => {
-    const user = new User(req.body);
-    user.save((error, userSaved) => (
-      error
-        ? res.send(error)
-        : res.json(userSaved)
-    ));
-  });
+  router.route('/')
+    .get(user.getMethod)
+    .put(user.putMethod);
 
   return router;
 }

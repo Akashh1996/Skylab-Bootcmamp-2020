@@ -1,25 +1,13 @@
 const express = require('express');
-
-const router = express.Router();
+const countryController = require('../controller/countryController');
 
 function CountryRouter(Country) {
-  router.get('/', (req, res) => {
-    const query = {};
-    CountryRouter.find(query, (error, countries) => (
-      error
-        ? res.send(error)
-        : res.json(countries)
-    ));
-  });
+  const router = express.Router();
+  const country = countryController(Country);
 
-  router.put('/', (req, res) => {
-    const country = new Country(req.body);
-    country.save((error, countrySaved) => (
-      error
-        ? res.send(error)
-        : res.json(countrySaved)
-    ));
-  });
+  router.route('/')
+    .get(country.getMethod)
+    .put(country.putMethod);
 
   return router;
 }
