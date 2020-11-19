@@ -1,12 +1,15 @@
-function productDetailController(Products) {
+function productDetailController(Laptop) {
   function getMethod({ params }, res) {
     const model = { 'product-model': params.productName };
-    Products.findOne(model, (errorFindProduct, products) => (
-      errorFindProduct
-        ? res.send(errorFindProduct)
-        : res.json(products)));
+    Laptop.findOne(model)
+      .populate('product-general-specs')
+      .exec(
+        ((errorFindProduct, products) => (
+          errorFindProduct
+            ? res.send(errorFindProduct)
+            : res.json(products))),
+      );
   }
-
   return {
     getMethod,
   };
