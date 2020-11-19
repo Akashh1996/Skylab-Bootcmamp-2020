@@ -6,7 +6,9 @@ const chalk = require('chalk');
 const debug = require('debug')('server');
 const { connect } = require('mongoose');
 const userSchema = require('./src/models/userSchema');
-const userRouter = require('./src/routers/userRouter')(userSchema);
+const addressSchema = require('./src/models/addressSchema');
+const countrySchema = require('./src/models/countrySchema');
+const userRouter = require('./src/routers/userRouter')(userSchema, addressSchema, countrySchema);
 
 const server = express();
 const port = process.env.PORT || 3500;
