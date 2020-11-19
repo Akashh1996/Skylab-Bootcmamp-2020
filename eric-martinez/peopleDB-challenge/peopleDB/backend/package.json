@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "DEBUG=app nodemon index.js",
-    "test": "jest --collect-coverage --watchAll"
+    "test": "jest --collect-coverage"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
     "cors": "^2.8.5",
     "debug": "^4.2.0",
     "express": "^4.17.1",
+    "jest": "^26.6.3",
     "mongoose": "^5.10.15",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.6"

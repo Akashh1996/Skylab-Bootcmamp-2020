@@ -6,8 +6,7 @@ function addressRouter(Address) {
   const address = addressController(Address);
 
   router.route('/')
-    .get(address.getMethod);
-  router.route('/')
+    .get(address.getMethod)
     .put(address.putMethod);
   return router;
 }

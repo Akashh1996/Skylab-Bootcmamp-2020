@@ -7,8 +7,7 @@ function countryRouter(Country) {
   const country = countryController(Country);
 
   router.route('/')
-    .get(country.getMethod);
-  router.route('/')
+    .get(country.getMethod)
     .put(country.putMethod);
   return router;
 }

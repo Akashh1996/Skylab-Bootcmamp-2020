@@ -3,26 +3,28 @@ const countryModel = require('../models/countriesModel');
 function userController(User) {
   function getMethod(req, res) {
     const query = {};
-    User.find(query).populate({
+    const user = User.find(query);
+    user.populate({
       path: 'address',
       populate: {
         path: 'country',
         model: countryModel,
       },
-    }).exec((error, foundCoso) => {
+    });
+    user.exec((error, users) => {
       if (error) {
         res.send(error);
       }
-      res.send(foundCoso);
+      res.send(users);
     });
   }
   function putMethod(req, res) {
     const query = req.body;
     User.create(query, (errorPutUser, user) => {
       if (errorPutUser) {
-        res.send(errorPutUser);
+        return res.send(errorPutUser);
       }
-      res.json(user);
+      return res.json(user);
     });
   }
   return { getMethod, putMethod };

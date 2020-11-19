@@ -6,9 +6,7 @@ function userRouter(User) {
   const user = userController(User);
 
   router.route('/')
-    .get(user.getMethod);
-
-  router.route('/')
+    .get(user.getMethod)
     .put(user.putMethod);
 
   return router;
