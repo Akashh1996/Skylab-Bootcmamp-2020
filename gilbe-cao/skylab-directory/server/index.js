@@ -4,14 +4,19 @@ const debug = require('debug')('app');
 const chalk = require('chalk');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const Hero = require('./src/models/superHeroModel');
-const heroRouter = require('./src/routes/heroRouter')(Hero);
+const { connect } = require('mongoose');
+const User = require('./src/models/userModel');
+const Address = require('./src/models/addressModel');
+const Country = require('./src/models/countryModel');
+const userRouter = require('./src/routers/userRouter')(User);
+const addressRouter = require('./src/routers/addressRouter')(Address);
+const countryRouter = require('./src/routers/countryRouter')(Country);
 
 const app = express();
 const port = process.env.PORT || 5000;
+const dbUrl = process.env.DATABASE || 'mongodb://localhost/superHeroDB';
 
-mongoose.connect('mongodb://localhost/superHeroDB', { useNewUrlParser: true, useUnifiedTopology: true });
+connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(morgan('tiny'));
 
@@ -22,11 +27,9 @@ app.use(express.static(path.join(__dirname, '/public/')));
 app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css')));
 app.use('/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/views', 'index.html'));
-});
-
-app.use('/heroes', heroRouter);
+app.use('/users', userRouter);
+app.use('/addresses', addressRouter);
+app.use('/countries', countryRouter);
 
 app.listen(port, () => {
   debug(`Server is running on port ${chalk.blue(port)}`);
