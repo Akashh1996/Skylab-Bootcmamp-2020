@@ -10,10 +10,21 @@ export function loadUsersSuccess(userList) {
   };
 }
 
+export function loadUsersError(error) {
+  return {
+    type: actionTypes.LOAD_USERS_ERROR,
+    error,
+  };
+}
+
 export function loadUsers() {
   return async (dispatch) => {
-    const users = await axios.get(usersUrl);
+    try {
+      const users = await axios.get(usersUrl);
 
-    dispatch(loadUsersSuccess(users.data));
+      dispatch(loadUsersSuccess(users.data));
+    } catch (error) {
+      dispatch(loadUsersError(error));
+    }
   };
 }
