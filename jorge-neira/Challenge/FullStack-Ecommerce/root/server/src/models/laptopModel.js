@@ -2,27 +2,20 @@ const mongoose = require('mongoose');
 
 const { Schema, model } = mongoose;
 
-const productGeneralSpecsSchema = new Schema({
-  screen: { type: String },
-  cpu: { type: String },
-  'memory-ram': { type: String },
-  gpu: { type: String },
-  os: { type: String },
-  color: { type: String },
-});
-
 const laptopSchema = new Schema({
-  'product-name': { type: String },
-  'product-model': { type: String },
-  'product-part-number': { type: String },
-  'product-serie': { type: String },
+  _id: mongoose.Schema.Types.ObjectId,
+  'product-name': String,
+  'product-model': String,
+  'product-part-number': String,
+  'product-serie': String,
   'product-image-url': [String],
-  'product-general-specs': {
-    type: productGeneralSpecsSchema,
-    default: {},
-  },
-  price: { type: String },
-  cart: { type: Schema.Types.ObjectId, ref: 'carts' },
+  price: String,
+  'product-general-specs': [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'laptopspec',
+    },
+  ],
 });
 
-module.exports = model('laptops', laptopSchema);
+module.exports = model('laptop', laptopSchema, 'laptops');

@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
 const cartShema = new Schema({
-  quantity: { type: Number },
-  price: { type: Number },
+  quantity: Number,
+  price: Number,
 });
 
 module.exports = model('carts', cartShema);
