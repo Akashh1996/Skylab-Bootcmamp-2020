@@ -1,5 +1,5 @@
-const Product = require('../../models/laptopModel');
-const productDetailController = require('../productDetailController')(Product);
+const Laptop = require('../../models/laptopModel');
+const productDetailController = require('../productDetailController')(Laptop);
 
 describe('Detail Controllers', () => {
   let req;
@@ -19,7 +19,7 @@ describe('Detail Controllers', () => {
 
   test('GET Methods should return json if no error occurs', () => {
     // arrange
-    Product.findOne = jest.fn().mockImplementationOnce((query, callback) => {
+    Laptop.findOne = jest.fn().mockImplementationOnce((query, callback) => {
       callback(null, null);
     });
     // act
@@ -31,7 +31,7 @@ describe('Detail Controllers', () => {
 
   test('GET Methods should return send if error occurs', () => {
     // arrange
-    Product.findOne = jest.fn().mockImplementationOnce((query, callback) => {
+    Laptop.findOne = jest.fn().mockImplementationOnce((query, callback) => {
       callback(true, null);
     });
     // act

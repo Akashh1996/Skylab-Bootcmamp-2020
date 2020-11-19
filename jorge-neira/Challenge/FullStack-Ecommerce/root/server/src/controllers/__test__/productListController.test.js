@@ -1,5 +1,5 @@
-const Product = require('../../models/laptopModel');
-const productListController = require('../productsListController')(Product);
+const Laptops = require('../../models/laptopModel');
+const productListController = require('../productsListController')(Laptops);
 
 describe('Test product list controller', () => {
   test('Test Get Methods', () => {
@@ -8,7 +8,7 @@ describe('Test product list controller', () => {
       send: jest.fn(),
       json: jest.fn(),
     };
-    Product.find = jest.fn().mockImplementationOnce((query, callback) => {
+    Laptops.find = jest.fn().mockImplementationOnce((query, callback) => {
       callback(true, 'Myproduct');
     });
     // act
@@ -22,7 +22,7 @@ describe('Test product list controller', () => {
       send: jest.fn(),
       json: jest.fn(),
     };
-    Product.find = jest.fn().mockImplementationOnce((query, callback) => {
+    Laptops.find = jest.fn().mockImplementationOnce((query, callback) => {
       callback();
     });
     // act
