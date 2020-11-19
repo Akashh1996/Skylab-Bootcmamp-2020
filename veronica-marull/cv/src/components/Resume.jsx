@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import BlockTimeline from './BlockTimeline';
 import CodingSkills from './CodingSkills';
 import Title from './Title';
-import data from './data';
+import store from '../store/store';
+
 import './resume.css';
+import { loadData } from '../actions/actions';
 
 function Resume() {
+	const [data, setData] = useState(store.getData());
+
+	function handleChange() {
+		setData(store.getData());
+	}
+
+	useEffect(() => {
+		store.addEventListener(handleChange);
+		if (!data) {
+			loadData();
+		}
+		return () => {
+			store.removeEventListener(handleChange);
+		};
+	}, [data]);
+
 	return (
 		<>
 			<div className="resume">
