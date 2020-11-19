@@ -1,15 +1,17 @@
 const { Router } = require('express');
 const userController = require('../controllers/userController');
 
-function peopleRouter(User) {
+function userRouter(User) {
   const router = Router();
   const user = userController(User);
 
-  router.route('/heroes')
-    .get(user.getMethod)
+  router.route('/')
+    .get(user.getMethod);
+
+  router.route('/')
     .put(user.putMethod);
 
   return router;
 }
 
-module.exports = peopleRouter;
+module.exports = userRouter;

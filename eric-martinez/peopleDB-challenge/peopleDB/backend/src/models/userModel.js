@@ -3,6 +3,6 @@ const { Schema, model } = require('mongoose');
 const userSchema = new Schema({
   name: { type: String },
   age: { type: Number },
-  adress: { type: String },
+  address: { type: Schema.Types.ObjectId, ref: 'address' },
 });
-module.exports = model('users', userSchema);
+module.exports = model('user', userSchema);
