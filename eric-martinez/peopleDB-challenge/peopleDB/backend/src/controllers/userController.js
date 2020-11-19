@@ -1,4 +1,5 @@
 const countryModel = require('../models/countriesModel');
+const addressModel = require('../models/addressModel');
 
 function userController(User) {
   function getMethod(req, res) {
@@ -18,15 +19,35 @@ function userController(User) {
       res.send(users);
     });
   }
-  function putMethod(req, res) {
-    const query = req.body;
-    User.create(query, (errorPutUser, user) => {
-      if (errorPutUser) {
-        return res.send(errorPutUser);
-      }
-      return res.json(user);
-    });
+  function putMethod(req) {
+    const { info } = req.body;
+    const userInfo = {
+      name: info.name,
+      age: info.age,
+    };
+    const addressInfo = {
+      street: info.street,
+      number: info.number,
+      city: info.city,
+    };
+    const countryInfo = {
+      code: info.code,
+      countryName: info['country-name'],
+    };
+
+    const addressCallback = (errorAddress, newAddress) => {
+      userInfo.address = newAddress._id;
+      User.create(userInfo);
+    };
+
+    const countryCallback = (errorCountry, newCountry) => {
+      addressInfo.country = newCountry._id;
+      addressModel.create(addressInfo, addressCallback);
+    };
+
+    countryModel.create(countryInfo, countryCallback);
   }
+
   return { getMethod, putMethod };
 }
 
