@@ -7,12 +7,9 @@ import { loadProductList, addProductToCart } from '../redux/actions/productsActi
 import ListCreateProduct from './ListCreateProduct';
 
 function ListProduct({ products, actions }) {
-  debugger;
   useEffect(() => {
-    debugger;
     if (products.length < 0) {
       actions.loadProductList();
-      debugger;
     }
   }, []);
   return (
@@ -44,7 +41,6 @@ ListProduct.defaultProps = {
 };
 
 function mapStateToProps({ productReducer }) {
-  debugger;
   return {
     products: productReducer.productList,
   };
