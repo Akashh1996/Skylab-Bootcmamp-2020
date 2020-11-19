@@ -1,45 +1,18 @@
 const { Router } = require('express');
-const countryModel = require('../models/countryModel');
+const addressController = require('../controllers/addressController');
 
 function addressRouter(Address) {
   const router = Router();
-  router.get('/', (req, res) => {
-    const query = {};
-    Address.find(query)
-      .populate({
-        path: 'country',
-        model: countryModel,
-      })
-      .exec((errorFindAddress, address) => {
-        if (errorFindAddress) {
-          res.send(errorFindAddress);
-        }
-        res.json(address);
-      });
-  });
-  router.put('/', (req, res) => {
-    const query = req.body;
-    Address.create(query, (errorPutAddress, address) => {
-      if (errorPutAddress) {
-        res.send(errorPutAddress);
-      }
-      res.json(address);
-    });
-  });
+  const address = addressController(Address);
 
-  router.delete('/:id', (req, res) => {
-    const query = req.params.id;
-    Address.findByIdAndRemove(query, (errorDelete) => (
-      errorDelete ? res.send(errorDelete) : res.send('deleted')
-    ));
-  });
+  router.route('/:id')
+    .delete(address.deleteMethod)
+    .post(address.postMethod);
 
-  router.post('/:id', (req, res) => {
-    const query = req.params.id;
-    Address.findByIdAndUpdate(query, (errorUpdate, address) => (
-      errorUpdate ? res.send(errorUpdate) : res.send(address)
-    ));
-  });
+  router.route('/')
+    .get(address.getMethod)
+    .put(address.putMethod);
+
   return router;
 }
 module.exports = addressRouter;
