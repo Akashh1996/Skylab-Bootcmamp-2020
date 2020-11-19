@@ -10,9 +10,8 @@ function heroesController(Hero) {
   }
 
   function putMethod(req, res) {
-    const hero = new Hero(req.body)
-    hero.save((error, heroSaved) => {
-      return error ? res.send(error) : res.json(heroSaved)})
+    const hero = new Hero(req.body);
+    hero.save((error, heroSaved) => (error ? res.send(error) : res.json(heroSaved)));
   }
 
   return {
