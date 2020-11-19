@@ -1,8 +1,5 @@
-const { Router } = require('express');
-
-function addressRouter(Address) {
-  const router = Router();
-  router.get('/', (req, res) => {
+function addressControler(Address) {
+  function getMethod(req, res) {
     const query = {};
     Address.find(query, (errorCreate, addresses) => {
       if (errorCreate) {
@@ -10,13 +7,13 @@ function addressRouter(Address) {
       }
       res.json(addresses);
     });
-  });
-
-  router.put('/', (req, res) => {
+  }
+  function putMethod(req, res) {
     const address = new Address(req.body);
     address.save((error, addressSaved) => (error ? res.send(error) : res.json(addressSaved)));
-  });
-  return router;
+  }
+
+  return { getMethod, putMethod };
 }
 
-module.exports = addressRouter;
+module.exports = addressControler;

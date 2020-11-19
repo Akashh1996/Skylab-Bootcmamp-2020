@@ -1,8 +1,5 @@
-const { Router } = require('express');
-
-function countryRouter(Country) {
-  const router = Router();
-  router.get('/', (req, res) => {
+function countryController(Country) {
+  function getMethod(req, res) {
     const query = {};
     Country.find(query, (errorCreate, countries) => {
       if (errorCreate) {
@@ -10,13 +7,14 @@ function countryRouter(Country) {
       }
       res.json(countries);
     });
-  });
+  }
 
-  router.put('/', (req, res) => {
+  function putMethod(req, res) {
     const country = new Country(req.body);
     country.save((error, countrySaved) => (error ? res.send(error) : res.json(countrySaved)));
-  });
-  return router;
+  }
+
+  return { getMethod, putMethod };
 }
 
-module.exports = countryRouter;
+module.exports = countryController;

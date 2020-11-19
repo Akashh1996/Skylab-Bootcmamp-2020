@@ -6,12 +6,12 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const morgan = require('morgan');
 const { connect } = require('mongoose');
-const User = require('./models/userModel');
-const Address = require('./models/addressModel');
-const Country = require('./models/countryModel');
-const userRouter = require('./routes/userRouter')(User);
-const addressRouter = require('./routes/userRouter')(Address);
-const countryRouter = require('./routes/countryRouter')(Country);
+const User = require('./src/models/userModel');
+const Address = require('./src/models/addressModel');
+const Country = require('./src/models/countryModel');
+const userRouter = require('./src/routes/userRouter')(User);
+const addressRouter = require('./src/routes/userRouter')(Address);
+const countryRouter = require('./src/routes/countryRouter')(Country);
 
 const app = express();
 
