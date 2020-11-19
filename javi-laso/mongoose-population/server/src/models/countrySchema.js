@@ -5,4 +5,4 @@ const countrySchema = new Schema({
   name: String,
 });
 
-module.exports = model('User', countrySchema);
+module.exports = model('Country', countrySchema);
