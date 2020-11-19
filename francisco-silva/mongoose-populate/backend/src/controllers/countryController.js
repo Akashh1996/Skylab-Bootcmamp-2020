@@ -3,7 +3,7 @@ function countryController(Country) {
     const query = {};
     Country.find(query, (errorFindCountry, country) => {
       if (errorFindCountry) {
-        res.send(errorFindCountry);
+        return res.send(errorFindCountry);
       }
       res.json(country);
     });
@@ -13,7 +13,7 @@ function countryController(Country) {
     const query = req.body;
     Country.create(query, (errorPutCountry, country) => {
       if (errorPutCountry) {
-        res.send(errorPutCountry);
+        return res.send(errorPutCountry);
       }
       res.json(country);
     });

@@ -1,19 +1,21 @@
-const countryModel = require('../models/countryModel');
+// const countryModel = require('../models/countryModel');
 
-function userController(User) {
+function userController(User, Country) {
   function getMethod(req, res) {
     const query = {};
-    User.find(query).populate({
+    const user = User.find(query);
+    user.populate({
       path: 'address',
       populate: {
         path: 'country',
-        model: countryModel,
+        model: Country,
       },
-    }).exec((errorGetUser, foundUser) => {
+    });
+    user.exec((errorGetUser, foundUser) => {
       if (errorGetUser) {
-        res.send(errorGetUser);
+        return res.send(errorGetUser);
       }
-      res.send(foundUser);
+      return res.json(foundUser);
     });
   }
 

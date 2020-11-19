@@ -10,7 +10,7 @@ function addressController(Address) {
       })
       .exec((errorFindAddress, address) => {
         if (errorFindAddress) {
-          res.send(errorFindAddress);
+          return res.send(errorFindAddress);
         }
         res.json(address);
       });
@@ -20,7 +20,7 @@ function addressController(Address) {
     const query = req.body;
     Address.create(query, (errorPutUser, user) => {
       if (errorPutUser) {
-        res.send(errorPutUser);
+        return res.send(errorPutUser);
       }
       res.json(user);
     });
