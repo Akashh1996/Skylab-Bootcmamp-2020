@@ -1,0 +1,14 @@
+[
+    {
+      "street": "Roc Boronat",
+      "number": 35,
+      "city": "Barcelona",
+      "country": "Spain"
+    },
+    {
+      "street": "Via Venetto",
+      "number": 10,
+      "city": "Milan",
+      "country": "Italy"
+    }
+  ]
