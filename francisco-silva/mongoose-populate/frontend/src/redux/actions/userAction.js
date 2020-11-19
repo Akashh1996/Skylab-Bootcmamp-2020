@@ -1,9 +1,9 @@
 import actionTypes from './actionTypes';
 import axios from 'axios';
-function requestUsersSuccess(usersList) {
+function requestUsersSuccess(userList) {
     return {
         type: actionTypes.LOAD_USERS,
-        usersList
+        userList
     };
 }
 function requestUsersError(error) {
@@ -15,7 +15,7 @@ function requestUsersError(error) {
 }
 export function requestUsers() {
     return async (dispatch) => {
-
+        debugger;
         const endpoint = 'http://localhost:5050/user';
         try {
             const users = await axios.get(endpoint);

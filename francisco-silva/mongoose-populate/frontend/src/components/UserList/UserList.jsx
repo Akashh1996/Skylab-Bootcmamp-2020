@@ -7,7 +7,7 @@ import './UserList.css';
 
 
 function UserList({ userList, dispatch}) {
-    
+    debugger;
     if (!userList || userList.length <= 0) {
         dispatch(requestUsers());
     }
@@ -15,10 +15,10 @@ function UserList({ userList, dispatch}) {
     console.log(userList)
     return (
         <div className = "list-wrapper">
-            {userList &&
-                userList.length >= 1 &&
-                userList.map((user) => <div className="user_wrapper" key = {user.id}>
-                <span>{user["user-name"]}</span>
+            {userList.userList &&
+                userList.userList.length >= 1 &&
+                userList.userList.map((user) => <div className="user_wrapper" key = {user.id}>
+                <span>{user["name"]} </span><span>{user.address.street}</span>
                 </div>
                 )}
         </div>
@@ -27,7 +27,7 @@ function UserList({ userList, dispatch}) {
 function mapStateToProps(state) {
    debugger
     return {
-        userList: state.userReducer.userList
+        userList: state.userReducer.usersList
     };
 }
 function mapDispatchToProps(dispatch) {
