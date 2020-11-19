@@ -7,13 +7,18 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-    <div class="jumbotron">
-        <h1>Skylab works!</h1>
-        <nav>
-            <a href="/heroes" class="btn btn-primary">Heroes</a>
-        </nav>
-    </div>
-
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Heroes API</h1>
+        </div>
+    </header>
+    <main class="container">
+        <h2>Methods available</h2>
+        <ul>
+            <li>[GET, PUT] /heroes</li>
+            <li>[GET, POST, DELETE] /heroes/{heroId}</li>
+        </ul>
+    </main>
     <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -5,14 +5,15 @@ function heroesController(Hero) {
       if (errorFindHeroes) {
         res.send(errorFindHeroes);
       }
+
       res.json(heroes);
     });
   }
 
   function putMethod(req, res) {
-    Hero.addHero(req.body);
+    const hero = new Hero(req.body);
 
-    res.json(Hero.getHeroes());
+    hero.save((error, heroSaved) => (error ? res.send(error) : res.json(heroSaved)));
   }
 
   return {
