@@ -5,7 +5,7 @@ function printList() {
     listheader.textContent = "My Heroes"
     listheader.setAttribute("class","titleSection");
     var list = document.createElement('ul');
-    list.style.listStyleType = "none";
+    listheader.setAttribute("class","list");
     store.getHeroes().forEach(function (obj) {
         let heroId = obj.id.toString()
         let heroLink = "../detail/detail.html?heroId=" + heroId;

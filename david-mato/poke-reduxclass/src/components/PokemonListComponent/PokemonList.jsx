@@ -23,7 +23,6 @@ function PokemonList({ pokemonList, dispatch }) {
 }
 
 function mapStateToProps({ pokeReducer }) {
-	debugger;
 	return {
 		pokemonList: pokeReducer.pokemonArray,
 		randomNumber: pokeReducer.randomNumber

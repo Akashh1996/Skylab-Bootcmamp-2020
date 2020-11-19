@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "set PORT=1240 && nodemon index.js"
+    "start": "set PORT=3000 && nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.5.3",
     "express": "^4.17.1",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.6"
   }
 }
