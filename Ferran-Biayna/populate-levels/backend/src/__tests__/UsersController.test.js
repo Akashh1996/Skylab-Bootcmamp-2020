@@ -1,5 +1,13 @@
 const Users = require('../models/usersModel');
+const Address = require('../models/addressesModel');
+const Country = require('../models/countriesModel');
 const usersController = require('../controllers/UsersController')(Users);
+
+jest.mock('../models/usersModel');
+jest.mock('../models/addressesModel');
+jest.mock('../models/countriesModel');
+
+const req = { body: { _id: 1 } };
 
 describe('UsersController', () => {
   test('should call response json on getMethod', () => {
@@ -32,76 +40,46 @@ describe('UsersController', () => {
     expect(res.send).toHaveBeenCalled();
   });
 
-  test('should call response json on postMethod', () => {
-    const req = {
-      body: { name: 'Skylab mola!' },
-    };
-    const res = {
-      json: jest.fn(),
-    };
+  test('Post method - Country - should have been called', () => {
+    Users.create = jest.fn();
+    Address.create = jest.fn();
+    Country.create = jest.fn();
 
-    Users.create = jest.fn().mockImplementationOnce((query, callback) => {
-      callback(false, 'newUser');
-    });
+    usersController.postMethod(req);
 
-    usersController.postMethod(req, res);
-
-    expect(res.json).toHaveBeenCalled();
+    expect(Country.create).toHaveBeenCalled();
   });
 
-  test('should call error on postMethod', () => {
-    const req = {
-      body: { name: 'Skylab mola!' },
-    };
-    const res = {
-      send: jest.fn(),
-    };
-
-    Users.create = jest.fn().mockImplementationOnce((query, callback) => {
-      callback(true, 'errorAddUser');
+  test('Post method - Address - should have been called', () => {
+    Users.create = jest.fn();
+    Address.create = jest.fn();
+    Country.create = jest.fn().mockImplementationOnce((countryInfo, countryCallback) => {
+      countryCallback(null, null);
     });
 
-    usersController.postMethod(req, res);
+    usersController.postMethod(req);
 
-    expect(res.send).toHaveBeenCalled();
+    expect(Country.create).toHaveBeenCalled();
   });
-  test('should call response json on putMethod', () => {
-    const res = {
-      json: jest.fn(),
-    };
 
-    const req = { body: { _id: '1' } };
+  test('Users method - Users - should have been called', () => {
+    Users.create = jest.fn();
+    Address.create = jest.fn().mockImplementationOnce((addressInfo, addressCallback) => {
+      addressCallback(null, {});
+      Country.create = jest.fn().mockImplementationOnce((countryInfo, countryCallback) => {
+        countryCallback(null, {});
+      });
 
-    Users.findByIdAndUpdate = jest.fn().mockImplementationOnce((body, callback) => {
-      callback(false, 'Deleted Successfully!');
+      usersController.postMethod(req);
+
+      expect(Country.create).toHaveBeenCalled();
     });
-
-    usersController.putMethod(req, res);
-
-    expect(res.json).toHaveBeenCalled();
   });
 
-  test('should call error on putMethod', () => {
-    const res = {
-      send: jest.fn(),
-    };
-
-    const req = { body: { _id: '1' } };
-
-    Users.findByIdAndUpdate = jest.fn().mockImplementationOnce((body, callback) => {
-      callback(true, 'errorDeleteUser');
-    });
-
-    usersController.putMethod(req, res);
-
-    expect(res.send).toHaveBeenCalled();
-  });
   test('should call response json on deleteMethod', () => {
     const res = {
       json: jest.fn(),
     };
-
-    const req = { body: { _id: '1' } };
 
     Users.findByIdAndRemove = jest.fn().mockImplementationOnce((query, callback) => {
       callback(false, 'Deleted Successfully!');
@@ -116,8 +94,6 @@ describe('UsersController', () => {
     const res = {
       send: jest.fn(),
     };
-
-    const req = { body: { _id: '1' } };
 
     Users.findByIdAndRemove = jest.fn().mockImplementationOnce((query, callback) => {
       callback(true, 'errorDeleteUser');

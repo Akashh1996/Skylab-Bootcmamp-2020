@@ -3,21 +3,35 @@ import actionTypes from './actionTypes';
 
 const backURL = 'http://localhost:5000/users/';
 
-function requestUsersListSuccess(usersList) {
+export function requestUsersListSuccess(usersList) {
   return {
     type: actionTypes.LOAD_USERS,
     usersList,
   };
 }
 
-function requestUsersListError(error) {
+export function requestUsersListError(error) {
   return {
     type: actionTypes.LOAD_USERS_ERROR,
     error,
   };
 }
 
-function requestUsersList() {
+export function requestCreateUsersSuccess(newUser) {
+  return {
+    type: actionTypes.NEW_USERS,
+    newUser,
+  };
+}
+
+export function requestCreateUsersError(error) {
+  return {
+    type: actionTypes.NEW_USERS_ERROR,
+    error,
+  };
+}
+
+export function requestUsersList() {
   return async (dispatch) => {
     try {
       const usersList = await axios.get(backURL);
@@ -28,4 +42,13 @@ function requestUsersList() {
   };
 }
 
-export default requestUsersList;
+export function requestCreateUsers(user) {
+  return async (dispatch) => {
+    try {
+      const newUser = await axios.post(backURL, { user });
+      dispatch(requestCreateUsersSuccess(newUser.data));
+    } catch (error) {
+      dispatch(requestCreateUsersError(error));
+    }
+  };
+}

@@ -1,4 +1,5 @@
 const countriesModel = require('../models/countriesModel');
+const addressModel = require('../models/addressesModel');
 
 /* eslint-disable no-underscore-dangle */
 function UsersController(Users) {
@@ -13,16 +14,31 @@ function UsersController(Users) {
         : res.json(users)));
   }
 
-  function postMethod({ body }, res) {
-    Users.create(body, (errorAddUser, newUser) => (errorAddUser
-      ? res.send(errorAddUser)
-      : res.json(newUser)));
-  }
+  function postMethod(req) {
+    const { user } = req.body;
+    const userInfo = {
+      name: user.name,
+      age: user.age,
+    };
+    const addressInfo = {
+      street: user.street,
+      number: user.number,
+      city: user.city,
+    };
+    const countryInfo = {
+      code: user.countryCode,
+      name: user.countryName,
+    };
 
-  function putMethod({ body }, res) {
-    Users.findByIdAndUpdate(body._id, (errorAddUser, newUser) => (errorAddUser
-      ? res.send(errorAddUser)
-      : res.json(newUser)));
+    const addressCallback = (errorAddress, newAddress) => {
+      userInfo.address = newAddress._id;
+      Users.create(userInfo);
+    };
+    const countryCallback = (errorCountry, newCountry) => {
+      addressInfo.country = newCountry._id;
+      addressModel.create(addressInfo, addressCallback);
+    };
+    countriesModel.create(countryInfo, countryCallback);
   }
 
   function deleteMethod({ body }, res) {
@@ -32,7 +48,7 @@ function UsersController(Users) {
   }
 
   return {
-    getMethod, postMethod, putMethod, deleteMethod,
+    getMethod, postMethod, deleteMethod,
   };
 }
 

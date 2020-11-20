@@ -6,11 +6,7 @@ const { connect } = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const Users = require('./src/models/usersModel');
-const Addresses = require('./src/models/addressesModel');
-const Countries = require('./src/models/countriesModel');
 const usersRouter = require('./src/routes/usersRouter')(Users);
-const addressesRouter = require('./src/routes/addressesRouter')(Addresses);
-const countriesRouter = require('./src/routes/countriesRouter')(Countries);
 
 const app = express();
 app.use(cors());
@@ -31,7 +27,5 @@ app.get('/', (req, res) => {
 });
 
 app.use('/users', usersRouter);
-app.use('/address', addressesRouter);
-app.use('/countries', countriesRouter);
 
 app.listen(port, () => (`Server is running on port ${chalk.blue(port)}`));

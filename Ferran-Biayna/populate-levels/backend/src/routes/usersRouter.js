@@ -8,7 +8,6 @@ function usersRouter(Users) {
   router.route('/')
     .get(users.getMethod)
     .post(users.postMethod)
-    .put(users.putMethod)
     .delete(users.deleteMethod);
 
   return router;

@@ -2,17 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider as ReduxProvider } from 'react-redux';
+import NewUsers from './components/NewUsers';
 import reportWebVitals from './reportWebVitals';
 
 import configureStore from './store/configureStore';
-import Users from './components/Users';
 
 const store = configureStore();
 
 ReactDOM.render(
   <React.StrictMode>
     <ReduxProvider store={store}>
-      <Users />
+      <NewUsers />
     </ReduxProvider>
   </React.StrictMode>,
   document.getElementById('root'),

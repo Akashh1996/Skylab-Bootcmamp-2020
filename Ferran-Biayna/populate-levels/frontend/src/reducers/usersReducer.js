@@ -9,6 +9,12 @@ export default function toDoReducer(state = {}, action) {
     case actionTypes.LOAD_USERS_ERROR:
       answer = { ...state, error: action.error };
       break;
+    case actionTypes.NEW_USERS:
+      answer = { ...state, usersList: [...state, action.usersList] };
+      break;
+    case actionTypes.NEW_USERS_ERROR:
+      answer = { ...state, error: action.error };
+      break;
     default:
       answer = state;
   }

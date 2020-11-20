@@ -3,9 +3,9 @@ import { act } from 'react-dom/test-utils';
 import { Provider as ReduxProvider } from 'react-redux';
 import { render, unmountComponentAtNode } from 'react-dom';
 import configureStore from '../store/configureStore';
-import Users from '../components/Users';
+import NewUsers from '../components/NewUsers';
 
-describe('Users', () => {
+describe('NewUsers', () => {
   let container;
   beforeEach(() => {
     container = document.createElement('div');
@@ -18,12 +18,12 @@ describe('Users', () => {
     container = null;
   });
 
-  test('usersList=undefined - User.jsx should be defined', () => {
+  test('NewUsersList=undefined - User.jsx should be defined', () => {
     const store = configureStore();
     act(() => {
       render(
         <ReduxProvider store={store}>
-          <Users />
+          <NewUsers />
         </ReduxProvider>,
         container,
       );
@@ -31,18 +31,18 @@ describe('Users', () => {
     expect(document.getElementsByClassName('list-container')[0]).toBeDefined();
   });
 
-  test('usersList=[] - User.jsx should be defined', () => {
-    const usersList = [{ address: { country: {} } }];
+  test('NewUsersList=[] - User.jsx should be defined', () => {
+    const NewUsersList = [{ address: { country: {} } }];
     const store = configureStore({
-      usersReducer: {
-        usersList,
+      NewUsersReducer: {
+        NewUsersList,
       },
     });
 
     act(() => {
       render(
         <ReduxProvider store={store}>
-          <Users />
+          <NewUsers />
         </ReduxProvider>,
         container,
       );
