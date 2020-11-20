@@ -8,22 +8,16 @@ function addressController(Address) {
         path: 'country',
         model: countryModel,
       })
-      .exec((errorFindAddress, address) => {
-        if (errorFindAddress) {
-          return res.send(errorFindAddress);
-        }
-        res.json(address);
-      });
+      .exec((errorFindAddress, address) => (
+        errorFindAddress ? res.send(errorFindAddress) : res.json(address)
+      ));
   }
 
   function putMethod(req, res) {
     const query = req.body;
-    Address.create(query, (errorPutUser, user) => {
-      if (errorPutUser) {
-        return res.send(errorPutUser);
-      }
-      res.json(user);
-    });
+    Address.create(query, (errorPutUser, user) => (
+      errorPutUser ? res.send(errorPutUser) : res.json(user)
+    ));
   }
 
   function deleteMethod(req, res) {

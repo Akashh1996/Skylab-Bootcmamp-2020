@@ -12,12 +12,9 @@ function userController(User, Country) {
         model: Country,
       },
     });
-    user.exec((errorGetUser, foundUser) => {
-      if (errorGetUser) {
-        return res.send(errorGetUser);
-      }
-      return res.json(foundUser);
-    });
+    user.exec((errorGetUser, foundUser) => (
+      errorGetUser ? res.send(errorGetUser) : res.json(foundUser)
+    ));
   }
 
   function getIdMethod(req, res) {
@@ -30,24 +27,19 @@ function userController(User, Country) {
         model: Country,
       },
     });
-    user.exec((errorGetUser, foundUser) => {
-      if (errorGetUser) {
-        return res.send(errorGetUser);
-      }
-      return res.json(foundUser);
-    });
+    user.exec((errorGetUser, foundUser) => (
+      errorGetUser ? res.send(errorGetUser) : res.json(foundUser)
+    ));
   }
 
   async function putMethod(req, res) {
     const { address, ...restInfo } = req.body;
-    console.log(req.body);
     try {
       const newCountry = await countryModel.create(address.country);
       // eslint-disable-next-line no-underscore-dangle
       const newAddress = await addressModel.create({ ...address, country: newCountry._id });
       // eslint-disable-next-line no-underscore-dangle
       const newUser = await User.create({ ...restInfo, address: newAddress._id });
-
       res.json(newUser);
     } catch (error) {
       res.send(error);
