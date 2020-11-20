@@ -6,6 +6,7 @@ import
   from '../actions/usersAction';
 
 function NewUsers({ usersList, dispatch }) {
+  debugger;
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
   const [street, setStreet] = useState('');
@@ -22,7 +23,8 @@ function NewUsers({ usersList, dispatch }) {
 
   return (
     <div className="list-container">
-      <div>
+      <div className="d-flex flex-column">
+        <p>CREATE NEW USER</p>
         <label htmlFor="name">
           Name
           <input type="text" id="name" value={name} onChange={(event) => { setName(event.target.value); }} />
@@ -53,21 +55,29 @@ function NewUsers({ usersList, dispatch }) {
         </label>
         <button
           type="submit"
-          className="btn-primary"
+          className="btn-primary btn"
           onClick={() => dispatch(requestCreateUsers({
-            name, age, street, number, city, countryCode, countryName,
+            name,
+            age,
+            address: {
+              street,
+              number,
+              city,
+              country: { code: countryCode, name: countryName },
+            },
           }))}
         >
           Submit
         </button>
       </div>
-      <div className="list-container">
+      <div>
         {(!usersList || !usersList.length) && <h1>There is no list!</h1>}
         {usersList && usersList.length > 0 && usersList.map((item) => (
           <>
             <div>
               <ul>
-                <li>USER - INFO</li>
+                <p>USERS INFO</p>
+                <li>USER</li>
                 <ul>
                   <li>{`Name: ${item.name}`}</li>
                   <li>{`Age: ${item.age}`}</li>

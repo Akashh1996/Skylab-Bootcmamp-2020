@@ -7,48 +7,37 @@ function UsersController(Users) {
     Users.find({})
       .populate({
         path: 'address',
-        populate: { path: 'country', model: countriesModel },
+        populate: { path: 'country' },
       })
       .exec((errorFindUsers, users) => (errorFindUsers
         ? res.send(errorFindUsers)
         : res.json(users)));
   }
 
-  function postMethod(req) {
-    const { user } = req.body;
-    const userInfo = {
-      name: user.name,
-      age: user.age,
-    };
-    const addressInfo = {
-      street: user.street,
-      number: user.number,
-      city: user.city,
-    };
+  async function postMethod(req, res) {
+    console.log(req.body);
+    const { user: { address, ...userInfo } } = req.body;
+
     const countryInfo = {
-      code: user.countryCode,
-      name: user.countryName,
+      ...address.country,
     };
 
-    const addressCallback = (errorAddress, newAddress) => {
-      userInfo.address = newAddress._id;
-      Users.create(userInfo);
-    };
-    const countryCallback = (errorCountry, newCountry) => {
-      addressInfo.country = newCountry._id;
-      addressModel.create(addressInfo, addressCallback);
-    };
-    countriesModel.create(countryInfo, countryCallback);
-  }
-
-  function deleteMethod({ body }, res) {
-    Users.findByIdAndRemove(body._id, (errorDeleteUsers, deletedUsers) => (errorDeleteUsers
-      ? res.send(errorDeleteUsers)
-      : res.json(deletedUsers)));
+    try {
+      const countryResponse = await countriesModel.create(countryInfo);
+      const addressResponse = await addressModel.create(
+        { ...address, country: countryResponse._id },
+      );
+      const userResponse = await Users.create(
+        { ...userInfo, address: addressResponse._id },
+      );
+      res.json(userResponse);
+    } catch (error) {
+      res.send(error);
+    }
   }
 
   return {
-    getMethod, postMethod, deleteMethod,
+    getMethod, postMethod,
   };
 }
 
