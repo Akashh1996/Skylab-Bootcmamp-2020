@@ -1,0 +1,10 @@
+.footer-container{
+    background-color: blue;
+    color: #ffffff;
+    text-align: center;
+    padding: 0.5em;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    align-self: flex-end;
+}
