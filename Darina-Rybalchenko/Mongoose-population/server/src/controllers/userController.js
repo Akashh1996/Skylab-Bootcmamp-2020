@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 function userController(User, Address, Country) {
   function getMethod(req, res) {
     const query = {};
@@ -19,7 +18,6 @@ function userController(User, Address, Country) {
   }
   async function putMethod(req, res) {
     const { address, ...infoUser } = req.body;
-    console.log(req.body);
     try {
       const countryCreated = await Country.create(address.country);
       const addressCreated = await Address.create(
