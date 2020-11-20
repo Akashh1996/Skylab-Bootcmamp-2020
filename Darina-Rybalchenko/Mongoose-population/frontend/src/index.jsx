@@ -2,14 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
-import Users from './components/Users';
+import Users from './components/User/Users';
 import configureStore from './redux/configureStore';
+import Header from './components/Header/Header';
 
 const store = configureStore();
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
+      <Header />
       <Users />
     </Provider>
   </React.StrictMode>,

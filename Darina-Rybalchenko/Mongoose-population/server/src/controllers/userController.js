@@ -1,4 +1,5 @@
-function userController(User, Country) {
+/* eslint-disable no-underscore-dangle */
+function userController(User, Address, Country) {
   function getMethod(req, res) {
     const query = {};
     const user = User.find(query);
@@ -16,9 +17,21 @@ function userController(User, Country) {
       res.json(users);
     });
   }
-  function putMethod(req, res) {
-    const user = new User(req.body);
-    user.save((error, userSaved) => (error ? res.send(error) : res.json(userSaved)));
+  async function putMethod(req, res) {
+    const { address, ...infoUser } = req.body;
+    console.log(req.body);
+    try {
+      const countryCreated = await Country.create(address.country);
+      const addressCreated = await Address.create(
+        { ...address, country: countryCreated._id },
+      );
+      const userCreateResponse = await User.create(
+        { ...infoUser, address: addressCreated._id },
+      );
+      res.json(userCreateResponse);
+    } catch (error) {
+      res.send(error);
+    }
   }
 
   return { getMethod, putMethod };

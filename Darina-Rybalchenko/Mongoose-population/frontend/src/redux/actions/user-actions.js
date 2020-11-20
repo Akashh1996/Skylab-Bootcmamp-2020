@@ -1,4 +1,3 @@
-/* eslint-disable no-debugger */
 import axios from 'axios';
 import actionTypes from './actionTypes';
 
@@ -18,15 +17,38 @@ function requestUsersError(usersError) {
   };
 }
 
-export default function requestUsers() {
-  debugger;
+export function requestUsers() {
   return async (dispatch) => {
     try {
-      debugger;
       const users = await axios.get(URL);
       dispatch(requestUsersSuccess(users.data));
     } catch (error) {
       dispatch(requestUsersError(error));
+    }
+  };
+}
+
+function createUserSuccess(newUser) {
+  return {
+    type: actionTypes.CREATE_USER,
+    newUser,
+  };
+}
+
+function createUserError(newUserError) {
+  return {
+    type: actionTypes.CREATE_USER_ERROR,
+    newUserError,
+  };
+}
+
+export function createUser(newUser) {
+  return async (dispatch) => {
+    try {
+      const newAddedUser = await axios.put(URL, newUser);
+      dispatch(createUserSuccess(newAddedUser.data));
+    } catch (error) {
+      dispatch(createUserError(error));
     }
   };
 }
