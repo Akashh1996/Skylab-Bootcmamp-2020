@@ -6,7 +6,8 @@ function projectRouter(projectSchema) {
   const projects = projectController(projectSchema);
 
   router.route('/')
-    .get(projects.getProjectsMethod);
+    .get(projects.getProjectsMethod)
+    .post(projects.postProjectMethod);
 
   return router;
 }

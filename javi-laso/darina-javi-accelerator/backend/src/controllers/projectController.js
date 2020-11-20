@@ -1,10 +1,10 @@
-function projectController(projecSchema) {
+function projectController(projectSchema) {
   function getProjectsMethod(req, res) {
     const query = {};
     const getCallBack = (projectsError, projects) => (
       projectsError ? res.send(projectsError) : res.send(projects)
     );
-    projecSchema.find(query)
+    projectSchema.find(query)
       .populate('creator')
       .exec(getCallBack);
   }
@@ -14,7 +14,7 @@ function projectController(projecSchema) {
     const postCallback = (postError, newProject) => (
       postError ? res.send(postError) : res.send(newProject)
     );
-    projecSchema.create(project, postCallback);
+    projectSchema.create(project, postCallback);
   }
 
   return { getProjectsMethod, postProjectMethod };
