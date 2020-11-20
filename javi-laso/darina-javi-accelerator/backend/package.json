@@ -21,7 +21,9 @@
     "eslint-plugin-import": "^2.22.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js",
+    "debug": "node --inspect-brk index.js --runInBand",
+    "test": "jest --collect-coverage --watch"
   },
   "keywords": [],
   "author": "",
