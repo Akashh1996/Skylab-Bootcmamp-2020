@@ -11,6 +11,20 @@ function CreateUser({ userList, dispatch }) {
   const [city, setCity] = useState('');
   const [code, setCode] = useState('');
   const [countryName, setCountryName] = useState('');
+
+  const newUser = {
+    name,
+    age,
+    address: {
+      street,
+      number,
+      city,
+      country: {
+        code,
+        countryName,
+      },
+    },
+  };
   useEffect(() => {
     if (!userList || userList.length === 0) {
       dispatch(loadUsers());
@@ -49,20 +63,9 @@ function CreateUser({ userList, dispatch }) {
       <button
         type="submit"
         className="btn btn-primary"
-        onClick={() => {
-          dispatch(createUser({
-            name,
-            age,
-            street,
-            number,
-            city,
-            code,
-            'country-name': countryName,
-          }));
-        }}
+        onClick={() => { dispatch(createUser(newUser)); }}
       >
         Submit
-
       </button>
       <ul>
         {userList && userList.length && userList.map((user) => (
