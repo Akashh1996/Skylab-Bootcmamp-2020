@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
-import TodoList from './components/TodoLIst';
-import configureStore from './redux/configurateStore';
+import Users from './components/User/Users';
+import configureStore from './redux/configureStore';
+import Header from './components/Header/Header';
 
 const store = configureStore();
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <TodoList />
+      <Header />
+      <Users />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
