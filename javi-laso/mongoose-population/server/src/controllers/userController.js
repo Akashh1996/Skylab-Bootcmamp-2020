@@ -10,31 +10,24 @@ function userController(userSchema, addressSchema, countrySchema) {
       .exec(getCallback);
   }
 
-  function putUsersMethod(req) {
-    const { info } = req.body;
-    const userInfo = {
-      name: info.name,
-      age: info.age,
-    };
-    const addressInfo = {
-      street: info.street,
-      number: info.number,
-      city: info.city,
-    };
-    const countryInfo = {
-      code: info.code,
-      name: info['country-name'],
-    };
-    const addressCallback = (errorAddress, newAddress) => {
-      userInfo.address = newAddress._id;
-      userSchema.create(userInfo);
-    };
-    const countryCallback = (errorCountry, newCountry) => {
-      addressInfo.country = newCountry._id;
-      addressSchema.create(addressInfo, addressCallback);
-    };
+  async function putUsersMethod(req, res) {
+    try {
+      const { address, ...user } = req.body;
 
-    countrySchema.create(countryInfo, countryCallback);
+      const createdCountryResponse = await countrySchema.create(address.country);
+
+      const createdAddressResponse = await addressSchema.create(
+        { ...address, country: createdCountryResponse._id },
+      );
+
+      const createdUserResponse = await userSchema.create(
+        { ...user, address: createdAddressResponse._id },
+      );
+
+      res.send(createdUserResponse);
+    } catch (error) {
+      res.send(error);
+    }
   }
 
   return {
