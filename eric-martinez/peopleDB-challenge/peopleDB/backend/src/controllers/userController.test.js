@@ -1,8 +1,13 @@
 const User = require('../models/userModel');
+const addressModel = require('../models/addressModel');
+const countryModel = require('../models/countriesModel');
 const userController = require('./userController')(User);
 
 jest.mock('../models/userModel');
-describe('test addressController', () => {
+jest.mock('../models/addressModel');
+jest.mock('../models/countriesModel');
+
+describe('test userController', () => {
   describe('getMethod', () => {
     test('should send error on function call', () => {
       User.find = jest.fn().mockReturnValueOnce({
@@ -30,37 +35,23 @@ describe('test addressController', () => {
     });
   });
   describe('test putMethod', () => {
-    test('should call response json on putMethod', () => {
-      const res = {
-        json: jest.fn(),
-      };
-      const req = {
-        body: {},
-      };
+    test('should call countryModel.create', () => {
+      const req = { body: { address: {} } };
 
-      User.create.mockImplementationOnce((query, callback) => {
-        callback(null, null);
-      });
+      countryModel.create = jest.fn();
+      userController.putMethod(req);
 
-      userController.putMethod(req, res);
-
-      expect(res.json.mock.calls.length).toBe(1);
+      expect(countryModel.create).toHaveBeenCalled();
     });
-    test('should call response send on putMethod', () => {
-      const res = {
-        send: jest.fn(),
-      };
-      const req = {
-        body: {},
-      };
+    test('should call addressModel.create', async () => {
+      const req = { body: { address: {} } };
+      const res = { send: jest.fn() };
 
-      User.create.mockImplementationOnce((query, callback) => {
-        callback(true, null);
-      });
+      countryModel.create = jest.fn().mockImplementationOnce(() => Promise.resolve({}));
+      addressModel.create = jest.fn();
 
-      userController.putMethod(req, res);
-
-      expect(res.send.mock.calls.length).toBe(1);
+      await userController.putMethod(req, res);
+      expect(addressModel.create).toHaveBeenCalled();
     });
   });
 });

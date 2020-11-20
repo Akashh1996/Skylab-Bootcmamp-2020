@@ -1,7 +1,4 @@
-const countryModel = require('../models/countriesModel');
-const addressModel = require('../models/addressModel');
-
-function userController(User) {
+function userController(User, Address, Country) {
   function getMethod(req, res) {
     const query = {};
     const user = User.find(query);
@@ -9,7 +6,6 @@ function userController(User) {
       path: 'address',
       populate: {
         path: 'country',
-        model: countryModel,
       },
     });
     user.exec((error, users) => {
@@ -19,33 +15,25 @@ function userController(User) {
       res.send(users);
     });
   }
-  function putMethod(req) {
-    const { info } = req.body;
-    const userInfo = {
-      name: info.name,
-      age: info.age,
-    };
-    const addressInfo = {
-      street: info.street,
-      number: info.number,
-      city: info.city,
-    };
-    const countryInfo = {
-      code: info.code,
-      countryName: info['country-name'],
-    };
 
-    const addressCallback = (errorAddress, newAddress) => {
-      userInfo.address = newAddress._id;
-      User.create(userInfo);
-    };
+  async function putMethod(req, res) {
+    const { address, ...userInfo } = req.body;
+    console.log(address.country);
+    try {
+      const createdCountryResponse = await Country.create(address.country);
 
-    const countryCallback = (errorCountry, newCountry) => {
-      addressInfo.country = newCountry._id;
-      addressModel.create(addressInfo, addressCallback);
-    };
+      const createdAddressResponse = await Address.create(
+        { ...address, country: createdCountryResponse._id },
+      );
 
-    countryModel.create(countryInfo, countryCallback);
+      const createdUserResponse = await User.create(
+        { ...userInfo, address: createdAddressResponse._id },
+      );
+
+      res.json(createdUserResponse);
+    } catch (error) {
+      res.send(error);
+    }
   }
 
   return { getMethod, putMethod };

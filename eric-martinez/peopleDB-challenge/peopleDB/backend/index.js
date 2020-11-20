@@ -8,7 +8,7 @@ const { connect } = require('mongoose');
 const User = require('./src/models/userModel');
 const Country = require('./src/models/countriesModel');
 const Address = require('./src/models/addressModel');
-const userRouter = require('./src/routes/userRouter')(User);
+const userRouter = require('./src/routes/userRouter')(User, Address, Country);
 const addressRouter = require('./src/routes/addressRouter')(Address);
 const countryRouter = require('./src/routes/countryRouter')(Country);
 
