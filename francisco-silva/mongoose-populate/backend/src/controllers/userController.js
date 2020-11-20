@@ -1,5 +1,3 @@
-// const countryModel = require('../models/countryModel');
-
 function userController(User, Country) {
   function getMethod(req, res) {
     const query = {};
@@ -36,7 +34,9 @@ function userController(User, Country) {
       return res.json(foundUser);
     });
   }
+
   function putMethod(req, res) {
+    console.log(req.body);
     const query = req.body;
     User.create(query, (errorPutUser, user) => {
       if (errorPutUser) {

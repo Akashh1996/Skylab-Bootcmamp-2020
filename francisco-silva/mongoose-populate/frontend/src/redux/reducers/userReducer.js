@@ -11,7 +11,11 @@ export default function userReducer(state = [], action) {
         case actionTypes.LOAD_USERS_ERROR:
             const err = { ...state, error: action.error };
             return err;
+
+        case actionTypes.CREATE_USER:
+            return [...state, action.newUser];
         default:
+            
             return state;
     }
 }

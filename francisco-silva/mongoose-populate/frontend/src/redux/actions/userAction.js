@@ -1,5 +1,7 @@
 import actionTypes from './actionTypes';
 import axios from 'axios';
+
+const endpoint = 'http://localhost:5050/user';
 function requestUsersSuccess(userList) {
     debugger;
     return {
@@ -17,7 +19,7 @@ function requestUsersError(error) {
 export function requestUsers() {
     return async (dispatch) => {
         debugger;
-        const endpoint = 'http://localhost:5050/user';
+        
         try {
             const users = await axios.get(endpoint);
             
@@ -29,3 +31,31 @@ export function requestUsers() {
         }
     };
 }
+
+export function createUserSuccess(newUser) {
+    return {
+      type: actionTypes.CREATE_USER,
+      newUser,
+    };
+  }
+  
+  export function createUserError(error) {
+    return {
+      type: actionTypes.CREATE_USER_ERROR,
+      error,
+    };
+  }
+  
+  export function createUser(info) {
+    return async (dispatch) => {
+      // eslint-disable-next-line no-debugger
+      debugger;
+      try {
+        const user = await axios.put(endpoint, { info });
+  
+        dispatch(createUserSuccess(user.data));
+      } catch (error) {
+        dispatch(createUserError(error));
+      }
+    };
+  }

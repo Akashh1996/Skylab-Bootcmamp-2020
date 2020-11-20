@@ -1,12 +1,20 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { requestUsers } from '../../redux/actions/userAction';
+import { requestUsers, createUser } from '../../redux/actions/userAction';
 
 import './UserList.css';
 
 
 function UserList({ userList, dispatch}) {
+
+    const [name, setName] = useState('');
+    const [age, setAge] = useState('');
+    const [street, setStreet] = useState('');
+    const [number, setNumber] = useState('');
+    const [city, setCity] = useState('');
+    const [code, setCode] = useState('');
+    const [countryName, setCountryName] = useState('');
     useEffect(() => {
         if (!userList || !userList?.length) {
             dispatch(requestUsers());
@@ -31,14 +39,28 @@ function UserList({ userList, dispatch}) {
         </div>
         <div className="form-wrapper">
             <form>
-                <input className="input" type="text" placeholder="name"/>
-                <input className="input" type="text" placeholder="age"/>
-                <input className="input" type="text" placeholder="street"/>
-                <input className="input" type="text" placeholder="number"/>
-                <input className="input" type="text" placeholder="city"/>
-                <input className="input" type="text" placeholder="code"/>
-                <input className="input" type="text" placeholder="country"/>
-                <button>Add!</button>
+                <input id="name" type="text" value={name} onChange={(event) => { setName(event.target.value); }} placeholder="name"/>
+                <input id="age" type="text" value={age} onChange={(event) => { setAge(event.target.value); }} placeholder="age"/>
+                <input id="street" type="text" value={street} onChange={(event) => { setStreet(event.target.value); }} placeholder="street"/>
+                <input id="number" type="text" value={number} onChange={(event) => { setNumber(event.target.value); }} placeholder="number"/>
+                <input id="city" type="text" value={city} onChange={(event) => { setCity(event.target.value); }} placeholder="city"/>
+                <input id="code" type="text" value={code} onChange={(event) => { setCode(event.target.value); }} placeholder="code"/>
+                <input id="country" type="text" value={countryName} onChange={(event) => { setCountryName(event.target.value); }} placeholder="country"/>
+                <button
+                    type="submit"
+                    className="btn btn-primary"
+                    onClick={() => {
+                    dispatch(createUser({
+                        name,
+                        age,
+                        street,
+                        number,
+                        city,
+                        code,
+                        'country-name': countryName,
+                        }));
+                    }}
+                    >Add!</button>
             </form>
         </div>
         </section>
