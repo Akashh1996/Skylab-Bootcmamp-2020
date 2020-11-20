@@ -1,10 +1,10 @@
 {
-  "name": "Challenge-accelerator",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "Skylab Challenge made by Akash and Victor",
-  "main": "server.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon server.js",
     "debug": "node --inspect-brk index.js --runInBand",
     "test": "jest --collect-coverage --watchAll"
   },
