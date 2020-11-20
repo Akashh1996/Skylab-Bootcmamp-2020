@@ -39,7 +39,7 @@ function createUserSuccess(newUser) {
 export function createUser(info) {
     return async (dispatch) => {
         try {
-            const user = await axios.put(dataBaseUrl, { info })
+            const user = await axios.put(dataBaseUrl,  info )
             dispatch(createUserSuccess(user))
         } catch (error) {
         }

@@ -51,11 +51,15 @@ return (
             dispatch(createUser({
                 name,
                 age,
-                street,
-                number,
-                city,
-                code,
-                countryName
+                address: {
+                    street,
+                    number,
+                    city,
+                    country: {
+                        code,
+                        countryName
+                    }
+                }
             }))
         }>Add User</button>
         
