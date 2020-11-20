@@ -6,13 +6,11 @@ const productController = require('../controllers/productController');
 const productsController = require('../controllers/productsController');
 const shoppingController = require('../controllers/shoppingController');
 
-let shoppingList = [];
-
-function routes(markets) {
+function routes(markets, cartproducts) {
   const marketRouter = express.Router();
   const product = productController(markets);
   const products = productsController(markets);
-  const shopping = shoppingController(markets);
+  const shopping = shoppingController(cartproducts);
 
   marketRouter.route('/')
     .get(products.getMethod);

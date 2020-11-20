@@ -6,7 +6,8 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const mongoose = require('mongoose');
 const markets = require('./models/productModel');
-const marketRoutes = require('./routes/marketRoutes')(markets);
+const cartproducts = require('./models/shoppingModel');
+const marketRoutes = require('./routes/marketRoutes')(markets, cartproducts);
 
 const app = express();
 

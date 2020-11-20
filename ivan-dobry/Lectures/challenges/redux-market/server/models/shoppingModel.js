@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 // eslint-disable-next-line no-unused-vars
 const infoSchema = require('./infoModel');
 
-const productSchema = new Schema({
+const shoppingSchema = new Schema({
   id: { type: Number },
   name: { type: String },
   image: { type: String },
@@ -14,4 +14,4 @@ const productSchema = new Schema({
   price: { type: Number },
 });
 
-module.exports = model('markets', productSchema);
+module.exports = model('cartproducts', shoppingSchema);

@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
-function shoppingController(markets) {
+function shoppingController(cardproducts) {
   function getMethod(req, res) {
     const query = {};
-    markets.find(query, (errorFindProducts, products) => {
+    cardproducts.find(query).populate('info').exec((errorFindProducts, products) => {
       if (errorFindProducts) {
         return res.send(errorFindProducts);
       }

@@ -2,7 +2,7 @@
 function productsController(markets) {
   function getMethod(req, res) {
     const query = {};
-    markets.find(query, (errorFindProducts, products) => {
+    markets.find(query).populate('info').exec((errorFindProducts, products) => {
       if (errorFindProducts) {
         return res.send(errorFindProducts);
       }
