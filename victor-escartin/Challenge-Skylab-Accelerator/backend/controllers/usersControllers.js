@@ -6,13 +6,11 @@ function usersController(User) {
           ? res.send(errorFindUsers)
           : res.json(users)));
     }
-  
+ 
     function putMethod(req, res) {
-      const query = req.body;
-      User.create(query)
-        .exec((errorFindUsers, users) => ((errorFindUsers)
-          ? res.send(errorFindUsers)
-          : res.json(users)));
+      const user = new User(req.body);
+  
+      user.save((error, userSaved) => (error ? res.send(error) : res.json(userSaved)));
     }
   
     return {
