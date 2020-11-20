@@ -17,6 +17,14 @@ function userController(User) {
     });
   }
 
+  function patchMethod(req, res) {
+    const { userId, updatedUser } = req.body;
+    const query = { _id: userId };
+    const conditionToUpdate = { query: updatedUser };
+
+    User.findOneAndUpdate();
+  }
+
   return {
     getMethod,
     postMethod,
