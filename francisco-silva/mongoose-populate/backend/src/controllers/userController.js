@@ -1,3 +1,6 @@
+const countryModel = require('../models/countryModel');
+const addressModel = require('../models/addressModel');
+
 function userController(User, Country) {
   function getMethod(req, res) {
     const query = {};
@@ -35,15 +38,20 @@ function userController(User, Country) {
     });
   }
 
-  function putMethod(req, res) {
+  async function putMethod(req, res) {
+    const { address, ...restInfo } = req.body;
     console.log(req.body);
-    const query = req.body;
-    User.create(query, (errorPutUser, user) => {
-      if (errorPutUser) {
-        res.send(errorPutUser);
-      }
-      res.json(user);
-    });
+    try {
+      const newCountry = await countryModel.create(address.country);
+      // eslint-disable-next-line no-underscore-dangle
+      const newAddress = await addressModel.create({ ...address, country: newCountry._id });
+      // eslint-disable-next-line no-underscore-dangle
+      const newUser = await User.create({ ...restInfo, address: newAddress._id });
+
+      res.json(newUser);
+    } catch (error) {
+      res.send(error);
+    }
   }
 
   function deleteMethod(req, res) {

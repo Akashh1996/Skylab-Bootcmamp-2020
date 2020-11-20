@@ -51,7 +51,7 @@ export function createUserSuccess(newUser) {
       // eslint-disable-next-line no-debugger
       debugger;
       try {
-        const user = await axios.put(endpoint, { info });
+        const user = await axios.put(endpoint,  info );
   
         dispatch(createUserSuccess(user.data));
       } catch (error) {

@@ -53,11 +53,15 @@ function UserList({ userList, dispatch}) {
                     dispatch(createUser({
                         name,
                         age,
-                        street,
-                        number,
-                        city,
-                        code,
-                        'country-name': countryName,
+                        address: {
+                            street,
+                            number,
+                            city,
+                            country: {
+                                code,
+                                countryName,
+                        }
+                        }
                         }));
                     }}
                     >Add!</button>
