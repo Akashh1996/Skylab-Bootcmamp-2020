@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events';
-import dispatcher from '../dispatcher/dispacher';
-import actionTypes from '../actions/actions';
+import dispatcher from '../dispatcher/dispatcher';
+import actionTypes from '../actions/actionTypes';
 
 const CHANGE = 'CHANGE';
 

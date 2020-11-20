@@ -3,7 +3,7 @@ import actionTypes from './actionTypes';
 
 export async function loadData() {
 	const response = await fetch('..api/data.json');
-	const data = await response;
+	const data = await response.json();
 
 	console.log(data);
 
