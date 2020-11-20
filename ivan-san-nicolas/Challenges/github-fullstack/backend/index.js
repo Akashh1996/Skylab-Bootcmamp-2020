@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 1240;
 const DataBaseURL = process.env.DBURL || 'mongodb://localhost/githubdb';
 
-connect(DataBaseURL);
+connect(DataBaseURL, { useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
