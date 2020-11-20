@@ -1,5 +1,4 @@
 const express = require('express');
-const path = require('path');
 const debug = require('debug')('app');
 const chalk = require('chalk');
 const morgan = require('morgan');
@@ -22,10 +21,6 @@ app.use(morgan('tiny'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-app.use(express.static(path.join(__dirname, '/public/')));
-app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css')));
-app.use('/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')));
 
 app.use('/users', userRouter);
 app.use('/addresses', addressRouter);
