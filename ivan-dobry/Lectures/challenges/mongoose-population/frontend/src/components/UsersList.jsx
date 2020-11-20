@@ -15,20 +15,24 @@ function UsersList({ usersList, dispatch }) {
     <>
       <section className="users__section" />
       <h1>Users List!</h1>
-      <Card
-        data-testid="card"
-        className="m-3 product__card"
-        style={{ width: '50vw' }}
-      >
-        {usersList?.map((element) => (
-          <>
-            <p key="element.name">{element.name}</p>
-            <p key="element.age">{element.age}</p>
-            <p key="element.adress.street">{element.adress.street}</p>
-          </>
-        ))}
 
-      </Card>
+      <input placeholder=" Shearch..." />
+      {usersList?.map((element) => (
+        <Card
+          data-testid="card"
+          className="m-3 product__card"
+          style={{ width: '50vw' }}
+        >
+          <p key="element.name">{element.name}</p>
+          <p key="element.age">{element.age}</p>
+          <p key="element.adress.street">{element.adress.street}</p>
+          <p key="element.adress.street">{element.adress.number}</p>
+          <p key="element.adress.street">{element.adress.city}</p>
+          <p key="element.adress.street">{element.adress.country.code}</p>
+          <p key="element.adress.street">{element.adress.country.name}</p>
+
+        </Card>
+      ))}
       <section />
     </>
   );
