@@ -6,8 +6,6 @@ import { Card } from 'react-bootstrap';
 import { } from '../redux/actions/userListActions';
 
 function UserList({ userList }) {
-  debugger;
-
   return (
     <>
       <h1 className="title">USER LIST</h1>
