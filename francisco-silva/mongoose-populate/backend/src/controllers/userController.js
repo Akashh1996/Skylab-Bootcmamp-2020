@@ -19,6 +19,23 @@ function userController(User, Country) {
     });
   }
 
+  function getIdMethod(req, res) {
+    const query = req.params.id;
+    const user = User.findOne(query);
+    user.populate({
+      path: 'address',
+      populate: {
+        path: 'country',
+        model: Country,
+      },
+    });
+    user.exec((errorGetUser, foundUser) => {
+      if (errorGetUser) {
+        return res.send(errorGetUser);
+      }
+      return res.json(foundUser);
+    });
+  }
   function putMethod(req, res) {
     const query = req.body;
     User.create(query, (errorPutUser, user) => {
@@ -43,7 +60,7 @@ function userController(User, Country) {
     ));
   }
   return {
-    getMethod, putMethod, deleteMethod, postMethod,
+    getMethod, getIdMethod, putMethod, deleteMethod, postMethod,
   };
 }
 

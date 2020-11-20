@@ -4,7 +4,7 @@ export default function userReducer(state = [], action) {
         
         case actionTypes.LOAD_USERS:
             debugger;
-            const list = {...state, usersList: action};
+            const list = {...state, userList: action.userList};
             debugger;
             return list;
             

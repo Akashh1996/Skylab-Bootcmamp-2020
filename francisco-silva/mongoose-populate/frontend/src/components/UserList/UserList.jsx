@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { requestUsers } from '../../redux/actions/userAction';
@@ -7,27 +7,49 @@ import './UserList.css';
 
 
 function UserList({ userList, dispatch}) {
-    debugger;
-    if (!userList || userList.length <= 0) {
-        dispatch(requestUsers());
-    }
+    useEffect(() => {
+        if (!userList || !userList?.length) {
+            dispatch(requestUsers());
+        }
+    }, [userList, dispatch])
+    
     
     console.log(userList)
     return (
+        <>
+        
+        <h1 className="users_title">Users</h1>
+        <section>
         <div className = "list-wrapper">
-            {userList.userList &&
-                userList.userList.length >= 1 &&
-                userList.userList.map((user) => <div className="user_wrapper" key = {user.id}>
-                <span>{user["name"]} </span><span>{user.address.street}</span>
+            
+            {userList &&
+                userList.length &&
+                userList.map((user) => <div className="user_wrapper" key = {user.id}>
+                <span className="userName">{user["name"]} </span>
                 </div>
                 )}
         </div>
+        <div className="form-wrapper">
+            <form>
+                <input className="input" type="text" placeholder="name"/>
+                <input className="input" type="text" placeholder="age"/>
+                <input className="input" type="text" placeholder="street"/>
+                <input className="input" type="text" placeholder="number"/>
+                <input className="input" type="text" placeholder="city"/>
+                <input className="input" type="text" placeholder="code"/>
+                <input className="input" type="text" placeholder="country"/>
+                <button>Add!</button>
+            </form>
+        </div>
+        </section>
+        </>
+        
     );
 }
-function mapStateToProps(state) {
+function mapStateToProps({userReducer}) {
    debugger
     return {
-        userList: state.userReducer.usersList
+        userList: userReducer.userList
     };
 }
 function mapDispatchToProps(dispatch) {

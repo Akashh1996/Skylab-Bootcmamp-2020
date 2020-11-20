@@ -1,6 +1,7 @@
 import actionTypes from './actionTypes';
 import axios from 'axios';
 function requestUsersSuccess(userList) {
+    debugger;
     return {
         type: actionTypes.LOAD_USERS,
         userList

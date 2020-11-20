@@ -7,7 +7,8 @@ function userRouter(User) {
 
   router.route('/:id')
     .delete(user.deleteMethod)
-    .post(user.postMethod);
+    .post(user.postMethod)
+    .get(user.getIdMethod);
 
   router.route('/')
     .get(user.getMethod)
