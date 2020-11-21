@@ -1,17 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './index.css';
 import { Provider } from 'react-redux';
+import configureStore from './redux/configureStore';
+import Header from './components/Header/Header';
+import Landing from './components/Landing/Landing';
+import Detail from './components/Detail/Detail';
+import Footer from './components/Footer/Footer';
 import reportWebVitals from './reportWebVitals';
-import TodoList from './components/TodoList';
-import configureStore from './redux/configurateStore';
 
 const store = configureStore();
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <TodoList />
+      <BrowserRouter>
+        <Header />
+        <Switch>
+          <Route path="/" exact component={Landing} />
+          <Route path="/detail/:projectId" exact component={Detail} />
+        </Switch>
+        <Footer />
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
