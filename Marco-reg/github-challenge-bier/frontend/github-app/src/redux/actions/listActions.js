@@ -28,4 +28,25 @@ export function requestList() {
             dispatch(requestListError(error))
         }
     }
+
+}
+
+
+
+export function createProjectError(error){
+    return {
+        type:actionTypes.CREATE_PROJECT_ERROR,
+        error,
+    }
+}
+
+export function createUser(info){
+    return async (dispatch)=>{
+        try {
+            await axios.put(URL, info);
+        } catch (error) {
+            dispatch(createProjectError(error));
+            
+        }
+    }
 }
