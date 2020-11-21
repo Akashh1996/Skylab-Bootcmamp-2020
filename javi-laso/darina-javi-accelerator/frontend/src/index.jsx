@@ -11,9 +11,9 @@ const store = configureStore();
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider>
+    <Provider store={store}>
       <Header />
-      <MainList store={store} />
+      <MainList />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),

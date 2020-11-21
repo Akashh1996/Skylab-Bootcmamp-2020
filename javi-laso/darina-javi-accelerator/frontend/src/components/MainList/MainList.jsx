@@ -5,7 +5,6 @@ import ProjectListItem from '../ProjectListItem/ProjectListItem';
 function MainList() {
   return (
     <>
-      <h1>MainList</h1>
       <ProjectListItem />
     </>
   );

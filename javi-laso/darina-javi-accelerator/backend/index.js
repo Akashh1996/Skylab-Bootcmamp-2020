@@ -7,8 +7,6 @@ const chalk = require('chalk');
 const { connect } = require('mongoose');
 const projectSchema = require('./src/models/projectSchema');
 const projectRouter = require('./src/routers/projectRouter')(projectSchema);
-const userSchema = require('./src/models/userSchema');
-const userRouter = require('./src/routers/userRouter')(userSchema);
 
 const app = express();
 const port = process.env.PORT || 2130;
@@ -23,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use('/projects', projectRouter);
-app.use('/users', userRouter);
+// app.use('/users', userRouter);
 // app.use('/github', githubRouter);
 
 app.listen(port, () => {
