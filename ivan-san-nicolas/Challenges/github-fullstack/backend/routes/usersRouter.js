@@ -1,15 +1,15 @@
 const { Router } = require('express');
-const userController = require('../controllers/userController');
+const usersController = require('../controllers/usersController');
 
 function userRouter(User) {
   const router = Router();
-  const user = userController(User);
+  const users = usersController(User);
 
   router.route('/')
-    .get(user.getMethod)
-    .post(user.postMethod)
-    .patch(user.patchMethod)
-    .delete(user.deleteMethod);
+    .get(users.getMethod)
+    .post(users.postMethod)
+    .patch(users.patchMethod)
+    .delete(users.deleteMethod);
 
   return router;
 }

@@ -2,8 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const { connect } = require('mongoose');
-const Users = require('./models/userModel');
-const userRouter = require('./routes/userRouter')(Users);
+const Users = require('./models/usersModel');
+const userRouter = require('./routes/usersRouter')(Users);
 
 const app = express();
 const port = process.env.PORT || 1240;
