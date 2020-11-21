@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const { connect } = require('mongoose');
 const listItems = require('./models/listModels');
 const listRoutes = require('./routes/listRoutes')(listItems);
+const loginRoutes = require('./routes/loginRoutes')();
+const oauthRoutes = require('./routes/oauthRoutes')();
 
 const app = express();
 const port = process.env.PORT || 3020;
@@ -21,6 +23,8 @@ connect(database, {
 
 app.use(cors());
 app.use('/', listRoutes);
+app.use('/login', loginRoutes);
+app.use('/oauth-callback', oauthRoutes);
 
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
