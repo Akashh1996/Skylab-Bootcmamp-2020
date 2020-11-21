@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-expressions */
-function userController(User) {
+function usersController(User) {
   function getMethod(req, res) {
     const query = {};
 
@@ -45,4 +45,4 @@ function userController(User) {
   };
 }
 
-module.exports = userController;
+module.exports = usersController;
