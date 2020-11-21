@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-expressions */
-function projectsController(Projects) {
+function projectController(Projects) {
   function getMethod(req, res) {
     const { projectId } = req.body;
     const query = { _id: projectId };
@@ -57,4 +57,4 @@ function projectsController(Projects) {
   };
 }
 
-module.exports = projectsController;
+module.exports = projectController;
