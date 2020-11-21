@@ -19,15 +19,19 @@ function userController(User) {
 
   function patchMethod(req, res) {
     const { userId, updatedUser } = req.body;
+    const { name, profilePic, githubUrl } = updatedUser;
     const query = { _id: userId };
-    const conditionToUpdate = { query: updatedUser };
+    const conditionToUpdate = { name, profilePic, githubUrl };
 
-    User.findOneAndUpdate();
+    User.findOneAndUpdate(query, conditionToUpdate, (errorUpdatingUser, user) => {
+      errorUpdatingUser ? res.send(errorUpdatingUser) : res.json(user);
+    });
   }
 
   return {
     getMethod,
     postMethod,
+    patchMethod,
   };
 }
 
