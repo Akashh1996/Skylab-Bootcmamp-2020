@@ -24,9 +24,9 @@ function loadUsersSuccess(usersList) {
 
 export function loadProjects() {
   return async (dispatch) => {
-    const endpoint = 'http:://localhost:1240/projects/';
+    const endpoint = 'http://localhost:1240/projects/';
     try {
-      const projects = await axios(endpoint);
+      const projects = await axios.get(endpoint);
       dispatch(loadProjectsSuccess(projects.data));
     } catch (error) {
       dispatch(loadError(error));
@@ -36,9 +36,9 @@ export function loadProjects() {
 
 export function loadUsers() {
   return async (dispatch) => {
-    const endpoint = 'http:://localhost:1240/users';
+    const endpoint = 'http://localhost:1240/users';
     try {
-      const users = await axios(endpoint);
+      const users = await axios.get(endpoint);
       dispatch(loadUsersSuccess(users.data));
     } catch (error) {
       dispatch(loadError(error));
