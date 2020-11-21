@@ -6,6 +6,7 @@ const userSchema = new Schema({
   gitPicture: String,
   collaborating_in: [{ type: Schema.Types.ObjectId, ref: 'project' }],
   owner_of: [{ type: Schema.Types.ObjectId, ref: 'project' }],
+  token: String,
 });
 
 module.exports = model('user', userSchema);
