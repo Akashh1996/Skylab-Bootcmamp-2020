@@ -4,7 +4,7 @@ import AdminRoute from './AdminRoute';
 import HomeScreen from '../views/HomeScreen';
 import RegisterScreen from '../views/RegisterScreen';
 import SigninScreen from '../views/SigninScreen';
-import ProjectScreen from '../views/ProjectsScreen';
+import ProjectListScreen from '../views/ProjectListScreen';
 import '../styles/Main.css';
 
 function Main() {
@@ -14,7 +14,7 @@ function Main() {
       <Route path="/register" component={RegisterScreen} />
       <AdminRoute
         path="/productlist"
-        component={ProjectsListScreen}
+        component={ProjectListScreen}
       />
       <Route path="/" component={HomeScreen} exact />
     </div>

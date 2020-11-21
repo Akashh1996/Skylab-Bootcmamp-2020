@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-underscore-dangle */
 import Axios from 'axios';
 import {
   PROJECT_CREATE_FAIL,
@@ -29,7 +31,7 @@ export const listProjects = () => async (dispatch) => {
   }
 };
 
-export const detailsProjecct = (projectId) => async (dispatch) => {
+export const detailsProject = (projectId) => async (dispatch) => {
   dispatch({ type: PROJECT_DETAILS_REQUEST, payload: projectId });
   try {
     const { data } = await Axios.get(`/projects/${projectId}`);

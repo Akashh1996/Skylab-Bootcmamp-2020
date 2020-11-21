@@ -1,11 +1,12 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { detailsProject } from '../actions/projectActions';
+import { detailsProject } from '../redux/actions/projectActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
-import Rating from '../components/Rating';
 
 export default function ProjectScreen(props) {
   const dispatch = useDispatch();
@@ -39,12 +40,6 @@ export default function ProjectScreen(props) {
               <ul>
                 <li>
                   <h1>{project.name}</h1>
-                </li>
-                <li>
-                  <Rating
-                    rating={project.rating}
-                    numReviews={project.numReviews}
-                  />
                 </li>
                 <li>
                   Price : €
@@ -100,14 +95,6 @@ export default function ProjectScreen(props) {
                             </select>
                           </div>
                         </div>
-                      </li>
-                      <li>
-                        <button
-                          onClick={addToCartHandler}
-                          className="primary block"
-                        >
-                          Add to Cart
-                        </button>
                       </li>
                     </>
                   )}

@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable no-nested-ternary */
 import React, { useEffect } from 'react';
 
@@ -23,9 +24,9 @@ export default function HomeScreen() {
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <div className="row center">
+        <div className="home-list">
           {projects.map((project) => (
-            <Project key={project._id} product={project} />
+            <Project key={project._id} project={project} />
           ))}
         </div>
       )}

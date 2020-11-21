@@ -1,55 +1,60 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable no-alert */
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-nested-ternary */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  createProduct,
-  deleteProduct,
-  listProducts,
-} from '../actions/productActions';
+  createProject,
+  deleteProject,
+  listProjects,
+} from '../redux/actions/projectActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import {
-  PRODUCT_CREATE_RESET,
-  PRODUCT_DELETE_RESET,
-} from '../constants/productConstants';
+  PROJECT_CREATE_RESET,
+  PROJECT_DELETE_RESET,
+} from '../redux/constants/projectConstants';
 
-export default function ProductListScreen(props) {
-  const productList = useSelector((state) => state.productList);
-  const { loading, error, products } = productList;
+export default function ProjectListScreen(props) {
+  const projectList = useSelector((state) => state.projectList);
+  const { loading, error, products } = projectList;
 
-  const productCreate = useSelector((state) => state.productCreate);
+  const projectCreate = useSelector((state) => state.projectCreate);
   const {
     loading: loadingCreate,
     error: errorCreate,
     success: successCreate,
-    product: createdProduct,
-  } = productCreate;
+    product: createdProject,
+  } = projectCreate;
 
-  const productDelete = useSelector((state) => state.productDelete);
+  const projectDelete = useSelector((state) => state.projectDelete);
   const {
     loading: loadingDelete,
     error: errorDelete,
     success: successDelete,
-  } = productDelete;
+  } = projectDelete;
 
   const dispatch = useDispatch();
   useEffect(() => {
     if (successCreate) {
-      dispatch({ type: PRODUCT_CREATE_RESET });
-      props.history.push(`/product/${createdProduct._id}/edit`);
+      dispatch({ type: PROJECT_CREATE_RESET });
+      props.history.push(`/project/${createdProject._id}/edit`);
     }
     if (successDelete) {
-      dispatch({ type: PRODUCT_DELETE_RESET });
+      dispatch({ type: PROJECT_DELETE_RESET });
     }
-    dispatch(listProducts());
-  }, [createdProduct, dispatch, props.history, successCreate, successDelete]);
+    dispatch(listProjects());
+  }, [createdProject, dispatch, props.history, successCreate, successDelete]);
 
-  const deleteHandler = (product) => {
+  const deleteHandler = (project) => {
     if (window.confirm('Are you sure to delete?')) {
-      dispatch(deleteProduct(product._id));
+      dispatch(deleteProject(project._id));
     }
   };
   const createHandler = () => {
-    dispatch(createProduct());
+    dispatch(createProject());
   };
   return (
     <div>
@@ -60,13 +65,13 @@ export default function ProductListScreen(props) {
         </button>
       </div>
 
-      {loadingDelete && <LoadingBox></LoadingBox>}
+      {loadingDelete && <LoadingBox />}
       {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
 
-      {loadingCreate && <LoadingBox></LoadingBox>}
+      {loadingCreate && <LoadingBox />}
       {errorCreate && <MessageBox variant="danger">{errorCreate}</MessageBox>}
       {loading ? (
-        <LoadingBox></LoadingBox>
+        <LoadingBox />
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
@@ -93,9 +98,7 @@ export default function ProductListScreen(props) {
                   <button
                     type="button"
                     className="small"
-                    onClick={() =>
-                      props.history.push(`/product/${product._id}/edit`)
-                    }
+                    onClick={() => props.history.push(`/product/${product._id}/edit`)}
                   >
                     Edit
                   </button>

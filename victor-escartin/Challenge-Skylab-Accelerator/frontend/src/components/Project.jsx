@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-underscore-dangle */
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,15 +8,32 @@ export default function Project(props) {
   return (
     <div key={project._id} className="card">
       <Link to={`/project/${project._id}`}>
-        <h2>NAME OF PROJECT</h2>
+        <h2>{project.name}</h2>
       </Link>
       <div className="card-body">
-        <Link to={`/project/${project._id}`}>
-          <h3>Description of project</h3>
-        </Link>
-      </div>
-      <div>
-        DESCRIPTION : XXXXXXXXXXXXXX
+        <h3>Description of project</h3>
+        <p>{project.description}</p>
+        <p>
+          <b>
+            GitHub link:
+          </b>
+          {' '}
+          {project.github_url}
+        </p>
+        <p>
+          <b>
+            Participants:
+          </b>
+          {' '}
+          {project.participants}
+        </p>
+        <p>
+          <b>
+            Creator:
+          </b>
+          {' '}
+          {project.creator}
+        </p>
       </div>
     </div>
   );
