@@ -4,8 +4,8 @@ function userController(Users) {
     const { userId } = req.body;
     const query = { _id: userId };
 
-    Users.find(query, (errorFindingUsers, users) => {
-      errorFindingUsers ? res.send(errorFindingUsers) : res.json(users);
+    Users.find(query, (errorFindingUsers, user) => {
+      errorFindingUsers ? res.send(errorFindingUsers) : res.json(user);
     });
   }
 
@@ -13,8 +13,8 @@ function userController(Users) {
     const { name, profilePic, githubUrl } = req.body;
     const newUser = { name, profilePic, githubUrl };
 
-    Users.create(newUser, (errorCreatingUser, users) => {
-      errorCreatingUser ? res.send(errorCreatingUser) : res.json(users);
+    Users.create(newUser, (errorCreatingUser, user) => {
+      errorCreatingUser ? res.send(errorCreatingUser) : res.json(user);
     });
   }
 

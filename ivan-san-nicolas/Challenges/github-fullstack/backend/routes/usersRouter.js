@@ -1,9 +1,9 @@
 const { Router } = require('express');
 const usersController = require('../controllers/usersController');
 
-function usersRouter(User) {
+function usersRouter(Users) {
   const router = Router();
-  const users = usersController(User);
+  const users = usersController(Users);
 
   router.route('/')
     .get(users.getMethod);

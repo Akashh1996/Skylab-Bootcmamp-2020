@@ -7,6 +7,7 @@ const usersRouter = require('./routes/usersRouter')(Users);
 const userRouter = require('./routes/userRouter')(Users);
 const Projects = require('./models/projectModel');
 const projectsRouter = require('./routes/projectsRouter')(Projects);
+const projectRouter = require('./routes/projectRouter')(Projects);
 
 const app = express();
 const port = process.env.PORT || 1240;
@@ -21,6 +22,7 @@ app.use(bodyParser.json());
 app.use('/users', usersRouter);
 app.use('/user', userRouter);
 app.use('/projects', projectsRouter);
+app.use('/project', projectRouter);
 
 app.listen(port, () => {
   console.log(`Server working at port ${port}`);

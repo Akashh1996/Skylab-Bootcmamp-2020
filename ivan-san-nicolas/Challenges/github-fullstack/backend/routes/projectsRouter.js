@@ -6,10 +6,7 @@ function projectsRouter(Projects) {
   const projects = projectsController(Projects);
 
   router.route('/')
-    .get(projects.getMethod)
-    .post(projects.postMethod)
-    .patch(projects.patchMethod)
-    .delete(projects.deleteMethod);
+    .get(projects.getMethod);
 
   return router;
 }
