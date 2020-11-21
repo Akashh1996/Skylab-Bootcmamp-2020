@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const { connect } = require('mongoose');
 const Users = require('./models/userModel');
 const usersRouter = require('./routes/usersRouter')(Users);
+const userRouter = require('./controllers/userController')(Users);
 const Projects = require('./models/projectModel');
 const projectsRouter = require('./routes/projectsRouter')(Projects);
 
@@ -18,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use('/users', usersRouter);
+app.use('/user', userRouter);
 app.use('/projects', projectsRouter);
 
 app.listen(port, () => {
