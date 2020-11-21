@@ -8,7 +8,8 @@ function projectController(Projects) {
     };
 
     Projects.find(query)
-      .populate()
+      .populate('creator')
+      .populate('participants')
       .exec(callback);
   }
 
