@@ -4,14 +4,17 @@ import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux';
 import configureStore from './redux/configureStore';
 import ListComponent from './components/ListComponent/ListComponent'
-import Header from './components/Header/Header'
+import Header from './components/Header/Header';
+import { BrowserRouter } from 'react-router-dom';
 const store = configureStore();
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Header/>
-    <ListComponent />
+      <BrowserRouter>
+        <Header/>
+        <ListComponent />
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

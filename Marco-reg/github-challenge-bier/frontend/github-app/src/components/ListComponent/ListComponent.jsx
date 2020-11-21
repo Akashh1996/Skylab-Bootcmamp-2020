@@ -2,8 +2,9 @@ import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {propTypes} from 'prop-types';
-// import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {requestList} from '../../redux/actions/listActions';
+import './ListComponent.css'
 
 function List({list, dispatch}) {
     useEffect(()=> {
@@ -13,24 +14,31 @@ function List({list, dispatch}) {
         }
     }, [])
 
+    if(list) {
+        console.log(list[0].technology)
+    }
     
-    debugger;
-        if(list) {
-            console.log(list[0].projectInfo)
-        }
+  
 
 
     return(
         <>
         <div className="list_wrapper">
-        <h4>sdjfknjk</h4>
-        {/* {list &&
-                list.length >= 1 &&
-                list.map((list) => <div className="product_wrapper">
-                <span>{list}</span>
-                
+        
+        {list &&
+                list.length >= 0 &&
+                <div>
+                {list.map((projects) =>
+                    <div className="project_wrapper">
+                        <Link to= {`/detail/${projects.id}`}>
+                    <h3 className="project_title">{projects.projectName}</h3>
+                    </Link>
+                    <p className="project_info">{projects.projectInfo}</p>
+                    <p className="project_technology">{projects.technology.map((tech)=> <p className="technology">{tech}</p>)}</p>
+                    </div>
+                  )}
                 </div>
-                )} */}
+        }
 
 
         </div>

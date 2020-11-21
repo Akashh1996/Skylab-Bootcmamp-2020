@@ -7,6 +7,8 @@ const listSchema = new Schema({
   projectName: { type: String },
   projectInfo: { type: String },
   projectOwner: { type: String },
+  photo: { type: String },
+  technology: [String],
 });
 
 module.exports = model('item', listSchema);
