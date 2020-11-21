@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './cv.css';
 import Resume from './Resume';
 import AboutMe from './AboutMe';
@@ -6,6 +6,15 @@ import Portfolio from './Portfolio';
 import Contact from './Contact';
 
 function Cv() {
+	const [toogleMenu, setToogleMenu] = useState(false);
+	function showMenu() {
+		if (toogleMenu === false) {
+			setToogleMenu(true);
+		} else {
+			setToogleMenu(false);
+		}
+	}
+
 	return (
 		<>
 			<nav className="nav_mobile">
@@ -17,11 +26,16 @@ function Cv() {
 						</b>
 					</p>
 				</div>
-				<div className="burger_menu">
+				<div className="burger_menu" onClick={() => showMenu()}>
 					<span class="material-icons">menu</span>
 				</div>
 			</nav>
 			<div className="nav">
+				{(toogleMenu &&
+					document.querySelector('aside').classList.add('visible')) ||
+					(!toogleMenu &&
+						document.querySelector('aside').classList.remove('visible'))}
+
 				<aside>
 					<div className="name">
 						<p>
@@ -46,6 +60,7 @@ function Cv() {
 						</div>
 					</nav>
 				</aside>
+
 				<main>
 					<a name="about"></a>
 					<AboutMe />

@@ -2,7 +2,7 @@ import dispatcher from '../dispatcher/dispatcher';
 import actionTypes from './actionTypes';
 
 export async function loadData() {
-	const response = await fetch('..api/data.json');
+	const response = await fetch('data.json');
 	const data = await response.json();
 
 	console.log(data);

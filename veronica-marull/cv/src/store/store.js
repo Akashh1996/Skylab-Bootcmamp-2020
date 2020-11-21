@@ -18,6 +18,9 @@ class DataStore extends EventEmitter {
 	removeEventListener(callback) {
 		this.removeListener(CHANGE, callback);
 	}
+	emitChange() {
+		this.emit(CHANGE);
+	}
 }
 
 const store = new DataStore();
@@ -25,7 +28,7 @@ const store = new DataStore();
 dispatcher.register((action) => {
 	switch (action.type) {
 		case actionTypes.LOAD_DATA:
-			dataCv = action.payload;
+			dataCv = action.payload[0];
 			store.emitChange();
 			break;
 

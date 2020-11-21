@@ -5,6 +5,7 @@
 aside {
     width: 10%;
     background-color: white;
+    position: relative;
 }
 main {
     flex: 1;
@@ -31,9 +32,12 @@ main {
     padding-bottom: 15px;
     border-top: 1px solid #F5F5F5;
     
+    
 
 }
-
+.visible{
+    display: block;
+}
 aside {
     display: none;
 }
