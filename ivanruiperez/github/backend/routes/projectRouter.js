@@ -5,7 +5,8 @@ function projectRouter(Project) {
   const router = express.Router();
   const project = projectController(Project);
   router.route('/')
-    .get(project.getMethod);
+    .get(project.getMethod)
+    .put(project.putMethod);
 
   return router;
 }

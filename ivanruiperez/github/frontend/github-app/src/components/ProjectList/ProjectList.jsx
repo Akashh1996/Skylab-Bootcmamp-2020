@@ -1,6 +1,7 @@
 /* eslint-disable no-debugger */
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { loadProjects } from '../../redux/actions/projectActions';
@@ -18,15 +19,17 @@ function ProjectList({ projectList, dispatch }) {
       <h1>Projects</h1>
       {projectList && projectList?.length
         && projectList.map((project) => (
-          <li key={project._id}>
-            <span>{project.name}</span>
-            <span>{project.description}</span>
-            <span>
-              Creator:
-              {' '}
-              {project.creator}
-            </span>
-          </li>
+          <Link to={`project/${project._id}`}>
+            <li key={project._id}>
+              <span>{project.name}</span>
+              <span>{project.description}</span>
+              <span>
+                Creator:
+                {' '}
+                {project.creator}
+              </span>
+            </li>
+          </Link>
         ))}
     </main>
   );
