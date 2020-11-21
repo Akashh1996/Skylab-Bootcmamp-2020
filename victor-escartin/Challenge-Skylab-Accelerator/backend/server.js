@@ -6,7 +6,9 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const { connect } = require('mongoose');
 const User = require('./models/userModel');
+const Project = require('./models/projectModel');
 const userRouter = require('./routes/userRouter')(User);
+const projectRouter = require('./routes/projectRouter')(Project);
 
 
 const app = express();
@@ -29,8 +31,11 @@ app.get('/', (req, res) => {
 });
 
 app.use('/users', userRouter);
+app.use('/projects', projectRouter);
 
-
+app.use((err, req, res, next) => {
+  res.status(500).send({ message: err.message });
+});
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

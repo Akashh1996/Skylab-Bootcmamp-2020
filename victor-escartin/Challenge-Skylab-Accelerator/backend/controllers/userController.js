@@ -21,7 +21,7 @@ function userController(User) {
         ...req.body,
       };
   
-      User.setuser(updatedUser);
+      User.setUser(updatedUser);
   
       res.json(updatedUser);
     }

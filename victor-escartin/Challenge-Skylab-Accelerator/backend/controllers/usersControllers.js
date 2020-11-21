@@ -1,8 +1,7 @@
 function usersController(User) {
     function getMethod(req, res) {
       const query = {};
-      User.find(query)
-        .exec((errorFindUsers, users) => ((errorFindUsers)
+      User.find(query,(errorFindUsers, users) => ((errorFindUsers)
           ? res.send(errorFindUsers)
           : res.json(users)));
     }
