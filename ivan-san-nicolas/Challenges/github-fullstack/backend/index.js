@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const { connect } = require('mongoose');
 const Users = require('./models/userModel');
 const usersRouter = require('./routes/usersRouter')(Users);
-const userRouter = require('./controllers/userController')(Users);
+const userRouter = require('./routes/userRouter')(Users);
 const Projects = require('./models/projectModel');
 const projectsRouter = require('./routes/projectsRouter')(Projects);
 
