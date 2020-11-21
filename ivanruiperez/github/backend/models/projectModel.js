@@ -6,7 +6,7 @@ const projectSchema = new Schema({
   name: String,
   description: String,
   url: String,
-  participants: Array,
+  participants: [String],
   creator: String,
 });
 

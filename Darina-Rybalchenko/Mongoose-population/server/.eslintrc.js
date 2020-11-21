@@ -3,7 +3,6 @@ module.exports = {
     commonjs: true,
     es2021: true,
     node: true,
-    jest: true,
   },
   extends: [
     'airbnb-base',
@@ -12,9 +11,7 @@ module.exports = {
     ecmaVersion: 12,
   },
   rules: {
-    'linebreak-style': 0,
-    'global-require': 0,
-    'eslint linebreak-style': [0, 'error'],
-    'no-underscore-dangle': [0],
+    'no-undef': 0,
+    'no-underscore-dangle': 0,
   },
 };
