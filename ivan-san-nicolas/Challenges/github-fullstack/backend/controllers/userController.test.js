@@ -1,8 +1,13 @@
 const User = require('../models/userModel');
-const userController = require('./usersController')(User);
+const userController = require('./userController')(User);
 
 describe('userController getMethod', () => {
   test('should call res.json without error in getMethod', () => {
+    const req = {
+      body: {
+        userId: 1,
+      },
+    };
     const res = {
       json: jest.fn(),
     };
@@ -10,12 +15,17 @@ describe('userController getMethod', () => {
       callback(false, {});
     });
 
-    userController.getMethod(null, res);
+    userController.getMethod(req, res);
 
     expect(res.json).toHaveBeenCalled();
   });
 
   test('should call res.send when there is an error in getMethod', () => {
+    const req = {
+      body: {
+        userId: 1,
+      },
+    };
     const res = {
       send: jest.fn(),
     };
@@ -24,7 +34,7 @@ describe('userController getMethod', () => {
       callback(true, {});
     });
 
-    userController.getMethod(null, res);
+    userController.getMethod(req, res);
 
     expect(res.send).toHaveBeenCalled();
   });
