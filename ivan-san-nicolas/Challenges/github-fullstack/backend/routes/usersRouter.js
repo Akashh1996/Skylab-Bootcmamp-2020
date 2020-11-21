@@ -6,10 +6,7 @@ function usersRouter(User) {
   const users = usersController(User);
 
   router.route('/')
-    .get(users.getMethod)
-    .post(users.postMethod)
-    .patch(users.patchMethod)
-    .delete(users.deleteMethod);
+    .get(users.getMethod);
 
   return router;
 }
