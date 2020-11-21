@@ -1,9 +1,6 @@
 function listController(List) {
   function getMethod(req, res) {
-    const query = {};
-    List.find(query, (errorFindList) => (errorFindList
-      ? res.send(errorFindList)
-      : res.send('this is workin fine')));
+    res.send('working');
   }
   function putMethod(req, res) {
     const query = req.body;
