@@ -1,12 +1,17 @@
-function listController(List) {
+/* eslint-disable no-console */
+function listController(list) {
   function getMethod(req, res) {
-    res.send('working');
+    const query = {};
+    list.find(query, (errorFindList, listData) => (errorFindList
+      ? res.send(errorFindList)
+      : res.send(listData)
+    ));
   }
-  function putMethod(req, res) {
-    const query = req.body;
-    List.create(query, (errorPutList, list) => (errorPutList
+  function putMethod({ body }, res) {
+    list.create(body, (errorPutList) => (errorPutList
       ? res.send(errorPutList)
-      : res.json(list)));
+      : res.send('item added')
+    ));
   }
   return { getMethod, putMethod };
 }

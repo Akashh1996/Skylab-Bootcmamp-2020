@@ -1,12 +1,12 @@
 const express = require('express');
 const listController = require('../controllers/listController');
 
-function routes(List) {
+function routes(list) {
   const listRouter = express.Router();
-  const list = listController(List);
+  const listItems = listController(list);
   listRouter.route('/')
-    .get(list.getMethod)
-    .put(list.putMethod);
+    .get(listItems.getMethod)
+    .put(listItems.putMethod);
   return listRouter;
 }
 

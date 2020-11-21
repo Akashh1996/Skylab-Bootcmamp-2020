@@ -19,9 +19,10 @@ function requestListError(error) {
 
 export function requestList() {
     return async (dispatch) => {
-        const {list} = await axios.get(URL);
+        const list = await axios.get(URL);
         try {
-            dispatch(requestListSuccess(list))
+            debugger;
+            dispatch(requestListSuccess(list.data))
             
         } catch (error) {
             dispatch(requestListError(error))
