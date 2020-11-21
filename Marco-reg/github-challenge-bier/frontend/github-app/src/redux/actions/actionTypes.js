@@ -1,6 +1,8 @@
 const actionTypes = {
     LOAD_LIST: 'LOAD_LIST',
     LOAD_LIST_ERROR: 'LOAD_LIST_ERROR',
+    CREATE_PROJECT:'CREATE_PROJECT',
+    CREATE_PROJECT_ERROR:'CREATE_PROJECT_ERROR'
 }
 
 export default actionTypes;

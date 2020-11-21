@@ -23,6 +23,7 @@ function List({list, dispatch}) {
 
     return(
         <>
+
         <div className="list_wrapper">
         
         {list &&
@@ -37,6 +38,7 @@ function List({list, dispatch}) {
                     <p className="project_technology">{projects.technology.map((tech)=> <p className="technology">{tech}</p>)}</p>
                     </div>
                   )}
+
                 </div>
         }
 
