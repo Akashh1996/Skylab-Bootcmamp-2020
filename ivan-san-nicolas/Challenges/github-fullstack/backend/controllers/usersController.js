@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-expressions */
-function usersController(User) {
+function usersController(Users) {
   function getMethod(req, res) {
     const query = {};
 
-    User.find(query, (errorFindingUsers, users) => {
+    Users.find(query, (errorFindingUsers, users) => {
       errorFindingUsers ? res.send(errorFindingUsers) : res.json(users);
     });
   }
@@ -12,7 +12,7 @@ function usersController(User) {
     const { name, profilePic, githubUrl } = req.body;
     const newUser = { name, profilePic, githubUrl };
 
-    User.create(newUser, (errorCreatingUser, users) => {
+    Users.create(newUser, (errorCreatingUser, users) => {
       errorCreatingUser ? res.send(errorCreatingUser) : res.json(users);
     });
   }
@@ -23,7 +23,7 @@ function usersController(User) {
     const query = { _id: userId };
     const conditionToUpdate = { name, profilePic, githubUrl };
 
-    User.findOneAndUpdate(query, conditionToUpdate, (errorUpdatingUser, user) => {
+    Users.findOneAndUpdate(query, conditionToUpdate, (errorUpdatingUser, user) => {
       errorUpdatingUser ? res.send(errorUpdatingUser) : res.json(user);
     });
   }
@@ -32,7 +32,7 @@ function usersController(User) {
     const { userId } = req.body;
     const query = { _id: userId };
 
-    User.deleteOne(query, (errorDeletingUser, user) => {
+    Users.deleteOne(query, (errorDeletingUser, user) => {
       errorDeletingUser ? res.send(errorDeletingUser) : res.json(user);
     });
   }
