@@ -65,3 +65,51 @@ describe('userController postMethod', () => {
     userController.postMethod(req, res);
   });
 });
+
+describe('userController patchMethod', () => {
+  test('should call res.json without error in patchMethod', () => {
+    const req = {
+      body: {
+        userId: 'string',
+        updatedUser: {
+          name: 'string',
+          profilePic: 'string',
+          githubUrl: 'string',
+        },
+      },
+    };
+    const res = {
+      json: jest.fn(),
+    };
+
+    User.findOneAndUpdate = jest.fn()
+      .mockImplementationOnce((query, conditionToUpdate, callback) => {
+        callback(false, {});
+      });
+
+    userController.patchMethod(req, res);
+  });
+
+  test('should call res.send when there is an erro in postMethod', () => {
+    const req = {
+      body: {
+        userId: 'string',
+        updatedUser: {
+          name: 'string',
+          profilePic: 'string',
+          githubUrl: 'string',
+        },
+      },
+    };
+    const res = {
+      send: jest.fn(),
+    };
+
+    User.findOneAndUpdate = jest.fn()
+      .mockImplementationOnce((query, conditionToUpdate, callback) => {
+        callback(true, {});
+      });
+
+    userController.patchMethod(req, res);
+  });
+});
