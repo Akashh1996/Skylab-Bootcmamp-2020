@@ -28,10 +28,20 @@ function userController(User) {
     });
   }
 
+  function deleteMethod(req, res) {
+    const { userId } = req.body;
+    const query = { _id: userId };
+
+    User.deleteOne(query, (errorDeletingUser, user) => {
+      errorDeletingUser ? res.send(errorDeletingUser) : res.json(user);
+    });
+  }
+
   return {
     getMethod,
     postMethod,
     patchMethod,
+    deleteMethod,
   };
 }
 
