@@ -1,0 +1,13 @@
+ul {
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+.user-card {
+    width: 600px;
+}
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
