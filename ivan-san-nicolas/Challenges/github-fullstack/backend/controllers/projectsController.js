@@ -1,21 +1,26 @@
 /* eslint-disable no-unused-expressions */
+
 function projectsController(Projects) {
   function getMethod(req, res) {
     const query = {};
 
-    Projects.find(query)
+    Projects.findOne(query)
       .populate('users')
-      .exec((errorFindingProjects, projects) => {
-        errorFindingProjects ? res.send(errorFindingProjects) : res.json(projects);
+      .exec((error, projects) => {
+        error ? res.send(error) : res.json(projects);
       });
   }
 
   function postMethod(req, res) {
-    const { name, profilePic, githubUrl } = req.body;
-    const newUser = { name, profilePic, githubUrl };
+    const {
+      name, description, url, participants, creator,
+    } = req.body;
+    const newUser = {
+      name, description, url, participants, creator,
+    };
 
-    Projects.create(newUser, (errorCreatingUser, users) => {
-      errorCreatingUser ? res.send(errorCreatingUser) : res.json(users);
+    Projects.create(newUser, (error, users) => {
+      error ? res.send(error) : res.json(users);
     });
   }
 
@@ -25,8 +30,8 @@ function projectsController(Projects) {
     const query = { _id: projectId };
     const conditionToUpdate = { name, profilePic, githubUrl };
 
-    Projects.findOneAndUpdate(query, conditionToUpdate, (errorUpdatingUser, user) => {
-      errorUpdatingUser ? res.send(errorUpdatingUser) : res.json(user);
+    Projects.findOneAndUpdate(query, conditionToUpdate, (error, user) => {
+      error ? res.send(error) : res.json(user);
     });
   }
 
@@ -34,8 +39,8 @@ function projectsController(Projects) {
     const { userId } = req.body;
     const query = { _id: userId };
 
-    Projects.deleteOne(query, (errorDeletingUser, user) => {
-      errorDeletingUser ? res.send(errorDeletingUser) : res.json(user);
+    Projects.deleteOne(query, (error, user) => {
+      error ? res.send(error) : res.json(user);
     });
   }
 

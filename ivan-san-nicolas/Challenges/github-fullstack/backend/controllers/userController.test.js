@@ -1,5 +1,5 @@
 const User = require('../models/userModel');
-const userController = require('./userController')(User);
+const userController = require('./usersController')(User);
 
 describe('userController getMethod', () => {
   test('should call res.json without error in getMethod', () => {
