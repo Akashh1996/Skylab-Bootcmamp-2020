@@ -3,7 +3,7 @@ import React from 'react';
 import './ProjectListItem.css';
 import { connect } from 'react-redux';
 import Card from 'react-bootstrap/Card';
-import requestProjects from '../../redux/actions/project-actions';
+import { requestProjects } from '../../redux/actions/project-actions';
 
 function ProjectListItem({ projects, dispatch }) {
   if (!projects || !projects.length) {

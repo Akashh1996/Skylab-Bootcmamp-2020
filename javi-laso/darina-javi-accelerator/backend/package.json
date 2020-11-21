@@ -21,7 +21,7 @@
     "eslint-plugin-import": "^2.22.1"
   },
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "set DEBUG=app & nodemon index.js",
     "debug": "node --inspect-brk index.js --runInBand",
     "test": "jest --collect-coverage --watch"
   },
