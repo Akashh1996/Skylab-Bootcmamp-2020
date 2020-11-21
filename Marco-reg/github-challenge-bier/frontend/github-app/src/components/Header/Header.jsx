@@ -6,7 +6,7 @@ function Header() {
     return(
         <>
         <header>
-            <div className="header_wrapper">
+            <div className="header_wrapper" id="header-wrapper">
                 <h1 className="title">aaaa</h1>
                 <button className="log-in_button">LOG IN</button>
             </div>
