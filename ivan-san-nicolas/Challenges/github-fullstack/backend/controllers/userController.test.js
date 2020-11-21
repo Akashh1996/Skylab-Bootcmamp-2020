@@ -1,5 +1,5 @@
-const User = require('../models/userModel');
-const userController = require('./userController')(User);
+const Users = require('../models/userModel');
+const userController = require('./userController')(Users);
 
 describe('userController getMethod', () => {
   test('should call res.json without error in getMethod', () => {
@@ -11,7 +11,7 @@ describe('userController getMethod', () => {
     const res = {
       json: jest.fn(),
     };
-    User.find = jest.fn().mockImplementationOnce((query, callback) => {
+    Users.find = jest.fn().mockImplementationOnce((query, callback) => {
       callback(false, {});
     });
 
@@ -30,7 +30,7 @@ describe('userController getMethod', () => {
       send: jest.fn(),
     };
 
-    User.find = jest.fn().mockImplementationOnce((query, callback) => {
+    Users.find = jest.fn().mockImplementationOnce((query, callback) => {
       callback(true, {});
     });
 
@@ -53,7 +53,7 @@ describe('userController postMethod', () => {
       json: jest.fn(),
     };
 
-    User.create = jest.fn().mockImplementationOnce((query, callback) => {
+    Users.create = jest.fn().mockImplementationOnce((query, callback) => {
       callback(false, {});
     });
 
@@ -74,7 +74,7 @@ describe('userController postMethod', () => {
       send: jest.fn(),
     };
 
-    User.create = jest.fn().mockImplementationOnce((query, callback) => {
+    Users.create = jest.fn().mockImplementationOnce((query, callback) => {
       callback(true, {});
     });
 
@@ -100,7 +100,7 @@ describe('userController patchMethod', () => {
       json: jest.fn(),
     };
 
-    User.findOneAndUpdate = jest.fn()
+    Users.findOneAndUpdate = jest.fn()
       .mockImplementationOnce((query, conditionToUpdate, callback) => {
         callback(false, {});
       });
@@ -125,7 +125,7 @@ describe('userController patchMethod', () => {
       send: jest.fn(),
     };
 
-    User.findOneAndUpdate = jest.fn()
+    Users.findOneAndUpdate = jest.fn()
       .mockImplementationOnce((query, conditionToUpdate, callback) => {
         callback(true, {});
       });
@@ -147,7 +147,7 @@ describe('userController deleteMethod', () => {
       json: jest.fn(),
     };
 
-    User.deleteOne = jest.fn()
+    Users.deleteOne = jest.fn()
       .mockImplementationOnce((query, callback) => {
         callback(false, {});
       });
@@ -167,7 +167,7 @@ describe('userController deleteMethod', () => {
       send: jest.fn(),
     };
 
-    User.deleteOne = jest.fn()
+    Users.deleteOne = jest.fn()
       .mockImplementationOnce((query, callback) => {
         callback(true, {});
       });

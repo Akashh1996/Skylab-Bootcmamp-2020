@@ -1,5 +1,5 @@
-const User = require('../models/userModel');
-const usersController = require('./usersController')(User);
+const Users = require('../models/userModel');
+const usersController = require('./usersController')(Users);
 
 describe('usersController getMethod', () => {
   test('should call res.json without error in getMethod', () => {
@@ -7,7 +7,7 @@ describe('usersController getMethod', () => {
       json: jest.fn(),
     };
 
-    User.find = jest.fn().mockImplementationOnce((query, callback) => {
+    Users.find = jest.fn().mockImplementationOnce((query, callback) => {
       callback(false, {});
     });
 
@@ -21,7 +21,7 @@ describe('usersController getMethod', () => {
       send: jest.fn(),
     };
 
-    User.find = jest.fn().mockImplementationOnce((query, callback) => {
+    Users.find = jest.fn().mockImplementationOnce((query, callback) => {
       callback(true, {});
     });
 
