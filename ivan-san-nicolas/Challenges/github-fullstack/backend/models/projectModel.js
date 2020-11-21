@@ -4,7 +4,7 @@ const projectSchema = new Schema({
   name: { type: String },
   description: { type: String },
   url: { type: String },
-  participants: [Schema.Types.ObjectId],
+  participants: [{ type: Schema.Types.ObjectId, ref: 'users' }],
   creator: { type: Schema.Types.ObjectId, ref: 'users' },
 });
 

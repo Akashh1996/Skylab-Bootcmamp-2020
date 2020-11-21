@@ -4,7 +4,7 @@ function projectsController(Projects) {
     const query = {};
 
     Projects.find(query)
-      .populate({}, {})
+      .populate('users')
       .exec((errorFindingProjects, projects) => {
         errorFindingProjects ? res.send(errorFindingProjects) : res.json(projects);
       });
