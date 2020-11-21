@@ -11,6 +11,8 @@ describe('userController getMethod', () => {
     });
 
     userController.getMethod(null, res);
+
+    expect(res.json).toHaveBeenCalled();
   });
 
   test('should call res.send when there is an error in getMethod', () => {
@@ -23,6 +25,8 @@ describe('userController getMethod', () => {
     });
 
     userController.getMethod(null, res);
+
+    expect(res.send).toHaveBeenCalled();
   });
 });
 
@@ -44,6 +48,8 @@ describe('userController postMethod', () => {
     });
 
     userController.postMethod(req, res);
+
+    expect(res.json).toHaveBeenCalled();
   });
 
   test('should call res.send when there is an erro in postMethod', () => {
@@ -63,6 +69,8 @@ describe('userController postMethod', () => {
     });
 
     userController.postMethod(req, res);
+
+    expect(res.send).toHaveBeenCalled();
   });
 });
 
@@ -88,6 +96,8 @@ describe('userController patchMethod', () => {
       });
 
     userController.patchMethod(req, res);
+
+    expect(res.json).toHaveBeenCalled();
   });
 
   test('should call res.send when there is an erro in postMethod', () => {
@@ -111,5 +121,49 @@ describe('userController patchMethod', () => {
       });
 
     userController.patchMethod(req, res);
+
+    expect(res.send).toHaveBeenCalled();
+  });
+});
+
+describe('userController deleteMethod', () => {
+  test('should call res.json without error in patchMethod', () => {
+    const req = {
+      body: {
+        userId: 'string',
+      },
+    };
+    const res = {
+      json: jest.fn(),
+    };
+
+    User.deleteOne = jest.fn()
+      .mockImplementationOnce((query, callback) => {
+        callback(false, {});
+      });
+
+    userController.deleteMethod(req, res);
+
+    expect(res.json).toHaveBeenCalled();
+  });
+
+  test('should call res.send when there is an erro in postMethod', () => {
+    const req = {
+      body: {
+        userId: 'string',
+      },
+    };
+    const res = {
+      send: jest.fn(),
+    };
+
+    User.deleteOne = jest.fn()
+      .mockImplementationOnce((query, callback) => {
+        callback(true, {});
+      });
+
+    userController.deleteMethod(req, res);
+
+    expect(res.send).toHaveBeenCalled();
   });
 });
