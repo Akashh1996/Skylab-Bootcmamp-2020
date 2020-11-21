@@ -1,0 +1,10 @@
+li {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 20px;
+}
+span {
+    display: flex;
+    flex-direction: column;
+}
