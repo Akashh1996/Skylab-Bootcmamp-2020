@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const { connect } = require('mongoose');
 const listItems = require('./models/listModels');
 const listRoutes = require('./routes/listRoutes')(listItems);
+const detailRoutes = require('./routes/detailRoutes')(listItems);
 const loginRoutes = require('./routes/loginRoutes')();
 const oauthRoutes = require('./routes/oauthRoutes')();
 
@@ -23,6 +24,7 @@ connect(database, {
 
 app.use(cors());
 app.use('/', listRoutes);
+app.use('/detail', detailRoutes);
 app.use('/login', loginRoutes);
 app.use('/oauth-callback', oauthRoutes);
 
