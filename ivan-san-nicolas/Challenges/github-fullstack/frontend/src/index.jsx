@@ -10,7 +10,7 @@ import Detail from './components/Detail/Detail';
 import Footer from './components/Footer/Footer';
 import reportWebVitals from './reportWebVitals';
 
-const store = configureStore({ gitReducer: { projectArray: [] } });
+const store = configureStore({ gitReducer: { projectArray: [], projectItem: {} } });
 
 ReactDOM.render(
   <React.StrictMode>
