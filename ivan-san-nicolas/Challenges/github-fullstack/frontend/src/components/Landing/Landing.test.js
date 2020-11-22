@@ -20,9 +20,14 @@ describe('Landing', () => {
 
   test('should have projects charged', () => {
     act(() => {
+      const projectList = {
+        name: 'project',
+      };
+      const dispatch = jest.fn();
+
       render(
         <BrowserRouter>
-          <Landing />
+          <Landing props={{ projectList, dispatch }} />
         </BrowserRouter>,
         container,
       );
