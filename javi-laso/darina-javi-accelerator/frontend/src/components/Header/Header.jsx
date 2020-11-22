@@ -8,14 +8,15 @@ import './Header.css';
 function Header({ dispatch }) {
   return (
     <>
-      <header className="jumbotron">
-        <button type="button" onClick={() => { dispatch(githubLogin()); }}>Github Login</button>
+      <header className="header">
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <div className="logo-name">SkyLab Accelerator</div>
+        </Link>
+        <div className="flex-spacer" />
         <Link to="/newProjectForm" style={{ textDecoration: 'none' }}>
           <div className="create-project">Create Project</div>
         </Link>
-        <Link to="/" style={{ textDecoration: 'none' }}>
-          <div className="home">Home</div>
-        </Link>
+        <button type="button" onClick={() => { dispatch(githubLogin()); }}>Github Login</button>
 
       </header>
     </>

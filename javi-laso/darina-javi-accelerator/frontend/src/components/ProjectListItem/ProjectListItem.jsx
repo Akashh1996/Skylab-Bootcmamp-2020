@@ -37,7 +37,7 @@ function ProjectListItem({ projects, dispatch }) {
                   <Card.Body>
                     Categories:
                     {' '}
-                    {project.categories.join()}
+                    {project.categories.join(', ')}
                   </Card.Body>
                 </Card>
               </li>
