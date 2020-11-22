@@ -20,11 +20,11 @@ function ProjectList({ projectList, dispatch }) {
       <h1>Projects</h1>
       {projectList && projectList?.length
         && projectList.map((project) => (
-          <Link to={`project/${project._id}`}>
-            <li key={project._id}>
-              <span>{project.name}</span>
-              <span>{project.description}</span>
-              <span>
+          <Link to={`/project/${project._id}`}>
+            <li key={`${project._id}_li`}>
+              <span key={`${project._id}_name`}>{project.name}</span>
+              <span key={`${project._id}_descrip`}>{project.description}</span>
+              <span key={`${project._id}_creator`}>
                 Creator:
                 {' '}
                 {project.creator}

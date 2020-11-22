@@ -22,10 +22,35 @@ export function loadProjects() {
   return async (dispatch) => {
     try {
       const projects = await axios.get(projectUrl);
-
       dispatch(loadProjectsSuccess(projects.data));
     } catch (error) {
       dispatch(loadProjectsError(error));
+    }
+  };
+}
+
+function requestProjectSuccess(project) {
+  return {
+    type: actionTypes.LOAD_PROJECT,
+    project,
+  };
+}
+
+function requestProjectError(error) {
+  return {
+    type: actionTypes.LOAD_PROJECT_ERROR,
+    error,
+  };
+}
+
+export function loadProject(productId) {
+  return async (dispatch) => {
+    const endpoint = `${projectUrl}/${productId}`;
+    try {
+      const project = await axios.get(endpoint);
+      dispatch(requestProjectSuccess(project.data));
+    } catch (error) {
+      dispatch(requestProjectError(error));
     }
   };
 }
