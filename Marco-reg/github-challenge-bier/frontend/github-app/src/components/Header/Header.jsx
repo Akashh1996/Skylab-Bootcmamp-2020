@@ -7,7 +7,7 @@ function Header() {
         <>
         <header>
             <div className="header_wrapper" id="header-wrapper">
-                <h1 className="title">aaaa</h1>
+                <h1 className="title">Skylab Accelerator</h1>
                 <button className="log-in_button">LOG IN</button>
             </div>
         </header>

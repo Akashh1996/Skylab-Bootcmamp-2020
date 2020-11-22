@@ -15,6 +15,7 @@ function listController(list) {
   }
 
   function deleteMethod({ body }, res) {
+    console.log(body);
     list.findOneAndRemove((body), (errorDeleteItem) => (
       errorDeleteItem
         ? res.send(errorDeleteItem)
