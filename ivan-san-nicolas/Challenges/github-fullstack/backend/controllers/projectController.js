@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-expressions */
 function projectController(Projects) {
   function getMethod(req, res) {
+    console.log(req);
     const { projectId } = req.body;
     const query = { _id: projectId };
     const callback = (error, project) => {

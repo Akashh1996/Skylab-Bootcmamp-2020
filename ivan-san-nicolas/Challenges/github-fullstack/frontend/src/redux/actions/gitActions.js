@@ -8,6 +8,13 @@ function loadProjectsSuccess(projectList) {
   };
 }
 
+function loadProjectSuccess(projectItem) {
+  return {
+    type: actionTypes.LOAD_PROJECT,
+    projectItem,
+  };
+}
+
 function loadError(error) {
   return {
     type: actionTypes.LOAD_ERROR,
@@ -34,6 +41,20 @@ export function loadProjects() {
   };
 }
 
+export function loadProject(projectId) {
+  debugger;
+  return async (dispatch) => {
+    const endpoint = 'http://localhost:1240/project';
+    try {
+      const project = await axios.get(endpoint, { projectId });
+      debugger;
+      dispatch(loadProjectSuccess(project.data));
+    } catch (error) {
+      dispatch(loadError(error));
+    }
+  };
+}
+
 export function loadUsers() {
   return async (dispatch) => {
     const endpoint = 'http://localhost:1240/users';
@@ -47,7 +68,6 @@ export function loadUsers() {
 }
 
 export function updateProject(projectId, updatedProject) {
-  debugger;
   return async (dispatch) => {
     const endpoint = 'http://localhost:1240/project';
     try {

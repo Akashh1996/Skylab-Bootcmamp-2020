@@ -2,6 +2,7 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable no-debugger */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { loadProjects, updateProject } from '../../redux/actions/gitActions';
@@ -60,7 +61,9 @@ function Landing({ projectList, dispatch }) {
         <div className="landing__project">
           <div className="landing__project__top">
             <div className="landing__project__top__details">
-              <p className="landing__project__top__detail project__name">{project.name}</p>
+              <Link to={`/detail/${project._id}`} className="project__anchor">
+                <p className="landing__project__top__detail project__name">{project.name}</p>
+              </Link>
               <p className="landing__project__top__detail project__description">{project.description}</p>
               <a href={project.url} className="landing__project__top__detail project__url">
                 <img
@@ -109,7 +112,6 @@ Landing.defaultProps = {
   projectList: {},
 };
 function mapStateToProps({ gitReducer }) {
-  debugger;
   return {
     projectList: gitReducer.projectArray,
   };
