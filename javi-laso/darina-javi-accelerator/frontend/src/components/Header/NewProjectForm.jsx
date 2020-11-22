@@ -9,7 +9,6 @@ import './NewProjectForm.css';
 import { createProject, requestProjects } from '../../redux/actions/project-actions';
 
 function NewProjectForm({ dispatch }) {
-  debugger;
   const [name, setName] = useState('');
   const [categories, setCategories] = useState('');
   const [urlGit, setUrlGit] = useState('');

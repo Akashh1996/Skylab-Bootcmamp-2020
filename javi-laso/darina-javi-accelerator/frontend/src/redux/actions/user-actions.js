@@ -2,29 +2,36 @@
 import axios from 'axios';
 import actionTypes from './actionTypes';
 
-const serverUsersUrl = 'http://localhost:2130/users';
+const oauthUrl = 'http://localhost:2130/oauth-callback';
 
-function githubLoginSuccess(user) {
+export function getUserSuccess(user) {
   return {
     type: actionTypes.LOAD_USER,
     user,
   };
 }
 
-function githubLoginError(usersError) {
+export function getUserError(error) {
   return {
     type: actionTypes.LOAD_USER_ERROR,
-    usersError,
+    error,
   };
 }
 
-export default function githubLogin() {
+export function getUserFromGithub(code) {
   return async (dispatch) => {
     try {
-      const user = await axios.get(serverUsersUrl);
-      dispatch(githubLoginSuccess(user.data));
+      const user = await axios.get(oauthUrl, { params: { code } });
+
+      dispatch(getUserSuccess(user.data));
     } catch (error) {
-      dispatch(githubLoginError(error));
+      dispatch(getUserError(error));
     }
+  };
+}
+
+export function logOutUser() {
+  return {
+    type: actionTypes.USER_LOGOUT,
   };
 }
