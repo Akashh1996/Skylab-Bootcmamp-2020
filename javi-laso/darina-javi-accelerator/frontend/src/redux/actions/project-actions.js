@@ -39,3 +39,28 @@ export function createProject(newProject) {
     }
   };
 }
+
+function requestProjectDetailSuccess(project) {
+  return {
+    type: actionTypes.LOAD_PROJECT,
+    project,
+  };
+}
+
+function requestProjectDetailError(projectError) {
+  return {
+    type: actionTypes.LOAD_PROJECT_ERROR,
+    projectError,
+  };
+}
+
+export function requestProjectDetail(_id) {
+  return async (dispatch) => {
+    try {
+      const project = await axios.get(`${serverProjectsUrl}/${_id}`);
+      dispatch(requestProjectDetailSuccess(project.data));
+    } catch (error) {
+      dispatch(requestProjectDetailError(error));
+    }
+  };
+}

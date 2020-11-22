@@ -1,7 +1,6 @@
-/* eslint-disable no-debugger */
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
+import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -68,6 +67,10 @@ function NewProjectForm({ dispatch }) {
     </>
   );
 }
+
+NewProjectForm.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+};
 
 function mapStateToProps(state) {
   return {

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 import constants from '../../constants/constants';
 import { getUserFromGithub, logOutUser } from '../../redux/actions/user-actions';
 import './Header.css';
@@ -22,17 +23,25 @@ function Header({ dispatch, user }) {
   }, [user]);
 
   return (
-    <header className="jumbotron">
-      {!user && <a href={`${constants.githubLoginUrl}?client_id=${constants.clientId}&redirect_uri=${window.location.origin}${window.location.pathname}&scope=repo`}>Github Login</a>}
-      {user && <button type="button" onClick={() => { dispatch(logOutUser()); }}>Logout</button>}
-      <Link to="/newProjectForm" style={{ textDecoration: 'none' }}>
-        <div className="create-project">Create Project</div>
-      </Link>
-      <Link to="/" style={{ textDecoration: 'none' }}>
-        <div className="home">Home</div>
-      </Link>
+    <>
+      <header className="header">
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <div className="logo-name">SkyLab Accelerator</div>
+        </Link>
+        <div className="flex-spacer" />
+        <Button
+          variant="light"
+          as={Link}
+          to="/newProjectForm"
+        >
+          Create Project
 
-    </header>
+        </Button>
+        {' '}
+        {!user && <a href={`${constants.githubLoginUrl}?client_id=${constants.clientId}&redirect_uri=${window.location.origin}${window.location.pathname}&scope=repo`} className="btn btn-dark">Github Login</a>}
+        {user && <Button variant="dark" onClick={() => { dispatch(logOutUser()); }}>Logout</Button>}
+      </header>
+    </>
   );
 }
 
