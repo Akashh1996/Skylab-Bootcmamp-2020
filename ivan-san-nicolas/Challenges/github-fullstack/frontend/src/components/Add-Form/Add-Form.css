@@ -1,0 +1,74 @@
+.add-form__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.add-form__title-field, .add-form__description-field, .add-form__github-link-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    ;
+}
+
+.add-form__github-link-field {
+    margin-bottom: 50px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.button-container button {
+    margin: 0 10px 20px
+}
+
+.create-button {
+    background-color: #47ff2f;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.cancel-button {
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.create-button:hover {
+    background-color: green;
+    color: white;
+}
+
+.cancel-button:hover {
+    background-color: rgb(155, 0, 0);
+    color: white;
+}
+
+.project-title-label, .project-description-label, .github-link-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#project-title, #project-description, #github-link {
+    width: 80%;
+    font-family: monospace;
+}
+
+#project-description {
+    resize: vertical;
+    overflow: auto;
+}
+
+

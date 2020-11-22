@@ -47,13 +47,26 @@ export function loadUsers() {
 }
 
 export function updateProject(projectId, updatedProject) {
-  debugger;
   return async (dispatch) => {
     const endpoint = 'http://localhost:1240/project';
     try {
       await axios.patch(endpoint, {
         projectId,
         updatedProject,
+      });
+    } catch (error) {
+      dispatch(loadError(error));
+    }
+  };
+}
+
+export function addProject(name, description, url, participants, creator) {
+  debugger;
+  return async (dispatch) => {
+    const endpoint = 'http://localhost:1240/project';
+    try {
+      await axios.post(endpoint, {
+        name, description, url, participants, creator,
       });
     } catch (error) {
       dispatch(loadError(error));
