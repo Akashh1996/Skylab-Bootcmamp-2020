@@ -12,10 +12,14 @@ function UserLogin({ props }) {
         </div>
       ) : (
         <div className="landing__header--user-nologged">
+          <a href="/add-form">
+            <button type="button" className="add-project-button">
+              Add new project
+            </button>
+          </a>
           <button type="button" className="logout-button" onClick={() => setUser(!user)}>LOG OUT</button>
           <p>{user.name}</p>
           <i className="fa fa-user" />
-          {/* <img src={user.profilePic} alt="" /> */}
         </div>
       )}
     </div>

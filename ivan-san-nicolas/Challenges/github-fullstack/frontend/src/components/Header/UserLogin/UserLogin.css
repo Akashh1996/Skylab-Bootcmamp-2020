@@ -1,4 +1,4 @@
-.login-button, .logout-button {
+.login-button, .logout-button, .add-project-button {
     padding: 10px;
     border: 3px solid white;
     border-radius: 10px;
@@ -13,6 +13,11 @@
     font-size: 30px;
 }
 
+.fa-folder-plus {
+    color: white;
+    font-size: 20px;
+}
+
 .landing__header--user-logged, .landing__header--user-nologged {
     display: flex;
     flex-direction: row;
@@ -20,12 +25,12 @@
     margin-right: 20px;
 }
 
-.login-button, .logout-button {
+.login-button, .logout-button, .add-project-button {
     margin-right: 20px;
     transition: transform 0.3s;
 }
 
-.login-button:hover, .logout-button:hover {
+.login-button:hover, .logout-button:hover, .add-project-button:hover {
     background-color: white;
     color:#405670;
     border: 3px solid #405670;

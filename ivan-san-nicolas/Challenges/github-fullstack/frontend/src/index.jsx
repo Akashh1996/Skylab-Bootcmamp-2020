@@ -8,6 +8,7 @@ import Header from './components/Header/Header';
 import Landing from './components/Landing/Landing';
 import Detail from './components/Detail/Detail';
 import Footer from './components/Footer/Footer';
+import AddForm from './components/Add-Form/Add-Form';
 import reportWebVitals from './reportWebVitals';
 
 const store = configureStore({ gitReducer: { projectArray: [], projectItem: {} } });
@@ -20,6 +21,7 @@ ReactDOM.render(
         <Switch>
           <Route path="/" exact component={Landing} />
           <Route path="/detail/:projectId" exact component={Detail} />
+          <Route path="/add-form" exact component={AddForm} />
         </Switch>
         <Footer />
       </BrowserRouter>
