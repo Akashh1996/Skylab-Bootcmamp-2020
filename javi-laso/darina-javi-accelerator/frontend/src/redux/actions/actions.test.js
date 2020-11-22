@@ -2,6 +2,7 @@ import axios from 'axios';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import * as projectActions from './project-actions';
+import * as userActions from './user-actions';
 import actionTypes from './actionTypes';
 
 jest.mock('axios');
@@ -72,6 +73,7 @@ describe('actions', () => {
       expect(store.getActions()[0].type).toBe(actionTypes.CREATE_PROJECT_ERROR);
     });
   });
+
   describe('user-actions', () => {
     let fakeData;
     let fakeError;
@@ -89,7 +91,7 @@ describe('actions', () => {
     test('getUserFromGithub with promise resolved should put action.type LOAD_USER in the store', async () => {
       axios.get = jest.fn().mockResolvedValueOnce(fakeData);
 
-      await store.dispatch(projectActions.getUserFromGithub());
+      await store.dispatch(userActions.getUserFromGithub());
 
       expect(store.getActions()[0].type).toBe(actionTypes.LOAD_USER);
     });
@@ -97,7 +99,7 @@ describe('actions', () => {
     test('getUserFromGithub with promise rejected should put action.type LOAD_USER_ERROR in the store', async () => {
       axios.get = jest.fn().mockRejectedValueOnce(fakeError);
 
-      await store.dispatch(projectActions.getUserFromGithub());
+      await store.dispatch(userActions.getUserFromGithub());
 
       expect(store.getActions()[0].type).toBe(actionTypes.LOAD_USER_ERROR);
     });
@@ -105,7 +107,7 @@ describe('actions', () => {
     test('logOutUser should put action.type USER_LOGOUT in the store', async () => {
       axios.get = jest.fn().mockResolvedValueOnce(fakeData);
 
-      await store.dispatch(projectActions.logOutUser());
+      await store.dispatch(userActions.logOutUser());
 
       expect(store.getActions()[0].type).toBe(actionTypes.USER_LOGOUT);
     });
