@@ -23,6 +23,7 @@ function Landing({ projectList, dispatch }) {
   function addUserToParticipants(newParticipant, project) {
     const updatedProject = { ...project };
     let wasParticipant = false;
+
     project.participants.forEach((participant) => {
       if (participant._id === newParticipant._id) {
         updatedProject.participants = project.participants.filter(
@@ -61,6 +62,7 @@ function Landing({ projectList, dispatch }) {
           </div>
           <div className="landing__project__bottom">
             <div className="landing__project__bottom__participants">
+              <h4>Participants:</h4>
               {project.participants.length ? (project.participants.map((participant) => (
                 <a href={participant.githubUrl} className="landing__project__bottom__participant">
                   <img src={participant.profilePic} alt={`${participant.name}-profile-pic`} className="landing__project__bottom__detail participant__profile-pic" />

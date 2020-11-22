@@ -104,7 +104,7 @@ background-color: rgb(126, 187, 35);
 
 .landing__project__bottom__participants {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   overflow: hidden;
@@ -112,11 +112,18 @@ background-color: rgb(126, 187, 35);
 
 .landing__project__bottom__participant {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  width: auto;
+  margin-left: 30px;
   text-decoration: none;
+  transition: transform 0.2s;
 }
+
+.landing__project__bottom__participant:hover {
+  transform: scale(1.08);
+}
+
 
 .participant__name {
   font-weight: 400;
@@ -135,6 +142,7 @@ background-color: rgb(126, 187, 35);
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  margin-left: 5%;
   color: grey;
   font-style: italic;
 }
