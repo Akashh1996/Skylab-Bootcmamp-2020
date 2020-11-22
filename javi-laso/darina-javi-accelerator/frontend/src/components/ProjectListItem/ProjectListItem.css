@@ -2,3 +2,13 @@ ul {
     margin-top: 20px;
     list-style-type: none;
 }
+
+.project-list__section {
+    max-width: 800px;
+    margin: auto;
+	min-height: 40vh;
+}
+
+.card{
+    margin-top: 10px;
+}
