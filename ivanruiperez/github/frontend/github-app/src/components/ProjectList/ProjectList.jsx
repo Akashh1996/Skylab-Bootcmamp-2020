@@ -1,6 +1,6 @@
 /* eslint-disable no-debugger */
 // eslint-disable-next-line no-unused-vars
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
@@ -8,6 +8,20 @@ import { loadProjects } from '../../redux/actions/projectActions';
 import './ProjectList.css';
 
 function ProjectList({ projectList, dispatch }) {
+  const [newParticipants, setNewParticipants] = useState([]);
+  const [newName, setNewName] = useState('');
+  const [newDescription, setNewDescription] = useState('');
+  const [newurl, setNewUrl] = useState('');
+  const [newCreator, setNewCreator] = useState('');
+
+  const newProject = {
+    participants: newParticipants.split(','),
+    name: newName,
+    description: newDescription,
+    url: newurl,
+    creator: newCreator,
+  };
+
   useEffect(() => {
     if (!projectList || projectList.length === 0) {
       dispatch(loadProjects());
@@ -31,6 +45,32 @@ function ProjectList({ projectList, dispatch }) {
             </li>
           </Link>
         ))}
+      <input
+        onChange={(event) => setNewParticipants.push((event.target.value).split(' '))}
+        value={newParticipants}
+        placeholder="Enter new participants"
+      />
+      <input
+        onChange={(event) => setNewName(event.target.value)}
+        value={newName}
+        placeholder="Enter a new name"
+      />
+      <input
+        onChange={(event) => setNewDescription(event.target.value)}
+        value={newDescription}
+        placeholder="Enter a new description"
+      />
+      <input
+        onChange={(event) => setNewUrl(event.target.value)}
+        value={newurl}
+        placeholder="Enter a new url"
+      />
+      <input
+        onChange={(event) => setNewCreator(event.target.value)}
+        value={newCreator}
+        placeholder="Enter a new creator"
+      />
+      <button type="button" onClick={() => dispatch(enterProjectInList(newProject))}>Add Project</button>
     </main>
   );
 }

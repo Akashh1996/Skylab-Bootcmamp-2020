@@ -12,6 +12,7 @@ function projectRouter(Project) {
 
   router.route('/:projectId')
     .get(detail.getMethodDetail);
+
   return router;
 }
 
