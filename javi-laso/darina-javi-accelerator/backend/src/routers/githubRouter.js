@@ -6,6 +6,7 @@ function githubRouter() {
   const github = githubController();
 
   router.route('/')
+    .all(github.allMiddleware)
     .get(github.getGithubMethod);
 
   return router;

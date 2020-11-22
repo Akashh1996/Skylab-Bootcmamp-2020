@@ -1,9 +1,10 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import './ProjectListItem.css';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
 import { requestProjects } from '../../redux/actions/project-actions';
+import Tags from '../Tags/Tags';
 
 function ProjectListItem({ projects, dispatch }) {
   if (!projects || !projects.length) {
@@ -12,42 +13,47 @@ function ProjectListItem({ projects, dispatch }) {
   return (
     <>
       <main className="project-list-container">
-        <section className="project-list__section">
+        <h2 className="mb-4">Search your job</h2>
+        <ul className="project-list">
+          {projects && projects.length > 0 && projects.map((project) => (
 
-          <ul>
-            {projects && projects.length > 0 && projects.map((project) => (
-
-              <li key={project._id}>
-                {' '}
-                <Card>
-                  <Card.Header>
-                    Name:
-                    {project.name}
-                  </Card.Header>
-                  <Card.Body>
-                    Description:
-                    {' '}
-                    {project.description}
-                  </Card.Body>
-                  <Card.Body>
-                    Creator:
-                    {' '}
-                    {project.creator}
-                  </Card.Body>
-                  <Card.Body>
-                    Categories:
-                    {' '}
-                    {project.categories.join()}
-                  </Card.Body>
-                </Card>
-              </li>
-            ))}
-          </ul>
-        </section>
+            <li key={project._id}>
+              <Card>
+                <Card.Header className="project-header">{project.name}</Card.Header>
+                <Card.Body className="d-flex flex-column flex-md-row align-items-center">
+                  <Card.Img variant="left" src={project.creator.gitPicture} className="creator-picture mb-3 mb-md-0" />
+                  <div className="d-flex flex-column">
+                    <Tags project={project} />
+                    <Card.Text>
+                      {
+                    project.description.length > 310
+                      ? `${project.description.slice(0, 310)}...`
+                      : project.description
+                  }
+                    </Card.Text>
+                    <div className="price-separator">
+                      <Card.Text className="project-price">{`${project.price}€`}</Card.Text>
+                      <Card.Text className="collaborators">{`Actual collaborators: ${project.participants.length}`}</Card.Text>
+                    </div>
+                  </div>
+                </Card.Body>
+              </Card>
+            </li>
+          ))}
+        </ul>
       </main>
     </>
   );
 }
+
+ProjectListItem.propTypes = {
+  projects: PropTypes.arrayOf(PropTypes.object),
+  dispatch: PropTypes.func.isRequired,
+};
+
+ProjectListItem.defaultProps = {
+  projects: [],
+};
 
 function mapStateToProps(state) {
   return {
