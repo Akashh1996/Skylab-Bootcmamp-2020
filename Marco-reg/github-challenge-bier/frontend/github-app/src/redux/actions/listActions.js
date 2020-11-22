@@ -1,6 +1,7 @@
 import actionTypes from './actionTypes';
 import axios from 'axios';
 
+
 const URL = 'http://localhost:3020';
 
 function requestListSuccess(list) {
@@ -10,10 +11,22 @@ function requestListSuccess(list) {
     }
 }
 
+function requestDeleteSucces(listItem){
+    return{
+        type:actionTypes.DELETE_PROJECT,listItem
+    }
+}
+
 function requestListError(error) {
     return{
         type: actionTypes.LOAD_LIST_ERROR,
         error
+    }
+}
+function requestCreateSuccess(list){
+    return {
+        type:actionTypes.CREATE_PROJECT,
+        list
     }
 }
 
@@ -21,8 +34,9 @@ export function requestList() {
     return async (dispatch) => {
         const list = await axios.get(URL);
         try {
-            debugger;
+            
             dispatch(requestListSuccess(list.data))
+            console.log('getting list data')
             
         } catch (error) {
             dispatch(requestListError(error))
@@ -40,20 +54,24 @@ export function createProjectError(error){
     }
 }
 
-export function createProject(info){
+export function createProject(list){
     return async (dispatch)=>{
         try {
-            await axios.put(URL, info);
+            await axios.put(URL, list);
+            dispatch(requestCreateSuccess(list));
+
         } catch (error) {
             dispatch(createProjectError(error));
             
         }
     }
 }
-export function deleteProject(list){
+export function deleteProject(listItem){
+    
     return async (dispatch)=>{
         try {
-            await axios.delete(URL,list)
+            await axios.delete(URL,listItem);
+            dispatch(requestDeleteSucces(listItem));
         } catch (error) {
             dispatch(deleteProjectError(error))
             

@@ -31,6 +31,7 @@ function Form({list, dispatch}){
 
 
 function mapDispatchToProps(dispatch){
+    debugger;
     return{
         actions:bindActionCreators({},dispatch),
         dispatch

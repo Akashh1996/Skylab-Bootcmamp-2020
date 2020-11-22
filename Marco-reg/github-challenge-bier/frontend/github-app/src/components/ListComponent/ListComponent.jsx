@@ -5,22 +5,19 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import { Link } from 'react-router-dom';
-import {requestList} from '../../redux/actions/listActions';
-import './ListComponent.css'
+import {requestList, deleteProject} from '../../redux/actions/listActions';
+import './ListComponent.css';
+
 
 function List({list, dispatch}) {
     useEffect(()=> {
-        if (!list || list.length !== 0) {
+        
+            console.log('dispatching...')
             dispatch(requestList());
             
-        }
+        
     }, [])
 
-    if(list) {
-        console.log(list)
-    }
-    
-  
 
 
     return(
@@ -38,8 +35,10 @@ function List({list, dispatch}) {
                     </Link>
                     <p className="project_info">{projects.projectInfo}</p>
                     <p className="project_technology">{projects.technology.map((tech)=> <p className="technology">{tech}</p>)}</p>
-                     <img className="project_img" src={projects.photo.length === 0 ? "https://github.githubassets.com/images/modules/open_graph/github-mark.png" : projects.photo} />
-                     {/* <button id="delete-project" type="submit" onclick={()=>dispatch(deleteProject({projectName,projectInfo,photo}))}>DELETE</button> */}
+
+                     <img src={projects.photo.length === 0 ? "https://github.githubassets.com/images/modules/open_graph/github-mark.png" : projects.photo} />
+                     <button id="delete-project" type="submit" onClick={()=>(dispatch(deleteProject({projects})))}>DELETE</button>
+
                     </div>
                   )}
 
@@ -55,13 +54,13 @@ function List({list, dispatch}) {
     )
 }
 function mapStateToProps(state) {
-    debugger
+    
      return {
          list: state.listReducers.list
      };
  }
  function mapDispatchToProps(dispatch) {
-     debugger
+     
      return {
          actions: bindActionCreators({ }, dispatch),
          dispatch
