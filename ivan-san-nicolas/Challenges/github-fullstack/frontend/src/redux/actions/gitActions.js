@@ -42,12 +42,12 @@ export function loadProjects() {
 }
 
 export function loadProject(projectId) {
+  debugger;
   return async (dispatch) => {
     const endpoint = 'http://localhost:1240/project';
     try {
-      const project = await axios.get(endpoint, {
-        projectId,
-      });
+      const project = await axios.get(endpoint, { projectId });
+      debugger;
       dispatch(loadProjectSuccess(project.data));
     } catch (error) {
       dispatch(loadError(error));
