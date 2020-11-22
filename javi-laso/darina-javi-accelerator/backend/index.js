@@ -9,7 +9,6 @@ const projectSchema = require('./src/models/projectSchema');
 const projectRouter = require('./src/routers/projectRouter')(projectSchema);
 const userSchema = require('./src/models/userSchema');
 const userRouter = require('./src/routers/userRouter')(userSchema);
-const githubRouter = require('./src/routers/githubRouter')();
 const oauthRouter = require('./src/routers/oauthRouter')(userSchema);
 
 const app = express();
@@ -26,7 +25,6 @@ app.use(bodyParser.json());
 
 app.use('/projects', projectRouter);
 app.use('/users', userRouter);
-app.use('/github', githubRouter);
 app.use('/oauth-callback', oauthRouter);
 
 app.listen(port, () => {

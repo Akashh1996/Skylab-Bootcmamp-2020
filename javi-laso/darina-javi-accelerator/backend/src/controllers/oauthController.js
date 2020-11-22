@@ -24,13 +24,9 @@ function oauthController(userSchema) {
         returnNewDocument: true,
       });
 
-      if (user) {
-        res.send(user);
-      } else {
-        res.send('error');
-      }
+      return res.send(user);
     } catch (error) {
-      res.send(error);
+      return res.send(error);
     }
   }
 
@@ -41,10 +37,10 @@ function oauthController(userSchema) {
       code,
     };
     const opts = { headers: { accept: 'application/json' } };
-    const tokenResponse = await axios.post('https://github.com/login/oauth/access_token', body, opts);
     let response;
     try {
-      response = await tokenResponse.data.access_token;
+      const tokenResponse = await axios.post('https://github.com/login/oauth/access_token', body, opts);
+      response = tokenResponse.data.access_token;
     } catch (error) {
       response = error;
     }
