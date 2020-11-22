@@ -1,6 +1,6 @@
-import { combineReducer } from 'redux';
+import { combineReducers } from 'redux';
 import gitReducer from './gitReducer';
 
-const rootReducer = combineReducer({ gitReducer });
+const rootReducer = combineReducers({ gitReducer });
 
 export default rootReducer;

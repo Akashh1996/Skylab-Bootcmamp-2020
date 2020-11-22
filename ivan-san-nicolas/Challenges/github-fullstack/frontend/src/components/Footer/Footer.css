@@ -1,0 +1,30 @@
+.landing__footer {
+    background-color: #2B3137;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-description, .developers-cite {
+    color: white;
+    text-align: center;
+    margin: 0 20px 10px
+}
+
+.project-description {
+    line-height: 25px;
+}
+.developers-cite {
+    margin-top: 20px;
+}
+
+.developers-cite a {
+    color: white;
+}
+
+.developers-cite > .fa-github {
+    font-size: 20px;
+    margin-left: 10px;
+}
