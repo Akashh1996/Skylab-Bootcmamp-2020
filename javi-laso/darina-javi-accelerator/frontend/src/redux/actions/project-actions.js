@@ -4,14 +4,14 @@ import actionTypes from './actionTypes';
 
 const serverProjectsUrl = 'http://localhost:2130/projects';
 
-function requestProjectsSuccess(projects) {
+export function requestProjectsSuccess(projects) {
   return {
     type: actionTypes.LOAD_PROJECTS,
     projects,
   };
 }
 
-function requestProjectsError(projectsError) {
+export function requestProjectsError(projectsError) {
   return {
     type: actionTypes.LOAD_PROJECTS_ERROR,
     projectsError,
