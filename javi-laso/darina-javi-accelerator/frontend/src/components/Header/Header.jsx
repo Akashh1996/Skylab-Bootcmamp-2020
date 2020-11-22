@@ -38,8 +38,8 @@ function Header({ dispatch, user }) {
 
         </Button>
         {' '}
-        {!user && <a href={`${constants.githubLoginUrl}?client_id=${constants.clientId}&redirect_uri=${window.location.origin}${window.location.pathname}&scope=repo`} className="btn btn-dark">Github Login</a>}
-        {user && <Button variant="dark" onClick={() => { dispatch(logOutUser()); }}>Logout</Button>}
+        {!user && <a href={`${constants.githubLoginUrl}?client_id=${constants.clientId}&redirect_uri=${window.location.origin}${window.location.pathname}&scope=repo`} className="btn btn-dark login-btn">Github Login</a>}
+        {user && <Button variant="dark" onClick={() => { dispatch(logOutUser()); }} className="logout-btn">Logout</Button>}
       </header>
     </>
   );
