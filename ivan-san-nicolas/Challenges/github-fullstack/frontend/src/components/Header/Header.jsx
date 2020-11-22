@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Header.css';
+import UserLogin from './UserLogin/UserLogin';
 
 function Header() {
   const [user, setUser] = useState(false);
@@ -17,18 +18,7 @@ function Header() {
         <span className="database"> database</span>
       </div>
 
-      {!user ? (
-        <div className="landing__header--user-logged">
-          <button type="button" className="login-button" onClick={() => setUser(!user)}>LOG IN</button>
-        </div>
-      ) : (
-        <div className="landing__header--user-nologged">
-          <button type="button" className="logout-button" onClick={() => setUser(!user)}>LOG OUT</button>
-          <p>{user.name}</p>
-          <i className="fa fa-user" />
-          {/* <img src={user.profilePic} alt="" /> */}
-        </div>
-      )}
+      <UserLogin props={{ user, setUser }} />
     </div>
   );
 }
