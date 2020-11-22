@@ -110,7 +110,6 @@ Landing.defaultProps = {
   projectList: {},
 };
 function mapStateToProps({ gitReducer }) {
-  debugger;
   return {
     projectList: gitReducer.projectArray,
   };
