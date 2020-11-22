@@ -6,6 +6,9 @@ export default function gitReducer(state = {}, action) {
     case actionTypes.LOAD_PROJECTS:
       newState = { ...state, projectArray: action.projectList };
       break;
+    case actionTypes.LOAD_PROJECT:
+      newState = { ...state, projectItem: action.projectItem };
+      break;
     case actionTypes.LOAD_ERROR:
       newState = { ...state, error: action.error };
       break;
