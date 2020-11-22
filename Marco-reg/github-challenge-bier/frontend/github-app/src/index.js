@@ -5,8 +5,9 @@ import {Provider} from 'react-redux';
 import configureStore from './redux/configureStore';
 import ListComponent from './components/ListComponent/ListComponent'
 import Header from './components/Header/Header';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Form from './components/Form/Form';
+import DetailComponent from './components/DetailComponent/DetailComponent';
 
 const store = configureStore();
 
@@ -14,8 +15,11 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <Header/>
-        <ListComponent />
+          <Header/>
+        <Switch>
+            <Route path = "/" exact component = {ListComponent} ></Route>
+            <Route path = "/detail/:id" exact component = {DetailComponent} ></Route>
+        </Switch>
         <Form/>
       </BrowserRouter>
     </Provider>

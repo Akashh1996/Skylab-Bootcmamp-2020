@@ -63,6 +63,42 @@ export function deleteProject(list){
 
 function deleteProjectError(error){
     return {
-        type:actionTypes.DELETE_PROJECT_ERROR,error
+        type:actionTypes.DELETE_PROJECT_ERROR,
+        error
+    }
+}
+
+function requestProjectDetailSuccess(projectDetail) {
+    return {
+        type: actionTypes.LOAD_PROJECT_DETAIL,
+        projectDetail
+    }
+}
+
+function requestProjectDetailError(error) {
+    return {
+        type: actionTypes.LOAD_PROJECT_DETAIL_ERROR,
+        error
+    }
+}
+
+
+
+export function requestProjectDetail(id) {
+    debugger;
+    return async (dispatch) => {
+            const endpoint = `http://localhost:3020/detail/${id}`;
+        
+        try {
+            const project = await axios.get(endpoint, {
+                params: {
+                    projectId: id
+                }
+            })
+            dispatch(requestProjectDetailSuccess(project.data))
+        } catch (error) {
+            dispatch(requestProjectDetailError(error))
+   
+        }
     }
 }

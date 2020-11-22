@@ -10,6 +10,8 @@ export default function listReducer(state = {}, action) {
             return {...state, error: action.error};
         case actionTypes.CREATE_PROJECT:
             return [...state, action.newProject];
+        case actionTypes.LOAD_PROJECT_DETAIL:
+            return {...state, projectDetail: action.projectDetail}
     
         default:
             return state;
