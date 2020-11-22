@@ -44,13 +44,18 @@ function Detail({ project }) {
     </>
   );
 }
+
 Detail.propTypes = {
   project: PropTypes.shape({
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
     participants: PropTypes.arrayOf(PropTypes.object),
-  }).isRequired,
+  }),
+};
+
+Detail.defaultProps = {
+  project: null,
 };
 
 function mapStateToProps(state) {
