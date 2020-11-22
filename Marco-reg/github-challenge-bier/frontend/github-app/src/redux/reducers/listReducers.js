@@ -9,7 +9,12 @@ export default function listReducer(state = {}, action) {
         case actionTypes.LOAD_LIST_ERROR:
             return {...state, error: action.error};
         case actionTypes.CREATE_PROJECT:
-            return [...state, action.newProject];
+            return {...state, info: action.newProject};
+        case actionTypes.DELETE_PROJECT:
+            debugger;
+            const newList=state.list.filter(item=>item._id !== action.listItem.projects._id)
+            debugger;
+            return{...state, list:newList}
     
         default:
             return state;
