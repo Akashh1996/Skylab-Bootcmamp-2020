@@ -13,6 +13,10 @@ function Header({ dispatch }) {
         <Link to="/newProjectForm" style={{ textDecoration: 'none' }}>
           <div className="create-project">Create Project</div>
         </Link>
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <div className="home">Home</div>
+        </Link>
+
       </header>
     </>
   );

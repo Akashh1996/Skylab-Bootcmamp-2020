@@ -12,26 +12,38 @@ function ProjectListItem({ projects, dispatch }) {
   return (
     <>
       <main className="project-list-container">
+        <section className="project-list__section">
 
-        <ul>
-          {projects && projects.length > 0 && projects.map((project) => (
+          <ul>
+            {projects && projects.length > 0 && projects.map((project) => (
 
-            <li key={project._id}>
-              {' '}
-              <Card>
-                <Card.Header>
-                  Name:
-                  {project.name}
-                </Card.Header>
-                <Card.Body>
-                  Description:
-                  {' '}
-                  {project.description}
-                </Card.Body>
-              </Card>
-            </li>
-          ))}
-        </ul>
+              <li key={project._id}>
+                {' '}
+                <Card>
+                  <Card.Header>
+                    Name:
+                    {project.name}
+                  </Card.Header>
+                  <Card.Body>
+                    Description:
+                    {' '}
+                    {project.description}
+                  </Card.Body>
+                  <Card.Body>
+                    Creator:
+                    {' '}
+                    {project.creator}
+                  </Card.Body>
+                  <Card.Body>
+                    Categories:
+                    {' '}
+                    {project.categories.join()}
+                  </Card.Body>
+                </Card>
+              </li>
+            ))}
+          </ul>
+        </section>
       </main>
     </>
   );

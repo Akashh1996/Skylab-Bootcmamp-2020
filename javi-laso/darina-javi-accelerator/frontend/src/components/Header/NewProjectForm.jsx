@@ -1,11 +1,15 @@
+/* eslint-disable no-debugger */
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import './NewProjectForm.css';
-import { createProject } from '../../redux/actions/project-actions';
+import { createProject, requestProjects } from '../../redux/actions/project-actions';
 
 function NewProjectForm({ dispatch }) {
+  debugger;
   const [name, setName] = useState('');
   const [categories, setCategories] = useState('');
   const [urlGit, setUrlGit] = useState('');
@@ -17,6 +21,7 @@ function NewProjectForm({ dispatch }) {
     <>
       <main>
         <section className="newProject__section">
+          <h1>Create new project</h1>
           <Form>
             <Form.Group controlId="exampleForm.ControlInput1">
               <Form.Label />
@@ -39,17 +44,22 @@ function NewProjectForm({ dispatch }) {
               <Form.Control as="textarea" rows={3} onChange={(event) => setDescription(event.target.value)} />
             </Form.Group>
             <Button
-              variant="primary"
+              variant="secondary"
               type="submit"
-              onClick={() => dispatch(createProject(
-                {
-                  name,
-                  categories,
-                  urlGit,
-                  price,
-                  description,
-                },
-              ))}
+              onClick={() => {
+                dispatch(createProject(
+                  {
+                    name,
+                    categories,
+                    urlGit,
+                    price,
+                    description,
+                  },
+                ));
+                dispatch(requestProjects());
+              }}
+              as={Link}
+              to={{ pathname: '/' }}
             >
               Create
             </Button>
@@ -60,4 +70,10 @@ function NewProjectForm({ dispatch }) {
   );
 }
 
-export default NewProjectForm;
+function mapStateToProps(state) {
+  return {
+    projects: state.projectsReducer.projects,
+  };
+}
+
+export default connect(mapStateToProps)(NewProjectForm);

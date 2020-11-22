@@ -1,3 +1,4 @@
+/* eslint-disable no-debugger */
 /* eslint-disable no-console */
 import axios from 'axios';
 import actionTypes from './actionTypes';
@@ -51,28 +52,15 @@ export function githubLogin() {
   };
 }
 
-function createProjectSuccess(newProject) {
-  return {
-    type: actionTypes.CREATE_PROJECT,
-    newProject,
-  };
-}
-
-function createProjectError(newProjectError) {
-  return {
-    type: actionTypes.CREATE_PROJECT_ERROR,
-    newProjectError,
-  };
-}
-
 export function createProject(newProject) {
+  debugger;
   return async (dispatch) => {
     try {
-      const newProjectAdded = await axios.post(serverProjectsUrl, newProject);
-      dispatch(createProjectSuccess(newProjectAdded.data));
+      debugger;
+      await axios.post(serverProjectsUrl, newProject);
       dispatch(requestProjects());
     } catch (error) {
-      dispatch(createProjectError(error));
+      console.log(error);
     }
   };
 }

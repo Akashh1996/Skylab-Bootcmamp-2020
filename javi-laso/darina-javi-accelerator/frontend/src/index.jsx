@@ -15,12 +15,11 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-
         <Header />
         <Switch>
+          <Route path="/" exact component={MainList} />
           <Route path="/newProjectForm" component={NewProjectForm} />
         </Switch>
-        <MainList />
 
       </BrowserRouter>
     </Provider>

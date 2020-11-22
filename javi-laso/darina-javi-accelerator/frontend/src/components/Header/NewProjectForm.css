@@ -7,3 +7,7 @@
 .text-area {
 	resize: none;
 }
+h1 {
+	text-align: center;
+	color: gray;
+}
