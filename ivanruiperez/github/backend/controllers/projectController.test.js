@@ -32,7 +32,7 @@ describe('ProjectController', () => {
       projectController.putMethod({ project: null }, res);
       expect(res.send).toHaveBeenCalled();
     });
-    test('find no throw error', () => {
+    test('create no throw error', () => {
       const res = { json: jest.fn() };
       Project.create = jest.fn().mockImplementationOnce((query, callback) => {
         callback(false, {});
