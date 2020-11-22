@@ -62,7 +62,7 @@ function Landing({ projectList, dispatch }) {
         <div className="landing__project">
           <div className="landing__project__top">
             <div className="landing__project__top__details">
-              <Link to={`/detail/${project._id}`}>
+              <Link to={`/detail/${project._id}`} className="project__anchor">
                 <p className="landing__project__top__detail project__name">{project.name}</p>
               </Link>
               <p className="landing__project__top__detail project__description">{project.description}</p>

@@ -31,6 +31,13 @@
     
 }
 
+.landing__anchor {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 @media (max-width: 666px) {

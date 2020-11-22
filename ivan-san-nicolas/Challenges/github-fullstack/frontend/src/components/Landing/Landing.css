@@ -42,6 +42,11 @@
   margin: 10px 5px;
 }
 
+.project__anchor {
+  text-decoration: none;
+  color: black;
+}
+
 .project__name {
   font-size: 20px;
   font-weight: 800;
@@ -87,6 +92,7 @@
   background-color: rgb(136, 202, 38);
   border: 1px solid lightgrey;
   border-radius: 10px;
+  outline: none;
 }
 
 .subscribe__button:hover {

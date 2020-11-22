@@ -1,36 +1,37 @@
-.landing {
+.detail {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: auto;
-  margin-top: 100px;
+  margin: 100px 0px 40px 0px;
 }
 
-.landing__project {
+.detail__project {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: space-between;
-  width: 75%;
+  width: 95%;
   padding: 20px;
   margin: 5px auto;
   margin-top: 2px;
 }
 
-.landing__project__top {
+.detail__project__top {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 95%;
+  width: 70%;
 }
 
-.landing__project__top__details {
+.detail__project__top__details {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   width: 80%;
+  margin-bottom: 50px;
   background-color: white;
   padding: 20px;
   border-radius: 5px;
@@ -38,7 +39,7 @@
 }
 
 
-.landing__project__top__detail {
+.detail__project__top__detail {
   margin: 10px 5px;
 }
 
@@ -46,10 +47,18 @@
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 15px;
+  border: none;
+  outline: none;
 }
 
 .project__description {
-  font-weight: 450; 
+  padding: 30px 10px;
+  outline: none;
+  border: none;
+  resize: none;
+  font-family: 'Arial', Courier, monospace;
+  line-height: 30px;
+
 }
 
 .project__url {
@@ -87,6 +96,7 @@
   background-color: rgb(136, 202, 38);
   border: 1px solid lightgrey;
   border-radius: 10px;
+  outline: none;
 }
 
 .subscribe__button:hover {
@@ -94,29 +104,29 @@ cursor: pointer;
 background-color: rgb(126, 187, 35);
 }
 
-.landing__project__bottom {
+.detail__project__bottom {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 76%;
-  margin-top: 12px;
+  width: 15%;
   padding: 20px 20px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 2px 3px 6px rgb(203, 203, 203);
-
-
 }
 
-.landing__project__bottom__participants {
+.detail__project__bottom__participants {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
 }
 
-.landing__project__bottom__participants__block {
+.detail__project__bottom__participants__block {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
@@ -125,17 +135,17 @@ background-color: rgb(126, 187, 35);
   overflow-x: scroll;
 }
 
-.landing__project__bottom__participant {
+.detail__project__bottom__participant {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: auto;
-  margin-left: 30px;
+  margin: 15px 0;
   text-decoration: none;
   transition: transform 0.2s;
 }
 
-.landing__project__bottom__participant:hover {
+.detail__project__bottom__participant:hover {
   transform: scale(1.08);
 }
 
@@ -152,7 +162,7 @@ background-color: rgb(126, 187, 35);
   border-radius: 50%;
 }
 
-.landing__project__bottom__participants__empty {
+.detail__project__bottom__participants__empty {
   display: flex;
   justify-content: flex-start;
   align-items: center;
