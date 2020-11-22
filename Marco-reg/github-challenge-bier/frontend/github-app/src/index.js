@@ -6,6 +6,8 @@ import configureStore from './redux/configureStore';
 import ListComponent from './components/ListComponent/ListComponent'
 import Header from './components/Header/Header';
 import { BrowserRouter } from 'react-router-dom';
+import Form from './components/Form/Form';
+
 const store = configureStore();
 
 ReactDOM.render(
@@ -14,6 +16,7 @@ ReactDOM.render(
       <BrowserRouter>
         <Header/>
         <ListComponent />
+        <Form/>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,

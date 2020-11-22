@@ -40,7 +40,7 @@ export function createProjectError(error){
     }
 }
 
-export function createUser(info){
+export function createProject(info){
     return async (dispatch)=>{
         try {
             await axios.put(URL, info);
@@ -48,5 +48,21 @@ export function createUser(info){
             dispatch(createProjectError(error));
             
         }
+    }
+}
+export function deleteProject(list){
+    return async (dispatch)=>{
+        try {
+            await axios.delete(URL,list)
+        } catch (error) {
+            dispatch(deleteProjectError(error))
+            
+        }
+    }
+}
+
+function deleteProjectError(error){
+    return {
+        type:actionTypes.DELETE_PROJECT_ERROR,error
     }
 }
