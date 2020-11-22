@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 import { githubLogin } from '../../redux/actions/project-actions';
 import './Header.css';
 
@@ -13,10 +14,23 @@ function Header({ dispatch }) {
           <div className="logo-name">SkyLab Accelerator</div>
         </Link>
         <div className="flex-spacer" />
-        <Link to="/newProjectForm" style={{ textDecoration: 'none' }}>
-          <div className="create-project">Create Project</div>
-        </Link>
-        <button type="button" onClick={() => { dispatch(githubLogin()); }}>Github Login</button>
+        <Button
+          variant="light"
+          as={Link}
+          to="/newProjectForm"
+        >
+          Create Project
+
+        </Button>
+        {' '}
+        <Button
+          variant="dark"
+          onClick={() => { dispatch(githubLogin()); }}
+        >
+          Github Login
+
+        </Button>
+        {' '}
 
       </header>
     </>
