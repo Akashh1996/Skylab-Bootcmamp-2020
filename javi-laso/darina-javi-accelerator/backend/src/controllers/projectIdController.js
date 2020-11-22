@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 function projectIdController(projectSchema) {
   function getProjectDetailMethod(req, res) {
     const query = { _id: req.params.projectId };
