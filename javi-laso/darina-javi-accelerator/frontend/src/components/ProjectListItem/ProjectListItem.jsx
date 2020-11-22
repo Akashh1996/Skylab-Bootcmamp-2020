@@ -18,7 +18,7 @@ function ProjectListItem({ projects, dispatch }) {
         <ul className="project-list">
           {projects && projects.length > 0 && projects.map((project) => (
 
-            <li key={performance.now() * Math.random()} className="project-link">
+            <li key={performance.now() * Math.random()} className="project-link mb-4">
               <Card as={Link} to={`/projects/${project._id}`}>
                 <Card.Header className="project-header">{project.name}</Card.Header>
                 <Card.Body className="d-flex flex-column flex-md-row align-items-center">
