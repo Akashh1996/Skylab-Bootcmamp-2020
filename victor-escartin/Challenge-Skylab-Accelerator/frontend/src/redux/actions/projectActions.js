@@ -25,7 +25,8 @@ export const listProjects = () => async (dispatch) => {
     type: PROJECT_LIST_REQUEST,
   });
   try {
-    const { data } = await Axios.get('/project');
+    debugger
+    const { data } = await Axios.get('/projects');
     dispatch({ type: PROJECT_LIST_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: PROJECT_LIST_FAIL, payload: error.message });
@@ -35,7 +36,7 @@ export const listProjects = () => async (dispatch) => {
 export const detailsProject = (projectId) => async (dispatch) => {
   dispatch({ type: PROJECT_DETAILS_REQUEST, payload: projectId });
   try {
-    const { data } = await Axios.get(`/project/${projectId}`);
+    const { data } = await Axios.get(`/projects/${projectId}`);
     dispatch({ type: PROJECT_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
@@ -79,7 +80,7 @@ export const updateProject = (project) => async (dispatch, getState) => {
     userSignin: { userInfo },
   } = getState();
   try {
-    const { data } = await Axios.put(`/project/${project._id}`, project, {
+    const { data } = await Axios.put(`/projects/${project._id}`, project, {
       headers: { Authorization: `Bearer ${userInfo.token}` },
     });
     dispatch({ type: PROJECT_UPDATE_SUCCESS, payload: data });
@@ -97,7 +98,7 @@ export const deleteProject = (projectId) => async (dispatch, getState) => {
     userSignin: { userInfo },
   } = getState();
   try {
-    const { data } = Axios.delete(`/project/${projectId}`, {
+    const { data } = Axios.delete(`/projects/${projectId}`, {
       headers: { Authorization: `Bearer ${userInfo.token}` },
     });
     dispatch({ type: PROJECT_DELETE_SUCCESS });
