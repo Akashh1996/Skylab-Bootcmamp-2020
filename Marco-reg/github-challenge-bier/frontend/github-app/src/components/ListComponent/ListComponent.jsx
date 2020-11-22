@@ -18,6 +18,8 @@ function List({list, dispatch}) {
         
     }, [])
 
+
+
     return(
         <>
 
@@ -28,13 +30,15 @@ function List({list, dispatch}) {
                 <div>
                 {list.map((projects) =>
                     <div className="project_wrapper">
-                        <Link to= {`/detail/${projects.projectName}`}>
+                        <Link to= {`/detail/${projects._id}`}>
                     <h3 className="project_title">{projects.projectName}</h3>
                     </Link>
                     <p className="project_info">{projects.projectInfo}</p>
                     <p className="project_technology">{projects.technology.map((tech)=> <p className="technology">{tech}</p>)}</p>
+
                      <img src={projects.photo.length === 0 ? "https://github.githubassets.com/images/modules/open_graph/github-mark.png" : projects.photo} />
                      <button id="delete-project" type="submit" onClick={()=>(dispatch(deleteProject({projects})))}>DELETE</button>
+
                     </div>
                   )}
 
