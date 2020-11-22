@@ -1,4 +1,3 @@
-/* eslint-disable no-debugger */
 import actionTypes from '../actions/actionTypes';
 
 export default function projectsReducer(state = {}, action) {
@@ -7,7 +6,6 @@ export default function projectsReducer(state = {}, action) {
       const loadProjects = { ...state, projects: action.projects };
       return loadProjects;
     case actionTypes.LOAD_PROJECT:
-      debugger;
       const loadProject = { ...state, project: action.project };
       return loadProject;
     case actionTypes.LOAD_PROJECT_ERROR:

@@ -23,8 +23,11 @@ function ProjectListItem({ projects, dispatch }) {
               <Card>
                 <Card.Header className="project-header">{project.name}</Card.Header>
                 <Card.Body className="d-flex flex-column flex-md-row align-items-center">
-                  {/* <Card.Img variant="left"
-                  src={project.creator.gitPicture} className="creator-picture mb-3 mb-md-0" /> */}
+                  <Card.Img
+                    variant="left"
+                    src={project.creator.gitPicture}
+                    className="creator-picture mb-3 mb-md-0"
+                  />
                   <div className="d-flex flex-column">
                     <Tags project={project} />
                     <Card.Text>
@@ -41,7 +44,7 @@ function ProjectListItem({ projects, dispatch }) {
                     <Button
                       as={Link}
                       to={`/projects/${project._id}`}
-                      onClick={() => requestProjectDetail(project._id)}
+                      onClick={() => dispatch(requestProjectDetail(project._id))}
                       variant="light"
                     >
                       Logged as User

@@ -19,7 +19,7 @@ ReactDOM.render(
         <Header />
         <Switch>
           <Route path="/" exact component={MainList} />
-          <Route path="/:projectId" exact component={Detail} />
+          <Route path="/projects/:projectId" exact component={Detail} />
           <Route path="/newProjectForm" component={NewProjectForm} />
         </Switch>
       </BrowserRouter>
