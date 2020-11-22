@@ -10,43 +10,15 @@ describe('oauthController functions', () => {
   let req;
   let fakeUser;
   let fakeError;
-  let fakeToken;
   beforeEach(() => {
     req = { query: { code: null } };
     res = { send: jest.fn() };
     fakeUser = { name: 'fakeName' };
     fakeError = 'new error';
-    fakeToken = '12345';
   });
 
   afterEach(() => {
     jest.restoreAllMocks();
-  });
-
-  describe('getToken', () => {
-    test('should call axios.post', () => {
-      axios.post = jest.fn();
-
-      oauthController.getToken(null);
-
-      expect(axios.post).toHaveBeenCalled();
-    });
-
-    test('should return the token if there is no error', async () => {
-      axios.post = jest.fn().mockResolvedValue({ data: { access_token: fakeToken } });
-
-      const token = await oauthController.getToken(null);
-
-      expect(token).toBe(fakeToken);
-    });
-
-    test('should return the error if there is an error', async () => {
-      axios.post = jest.fn().mockRejectedValue(fakeError);
-
-      const token = await oauthController.getToken(null);
-
-      expect(token).toBe(fakeError);
-    });
   });
 
   describe('getUser', () => {

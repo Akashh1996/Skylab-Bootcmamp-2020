@@ -3,17 +3,16 @@ import actionTypes from '../actions/actionTypes';
 export default function projectsReducer(state = {}, action) {
   switch (action.type) {
     case actionTypes.LOAD_PROJECTS:
-      const loadProjects = { ...state, projects: action.projects };
-      return loadProjects;
+      return { ...state, projects: action.projects };
+
     case actionTypes.LOAD_PROJECT:
-      const loadProject = { ...state, project: action.project };
-      return loadProject;
+      return { ...state, project: action.project };
     case actionTypes.LOAD_PROJECT_ERROR:
-      const projectError = { ...state, errorProject: action.projectsError };
-      return projectError;
+      return { ...state, errorProject: action.projectsError };
     case actionTypes.LOAD_PROJECTS_ERROR:
-      const projectsError = { ...state, errorProject: action.projectsError };
-      return projectsError;
+      return { ...state, errorProject: action.projectsError };
+    case actionTypes.CREATE_PROJECT:
+      return { ...state, projects: [...state.projects, action.newProject] };
     default:
       return state;
   }

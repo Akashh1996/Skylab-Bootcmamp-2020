@@ -29,11 +29,25 @@ export function requestProjects() {
   };
 }
 
+export function createProjectSuccess(newProject) {
+  return {
+    type: actionTypes.CREATE_PROJECT,
+    newProject,
+  };
+}
+
+export function createProjectError(error) {
+  return {
+    type: actionTypes.CREATE_PROJECT_ERROR,
+    error,
+  };
+}
+
 export function createProject(newProject) {
   return async (dispatch) => {
     try {
-      await axios.post(serverProjectsUrl, newProject);
-      dispatch(requestProjects());
+      const { data } = await axios.post(serverProjectsUrl, newProject);
+      dispatch(createProjectSuccess(data));
     } catch (error) {
       console.log(error);
     }

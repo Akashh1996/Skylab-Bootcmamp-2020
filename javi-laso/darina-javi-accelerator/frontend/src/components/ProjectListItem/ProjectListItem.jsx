@@ -25,7 +25,7 @@ function ProjectListItem({ projects, dispatch }) {
                 <Card.Body className="d-flex flex-column flex-md-row align-items-center">
                   <Card.Img
                     variant="left"
-                    src={project.creator.gitPicture}
+                    src={project.creator ? project.creator.gitPicture : 'https://tacm.com/wp-content/uploads/2018/01/no-image-available.jpeg'}
                     className="creator-picture mb-3 mb-md-0"
                   />
                   <div className="d-flex flex-column">

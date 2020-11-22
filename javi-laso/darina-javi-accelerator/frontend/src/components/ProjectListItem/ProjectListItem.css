@@ -19,6 +19,7 @@
 
 .creator-picture {
     height: 200px;
+    width: 200px;
     object-fit: contain;
     border-radius: 100px;
     margin-right: 40px;
