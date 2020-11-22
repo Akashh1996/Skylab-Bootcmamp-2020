@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import { requestProjects } from '../../redux/actions/project-actions';
+import { Link } from 'react-router-dom';
+import { requestProjects, requestProjectDetail } from '../../redux/actions/project-actions';
 import Tags from '../Tags/Tags';
 
 function ProjectListItem({ projects, dispatch }) {
@@ -37,7 +38,15 @@ function ProjectListItem({ projects, dispatch }) {
                       <Card.Text className="project-price">{`${project.price}€`}</Card.Text>
                       <Card.Text className="collaborators">{`Actual collaborators: ${project.participants.length}`}</Card.Text>
                     </div>
-                    <Button variant="light">Logged as User</Button>
+                    <Button
+                      as={Link}
+                      to={`/projects/${project._id}`}
+                      onClick={() => requestProjectDetail(project._id)}
+                      variant="light"
+                    >
+                      Logged as User
+
+                    </Button>
                   </div>
 
                   {' '}

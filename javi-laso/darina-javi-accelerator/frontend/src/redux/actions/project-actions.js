@@ -64,3 +64,30 @@ export function createProject(newProject) {
     }
   };
 }
+
+function requestProjectDetailSuccess(product) {
+  return {
+    type: actionTypes.LOAD_PROJECT,
+    product,
+  };
+}
+
+function requestProjectDetailError(projectError) {
+  return {
+    type: actionTypes.LOAD_PROJECT_ERROR,
+    projectError,
+  };
+}
+
+export function requestProjectDetail(_id) {
+  debugger;
+  return async (dispatch) => {
+    try {
+      debugger;
+      const project = await axios.get(serverProjectsUrl, { _id });
+      dispatch(requestProjectDetailSuccess(project.data));
+    } catch (error) {
+      dispatch(requestProjectDetailError(error));
+    }
+  };
+}

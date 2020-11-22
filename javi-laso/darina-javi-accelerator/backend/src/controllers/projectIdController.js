@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-function projectController(projectSchema) {
+function projectIdController(projectSchema) {
   function getProjectDetailMethod(req, res) {
     const query = { _id: req.params.projectId };
     const getCallBack = (projectsError, projects) => (
@@ -12,4 +12,4 @@ function projectController(projectSchema) {
   return { getProjectDetailMethod };
 }
 
-module.exports = projectController;
+module.exports = projectIdController;
