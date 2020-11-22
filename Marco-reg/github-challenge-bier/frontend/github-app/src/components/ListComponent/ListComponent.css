@@ -1,15 +1,14 @@
 .project_wrapper{
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 10px;
-    margin: 40px;
+    margin: 40px 0px 40px 40px;
     color: rgb(41, 41, 41);
     box-shadow: 0px 0px 5px 0.5px rgba(0,0,0,0.2);
     max-width: 25%;
     border-radius: 10px;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+
   
     
 }
@@ -51,4 +50,21 @@ body{
 .project_img{
     max-width: 70%;
     border-radius: 10px;
+    margin: 10px;
+}
+
+#delete-project{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 40%;
+    margin: 5px 10px 
 }

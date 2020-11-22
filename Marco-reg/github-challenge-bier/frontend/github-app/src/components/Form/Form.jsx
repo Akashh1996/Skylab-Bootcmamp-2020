@@ -1,8 +1,8 @@
-import React, {useEffect,useState} from 'react';
+import React, {useState} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {requestList,createProject} from '../../redux/actions/listActions';
-
+import {createProject} from '../../redux/actions/listActions';
+import './Form.css'
 
 
 function Form({list, dispatch}){
@@ -13,11 +13,11 @@ function Form({list, dispatch}){
 
     return(
         <>
-        <form>
+        <form className="form_wrapper">
             <input id="project-name"type="text" value={projectName} onChange={(event)=>{setProjectName(event.target.value)}}placeholder="project name"/>
             <input id="project-info"type="text" value={projectInfo} onChange={(event)=>{setProjectInfo(event.target.value)}}placeholder="project info"/>
             <input id="project-photo"type="text" value={photo} onChange={(event)=>{setPhoto(event.target.value)}}placeholder="photo url"/>
-            <button type="submit" id="submit-form" onClick={()=>{dispatch(createProject({projectName,projectInfo,photo}))}}>Submit</button>
+            <button type="submit" id="submit-form" onClick={()=>{dispatch(createProject({projectName,projectInfo,photo}))}}>SUBMIT</button>
         </form>
 
         </>
