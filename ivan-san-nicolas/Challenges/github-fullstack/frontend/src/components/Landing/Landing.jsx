@@ -41,7 +41,7 @@ function Landing({ projectList, dispatch }) {
       subscribeButton.style.backgroundColor = 'red';
       subscribeButton.textContent = 'Unsubscribe';
     } else {
-      subscribeButton.style.backgroundColor = 'green';
+      subscribeButton.style.backgroundColor = 'rgb(136, 202, 38)';
       subscribeButton.textContent = 'Subscribe';
     }
 
