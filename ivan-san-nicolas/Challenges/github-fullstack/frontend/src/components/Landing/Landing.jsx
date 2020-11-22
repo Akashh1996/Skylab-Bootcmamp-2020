@@ -63,16 +63,18 @@ function Landing({ projectList, dispatch }) {
           <div className="landing__project__bottom">
             <div className="landing__project__bottom__participants">
               <h4>Participants:</h4>
-              {project.participants.length ? (project.participants.map((participant) => (
-                <a href={participant.githubUrl} className="landing__project__bottom__participant">
-                  <img src={participant.profilePic} alt={`${participant.name}-profile-pic`} className="landing__project__bottom__detail participant__profile-pic" />
-                  <p className="landing__project__bottom__detail participant__name">{participant.name}</p>
-                </a>
-              ))) : (
-                <div className="landing__project__bottom__participants__empty">
-                  <h3>There are no participants yet...</h3>
-                </div>
-              )}
+              <div className="landing__project__bottom__participants__block">
+                {project.participants.length ? (project.participants.map((participant) => (
+                  <a href={participant.githubUrl} className="landing__project__bottom__participant">
+                    <img src={participant.profilePic} alt={`${participant.name}-profile-pic`} className="landing__project__bottom__detail participant__profile-pic" />
+                    <p className="landing__project__bottom__detail participant__name">{participant.name}</p>
+                  </a>
+                ))) : (
+                  <div className="landing__project__bottom__participants__empty">
+                    <h3>There are no participants yet...</h3>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
