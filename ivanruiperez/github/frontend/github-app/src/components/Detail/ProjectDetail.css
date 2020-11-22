@@ -1,0 +1,16 @@
+h1{
+    margin: 20px;
+}
+.userBox{
+    display: flex;
+}
+.backButton{
+    margin: 20px;
+}
+.description{
+    margin: 20px;
+    margin-top: 10px
+}
+.participants{
+    margin-left: 50px;
+}
