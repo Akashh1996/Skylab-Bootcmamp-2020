@@ -3,6 +3,7 @@ import './ProjectListItem.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 import { requestProjects } from '../../redux/actions/project-actions';
 import Tags from '../Tags/Tags';
 
@@ -36,7 +37,10 @@ function ProjectListItem({ projects, dispatch }) {
                       <Card.Text className="project-price">{`${project.price}€`}</Card.Text>
                       <Card.Text className="collaborators">{`Actual collaborators: ${project.participants.length}`}</Card.Text>
                     </div>
+                    <Button variant="light">Logged as User</Button>
                   </div>
+
+                  {' '}
                 </Card.Body>
               </Card>
             </li>
