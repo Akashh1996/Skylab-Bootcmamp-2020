@@ -10,8 +10,9 @@ function projectController(projectSchema) {
   }
 
   function postProjectMethod(req, res) {
-    const project = req.body;
+    const project = { ...req.body };
     project.categories = project.categories.split(',').map((category) => category.trim());
+
     const postCallback = (postError, newProject) => (
       postError ? res.send(postError) : res.send(newProject)
     );

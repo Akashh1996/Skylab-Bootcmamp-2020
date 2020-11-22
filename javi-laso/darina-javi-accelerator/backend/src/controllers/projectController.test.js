@@ -1,62 +1,62 @@
-const projectController = require('./projectController');
+const projectSchema = require('../models/projectSchema');
+const projectController = require('./projectController')(projectSchema);
+
+jest.mock('../models/projectSchema');
 
 describe('projectController', () => {
+  let res;
+  beforeEach(() => {
+    res = { send: jest.fn() };
+  });
+
   describe('getMethod', () => {
     test('shoould call send', () => {
-      const project = {
-        find: jest.fn().mockReturnValueOnce({
-          populate: jest.fn().mockReturnValueOnce({
-            exec: jest.fn().mockImplementationOnce((callback) => callback()),
-          }),
+      projectSchema.find = jest.fn().mockReturnValueOnce({
+        populate: jest.fn().mockReturnValueOnce({
+          exec: jest.fn().mockImplementationOnce((callback) => callback()),
         }),
-      };
-      const res = {
-        send: jest.fn(),
-      };
-      projectController(project).getProjectsMethod(null, res);
+      });
+      projectController.getProjectsMethod(null, res);
       expect(res.send).toHaveBeenCalled();
     });
 
     test('shoould call res.send with error', () => {
-      const project = {
-        find: jest.fn().mockReturnValueOnce({
-          populate: jest.fn().mockReturnValueOnce({
-            exec: jest.fn().mockImplementationOnce((callback) => callback(true)),
-          }),
+      projectSchema.find = jest.fn().mockReturnValueOnce({
+        populate: jest.fn().mockReturnValueOnce({
+          exec: jest.fn().mockImplementationOnce((callback) => callback(true)),
         }),
-      };
-      const res = {
-        send: jest.fn(),
-      };
-      projectController(project).getProjectsMethod(null, res);
+      });
+
+      projectController.getProjectsMethod(null, res);
       expect(res.send).toHaveBeenCalled();
     });
   });
 
   describe('postMethod', () => {
+    let req;
+    beforeEach(() => {
+      req = { body: { categories: 'a,b,c' } };
+    });
+
+    afterEach(() => {
+      jest.restoreAllMocks();
+    });
+
     test('shoould call send', () => {
-      const project = {
-        create: jest.fn().mockImplementationOnce((query, callback) => callback()),
-      };
-      const res = {
-        send: jest.fn(),
-      };
+      projectSchema.create = jest.fn().mockImplementationOnce((query, callback) => (
+        callback()
+      ));
 
-      const req = {};
-
-      projectController(project).postProjectMethod(req, res);
+      projectController.postProjectMethod(req, res);
       expect(res.send).toHaveBeenCalled();
     });
 
     test('shoould call send with error', () => {
-      const project = {
-        create: jest.fn().mockImplementationOnce((query, callback) => callback(true)),
-      };
-      const res = {
-        send: jest.fn(),
-      };
-      const req = {};
-      projectController(project).postProjectMethod(req, res);
+      projectSchema.create = jest.fn().mockImplementationOnce((query, callback) => (
+        callback(true)
+      ));
+
+      projectController.postProjectMethod(req, res);
       expect(res.send).toHaveBeenCalled();
     });
   });
