@@ -5,8 +5,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { loadProjects, updateProject } from '../../redux/actions/gitActions';
-
-import('./Landing.css');
+import './Landing.css';
 
 function Landing({ projectList, dispatch }) {
   if (!projectList.length) {
@@ -56,7 +55,7 @@ function Landing({ projectList, dispatch }) {
   }
 
   return (
-    <section className="landing">
+    <section className="landing" id="landing">
       {projectList.length ? projectList.map((project) => (
         <div className="landing__project">
           <div className="landing__project__top">
