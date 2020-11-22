@@ -5,8 +5,9 @@ export default function usersReducer(state = {}, action) {
     case actionTypes.LOAD_USER:
       return { ...state, user: action.user, isLogged: true };
     case actionTypes.LOAD_USER_ERROR:
-      const loadUserError = { ...state, errorUser: action.userError };
-      return loadUserError;
+      return { ...state, errorUser: action.userError };
+    case actionTypes.USER_LOGOUT:
+      return { ...state, user: null, isLogged: false };
     default:
       return state;
   }

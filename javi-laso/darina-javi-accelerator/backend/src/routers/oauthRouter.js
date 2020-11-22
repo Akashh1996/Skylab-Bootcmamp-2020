@@ -9,7 +9,6 @@ function oauthRouter(userSchema) {
 
   router.route('/')
     .get(async (req, res) => {
-      console.log(req.query);
       const body = {
         client_id: clientId,
         client_secret: clientSecret,
@@ -17,26 +16,30 @@ function oauthRouter(userSchema) {
       };
       const opts = { headers: { accept: 'application/json' } };
       const response = await axios.post('https://github.com/login/oauth/access_token', body, opts);
-
       try {
-        const _token = await response.data.access_token;
-
+        const token = await response.data.access_token;
         const headers = {
-          Authorization: `token ${_token}`,
+          Authorization: `token ${token}`,
         };
 
         const { data } = await axios.get(apiGithubUserUrl, { headers });
 
-        userSchema.findOneAndUpdate({ gitUser: data.login }, {
+        const user = await userSchema.findOneAndUpdate({ gitUser: data.login }, {
           name: data.name,
           gitUser: data.login,
           gitPicture: data.avatar_url,
-          token: _token,
+          token,
         },
-        { upsert: true },
-        (error, user) => (
-          error ? res.send(error) : res.send(user)
-        ));
+        {
+          upsert: true,
+          returnNewDocument: true,
+        });
+
+        if (user) {
+          res.send(user);
+        } else {
+          res.send('error');
+        }
       } catch (error) {
         res.send(error);
       }
