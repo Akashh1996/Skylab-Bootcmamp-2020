@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
-import Switch from 'react-bootstrap/esm/Switch';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import MainList from './components/MainList/MainList';
 import Header from './components/Header/Header';
 import configureStore from './redux/configureStore';
+import NewProjectForm from './components/Header/NewProjectForm';
 
 const store = configureStore();
 
@@ -15,10 +15,13 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
+
+        <Header />
         <Switch>
-          <Header />
-          <MainList />
+          <Route path="/newProjectForm" component={NewProjectForm} />
         </Switch>
+        <MainList />
+
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,

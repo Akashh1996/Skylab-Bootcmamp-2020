@@ -9,9 +9,8 @@ function Header({ dispatch }) {
   return (
     <>
       <header className="jumbotron">
-        <h1>Header</h1>
         <button type="button" onClick={() => { dispatch(githubLogin()); }}>Github Login</button>
-        <Link to="/formNewProject" style={{ textDecoration: 'none' }}>
+        <Link to="/newProjectForm" style={{ textDecoration: 'none' }}>
           <div className="create-project">Create Project</div>
         </Link>
       </header>

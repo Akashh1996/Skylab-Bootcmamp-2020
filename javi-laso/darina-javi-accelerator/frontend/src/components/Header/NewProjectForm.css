@@ -1,0 +1,9 @@
+.newProject__section {
+	max-width: 400px;
+	margin: auto;
+	min-height: 70vh;
+}
+
+.text-area {
+	resize: none;
+}

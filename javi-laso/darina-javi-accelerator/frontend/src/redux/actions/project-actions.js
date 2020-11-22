@@ -65,7 +65,7 @@ function createProjectError(newProjectError) {
   };
 }
 
-export function createUProject(newProject) {
+export function createProject(newProject) {
   return async (dispatch) => {
     try {
       const newProjectAdded = await axios.post(serverProjectsUrl, newProject);
