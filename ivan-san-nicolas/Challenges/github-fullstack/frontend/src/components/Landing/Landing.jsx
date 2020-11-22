@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable no-debugger */
 import React from 'react';
@@ -8,8 +9,7 @@ import { loadProjects, updateProject } from '../../redux/actions/gitActions';
 import('./Landing.css');
 
 function Landing({ projectList, dispatch }) {
-  debugger;
-  if (projectList.length === 0) {
+  if (!projectList.length) {
     dispatch(loadProjects());
   }
 
@@ -20,13 +20,16 @@ function Landing({ projectList, dispatch }) {
     githubUrl: 'https://github.com/Ivansannicolas?tab=repositories',
   };
 
-  function addUserToParticipants(newParticipant, project) {
-    const updatedProject = { ...project };
+  function addUserToParticipants(newParticipant, actualProject, actualProjects, projectButton) {
+    const updatedProject = { ...actualProject };
+    const updatedProjects = [...actualProjects];
+    const subscribeButton = document.getElementById(projectButton.id);
+
     let wasParticipant = false;
 
-    project.participants.forEach((participant) => {
+    actualProject.participants.forEach((participant) => {
       if (participant._id === newParticipant._id) {
-        updatedProject.participants = project.participants.filter(
+        updatedProject.participants = actualProject.participants.filter(
           (filterParticipant) => filterParticipant._id !== newParticipant._id,
         );
         wasParticipant = true;
@@ -35,8 +38,21 @@ function Landing({ projectList, dispatch }) {
 
     if (!wasParticipant) {
       updatedProject.participants.push(newParticipant._id);
+      subscribeButton.style.backgroundColor = 'red';
+      subscribeButton.textContent = 'Unsubscribe';
+    } else {
+      subscribeButton.style.backgroundColor = 'green';
+      subscribeButton.textContent = 'Subscribe';
     }
-    dispatch(updateProject(project._id, updatedProject));
+
+    updatedProjects.forEach((project) => {
+      if (project._id === updatedProject._id) {
+        project = updatedProject;
+      }
+    });
+
+    dispatch(updateProject(actualProject._id, updatedProject));
+    dispatch(loadProjects());
   }
 
   return (
@@ -57,7 +73,7 @@ function Landing({ projectList, dispatch }) {
               </a>
             </div>
             <div className="landing__project__top__subscribe">
-              <button type="button" className="subscribe__button" onClick={() => addUserToParticipants(user, project)}>Subscribe</button>
+              <button type="button" className="subscribe__button" id={`${project._id}-button`} onClick={() => addUserToParticipants(user, project, projectList, { id: `${project._id}-button` })}>Subscribe</button>
             </div>
           </div>
           <div className="landing__project__bottom">
@@ -85,13 +101,6 @@ function Landing({ projectList, dispatch }) {
   );
 }
 
-function mapStateToProps({ gitReducer }) {
-  debugger;
-  return {
-    projectList: gitReducer.projectArray,
-  };
-}
-
 Landing.propTypes = {
   projectList: PropTypes.arrayOf(PropTypes.object),
   dispatch: PropTypes.func.isRequired,
@@ -100,5 +109,11 @@ Landing.propTypes = {
 Landing.defaultProps = {
   projectList: {},
 };
+function mapStateToProps({ gitReducer }) {
+  debugger;
+  return {
+    projectList: gitReducer.projectArray,
+  };
+}
 
 export default connect(mapStateToProps)(Landing);
