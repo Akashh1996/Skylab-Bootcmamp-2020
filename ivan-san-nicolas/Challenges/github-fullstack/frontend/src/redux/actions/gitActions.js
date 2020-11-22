@@ -8,9 +8,9 @@ function loadProjectsSuccess(projectList) {
   };
 }
 
-function loadProjectsError(error) {
+function loadError(error) {
   return {
-    type: actionTypes.LOAD_PROJECTS_ERROR,
+    type: actionTypes.LOAD_ERROR,
     error,
   };
 }
@@ -22,33 +22,41 @@ function loadUsersSuccess(usersList) {
   };
 }
 
-function loadUsersError(error) {
-  return {
-    type: actionTypes.LOAD_USERS_ERROR,
-    error,
-  };
-}
-
 export function loadProjects() {
   return async (dispatch) => {
-    const endpoint = 'http:://localhost:1240/projects/';
+    const endpoint = 'http://localhost:1240/projects/';
     try {
-      const projects = await axios(endpoint);
+      const projects = await axios.get(endpoint);
       dispatch(loadProjectsSuccess(projects.data));
     } catch (error) {
-      dispatch(loadProjectsError(error));
+      dispatch(loadError(error));
     }
   };
 }
 
 export function loadUsers() {
   return async (dispatch) => {
-    const endpoint = 'http:://localhost:1240/users';
+    const endpoint = 'http://localhost:1240/users';
     try {
-      const users = await axios(endpoint);
+      const users = await axios.get(endpoint);
       dispatch(loadUsersSuccess(users.data));
     } catch (error) {
-      dispatch(loadUsersError(error));
+      dispatch(loadError(error));
+    }
+  };
+}
+
+export function updateProject(projectId, updatedProject) {
+  debugger;
+  return async (dispatch) => {
+    const endpoint = 'http://localhost:1240/project';
+    try {
+      await axios.patch(endpoint, {
+        projectId,
+        updatedProject,
+      });
+    } catch (error) {
+      dispatch(loadError(error));
     }
   };
 }
