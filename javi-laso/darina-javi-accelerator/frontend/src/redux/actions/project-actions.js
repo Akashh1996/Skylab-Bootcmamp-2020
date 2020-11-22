@@ -38,7 +38,6 @@ export function githubLoginError(error) {
 }
 
 export function githubLogin() {
-  // eslint-disable-next-line no-unused-vars
   return async (dispatch) => {
     try {
       const userData = await fetch(githubLoginUrl, {
@@ -48,6 +47,32 @@ export function githubLogin() {
       dispatch(githubLoginError(userData));
     } catch (error) {
       dispatch(githubLoginError(error));
+    }
+  };
+}
+
+function createProjectSuccess(newProject) {
+  return {
+    type: actionTypes.CREATE_PROJECT,
+    newProject,
+  };
+}
+
+function createProjectError(newProjectError) {
+  return {
+    type: actionTypes.CREATE_PROJECT_ERROR,
+    newProjectError,
+  };
+}
+
+export function createUProject(newProject) {
+  return async (dispatch) => {
+    try {
+      const newProjectAdded = await axios.post(serverProjectsUrl, newProject);
+      dispatch(createProjectSuccess(newProjectAdded.data));
+      dispatch(requestProjects());
+    } catch (error) {
+      dispatch(createProjectError(error));
     }
   };
 }

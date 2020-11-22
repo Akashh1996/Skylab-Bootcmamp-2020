@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import Switch from 'react-bootstrap/esm/Switch';
 import reportWebVitals from './reportWebVitals';
 import MainList from './components/MainList/MainList';
 import Header from './components/Header/Header';
@@ -12,8 +14,12 @@ const store = configureStore();
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Header />
-      <MainList />
+      <BrowserRouter>
+        <Switch>
+          <Header />
+          <MainList />
+        </Switch>
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
