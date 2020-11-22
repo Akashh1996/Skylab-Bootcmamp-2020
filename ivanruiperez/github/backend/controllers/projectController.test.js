@@ -21,4 +21,24 @@ describe('ProjectController', () => {
       expect(res.json).toHaveBeenCalled();
     });
   });
+
+  describe('putMethod', () => {
+    test('create throws error', () => {
+      const res = { send: jest.fn() };
+
+      Project.create = jest.fn().mockImplementationOnce((query, callback) => {
+        callback(true, {});
+      });
+      projectController.putMethod({ project: null }, res);
+      expect(res.send).toHaveBeenCalled();
+    });
+    test('find no throw error', () => {
+      const res = { json: jest.fn() };
+      Project.create = jest.fn().mockImplementationOnce((query, callback) => {
+        callback(false, {});
+      });
+      projectController.putMethod({ project: null }, res);
+      expect(res.json).toHaveBeenCalled();
+    });
+  });
 });

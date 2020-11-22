@@ -4,7 +4,20 @@ li {
     list-style: none;
     margin-top: 20px;
 }
+.projectBox{
+    display: flex;
+    align-items: center;
+}
+.projectsImg>img{
+    height: 150px;
+}
 span {
     display: flex;
     flex-direction: column;
+    font-size: 15px;
+}
+.projects{
+    margin: 20px;
+    align-items: center;
+    max-width: 600px;
 }
