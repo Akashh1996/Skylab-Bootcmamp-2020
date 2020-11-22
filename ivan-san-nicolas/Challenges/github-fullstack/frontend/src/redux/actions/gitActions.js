@@ -45,3 +45,23 @@ export function loadUsers() {
     }
   };
 }
+
+export function updateProject(projectId, updatedProject) {
+  debugger;
+  return async (dispatch) => {
+    const endpoint = 'http://localhost:1240/project';
+    try {
+      let projects = await axios.patch(endpoint, {
+        projectId,
+        updatedProject,
+      }); try {
+        projects = await axios.get(endpoint);
+        dispatch(loadProjectsSuccess(projects.data));
+      } catch (error) {
+        dispatch(loadError(error));
+      }
+    } catch (error) {
+      dispatch(loadError(error));
+    }
+  };
+}
