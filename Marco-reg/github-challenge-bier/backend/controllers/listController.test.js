@@ -59,3 +59,33 @@ describe('putMethod', () => {
     expect(res.send).toHaveBeenCalled();
   });
 });
+
+describe('deleteMethod', () => {
+  test('should return error', () => {
+    const res = {
+      send: jest.fn(),
+    };
+
+    list.findOneAndRemove = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(true, {});
+    });
+
+    listController.deleteMethod({}, res);
+
+    expect(res.send).toHaveBeenCalled();
+  });
+
+  test('should return message on delete item', () => {
+    const res = {
+      send: jest.fn(),
+    };
+
+    list.findOneAndRemove = jest.fn().mockImplementationOnce((query, callback) => {
+      callback(null, {});
+    });
+
+    listController.deleteMethod({}, res);
+
+    expect(res.send).toHaveBeenCalled();
+  });
+});
