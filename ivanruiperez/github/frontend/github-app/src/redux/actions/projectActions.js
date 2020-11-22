@@ -25,7 +25,6 @@ export function loadProjects() {
 
       dispatch(loadProjectsSuccess(projects.data));
     } catch (error) {
-      debugger;
       dispatch(loadProjectsError(error));
     }
   };

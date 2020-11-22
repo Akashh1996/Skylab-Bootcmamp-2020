@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const debug = require('debug')('app');
 const chalk = require('chalk');
 const morgan = require('morgan');
 const cors = require('cors');
@@ -29,10 +28,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'backend/views', 'index.html'));
 });
 
-app.use('/', projectRouter);
+app.use('/projects', projectRouter);
 app.use('/github', githubRouter);
 app.use('/oauth-callback', oAuthRouter);
 
 app.listen(port, () => {
-  debug(`Server is running on port ${chalk.green(port)}`);
+  console.log(`Server is running on port ${chalk.green(port)}`);
 });

@@ -3,6 +3,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 function Header() {
+  /* const [logButton, setLogButton] = useState(null);
+  function handleChange() {
+    setLogButton(true);
+  } */
+
   return (
 
     <nav className="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
