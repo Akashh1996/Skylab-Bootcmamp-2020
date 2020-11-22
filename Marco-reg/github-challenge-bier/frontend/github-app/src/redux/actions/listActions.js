@@ -70,6 +70,7 @@ export function deleteProject(listItem){
     
     return async (dispatch)=>{
         try {
+            debugger
             await axios.delete(URL,listItem);
             dispatch(requestDeleteSucces(listItem));
         } catch (error) {
