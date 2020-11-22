@@ -49,6 +49,7 @@ Detail.propTypes = {
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
+    participants: PropTypes.arrayOf(PropTypes.object),
   }).isRequired,
 };
 
