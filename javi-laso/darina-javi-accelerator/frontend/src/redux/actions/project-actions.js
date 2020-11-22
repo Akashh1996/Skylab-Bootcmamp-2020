@@ -49,7 +49,7 @@ export function createProject(newProject) {
       const { data } = await axios.post(serverProjectsUrl, newProject);
       dispatch(createProjectSuccess(data));
     } catch (error) {
-      console.log(error);
+      dispatch(createProjectError(error));
     }
   };
 }
