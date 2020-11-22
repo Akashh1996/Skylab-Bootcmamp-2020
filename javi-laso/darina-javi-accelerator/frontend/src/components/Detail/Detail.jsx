@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Detail.css';
 import Card from 'react-bootstrap/Card';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Tags from '../Tags/Tags';
+import { requestProjectDetail } from '../../redux/actions/project-actions';
 
-function Detail({ project }) {
+function Detail({ project, match, dispatch }) {
+  const { projectId } = match.params;
+
+  useEffect(() => {
+    if (!project || projectId !== project._id) {
+      dispatch(requestProjectDetail(projectId));
+    }
+  }, [project, projectId]);
   return (
     <>
       {project
@@ -51,7 +59,14 @@ Detail.propTypes = {
     description: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
     participants: PropTypes.arrayOf(PropTypes.object),
+    _id: PropTypes.string.isRequired,
   }),
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      projectId: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 Detail.defaultProps = {
