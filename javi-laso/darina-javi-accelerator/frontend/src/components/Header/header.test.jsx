@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
@@ -25,7 +26,7 @@ describe('Header', () => {
     initialState = { usersReducer: { user: null } };
     const store = buildStore(initialState);
     store.dispatch = jest.fn();
-    // eslint-disable-next-line react/prop-types
+
     const Wrapper = ({ children }) => (
       <Provider store={store}>
         <BrowserRouter>
@@ -42,7 +43,7 @@ describe('Header', () => {
     initialState = { usersReducer: { user: null } };
     const store = buildStore(initialState);
     store.dispatch = jest.fn();
-    // eslint-disable-next-line react/prop-types
+
     const Wrapper = ({ children }) => (
       <Provider store={store}>
         <BrowserRouter>
@@ -59,7 +60,7 @@ describe('Header', () => {
     initialState = { usersReducer: { user: { name: 'fakeName' } } };
     const store = buildStore(initialState);
     store.dispatch = jest.fn();
-    // eslint-disable-next-line react/prop-types
+
     const Wrapper = ({ children }) => (
       <Provider store={store}>
         <BrowserRouter>
@@ -85,7 +86,7 @@ describe('Header', () => {
     initialState = { usersReducer: { user: { name: 'fakeName' } } };
     const store = buildStore(initialState);
     store.dispatch = jest.fn();
-    // eslint-disable-next-line react/prop-types
+
     const Wrapper = ({ children }) => (
       <Provider store={store}>
         <BrowserRouter>
