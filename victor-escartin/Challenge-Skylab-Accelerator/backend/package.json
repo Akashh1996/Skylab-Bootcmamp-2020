@@ -4,7 +4,7 @@
   "description": "",
   "main": "data.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --collect-coverage --watch--all",
     "start": "set DEBUG=app & nodemon server.js"
   },
   "keywords": [],
@@ -15,6 +15,7 @@
     "chalk": "^4.1.0",
     "debug": "^4.3.1",
     "express": "^4.17.1",
+    "jest": "^26.6.3",
     "mongoose": "^5.10.15",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.6"

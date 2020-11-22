@@ -15,7 +15,7 @@ function projectController(Project) {
     }
     function getOneMethod(req,res){
         const query = req.body
-        Project.findById(query, (errorProject, detail) => (errorProject ? res.send(errorProject) : res.json(detail)));
+        Project.findOne(query, (errorProject, detail) => (errorProject ? res.send(errorProject) : res.json(detail)));
 
     }
     return {
@@ -24,4 +24,3 @@ function projectController(Project) {
   }
   
   module.exports = projectController;
-  
