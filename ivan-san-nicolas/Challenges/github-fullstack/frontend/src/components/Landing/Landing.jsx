@@ -5,8 +5,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { loadProjects, updateProject } from '../../redux/actions/gitActions';
-
-import('./Landing.css');
+import './Landing.css';
 
 function Landing({ projectList, dispatch }) {
   if (!projectList.length) {
@@ -41,7 +40,7 @@ function Landing({ projectList, dispatch }) {
       subscribeButton.style.backgroundColor = 'red';
       subscribeButton.textContent = 'Unsubscribe';
     } else {
-      subscribeButton.style.backgroundColor = 'green';
+      subscribeButton.style.backgroundColor = 'rgb(136, 202, 38)';
       subscribeButton.textContent = 'Subscribe';
     }
 
@@ -56,7 +55,7 @@ function Landing({ projectList, dispatch }) {
   }
 
   return (
-    <section className="landing">
+    <section className="landing" id="landing">
       {projectList.length ? projectList.map((project) => (
         <div className="landing__project">
           <div className="landing__project__top">
