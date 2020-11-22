@@ -1,10 +1,8 @@
-/* eslint-disable no-debugger */
 /* eslint-disable no-console */
 import axios from 'axios';
 import actionTypes from './actionTypes';
 
 const serverProjectsUrl = 'http://localhost:2130/projects';
-const githubLoginUrl = 'http://localhost:2130/github';
 
 function requestProjectsSuccess(projects) {
   return {
@@ -31,36 +29,38 @@ export function requestProjects() {
   };
 }
 
-export function githubLoginError(error) {
-  return {
-    type: actionTypes.GITHUB_LOGIN_ERROR,
-    error,
-  };
-}
-
-export function githubLogin() {
-  return async (dispatch) => {
-    try {
-      const userData = await fetch(githubLoginUrl, {
-        mode: 'no-cors',
-      });
-
-      dispatch(githubLoginError(userData));
-    } catch (error) {
-      dispatch(githubLoginError(error));
-    }
-  };
-}
-
 export function createProject(newProject) {
-  debugger;
   return async (dispatch) => {
     try {
-      debugger;
       await axios.post(serverProjectsUrl, newProject);
       dispatch(requestProjects());
     } catch (error) {
       console.log(error);
+    }
+  };
+}
+
+function requestProjectDetailSuccess(project) {
+  return {
+    type: actionTypes.LOAD_PROJECT,
+    project,
+  };
+}
+
+function requestProjectDetailError(projectError) {
+  return {
+    type: actionTypes.LOAD_PROJECT_ERROR,
+    projectError,
+  };
+}
+
+export function requestProjectDetail(_id) {
+  return async (dispatch) => {
+    try {
+      const project = await axios.get(`${serverProjectsUrl}/${_id}`);
+      dispatch(requestProjectDetailSuccess(project.data));
+    } catch (error) {
+      dispatch(requestProjectDetailError(error));
     }
   };
 }

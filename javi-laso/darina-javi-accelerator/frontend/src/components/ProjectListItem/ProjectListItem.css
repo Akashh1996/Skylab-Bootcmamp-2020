@@ -2,6 +2,9 @@
     padding: 20px 40px;
 }
 
+.project-list {
+    list-style-type: none;
+}
 .project-header {
     background-color: rgb(214, 18, 18);
     color: white;

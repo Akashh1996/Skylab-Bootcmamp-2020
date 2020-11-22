@@ -3,7 +3,9 @@ import './ProjectListItem.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
-import { requestProjects } from '../../redux/actions/project-actions';
+import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
+import { requestProjects, requestProjectDetail } from '../../redux/actions/project-actions';
 import Tags from '../Tags/Tags';
 
 function ProjectListItem({ projects, dispatch }) {
@@ -21,7 +23,11 @@ function ProjectListItem({ projects, dispatch }) {
               <Card>
                 <Card.Header className="project-header">{project.name}</Card.Header>
                 <Card.Body className="d-flex flex-column flex-md-row align-items-center">
-                  <Card.Img variant="left" src={project.creator.gitPicture} className="creator-picture mb-3 mb-md-0" />
+                  <Card.Img
+                    variant="left"
+                    src={project.creator.gitPicture}
+                    className="creator-picture mb-3 mb-md-0"
+                  />
                   <div className="d-flex flex-column">
                     <Tags project={project} />
                     <Card.Text>
@@ -35,7 +41,18 @@ function ProjectListItem({ projects, dispatch }) {
                       <Card.Text className="project-price">{`${project.price}€`}</Card.Text>
                       <Card.Text className="collaborators">{`Actual collaborators: ${project.participants.length}`}</Card.Text>
                     </div>
+                    <Button
+                      as={Link}
+                      to={`/projects/${project._id}`}
+                      onClick={() => dispatch(requestProjectDetail(project._id))}
+                      variant="light"
+                    >
+                      Logged as User
+
+                    </Button>
                   </div>
+
+                  {' '}
                 </Card.Body>
               </Card>
             </li>

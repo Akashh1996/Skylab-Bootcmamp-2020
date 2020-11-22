@@ -5,6 +5,12 @@ export default function projectsReducer(state = {}, action) {
     case actionTypes.LOAD_PROJECTS:
       const loadProjects = { ...state, projects: action.projects };
       return loadProjects;
+    case actionTypes.LOAD_PROJECT:
+      const loadProject = { ...state, project: action.project };
+      return loadProject;
+    case actionTypes.LOAD_PROJECT_ERROR:
+      const projectError = { ...state, errorProject: action.projectsError };
+      return projectError;
     case actionTypes.LOAD_PROJECTS_ERROR:
       const projectsError = { ...state, errorProject: action.projectsError };
       return projectsError;
