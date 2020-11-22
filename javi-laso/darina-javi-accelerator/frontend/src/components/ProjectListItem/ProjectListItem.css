@@ -5,6 +5,17 @@
 .project-list {
     list-style-type: none;
 }
+
+.project-link * {
+    text-decoration: none;
+    color: initial;
+}
+
+.project-link:hover * {
+    text-decoration: none;
+    color: initial;
+}
+
 .project-header {
     background-color: rgb(214, 18, 18);
     color: white;
