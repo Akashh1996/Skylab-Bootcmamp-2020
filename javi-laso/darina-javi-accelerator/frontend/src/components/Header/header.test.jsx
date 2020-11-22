@@ -14,9 +14,6 @@ const buildStore = configureStore([thunk]);
 
 describe('Header', () => {
   let initialState;
-  beforeEach(() => {
-
-  });
 
   afterEach(() => {
     jest.restoreAllMocks();
