@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'backend/views', 'index.html'));
 });
 
-app.use('/', projectRouter);
+app.use('/projects', projectRouter);
 app.use('/github', githubRouter);
 app.use('/oauth-callback', oAuthRouter);
 

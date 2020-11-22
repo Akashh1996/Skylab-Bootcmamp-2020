@@ -28,7 +28,6 @@ function oAuthController(User) {
         }
         return res.json(newUser);
       });
-      // res.json(user);
     } catch (error) {
       res.send(error);
     }
