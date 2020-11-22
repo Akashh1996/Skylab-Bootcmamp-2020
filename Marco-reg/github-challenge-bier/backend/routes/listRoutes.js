@@ -6,7 +6,8 @@ function routes(list) {
   const listItems = listController(list);
   listRouter.route('/')
     .get(listItems.getMethod)
-    .put(listItems.putMethod);
+    .put(listItems.putMethod)
+    .delete(listItems.deleteMethod);
   return listRouter;
 }
 

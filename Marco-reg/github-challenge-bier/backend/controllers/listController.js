@@ -13,7 +13,15 @@ function listController(list) {
       : res.send('item added')
     ));
   }
-  return { getMethod, putMethod };
+
+  function deleteMethod({ body }, res) {
+    list.findOneAndRemove((body), (errorDeleteItem) => (
+      errorDeleteItem
+        ? res.send(errorDeleteItem)
+        : res.send('item deleted ...')
+    ));
+  }
+  return { getMethod, putMethod, deleteMethod };
 }
 
 module.exports = listController;
