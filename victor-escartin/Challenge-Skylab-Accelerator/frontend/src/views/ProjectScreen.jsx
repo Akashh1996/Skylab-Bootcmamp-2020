@@ -15,7 +15,6 @@ export default function ProjectScreen(props) {
   const projectDetails = useSelector((state) => state.projectDetails);
   // eslint-disable-next-line no-unused-vars
   const { loading, error, project } = projectDetails;
-
   useEffect(() => {
     dispatch(detailsProject(projectId));
   }, [dispatch, projectId]);
@@ -31,9 +30,9 @@ export default function ProjectScreen(props) {
           <Link to="/">Back to result</Link>
           <div className="project-item">
             <div className="project-description">
-              <h2>PROJECT.NAME</h2>
+             <h2>{project.name}</h2>
               <div className="card-body">
-                <h3>Description of project</h3>
+                  <h3>{project.description}</h3>
                 <p>PROJECT.DESCRIPTION</p>
                 <p>
                   <b>

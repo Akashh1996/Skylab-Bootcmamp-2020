@@ -34,9 +34,10 @@ export const listProjects = () => async (dispatch) => {
 };
 
 export const detailsProject = (projectId) => async (dispatch) => {
-  dispatch({ type: PROJECT_DETAILS_REQUEST, payload: projectId });
+  dispatch({ type: PROJECT_DETAILS_REQUEST, payload: {projectId} });
   try {
-    const { data } = await Axios.get(`/projects/${projectId}`);
+    debugger
+    const { data } = await Axios.get(`http://localhost:8000/projects/detail`, {projectId});
     dispatch({ type: PROJECT_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
