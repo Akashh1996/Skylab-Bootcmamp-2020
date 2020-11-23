@@ -58,7 +58,7 @@ function Landing({ projectList, dispatch }) {
   return (
     <section className="landing" id="landing">
       {projectList.length ? projectList.map((project) => (
-        <div className="landing__project">
+        <div className="landing__project" key={project._id}>
           <div className="landing__project__top">
             <div className="landing__project__top__details">
               <Link to={`/detail/${project._id}`} className="project__anchor">
