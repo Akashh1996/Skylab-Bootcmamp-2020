@@ -12,7 +12,7 @@ function Header() {
         <i className="fa fa-github" />
         <Link to="/" className="landing__anchor">
           <h1>
-            {'Github\'s project '}
+            {'Skylab Accelerator '}
             {' '}
             {' '}
             {' '}
