@@ -33,8 +33,8 @@ export function loadProjects() {
   return async (dispatch) => {
     const endpoint = 'http://localhost:1240/projects/';
     try {
-      const projects = await axios.get(endpoint);
-      dispatch(loadProjectsSuccess(projects.data));
+      const { data } = await axios.get(endpoint);
+      dispatch(loadProjectsSuccess(data));
     } catch (error) {
       dispatch(loadError(error));
     }
@@ -42,13 +42,11 @@ export function loadProjects() {
 }
 
 export function loadProject(projectId) {
-  debugger;
   return async (dispatch) => {
     const endpoint = 'http://localhost:1240/project';
     try {
-      const project = await axios.get(endpoint, { projectId });
-      debugger;
-      dispatch(loadProjectSuccess(project.data));
+      const { data } = await axios.get(endpoint, { projectId });
+      dispatch(loadProjectSuccess(data));
     } catch (error) {
       dispatch(loadError(error));
     }
@@ -59,8 +57,8 @@ export function loadUsers() {
   return async (dispatch) => {
     const endpoint = 'http://localhost:1240/users';
     try {
-      const users = await axios.get(endpoint);
-      dispatch(loadUsersSuccess(users.data));
+      const { data } = await axios.get(endpoint);
+      dispatch(loadUsersSuccess(data));
     } catch (error) {
       dispatch(loadError(error));
     }
@@ -82,7 +80,6 @@ export function updateProject(projectId, updatedProject) {
 }
 
 export function addProject(name, description, url, participants, creator) {
-  debugger;
   return async (dispatch) => {
     const endpoint = 'http://localhost:1240/project';
     try {
