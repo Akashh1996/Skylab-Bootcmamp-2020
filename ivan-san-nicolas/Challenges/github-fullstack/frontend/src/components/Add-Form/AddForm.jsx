@@ -2,10 +2,10 @@
 /* eslint-disable no-shadow */
 /* eslint-disable no-underscore-dangle */
 import React from 'react';
-import './Add-Form.css';
+import './AddForm.css';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { addProject } from '../../redux/actions/gitActions';
+import { sendForm } from '../../redux/actions/gitActions';
 
 function AddForm({ dispatch }) {
   let projectTitle = document.getElementById('project-title')?.value;
@@ -14,13 +14,6 @@ function AddForm({ dispatch }) {
   const user = {
     _id: '5fbabc82355c2e34a8656cff',
   };
-
-  function sendForm(
-    dispatch, addProject, projectTitle, projectDescription, githubURL, participants, creator,
-  ) {
-    dispatch(addProject(projectTitle, projectDescription, githubURL, participants, creator));
-    alert('Project cretaed!');
-  }
 
   return (
     <div className="add-form__container">
@@ -54,7 +47,7 @@ function AddForm({ dispatch }) {
         </label>
       </div>
       <div className="button-container">
-        <button type="button" className="create-button" onClick={() => sendForm(dispatch, addProject, projectTitle, projectDescription, githubURL, [], user._id)}>Create Project</button>
+        <button type="button" className="create-button" onClick={() => sendForm(dispatch, projectTitle, projectDescription, githubURL, [], user._id)}>Create Project</button>
         <button type="button" className="cancel-button" onClick={() => window.history.back()}>Cancel</button>
       </div>
     </div>

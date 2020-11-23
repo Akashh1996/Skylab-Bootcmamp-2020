@@ -130,3 +130,10 @@ export function addUserToParticipants(
   dispatch(updateProject(actualProject._id, updatedProject));
   dispatch(loadProjects());
 }
+
+export function sendForm(
+  dispatch, projectTitle, projectDescription, githubURL, participants, creator,
+) {
+  dispatch(addProject(projectTitle, projectDescription, githubURL, participants, creator));
+  alert('Project cretaed!');
+}

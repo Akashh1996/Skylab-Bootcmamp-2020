@@ -8,7 +8,7 @@ import Header from './components/Header/Header';
 import Landing from './components/Landing/Landing';
 import Detail from './components/Detail/Detail';
 import Footer from './components/Footer/Footer';
-import AddForm from './components/Add-Form/Add-Form';
+import AddForm from './components/Add-Form/AddForm';
 import reportWebVitals from './reportWebVitals';
 
 const store = configureStore({ gitReducer: { projectArray: [], projectItem: {} } });
