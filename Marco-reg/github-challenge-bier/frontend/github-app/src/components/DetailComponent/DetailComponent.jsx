@@ -2,7 +2,7 @@ import React , {useEffect, useState} from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { requestProjectDetail } from '../../redux/actions/listActions';
-
+import './DetailComponent.css'
 import { Link } from 'react-router-dom';
 
 function ProjectDetail({ match, projectDetail, dispatch, actions }) {
@@ -22,13 +22,13 @@ const [id] = useState(match.params.id);
       
             {projectDetail &&
                 <div className="detail-wrapper">
-                    <h2>{projectDetail.projectName}</h2>
+                    <h2 className="project_title">{projectDetail.projectName}</h2>
                     <ul>
-                        <li>{projectDetail.projectInfo}</li>
+                        <li className="project_info">{projectDetail.projectInfo}</li>
                         <li>Project owner: {projectDetail.projectOwner}</li>
                     </ul>
-                    <img src={`${projectDetail.photo}`} alt=""/>
-                    <button><Link to= {`/`}>back</Link></button>
+                    <img className="project_img" src={`${projectDetail.photo}`} alt=""/>
+                    <button id="back-btn"><Link to= {`/`}>back</Link></button>
                 </div>
             }
         </>
