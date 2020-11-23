@@ -23,25 +23,26 @@ function NewProjectForm({ dispatch, user }) {
           <Form>
             <Form.Group controlId="exampleForm.ControlInput1">
               <Form.Label>Title</Form.Label>
-              <Form.Control type="title" placeholder="Title of the project" onChange={(event) => setName(event.target.value)} />
+              <Form.Control data-testid="inputText-title" type="title" placeholder="Title of the project" onChange={(event) => setName(event.target.value)} />
             </Form.Group>
             <Form.Group controlId="exampleForm.ControlInput2">
               <Form.Label>Categories</Form.Label>
-              <Form.Control type="categories" placeholder="Entry categories sepparated by commas" onChange={(event) => setCategories(event.target.value)} />
+              <Form.Control data-testid="inputText-categories" type="categories" placeholder="Entry categories sepparated by commas" onChange={(event) => setCategories(event.target.value)} />
             </Form.Group>
             <Form.Group controlId="exampleForm.ControlInput4">
               <Form.Label>Repository url</Form.Label>
-              <Form.Control type="github-url" placeholder="Github repository url" onChange={(event) => setUrlGit(event.target.value)} />
+              <Form.Control data-testid="inputText-github" type="github-url" placeholder="Github repository url" onChange={(event) => setUrlGit(event.target.value)} />
             </Form.Group>
             <Form.Group controlId="exampleForm.ControlInput5">
               <Form.Label>Price</Form.Label>
-              <Form.Control type="price" placeholder="Price/hour (in euros)" onChange={(event) => setPrice(event.target.value)} />
+              <Form.Control data-testid="inputText-price" type="price" placeholder="Price/hour (in euros)" onChange={(event) => setPrice(event.target.value)} />
             </Form.Group>
             <Form.Group controlId="exampleForm.ControlTextarea1">
               <Form.Label>Description</Form.Label>
-              <Form.Control as="textarea" rows={3} onChange={(event) => setDescription(event.target.value)} />
+              <Form.Control data-testid="inputText-description" as="textarea" rows={3} onChange={(event) => setDescription(event.target.value)} />
             </Form.Group>
             <Button
+              id="test-btn-submit"
               variant="secondary"
               type="submit"
               onClick={() => {
