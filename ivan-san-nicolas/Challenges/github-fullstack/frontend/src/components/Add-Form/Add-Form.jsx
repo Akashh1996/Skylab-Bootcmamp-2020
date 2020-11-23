@@ -18,8 +18,8 @@ function AddForm({ dispatch }) {
   function sendForm(
     dispatch, addProject, projectTitle, projectDescription, githubURL, participants, creator,
   ) {
-    debugger;
     dispatch(addProject(projectTitle, projectDescription, githubURL, participants, creator));
+    alert('Project cretaed!');
   }
 
   return (
