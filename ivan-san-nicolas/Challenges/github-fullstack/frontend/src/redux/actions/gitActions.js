@@ -137,3 +137,14 @@ export function sendForm(
   dispatch(addProject(projectTitle, projectDescription, githubURL, participants, creator));
   alert('Project cretaed!');
 }
+
+export function changeColor(buttonId) {
+  const button = document.getElementById(buttonId);
+  if (button.style.backgroundColor === 'red') {
+    button.style.backgroundColor = 'rgb(136, 202, 38)';
+    button.textContent = 'Subscribe';
+  } else {
+    button.style.backgroundColor = 'red';
+    button.textContent = 'Unsubscribe';
+  }
+}
