@@ -30,8 +30,10 @@ function Cv() {
 					<span class="material-icons">menu</span>
 				</div>
 			</nav>
-			<div className="nav">
-				{toogleMenu && document.querySelector('aside').classList.add('visible')}
+			<div className="left-nav">
+				{toogleMenu
+					? document.querySelector('aside')?.classList.add('visible')
+					: document.querySelector('aside')?.classList.remove('visible')}
 
 				<aside>
 					<div className="name">

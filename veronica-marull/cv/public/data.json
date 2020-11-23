@@ -11,9 +11,9 @@
 		"block2": {
 			"title": "Experience",
 			"year": "2020",
-			"place": "Google",
-			"titleDescription": "Lead Ui/Ux Designer",
-			"description": "Praesent dignissim sollicitudin justo, sed elementum quam lacinia quis. Phasellus eleifend tristique posuere. Sed vitae dui nec magna."
+			"place": "Skylab",
+			"titleDescription": "Projects",
+			"description": "Durante el bootcamp trabaje en los siguientes proyectos: Maria Lunarillos, Game of Life, Pokemons, Spotify. Utilizando HTML, CSS, JavaScript, React, Flux, JEST."
 		},
 
 		"skillsTitle": "Coding Skills",
@@ -28,6 +28,11 @@
 			"skill7": { "name": "JEST", "level": "50" },
 			"skill8": { "name": "React", "level": "50" },
 			"skill9": { "name": "Firebase", "level": "50" }
+		},
+
+		"aboutMe": {
+			"name": "Verónica Marull",
+			"textAboutMe": "Soy profesora de música y trabaje varios años en escuelas infantiles. Siempre me intereso programar, por eso me decidi a estudiar en Skylab."
 		}
 	}
 ]

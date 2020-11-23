@@ -1,20 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './aboutMe.css';
+import { loadData } from '../actions/actions';
+import store from '../store/store';
 
 function AboutMe() {
+	const [data, setData] = useState(store.getData());
+
+	function handleChange() {
+		setData(store.getData());
+	}
+
+	useEffect(() => {
+		store.addEventListener(handleChange);
+		if (!data) {
+			loadData();
+		}
+		return () => {
+			store.removeEventListener(handleChange);
+		};
+	}, [data]);
+
 	return (
 		<>
 			<div className="container_aboutme">
-				<div>
-					<h1 className="nameh1">Verónica Marull</h1>
-					<p>
-						Praesent sed aliquam arcu, non accumsan neque. In odio ante,
-						vulputate ac magna vel, pharetra lobortis quam. Duis enim tortor,
-						egestas et felis id, lobortis malesuada magna. Nunc sit amet
-						sagittis nisi, eu semper nisl. Cras ut dictum nisl.
-					</p>
-				</div>
-				<div></div>
+				{data && (
+					<div>
+						<h1 className="nameh1">{data.aboutMe.name}</h1>
+						<p>{data.aboutMe.textAboutMe}</p>
+					</div>
+				)}
+				{!data && <h2>LOADING...</h2>}
 			</div>
 		</>
 	);
