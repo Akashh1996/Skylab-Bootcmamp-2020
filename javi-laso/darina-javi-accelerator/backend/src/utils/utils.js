@@ -7,10 +7,10 @@ async function getToken(code) {
     client_secret: clientSecret,
     code,
   };
-  const opts = { headers: { accept: 'application/json' } };
+  const options = { headers: { accept: 'application/json' } };
   let response;
   try {
-    const tokenResponse = await axios.post('https://github.com/login/oauth/access_token', body, opts);
+    const tokenResponse = await axios.post('https://github.com/login/oauth/access_token', body, options);
     response = tokenResponse.data.access_token;
   } catch (error) {
     response = error;
