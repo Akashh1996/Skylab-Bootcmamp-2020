@@ -5,6 +5,10 @@
     align-items: center;
     background-color: #2B3137;
     height: 90px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .header-title__container {
