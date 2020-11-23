@@ -4,7 +4,6 @@ export default function projectsReducer(state = {}, action) {
   switch (action.type) {
     case actionTypes.LOAD_PROJECTS:
       return { ...state, projects: action.projects };
-
     case actionTypes.LOAD_PROJECT:
       return { ...state, project: action.project };
     case actionTypes.LOAD_PROJECT_ERROR:
