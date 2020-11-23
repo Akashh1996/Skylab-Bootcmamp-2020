@@ -29,6 +29,6 @@ describe('Header', () => {
       );
     });
 
-    expect(container.querySelector('h1').textContent).toBe('Github\'s project    ');
+    expect(container.querySelector('h1').textContent).toBe('Skylab Accelerator    ');
   });
 });
