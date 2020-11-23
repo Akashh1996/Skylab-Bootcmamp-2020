@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-return-assign */
 /* eslint-disable no-shadow */
 /* eslint-disable no-underscore-dangle */
@@ -16,7 +17,7 @@ function AddForm({ dispatch }) {
   };
 
   return (
-    <div className="add-form__container">
+    <section className="add-form__container">
       <div className="add-form__title-field">
         <label htmlFor="project-title" className="project-title-label">
           <p>Project Title: </p>
@@ -50,8 +51,7 @@ function AddForm({ dispatch }) {
         <button type="button" className="create-button" onClick={() => sendForm(dispatch, projectTitle, projectDescription, githubURL, [], user._id)}>Create Project</button>
         <button type="button" className="cancel-button" onClick={() => window.history.back()}>Cancel</button>
       </div>
-    </div>
-
+    </section>
   );
 }
 
