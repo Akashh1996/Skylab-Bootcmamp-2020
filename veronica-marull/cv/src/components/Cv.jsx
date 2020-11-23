@@ -31,10 +31,7 @@ function Cv() {
 				</div>
 			</nav>
 			<div className="nav">
-				{(toogleMenu &&
-					document.querySelector('aside').classList.add('visible')) ||
-					(!toogleMenu &&
-						document.querySelector('aside').classList.remove('visible'))}
+				{toogleMenu && document.querySelector('aside').classList.add('visible')}
 
 				<aside>
 					<div className="name">
