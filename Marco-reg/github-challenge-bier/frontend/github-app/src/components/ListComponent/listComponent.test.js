@@ -1,41 +1,66 @@
 import React from 'react';
-import {render, unmountComponentAtNode} from 'react-dom';
-import ListComponent from './ListComponent';
-import {act} from 'react-dom/test-utils';
-import {Provider} from 'redux';
-// import configureStore from '../../redux/configureStore';
-import store from '../../index';
-// import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import {render } from '@testing-library/react';
+import {Provider} from 'react-redux';
+import {BrowserRouter,Switch} from 'react-router-dom';
+import {deleteProject} from '../../redux/actions/listActions';
+import thunk from 'redux-thunk';
+import List from './ListComponent';
+import configureStore from 'redux-mock-store';
 
+jest.mock('../../redux/actions/listActions');
 
-describe('ListComponent',()=>{
-    let container;
-    beforeEach(()=>{
-        container =document.createElement('div');
-        document.body.appendChild(container);
+const buildStore=configureStore([thunk]);
 
-        act(()=>{
-            render(
-                <>
-                <Provider store={store}>
+describe('ListCompo',()=>{
+    let wrapper;
 
-                    <ListComponent/>
-                </Provider>
-                </>,
+    const wrapperFactory=(wrapperInitialState)=>{
+        const store=buildStore(wrapperInitialState);
+        store.dispatch=jest.fn();
 
+        return({children})=>(
+            <Provider store={store}>
+                <BrowserRouter>
                 
-                container
-
-            );
-        });
-    });
+                    {children}
+                
+                </BrowserRouter>
+            </Provider>
+        );
+    }
     afterEach(()=>{
-        unmountComponentAtNode(container);
-        container.remove();
-        container=null;
+        jest.restoreAllMocks();
+        wrapper=null;
     });
-    test ('should render the id from ListComponents',()=>{
-        expect(document.getElementById('project_wrapper')).toBeDefined();
-    });
-    
+    [
+        {selector:"#delete-project", value:"DELETE"}
+    ].forEach(({selector,value})=>{
+        test(`should render ${selector}to have text content ${value} `,()=>{
+            const initialState = {listReducers: {list:[{_id:'sd', projectName:"adasd", projectInfo:"adasd",technology:['asd','1234'],photo:"asdasd"}]}};
+            wrapper=wrapperFactory(initialState);
+
+            render(<List/>,{wrapper})
+
+            expect(document.querySelector(selector).textContent).toBe(value);
+        })
+        test(`should render ${selector}to have text content ${value} `,()=>{
+            const initialState = {listReducers: {list:[{_id:'sd', projectName:"adasd", projectInfo:"adasd",technology:['asd','1234'],photo:""}]}};
+            wrapper=wrapperFactory(initialState);
+
+            render(<List/>,{wrapper})
+
+            expect(document.querySelector(selector).textContent).toBe(value);
+        })
+
+    })
+    test('should dispatch on click delete button', () => {
+        const initialState = {listReducers: {list:[{_id:'sd', projectName:"adasd", projectInfo:"adasd",technology:['asd','1234'],photo:""}]}};
+            wrapper=wrapperFactory(initialState);
+
+            render(<List/>,{wrapper})
+        document.querySelector("#delete-project").click()
+        expect(deleteProject).toHaveBeenCalled()
+        
+    })
 })
+

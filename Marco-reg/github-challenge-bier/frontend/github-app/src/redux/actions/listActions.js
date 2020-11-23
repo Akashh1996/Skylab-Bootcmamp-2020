@@ -70,7 +70,7 @@ export function deleteProject(listItem){
     
     return async (dispatch)=>{
         try {
-            debugger
+            
             await axios.delete(URL,listItem);
             dispatch(requestDeleteSucces(listItem));
         } catch (error) {
@@ -104,7 +104,7 @@ function requestProjectDetailError(error) {
 
 
 export function requestProjectDetail(id) {
-    debugger;
+    
     return async (dispatch) => {
             const endpoint = `http://localhost:3020/detail/${id}`;
         
