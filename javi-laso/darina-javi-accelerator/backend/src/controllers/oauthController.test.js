@@ -10,6 +10,7 @@ describe('oauthController functions', () => {
   let req;
   let fakeUser;
   let fakeError;
+  let getToken;
   beforeEach(() => {
     req = { query: { code: null } };
     res = { send: jest.fn() };
@@ -24,7 +25,6 @@ describe('oauthController functions', () => {
   describe('getUser', () => {
     test('should call axios.get', async () => {
       oauthController.getToken = jest.fn().mockReturnValueOnce('abc');
-      axios.get = jest.fn();
 
       await oauthController.getUser(req, res);
 
@@ -32,7 +32,7 @@ describe('oauthController functions', () => {
     });
 
     test('should call userSchema.findOneAndUpdate', async () => {
-      oauthController.getToken = jest.fn().mockReturnValueOnce('abc');
+      getToken = jest.fn().mockReturnValueOnce('abc');
       axios.get = jest.fn().mockReturnValueOnce({ data: {} });
       userSchema.findOneAndUpdate = jest.fn().mockReturnValueOnce(fakeUser);
 
@@ -42,7 +42,7 @@ describe('oauthController functions', () => {
     });
 
     test('should call res.send with the user', async () => {
-      oauthController.getToken = jest.fn().mockReturnValueOnce('abc');
+      getToken = jest.fn().mockReturnValueOnce('abc');
       axios.get = jest.fn().mockReturnValueOnce({ data: {} });
       userSchema.findOneAndUpdate = jest.fn().mockReturnValueOnce(fakeUser);
 
@@ -52,7 +52,7 @@ describe('oauthController functions', () => {
     });
 
     test('should call res.send with an error if there is an error', async () => {
-      oauthController.getToken = jest.fn().mockReturnValueOnce('abc');
+      getToken = jest.fn().mockReturnValueOnce('abc');
       axios.get = jest.fn().mockReturnValueOnce({ data: {} });
       userSchema.findOneAndUpdate = jest.fn().mockRejectedValueOnce(fakeError);
 

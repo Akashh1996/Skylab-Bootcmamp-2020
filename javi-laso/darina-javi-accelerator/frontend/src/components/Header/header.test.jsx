@@ -13,60 +13,44 @@ jest.mock('../../redux/actions/user-actions');
 const buildStore = configureStore([thunk]);
 
 describe('Header', () => {
-  let initialState;
+  let wrapper;
+
+  const wrapperFactory = (wrapperInitialState) => {
+    const store = buildStore(wrapperInitialState);
+    store.dispatch = jest.fn();
+
+    return ({ children }) => (
+      <Provider store={store}>
+        <BrowserRouter>
+          {children}
+        </BrowserRouter>
+      </Provider>
+    );
+  };
 
   afterEach(() => {
     jest.restoreAllMocks();
+    wrapper = null;
   });
 
-  test('should render the logo', () => {
-    initialState = { usersReducer: { user: null } };
-    const store = buildStore(initialState);
-    store.dispatch = jest.fn();
+  [
+    { selector: '.logo-name', value: 'SkyLab Accelerator' },
+    { selector: '.login-btn', value: 'Github Login' },
+  ].forEach(({ selector, value }) => {
+    test(`should render ${selector} with text content ${value}`, () => {
+      const initialState = { usersReducer: { user: null } };
+      wrapper = wrapperFactory(initialState);
 
-    const Wrapper = ({ children }) => (
-      <Provider store={store}>
-        <BrowserRouter>
-          {children}
-        </BrowserRouter>
-      </Provider>
-    );
-
-    render(<Header />, { wrapper: Wrapper });
-    expect(document.querySelector('.logo-name').textContent).toBe('SkyLab Accelerator');
-  });
-
-  test('should render login button if there is no user', () => {
-    initialState = { usersReducer: { user: null } };
-    const store = buildStore(initialState);
-    store.dispatch = jest.fn();
-
-    const Wrapper = ({ children }) => (
-      <Provider store={store}>
-        <BrowserRouter>
-          {children}
-        </BrowserRouter>
-      </Provider>
-    );
-
-    render(<Header />, { wrapper: Wrapper });
-    expect(document.querySelector('.login-btn').textContent).toBe('Github Login');
+      render(<Header />, { wrapper });
+      expect(document.querySelector(selector).textContent).toBe(value);
+    });
   });
 
   test('logout button should call logOutUser', () => {
-    initialState = { usersReducer: { user: { name: 'fakeName' } } };
-    const store = buildStore(initialState);
-    store.dispatch = jest.fn();
+    const initialState = { usersReducer: { user: { name: 'fakeName' } } };
+    wrapper = wrapperFactory(initialState);
 
-    const Wrapper = ({ children }) => (
-      <Provider store={store}>
-        <BrowserRouter>
-          {children}
-        </BrowserRouter>
-      </Provider>
-    );
-
-    render(<Header />, { wrapper: Wrapper });
+    render(<Header />, { wrapper });
 
     document.querySelector('.logout-btn').click();
     expect(logOutUser).toHaveBeenCalled();
@@ -79,20 +63,10 @@ describe('Header', () => {
         search: searchUrl,
       },
     });
+    const initialState = { usersReducer: { user: { name: 'fakeName' } } };
+    wrapper = wrapperFactory(initialState);
 
-    initialState = { usersReducer: { user: { name: 'fakeName' } } };
-    const store = buildStore(initialState);
-    store.dispatch = jest.fn();
-
-    const Wrapper = ({ children }) => (
-      <Provider store={store}>
-        <BrowserRouter>
-          {children}
-        </BrowserRouter>
-      </Provider>
-    );
-
-    render(<Header />, { wrapper: Wrapper });
+    render(<Header />, { wrapper });
 
     expect(getUserFromGithub).toHaveBeenCalled();
   });
