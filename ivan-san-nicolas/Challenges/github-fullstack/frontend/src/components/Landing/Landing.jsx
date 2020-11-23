@@ -5,7 +5,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
-import { loadProjects, updateProject } from '../../redux/actions/gitActions';
+import { loadProjects, addUserToParticipants } from '../../redux/actions/gitActions';
 import './Landing.css';
 
 function Landing({ projectList, dispatch }) {
@@ -20,45 +20,10 @@ function Landing({ projectList, dispatch }) {
     githubUrl: 'https://github.com/Ivansannicolas?tab=repositories',
   };
 
-  function addUserToParticipants(newParticipant, actualProject, actualProjects, projectButton) {
-    const updatedProject = { ...actualProject };
-    const updatedProjects = [...actualProjects];
-    const subscribeButton = document.getElementById(projectButton.id);
-
-    let wasParticipant = false;
-
-    actualProject.participants.forEach((participant) => {
-      if (participant._id === newParticipant._id) {
-        updatedProject.participants = actualProject.participants.filter(
-          (filterParticipant) => filterParticipant._id !== newParticipant._id,
-        );
-        wasParticipant = true;
-      }
-    });
-
-    if (!wasParticipant) {
-      updatedProject.participants.push(newParticipant._id);
-      subscribeButton.style.backgroundColor = 'red';
-      subscribeButton.textContent = 'Unsubscribe';
-    } else {
-      subscribeButton.style.backgroundColor = 'rgb(136, 202, 38)';
-      subscribeButton.textContent = 'Subscribe';
-    }
-
-    updatedProjects.forEach((project) => {
-      if (project._id === updatedProject._id) {
-        project = updatedProject;
-      }
-    });
-
-    dispatch(updateProject(actualProject._id, updatedProject));
-    dispatch(loadProjects());
-  }
-
   return (
     <section className="landing" id="landing">
       {projectList.length ? projectList.map((project) => (
-        <div className="landing__project">
+        <div className="landing__project" key={project._id}>
           <div className="landing__project__top">
             <div className="landing__project__top__details">
               <Link to={`/detail/${project._id}`} className="project__anchor">
@@ -75,7 +40,7 @@ function Landing({ projectList, dispatch }) {
               </a>
             </div>
             <div className="landing__project__top__subscribe">
-              <button type="button" className="subscribe__button" id={`${project._id}-button`} onClick={() => addUserToParticipants(user, project, projectList, { id: `${project._id}-button` })}>Subscribe</button>
+              <button type="button" className="subscribe__button" id={`${project._id}-button`} onClick={() => addUserToParticipants(user, project, projectList, { id: `${project._id}-button` }, dispatch)}>Subscribe</button>
             </div>
           </div>
           <div className="landing__project__bottom">
