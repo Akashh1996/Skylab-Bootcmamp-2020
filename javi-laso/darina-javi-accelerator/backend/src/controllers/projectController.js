@@ -9,14 +9,21 @@ function projectController(projectSchema) {
       .exec(getCallBack);
   }
 
-  function postProjectMethod(req, res) {
+  async function postProjectMethod(req, res) {
     const project = { ...req.body };
     project.categories = project.categories.split(',').map((category) => category.trim());
 
     const postCallback = (postError, newProject) => (
       postError ? res.send(postError) : res.send(newProject)
     );
-    projectSchema.create(project, postCallback);
+
+    const newProject = projectSchema.findOneAndUpdate(
+      { ...project },
+      { ...project },
+      { upsert: true, new: true },
+    );
+    newProject.populate('creator');
+    newProject.exec(postCallback);
   }
 
   return { getProjectsMethod, postProjectMethod };
