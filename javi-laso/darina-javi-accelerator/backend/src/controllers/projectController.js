@@ -11,7 +11,7 @@ function projectController(projectSchema) {
 
   function postProjectMethod(req, res) {
     const project = { ...req.body };
-    project.categories = project.categories.split(',').map((category) => category.trim());
+    project.categories = project.categories.split(',').map((category) => category.trim().toLowerCase());
 
     const postCallback = (postError, newProject) => (
       postError ? res.send(postError) : res.send(newProject)

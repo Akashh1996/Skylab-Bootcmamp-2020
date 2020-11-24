@@ -1,0 +1,17 @@
+.filters-container {
+  margin: 20px;
+  border: 1px solid black;
+  padding: 20px 40px;
+  min-width: 250px;
+  background-color: rgb(245, 245, 245);
+  height: 100%;
+}
+
+.filter-label {
+  text-transform: capitalize;
+}
+
+.filter-btn {
+  margin-bottom: 20px;
+  min-width: 120px;
+}

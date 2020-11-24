@@ -8,6 +8,8 @@ const actionTypes = {
   USER_LOGOUT: 'USER_LOGOUT',
   LOAD_USER: 'LOAD_USER',
   LOAD_USER_ERROR: 'LOAD_USER_ERROR',
+  APPLY_FILTERS: 'APPLY_FILTERS',
+  RESET_FILTERS: 'RESET_FILTERS',
 };
 
 export default actionTypes;
