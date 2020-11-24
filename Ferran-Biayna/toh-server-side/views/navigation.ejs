@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of Heroes - Navigation</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <div>
+        <header>
+            <h1>Tour of Heroes</h1>
+            <nav class="navigation">
+                <a href="./home.html" class="nav-button">Dashboard</a>
+            </nav>
+        </header>
+        <main>
+            <h2 class="list-heroes-title">List of Heroes</h2>
+            <ul id="list-heroes-list">
+                <%heroes.map((hero) =>{%><a href=<%=`http://localhost:5000/heroes/${hero._id}`%>><li><%=hero.name%></li></a><%});%>
+            </ul>
+        </main>
+    </div>
+</body>
+</html>

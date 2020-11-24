@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet"  type="text/css" href="/css/home.css">
+</head>
+<body>
+    <div>
+        <header>
+            <h1>Tour of Heroes</h1>
+            <nav class="navigation">
+                <a href="./home.html" class="nav-button">Dashboard</a>
+                <a href="./" class="nav-button">Heroes</a>
+            </nav>
+        </header>
+        <main>
+            <div class="hero-info">
+                <img id="hero" src="<%=hero.images.sm%>">
+                <div class="info">
+                    <h2 class="detail-heroes-title">Hero - Detail</h2>
+                    <div class="id">
+                        <span>Id: <%=hero.id%> </span>
+                    </div>
+                    <div class="name">
+                        <span>Name: <%=hero.name%></span>
+                    </div>
+                </div>
+            </div>
+            <div class="description">
+                <div id="box-all"></div>
+                <h2 class="top-heroes-title">Appearance</h2>
+                <ul id="appearance">
+                </ul>
+                <h2 class="top-heroes-title">Biography</h2>
+                <ul id="biography"></ul>
+                <h2 class="top-heroes-title">Work</h2>
+                <ul id="work"></ul>
+                <h2 class="top-heroes-title">Connections</h2>
+                <ul id="connections"></ul>
+            </div>
+        </main>
+    </div>
+    <script>
+                document.getElementById('id-text').innerHTML = id;
+        document.getElementById('name-text').value = store.getHeroById(id).name;
+        document.getElementById('box-all').innerHTML = store.powerHero(id)
+        document.getElementById('appearance').innerHTML = store.descriptionHero(id,'appearance')
+        document.getElementById('biography').innerHTML = store.descriptionHero(id,'biography')
+        document.getElementById('work').innerHTML = store.descriptionHero(id,'work')
+        document.getElementById('connections').innerHTML = store.descriptionHero(id,'connections')
+        document.getElementById('hero').src = Object.entries(store.getHeroById(id).images)[1][1]
+    </script>
+</body>
+</html>
