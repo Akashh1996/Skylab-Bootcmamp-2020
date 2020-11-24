@@ -43,21 +43,27 @@ describe('projectController', () => {
     });
 
     test('shoould call send', () => {
-      projectSchema.create = jest.fn().mockImplementationOnce((query, callback) => (
-        callback()
-      ));
+      projectSchema.findOneAndUpdate = jest.fn().mockReturnValueOnce({
+        populate: jest.fn(),
+        exec: jest.fn().mockImplementationOnce((callback) => {
+          callback(false, 'abc');
+        }),
+      });
 
       projectController.postProjectMethod(req, res);
-      expect(res.send).toHaveBeenCalled();
+      expect(res.send).toHaveBeenCalledWith('abc');
     });
 
     test('shoould call send with error', () => {
-      projectSchema.create = jest.fn().mockImplementationOnce((query, callback) => (
-        callback(true)
-      ));
+      projectSchema.findOneAndUpdate = jest.fn().mockReturnValueOnce({
+        populate: jest.fn(),
+        exec: jest.fn().mockImplementationOnce((callback) => {
+          callback(true);
+        }),
+      });
 
       projectController.postProjectMethod(req, res);
-      expect(res.send).toHaveBeenCalled();
+      expect(res.send).toHaveBeenCalledWith(true);
     });
   });
 });
