@@ -11,13 +11,13 @@
         <header>
             <h1>Tour of Heroes</h1>
             <nav class="navigation">
-                <a href="./home.html" class="nav-button">Dashboard</a>
-                <a href="./navigation.html" class="nav-button">Heroes</a>
+                <a href="./" class="nav-button">Heroes</a>
             </nav>
         </header>
         <main>
             <h2 class="top-heroes-title">Top Heroes</h2>
             <ul id="top-heroes-list">
+            <%dashboard.slice(0, 4).map((hero) => {%><a href=<%=`http://localhost:5000/heroes/hero/${hero._id}`%>><li><%=hero.name%></li></a><%});%>
             </ul>
         </main>
     </div>

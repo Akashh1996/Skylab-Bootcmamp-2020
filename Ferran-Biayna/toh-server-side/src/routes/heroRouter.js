@@ -11,7 +11,7 @@ function heroRouter(Hero) {
   router.route('/')
     .get(heroes.getMethod);
 
-  router.route('/:heroId')
+  router.route('/hero/:heroId')
     .get(hero.getMethod);
 
   return router;

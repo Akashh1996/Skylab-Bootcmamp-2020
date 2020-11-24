@@ -7,6 +7,7 @@ const cors = require('cors');
 const { connect } = require('mongoose');
 const Hero = require('./src/models/superHeroModel.js');
 const heroRouter = require('./src/routes/heroRouter')(Hero);
+const dashboardRouter = require('./src/routes/dashboardRouter')(Hero);
 
 const app = express();
 app.use(cors());
@@ -21,7 +22,9 @@ app.use(bodyParser.json());
 connect(dataBaseURL, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(express.static(`${__dirname}/public`));
+app.use(express.static(`${__dirname}/store`));
 app.use('/heroes', heroRouter);
+app.use('/heroes/dashboard', dashboardRouter);
 
 app.listen(port, () => {
   debug(`Server is running on port ${chalk.blue(port)}`);
