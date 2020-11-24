@@ -1,0 +1,72 @@
+@import '../../scss-variables/scss-variables';
+
+.details * {
+  font-size: 25px;
+}
+
+.details__top {
+  width: 90vw;
+  border-bottom: 1px solid $primary-color;
+  margin-bottom: 50px;
+}
+
+.details__title {
+  font-size: $title-font-size;
+  padding-bottom: 15px;
+}
+
+.add-to-cart-btn {
+  padding: 10px;
+  font-size: 22px;
+  background-color: $secondary-color;
+  outline: none;
+  border-radius: 8px;
+  height: 50px;
+  border: 1px solid black;
+	transition: 0.3s ease-in-out;
+}
+
+.add-to-cart-btn:hover {
+  background-color: $secondary-color-shadow;
+}
+
+.add-to-cart-btn:focus {
+  outline: none;
+}
+
+.mob-vertical {
+  flex-direction: column;
+}
+
+.details__image {
+  width: 400px;
+  height: 400px;
+  box-shadow: 3px 3px 5px $primary-color;
+}
+
+.details__info {
+  margin-left: 50px;
+}
+
+.details__type {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.details__prev-price {
+  text-decoration: line-through black;
+  color: $price-color;
+}
+
+.details__price {
+  font-size: 45px;
+  font-weight: 600;
+  color: $price-color;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+@media screen and (min-width: 749px) {
+  .mob-vertical {
+    flex-direction: row;
+  }
+}
