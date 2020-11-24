@@ -1,0 +1,15 @@
+@import '../../../scss-variables/scss-variables';
+
+main {
+  padding: 40px 0px 0px 40px;
+}
+
+.list-title {
+  font-size: $title-font-size;
+  color: black;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}

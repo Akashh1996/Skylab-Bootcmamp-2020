@@ -1,0 +1,52 @@
+@import '../../../scss-variables/_scss-variables';
+
+.card__margins{
+  margin: 40px 30px 0px 0px;
+
+}
+
+.card-element {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  width: 350px;
+  height: 500px;
+  box-shadow: 3px 3px 5px black;
+  background-color: white;
+  padding: 0px 15px;
+}
+
+.card__img {
+  object-fit: contain;
+  height: 300px;
+  width: 300px;
+}
+
+.card__title {
+  text-transform: uppercase;
+  font-size: $secondary-title-font-size;
+}
+
+.card__manufacturer {
+  text-transform: capitalize;
+}
+
+.card__price {
+  font-size: 30px;
+}
+
+.card__name, 
+.card__manufacturer,
+.card__type {
+  font-size: 25px;
+}
+
+.card__name,
+.card__type {
+  color: black;
+}
+
+.card__manufacturer {
+  text-transform: capitalize;
+}

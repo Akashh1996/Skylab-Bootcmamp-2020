@@ -1,0 +1,57 @@
+.card__margins {
+  margin: 40px 30px 0px 0px;
+}
+
+.card-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  width: 350px;
+  height: 500px;
+  -webkit-box-shadow: 3px 3px 5px black;
+          box-shadow: 3px 3px 5px black;
+  background-color: white;
+  padding: 0px 15px;
+}
+
+.card__img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 300px;
+  width: 300px;
+}
+
+.card__title {
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.card__manufacturer {
+  text-transform: capitalize;
+}
+
+.card__price {
+  font-size: 30px;
+}
+
+.card__name,
+.card__manufacturer,
+.card__type {
+  font-size: 25px;
+}
+
+.card__name,
+.card__type {
+  color: black;
+}
+
+.card__manufacturer {
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=listElement.css.map */
