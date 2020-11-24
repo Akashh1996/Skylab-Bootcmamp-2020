@@ -10,6 +10,7 @@ const heroRouter = require('./src/routes/heroRouter')(Hero);
 
 const app = express();
 const port = process.env.PORT || 5000;
+const endpoints = [{methods: ['GET', 'PUT'], url: '/' }]
 
 mongoose.connect('mongodb://localhost/superHeroDB', { useNewUrlParser: true, useUnifiedTopology: true });
 
@@ -23,7 +24,7 @@ app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dis
 app.use('/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/views', 'index.html'));
+  res.render('index.ejs', endpoints);
 });
 
 app.use('/heroes', heroRouter);
