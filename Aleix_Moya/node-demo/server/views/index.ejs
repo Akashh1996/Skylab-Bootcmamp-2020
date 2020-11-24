@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <%= Hola %>
+   <h1>Hola</h1> 
+   <ul>  
+        <% heroes.map((hero) => { %>
+            <li><%= hero.name %></li>
+        <% }) %>
+   </ul>
 </body>
 </html>
