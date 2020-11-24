@@ -83,7 +83,6 @@ export function loginUser() {
     const endpoint = githubUrl;
     try {
       const userData = await axios.get(endpoint);
-      console.log(userData);
       dispatch(requestLoginSuccess(userData.data));
     } catch (error) {
       dispatch(requestLoginError(error));

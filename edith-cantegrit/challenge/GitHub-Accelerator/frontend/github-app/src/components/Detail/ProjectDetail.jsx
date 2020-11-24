@@ -16,12 +16,12 @@ function ProjectDetail({ match, projectDetail, dispatch }) {
   }, []);
   return (
     <main>
-      <h1>Projects</h1>
+      <h1 id="sectionDetail">Projects</h1>
       {projectDetail
       && (
       <div>
-        <h2>{projectDetail.name}</h2>
-        <h3>{projectDetail.description}</h3>
+        <h2 id="titleDetail">{projectDetail.name}</h2>
+        <h3 id="descriptionDetail">{projectDetail.description}</h3>
       </div>
       )}
     </main>
