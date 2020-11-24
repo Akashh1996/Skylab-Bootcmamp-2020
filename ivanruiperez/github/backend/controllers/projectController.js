@@ -7,7 +7,7 @@ function projectController(Project) {
   }
 
   function putMethod(req, res) {
-    const query = req.body;
+    const query = req.body.newProject;
     Project.create(query, (errorPutProject, project) => (
       errorPutProject ? res.send(errorPutProject) : res.json(project)
     ));
