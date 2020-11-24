@@ -1,27 +1,29 @@
 const express = require('express');
+const cors = require('cors');
 const path = require('path');
 const debug = require('debug')('app');
 const chalk = require('chalk');
+const mongoose = require('mongoose');
 const morgan = require('morgan');
+const bodyParser = require('body-parser');
+const Hero = require('./src/models/heroModel');
+const heroRouter = require('./src/routes/heroRouter')(Hero);
 
 const app = express();
+app.use(cors());
 const port = process.env.PORT || 5000;
+
+mongoose.connect('mongodb://localhost/heroesdB', { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(morgan('tiny'));
 
-app.use(express.static(path.join(__dirname, '/public/')));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname, 'src/view/', '/index.html'));
-})
-app.get('/rakuten', (req, res) => {
-	res.sendFile(path.join(__dirname, 'src/view/', '/rakuten.html'));
-})
-app.get('/lunarillos', (req, res) => {
-	res.sendFile(path.join(__dirname, 'src/view/', '/lunarillos.html'));
-})
+app.set('view engine', 'ejs');
 
+app.use('/heroes', heroRouter);
 
 app.listen(port, () => {
-	debug(`Server is running in port ${chalk.green(port)}...`);
+	debug(`Server is running in port ${chalk.blue(port)}...`);
 });
