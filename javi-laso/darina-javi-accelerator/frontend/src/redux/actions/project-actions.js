@@ -78,3 +78,16 @@ export function requestProjectDetail(_id) {
     }
   };
 }
+
+export function applyFilters(checkedInputsValues) {
+  return {
+    type: actionTypes.APPLY_FILTERS,
+    values: checkedInputsValues,
+  };
+}
+
+export function resetFilters() {
+  return {
+    type: actionTypes.RESET_FILTERS,
+  };
+}
