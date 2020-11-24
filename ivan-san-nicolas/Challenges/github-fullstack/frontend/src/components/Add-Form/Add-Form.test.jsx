@@ -6,6 +6,7 @@ import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
+import { Simulate } from 'react-dom/test-utils';
 import AddForm from './AddForm';
 import { sendForm } from '../../redux/actions/gitActions';
 
@@ -60,12 +61,21 @@ describe('Add-Form', () => {
     expect(window.history.back).toHaveBeenCalled();
   });
 
-  test('should call changeProperty when there is a change in projectDescription', () => {
+  test('should change the value of description input when there is a change in projectDescription', () => {
     wrapper = wrapperFactory({ gitReducer: { projectArray: [] } });
     window.history.back = jest.fn();
     render(<AddForm />, { wrapper });
     const descriptionInput = document.getElementById('project-description');
-    descriptionInput.onchange('50');
+    Simulate.change(descriptionInput, { target: { value: '50' } });
     expect(descriptionInput.value).toBe('50');
+  });
+
+  test('should change the value of title input when there is a change in projectTitle', () => {
+    wrapper = wrapperFactory({ gitReducer: { projectArray: [] } });
+    window.history.back = jest.fn();
+    render(<AddForm />, { wrapper });
+    const titleInput = document.getElementById('project-title');
+    Simulate.change(titleInput, { target: { value: '50' } });
+    expect(titleInput.value).toBe('50');
   });
 });
