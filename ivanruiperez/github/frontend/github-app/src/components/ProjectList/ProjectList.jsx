@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
-import { loadProjects } from '../../redux/actions/projectActions';
+import { loadProjects, createProject } from '../../redux/actions/projectActions';
 import './ProjectList.css';
 
 function ProjectList({ projectList, dispatch }) {
@@ -15,7 +15,7 @@ function ProjectList({ projectList, dispatch }) {
   const [newCreator, setNewCreator] = useState('');
 
   const newProject = {
-    participants: newParticipants.split(','),
+    participants: newParticipants,
     name: newName,
     description: newDescription,
     url: newurl,
@@ -23,10 +23,10 @@ function ProjectList({ projectList, dispatch }) {
   };
 
   useEffect(() => {
-    if (!projectList || projectList.length === 0) {
+    if (!projectList || projectList?.length === 0) {
       dispatch(loadProjects());
     }
-  }, []);
+  }, [projectList, projectList?.length]);
 
   return (
     <main>
@@ -46,7 +46,7 @@ function ProjectList({ projectList, dispatch }) {
           </Link>
         ))}
       <input
-        onChange={(event) => setNewParticipants.push((event.target.value).split(' '))}
+        onChange={(event) => setNewParticipants((event.target.value).split(' '))}
         value={newParticipants}
         placeholder="Enter new participants"
       />
@@ -70,7 +70,7 @@ function ProjectList({ projectList, dispatch }) {
         value={newCreator}
         placeholder="Enter a new creator"
       />
-      <button type="button" onClick={() => dispatch(enterProjectInList(newProject))}>Add Project</button>
+      <button type="button" onClick={() => dispatch(createProject(newProject))}>Add Project</button>
     </main>
   );
 }

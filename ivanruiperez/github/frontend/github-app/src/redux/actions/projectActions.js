@@ -3,6 +3,7 @@ import axios from 'axios';
 import actionTypes from './actionTypes';
 
 const projectUrl = 'http://localhost:5500/projects';
+const githubUrl = 'http://localhost:5500/github';
 
 export function loadProjectsSuccess(projects) {
   return {
@@ -51,6 +52,38 @@ export function loadProject(productId) {
       dispatch(requestProjectSuccess(project.data));
     } catch (error) {
       dispatch(requestProjectError(error));
+    }
+  };
+}
+
+export function createProject(newProject) {
+  return async () => {
+    const endpoint = projectUrl;
+    await axios.put(endpoint, { newProject });
+  };
+}
+
+function requestLoginSuccess(login) {
+  return {
+    type: actionTypes.LOAD_LOGIN,
+    login,
+  };
+}
+function requestLoginError(errorlogin) {
+  return {
+    type: actionTypes.LOAD_LOGIN_ERROR,
+    errorlogin,
+  };
+}
+export function loginUser() {
+  return async (dispatch) => {
+    const endpoint = githubUrl;
+    try {
+      const userData = await axios.get(endpoint);
+      console.log(userData);
+      dispatch(requestLoginSuccess(userData.data));
+    } catch (error) {
+      dispatch(requestLoginError(error));
     }
   };
 }
