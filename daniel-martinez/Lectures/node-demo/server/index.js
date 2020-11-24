@@ -5,6 +5,7 @@ const chalk = require('chalk');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const heroes = require('./public/heroes.json');
 const Hero = require('./src/models/superHeroModel');
 const heroRouter = require('./src/routes/heroRouter')(Hero);
 
@@ -24,17 +25,17 @@ app.use(express.static(path.join(__dirname, '/public/')));
 app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css')));
 app.use('/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')));
 
-const endpoints = [
-  { methods: ['GET', 'PUT'], url: '/heroes' },
-  { methods: ['GET', 'POST', 'DELETE'], url: '/heroes/{heroId}' },
-];
-
+const topHeroes = heroes.slice(0, 4);
 app.get('/', (req, res) => {
-  res.render('index', { endpoints });
+  res.render('dashboard', { topHeroes });
 });
 
 app.get('/heroes', (req, res) => {
-  res.render('about');
+  res.render('heroes', { heroes });
+});
+
+app.get('/heroes/:heroId', (req, res) => {
+  res.render('detail', { heroes });
 });
 
 app.use('/api/heroes', heroRouter);
