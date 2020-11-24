@@ -1,0 +1,4 @@
+.listHeroes {
+    display: flex; 
+    flex-direction: column;
+}
