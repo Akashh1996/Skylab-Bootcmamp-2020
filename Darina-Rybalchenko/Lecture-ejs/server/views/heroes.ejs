@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skykab Coder Academy</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <%- include('about') %>
+
+    <main class="container">
+        <h2>Heroes</h2>
+        <div class="card" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+                <% heroes.map((hero) => { %>
+                    <a href="/heroes/<%=hero.id%>"><li class="list-group-item"><%= hero.name %> </li></a>
+                <% })%>
+            </ul>
+        </div>
+    </main>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
