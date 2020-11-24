@@ -11,9 +11,11 @@ const heroRouter = require('./routes/heroRouter')(Hero);
 const app = express();
 const port = process.env.PORT || 5000;
 
-mongoose.connect('mongodb://localhost/heroesdb');
+mongoose.connect('mongodb://localhost/heroesdb', { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(morgan('tiny'));
+
+app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -21,10 +23,6 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '/public')));
 app.use('/css', express.static(path.join(__dirname, '/node_modules/boostrap/dist/css')));
 app.use('/js', express.static(path.join(__dirname, '/node_modules/boostrap/dist/js')));
-
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'backend/views', 'index.html'));
-});
 
 app.use('/heroes', heroRouter);
 

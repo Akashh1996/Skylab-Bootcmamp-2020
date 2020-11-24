@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skykab Coder Academy</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Heroes API</h1>
+        </div>
+    </header>
+    <main class="container">
+        <h2>Methods available</h2>
+        <ul>
+            <li>[<%= endpoints[0].methods.join(', ')%>] <%= endpoints[0].url %></li>
+            <li>[<%= endpoints[1].methods.join(', ')%>] <%= endpoints[1].url %></li>
+        </ul>
+    </main>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
