@@ -23,6 +23,7 @@ describe('actions', () => {
 
     afterEach(() => {
       jest.resetAllMocks();
+      store = null;
     });
 
     test('requestProjects with promise resolved should put action.type LOAD_PROJECTS in the store', async () => {
