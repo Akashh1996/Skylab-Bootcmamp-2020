@@ -9,9 +9,8 @@
    <h1>List</h1> 
    <button>Go To Dashboard</button>
    <ul>  
-        <% heroes.map((hero) => { %>
-            <li><a href='heroes/<%=hero.id%>'><%= hero.name %> id: <%= hero.id%></a></li>
-        <% }) %>
+            <li><%= hero %> id: <%= hero%></li>
+    
    </ul>
 </body>
 </html>

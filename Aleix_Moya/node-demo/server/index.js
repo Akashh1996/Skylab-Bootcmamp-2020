@@ -25,11 +25,10 @@ app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dis
 app.use('/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')));
 
 app.get('/', (req, res) => {
-  res.render('index', { endpoints });
+  res.render('dashboard', { endpoints });
 });
 
 app.use('/heroes', heroRouter);
-
 app.listen(port, () => {
   debug(`Server is running on port ${chalk.blue(port)}`);
 });
