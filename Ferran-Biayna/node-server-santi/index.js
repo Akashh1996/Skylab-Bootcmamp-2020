@@ -11,23 +11,26 @@ const port = process.env.PORT || 1240;
 
 app.use(morgan('tiny'));
 
+app.set('view engine', 'ejs');
+
 app.use(express.static(path.join(__dirname, '/public/')));
 app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')));
 app.use('js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')));
 
+const endpoints = [{methods: ['GET', 'PUT'], url: '/heroes'},
+{methods: ['GET', 'POST','DELETE'], url: '/heroes/{heroId}'}]
+
 app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname, 'src/views', 'index.html'))
+	res.render('index', {endpoints})
 })
 
-app.get('/heroes', (req, res) => {
-	res.sendFile(path.join(__dirname, 'src/views', 'toh-home.html'))
+app.get('api/heroes', (req, res) => {
+	res.render('toh-home');
 })
 
 app.get('/lunarillos', (req, res) => {
-	res.sendFile(path.join(__dirname, 'src/views', 'lunarillos-index.html'))
+	res.render('lunarillos-index')
 })
-
-// app.use('/', testRoute);
 
 app.listen(port, () => {
 	console.log(`server up and running in port ${chalk.blue(port)}`);
