@@ -8,5 +8,4 @@ import { Hero } from './hero';
 })
 
 export class detailComponent {
-  @Input() hero: Hero | undefined;
 }
