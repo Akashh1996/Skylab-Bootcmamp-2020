@@ -8,7 +8,8 @@
   cursor: pointer;
   position: relative;
   left: 0;
-  background-color: #EEE;
+  font-weight: 500;
+  background-color: white;
   margin: .5em;
   padding: .3em 0;
   height: 1.6em;
@@ -17,12 +18,13 @@
 }
 .heroes li:hover {
   color: #607D8B;
-  background-color: #DDD;
+  background-color: rgb(241, 241, 241);
   transform: scale(1.04);
 }
 .heroes li.selected {
   background-color: #BBD8DC;
   color: white;
+  font-weight: 800;
 }
 .heroes li.selected:hover {
   background-color: #a8c2c5;

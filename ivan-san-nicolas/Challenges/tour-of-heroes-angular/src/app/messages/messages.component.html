@@ -1,8 +1,8 @@
-<div *ngIf="messageService.messages.length">
+<div *ngIf="messageService.messages.length" class="messages__section">
 
-  <h2>Messages</h2>
+  <h2>Hero Selections</h2>
+  <div  class="selected__hero" *ngFor='let message of messageService.messages'> {{message}} </div>
   <button class="clear"
-          (click)="messageService.clear()">clear</button>
-  <div *ngFor='let message of messageService.messages'> {{message}} </div>
+          (click)="messageService.clear()">Clear</button>
 
 </div>

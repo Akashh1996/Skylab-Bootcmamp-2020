@@ -1,0 +1,26 @@
+.messages__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 150px;
+  padding: 40px 80px;
+  background-color: white;
+  overflow-y: scroll;
+  scroll-padding: 2px;
+  
+  .selected__hero {
+    margin: 5px 0;
+  }
+  
+  .clear {
+    width: 70px;
+    margin: 10px auto;
+    color: white;
+    background-color: #405061;
+    border-radius: 4px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+}
+
