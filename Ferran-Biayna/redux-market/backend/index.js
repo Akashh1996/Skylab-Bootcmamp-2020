@@ -1,22 +1,23 @@
 const express = require('express');
 const chalk = require('chalk');
 const morgan = require('morgan');
-const mongoose = require('mongoose');
+const { connect } = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const Product = require('./models/productModel');
 const Cart = require('./models/cartModel');
-const productRouter = require('./src/routes/productRouter')(Product, Cart);
+const Products = require('./models/productModel');
+const productRouter = require('./src/routes/productRouter')(Products, Cart);
 const cartRouter = require('./src/routes/cartRouter')(Cart);
 
 const app = express();
 app.use(cors());
 const port = process.env.PORT || 5000;
+const dataBaseURL = process.env.dbURL.trim() || 'mongodb://localhost/reduxMarket';
 
 app.use(morgan('tiny'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-mongoose.connect('mongodb://localhost/reduxMarket');
+connect(dataBaseURL, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use('/products', productRouter);
 app.use('/cart', cartRouter);

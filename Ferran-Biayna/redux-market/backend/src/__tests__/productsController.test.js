@@ -1,5 +1,5 @@
 const Product = require('../../models/productModel');
-const productsController = require('./productsController')(Product);
+const productsController = require('../controllers/productsController')(Product);
 
 describe('productsController', () => {
   test('should call response json on getMethod', () => {

@@ -1,14 +1,16 @@
+/* eslint-disable no-underscore-dangle */
 function productController(Product, Cart) {
-  function getMethod(req, res) {
-    Product.findOne({ id: +req.params.productId }, (errorFindProduct, product) => (errorFindProduct
+  function getMethod({ body }, res) {
+    Product.findOne(body._id, (errorFindProduct, product) => (errorFindProduct
       ? res.send(errorFindProduct)
       : res.json(product)));
   }
 
   function postMethod({ body }, res) {
-    Cart.create(body, (errorAddProduct, newProduct) => (errorAddProduct
-      ? res.send(errorAddProduct)
-      : res.json(newProduct)));
+    Cart.findOneAndUpdate(body, { $inc: { quantity: 1 } }, { upsert: true, new: true },
+      (errorAddProduct, newProduct) => (errorAddProduct
+        ? res.send(errorAddProduct)
+        : res.json(newProduct)));
   }
 
   return {

@@ -6,9 +6,7 @@ function cartRouter(Cart) {
   const cart = cartController(Cart);
 
   router.route('/')
-    .get(cart.getMethod);
-
-  router.route('/:productId')
+    .get(cart.getMethod)
     .delete(cart.deleteMethod);
 
   return router;

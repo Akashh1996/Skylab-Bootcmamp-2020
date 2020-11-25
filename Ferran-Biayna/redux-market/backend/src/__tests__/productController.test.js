@@ -1,11 +1,11 @@
 const Product = require('../../models/productModel');
-const Cart = require('../../models/cartModel')
-const productController = require('./productController')(Product, Cart);
+const Cart = require('../../models/cartModel');
+const productController = require('../controllers/productController')(Product, Cart);
 
 describe('productController', () => {
   test('should call response json on getMethod', () => {
     const req = {
-      params: { productId: '1' },
+      body: { _id: '1' },
     };
     const res = {
       json: jest.fn(),
@@ -22,7 +22,7 @@ describe('productController', () => {
 
   test('should call error on getMethod', () => {
     const req = {
-      params: { productId: '1' },
+      body: { _id: '1' },
     };
     const res = {
       send: jest.fn(),
@@ -39,13 +39,13 @@ describe('productController', () => {
 
   test('should call response json on postMethod', () => {
     const req = {
-      body: { id: '1' },
+      body: { _id: '1', description: 'Skylab mola!' },
     };
     const res = {
       json: jest.fn(),
     };
 
-    Cart.create = jest.fn().mockImplementationOnce((query, callback) => {
+    Cart.findOneAndUpdate = jest.fn().mockImplementationOnce((query, update, options, callback) => {
       callback(false, 'newProduct');
     });
 
@@ -56,13 +56,13 @@ describe('productController', () => {
 
   test('should call error on postMethod', () => {
     const req = {
-      body: { id: '1' },
+      body: { _id: '1', description: 'Skylab mola!' },
     };
     const res = {
       send: jest.fn(),
     };
 
-    Cart.create = jest.fn().mockImplementationOnce((query, callback) => {
+    Cart.findOneAndUpdate = jest.fn().mockImplementationOnce((query, update, options, callback) => {
       callback(true, 'errorAddProduct');
     });
 

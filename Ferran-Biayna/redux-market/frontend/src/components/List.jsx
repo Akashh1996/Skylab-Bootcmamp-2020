@@ -9,7 +9,6 @@ import {
 } from '../actions/productsActions';
 
 function ProductList({ products, dispatch }) {
-  debugger;
   if (!products && !products?.length) {
     dispatch(requestProducts());
   }
@@ -47,6 +46,7 @@ ProductList.propTypes = {
 };
 
 function mapStateToProps({ productsReducer }) {
+  debugger;
   return {
     products: productsReducer.products,
     randomNumber: productsReducer.randomNumber,
