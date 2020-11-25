@@ -6,7 +6,7 @@ function heroesController(Hero) {
       if (errorFindHeroes) {
         res.send(errorFindHeroes);
       }
-      res.json(heroes);
+      res.render('heroes', { heroes });
     });
   }
 

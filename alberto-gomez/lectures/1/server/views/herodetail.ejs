@@ -13,6 +13,17 @@
             <a href="/heroes" class="btn btn-primary">Heroes</a>
         </nav>
     </div>
+<main class="container">
+<h2><%= hero.name %> detail</h2>
+    <ul>
+        <p>ID: <%= hero.id %></p>
+        <p>Name: <%= hero.name %></p>
+    </ul>
+</main>
+
+<%- include('about') %>
+
+
 
     <script src="js/bootstrap.min.js"></script>
 </body>

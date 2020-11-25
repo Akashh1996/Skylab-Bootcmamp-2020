@@ -6,6 +6,7 @@ const chalk = require('chalk');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+
 const Hero = require('./src/models/heroModel');
 const heroRouter = require('./src/routes/heroRouter')(Hero);
 
@@ -16,6 +17,8 @@ mongoose.connect('mongodb://localhost/heroesdb');
 
 app.use(morgan('tiny'));
 
+app.set('view engine', 'ejs');
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -23,8 +26,17 @@ app.use(express.static(path.join(__dirname, '/public/')));
 app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css')));
 app.use('/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')));
 
+const endpoints = [
+  { methods: ['GET', 'PUT'], url: '/heroes' },
+  { methods: ['GET', 'PUT', 'DELETE'], url: '/heroes/{heroId}' },
+];
+
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/views', 'index.html'));
+  res.render('index', { endpoints });
+});
+
+app.get('/about', (req, res) => {
+  res.render('about');
 });
 
 app.use('/heroes', heroRouter);

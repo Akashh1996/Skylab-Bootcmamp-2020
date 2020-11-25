@@ -15,12 +15,14 @@ function heroController(Hero) {
 
   function getMethod(req, res) {
     const heroNumId = +req.params.heroId;
+    console.log(req);
     const query = { id: heroNumId };
-    Hero.find(query, (errorFindHeroes, hero) => {
+    Hero.find(query, (errorFindHeroes, currentHero) => {
       if (errorFindHeroes) {
         res.send(errorFindHeroes);
       } else {
-        res.json(hero);
+        const hero = currentHero[0];
+        res.render('herodetail', { hero });
       }
     });
   }
