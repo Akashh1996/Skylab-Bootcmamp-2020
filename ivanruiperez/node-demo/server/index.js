@@ -5,13 +5,13 @@ const chalk = require('chalk');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const Hero = require('./src/models/superHeroModel');
+const Hero = require('./src/models/heroModel');
 const heroRouter = require('./src/routes/heroRouter')(Hero);
 
 const app = express();
 const port = process.env.PORT || 5000;
 
-mongoose.connect('mongodb://localhost/superHeroDB', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://localhost/heroesdb', { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(morgan('tiny'));
 

@@ -1,8 +1,20 @@
 function heroController(Hero) {
-  function getMethod(req, res) {
-    res.json(req.hero);
+  function allMiddleware(req, res, next) {
+    req.hero = +req.params.heroId;
+    next();
   }
 
+  function getMethod(req, res) {
+    const query = { id: req.hero };
+    Hero.find(query, (error, actualHero) => {
+      if (error) {
+        res.send(error);
+      } else {
+        const hero = actualHero[0];
+        res.render('detail', { hero });
+      }
+    });
+  }
   function postMethod(req, res) {
     const updatedHero = {
       ...req.hero,
@@ -20,11 +32,6 @@ function heroController(Hero) {
     Hero.deleteHero(id);
 
     res.json(Hero.getHeroes());
-  }
-
-  function allMiddleware(req, res, next) {
-    req.hero = Hero.getHeroById(+req.params.heroId);
-    next();
   }
 
   return {

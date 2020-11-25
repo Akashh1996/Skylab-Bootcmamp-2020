@@ -12,6 +12,9 @@ function heroRouter(Hero) {
     .get(heroes.getMethod)
     .put(heroes.putMethod);
 
+  router.route('/dashboard')
+    .get(heroes.getMethod);
+
   router.route('/:heroId')
     .all(hero.allMiddleware)
     .get(hero.getMethod)
