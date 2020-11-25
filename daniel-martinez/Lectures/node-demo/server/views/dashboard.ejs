@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tour of Heroes</title>
+		<link href="/dashboard.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<h1>Tour of Heroes</h1>
+		<nav>
+			<a href="/">Dashboard</a>
+			<a href="/heroes">Heroes</a>
+		</nav>
+		<main>
+			<h3>Top Heroes</h3>
+			<div class="grid grid-pad" id="top-heroes__list">
+				<% topHeroes.map((hero) => { %>
+					<% let id = hero.id %>
+					<a href=<%=`/heroes/${hero.id}`%> class="col-1-4">
+					<div class="module hero">
+						<h4><%= hero.name %></h4>
+					</div>
+				</a>
+				<% }) %>
+			</div>
+		</main>
+<!-- 		<script>		
+			store.loadHeroes().then(() => {
+				const heroes = store.getTopHeroes();
+				const dashbaordComponent = new DashboardComponent(heroes);
+				if (heroes) {
+					let element = document.getElementById('top-heroes__list');
+					dashbaordComponent.updateHtmlHeroList(element);
+				}
+			});
+		</script> -->
+	</body>
+</html>

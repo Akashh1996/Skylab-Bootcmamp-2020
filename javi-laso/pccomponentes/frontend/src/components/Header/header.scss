@@ -1,0 +1,35 @@
+@import "../../scss-variables/_scss-variables.scss";
+
+.header__navbar {
+  background-color: $primary-color;
+  height: $navbar-height;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  padding: 20px 40px;
+}
+
+.header__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 90px;
+  background-color: $secondary-color;
+  border-radius: 5px;
+  color: $primary-color;
+  font-weight: bold;
+}
+
+.cart-btn {
+  padding: 8px 15px;
+  width: auto;
+  height: 50px;
+}
+
+.cart-items {
+  font-size: 25px;
+  margin-left: 15px;
+}

@@ -1,0 +1,44 @@
+.header__navbar {
+  background-color: #464646;
+  height: 90px;
+  width: 100vw;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  padding: 20px 40px;
+}
+
+.header__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  width: 90px;
+  background-color: #f1d600;
+  border-radius: 5px;
+  color: #464646;
+  font-weight: bold;
+}
+
+.cart-btn {
+  padding: 8px 15px;
+  width: auto;
+  height: 50px;
+}
+
+.cart-items {
+  font-size: 25px;
+  margin-left: 15px;
+}
+/*# sourceMappingURL=header.css.map */

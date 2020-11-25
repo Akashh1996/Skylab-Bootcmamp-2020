@@ -1,0 +1,13 @@
+.newProject__section {
+	max-width: 400px;
+	margin: auto;
+	min-height: 70vh;
+}
+
+.text-area {
+	resize: none;
+}
+h1 {
+	text-align: center;
+	color: gray;
+}

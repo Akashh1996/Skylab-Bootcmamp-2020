@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skykab Coder Academy</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+    <%- include('about') -%>
+
+    <main class="container">
+        <h2>Hero detail</h2>
+        <div class="card bg-light mb-3" style="max-width: 18rem;">
+          <div class="card-header"><%= heroFounded?.name %></div>
+          <div class="card-body">
+            <h5 class="card-title">Gender:<%= heroFounded?.appearance.gender %></h5>
+            <p class="card-text">Race:<%= heroFounded?.appearance.race %></p>
+            <p class="card-text">Eye Color:<%= heroFounded?.appearance.eyeColor %></p>
+          </div>
+        </div>
+    </main>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
