@@ -15,10 +15,11 @@
     <main class="container">
         <h2>Methods available</h2>
         <ul>
-            <li>[GET, PUT] /heroes</li>
+            <li>[<%= endpoints[1].methods.join(', ') %>] <%= endpoints[0].url %></li>
             <li>[GET, POST, DELETE] /heroes/{heroId}</li>
         </ul>
     </main>
+
     <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

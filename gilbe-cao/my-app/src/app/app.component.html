@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+
+<ul>
+    <ng-container *ngFor="let hero of heroes">
+        <li *ngIf="hero.id !== 13" (click)="selectedHero = hero">
+            {{hero.id}}: {{hero.name}}
+        </li>
+    </ng-container>
+</ul>
+
+<app-hero-details [hero]="selectedHero"></app-hero-details>
