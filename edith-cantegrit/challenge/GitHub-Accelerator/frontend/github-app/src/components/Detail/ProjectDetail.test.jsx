@@ -5,7 +5,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-// import { loadProject } from '../../redux/actions/projectActions';
 import ProjectDetail from './ProjectDetail';
 
 jest.mock('../../redux/actions/projectActions');
