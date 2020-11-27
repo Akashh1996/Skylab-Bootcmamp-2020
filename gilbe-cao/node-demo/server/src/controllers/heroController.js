@@ -1,6 +1,17 @@
 function heroController(Hero) {
-  function getMethod(req, res) {
-    res.json(req.hero);
+  function allMiddleware(req, res, next) {
+    const heroNumId = +req.params.heroId;
+    const query = { id: heroNumId };
+    Hero.findOne(query, (errorFindHero, hero) => {
+      if (hero) {
+        req.hero = hero;
+        next();
+      }
+    });
+  }
+
+  function getMethod({ hero }, res) {
+    res.json(hero);
   }
 
   function postMethod(req, res) {
@@ -20,11 +31,6 @@ function heroController(Hero) {
     Hero.deleteHero(id);
 
     res.json(Hero.getHeroes());
-  }
-
-  function allMiddleware(req, res, next) {
-    req.hero = Hero.getHeroById(+req.params.heroId);
-    next();
   }
 
   return {
