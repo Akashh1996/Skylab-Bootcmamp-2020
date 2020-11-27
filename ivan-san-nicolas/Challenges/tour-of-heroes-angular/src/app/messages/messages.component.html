@@ -1,8 +1,15 @@
-<div *ngIf="messageService.messages.length" class="messages__section">
+<div *ngIf="messageService.messages.length">
 
-  <h2>Hero Selections</h2>
-  <div  class="selected__hero" *ngFor='let message of messageService.messages'> {{message}} </div>
+  <h2>Messages</h2>
   <button class="clear"
-          (click)="messageService.clear()">Clear</button>
+          (click)="messageService.clear()">clear</button>
+  <div *ngFor='let message of messageService.messages'> {{message}} </div>
 
 </div>
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

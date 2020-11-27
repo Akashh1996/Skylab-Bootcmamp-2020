@@ -4,13 +4,20 @@ import { MessageService } from '../message.service';
 @Component({
   selector: 'app-messages',
   templateUrl: './messages.component.html',
-  styleUrls: ['./messages.component.scss']
+  styleUrls: ['./messages.component.css']
 })
 export class MessagesComponent implements OnInit {
 
   constructor(public messageService: MessageService) {}
-  
-  ngOnInit(): void {
+
+  ngOnInit() {
   }
 
 }
+
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/

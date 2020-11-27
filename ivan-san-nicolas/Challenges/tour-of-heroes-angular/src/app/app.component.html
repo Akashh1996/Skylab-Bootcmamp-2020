@@ -1,5 +1,14 @@
 <h1>{{title}}</h1>
-<div class="heroes__container">
-  <app-heroes class="heroes__container__heroes"></app-heroes>
-  <app-messages class="heroes__container__messages"></app-messages>
-</div>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/heroes">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
+<app-messages></app-messages>
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
