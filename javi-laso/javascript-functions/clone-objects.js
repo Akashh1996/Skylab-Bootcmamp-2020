@@ -6,7 +6,6 @@ function cloneObject (obj) {
     const objkeys = Object.keys(obj);
     const objvalues = Object.values(obj);
     const newObject = {};
-    debugger;
 
     for(let i = 0; i < objkeys.length; i++) {
         newObject[objkeys[i]] = cloneObject(objvalues[i]);

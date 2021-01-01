@@ -1,0 +1,17 @@
+main {
+  padding: 40px 0px 0px 40px;
+}
+
+.list-title {
+  font-size: 50px;
+  color: black;
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/*# sourceMappingURL=itemList.css.map */

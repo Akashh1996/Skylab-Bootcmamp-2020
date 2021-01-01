@@ -1,0 +1,20 @@
+{
+	"name": "tour-of-superheroes",
+	"version": "1.0.0",
+	"description": "",
+	"main": "datail-store.test.js",
+	"scripts": {
+		"test": "jest",
+		"test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
+		"test:coverage": "jest --collect-coverage --watchAll"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"jest": "^26.6.0"
+	},
+	"dependencies": {
+		"uniq": "^1.0.1"
+	}
+}

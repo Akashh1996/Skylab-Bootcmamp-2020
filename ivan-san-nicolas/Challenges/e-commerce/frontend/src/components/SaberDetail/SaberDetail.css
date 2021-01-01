@@ -1,0 +1,179 @@
+.saber__detail {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 150px 0;
+    background-image: url('https://trello-attachments.s3.amazonaws.com/5f8ca3639574d3550b3ad495/5faf189214f79954c01b58a0/322aa7b171704c08dbc5466a6c9a81d7/star_destroyer_bridge_by_futuro04_d83q8ft-fullview.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.saber__detail__firstRow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.saber__detail__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-left: 50px;
+}
+
+#saber__detail__image {
+    width: 80%;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 4px 4px 5px rgb(29, 29, 29);
+    transition: transform 0.5s;
+}
+
+#saber__detail__image:hover {
+    transform: scale(1.05);
+}
+
+.saber__detail__options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    padding-bottom: 0 20px;
+}
+
+.saber__detail__options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.saber__detail__properties__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    padding-bottom: 30px;
+    color: white;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 3px;
+    box-shadow: 4px 4px 5px rgb(29, 29, 29);
+}
+
+.saber__detail__properties__name {
+    display: flex;
+    justify-content: space-between ;
+    width: 80%;
+}
+
+.saber__detail__properties__specifications {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.specifications-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 5px 20px;
+    color: white;
+    font-weight: 600;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.saber__detail__colorButtons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    color: white;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+.saber__detail__colorButtons__button {
+    padding:8px 30px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.silver-button {
+    color: black;
+    background-color: silver;
+}
+
+.black-button {
+    color: white;
+    background-color: black;
+}
+
+.saber__detail__addToCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addToCart-button {
+    padding: 20px 45px;
+    color: aliceblue;
+    font-weight: 900;
+    border: none;
+    border-radius: 5px;
+    background-color: #141718;
+    box-shadow: 4px 4px 5px black;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.addToCart-button:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+    .saber__detail {
+        flex-direction: column;
+    }
+
+    .saber__detail__image {
+        width: 65%;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+
+    #saber__detail__image {
+        width: 100%;
+    }
+
+    .saber__detail__properties {
+        width: 80%;
+    }
+
+    .saber__detail__properties__text {
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .saber__detail__image {
+        width: 75%;
+    }
+}

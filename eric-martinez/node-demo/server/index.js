@@ -1,20 +1,29 @@
-const http = require('http');
+const express = require('express');
+const cors = require('cors');
+const path = require('path');
+const debug = require('debug')('app');
+const chalk = require('chalk');
+const mongoose = require('mongoose');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+const Hero = require('./src/models/heroModel');
+const heroRouter = require('./src/routes/heroRouter')(Hero);
 
-//req y res son streams
-const requestListener = (req, res) => {
-	console.warn(res, { depth: 0 });
-	// res.end('Mi server funciona');
-	// res.end es lo mismo que write + end;
+const app = express();
+app.use(cors());
+const port = process.env.PORT || 5000;
 
-	res.write('Skylab mola!');
-	res.end();
-};
+mongoose.connect('mongodb://localhost/heroesdB', { useNewUrlParser: true, useUnifiedTopology: true });
 
-const server = http.createServer();
-server.on('request', requestListener);
+app.use(morgan('tiny'));
 
-const port = process.env.PORT || 4242;
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-server.listen(port, () => {
-	console.log(`Server is running in port ${port}...`);
+app.set('view engine', 'ejs');
+
+app.use('/heroes', heroRouter);
+
+app.listen(port, () => {
+	debug(`Server is running in port ${chalk.blue(port)}...`);
 });

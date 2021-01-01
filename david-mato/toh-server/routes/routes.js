@@ -7,7 +7,7 @@ const heroRouter = express.Router();
 function routes() {
 	heroRouter
 		.route('/')
-		.get((req, res) => {
+		.get(async (req, res) => {
 			res.status(200);
 			res.send(heroes);
 		})
@@ -40,7 +40,6 @@ function routes() {
 
 	heroRouter.route('/:heroId').get((req, res) => {
 		const { heroId } = req.params;
-		console.log(req);
 		let hero = heroes.find((hero) => hero.id === +heroId);
 		if (hero) {
 			res.send(hero);

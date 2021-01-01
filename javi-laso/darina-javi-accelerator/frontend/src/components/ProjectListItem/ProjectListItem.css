@@ -1,0 +1,59 @@
+.project-list-container {
+    padding: 20px 40px;
+}
+
+.project-list {
+    list-style-type: none;
+}
+
+.project-link * {
+    text-decoration: none;
+    color: initial;
+}
+
+.project-link:hover * {
+    text-decoration: none;
+    color: initial;
+}
+
+.project-header {
+    background-color: rgb(214, 18, 18);
+    color: white;
+    font-size: 30px;
+}
+
+.project-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.creator-picture {
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+    border-radius: 100px;
+    margin-right: 40px;
+}
+
+.price-separator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.project-price {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.collaborators {
+    font-size: 20px;
+}
+@media screen and (min-width: 600px){
+    .project-body {
+        flex-direction: row;
+    }
+}
