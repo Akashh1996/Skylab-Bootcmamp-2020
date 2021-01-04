@@ -1,7 +1,8 @@
+/* eslint-disable no-debugger */
 import axios from 'axios';
 import actionTypes from './actionTypes';
 
-const URL = 'http://localhost:5000/todos';
+const endpointURL = 'http://localhost:5000/todos';
 
 export function errorRequest(error) {
   return {
@@ -39,10 +40,11 @@ export function updateTodoSuccess(updatedTodo) {
 }
 
 export function loadTodos() {
+  debugger;
   return async (dispatch) => {
     try {
-      const todos = await axios.get(URL);
-      dispatch(loadTodosSuccess(todos));
+      const { data } = await axios.get(endpointURL);
+      dispatch(loadTodosSuccess(data));
     } catch (error) {
       dispatch(errorRequest(error));
     }
@@ -51,7 +53,7 @@ export function loadTodos() {
 export function addTodo(todoToCreate) {
   return async (dispatch) => {
     try {
-      const newTodo = await axios.post(URL, { ...todoToCreate });
+      const newTodo = await axios.post(endpointURL, { ...todoToCreate });
       dispatch(addTodoSuccess(newTodo));
     } catch (error) {
       dispatch(errorRequest(error));
@@ -61,7 +63,7 @@ export function addTodo(todoToCreate) {
 export function deleteTodo(todoToDelete) {
   return async (dispatch) => {
     try {
-      const deletedTodo = axios.delete(URL, { ...todoToDelete });
+      const deletedTodo = axios.delete(endpointURL, { ...todoToDelete });
       dispatch(deleteTodoSuccess(deletedTodo));
     } catch (error) {
       dispatch(errorRequest(error));
@@ -71,7 +73,7 @@ export function deleteTodo(todoToDelete) {
 export function updateTodo(todoToUpdate) {
   return async (dispatch) => {
     try {
-      const updatedTodo = axios.patch(URL, { ...todoToUpdate });
+      const updatedTodo = axios.patch(endpointURL, { ...todoToUpdate });
       dispatch(updateTodoSuccess(updatedTodo));
     } catch (error) {
       dispatch(errorRequest(error));

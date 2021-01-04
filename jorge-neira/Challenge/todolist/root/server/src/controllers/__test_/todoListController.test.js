@@ -3,12 +3,17 @@ const todoListController = require('../todoListController')(Todos);
 
 jest.mock('../../models/todoListModel');
 
-describe('Test TodoList controllers', () => {
-  test('Testing GET methods happy path', () => {
+describe('TodoList controllers', () => {
+  const res = {
+    json: jest.fn(),
+    send: jest.fn(),
+  };
+  const req = {
+    body: { todoId: 1, todoDescription: 'String' },
+  };
+
+  test('GET methods should return json', () => {
     // arrange
-    const res = {
-      json: jest.fn(),
-    };
     Todos.find.mockImplementationOnce((query, callback) => {
       callback(null, null);
     });
@@ -18,11 +23,8 @@ describe('Test TodoList controllers', () => {
     expect(res.json).toHaveBeenCalled();
   });
 
-  test('Test GET Methods not happy path', () => {
+  test('GET Methods should return send if error occurs', () => {
     // arrange
-    const res = {
-      send: jest.fn(),
-    };
     Todos.find.mockImplementationOnce((query, callback) => {
       callback(true, null);
     });
@@ -32,102 +34,66 @@ describe('Test TodoList controllers', () => {
     expect(res.send.mock.calls.length).toBe(1);
   });
 
-  test('Test POST Methods happy path', () => {
+  test('POST Methods Should return json request if no error occurs', () => {
     // arrange
-    const res = {
-      json: jest.fn(),
-    };
-    const req = {
-      body: {},
-    };
-
     Todos.create.mockImplementationOnce((query, callback) => {
       callback(null, null);
     });
+    // act
     todoListController.postMethod(req, res);
-
+    // assert
     expect(res.json).toHaveBeenCalled();
   });
 
-  test('Test POST Methods not happy path', () => {
+  test('POST Methods should return send request if error occurs', () => {
     // arrange
-    const res = {
-      send: jest.fn(),
-    };
-    const req = {
-      body: {},
-    };
-    // act
     Todos.create.mockImplementationOnce((query, callback) => {
       callback(true);
     });
+    // act
     todoListController.postMethod(req, res);
     // assert
     expect(res.send).toHaveBeenCalled();
   });
 
-  test('Test DELETE Methods happy path', () => {
+  test('DELETE Methods should return send request if error occurs', () => {
     // arrange
-    const res = {
-      send: jest.fn(),
-    };
-    const req = {
-      body: { todoId: 1 },
-    };
-    // act
     Todos.deleteOne.mockImplementationOnce((query, callback) => {
       callback(true, null);
     });
+    // act
     todoListController.deleteMethod(req, res);
     // assert
     expect(res.send).toHaveBeenCalled();
   });
-  test('Test DELETE Methods happy path', () => {
+  test('DELETE Methods should return json if no error occurs', () => {
     // arrange
-    const res = {
-      json: jest.fn(),
-    };
-    const req = {
-      body: { todoId: 1 },
-    };
-    // act
     Todos.deleteOne.mockImplementationOnce((query, callback) => {
       callback(null, null);
     });
+    // act
     todoListController.deleteMethod(req, res);
     // assert
     expect(res.json.mock.calls.length).toBe(1);
   });
-  test('Test PATCH Method', () => {
-    const res = {
-      send: jest.fn(),
-    };
-    const req = {
-      body: {},
-    };
-
-    Todos.findOneAndUpdate.mockImplementationOnce(((query1, query2, query3, callback) => {
+  test('PATCH Method should return send request if error occurs', () => {
+    // arrange
+    Todos.findOneAndUpdate.mockImplementationOnce(((query, update, option, callback) => {
       callback(true, null);
     }));
-
+    // act
     todoListController.patchMethod(req, res);
-
+    // assert
     expect(res.send.mock.calls.length).toBe(1);
   });
-  test('Test PATCH Method not happy path', () => {
-    const res = {
-      json: jest.fn(),
-    };
-    const req = {
-      body: {},
-    };
-
-    Todos.findOneAndUpdate.mockImplementationOnce(((query1, query2, query3, callback) => {
+  test('PATCH Method should return json with the new objectUpdated request if no error occurs', () => {
+    // arrange
+    Todos.findOneAndUpdate.mockImplementationOnce(((query, update, option, callback) => {
       callback(null, true);
     }));
-
+    // act
     todoListController.patchMethod(req, res);
-
+    // assert
     expect(res.json.mock.calls.length).toBe(1);
   });
 });

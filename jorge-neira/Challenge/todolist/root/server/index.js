@@ -10,8 +10,10 @@ const todoListRouter = require('./src/routes/todoListRouter')(Todos);
 
 const todoApp = express();
 const port = process.env.PORT || 5000;
+const dbURL = process.env.DB || 'mongodb://localhost/todoslistdb';
+const serverMessage = 'Server is running on port';
 
-mongoose.connect('mongodb://localhost:27017/todoslistdb', { useNewUrlParser: true });
+mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true });
 
 todoApp.use(cors());
 todoApp.use(morgan('tiny'));
@@ -21,5 +23,5 @@ todoApp.use(bodyParser.json());
 todoApp.use('/', todoListRouter);
 
 todoApp.listen(port, () => {
-  debug(`Server is running on port ${chalk.yellowBright(port)}`);
+  debug(`${serverMessage}${chalk.yellowBright(port)}`);
 });
