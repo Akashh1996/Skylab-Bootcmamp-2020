@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: [
     'plugin:react/recommended',
@@ -18,6 +19,7 @@ module.exports = {
     'react',
   ],
   rules: {
+    'no-underscore-dangle': [2, { allow: ['_id', '__REDUX_DEVTOOLS_EXTENSION_COMPOSE__'] }],
     'linebreak-style': 0,
     'global-require': 0,
     'eslint linebreak-style': [0, 'error', 'windows'],

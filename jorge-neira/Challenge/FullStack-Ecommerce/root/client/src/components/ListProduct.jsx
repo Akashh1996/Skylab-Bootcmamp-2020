@@ -1,29 +1,24 @@
-/* eslint-disable react/prop-types */
-import React from 'react';
+/* eslint-disable no-debugger */
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { loadProductList, addProductToCart } from '../redux/actions/productsActions';
 import ListCreateProduct from './ListCreateProduct';
 
-function ListProduct({ products, dispatch }) {
-  if (!products) {
-    dispatch.loadProductList();
-  }
+function ListProduct({ products, actions }) {
+  useEffect(() => {
+    if (products.length < 0) {
+      actions.loadProductList();
+    }
+  }, []);
   return (
     <div>
       <h1>Asus Market</h1>
       <section>
-        {products && products.map((product) => (
+        {products.length > 0 && products.map((product) => (
           <ListCreateProduct
-            onAddToCartClicked={() => addProductToCart(
-              {
-                cartId: Date.now(),
-                productName: product['product-name'],
-                productModel: product['product-model'],
-                price: product.price,
-              },
-            )}
+            onAddToCartClicked={(data) => addProductToCart(data)}
             data={product}
             key={performance.now()}
           />
@@ -34,21 +29,26 @@ function ListProduct({ products, dispatch }) {
 }
 
 ListProduct.propTypes = {
-  dispatch: PropTypes.shape({
+  products: PropTypes.arrayOf(PropTypes.objectOf),
+  actions: PropTypes.shape({
     loadProductList: PropTypes.func.isRequired,
     addProductToCart: PropTypes.func.isRequired,
   }).isRequired,
 };
 
-function mapStateToProps(state) {
+ListProduct.defaultProps = {
+  products: [],
+};
+
+function mapStateToProps({ productReducer }) {
   return {
-    products: state.productReducer.productList,
+    products: productReducer.productList,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatch: bindActionCreators({ loadProductList, addProductToCart }, dispatch),
+    actions: bindActionCreators({ loadProductList, addProductToCart }, dispatch),
   };
 }
 

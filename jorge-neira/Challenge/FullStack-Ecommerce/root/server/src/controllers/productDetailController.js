@@ -1,15 +1,18 @@
-function productDetailController(Products) {
-  function allMiddleware(req, res, next) {
-    req.detail = Products.getProductByProductName(req.params.productName);
-    next();
+function productDetailController(Laptop) {
+  function getMethod({ params }, res) {
+    const model = { _id: params.productName };
+    console.log(Laptop);
+    Laptop.findOne(model)
+      .populate('generalSpecs')
+      .exec(
+        ((errorFindProduct, products) => (
+          errorFindProduct
+            ? res.send(errorFindProduct)
+            : res.json(products))),
+      );
   }
-
-  function getMethod(req, res) {
-    res.json(req.detail);
-  }
-
   return {
-    getMethod, allMiddleware,
+    getMethod,
   };
 }
 

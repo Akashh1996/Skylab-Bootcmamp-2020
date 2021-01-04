@@ -1,22 +1,29 @@
-function productsListController(Products) {
+function cartController(Carts) {
   function getMethod(req, res) {
-    res.json(Products.getCurrentCart());
+    const query = {};
+    Carts.find(query, (errorOnFind, productDoc) => (
+      errorOnFind
+        ? res.send(errorOnFind)
+        : res.json(productDoc)
+    ));
   }
 
   function postMethod(req, res) {
-    const updateCart = {
+    const newItem = {
       ...req.body,
     };
-    Products.addProductToCart(updateCart);
-    res.json(Products.getCurrentCart());
+    Carts.create(newItem, (errorOnCreate) => (
+      errorOnCreate
+        ? res.send(errorOnCreate)
+        : res.json(newItem)));
   }
 
   function deleteMethod(req, res) {
-    const updateCart = {
-      ...req.body,
-    };
-    Products.delProductoFromCart(updateCart);
-    res.json(Products.getCurrentCart());
+    const { _id } = req.body;
+    Carts.deleteOne(_id, (errorOnDelete) => (
+      errorOnDelete
+        ? res.send(errorOnDelete)
+        : res.json(_id)));
   }
 
   return {
@@ -24,4 +31,4 @@ function productsListController(Products) {
   };
 }
 
-module.exports = productsListController;
+module.exports = cartController;

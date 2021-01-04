@@ -4,22 +4,28 @@ const morgan = require('morgan');
 const chalk = require('chalk');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const Products = require('./src/stores/marketStore');
-const productsListRouter = require('./src/routes/marketRouter')(Products);
-const productsDetailRouter = require('./src/routes/marketRouter')(Products);
-const shoppingCart = require('./src/routes/marketRouter')(Products);
+const { connect } = require('mongoose');
+const Laptops = require('./src/models/laptopModel');
+const Carts = require('./src/models/cartModel');
+const Specs = require('./src/models/laptopSpecsModel');
+const laptopsListRouter = require('./src/routes/laptopsRouter')(Laptops);
+const laptopDetailRouter = require('./src/routes/laptopRouter')(Laptops, Specs);
+const shoppingCart = require('./src/routes/cartRouter')(Carts);
 
-const asusApp = express();
+const ecommerceApp = express();
 const port = process.env.PORT || 5000;
+const dbURL = process.env.DBURL || 'mongodb://localhost/marketdb';
+ecommerceApp.use(morgan('tiny'));
 
-asusApp.use(cors());
-asusApp.use(morgan('tiny'));
-asusApp.use(bodyParser.urlencoded({ extended: true }));
-asusApp.use(bodyParser.json());
-asusApp.use('/', productsListRouter);
-asusApp.use('/', productsDetailRouter);
-asusApp.use('/', shoppingCart);
+connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true });
 
-asusApp.listen(port, () => {
+ecommerceApp.use(cors());
+ecommerceApp.use(bodyParser.urlencoded({ extended: true }));
+ecommerceApp.use(bodyParser.json());
+ecommerceApp.use('/', laptopsListRouter);
+ecommerceApp.use('/', laptopDetailRouter);
+ecommerceApp.use('/', shoppingCart);
+
+ecommerceApp.listen(port, () => {
   debug(`Server is running on port ${chalk.yellowBright(port)}`);
 });

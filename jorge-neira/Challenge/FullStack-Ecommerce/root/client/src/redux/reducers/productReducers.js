@@ -1,16 +1,29 @@
 import actionTypes from '../actions/actionsTypes';
 
-const initialState = {};
+const initialState = {
+  cartList: [],
+  productList: [],
+  productDetail: [],
+};
 
 export default function productReducer(state = initialState, action) {
-  switch (action.type) {
+  const {
+    type, cartList, productList, productDetail,
+  } = action;
+  let updateState;
+  switch (type) {
     case actionTypes.LOAD_CART_LIST:
-      return { ...state, cartList: action.cartList };
+      updateState = { ...state, cartList };
+      break;
     case actionTypes.LOAD_PRODUCT_LIST:
-      return { ...state, productList: action.productslist };
+      updateState = { ...state, productList };
+      break;
     case actionTypes.LOAD_PRODUCT_BY_MODEL:
-      return { ...state, productDetail: action.productDetail };
+      updateState = { ...state, productDetail };
+      break;
     default:
-      return state;
+      updateState = state;
+      break;
   }
+  return updateState;
 }
