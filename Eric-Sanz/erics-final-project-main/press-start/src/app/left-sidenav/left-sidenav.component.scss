@@ -1,0 +1,84 @@
+.left__sidenav {
+    transition: .3s;
+    position: fixed;
+    top: 0;
+    margin-top: 80px;
+    left: -400px;
+    height: 100%;
+    width: 350px;
+    border-right: 1px solid #161616;
+    box-shadow: 0px 0px 10px 0px rgba(#000000, 0.9);
+    z-index: 4;
+    ul {
+        background: #f0da14;
+        height: 100vh;
+        margin-top: -1px;
+        padding: 0;
+        .list-sidenav {
+            display: flex;
+            justify-content: space-between;
+            background: #f0da14;
+            height: 40px;
+            padding: 5px;
+            border-bottom: 1px solid #ffffff;
+            margin-bottom: 1px;
+            outline: none;
+            cursor: pointer;
+            p {
+                padding-left: 40px;
+                font-weight: 400;
+                font-size: 20px;
+                margin-top: 10px;
+            }
+            mat-icon {
+                margin-top: 7px;
+                font-size: 30px;
+                padding-right: 25px;
+            }
+        }
+        li:hover {
+            transform: scale(1.02);
+            background: #f7f19f;
+        }
+        .sidenav__newsletter {
+            display: flex;
+            flex-direction: column;
+            padding-left: 45px;
+            padding-top: 20px;
+            height: 80px;
+            border-bottom: 2px solid white;
+            .newsletter__title {
+                margin-top: -5px;
+                display: flex;
+                align-items: center;
+                mat-icon {
+                    margin-left: -8px;
+                    margin-bottom: 11px;
+                }
+                p {
+                    font-weight: 600;
+                }
+            }
+            .newsletter__subscribe {
+                input {
+                    outline: none;
+                    height: 25px;
+                    width: 190px;
+                }
+                button {
+                    height: 30px;
+                    width: 60px;
+                    outline: none;
+                    border: none;
+                    background-color: #161616;
+                    color: white;
+                    border-radius: 2px;
+                    cursor: pointer;
+                }
+                button:active {
+                    color: #f0da14;
+                }
+            }
+        }
+    }
+}

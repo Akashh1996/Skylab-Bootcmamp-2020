@@ -1,0 +1,16 @@
+<app-left-sidenav id="openLeftSideNav" #child></app-left-sidenav>
+<div class="header">
+    <div class="header-container">
+        <div class="header__left">
+            <mat-icon class="openButton" (click)="child.openLeftSidenav()">menu</mat-icon>
+            <mat-icon routerLink="calendar">today</mat-icon>
+            <mat-icon>search</mat-icon>
+        </div>
+        <img routerLink="home" src="https://trello-attachments.s3.amazonaws.com/5fbbd84e8e0ef93bcce1ac96/260x166/8f0fe204a80e710a59b710a40cde07d1/press-start-16-yellow.png" alt="logo">
+        <div class="header__right">
+            <mat-icon>account_circle</mat-icon>
+            <mat-icon routerLink="articles-news">article</mat-icon>
+            <mat-icon class="header-icon__right" routerLink="shopping-cart">shopping_cart</mat-icon>
+        </div>
+    </div>
+</div>

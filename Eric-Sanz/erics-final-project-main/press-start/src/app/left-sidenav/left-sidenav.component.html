@@ -1,0 +1,19 @@
+<section class="left__sidenav" id='toogleLeftSideNav'>
+    <div class="left__sidenav-container">
+        <ul>
+            <li class="list-sidenav" *ngFor="let category of categories" (click)="closeLeftSidenav()" routerLink="{{category.route}}" routerLinkActive="active">
+                <p>{{category.category}}</p>
+                <mat-icon>keyboard_arrow_right</mat-icon>
+            </li>
+            <div class="sidenav__newsletter">
+                <div class="newsletter__title">
+                    <mat-icon>keyboard_arrow_right</mat-icon>
+                    <p>Subscribe to our newsletter:</p>
+                </div>
+                <div class="newsletter__subscribe">
+                    <input type="text" placeholder="Introduce your email"><button type="button">Send</button>
+                </div>
+            </div>
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,54 @@
+<div class="right__sidenav" id='toogleRightSideNav'>
+    <div class="right__sidenav-container">
+        <div *ngIf="auth.user | async as user; else guest">
+            <div class="right__sidenav-signout-container">
+                <fa-icon [icon]="['fas', 'times']" (click)="toggleRightSidenav()"></fa-icon>
+            </div>
+            <div class="user__info-container">
+                <img class="user__profile-picture" src="{{user.photoURL}}" alt="user-photo">
+                <p class="user__profile-name">{{user.displayName}}</p>
+            </div>
+            <ul class="list-container">
+                <li class="list-sidenav" *ngFor=" let category of userCategories" (click)="toggleRightSidenav()" routerLink="{{category.route}}">
+                    <mat-icon>keyboard_arrow_left</mat-icon>
+                    <p>{{category.userCategory}}</p>
+                </li>
+                <li class="list-sidenav" (click)="logout()" (click)="toggleRightSidenav()">
+                    <mat-icon>keyboard_arrow_left</mat-icon>
+                    <p>Sign Out</p>
+                </li>
+            </ul>
+        </div>
+        <ng-template #guest>
+            <div class="right__sidenav-title">
+                <p></p>
+                <fa-icon [icon]="['fas', 'times']" (click)="toggleRightSidenav()"></fa-icon>
+            </div>
+            <div class="signIn-signUp">
+                <p>Sign In | Sign Up</p>
+                <div class="email-container">
+                    <input type="text" placeholder="E-mail" #userEmail >
+                    <fa-icon [icon]="['fas', 'envelope']"></fa-icon>
+                </div>
+                <div class="password-container">
+                    <input [type]="fieldTextType ? 'text' : 'password'" class="password-control" placeholder="Password" #userPassword >
+                    <fa-icon id="eye" [icon]="['fas', 'eye']" (click)="toggleFieldTextType()"></fa-icon>
+                    <fa-icon id="eye-slash" [icon]="['fas', 'eye-slash']" (click)="toggleFieldTextType()"></fa-icon>
+                </div>
+                <p class="forgot-password">Forgot Your Password?</p>
+                <button>Send</button>
+            </div>
+            <div class="other-signIn-methods">
+                <p class="title-methods">Other sign In Methods:</p>
+                <div>
+                    <button class="button-login">
+                        <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                    </button>
+                    <button class="button-login" (click)="login()" (click)="toggleRightSidenav()">
+                        <fa-icon [icon]="['fab', 'google']"></fa-icon>
+                    </button>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</div>

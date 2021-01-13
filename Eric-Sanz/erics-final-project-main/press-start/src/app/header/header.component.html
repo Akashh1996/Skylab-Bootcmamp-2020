@@ -1,0 +1,44 @@
+<app-left-sidenav id="openLeftSideNav" #child></app-left-sidenav>
+<app-search id="feature-search" #child1></app-search>
+<app-right-sidenav #child2></app-right-sidenav>
+<div class="header">
+    <div class="header-container">
+        <div class="header__left">
+            <div class="sidenav-open">
+                <fa-icon id="testbutton" [icon]="['fas', 'bars']" (click)="child.openCloseLeftSidenav()"></fa-icon>
+                <p id="menutest">Menu</p>
+            </div>
+            <div class="calendar-icon">
+                <fa-icon [icon]="['fas', 'calendar-alt']" routerLink="calendar"></fa-icon>
+                <p>Calendar</p>
+            </div>
+            <div class="search-icon">
+                <fa-icon [icon]="['fas', 'search']" (click)="child1.openCloseSearchBar()"></fa-icon>
+                <p>Search</p>
+            </div>
+        </div>
+        <img class="logo-press-start" routerLink="home" src="https://trello-attachments.s3.amazonaws.com/5fbbd84e8e0ef93bcce1ac96/260x166/8f0fe204a80e710a59b710a40cde07d1/press-start-16-yellow.png" alt="logo">
+        <div class="header__right">
+            <div *ngIf="auth.user | async as user; else notlogged">
+                <div class="logged-in" (click)="child2.toggleRightSidenav()">
+                    <fa-icon class="out-icon" [icon]="['fas', 'sign-out-alt']"></fa-icon>
+                    <p class="sign-out">Sign Out</p>
+                </div>
+            </div>
+            <ng-template #notlogged>
+                <div class="signin-icon">
+                    <fa-icon [icon]="['fas', 'sign-in-alt']" (click)="child2.toggleRightSidenav()"></fa-icon>
+                    <p>Sign in</p>
+                </div>
+            </ng-template>
+            <div class="news-articles-icon">
+                <fa-icon [icon]="['fas', 'newspaper']" routerLink="articles-news"></fa-icon>
+                <p>News</p>
+            </div>
+            <div class="shopping-cart-icon">
+                <fa-icon [icon]="['fas', 'shopping-cart']" routerLink="shopping-cart"></fa-icon>
+                <p>Cart</p>
+            </div>
+        </div>
+    </div>
+</div>

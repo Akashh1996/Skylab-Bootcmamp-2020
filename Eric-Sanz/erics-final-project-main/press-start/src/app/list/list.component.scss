@@ -1,0 +1,237 @@
+.carousel {
+    height: 83% !important;
+    .carousel-list {
+        height: 300px !important;
+        margin: none !important;
+        padding: none !important;
+        width: 200px !important;
+        .carousel-slide {
+            height: 250px !important;
+            position: relative !important;
+            background-position: top !important;
+            .carousel-slide-content {
+                position: relative !important;
+            }
+            .carousel-slide-overlay {
+                background-color: none !important;
+                height: 0 !important;
+                width: 0 !important;
+            }
+        }
+    }
+}
+
+mat-carousel{
+    margin-bottom: -40px !important;
+    height: 300px !important;
+}
+
+.list-title {
+    padding-top: 70px;
+    padding-bottom: 20px;
+    padding-left: 110px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.videogame__list-section {
+    padding-top: 10px;
+    background: #d9dede;
+    padding-left: 60px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    .favourites__link {
+        outline: none;
+        border: none;
+    }
+    .favorite__product {
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 400px;
+        width: 250px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+        .product__options {
+            display: inline-flex;
+            margin-top: -3px;
+            .product__onsale {
+                width: 100px;
+                height: 40px;
+                border-bottom-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+                background: red;
+                margin-right: 5px;
+                .onsale {
+                    display: flex;
+                    justify-content: center;
+                    font-weight: bold;
+                    font-size: 16px;
+                    padding-top: 10px;
+                }
+            }
+            .product__buy {
+                width: 50px;
+                height: 40px;
+                margin-left: 5px;
+                border-bottom-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+                background: #f0da14;
+                .buy-icon {
+                    display: flex;
+                    justify-content: center;
+                    font-weight: bold;
+                    font-size: 16px;
+                    padding-top: 10px;
+                }
+            }
+        }
+        .imagen {
+            width: 200px;
+        }
+        .product__name-sale {
+            width: 100%;
+            background: #f0da14;
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+            height: 30px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .product__name-saletwo {
+            width: 100%;
+            background: #f0da14;
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+            margin-bottom: 20px;
+            height: 30px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .first__price-options {
+            display: inline-flex;
+            margin-bottom: 5px;
+            .stroke {
+                padding-left: 15px;
+                padding-right: 15px;
+                font-size: 20px;
+                position: relative;
+                line-height: 1em;
+                display: flex;
+                align-items: center;
+            }
+            .stroke::after {
+                border-bottom: 0.125em solid red;
+                content: "";
+                width: 65px;
+                position: absolute;
+                left: 8;
+                top: 40%;
+                transform: rotate(-15deg);
+            }
+            .notstroke {
+                padding-right: 15px;
+                padding-left: 15px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+    .favorite__product:hover {
+        cursor: pointer;
+        transform: scale(1.03);
+        background: #f0da14;
+        .product__name-sale, .product__name-saletwo {
+            background: white;
+        }
+        .product__buy:hover {
+            background: white;
+        }
+    }
+    .favorite__product-notsale {
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 400px;
+        width: 250px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+        .product__buy-notsale {
+            width: 50px;
+            height: 41px;
+            margin-top: -10px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            background: #f0da14;
+            .buy-icon-notsale {
+                display: flex;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 16px;
+                padding-top: 10px;
+            }
+        }
+        .imagen-notsale {
+            width: 200px;
+            margin-top: -2px;
+        }
+        .notsaletwo-container {
+            background: #f0da14;
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            .product__name-notsale {
+                display: flex;
+                justify-content: center;
+                padding-top: 10px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+        .product__name-notsaletwo {
+            display: flex;
+            justify-content: center;
+            background: #f0da14;
+            padding-top: 10px;
+            width: 100%;
+            height: 30px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .original__price {
+            padding-right: 15px;
+            padding-left: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 9px;
+        }
+    }
+    .favorite__product-notsale:hover {
+        cursor: pointer;
+        transform: scale(1.03);
+        background: #f0da14;
+        .product__name-notsaletwo {
+            background: white;
+        }
+        .product__name-notsale {
+            background: white;
+            height: 30px;
+        }
+        .product__buy-notsale:hover {
+            background: white;
+        }
+    }
+}

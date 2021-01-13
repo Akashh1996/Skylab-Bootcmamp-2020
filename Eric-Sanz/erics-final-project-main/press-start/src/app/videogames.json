@@ -1,0 +1,221 @@
+[
+    {
+        "name": "Yakuza: Like a Dragon",
+        "genre": ["Action", "Adventure"],
+        "developer": "Sega",
+        "images": ["https://static.xtralife.com/conversions/MYC3-0M44240778-fullhd_w1920_h1080_q75-yakuza-7-1-1568624670.png",
+            "https://static.xtralife.com/conversions/5RC8-4691240780-fullhd_w1920_h1080_q75-yakuza-7-2-1568624670.png",
+            "https://static.xtralife.com/conversions/RJC5-N4R4240781-fullhd_w1920_h1080_q75-yakuza-7-3-1568624670.png",
+            "https://static.xtralife.com/conversions/0MCD-57RQ240782-fullhd_w1920_h1080_q75-yakuza-7-4-1568624671.png",
+            "https://static.xtralife.com/conversions/JQCP-8Z9Y240775-fullhd_w1920_h1080_q75-yakuza-7-5-1568624670.png",
+            "https://static.xtralife.com/conversions/3MC1-M50P240772-fullhd_w1920_h1080_q75-yakuza-7-10-1568624670.png",
+            "https://static.xtralife.com/conversions/2MCP-JY35240776-fullhd_w1920_h1080_q75-yakuza-7-11-1568624670.png",
+            "https://static.xtralife.com/conversions/ZJC2-XN5K240774-fullhd_w1920_h1080_q75-yakuza-7-12-1568624670.png"],
+        "description": [{
+                "title": "RISE LIKE A DRAGON",
+                "text": ["Ichiban Kasuga, a low-ranking grunt of a low-ranking yakuza family in Tokyo, faces an 18-year prison sentence after taking the fall for a crime he didn't commit. Never losing faith, he loyally serves his time and returns to society to discover that no one was waiting for him on the outside, and his clan has been destroyed by the man he respected most.",
+                    "Ichiban sets out to discover the truth behind his family's betrayal and take his life back, drawing a ragtag group of society’s outcasts to his side: Adachi, a rogue cop, Nanba, a homeless ex-nurse, and Saeko, a hostess on a mission. Together, they are drawn into a conflict brewing beneath the surface in Yokohama and must rise to become the heroes they never expected to be."]
+            }, {
+                "title": "LEVEL UP FROM UNDERDOG TO DRAGON IN DYNAMIC RPG COMBAT",
+                "text": ["Experience dynamic RPG combat like none other. Switch between 19 unique Jobs ranging from Bodyguard to Musician, using the battlefield as your weapon. Take up bats, umbrellas, bikes, signs, and everything else at your disposal to clean up the streets!"]
+            }, {
+                "title": "ENTER THE UNDERWORLD PLAYGROUND",
+                "text": ["When you're not busy bashing heads, relax by hitting up the local arcade for some classic SEGA games, compete with locals in a no holds barred go-kart race around Yokohama, complete 50 unique substories, or just take in the scenery of a modern-day Japanese city. There’s always something new around the corner."]
+            }],
+        "pegi": "https://pegi.info/sites/default/files/styles/medium/public/2017-03/pegi18.png?itok=2iF_eHO6",
+        "price": "54.95",
+        "salePrice": "39.99",
+        "stock": true,
+        "release": "10-11-2020",
+        "comments": ["nananna", "lolololo"],
+        "sales": true,
+        "platform": {
+            "name": ["PlayStation 4", "Xbox One"],
+            "cover": ["https://static.xtralife.com/conversions/4MCP-2PN2267105-fullhd_w1920_h1080_q75-ps4-yakuza-like-a-dragon-day-ichi-edition-1598350397.png",
+                "https://static.xtralife.com/conversions/60CY-7Y8N267104-fullhd_w1920_h1080_q75-xbo-yakuza-like-a-dragon-day-ichi-edition-1598350380.png"]
+            },
+        "edition": true,
+        "nameEdition": "Day Ichi Edition",
+        "complement": [{
+            "title": "Day Ichi Edition of Yakuza: Like a Dragon includes:",
+            "content": ["The Game Yakuza: Like a Dragon", "An elegant Steelbook® for your collection", "Pack of fancy legend dresses SteelBook"]
+        }]
+    },
+    {
+        "name": "Final Fantasy VII Remake",
+        "genre": ["Action", "Adventure", "Rol/Rpg"],
+        "developer": "Equare Enix",
+        "images": ["https://static.xtralife.com/conversions/QJC9-XQD6239512-fullhd_w1920_h1080_q75-final-fantasy-vii-remake-screen-13-1566815391.png",
+            "https://static.xtralife.com/conversions/XJC6-9NQ3239513-fullhd_w1920_h1080_q75-final-fantasy-vii-remake-screen-2-1566815391.png",
+            "https://static.xtralife.com/conversions/7DC4-N5QN239514-fullhd_w1920_h1080_q75-final-fantasy-vii-remake-screen-14-1566815391.png",
+            "https://static.xtralife.com/conversions/3MC1-M032239516-fullhd_w1920_h1080_q75-final-fantasy-vii-remake-screen-10-1566815391.png",
+            "https://static.xtralife.com/conversions/2MCP-J37K239498-fullhd_w1920_h1080_q75-final-fantasy-vii-remake-screen-7-1566815390.png",
+            "https://static.xtralife.com/conversions/Y3C1-9D5W239499-fullhd_w1920_h1080_q75-final-fantasy-vii-remake-screen-5-1566815390.png",
+            "https://static.xtralife.com/conversions/MYC3-041D239500-fullhd_w1920_h1080_q75-final-fantasy-vii-remake-screen-1-1566815390.png",
+            "https://static.xtralife.com/conversions/RJC5-NR9J239503-fullhd_w1920_h1080_q75-final-fantasy-vii-remake-screen-6-1566815390.png",
+            "https://static.xtralife.com/conversions/60CY-03XZ239509-fullhd_w1920_h1080_q75-final-fantasy-vii-remake-screen-17-1566815391.png"],
+        "description": [{
+                "title": "A spectacular reimagining of one of the most visionary games ever, the first game in this project will be set in the eclectic city of Midgar and presents a fully standalone gaming experience.",
+                "text": ["The world has fallen under the control of the Shinra Electric Power Company, a shadowy corporation controlling the planet's very life force as mako energy. In the sprawling city of Midgar, an anti-Shinra organization calling themselves Avalanche have stepped up their resistance. Cloud Strife, a former member of Shinra's elite SOLDIER unit now turned mercenary, lends his aid to the group, unaware of the epic consequences that await him.",
+                    "FINAL FANTASY VII REMAKE is a reimagining of the iconic original with unforgettable characters, a mind-blowing story, and epic battles. The story of this first, standalone game in the FINAL FANTASY VII REMAKE project covers up to the party’s escape from Midgar, and goes deeper into the events occurring in Midgar than the original FINAL FANTASY VII."]
+            }],
+        "pegi": "https://pegi.info/sites/default/files/styles/medium/public/2017-03/pegi16.png?itok=GyBvYeoU",
+        "price": "59.95",
+        "salePrice": "",
+        "stock": true,
+        "release": "10-04-2020",
+        "comments": ["nananna", "lolololo"],
+        "sales": false,
+        "platform": {
+            "name": ["PlayStation 4"],
+            "cover": ["https://static.xtralife.com/conversions/QJC9-X271241374-fullhd_w1920_h1080_q75-ps4-final-fantasy-vii-remake-1569397930.png"]
+            },
+        "edition": false,
+        "nameEdition": ""
+    },
+    {
+        "name": "Hogwarts Legacy",
+        "genre": ["Adventure", "Rol/Rpg"],
+        "developer": "TT Games",
+        "images": ["https://static.xtralife.com/conversions/PJCN-DWR9270748-fullhd_w1920_h1080_q75-hippogriff-screenshot-1600349597.png",
+            "https://static.xtralife.com/conversions/ZJC2-86YM270749-fullhd_w1920_h1080_q75-troll-screenshot-1600349597.png",
+            "https://static.xtralife.com/conversions/3MC1-4R8J270747-fullhd_w1920_h1080_q75-entrance-screenshot-1600349595.png",
+            "https://static.xtralife.com/conversions/KXC7-MD94270746-fullhd_w1920_h1080_q75-dragon-screenshot-1600349594.png",
+            "https://static.xtralife.com/conversions/7DC4-28MW270745-fullhd_w1920_h1080_q75-wand-screenshot-1600349593.png"],
+        "description": [{
+                "title": "Hogwarts Legacy, an open-world, single-player, action role-playing videogame (RPG) set in the 1800s wizarding world.",
+                "text": ["Players will experience life as a student at Hogwarts School of Witchcraft and Wizardry like never before, as they live the unwritten and embark on a dangerous journey to uncover a hidden truth of the wizarding world. Developed by Avalanche and published by Warner Bros. Games under the Portkey Games label, Hogwarts Legacy will release in 2021 for PlayStation®5, PlayStation®4, PlayStation®4 Pro, Xbox Series X, Xbox Series S and Xbox One consoles.",
+                    "Hogwarts Legacy is filled with immersive magic, putting players at the centre of their adventure to become the witch or wizard they choose to be. They will grow their character’s abilities as they master powerful spells, hone combat skills and select companions to help them face off against deadly enemies. Players will also encounter missions and scenarios that will pose difficult choices and determine what they stand for.",
+                    "'Hogwarts Legacy gives players control over their own experience with RPG gameplay unlike anything else in the Wizarding World, which will continue to build fan appeal in the Portkey Games label,' said David Haddad, President, Warner Bros. Games. 'Avalanche has brought to life this rich and deep world, full of action-packed magic, as well as a detailed, mysterious story to engage fans and gamers alike.'",
+                    "As the climactic story begins, players grow their magical abilities by mastering spells, brewing potions and taming fantastic beasts. Along the way, they will uncover an expansive world filled with perilous dangers tied to the wizarding world’s long forgotten past and an unusual ability that only they possess. The open-world journey takes players beyond Hogwarts to new and familiar wizarding world locations including the Forbidden Forest and Hogsmeade Village."]
+            }],
+        "pegi": "https://pegi.info/sites/default/files/styles/medium/public/2017-03/pegi16.png?itok=GyBvYeoU",
+        "price": "64.95",
+        "salePrice": "",
+        "stock": false,
+        "release": "N/A",
+        "comments": ["nananna", "lolololo"],
+        "sales": false,
+        "platform": {
+            "name": ["PlayStation 4", "Xbox One"],
+            "cover": ["https://static.xtralife.com/conversions/5RC8-0D98270777-fullhd_w1920_h1080_q75-ps4hogwartslegacy-1600353605.png",
+                "https://static.xtralife.com/conversions/RJC5-K3R8270778-fullhd_w1920_h1080_q75-xboxhowartslegacy-1600353605.png"]
+            },
+        "edition": false,
+        "nameEdition": ""
+    },
+    {
+        "name": "Xenoblade Chronicles 2",
+        "genre": ["Adventure", "Rol/Rpg"],
+        "developer": "Monolith Soft",
+        "images": ["https://static.xtralife.com/conversions/E5RCD56V4699-fullhd_w1920_h1080_q75-04-1536341863.png",
+            "https://static.xtralife.com/conversions/V2MCD8DE4695-fullhd_w1920_h1080_q75-06-1536341848.png",
+            "https://static.xtralife.com/conversions/ERJC37XE4700-fullhd_w1920_h1080_q75-08-1536341866.png",
+            "https://static.xtralife.com/conversions/VY3CZ7DV4696-fullhd_w1920_h1080_q75-09-1536341851.png",
+            "https://static.xtralife.com/conversions/EMYCWKYE4697-fullhd_w1920_h1080_q75-10-1536341855.png",
+            "https://static.xtralife.com/conversions/V1MC71NV4698-fullhd_w1920_h1080_q75-11-1536341859.png"],
+        "description": [{
+                "title": "The second part of the aclaimed Xenoblade Chronicles is finally here!",
+                "text": ["In Xenoblade Chronicles 2, an enormous RPG for Nintendo Switch, explore an endless ocean of clouds, where the last remnants of civilisation live on the backs of colossal beasts called Titans. Experience the story of Rex and Pyra, a mysterious being known as a Blade who grants him tremendous power. Together, search for Pyra’s long lost home Elysium, the birthplace of humanity.",
+                    "As the giant beasts march toward death, the last hope is a scavenger named Rex—and Pyra, a living weapon known as a Blade. Can you find the fabled paradise she calls home? Command a group of Blades and lead them to countless strategic victories before the world ends.",
+                    "Each Titan hosts its own distinct cultures, wildlife, and diverse regions to explore. Search the vast open areas and labyrinthine corridors for treasure, secret paths, and creatures to battle and index.",
+                    "During these escapades you'll get to know a large cast of eclectic characters, including the weaponized life forms known as Blades. Gather these allies, bond with them to increase their power, and utilize their special ARTS to devastate enemies. But to save the world of Alrest, you must first demystify its cloudy past."]
+            }],
+        "pegi": "https://pegi.info/sites/default/files/styles/medium/public/2017-03/PEGI_12.png?itok=YbTznZS9",
+        "price": "54.95",
+        "salePrice": "",
+        "stock": true,
+        "release": "01/12/2017",
+        "comments": ["nananna", "lolololo"],
+        "sales": false,
+        "platform": {
+            "name": ["Nintendo Switch"],
+            "cover": ["https://static.xtralife.com/conversions/VKXCJ72D64425-fullhd_w1920_h1080_q75-portada23114-1537544839.png"]
+            },
+        "edition": false,
+        "nameEdition": ""
+    }, {
+        "name": "The Outer Worlds",
+        "genre": ["Action", "Adventure", "Rol/Rpg"],
+        "developer": "Obsidian Entertainment",
+        "images": ["https://static.xtralife.com/conversions/EWJC-D4WR233492-fullhd_w1920_h1080_q75-theouterworlds01-1558628747.png",
+            "https://static.xtralife.com/conversions/ED9C-PZX7233489-fullhd_w1920_h1080_q75-theouterworlds02-1558628747.png",
+            "https://static.xtralife.com/conversions/V0MC-M8YW233488-fullhd_w1920_h1080_q75-theouterworlds03-1558628747.png",
+            "https://static.xtralife.com/conversions/E89C-QZM5233491-fullhd_w1920_h1080_q75-theouterworlds04-1558628747.png",
+            "https://static.xtralife.com/conversions/E60C-RQ51233493-fullhd_w1920_h1080_q75-theouterworlds05-1558628747.png",
+            "https://static.xtralife.com/conversions/E98C-ZM6P233490-fullhd_w1920_h1080_q75-theouterworlds06-1558628747.png"],
+        "description": [{
+                "title": "The Outer Worlds is a new single-player first-person sci-fi RPG from Obsidian Entertainment and Private Division.",
+                "text": ["Lost in transit while on a colonist ship bound for the furthest edge of the galaxy, you awake decades later only to find yourself in the midst of a deep conspiracy threatening to destroy the Halcyon colony. As you explore the furthest reaches of space and encounter various factions, all vying for power, the character you decide to become will determine how this player-driven story unfolds. In the corporate equation for the colony, you are the unplanned variable."]
+            }, {
+                "title": "The player-driven story RPG:",
+                "text": ["In keeping with the Obsidian tradition, how you approach The Outer Worlds is up to you. Your choices affect not only the way the story develops; but your character build, companion stories, and end game scenarios."]
+            }, {
+                "title": "You can be flawed, in a good way:",
+                "text": ["New to The Outer Worlds is the idea of flaws. A compelling hero is made by the flaws they carry with them. While playing The Outer Worlds, the game tracks your experience to find what you aren't particularly good at. Keep getting attacked by Raptidons? Taking the Raptiphobia flaw gives you a debuff when confronting the vicious creatures, but rewards you with an additional character perk immediately. This optional approach to the game helps you build the character you want while exploring Halcyon."]
+            }, {
+                "title": "Lead your companions:",
+                "text": ["During your journey through the furthest colony, you will meet a host of characters who will want to join your crew. Armed with unique abilities, these companions all have their own missions, motivations, and ideals. It's up to you to help them achieve their goals, or turn them to your own ends."]
+            }, {
+                "title": "Explore the corporate colony:",
+                "text": ["Halcyon is a colony at the edge of the galaxy owned and operated by a corporate board. They control everything... except for the alien monsters left behind when the terraforming of the colony’s two planets didn’t exactly go according to plan. Find your ship, build your crew, and explore the settlements, space stations, and other intriguing locations throughout Halcyon."]
+            }],
+        "pegi": "https://pegi.info/sites/default/files/styles/medium/public/2017-03/pegi18.png?itok=2iF_eHO6",
+        "price": "49.95",
+        "salePrice": "",
+        "stock": true,
+        "release": "25-10-2019",
+        "comments": ["nananna", "lolololo"],
+        "sales": false,
+        "platform": {
+            "name": ["PlayStation 4", "Xbox One", "Nintendo Switch"],
+            "cover": ["https://static.xtralife.com/conversions/NMCX-8NZD237715-fullhd_w1920_h1080_q75-s4ouwo-61200-5026555426213-the-outer-worlds-1562857418.png",
+                "https://static.xtralife.com/conversions/QJC9-XYK4237716-fullhd_w1920_h1080_q75-xoouwo-61201-5026555361866-the-outer-worlds-1562857418.png",
+                "https://static.xtralife.com/conversions/1MCQ-21WJ262977-fullhd_w1920_h1080_q75-switchtheouterworlds-1591105375.png"]
+            },
+        "edition": false,
+        "nameEdition": ""
+    }, {
+        "name": "Dark Souls: Remastered",
+        "genre": ["Action", "Soulslike", "Rol/Rpg"],
+        "developer": "Bandai Namco",
+        "images": ["https://static.xtralife.com/conversions/E5RCD56V4699-fullhd_w1920_h1080_q75-04-1536341863.png",
+            "https://static.xtralife.com/conversions/V2MCD8DE4695-fullhd_w1920_h1080_q75-06-1536341848.png",
+            "https://static.xtralife.com/conversions/ERJC37XE4700-fullhd_w1920_h1080_q75-08-1536341866.png",
+            "https://static.xtralife.com/conversions/VY3CZ7DV4696-fullhd_w1920_h1080_q75-09-1536341851.png",
+            "https://static.xtralife.com/conversions/EMYCWKYE4697-fullhd_w1920_h1080_q75-10-1536341855.png",
+            "https://static.xtralife.com/conversions/V1MC71NV4698-fullhd_w1920_h1080_q75-11-1536341859.png",
+            "https://static.xtralife.com/conversions/E60CK42E2238-fullhd_w1920_h1080_q75-11-1536324332.png",
+            "https://static.xtralife.com/conversions/E89CNJYV2236-fullhd_w1920_h1080_q75-09-1536324325.png"],
+        "description": [{
+                "title": "Then, there was fire.",
+                "text": ["Re-experience the critically acclaimed, genre-defining game that started it all. Beautifully remastered, return to Lordran in stunning high-definition detail running at 60fps.",
+                    "Dark Souls Remastered includes the main game plus the Artorias of the Abyss DLC."]
+            }, {
+                "title": "Gather your courage, top up your Estus Flasks and prepare for tough challenges ahead in Dark Souls: Remastered",
+                "text": ["Take up the mantle of the Chosen Undead and undertake a pilgrimage to Lordran, a land tainted by a terrible curse. Master Dark Souls’ intricate combat as you battle against Hollows, demons and all manner of monsters in your quest to ring the Bells of Awakening and discover what caused the realm to fall to ruin."]
+            }, {
+                "title": "Key features:",
+                "text": ["Deep and Dark Universe",
+                    "Each End is a New Beginning",
+                    "Gameplay Richness and Possibilities",
+                    "Sense of Learning, Mastering and Accomplishment",
+                    "The Way of the Multiplayer (up to 6 players with dedicated servers)"]
+            }],
+        "pegi": "https://pegi.info/sites/default/files/styles/medium/public/2017-03/pegi16.png?itok=GyBvYeoU",
+        "price": "39.95",
+        "salePrice": "24,95",
+        "stock": true,
+        "release": "25-10-2019",
+        "comments": ["nananna", "lolololo"],
+        "sales": true,
+        "platform": {
+            "name": ["PlayStation 4", "Xbox One", "Nintendo Switch"],
+            "cover": ["https://static.xtralife.com/conversions/EPJCX88163878-fullhd_w1920_h1080_q75-portada25099-1537461876.png",
+                "https://static.xtralife.com/conversions/V0MC258164335-fullhd_w1920_h1080_q75-portada25098-1537513146.png",
+                "https://static.xtralife.com/conversions/VZJC-653V4592-fullhd_w1920_h1080_q75-portada25097-1543246125.png"]
+            },
+        "edition": false,
+        "nameEdition": ""
+    }
+]

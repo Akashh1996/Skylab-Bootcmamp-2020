@@ -1,0 +1,108 @@
+<div *ngIf="videogame$ | async as videogame" class="product__details-container">
+    <div class="product__details">
+        <div class="product__details-left">
+            <div class="product__title-container">
+                <div class="title__left-container">
+                    <div *ngIf="videogame.shortName; else largeName">
+                        <p class="product-title">{{videogame.shortName}}</p>
+                    </div>
+                    <ng-template #largeName>
+                        <p class="product-title">{{videogame.name}}</p>
+                    </ng-template>
+                    <select class="product-platform" name="platform-select" (change)="handleOnChange($event)">
+                        <option class="product-platform" *ngFor="let name of videogame.platform.name">{{name}}</option>
+                    </select>
+                </div>
+                <div class="title__right-container">
+                    <button (click)="user ? addFavourite(user.uid, videogame) : null" class="favorite__button">
+                        <div *ngIf="isFavorite; else elseHeart">
+                            <fa-icon class="add__favourites-icon-active" [icon]="['fas', 'heart']"></fa-icon>
+                        </div>
+                        <ng-template #elseHeart>
+                            <fa-icon class="add__favourites-icon" [icon]="['fas', 'heart']"></fa-icon>
+                        </ng-template>
+                    </button>
+                </div>
+            </div>
+            <button class="return__button" (click)="getBack()">Go Back</button>
+            <img class="product-cover" id="cover-image" src="{{videogame.platform.cover[coverIndex]}}" alt="coverphoto">
+        </div>
+        <div class="product__details-right">
+            <div class="product__buy">
+                <div class="price">
+                    <div *ngIf="videogame.sales; else elseBlock"  class="strikeout">
+                        <div class="onsale-container">
+                            <p class="onsale">On Sale</p>
+                        </div>
+                        {{videogame.price | currency: 'EUR'}}
+                    </div>
+                    <span class="notstrikeout">{{videogame.salePrice | currency: 'EUR'}}</span>
+                    <ng-template #elseBlock >
+                        <p class="notstrikeout">
+                            {{videogame.price | currency: 'EUR'}}
+                        </p>
+                    </ng-template>
+                    <button class="add-cart">
+                        <fa-icon [icon]="['fas', 'cart-plus']"></fa-icon>
+                        <p class="add-cart-label">Add to Cart</p>
+                    </button>
+                </div>
+                <div class="info__options-container">
+                    <button class="info__options-button" id="description-button" (click)="seeDescription()">Description</button>
+                    <button class="info__options-button" id="picture-button" (click)="seePictures()">Pictures</button>
+                </div>
+                <div *ngIf="videogame.stock; else elseColor" class="stock-green">
+                        <fa-icon [icon]="['fas', 'boxes']"></fa-icon>
+                        <p class="stock">Stock available</p>
+                </div>
+                <ng-template #elseColor>
+                    <div class="not-stock">
+                        <fa-icon class="stock-red" [icon]="['fas', 'boxes']"></fa-icon>
+                        <p class="not-stock">Stock not available</p>
+                    </div>
+                </ng-template>
+            </div>
+            <div class="product__description-container" id="see-description">
+                <div class="titlegame-container">
+                    <h1>{{videogame.name}}</h1>
+                    <div class="product-general-info">
+                        <div class="general-info-container">
+                            <div class="genre-container">
+                                <p class="genre-title">Genres:</p>
+                                <p class="genre" *ngFor="let genre of videogame.genre">{{genre}}</p>
+                            </div>
+                            <div class="developer-container">
+                                <p class="developer-title">Developer:</p>
+                                <p class="developer">{{videogame.developer}}</p>
+                            </div>
+                        </div>
+                        <div class="pegi-container">
+                            <img class="pegi-image" src="{{videogame.pegi}}" alt="pegi_image">
+                        </div>
+                    </div>
+                </div>
+                <div  class="product__description" *ngFor="let item of videogame.description">
+                    <p class="description-titles">{{item.title}}</p>
+                    <div class="description-text" *ngFor="let text of item.text">
+                        {{text}}
+                    </div>
+                </div>
+                <div class="videogame-edition" *ngIf="videogame.edition">
+                    <p class="edition-title">{{videogame.nameEdition}}</p>
+                    <div class="edition-items" *ngFor="let complement of videogame.complement">
+                        <ul class="complement-title">{{complement.title}}
+                            <li class="contents" *ngFor="let content of complement.content">
+                                {{content}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="product__images-container" id="see-pictures">
+                <div class="images-container" *ngFor="let image of videogame.images">
+                    <img class="images-resolution" [src]="image" alt="game_images">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,157 @@
+.carousel {
+    height: 75% !important;
+    .carousel-list {
+        height: 300px !important;
+        margin: none !important;
+        padding: none !important;
+        width: 200px !important;
+        .carousel-slide {
+            height: 250px !important;
+            position: relative !important;
+            background-position: top !important;
+            .carousel-slide-content {
+                position: relative !important;
+            }
+            .carousel-slide-overlay {
+                background-color: none !important;
+                height: 0 !important;
+                width: 0 !important;
+            }
+        }
+    }
+}
+.list-title {
+    padding-top: 70px;
+    padding-left: 110px;
+    font-size: 30px;
+    font-weight: bold; 
+}
+.videogame__list-section {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+        .videogame-section {
+            display: flex;
+            .playstation-container {
+                width: 200px;
+                height: 355px;
+                border: 2px solid #161616;
+                border-radius: 20px;
+                margin: 10px;
+                padding: 20px;
+                text-align: center;
+                outline: none;
+                background: #f0da14;
+                .videogame-container-border {
+                    border-radius: 20px;
+                    background: white;
+                    .image {
+                        width: 200px;
+                        height: 260px;
+                    }
+                    .add__favourites-icon {
+                        font-size: 24px;
+                        margin-left: 150px;
+                    }
+                    .add__favourites-icon:hover {
+                        color: red;
+                        cursor: pointer;
+                    }
+                    .onsale-container {
+                        height: 27px;
+                        display: flex;
+                        .onsale {
+                            z-index: 1;
+                            margin-top: -20.5px;
+                            background: rgb(250, 124, 124);
+                            height: 48px;
+                            .onsale-content {
+                                margin-top: 20.5px;
+                                text-align: center;
+                                font-size: 18px;
+                                font-weight: bold;
+                            }
+                            .onsale-line {
+                                width: 74px;
+                                margin-top: -10px;
+                                border-bottom: 6px solid red;
+                            }
+                        }
+                        .add__favourites-icon-onsale {
+                            margin-left: 91px;
+                            font-size: 24px;
+                        }
+                        .add__favourites-icon-onsale:hover {
+                            color: red;
+                            cursor: pointer;
+                        }
+                    }
+                    .videogame-title {
+                        border-top: 2px solid #161616;
+                        padding-top: 8px;
+                        padding-bottom: 8px;
+                        font-weight: bold;
+                        font-size: 16px;
+                        background: #f0da14;
+                    }
+                    .price {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        background: #f1eab2;
+                        font-weight: bold;
+                        .notsale {
+                            font-size: 20px;
+                            padding-bottom: 1px;
+                        }
+                        .notstrikeout {
+                            color: #161616;
+                            margin-left: 50px;
+                            margin-bottom: 0px !important;
+                        }
+                        .notstrikeout:hover {
+                            text-decoration: underline;
+                        }
+                        .strikeout {
+                            color: #161616;
+                            font-size: 20px;
+                            line-height: 1em;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            margin-left: 10px;
+                            padding-bottom: 12px;
+                        }
+                        .strikeout::after {
+                            border-bottom: 0.125em solid red;
+                            content: "";
+                            width: 65px;
+                            position: absolute;
+                            top: 30%;
+                            transform: rotate(-15deg);
+                        }
+                    }
+                }
+            }
+            .playstation-container:hover {
+                background: #f0da14;
+                transform: scale(1.09);
+                .onsale {
+                    z-index: 0;
+                }
+                .videogame-title {
+                    background: #161616;
+                    color: white;
+                }
+                .onHover {
+                    border-bottom: 2px solid #161616;
+                }
+                .price {
+                    background: white;
+                    height: 82px;
+                }
+            }
+        }
+}

@@ -1,0 +1,221 @@
+.right__sidenav {
+    transition: .3s;
+    position: fixed;
+    top: 0;
+    margin-top: 80px;
+    right: -400px;
+    height: 100%;
+    width: 350px;
+    background: #3bc8e0;
+    border-left: 1px solid #161616;
+    box-shadow: 10px 0px 10px 10px rgba(#000000, 0.9);
+    z-index: 20;
+    .right__sidenav-container {
+        display: flex;
+        flex-direction: column;
+        background: #3bc8e0;
+        .user__info-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 25px;
+            border-bottom: 2px solid #ffffff;
+            .user__profile-picture {
+                border: 3px solid #ffffff;
+                border-radius: 50%;
+            }
+            .user__profile-name {
+                font-size: 20px;
+                font-weight: bold;
+                margin-top: 15px;
+                margin-bottom: 20px;
+            }
+        }
+        .list-container {
+            background: #3bc8e0;
+            height: 100vh;
+            margin-top: -1px;
+            padding: 0;
+            .list-sidenav {
+                display: flex;
+                justify-content: space-between;
+                background: #3bd5e0;
+                height: 40px;
+                padding: 5px;
+                border-bottom: 1px solid #ffffff;
+                margin-bottom: 1px;
+                cursor: pointer;
+                p {
+                    padding-right: 30px;
+                    font-weight: 400;
+                    font-size: 18px;
+                    margin-top: 10px;
+                }
+                mat-icon {
+                    margin-top: 7px;
+                    font-size: 30px;
+                    padding-left: 25px;
+                }
+            }
+            li:hover {
+                transform: scale(1.02);
+                background: #9ff7f7;
+            }
+        }
+        .right__sidenav-signout-container {
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            .logout-button {
+                width: 100px;
+                height: 30px;
+                outline: none;
+                border: 2px solid #161616;
+                background: #ffffff;
+                font-weight: bold;
+                cursor: pointer;
+                box-shadow: 5px 5px 0px 0px rgba(#000000, 0.9);
+            }
+            .logout-button:hover {
+                transform: scale(1.05);
+                background: #f0da14;
+            }
+            fa-icon {
+                margin-top: 3px;
+                font-size: 28px;
+                cursor: pointer;
+            }
+            fa-icon:hover {
+                transform: scale(1.3);
+            }
+        }
+
+        .right__sidenav-title {
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-top: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            p {
+                font-size: 25px;
+            }
+            fa-icon {
+                margin-top: -3px;
+                font-size: 28px;
+                cursor: pointer;
+            }
+            fa-icon:hover {
+                transform: scale(1.3);
+            }
+        }
+        .signIn-signUp {
+            padding: 25px;
+            margin-top: 10px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: inherit;
+            .email-container {
+                width: inherit;
+                background: white;
+                height: 40px;
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                input {
+                    outline: none;
+                    border: none;
+                    padding-left: 15px;
+                    width: 240px;
+                }
+                fa-icon {
+                    font-size: 20px;
+                    padding-right: 15px;
+                }
+            }
+            .password-container {
+                width: inherit;
+                background: white;
+                height: 40px;
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                input {
+                    outline: none;
+                    border: none;
+                    padding-left: 15px;
+                    width: 240px;
+                }
+                fa-icon {
+                    font-size: 20px;
+                    padding-right: 15px;
+                }
+                #eye-slash {
+                    display: none;
+                }
+            }
+            .forgot-password {
+                margin-top: -10px;
+                margin-left: 180px;
+                font-size: 10px;
+                text-decoration: underline;
+                font-weight: normal;
+                cursor: pointer;
+            }
+            .forgot-password:hover {
+                transform: scale(1.04);
+            }
+            button {
+                background: #161616;
+                border: none;
+                outline: none;
+                height: 40px;
+                color: white;
+                font-weight: bold;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            button:hover {
+                color: #f0da14;
+                transform: scale(1.04);
+            }
+        }
+        .other-signIn-methods {
+            margin-top: 15px;
+            border-top: 2px solid white;
+            border-bottom: 2px solid white;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .title-methods {
+                text-decoration: underline;
+            }
+            .button-login {
+                background: none;
+                width: 50px;
+                height: 50px;
+                outline: none;
+                border: none;
+                margin-right: 10px;
+                margin-left: 10px;
+                fa-icon {
+                    color: white;
+                    font-size: 40px;
+                    margin-top: 20px;
+                }
+                fa-icon:hover {
+                    color: #161616;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    
+}
