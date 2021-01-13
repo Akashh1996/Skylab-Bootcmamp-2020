@@ -1,0 +1,35 @@
+<section class="side-navbar-container" id="toogleProfileSideBar">
+	<div class="sidebar-close-wrapper" (click)="closeProfileSidebar()">
+		<button class="btn sidebar-close-btn">
+      <mat-icon class="sidebar-close-icon">arrow_forward_ios</mat-icon>
+      <p class="sidebar-close-text">Mi Cuenta</p>
+		</button>
+	</div>
+	<nav class="sidebar-navigation">
+    <ul>
+      <li class="sidebar-navigation-item">
+        <button class="btn sidebar-navigation-btn" (click)="closeProfileSidebar()">
+          <mat-icon class="sidebar-navigation-icon">favorite_border</mat-icon>
+          <p class="sidebar-navigation-text">Lista de deseados</p>
+        </button>
+      </li>
+      <li class="sidebar-navigation-item">
+        <button 
+          class="btn sidebar-navigation-btn" 
+          (click)="closeProfileSidebar()"
+          [routerLink]="['profile']"
+          routerLinkActive="active"
+          >
+          <mat-icon class="sidebar-navigation-icon">account_circle</mat-icon>
+          <p class="sidebar-navigation-text">Mi Cuenta</p>
+        </button>
+      </li>
+      <li class="sidebar-navigation-item">
+        <button class="btn sidebar-navigation-btn" (click)="closeProfileSidebar()" (click)="logout()">
+          <mat-icon class="sidebar-navigation-icon">exit_to_app</mat-icon>
+          <p class="sidebar-navigation-text">Cerrar sesión</p>
+        </button>
+      </li>
+    </ul>
+	</nav>
+</section>

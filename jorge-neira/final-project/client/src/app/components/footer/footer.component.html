@@ -1,0 +1,78 @@
+<footer class="footer-container">
+	<section class="footer-facilities-info">
+		<div class="facility-info">
+			<p class="facility-secure-payment">Pago seguro</p>
+		</div>
+		<div class="facility-info">
+			<mat-icon class="facility-info-icon">assignment_return</mat-icon>
+			<p class="facility-info-text">Devolución 14 días</p>
+		</div>
+		<div class="facility-info">
+			<mat-icon class="facility-info-icon">payment</mat-icon>
+			<p class="facility-info-text">Financiación flexible</p>
+		</div>
+		<div class="facility-info">
+			<mat-icon class="facility-info-icon">support_agent</mat-icon>
+			<p class="facility-info-text">Asesoramiento técnico</p>
+		</div>
+	</section>
+	<section>
+		<mat-expansion-panel
+			(opened)="panelOpenState = true"
+			(closed)="panelOpenState = false"
+			class="footer-expansion-info"
+		>
+			<mat-expansion-panel-header class="footer-expansion-header">
+				<mat-panel-title class="footer-expansion-title"> Información Contacto </mat-panel-title>
+			</mat-expansion-panel-header>
+			<section class="footer-company-location">
+				<p>NEO-BYTE Computers</p>
+				<div class="company-location-info">
+					<mat-icon class="footer-icon">location_on</mat-icon>
+					<address>
+						Sepúlveda, 169 <br />
+						08011 Barcelona <br />
+						España
+					</address>
+				</div>
+				<div class="company-contact-info">
+					<mat-icon class="footer-icon">call</mat-icon>
+					<p>
+						Llámanos: <span><a href="tel:+34934254585">934 254 585</a></span>
+					</p>
+				</div>
+			</section>
+		</mat-expansion-panel>
+		<mat-expansion-panel
+			(opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+			class="footer-expansion-info"
+      
+		>
+			<mat-expansion-panel-header class="footer-expansion-header">
+				<mat-panel-title class="footer-expansion-title"> Siguenos en </mat-panel-title>
+			</mat-expansion-panel-header>
+			<section class="footer-socialmedia-icons">
+        <a href="https://www.facebook.com/neobyte.es/" target="blank">
+          <span class="fab fa-facebook media-icon"></span>
+        </a>
+        <a href="https://twitter.com/neobytebcn" target="blank">
+          <span class="fab fa-twitter media-icon"></span>
+        </a>
+        <a href="https://plus.google.com/+NeobyteEs" target="blank">
+          <span class="fab fa-google media-icon"></span>
+        </a>
+        <a href="https://www.youtube.com/channel/UCGtjJoTvolgewoVADO9M1dg" target="blank">
+          <span class="fab fa-youtube media-icon"></span>
+        </a>
+        <a href="https://www.instagram.com/neobytecomputers/" target="blank">
+          <span class="fab fa-instagram media-icon"></span>
+        </a>
+			</section>
+		</mat-expansion-panel>
+	</section>
+	<p>
+		Neo-Byte Computers -&copy; Copyright 2003 - 2020. Todos los derechos
+		reservados
+	</p>
+</footer>

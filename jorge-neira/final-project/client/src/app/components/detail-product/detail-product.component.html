@@ -1,0 +1,44 @@
+<main *ngIf="product$ | async as product; else loading" class="container">
+  <h2 class="product-title">{{ product.name }}</h2>
+
+  <app-images-gallery [images]="product.images"></app-images-gallery>
+
+  <mat-divider class="divider"></mat-divider>
+
+  <app-price-display
+    [price]="product.price"
+    [sales]="product.sales"
+  ></app-price-display>
+
+  <section class="product-partnumber">
+    <p>
+      P/N: <span> {{ product["part-number"] }} </span>
+    </p>
+  </section>
+
+  <mat-divider class="divider"></mat-divider>
+
+  <app-product-shipping-info
+    [stock]="product.stock"
+  ></app-product-shipping-info>
+
+  <app-product-general-specs
+    [manufacture]="product.manufacture"
+    [reference]="product.reference"
+    [generalSpecs]="product['general-specs']"
+  ></app-product-general-specs>
+
+  <mat-divider class="divider"></mat-divider>
+
+  <app-product-feature-payments></app-product-feature-payments>
+
+  <mat-divider class="divider"></mat-divider>
+
+  <app-product-description
+    [shortDescription]="product.shortDescription"
+    [generalDescription]="product.generalDescription"
+  ></app-product-description>
+</main>
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>

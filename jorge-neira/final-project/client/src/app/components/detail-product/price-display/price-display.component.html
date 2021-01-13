@@ -1,0 +1,22 @@
+  <section class="product-price">
+    <section class="product-price-info">
+      <span class="current-price text-color"
+        >{{ price | currency: "EUR" }}
+      </span>
+      <p class="current-price-vat">
+        <span class="text-color">IVA incluido</span>
+        <span *ngIf="sales" class="price-info-previous-discount">
+          {{ sales }}
+        </span>
+      </p>
+    </section>
+    <section class="product-brand-logo">
+      <picture class="brand-logo-container">
+        <img
+          src="https://www.neobyte.es/img/m/1-mf_image.jpg"
+          alt="brando logo"
+          class="brand-logo-image"
+        />
+      </picture>
+    </section>
+  </section>

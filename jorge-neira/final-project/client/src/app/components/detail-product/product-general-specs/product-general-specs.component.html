@@ -1,0 +1,15 @@
+  <section class="product-general-specs">
+    <h2 class="general-specs-title">
+      {{ manufacture | titlecase }} {{ reference }}
+    </h2>
+    <p class="general-specs-outstanding">Características destacadas</p>
+    <ul class="general-specs-list">
+      <li
+        class="spec-li-item"
+        *ngFor="let specItem of generalSpecs"
+      >
+        <mat-icon class="spec-icon-item">chevron_right</mat-icon>
+        <p>{{ specItem }}</p>
+      </li>
+    </ul>
+  </section>

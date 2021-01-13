@@ -1,0 +1,28 @@
+.product-general-specs {
+    .general-specs-title {
+      font-size: 25px;
+    }
+    .general-specs-outstanding {
+      font-size: 19px;
+      width: fit-content;
+      padding-bottom: 5px;
+      position: relative;
+    }
+    .general-specs-outstanding::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 70%;
+      border-bottom: 1px solid #FF7000;
+    }
+    .general-specs-list {
+     .spec-li-item {
+      display: flex;
+      font-size: 16px;
+      .spec-icon-item {
+        color: #FF7700;
+      }
+     } 
+    }
+  }

@@ -1,0 +1,57 @@
+<section class="register-container">
+
+  <h2 class="register-title">Crear cuenta</h2>
+
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form-wrapper">
+      <label>
+      <input 
+      type="text" 
+      name="username" 
+      id="username"
+      placeholder="*Usuario"
+      formControlName="username"
+      class="register-input"
+      />
+    </label>
+    <label>
+      <input 
+      type="email" 
+      name="email" 
+      id="email"
+      placeholder="*tu@email.com"
+      formControlName="email"
+      class="register-input"
+      />
+    </label>
+    <label>
+      <input 
+      type="password" 
+      name="password" 
+      id="password"
+      placeholder="*Contraseña"
+      formControlName="password"
+      class="register-input"
+      />
+    </label>
+    <button type="submit" [disabled]="!registerForm.valid" class="register-submit-btn btn">Crear Cuenta</button>
+  </form>
+  
+  <div *ngIf="errorMessage.length !== 0" class="error-wrapper">
+    <ul>
+      <li *ngFor="let error of errorMessage" class="error-message">
+        <p> {{ error }} </p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="create-new-client">
+    <span class="custom-divider"></span>
+    <p class="new-login-text">Ya tengo una cuenta</p>
+    <span class="custom-divider"></span>
+  </div>
+
+  <button [routerLink]="['/login']" routerLinkActive="active" class="btn login-btn">
+    Iniciar sesión
+  </button>
+
+</section>

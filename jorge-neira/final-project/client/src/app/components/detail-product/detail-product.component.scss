@@ -1,0 +1,26 @@
+.container {
+  margin-top: 100px;
+  padding: 0 20px;
+  .product-title {
+    padding: 15px 0;
+    font-size: 20px;
+  }
+  .product-description {
+    padding: 0 20px;
+  }
+  .product-partnumber {
+    font-size: 20px;
+    padding-bottom: 15px;
+    text-decoration: underline;
+  }
+}
+
+.divider {
+  background-color: #D0D0D0;
+  height: 1px;
+  margin: 20px 0;
+}
+
+.text-color {
+  color: #FF7000;
+}

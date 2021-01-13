@@ -1,0 +1,86 @@
+.footer-container {
+  padding: 20px;
+  padding-bottom: 100px;
+  background-color: #e7e7e7;
+  .footer-facilities-info {
+    grid-template-columns: minmax(167.5px, auto) minmax(167.5px, auto);
+    grid-template-rows: auto auto;
+    justify-content: center;
+    padding: 20px 0;
+    display: grid;
+    gap: 20px;
+    .facility-info {
+      display: flex;
+      align-items: center;
+      .facility-secure-payment {
+        word-break: break-word;
+        display: flex;
+        margin-bottom: 0;
+      }
+      .facility-secure-payment::before {
+        content: '';
+        background-image: url(https://www.neobyte.es/themes/warehouse/img/icon/visa-mastercard.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+        margin-right: 10px;
+        width: 170px;
+        height: 40px;
+      }
+      .facility-info-icon {
+        font-size: 2rem;
+        color: #FF7700;
+        margin-right: 20px;
+      }
+      .facility-info-text {
+        margin: 0;
+        word-break: break-word;
+      }
+    }
+  }
+  .footer-expansion-info{
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(180, 180, 180, 0.808);
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    .footer-expansion-header {
+      .footer-expansion-title {
+        color: black;
+      }
+    }
+    .footer-company-location {
+      color: black;
+      .company-location-info {
+        display: flex;
+        align-items:flex-start;
+        margin-bottom: 15px;
+      
+      }
+      .company-contact-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      .company-contact-info > p {
+        margin: 0;
+      }
+    }
+    .footer-socialmedia-icons {
+      display: flex;
+      justify-content: space-around;      
+      color: black;
+      font-size: 24px;
+      .media-icon {
+        transition: ease .1s;
+      }
+      .media-icon:hover {
+        color: #FF7000;
+      }
+    }
+  }
+}
+
+.footer-icon {
+  margin-right: 15px;
+}

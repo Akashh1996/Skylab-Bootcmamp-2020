@@ -1,0 +1,45 @@
+.product-feature {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .product-feature-payment {
+      display: flex;
+      font-size: 16px;
+      height: 60px;
+      word-break: break-word;
+      margin-bottom: 20px;
+    }
+    .product-feature-payment::before {
+      content: '';
+      background-image: url(https://www.neobyte.es/themes/warehouse/img/icon/visa-mastercard.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: inline-flex;
+      margin-right: 10px;
+      width: 180px;
+    }
+    .product-feature-shipping {
+      display: flex;
+      margin-bottom: 20px;
+      .feature-shipping-icon {
+        margin-right: 15px;
+        color: #FF7700;  
+      }
+      .feature-shipping-text {
+        font-size: 18px;
+      }
+    }
+    .product-feature-warranty {
+      height: fit-content;
+      display: flex;
+      margin-bottom: 20px;
+      .feature-warranty-icon {
+        margin-right: 15px;
+        color: #FF7700; 
+      }
+      .feature-warranty-text {
+        font-size: 18px;
+        margin-bottom: 0;
+      }
+    }
+  }

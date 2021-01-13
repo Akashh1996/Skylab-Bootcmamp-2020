@@ -1,0 +1,54 @@
+<section class="side-navbar-container noScroll" id="toogleSideBar">
+	<div class="sidebar-close-wrapper" (click)="closeSidebar()">
+		<button class="btn sidebar-close-btn">
+			<mat-icon class="sidebar-close-icon">arrow_back_ios</mat-icon>
+		</button>
+	</div>
+	<nav class="sidebar-navigation">
+		<ul>
+			<li *ngFor="let listItem of categories" class="navigation-wrapper">
+				<mat-expansion-panel
+					class="navigation-expansion-panel"
+					(opened)="panelOpenState = true"
+					(closed)="panelOpenState = false"
+				>
+					<mat-expansion-panel-header class="expansion-panel-header">
+						<mat-panel-title class="expansion-panel-title">
+							<mat-icon class="navigation-link-icon">{{
+								listItem.icon
+							}}</mat-icon>
+							<div class="navigation-links">
+								<a class="navigation-link">
+									{{ listItem.category | uppercase }}
+								</a>
+							</div>
+						</mat-panel-title>
+					</mat-expansion-panel-header>
+					<section class="navigation-expand-options">
+						<ul>
+							<li
+								class="expand-option-item"
+								*ngFor="let listExpand of listItem.categoriesExpand"
+							>
+								<a
+									[routerLink]="['/list']" 
+									[queryParams]="
+										listExpand.subRoute 
+										? { category: listItem.route, 'sub-category': listExpand.subRoute } 
+										: { category: listItem.route }
+									"
+									routerLinkActive="active"
+									class="expand-list-item"
+									(click)="closeSidebar()"
+									(click)="onTop()"
+								>
+									{{ listExpand.name | uppercase }}
+								</a>
+							</li>
+						</ul>
+					</section>
+				</mat-expansion-panel>
+			</li>
+		</ul>
+	</nav>
+</section>

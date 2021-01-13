@@ -1,0 +1,33 @@
+  .product-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .product-price-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .price-info-previous-discount {
+        margin-left: 20px;
+         text-decoration:line-through;
+        }
+      .current-price {
+        margin-bottom: 20px;
+        font-size: 45px;
+        font-weight: 600;
+      }
+    }
+    .current-price-vat {
+      font-size: 20px;
+    }
+    .product-brand-logo {
+      .brand-logo-container {
+        .brand-logo-image {
+        width: 100px;
+      }
+    }
+  }
+}
+
+.text-color {
+  color: #FF7000;
+}
