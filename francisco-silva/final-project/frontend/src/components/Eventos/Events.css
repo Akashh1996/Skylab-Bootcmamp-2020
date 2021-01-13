@@ -1,0 +1,110 @@
+.events-main_wrapper{
+    margin-top: 150px;
+    align-items: center;
+}
+
+.events-title{
+    letter-spacing: 0.25em;
+    line-height: 1.5em;
+    text-align: center;
+    font-size: 17px;
+    color: rgb(43, 43, 43);
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: lighter;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(94, 94, 94, 0.637);
+    margin: 0px auto 10px;
+    width: 180px;
+
+}
+
+.events-title_wrapper{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.events-txt{
+    font-family: avenir-lt-w01_35-light1475496,sans-serif;
+    font-size: 14px;
+    color: rgb(43, 43, 43);
+    font-weight: lighter;
+    padding: 5px 0px
+}
+
+
+.events-imgs_wrapper{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 30px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.events-img{
+    width: 200px;
+}
+
+.events-img:hover{
+    opacity: 0.6;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.contacts-link{
+    cursor: pointer;
+    padding: 10px;
+    background-color: #a4bb80;
+    color: white;
+    font-family:Helvetica, sans-serif;
+    letter-spacing: 0.2em;
+  
+}
+
+.contacts-link:hover{
+    background-color: #273B09;
+    transition: 0.3s;
+}
+
+.contacts-link_wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    letter-spacing: 0.1em;
+    margin-bottom: 80px;
+}
+
+.contacts-link_wrapper a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 450px) {
+    .events-imgs_wrapper{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+
+    .events-txt{
+        padding: 5px 40px;
+        line-height: 1.6;
+    }
+
+    .contacts-link{
+        font-size: 8px;
+    
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .events-imgs_wrapper{
+        grid-template-columns: 200px 200px;
+        grid-gap: 20px;
+    }
+
+    .contacts-link{
+        font-size: 10px;
+        text-align: center;
+    
+    }
+}

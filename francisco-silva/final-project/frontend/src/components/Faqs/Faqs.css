@@ -1,0 +1,54 @@
+#faqs_wrapper{
+    margin: 200px 80px 200px 0px
+}
+
+.MuiPaper-root{
+   margin-left: 100px;
+   margin-right: 100px;
+}
+.MuiTypography-root{
+    width: 100% !important;
+
+}
+
+.MuiAccordion-root{
+    margin-left: 250px !important;
+    margin-right: 250px !important;
+}
+
+.faqs-inner-txt{
+    color: rgb(85, 85, 85) !important;
+    font-size: 14px !important;
+    font-weight: lighter !important;
+    font-family: Helvetica, sans-serif !important;
+}
+
+
+.faqs-title{
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 0.2em;
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+.faqs-txt{
+    text-align: center;
+    margin: 10px 200px 50px;
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+    line-height:30px;
+    color: rgb(111, 111, 111) 
+    
+}
+
+@media only screen and (max-width: 880px) {
+    .faqs-txt{
+        margin: 10px 100px 50px
+    }
+    .MuiAccordion-root{
+        margin-left: 100px !important;
+        margin-right: 100px !important;
+    }
+}

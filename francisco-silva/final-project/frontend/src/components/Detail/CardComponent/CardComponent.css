@@ -1,0 +1,133 @@
+.detail--item{
+    width: 466px;
+}
+.image--btn_wrapper{
+    position: relative;
+    width: 100%;
+  
+}
+
+.anchor--close_btn{
+    text-decoration: none;
+    color: #273B09;
+}
+.detail--item_image{
+    width: 466px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.detail--item_title{
+    font-family: 'Raleway', sans-serif;
+    padding: 0px 22px;
+    margin: 20px 0px;
+    font-size: 24px;
+    font-weight: 200;
+    color: rgb(40, 40, 40)
+}
+.detail--item_price{
+    padding: 0px 22px 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+    color: rgb(40, 40, 40)
+}
+
+.detail--description_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0px 22px 31px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+    color: rgba(40, 40, 40, 0.7);
+    
+}
+.label--image_wrapper{
+    display: flex;
+    flex-direction: row;
+    padding: 5px 16px;
+    color: rgb(40, 40, 40);
+    
+}
+
+.label--image{
+    width: 70px;
+}
+
+.detail--button_wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.detail--button{
+
+
+    background-color: #273B09; 
+    border: none;
+    color: white;
+    padding: 15px 93px 15px 93px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.detail--button:hover{
+    background-color: #506c27; 
+    transition: 0.2s;
+}
+
+.detail--quantity_wrapper{
+    margin: 10px 22px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(40, 40, 40, 0.4);
+    padding: 12px 0px;
+    
+}
+.detail--quantity_title{
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+    color: rgba(40, 40, 40, 0.7);
+}
+
+.add-btn, .remove-btn{
+    color: rgba(40, 40, 40, 0.7);
+    font-size: 18px;
+    cursor: pointer;
+}
+.add-btn:hover, .remove-btn:hover{
+    color: #97C005;
+    transition: 0.15s;
+}
+.add-remove_wrapper{
+    display: flex;
+    align-items: center; 
+}
+
+.quantity-txt{
+
+    margin: 0px 8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    color: rgba(40, 40, 40, 1);
+}
+
+.close-btn{
+    color: #273B09;
+    font-size: 33px;
+    z-index: 100 !important;
+    position: absolute;
+    cursor: pointer;
+    bottom: 90.5%;
+    left: 93%;
+    padding: -10px;
+    border-radius: 50%;
+    border: none;
+}

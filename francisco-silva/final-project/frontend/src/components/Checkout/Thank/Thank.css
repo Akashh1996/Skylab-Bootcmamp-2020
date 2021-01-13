@@ -1,0 +1,66 @@
+.title--text_wrapper{
+margin-top: 200px;
+}
+
+.thank--title{
+    font-family: 'Nunito Sans', sans-serif;
+    letter-spacing: 0.25em;
+ 
+    padding:30px 30px 20px 30px;
+    margin: 0px 0px 0px 50px
+}
+
+.p-thank-text{
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 30px;
+    margin-left:50px;
+    font-weight: lighter;
+    color: rgb(55, 55, 55);
+    letter-spacing: 0.18em;
+    line-height: 1.7em;
+    max-width: 496px;
+}
+
+.thank--back--btn{
+    text-align: center;
+  
+    background-color: #273B09; 
+    border: none;
+    color: white;
+    padding: 15px 40px;
+
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    margin: 50px 15px 200px 80px;
+
+}
+.thank--back--btn:hover{
+    background-color: #506c27; 
+    transition: 0.2s;
+}
+
+
+@media only screen and (max-width: 800px) {
+   
+    .thank--title, .p-thank-text{
+       text-align: center;
+    }
+    .thank--title{
+        margin: 0px
+    }
+    .p-thank-text{
+        margin: auto ;
+    }
+    .thank--back--btn{
+        text-align: center;
+        margin: 0px 0px 150px 0px ;
+    }
+    .thank--btn_wrapper{
+        display: flex;
+        justify-content: center;
+        
+    }
+}

@@ -1,0 +1,274 @@
+
+.list--cart_wrapper{    
+    width: 100%;   
+    background-color: white;
+}
+
+
+.order{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 30px;
+    border: 1px solid rgb(194, 194, 194);
+    background-color: white;
+}
+
+.order > h2, span{
+    font-family: 'Raleway', sans-serif; 
+    font-weight: lighter;
+    
+}
+
+.order > h2{
+    font-size: 16px;
+}
+
+.order > span{
+    font-size: 13px;
+}
+
+.added--cart{
+    padding: 30px 0px 75px;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: lighter;
+    margin: 0px 30px;
+    border-bottom: 2px solid black;
+}
+
+.item--cart_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+
+.total--prc_wrapper{
+    padding: 30px 30px 10px;
+    border-bottom: 1px solid rgb(145, 145, 145);
+    display: flex;
+    flex-direction: column;
+}
+.total--prc{
+    padding-bottom: 10px;
+}
+
+.spcl--rqst_input{
+    margin: 30px 30px 10px;
+    font-family: 'Raleway', sans-serif; 
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 1px solid #97C005;
+    display: none;
+}
+
+
+.buy--btn{
+
+    background-color: #a4bb80; 
+    border: none;
+    color: white;
+    padding: 15px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+   
+}
+
+.buy--btn:hover{
+    background-color: #273B09; 
+    transition: 0.2s;
+}
+
+.btn_wrapper{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.item--cart{
+    list-style-type: none;
+    font-size: 14px;
+
+}
+
+@media only screen and (max-width: 800px) {
+    .list--cart_wrapper{
+       max-width: 170px;
+    } 
+    .buy--btn{
+        padding: 10px 20px;
+        margin: 0px;
+    }
+    .btn_wrapper{
+        padding:35px
+    }
+}
+
+
+
+
+.cart-remove-btn{
+    margin-bottom: 3px;
+}
+
+.add-rmv--btn_wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    opacity: 0;
+    transition: 1s;
+}
+
+
+
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 26px;
+  
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  
+  input:checked + .slider {
+    background-color: #a4bb80;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #a4bb80;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+  }
+  
+
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+  .radio_wrapper{
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgb(205, 205, 205);
+      border-bottom: none;
+  }
+
+
+  .filter-list-cart_wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-image: url("https://trello-attachments.s3.amazonaws.com/5f7afb80257ef0330839c5e5/5fbce4b8b21fee045a78cb83/09fd5285f2887fef9488cc99c3e7235a/download-icons8_(4).png");
+    z-index: -100;
+    background-repeat: repeat-y;
+    margin-top: 100px;
+    background-attachment: fixed;
+
+}
+
+.filter--cart_wrapper{
+    /* position: fixed; */
+    min-height: 100px !important;
+    max-height: 850px;
+    position: sticky;
+    top: 0;
+    margin-bottom: 925px;
+    z-index: 10;
+    margin-top: 150px;
+    -webkit-box-shadow: 0px 3px 10px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 10px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 10px -4px rgba(0,0,0,0.75); 
+    background-color: white;
+}
+
+.filter_wrapper{
+    width: 100%;
+    top: 0;
+}
+
+
+.slider_wrapper{
+    margin: 10px; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;  
+}
+
+.slider-txt{
+    font-family: 'Raleway', sans-serif;
+    color: rgb(138, 138, 138);
+    font-size: 13px;
+    padding-left: 10px;
+}
+
+
+
+.add-rmv--btn_wrapper:hover{
+    opacity: 1;
+    transition: 0.2s;
+    
+   
+}
+
+
+
+.cart-remove-btn, .cart-add-btn{
+    font-size: 15px;
+    color: rgb(62, 62, 62);
+}
+
+
+
+.cart-remove-btn:hover, .cart-add-btn:hover{
+    font-size: 18px;
+    transition: 0.15s;
+}
+
+
