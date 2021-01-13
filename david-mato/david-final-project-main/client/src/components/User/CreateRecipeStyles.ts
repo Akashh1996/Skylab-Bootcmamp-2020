@@ -1,0 +1,65 @@
+import { StatusBar, StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+  sectionTitle: {
+    marginTop: StatusBar.currentHeight,
+    height: 70,
+    fontSize: 30,
+    color: 'black',
+    textShadowColor: 'white',
+    textShadowOffset: { width: 2, height: 2 },
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginVertical: 20,
+    borderBottomWidth: 1.5,
+    width: '90%',
+    paddingBottom: 15,
+    lineHeight: 65,
+    alignSelf: 'center',
+  },
+  recipeSectionTitle: {
+    textAlign: 'center',
+    fontSize: 20,
+    backgroundColor: 'rgb(230, 84, 84)',
+    color: 'white',
+    height: 35,
+    lineHeight: 35,
+  },
+  createRecipeButton: {
+    position: 'absolute',
+    bottom: 0,
+    height: 60,
+    backgroundColor: 'black',
+    color: 'white',
+    textAlign: 'center',
+    lineHeight: 60,
+    fontSize: 20,
+  },
+  textInput: {
+    fontSize: 17,
+    borderColor: 'black',
+    borderWidth: 0.7,
+    borderRadius: 5,
+    width: '90%',
+    paddingHorizontal: 7,
+    marginVertical: 20,
+    paddingVertical: 2,
+    justifyContent: 'flex-start',
+  },
+  favoriteCardContainer: {
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 1,
+    shadowRadius: 10,
+  },
+  favoriteCard: {
+    borderRadius: 5,
+    backgroundColor: 'rgb(242, 242, 242)',
+    elevation: 5,
+    marginHorizontal: 10,
+    marginTop: 4,
+    marginBottom: 16,
+  },
+});
+
+export default styles;
