@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+.question-detail{
+    width: 70%;
+    margin: 14px auto 0;
+    background: white;
+    padding: 20px;
+    box-shadow: none;
+    box-shadow: 0 3px 9px #c9cccd;
+}
+.code{ 
+    margin: 18px 10px 0 0;
+    font-family: "Consolas", "monaco", monospace;
+    font-size: 13px;
+    background-color: #F5F5F5;
+    white-space: pre;
+    padding: 5px 10px;
+    border-left: 4px solid  #0077CC;
+    overflow: scroll;
+    max-height: 350px;
+}
+.question-article-detail{
+    width: 100%;
+}
+.question-detail-article__content{
+    margin: 0;
+}
+.question-title{
+    font-size: 18px;
+    color: #0077CC;
+    font-family: Roboto, sans-serif;
+
+}
+.content-question-detail{
+    margin-top: 5px;
+}
+.answers{
+    font-family: Roboto, sans-serif;
+    width: 70%;
+    margin: 14px auto 0;
+    background: white;
+    padding: 20px;
+    box-shadow: none;
+    box-shadow: 0 3px 9px #c9cccd;
+    display: flex;
+    margin-bottom: 10px;
+}
+.answer-title{
+    color: #0077CC;
+    font-size: 1.3em;
+    font-family: 'Castoro', serif;
+}
+.tag-detail{
+    padding: 4px 10px;
+    box-sizing: border-box;
+    color: #0077CC;
+    box-shadow: 0 0px 3px 1px #0077CC;
+    margin: 5px  0 0;
+    width: 15%;
+    text-align: center;
+  } 
+  .question-description p{
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    color: #707885;
+    font-size: 13px;
+    font-family: Roboto, sans-serif;
+    line-height: 30px;
+    font-weight: 500;
+    margin-bottom: 13px;
+
+} 
+.question-description{
+    margin-bottom: 7px;
+}
+.answer-form{
+    width: 70%;
+    margin: 10px auto;
+    background: white;
+}
+.answer-number{
+    display: flex;
+    margin-top: 4px;
+    color: #0077CC;
+    align-items: center;
+    justify-content: center;
+    margin-left: 18px;
+}
+.question-title{
+    margin: 10px 0;
+}
+.question-title{
+    font-size: 18px;
+    font-family: Roboto, sans-serif;
+    color: #0077CC;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 800px) {
+    .question-detail, .answers {
+      width: 80%;
+    }
+    .answer-form{
+        width: 80%;
+    }
+  }

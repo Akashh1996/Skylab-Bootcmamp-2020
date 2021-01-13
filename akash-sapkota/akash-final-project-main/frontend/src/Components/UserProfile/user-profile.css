@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.user-question-detail{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.user-data, .user-question{
+    background-color: white;
+    margin-top: 10px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 3px 9px #c9cccd;
+
+}
+.user-question{
+    color: #0077CC;
+    font-size: 18px;
+}
+
+.userImage{
+    border-radius: 50%;
+}
+
+.user-name {
+    font-size: 18px;
+    font-family: Roboto, sans-serif;
+    color: #0077CC;
+    font-weight: 500;
+}
+
+.user-email{
+    color: #0077CC;
+    font-family: emoji, sans-serif;
+}
+.no-question-text{
+    text-align: center;
+    margin-top: 50px;
+    color: #0077CC;
+    font-family: sans-serif;
+    line-height: 25px;
+    margin-bottom: 170px;
+
+}
+.answer-detail-user{
+    width: 90%;
+}
+.answer-description-users{
+    margin-top: 10px;
+}
+.no-answers-user{
+    font-size: 14px;
+    color: #0077CC;
+    margin-top: 20px;
+    
+
+}
+.tag{
+    width: fit-content;
+}
+.user-questions{
+    background-color: white;
+    font-family: Roboto;
+    padding: 20px;
+    margin: 10px auto;
+    width: 70%;
+    box-shadow: 0 3px 9px #c9cccd;
+    color: #0077CC;
+    text-align: center; 
+}
+
+@media only screen and (max-width: 800px) {
+    .user-data {
+      width: 80%;
+    }
+    .user-questions {
+      width: 80%;
+    }
+
+  }
