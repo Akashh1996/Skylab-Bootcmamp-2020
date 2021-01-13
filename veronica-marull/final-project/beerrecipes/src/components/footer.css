@@ -1,0 +1,81 @@
+footer {
+    
+    height: auto;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+
+    
+    
+}
+
+.subscribe {
+    margin: 20px;
+}
+
+.subscribe-btn {
+    background-color: #F9C73D;
+    height: 40px;
+    font-size: 15px;
+}
+.input-email {
+    height: 35px;
+    color: black;
+}
+
+footer div input {
+    margin-right: 10px;
+}
+
+.social-icons {
+    padding: 30px;
+}
+
+.far, .fab {
+    font-size: 25px;
+    margin: 5px;
+}
+
+
+@media screen and (min-width: 1001px) {
+    footer {
+        width: 100%;
+        height: auto;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    
+    .subscribe {
+        margin: 20px;
+    }
+    
+    .subscribe-btn {
+        background-color: #F9C73D;
+        height: 40px;
+        font-size: 15px;
+    }
+    .input-email {
+        height: 35px;
+        color: black;
+    }
+    
+    footer div input {
+        margin-right: 10px;
+    }
+    
+    .social-icons {
+        padding: 30px;
+    }
+    
+    .far, .fab {
+        font-size: 25px;
+        margin: 5px;
+    }
+}
