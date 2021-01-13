@@ -1,0 +1,9 @@
+.table-container{
+    justify-content: center;
+    padding: 5vw;
+    text-align:center;
+}
+
+.MuiIconButton-label{
+    color:#212121;
+}

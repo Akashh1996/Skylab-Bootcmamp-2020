@@ -1,0 +1,10 @@
+h3{
+    text-align: center;
+    margin: 2vw;
+    color:#062265;
+    font-weight: 700;
+}
+
+#icon-list>span>svg{
+    color:#fff!important;
+}

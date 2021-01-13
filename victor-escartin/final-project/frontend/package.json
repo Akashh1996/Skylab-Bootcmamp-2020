@@ -1,0 +1,93 @@
+{
+  "name": "frontend",
+  "proxy": "http://127.0.0.1:3000",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-free-brands": "^5.0.13",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.13",
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "@stripe/react-stripe-js": "^1.1.2",
+    "@stripe/stripe-js": "^1.11.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@trendyol-js/react-carousel": "^1.0.5",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.14.2",
+    "@types/react-dom": "^16.9.8",
+    "axios": "^0.21.0",
+    "bootstrap": "^4.5.3",
+    "chart.js": "^2.9.4",
+    "classnames": "^2.2.6",
+    "clsx": "^1.1.1",
+    "d3": "^6.3.1",
+    "firebase": "^8.1.2",
+    "font-awesome": "^4.7.0",
+    "jest-google-maps-mock": "^1.0.3",
+    "material-table": "^1.69.2",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.4.0",
+    "react-carousel-responsive": "0.0.29",
+    "react-chartjs-2": "^2.11.1",
+    "react-dom": "^17.0.1",
+    "react-dynamic-carousel": "^1.0.7",
+    "react-elastic-carousel": "^0.9.5",
+    "react-fontawesome": "^1.7.1",
+    "react-google-maps": "^9.4.5",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "react-slick": "^0.27.13",
+    "reactstrap": "^8.7.1",
+    "redux": "^4.0.5",
+    "redux-mock-store": "^1.5.4",
+    "redux-thunk": "^2.3.0",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.2.1",
+    "styled-components-carousel": "^0.2.0",
+    "typescript": "^4.0.3",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --collect-coverage --watchAll",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "src/Components/Map",
+      "src/Private"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+li{
+    list-style: none;
+}
+
+.admin-list_item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10vw;
+
+}
+
+.admin-btn{
+    width:8vw;
+    margin: 0 1vw;
+}

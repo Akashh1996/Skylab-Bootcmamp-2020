@@ -1,0 +1,146 @@
+.footer {
+	display: flex;
+	background-color:#2b3c9c;
+	text-align: center;
+	color: white;
+	padding: 30px 25px 25px;
+	bottom: 0;
+}
+
+.footer-upper-container{
+	margin: auto;
+}
+
+.footer-upper-container_right>{
+	margin:auto;
+}
+
+.logo-footer>img{
+	width: 5vw;
+}
+
+.logo-footer>p{
+	margin-top: 0;
+}
+
+.contact-links {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	margin-top: 5px;
+}
+
+
+.contact-links>p{
+	width: 100%;
+	text-align: center;
+	margin:0 2px;
+}
+
+.contact-links__link {
+
+	width: fit-content;
+	cursor: pointer;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	padding: 3px 0;
+	transition: 0.15s color ease-out;
+	font-size: 16px;
+}
+
+.contact-links__link:hover {
+	color:#F57C00;
+}
+
+.social-networks {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	cursor: pointer;
+	border-top: 1px solid#14A37F;
+	border-bottom: 1px solid#14A37F;
+	padding: 11px 0;
+	margin: 20px 0;
+	color:white;
+}
+
+.social-networks__network {
+	font-size: 35px;
+	transition: 0.15s color ease-out;
+	line-height: 30.63px;
+	justify-items: center;
+}
+
+.GooglePlus-icon:hover {
+	color: rgb(212, 75, 61);
+}
+
+.Facebook-icon:hover {
+	color: rgb(68, 105, 176);
+}
+
+.Youtube-icon:hover {
+	color: rgb(252, 13, 17);
+}
+
+.Twitter-icon:hover {
+	color: rgb(42, 163, 239);
+}
+
+.Pinterest-icon:hover {
+	color: rgb(228, 11, 44);
+}
+
+.Instagram-icon:hover {
+	color: rgb(255, 0, 221);
+}
+
+.footer__copyright {
+	background-color:#1D2B7B;
+	color:white;
+	text-align: center;
+	font-size: 16px;
+	line-height: 18px;
+	padding:1vw
+}
+
+@media screen and (min-width: 600px) {
+	.noAlone-logo {
+		width: 180px;
+	}
+
+	.footer-upper-container{
+		display:grid;
+		grid-template-columns: 30% 3% auto;
+	}
+
+	.footer-upper-container_right{
+		margin:auto auto auto 15vw ;
+		display: grid;
+		grid-template-columns: auto 5vw auto 5vw auto;
+	}
+
+	hr{
+		background-color: white !important;
+	}
+
+	.contact-info {
+		flex-direction: row;
+		margin-bottom: 15px;
+	}
+
+	.contact-links {
+		cursor: pointer;
+	}
+	.contact-links__link {
+		left: 0;
+		transform: translate(0);
+		font-size: 15px;
+		white-space: nowrap;
+	}
+
+	.social-networks__network {
+		margin: 0 15px;
+	}
+}

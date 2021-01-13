@@ -1,0 +1,37 @@
+.form-builder{
+	padding: 5vw;
+}
+
+#create-form{
+	padding: 4vw;
+	border-radius: 15px;
+	box-shadow: #949494 5px 5px 5px 6px;
+}
+
+.form-label{
+	color:rgb(105, 105, 105);
+	font-weight: bold;
+	font-size: larger;
+}
+
+.newProject__section {
+	max-width: 400px;
+	margin: auto;
+	min-height: 70vh;
+}
+
+.text-area {
+	resize: none;
+}
+h1 {
+	text-align: center;
+	color: gray;
+}
+
+#submit-form{
+	background-color:#2e42b3;
+}
+
+#submit-form:hover{
+	background-color:#162161;
+}

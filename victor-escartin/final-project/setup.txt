@@ -1,0 +1,38 @@
+-------BACKEND-----------
+1.NODE MODULES
+npm init
+
+2. EXPRESS
+npm i EXPRESS
+
+3 ESLINT
+npm i -D ESLINTnpx eslint --init
+
+4 BODY-PARSER(Middleware para recoger datos de http y tratarlos en la BBDD)
+npm i body-parser
+
+5 CHALK (colores a la terminal del server)
+npm i chalk
+
+6 CORS
+npm i cors
+
+7 DEBUG
+npm i debug
+
+
+8 MORGAN(entrega información en la terminal sobre las peticiones al servidor. Suele utilizarse tiny o combined)
+npm i morgan
+
+9 NODEMON
+npm i nodemon
+
+10  MONGOOSE
+npm i mongoose
+
+11 JEST
+npm i jest
+
+
+-------SONARQUBE------
+cd ../../../SKYLAB CODERS/sonarqube-8.4.1.35646/sonar-scanner-cli-4.5.0.2216-windows/sonar-scanner-4.5.0.2216-windows/bin/sonar-scanner.bat

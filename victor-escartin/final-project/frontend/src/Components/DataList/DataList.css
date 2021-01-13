@@ -1,0 +1,14 @@
+.text-link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.main-container{
+    width: '100%';
+    max-width: 360px;
+}
+
+.MuiDrawer-root.MuiDrawer-modal.makeStyles-drawer-7 > .MuiPaper-root{
+    background-color:  #062265 ;
+}
+

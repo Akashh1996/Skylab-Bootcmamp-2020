@@ -1,0 +1,17 @@
+.challenge-item{
+    box-shadow: 0 0 5px 5px rgb(201, 201, 201);
+    border-radius: 10px;
+}
+
+.challenge-item_btn{
+    font-weight: bold;
+}
+
+.challenge-item_image{
+    width: 15vw;
+    height: 15vw;
+}
+
+.MuiGrid-root.MuiGrid-item{
+   padding:none;
+}

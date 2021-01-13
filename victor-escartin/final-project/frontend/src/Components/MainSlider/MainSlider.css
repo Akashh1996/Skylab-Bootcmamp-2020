@@ -1,0 +1,28 @@
+.slider-item{
+    position:relative;
+    display:inline-block;
+    background-color: rgb(92, 92, 92);
+}
+
+.slider-item>img{
+    height: 450px;
+    width: 100vw;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+
+.slider-item>p{
+    position: absolute;
+    top:40%;
+    left:5%;
+    width: 50%;
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+}
+
+.react-carousel-responsive__control.react-carousel-responsive__controlPrev,
+.react-carousel-responsive__control.react-carousel-responsive__controlNext{
+    display:none;
+}
