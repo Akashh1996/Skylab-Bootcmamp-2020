@@ -1,0 +1,31 @@
+<div *ngIf="user$ | async as user" class='background__component'>
+  <mat-card class='user__header'>
+    <img class='user__photo' src="{{user.photoURL}}" alt="">
+    <div>{{user.displayName}}</div>
+    <div>{{user.email}}</div>
+  </mat-card>
+  <mat-card class='meet__card'>
+    <button mat-button class='meet__button' routerLink='/form'>Add new Pet</button>
+  </mat-card>
+  <mat-divider></mat-divider>
+  <div class='favourite__section'>Favorite Pets:</div>
+  <div class='list__card-container'>
+    <div *ngFor='let pet of user.favourite'>
+      <a class='card__list'
+      routerLink="/detail/{{pet._id}}"
+      >
+        <mat-card class='list__card'>
+          <img mat-card-image class='photo__card--list' src='{{pet.photo}}' alt=''/>
+          <mat-card-content>
+            <mat-card-title class='title__card--list'>{{pet.name}}</mat-card-title>
+            <div class='description__card--list'>
+              <div class='description__card--age'>{{pet.age}}</div>
+              <div>{{pet.type}}</div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </a>
+    </div>
+  </div>
+</div>
+

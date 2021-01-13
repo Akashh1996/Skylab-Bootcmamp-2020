@@ -1,0 +1,33 @@
+<ng-container *ngIf="pet$ | async as pet">
+  <div class=detail__section>
+      <div class='carousel__background'>
+        <carousel class='carousel__detail' [cellsToShow]=1 [height]=500 [dots]=true>
+          <div *ngFor='let photo of pet?.photo' class="carousel-cell">
+            <img class='carousel__img' src="{{photo}}" alt=''>
+          </div>
+        </carousel>
+      </div>
+
+      <div class='card__section'>
+        <mat-card class="pet-card">
+          <mat-card-title class='card__header--text'>
+            <mat-card-title class='card__header--text'>{{pet?.name}}</mat-card-title>
+            <mat-card-subtitle class='card__header--subtext'>{{pet?.type}}</mat-card-subtitle>
+          </mat-card-title>
+          <mat-divider class='pet-card__divider'></mat-divider>
+          <mat-card-content class='description__card'>
+            <p class='description__text'>
+              {{pet?.description}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions >
+            <button mat-button class='like__button' (click)='addFavourite()'>{{following ? 'UNLIKE': 'LIKE' }}</button>
+          </mat-card-actions>
+        </mat-card>
+        <mat-card class='meet__card'>
+        <button mat-button class='meet__button'>Want to meet {{pet?.name}}?</button>
+        <button mat-button class='favorite__button' color="basic">Favorite {{pet?.name}}</button>
+        </mat-card>
+      </div>
+    </div>
+</ng-container>

@@ -1,0 +1,43 @@
+<section class='header__section'>
+<mat-toolbar color="white">
+  <a class='logo__container' routerLink='/main'>
+    <img src="https://trello-attachments.s3.amazonaws.com/5fc25c399621180ff648b3bf/5fc25f490b5aa2446a3aafd5/234e1e2072ef6187aecd34b90dc1f92a/6725-200.png" alt='' class='icon__image'>
+    <span class='name__header'>PetRefuge</span>
+  </a>
+  <span class="example-spacer"></span>
+  <div class='nav__desktop--container'>
+    <div class='nav__desktop--find'>
+      <div class='nav__desktop' (click)='findPet("Cat")' routerLink='/list'>Find a Cat</div>
+      <div class='nav__desktop' (click)='findPet("Dog")' routerLink='/list'>Find a Dog</div>
+    </div>
+    <div class='flex-divisor'></div>
+  <div class='desktop__right-buttons'>
+    <button mat-icon-button class="favorite-icon" color='primary' aria-label="Example icon-button with heart icon">
+      <mat-icon matBadge="1" matBadgeColor="warn" routerLink='/user'>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="burguerButton" color='primary' aria-label="Example icon-button with menu icon" (click)='sideNavClick()'>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <app-login class='login__header'></app-login>
+  </div>
+</div>
+</mat-toolbar>
+<mat-toolbar color="primary">
+  <span class="example-spacer secondary__nav">
+    <button mat-button class='secondary__nav--pets' id='secondary__nav' color='white' routerLink='/list' (click)='findPets()'>Find more pets</button>
+  </span>
+</mat-toolbar>
+
+<div class='side__nav' id='side__nav' [style.display]=""  >
+  <div class='side__nav--container'>
+    <div class='text__side--nav' (click)='findPet("Cat")' routerLink='/list' (click)='sideNavClick()'>Find a cat ></div>
+    <div class='text__side--nav' (click)='findPet("Dog")' routerLink='/list' (click)='sideNavClick()'>Find a dog ></div>
+    <div class='text__side--nav' routerLink='/list' (click)='findPets()' (click)='sideNavClick()'>Find more pets></div>
+    <span class='flex-divisor'></span>
+    <div class='login__nav'>
+      <span class='text__side--nav'>Sign Up</span>
+      <app-login class='login__side--nav'></app-login>
+    </div>
+  </div>
+</div>
+</section>
