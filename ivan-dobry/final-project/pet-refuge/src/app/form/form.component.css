@@ -1,0 +1,19 @@
+.form__section {
+  padding: 20px;
+}
+
+.form__element {
+  margin-top: 15px;
+}
+
+.Add_button {
+  color:white;
+  background-color: #673ab7;
+  border: solid white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.required {
+  margin-bottom: 15px;
+}

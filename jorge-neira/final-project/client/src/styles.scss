@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a:active,
+a:link,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+body { 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background: none;
+}

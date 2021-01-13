@@ -1,0 +1,26 @@
+<section class="image-gallery-container">
+  <section class="large-size-image">
+    <picture class="image-icons-wrapper">
+      <button mat-mini-fab (click)="imageSlider('prev')">
+        <mat-icon>navigate_before</mat-icon>
+      </button>
+      <img
+        [src]="images[currentLargeImg]"
+        alt="product-img"
+        class="image-display-lgsize"
+      />
+      <button mat-mini-fab (click)="imageSlider('next')">
+        <mat-icon>navigate_next</mat-icon>
+      </button>
+    </picture>
+  </section>
+  <section class="small-size-images">
+    <picture class="images-display">
+      <ul class="images-display-list">
+        <li *ngFor="let image of images">
+          <img [src]="image" alt="image" class="images-display-smsize" />
+        </li>
+      </ul>
+    </picture>
+  </section>
+</section>

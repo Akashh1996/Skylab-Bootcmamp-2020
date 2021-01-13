@@ -1,0 +1,56 @@
+<section 
+  *ngIf="productList$ | async as product; else loading" 
+  class="list-product-container">
+
+  <ng-container *ngFor="let item of product">
+
+    <section class="product-outer-wrapper">
+
+      <section class="list-product-card">
+        <div *ngIf="item.stock !== 0" class="product-state-new">
+          <span>Nuevo</span>
+        </div>
+        <div *ngIf="item.stock === 0" class="product-stock-none">
+          <span>Agotado</span>
+        </div>
+        <figure 
+          class="product-image-container"
+          [routerLink]="['../detail', item._id]" 
+          routerLinkActive="active"
+        >
+          <img [src]="item.images" 
+            alt="product image"
+            class="product-image"
+            >
+        </figure>
+        <p class="product-name">
+          {{ item.name }}
+        </p>   
+        <p class="product-price">
+          {{ item.price | currency: 'EUR' }}
+        </p>  
+        <p *ngIf="item.sales" class="product-price-discount">
+          {{ item.sales | currency: 'EUR' }}
+        </p>  
+        <button *ngIf="item.stock !== 0; else elseBlock" class="product-buy-btn btn" (click)="addProductToCart(item._id)">
+          Añadir al carrito
+        </button>
+        <ng-template #elseBlock>
+          <button 
+            class="product-buy-btn btn"
+            [routerLink]="['../detail', item._id]" 
+            routerLinkActive="active"  
+          >
+            Más
+          </button>
+        </ng-template>
+      </section>
+
+    </section>
+
+  </ng-container>
+
+</section>
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>

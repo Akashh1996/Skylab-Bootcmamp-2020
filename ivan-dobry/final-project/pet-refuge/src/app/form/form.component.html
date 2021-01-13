@@ -1,0 +1,47 @@
+<div class='form__section'>
+  <h1>Add your Pet</h1>
+
+  <div class='form__element'>
+    <div class="mb-3">
+      <label for="petName" class="form-label">Pet name*</label>
+      <input type="text" class="form-control" id="petName" placeholder="Name" [formControl]='petName' required>
+    </div>
+    </div>
+
+    <div class='form__element'>
+    <label for="select__type" class="form-label" >Select pet type</label>
+    <select class="form-select" aria-label="Default select example" id='select__type' [(ngModel)]='petType'>
+      <option *ngFor='let pet of petTypes'>
+        {{pet}}
+      </option>
+    </select>
+  </div>
+
+  <div class='form__element'>
+  <label for="select__age" class="form-label">Age</label>
+    <select class="form-select" aria-label="Default select example" id='select__age' [(ngModel)]='petAge'>
+      <option *ngFor='let age of petAges'>
+        {{age}}
+      </option>
+
+    </select>
+  </div>
+
+  <div class='form__element'>
+    <div class="mb-3">
+      <label for="photo" class="form-label">Photo*</label>
+      <input type="file" class="form-control photo__form" id="photo" placeholder="photo-url" [formControl]='petPhoto' required>
+    </div>
+  </div>
+
+  <div class='form__element'>
+    <div class="mb-3">
+      <label for="description" class="form-label">Pet description*</label>
+      <textarea class="form-control" id="description" rows="3" [formControl]='petDescription' required></textarea>
+    </div>
+  </div>
+  <div class='required'>*(required camps)</div>
+
+    <button mat-button type='submit' value='submit' class='Add_button' (click)='openDialog()'>Add Pet</button>
+
+</div>

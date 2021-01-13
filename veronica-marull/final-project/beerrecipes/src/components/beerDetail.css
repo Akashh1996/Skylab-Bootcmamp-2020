@@ -1,0 +1,151 @@
+* {
+    color: white;
+    
+}
+.detail {
+   
+    display: flex;
+    flex-direction: column;
+    
+    padding: 10px;
+    margin: 10px;
+  
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgba(32, 32, 32, 0.5);
+    margin-left: 20px;
+   
+}
+
+#beer-description{
+    
+    display: flex;
+    justify-content: right;
+    padding: 20px;
+    margin: 10px;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 2; 
+}
+
+.characteristic, .volume, .method{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgba(32, 32, 32, 0.5);
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 2; 
+}
+
+.block1 div, .block2 div {
+    padding-bottom: 20px;
+
+}
+.ingredients{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgba(32, 32, 32, 0.5);
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 2; 
+    
+
+}
+
+.malt-name, .hop-name, .yeast-name {
+    background-color: rgba(252, 248, 248, 0.3);
+    padding: 5px;
+    border-radius: 15px;
+    text-align: center;
+}
+.malt-amount, .hop-amount {
+    text-align: center;
+}
+
+.malt, .hops, .yeast {
+    padding-right: 30px;
+}
+
+.yeast {
+    padding-left: 30px;
+}
+
+.food-tips {
+    
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgba(32, 32, 32, 0.5);
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 2; 
+}
+
+.malts div, .hops div, .volume div {
+    margin-bottom: 10px;
+}
+
+.back-list {
+    margin-left: 5px;
+}
+.back-top {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 40px;
+}
+
+.beer-image {
+    padding: 20px;
+}
+#beer-image {
+    width: 200px;
+    height: 600px;
+}
+
+
+
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {}
+    
+  
+
+@media screen and (min-width: 1001px) {
+
+    .description, .characteristic, .volume, .method, .ingredients, .food-tips  {
+        width: 800px;
+    }
+
+    .charac-vol-method, .ingre-food-tips, .food-tips {
+        display: flex;
+        flex-direction: row;
+    }
+    .volume, .ingredients {
+        margin-left: 20px;
+    }
+    .food {
+        padding-right: 20px;
+    }
+    .tips {
+        padding-left: 20px;
+    }
+    .image-and-description {
+        display: flex;
+    }
+}
+
+	
+
+

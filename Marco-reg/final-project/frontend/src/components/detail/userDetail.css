@@ -1,0 +1,130 @@
+*{
+    font-family: 'Oswald', sans-serif;
+}
+.main-wrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #252525;
+    width: 100%;
+    
+}
+
+#user-image{
+    border-radius: 70px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    margin-bottom: 65px;
+    
+}
+#user-stance{
+color:#BBBBBB;
+width: 273px;
+height: 83px;
+left: 35px;
+top: 266px;
+
+background: #110F0F;
+backdrop-filter: blur(4px);
+
+
+border-radius: 50px;
+margin-top: 10px;
+}
+#user_stance{
+    text-transform:uppercase;
+    
+    padding-top: 32px;
+    padding-left: 65px;
+}
+#video-description{
+    display: flex;
+    align-items: center;
+}
+#user-name{
+    text-transform:uppercase;
+    color:#D16F4D;
+    
+    font-size: 40px;   
+    
+}
+#user-spects{
+    display:flex;
+    
+}
+#user-description{
+    color:#BBBBBB;
+    width: 273px;
+    height: 83px;
+    left: 35px;
+    top: 266px;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+#spects{
+    color:#BBBBBB;
+    font-size: 20px;
+
+}
+.user-photos{
+    width: 200px;
+    height: 200px;
+    
+    object-fit: contain;
+    margin: 50px;
+
+
+}
+#photo-section{
+    display: flex;
+    justify-content: space-around;
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+}
+
+@media only screen and (max-width: 600px) {
+
+    #user-name{
+        font-size: 20px;
+        margin-top:70px;
+    }
+    #user-image{
+        width: 150px;
+        margin-bottom: 20px;
+        border: 1px solid black;
+    }
+    #user-spects{
+        display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    }
+    #linebreak-user{
+        width: 70%;
+        border-top: 1px dotted #ddd;
+        margin-top: 28px;
+    }
+    #user-description{
+        font-size: 18px;
+    }
+    #spects{
+        font-size: 18px;
+    }
+    #photo-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+    #user-photos{
+        width: 170px;
+        height: 170px;
+        margin:0px;
+    }
+
+
+}

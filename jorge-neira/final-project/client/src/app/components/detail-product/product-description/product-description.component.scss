@@ -1,0 +1,26 @@
+.product-description {
+    .product-description-title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .product-description-text {
+      font-size: 16px;
+      text-align: justify;
+      padding: 0 10px;
+    }
+    .product-description-specs {
+      .product-description-title {
+        font-weight: 600;
+      }
+      .product-description-item {
+        display: flex;
+        margin-left: 20px;
+        .description-item-icon {
+          color: #FF7700;
+        }
+        .description-item-content {
+          font-size: 16px;
+        }
+      } 
+    }
+  }

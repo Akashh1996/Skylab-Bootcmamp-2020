@@ -1,0 +1,2545 @@
+[
+   {
+      "name":"Asus GX550LXS-HF073T - Portátil 15 i7-10875H 32GB RTX 2080 SUPER 1TB",
+      "reference":" GX550LXS-HF073T",
+      "part-number":"90NR02Z1-M02620",
+      "ean":"999999999",
+      "price":"3489",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"gaming",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/37175-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg",
+         "https://www.neobyte.es/37176-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg",
+         "https://www.neobyte.es/37177-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg",
+         "https://www.neobyte.es/37178-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg",
+         "https://www.neobyte.es/37179-thickbox_default/portatil-asus-15-gx550lxs-hf073t-i7-10875h-32gb.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-10875H",
+         "ScreenPad Plus: 14.1 4K Multitáctil",
+         "Memoria RAM: 32GB / 1TB SSD",
+         "NVIDIA RTX 2080 SUPER"
+      ],
+      "shortDescription":"Con el Asus GX550LXS-HF073T Zephyrus Duo 15 supera todos los límites, tanto para trabajar como para jugar. Un innovador portátil con ROG ScreenPad Plus, una pantalla secundaria inclinada 13º facilita la multitarea y cuenta con aplicaciones desarrolladas para optimizar tu flujo de trabajo. En el apartado de rendimiento, el Asus GX550LXS-HF073T Zephyrus Duo 15 va con todo. Equipado con procesador Intel Core i7 de 10ª generación, gráfica Nvidia RTX 2080 Super y 32GB de RAM, este modelo se atreve con las tareas más exigentes, desde proyectos creativos a streamings a velocidades increíbles. Y es que los desafíos no son problema para él. Gracias a su sistema de refrigeración es posible optimizar el flujo de aire y la disipación de forma automática, evitando que las altas temperaturas incidan en el funcionamiento del equipo. Descubre las infinitas posibilidades de este portátil en Neobyte.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador: Intel Core i7-10875H (8 Núcleos, 16 Subprocesos, Caché: 16MB SmartCache, hasta 5.10GHz, 64-bit)",
+                  "Pantalla 15.6 (39,62cm) / LED Retroiluminado / FHD (1920x1080/16:9) / 300Hz / 300nits / 3ms / Antirreflejos / NTSC 72% / SRGB 100% / Adobe 75,35% / Contraste 1000:1 / IPS / Ángulo de Visión de 85°/85°/85°/85°",
+                  "ROG ScreenPad™ Plus:14.1 (35,81cm) LED Retroiluminado / 60Hz / NanoEdge (Borde Estrecho) / 4K UHD (3840X1100/32:9) / Multitáctil",
+                  "Memoria RAM: 32GB (16GB + 16GB [EN PLACA]) DDR4 3200MHz",
+                  "Almacenamiento: 1TB SSD M.2 NVMe™ PCIe® 3.0 Performance",
+                  "Tarjeta gráfica: NVIDIA GeForce RTX 2080 SUPER 8GB GDDR6 con Diseño Max-Q",
+                  "Altavoces estéreo integrados: Sí, 2 x 4W",
+                  "Micrófono integrado: Sí",
+                  "Batería: 90Wh, 4 Celdas, Polímeros de Litio"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema Operativo",
+               "content":[
+                  "Windows® 10 Home (64Bits)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "2 x USB 3.2 Gen1",
+                  "1 x USB 3.2 Gen2",
+                  "1 x Thunderbolt™ 3 USB-C (USB-C 3.2 Gen2/DisplayPort™ 1.4/Entrega de Alimentación/G-Sync)",
+                  "1 x Conector de Audio Combinado Auriculares/Micrófono 3,5mm",
+                  "1 x Entrada Micrófono 3,5mm",
+                  "1 x Conector RJ45 LAN",
+                  "1 x HDMI 2.0b",
+                  "1 x Entrada de Corriente",
+                  "Intel Wi-Fi 6 (Gig+)(802.11ax) 2x2 RangeBoost",
+                  "Bluetooth 5.0 (La Versión puede cambiar en función de las actualizaciones del SO)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "360 x 268 x 20,9 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "2,48 Kg (con batería de 4 celdas)"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus G512LW-HN038 - Portátil 15 i7-10750H 16GB RTX2070 512SSD",
+      "reference":"G512LW-HN038",
+      "part-number":"90NR0391-M00950",
+      "ean":"999999999",
+      "price":"1629",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"gaming",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/32697-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg",
+         "https://www.neobyte.es/32698-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg",
+         "https://www.neobyte.es/32693-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg",
+         "https://www.neobyte.es/32694-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg",
+         "https://www.neobyte.es/32695-thickbox_default/portatil-asus-g512lw-hn038-i7-10750h-16gb-512gb.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-10750H",
+         "16GB RAM / 512GB SSD",
+         "Nvidia GeForce RTX 2070 8GB GDDR6",
+         "15.6 Full HD IPS 144Hz"
+      ],
+      "shortDescription":"El Asus G512LW-HN038 ROG Strix G15 está preparado para todo lo que imaginas y más. ¡Puede ser tuyo en Neobyte con las máximas garantías y al precio más competitivo! Con un diseño deslumbrante y de vanguardia, este portátil de 15.6 se atreve con todo tipo de juegos y programas, incluso los más exigentes. Para ello, Asus lo ha equipado con un procesador Intel Core i7-10750H de 10ª generación y 6 núcleos, 16GB de RAM, SSD de 512GB y gráfica Nvidia GeForce RTX 2070 8GB GDDR6, garantía de potencia e innovación. Así mismo, señalar que el Asus G512LW-HN038 ROG Strix G15 ha sido provisto de una espectacular pantalla Full HD IPS que alcanza una tasa de refresco de 144Hz, lo que se traduce en una calidad de imagen y fluidez impresionantes.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador Intel® Core™ i7-10750H (6 Núcleos, 12 Subprocesos, Caché: 12MB SmartCache, 2.60GHz hasta 5.00GHz, 64-bit)",
+                  "Memoria RAM 16GB (8GB + 8GB) DDR4 2933MHz",
+                  "Gráfica NVIDIA® GeForce® RTX™ 2070 8GB GDDR6",
+                  "Almacenamiento: 512GB SSD M.2 PCIe® 3.0 NVMe",
+                  "Pantalla: 15.6 (39,62cm) / FHD (1920x1080) / LED Retroiluminado / 144Hz / 250 nits / Antirreflejos / NTSC 45% / sRGB 67% / Adobe 50% / 1000:1 / IPS-level",
+                  "Bateria: 66Wh, 4 Celdas, Polímero de Lítio",
+                  "Audio: 2 Altavoces Estéreo de 4.2W Integrados Micrófono de Matriz Intregado Tecnología Smart Amp"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema Operativo",
+               "content":[
+                  "FreeDos (Sin Sistema)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  " 3 x USB 3.2 (GEN1)",
+                  "1 x USB-C 3.2 (GEN2) / DisplayPort / G-Sync",
+                  "1 x Salida Auriculares/Entrada Micrófono 3.5mm (combo)",
+                  "1 x Conector RJ45",
+                  "1 x HDMI 2.0b",
+                  "1 x Entrada de Corriente",
+                  "Wi-Fi 6 (Gig+) (802.11ax) 2x2 RangeBoost",
+                  "Bluetooth® 5.0"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "360 x 275 x 25.8 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "2.39 Kg (con batería de 8 celdas)"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus BX425JA-BM145R - Portátil 14 i7-1065G7 16GB 512GB W10Pro",
+      "reference":"BX425JA-BM145R",
+      "part-number":"90NB0QX1-M02720",
+      "ean":"999999999",
+      "price":"1229",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"workstation",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/38232-thickbox_default/portatil-asus-15-bx425ja-bm145r-i7-1065g7-16gb.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-1065G7",
+         "16GB RAM / 512GB SSD",
+         "14 Full HD IPS",
+         "Windows 10 Pro"
+      ],
+      "shortDescription":"Potente, bello y con Windows 10 Pro, el Asus BX425JA-BM145R ZenBook 14 es la herramienta de trabajo que estabas buscando. Fabricado con materiales de primera calidad y con un tamaño de tan solo 14, está preparado para acompañarte en el día a día e incrementar tu productividad allá donde estés. Entre sus especificaciones técnicas, destacar el procesador Intel Core i7-1065G7 de 10ª gen. con gráficos integrados Intel Iris Plus, los 16GB de memoria RAM y los 512GB de almacenamiento SSD. Estos componentes aseguran un encendido instantáneo y una capacidad multitarea espectacular. Así mismo, indicar que el Asus BX425JA-BM145R ZenBook 14 cuenta con pantalla Full HD IPS de borde estrecho, altavoces certificados por Harman Kardon y una completa conectividad.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador Intel® Core™ i7-1065G7 (4 Núcleos, 8 Subprocesos, Caché: 8MB SmartCache, 1.30GHz hasta 3.90GHz, 64-bit)",
+                  "Pantalla 14 (35,56cm) LED Retroiluminado / 60Hz / NanoEdge (Borde Estrecho) / 300nits / FHD (1920x1080/16:9) / Antirreflejos / NTSC:72% / sRGB: 100% / IPS / Ángulo de Visión de 178°",
+                  "Memoria RAM 16GB (16GB [EN PLACA]) LPDDR4X 3200MHz",
+                  "Gráfica Intel® Iris® Plus Graphics 640",
+                  "Almacenamiento: 512GB SSD M.2 NVMe™ PCIe® 3.0 x2 + TPM",
+                  "Webcam: Si, HD (720p) IR/RGB Combo",
+                  "NumberPad™ 2.0/Touchpad multitáctil",
+                  "Tecnología Precision Touchpad (PTP) compatible con gestos inteligentes de hasta cuatro dedos",
+                  "Teclado tipo chicle, retroiluminado, Español",
+                  "Batería: 67WHrs, 4 Celdas, Ion de Litio"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "Windows® 10 Pro (64Bits)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "1 x USB 3.2 Gen1",
+                  "2 x Thunderbolt™ 3 USB-C® (DisplayPort™ 1.4/Entrega de Alimentación)",
+                  "1 x HDMI 2.0b",
+                  "1 x Lector de Tarjetas Micro SD",
+                  "10/100/1000 Mbps con adaptador externo USB 3.0 a RJ45",
+                  "Wi-Fi 6 (Gig+)(802.11ax) 2x2",
+                  "Bluetooth® 5.0"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "319 x 208 x 13,9 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "1,2 Kg"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus B9450FA-BM0306R - Portátil 14 i7-10510U 16GB 1TB SSD W10Pro",
+      "reference":"B9450FA-BM0306R",
+      "part-number":"90NX02K1-M03440",
+      "ean":"999999999",
+      "price":"1659.99",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"workstation",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/26451-thickbox_default/portatil-asus-b9450fa-bm0306r-i7-10510u-16gb-1tb.jpg",
+         "https://www.neobyte.es/26444-thickbox_default/portatil-asus-b9450fa-bm0306r-i7-10510u-16gb-1tb.jpg",
+         "https://www.neobyte.es/26445-thickbox_default/portatil-asus-b9450fa-bm0306r-i7-10510u-16gb-1tb.jpg",
+         "https://www.neobyte.es/26446-thickbox_default/portatil-asus-b9450fa-bm0306r-i7-10510u-16gb-1tb.jpg",
+         "https://www.neobyte.es/26447-thickbox_default/portatil-asus-b9450fa-bm0306r-i7-10510u-16gb-1tb.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-10510U",
+         "RAM: 16GB / 1TB SSD",
+         "14 Full HD IPS NanoEdge",
+         "Windows 10 Pro"
+      ],
+      "shortDescription":"Elegante, minimalista y ultraligero, el Asus B9450FA-BM0306R ExpertBook es un portátil de 14 especialmente desarrollado para su uso en entornos empresariales, estableciendo un nuevo estándar en cuanto a portabilidad, resistencia, rendimiento e innovación. Provisto de procesador Intel Core i7-10510U de 10ª generación, 16GB de RAM y SSD de 1TB, ofrece una capacidad de respuesta impresionante a todos los niveles, permitiéndote acceder a tus programas y datos instantáneamente. En este sentido, señalar que el Asus B9450FA-BM0306R ExpertBook cuenta con Intel Project Athena, una certificación que acredita las prestaciones, eficiencia y conectividad más avanzadas. Construido conforme al estándar de durabilidad militar MIL-STD 810G, el Asus B9450FA-BM0306R ExpertBook es una apuesta segura para todos aquellos que priman la fiabilidad y la resistencia, algo fundamental para profesionales dinámicos que necesitan una herramienta de trabajo en la que confiar. Así mismo, destacar que este ultrabook equipa pantalla Full HD IPS de 14 con marco ultradelgado, así como el novedoso NumberPad, multitud de puertos y las soluciones más avanzadas de seguridad (bloqueo de cámara web, cámara IR, TPM, sensor de huella...). Eleva tu productividad con el Asus ExpertBook B9450FA-BM0306R.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador: Intel® Core™ i7-10510U (4 Núcleos, 8 hilos, Caché: 9MB, 1.80 hasta 4.90GHz)",
+                  "Memoria RAM: 16GB (en placa) LPDDR3 2133MHz",
+                  "Gráfica: Intel® UHD",
+                  "Almacenamiento: 1TB SSD M.2 PCIe® Gen3 x4 NVMe + TPM",
+                  "Unidad óptica: no",
+                  "Pantalla de 14 Full HD IPS, antirreflejos, sRGB: 100%, 1920 x 1080",
+                  "Webcam IR/RGB",
+                  "Sensor de huella",
+                  "NumberPad",
+                  "Teclado retroiluminado",
+                  "Audio: altavoces integrados Harman Kardon, micrófono de matriz 360º",
+                  "Batería de 2 celdas"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "Windows® 10 Pro (64Bits)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "1 x USB 3.1 (GEN2)",
+                  "2 x USB-C 3.1 (GEN2) (Thunderbolt 3/DisplayPort/Power Delivery)",
+                  "1 x Salida Auriculares/Entrada Micrófono 3.5mm (combo)",
+                  "1 x Micro HDMI a RJ45 LAN",
+                  "1 x HDMI 1.4",
+                  "LAN (a través de micro HDMI)",
+                  "WiFi 6 802.11ax (2x2)",
+                  "Bluetooth 5.0"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "321 x 202 x 8-14.9 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "995 gr."
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus BX325JA-EG081R - Portátil 13 i7-1065G7 16GB 512GB W10Pro",
+      "reference":"BX325JA-EG081R",
+      "part-number":"90NB0QY1-M01320",
+      "ean":"999999999",
+      "price":"1179.99",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"workstation",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/37004-thickbox_default/portatil-asus-bx325ja-eg081r-i7-1065g7-16gb-512gb.jpg",
+         "https://www.neobyte.es/37165-thickbox_default/portatil-asus-bx325ja-eg081r-i7-1065g7-16gb-512gb.jpg",
+         "https://www.neobyte.es/37166-thickbox_default/portatil-asus-bx325ja-eg081r-i7-1065g7-16gb-512gb.jpg",
+         "https://www.neobyte.es/37168-thickbox_default/portatil-asus-bx325ja-eg081r-i7-1065g7-16gb-512gb.jpg",
+         "https://www.neobyte.es/37169-thickbox_default/portatil-asus-bx325ja-eg081r-i7-1065g7-16gb-512gb.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-1065G7",
+         "16GB RAM / 512GB SSD",
+         "13.3 Full HD IPS",
+         "Windows 10 Pro"
+      ],
+      "shortDescription":"Diseño exquisito y rendimiento profesional con el Asus BX325JA-EG081R ZenBook, un ultrabook fabricado con materiales premium y hardware de última generación que te permitirá elevar tu productividad. Su elegante, refinado y ligero chasis da cabida a un fabuloso teclado de tacto confortable, una magnífica pantalla Full HD IPS de 13.3, a diferentes puertos de alta velocidad y a unos poderosos altavoces certificados por Harman Kardon que te sorprenderán. En su interior encontramos unos componentes de primera que garantizan un comportamiento fluido y una capacidad multitarea espectacular. Entre ellos, destacan el procesador Intel Core i7-1065G7 con gráficos integrados Iris Plus, los 16GB de memoria RAM y el SSD M.2 MVMe de 512GB. Por último, indicar que el Asus BX325JA-EG081R ZenBook incluye Windows 10 Pro.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador Intel® Core™ i7-1065G7 (4 Núcleos, 8 Subprocesos, Caché: 8MB SmartCache, 1.30GHz hasta 3.90GHz, 64-bit)",
+                  "Memoria RAM 16GB (16GB [EN PLACA]) LPDDR4X 3200MHz",
+                  "Gráfica Intel® Iris® Plus Graphics",
+                  "Almacenamiento: 512GB SSD M.2 NVMe™ PCIe® 3.0 x2 + TPM",
+                  "Pantalla: 13.3 (33,78cm) LED Retroiluminado / 60Hz / NanoEdge (Borde Estrecho) / 300nits / FHD (1920x1080/16:9) / Antirreflejos / NTSC:72% / sRGB: 100% / IPS / Ángulo de Visión de 178°",
+                  "NumberPad™ 2.0/Touchpad multitáctil",
+                  "Bateria: 67Wh, 4 Celdas, Ion de Lítio",
+                  "Audio: Altavoces Estéreo Integrados con Tecnología Smart AMP, Micrófono de Matriz Integrado compatible con reconocimiento de voz de los asistentes Cortana y Alexa, Certificado por Harman/Kardon®"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "Windows® 10 Pro (64Bits)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "1 x USB 3.2 (GEN1)",
+                  "2 x ThunderBolt 3 USB-C (DisplayPort/Alimentación)",
+                  "1 x HDMI 2.0b",
+                  "Lector de tarjetas MicroSD",
+                  "1 x Entrada de Corriente",
+                  "Wi-Fi 6 (Gig+) (802.11ax) 2x2",
+                  "Bluetooth® 5.0"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "304 x 203 x 13.9 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "1.19 Kg"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus UX581LV-H2001R - Portátil 15.6 i7-10750H 16GB RTX 2060 1TB SSD",
+      "reference":"UX581LV-H2001R",
+      "part-number":"90NB0RQ1-M01390",
+      "ean":"999999999",
+      "price":"3149.99",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"workstation",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/39742-thickbox_default/portatil-asus-ux581lv-h2001r-i7-10750h-16gb-1tb.jpg",
+         "https://www.neobyte.es/39743-thickbox_default/portatil-asus-ux581lv-h2001r-i7-10750h-16gb-1tb.jpg",
+         "https://www.neobyte.es/39744-thickbox_default/portatil-asus-ux581lv-h2001r-i7-10750h-16gb-1tb.jpg",
+         "https://www.neobyte.es/39748-thickbox_default/portatil-asus-ux581lv-h2001r-i7-10750h-16gb-1tb.jpg",
+         "https://www.neobyte.es/39749-thickbox_default/portatil-asus-ux581lv-h2001r-i7-10750h-16gb-1tb.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-10750H",
+         "RAM 16GB / 1TB SSD",
+         "Pantalla IPS OLED 15.6 UHD",
+         "ScreenPad Plus 14",
+         "RTX 2060 6GB"
+      ],
+      "shortDescription":"El Asus UX581LV-H2001R Zenbook Pro Duo lleva tu productividad y creatividad al siguiente nivel. Este modelo propone una nueva forma de trabajar, maximizando el flujo de trabajo gracias a una pantalla táctil secundaria Asus ScreenPad Plus 4K que se integra a la perfección con la pantalla principal. En ella podrás hacer uso de diferentes herramientas, automatizar secuencias de teclas, utilizar la escritura manual, agrupar tareas… ¡posibilidades ilimitadas! Además, se trata de una máquina muy potente, dotada de procesador Intel Core i7-10750H, gráfica RTX 2060, 16GB de memoria y 1TB de almacenamiento SSD, lo que garantiza un rendimiento espectacular para llevar a cabo todo tipo de tareas. Descubre todas las prestaciones del Asus UX581LV-H2001R Zenbook Pro Duo en Neboyte.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Intel® Core™ i7-10750H (6 Núcleos, 12 Subprocesos, Caché: 12MB SmartCache, hasta 5.00GHz, 64-bit)",
+                  "Memoria RAM 16GB (16GB [EN PLACA]) DDR4 2933MHz (No ampliable)",
+                  "Gráfica NVIDIA® GeForce® RTX™ 2060 6GB DDR6 / Ansel / Compatible G-Sync / VR Ready",
+                  "Almacenamiento: 1TB SSD M.2 NVMe™ PCIe® 3.0 Performance",
+                  "Pantalla IPS OLED 15.6 (39,62cm) UHD (3840X2160) 16:9 / 60Hz / NanoEdge (Borde Estrecho) / 400nits / Brillante / DCI-P3: 100% / Multitáctil / IPS-level / Ángulo de Visión de 178° / PANTONE®            Validated",
+                  "Altavoces Estéreo Integrados con Sonido Envolvente",
+                  "Micrófono de Matriz Integrado compatible con reconocimiento de voz de los asistentes",
+                  "Cortana y Alexa",
+                  "Integrada Alexa con barra de luz",
+                  "Certificado por Harman/Kardon®",
+                  "Cámara: HD (720p) IR/RGB Combo",
+                  "Teclado tipo chicle, retroiluminado, Español",
+                  "NumberPad™/Touchpad multitáctil",
+                  "Tecnología Precision Touchpad (PTP) compatible con gestos inteligentes de hasta cuatro dedos",
+                  "Bateria: 71Wh, 8 Celdas, Ion de Litio"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"ScreenPad",
+               "content":[
+                  "ScreenPad™ Plus: 14 (35,56cm) / NanoEdge (Borde Estrecho) / 4K UHD (3840X1100/32:9) / Multitáctil / IPS / Ángulo de Visión de 178°"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Color",
+               "content":[
+                  "Tapa LCD: Aluminio, Azul Celeste",
+                  "Carcasa: Aluminio, Azul Celeste"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "Windows® 10 Pro (64Bits)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "2 x USB 3.2 Gen2",
+                  "1 x Thunderbolt™ 3 USB-C (DisplayPort™ 1.4/Entrega de Alimentación)",
+                  "1 x Conector de Audio Combinado Auriculares/Micrófono 3,5mm",
+                  "1 x HDMI 2.0a",
+                  "1 x Entrada de Corriente",
+                  "Wi-Fi 6 (Gig+)(802.11ax) 2x2",
+                  "Bluetooth® 5.0 (La Versión puede cambiar con las actualizaciones del Sistema Operativo)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "356 x 225 x 23~24 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "2,5 Kg (con batería de 8 celdas)"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus W700G3T-AV093R - Portátil 17 i7-9750H 32GB RTX3000 1TB SSD",
+      "reference":"W700G3T-AV093R",
+      "part-number":"90NB0P02-M02750",
+      "ean":"999999999",
+      "price":"3219.99",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"workstation",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/36774-thickbox_default/portatil-asus-w700g3t-av093r-i7-9750h-32gb-1tb.jpg",
+         "https://www.neobyte.es/36775-thickbox_default/portatil-asus-w700g3t-av093r-i7-9750h-32gb-1tb.jpg",
+         "https://www.neobyte.es/36776-thickbox_default/portatil-asus-w700g3t-av093r-i7-9750h-32gb-1tb.jpg",
+         "https://www.neobyte.es/36777-thickbox_default/portatil-asus-w700g3t-av093r-i7-9750h-32gb-1tb.jpg",
+         "https://www.neobyte.es/36778-thickbox_default/portatil-asus-w700g3t-av093r-i7-9750h-32gb-1tb.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-9750H",
+         "RAM: 32GB / 1TB SSD",
+         "Nvidia Quadro RTX 3000 6GB",
+         "Pantalla 17 WUXGA IPS"
+      ],
+      "shortDescription":"El Asus W700G3T-AV093R ProArt StudioBook Pro 17 te ofrece un rendimiento de primera clase y una capacidad de procesamiento descomunal para que lleves tu productividad a lo más alto estés donde estés. Equipado con procesador Intel Core i7-9750H de 6 núcleos, 32GB de memoria RAM y SSD M.2 NVMe de 1TB, permite realizar incluso las tareas más exigentes con una fluidez inigualable. Además, este modelo incorpora tarjeta gráfica Nvidia Quadro RTX 3000 de 6GB, capaz de renderizar tus archivo multicapas más rápido, optimizando así tu flujo de trabajo. Pero, además de por su hardware de vanguardia, el portátil workstation Asus W700G3T-AV093R ProArt StudioBook Pro 17 destaca por sus innovaciones. En este sentido, destascar el revolucionario touchpad con teclado numérico LED, la increíble pantalla NanoEdge de 17 y resolución WUXGA con validación Pantone, la refrigeración avanzada y su chasis ultrafino con certificado militar.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador: Intel Core i7-9750H (6 Núcleos, 12 Subprocesos, Caché: 12MB, 2.6 hasta 4.5GHz)",
+                  "Memoria RAM: 32GB DDR4 2666MHz (2 slots, ampliable hasta 64GB)",
+                  "Gráfica: Nvidia Quadro RTX 3000 6GB GDDR6",
+                  "Almacenamiento: 1TB SSD M.2 PCIe Gen3 x4 NVMe",
+                  "Unidad óptica: no",
+                  "Pantalla de 17 IPS WUXGA (1920x1200)",
+                  "Relación de aspecto: 16:10",
+                  "Webcam",
+                  "Sensor de huella dactilar: Sí",
+                  "Teclado: Tipo chicle retroiluminado,",
+                  "Audio: altavoces estéreo integrados, micrófono",
+                  "Batería de 3 celdas (57Wh)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "Windows® 10 Pro (64Bits)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "3 x USB 3.2 (GEN2)",
+                  "1 x USB-C™ Thunderbolt™ 3 (DisplayPort™)",
+                  "1 x Salida Auriculares/Entrada Micrófono 3.5mm (combo)",
+                  "1 x HDMI",
+                  "1 x Lector de Tarjetas",
+                  "1 x Bloqueo de Seguridad Kensington",
+                  "1 x Entrada de Corriente",
+                  "WiFi 6 802.11ax (2x2)",
+                  "Bluetooth 5.0"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "382 x 286 x 18.4-19.9mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "2.39 kg"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"MSI GS66 Stealth 10SE-051ES - Portátil 15 i7-10750 32GB RTX 2060 1TB SSD",
+      "reference":"GS66 Stealth 10SE-051ES",
+      "part-number":"9S7-16V112-051",
+      "ean":"999999999",
+      "price":"1899",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"gaming",
+      "manufacture":"msi",
+      "images":[
+         "https://www.neobyte.es/30420-thickbox_default/portatil-msi-gs66-10se-051es-i7-10750-32gb-1tb-ssd.jpg",
+         "https://www.neobyte.es/30421-thickbox_default/portatil-msi-gs66-10se-051es-i7-10750-32gb-1tb-ssd.jpg",
+         "https://www.neobyte.es/30422-thickbox_default/portatil-msi-gs66-10se-051es-i7-10750-32gb-1tb-ssd.jpg",
+         "https://www.neobyte.es/30423-thickbox_default/portatil-msi-gs66-10se-051es-i7-10750-32gb-1tb-ssd.jpg",
+         "https://www.neobyte.es/30424-thickbox_default/portatil-msi-gs66-10se-051es-i7-10750-32gb-1tb-ssd.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-10750H ",
+         "RAM: 32GB / 1TB SSD",
+         "Nvidia GeForce RTX 2060 6GB GDDR6",
+         "Pantalla de 15.6 FHD 240Hz"
+      ],
+      "shortDescription":"Los gamers más exigentes encontrarán en el MSI GS66 Stealth 10SE-051ES el aliado perfecto para disfrutar de los últimos juegos del mercado a gran calidad y con una fluidez óptima. Este portátil gaming incorpora lo último en rendimiento, con procesador i7 de 10ª generación y gráfica RTX 2060 de Nvidia, una combinación letal para tus adversarios. Y es que jugar más rápido a más FPS te dará una ventaja competitiva en el campo de batalla. Cuenta, además, de memoria RAM de 32GB y pantalla Full HD a 240 Hz, con 1TB de almacenamiento SSD. Apuesta por el MSI GS66 Stealth 10SE-051ES y sumérgete de lleno en los eSports.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador: Intel Core i7-10750H (6 Núcleos, 12 Subprocesos, 2.6GHz hasta 5.0GHz)",
+                  "Memoria RAM: 32GB DDR4 2666MHz (2x16)",
+                  "Gráfica: Nvidia GeForce RTX 2060 6GB GDDR6",
+                  "Almacenamiento: 1TB NVMe PCIe Gen3x4 SSD",
+                  "Unidad óptica: no",
+                  "Pantalla de 15.6 FHD (1920 x 1080), 240Hz Thin Bezel, close to 100%sRGB",
+                  "Webcam",
+                  "Audio: altavoces integrados, micrófono",
+                  "Batería de 4 celdas"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "Windows 10 Home"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "1 x USB 3.2 Gen2 Type-C (ThunderBolt 3)",
+                  "1 x USB 3.2 Gen2 Type-C",
+                  "3 x USB 3.2 Gen2 Type-A",
+                  "1 x RJ45",
+                  "1 x HDMI",
+                  "1 x Lector de tarjetas",
+                  "Killer WiFi 6 802.11ax AX1650",
+                  "Bluetooth 5.1"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "358.3 x 248 x 19.8 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "2.1 kg."
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus FA506II-BQ029 - Portátil 15 Ryzen 7 4800H 16GB GTX1650Ti 1TB SSD",
+      "reference":"FA506II-BQ029",
+      "part-number":"90NR03M2-M05820",
+      "ean":"999999999",
+      "price":"1069",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"gaming",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/38220-thickbox_default/portatil-asus-15-fa506ii-bq029-r7-4800h-16gb-1tb.jpg",
+         "https://www.neobyte.es/38221-thickbox_default/portatil-asus-15-fa506ii-bq029-r7-4800h-16gb-1tb.jpg",
+         "https://www.neobyte.es/38222-thickbox_default/portatil-asus-15-fa506ii-bq029-r7-4800h-16gb-1tb.jpg",
+         "https://www.neobyte.es/38223-thickbox_default/portatil-asus-15-fa506ii-bq029-r7-4800h-16gb-1tb.jpg",
+         "https://www.neobyte.es/38224-thickbox_default/portatil-asus-15-fa506ii-bq029-r7-4800h-16gb-1tb.jpg"
+      ],
+      "general-specs":[
+         "AMD Ryzen 7 4800H",
+         "16GB RAM / 1TB SSD",
+         "Nvidia GeForce GTX 1650Ti 4GB",
+         "15.6 Full HD IPS"
+      ],
+      "shortDescription":"Con el Asus FA506II-BQ029 TUF Gaming A15 entrarás por la puerta grande en el universo de los portátiles gaming. Por menos de lo que imaginas podrás disfrutar del rendimiento increíble que arroja su procesador AMD Ryzen 7 4800H de 8 núcleos, acompañado por 16GB de RAM y 1TB SSD. Además, para una experiencia de juego fluida y detallada, este modelo cuenta con tarjeta gráfica Nvidia GeForce GTX 1650Ti de 4GB y pantalla Full HD IPS de 15.6. Paralelamente, indicar que el Asus FA506II-BQ029 TUF Gaming A15 ha sido fabricado con materiales de gran durabilidad y ha sido provisto de numerosos puertos que aseguran una conectividad sencilla con tus periféricos y dispositivos. ¡Consíguelo ya en Neobyte!",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador AMD® Ryzen™ 7 4800H APU (8 Núcleos, 16 Subprocesos, Caché: 12MB Level 2&3, 2.90GHz hasta 4.20GHz, 64-bit)",
+                  "Pantalla IPS 15.6 (39,62cm) FULL HD (1920x1080) 16:9 / LED Retroiluminado / 60Hz / 200nits / Antirreflejos / NTSC: 45%, sRGB: 62,50%, Adobe: 47,34% / Contraste: 700:1 / Ángulo de Visión de 170°/170°",
+                  "Memoria RAM 16GB (2x8GB) DDR4 3200MHz (ampliable a 32GB)",
+                  "Gráfica NVIDIA® GeForce® GTX 1650Ti 4GB GDDR6 VRAM",
+                  "Almacenamiento: 1TB SSD M.2 NVMe™ PCIe® 3.0",
+                  "Altavoces Estéreo Integrados",
+                  "Micrófono de Matriz Integrado compatible con reconocimiento de voz de los asistentes",
+                  "Cortana y Alexa",
+                  "Teclado tipo chicle, teclado numérico aislado, iluminación RGB, Español",
+                  "Touchpad multitáctil",
+                  "Tecnología Precision Touchpad (PTP) compatible con gestos inteligentes de hasta cuatro dedos",
+                  "Batería 48Wh, 3 Celdas, Polímeros de Litio"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "FreeDos (Sin Sistema)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "1 x USB 2.0",
+                  "2 x USB 3.2 Gen1",
+                  "1 x USB-C 3.2 Gen2 (DisplayPort™ 1.4)",
+                  "1 x Conector de Audio Combinado Auriculares/Micrófono 3,5mm",
+                  "1 x Conector RJ45 LAN",
+                  "1 x HDMI 2.0b",
+                  "1 x Bloqueo de Seguridad Kensington",
+                  "1 x Entrada de Corriente",
+                  "Wi-Fi 5 (802.11ac) 2x2",
+                  "Bluetooth® 5.0 (La Versión puede cambiar con las actualizaciones del Sistema Operativo)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "359 x 256 x 24,7~24,9 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "2,3 Kg (con batería de 3 celdas)"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus GU502LW-HN071T - Portátil 15.6 i7-10750H 16GB RTX 2070 1TB SSD",
+      "reference":"GU502LW-HN071T",
+      "part-number":"90NR02W6-M02320",
+      "ean":"999999999",
+      "price":"2099",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"gaming",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/40198-thickbox_default/portatil-asus-15-gu502lw-hn071t-i7-10750h-16gb-1t.jpg",
+         "https://www.neobyte.es/40199-thickbox_default/portatil-asus-15-gu502lw-hn071t-i7-10750h-16gb-1t.jpg",
+         "https://www.neobyte.es/40200-thickbox_default/portatil-asus-15-gu502lw-hn071t-i7-10750h-16gb-1t.jpg",
+         "https://www.neobyte.es/40201-thickbox_default/portatil-asus-15-gu502lw-hn071t-i7-10750h-16gb-1t.jpg",
+         "https://www.neobyte.es/40202-thickbox_default/portatil-asus-15-gu502lw-hn071t-i7-10750h-16gb-1t.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-10750H ",
+         "Pantalla IPS 15.6 FULL HD 144Hz ",
+         "RAM: 16GB / 1TB SSD",
+         "NVIDIA RTX 2070 8GB"
+      ],
+      "shortDescription":"En Neobyte podrás comprar el Asus GU502LW-HN071T ROG Zephyrus M15 a un precio muy competitivo y con todas las garantías. Este portátil gaming de 15.6 es sinónimo de rendimiento, incorporando tecnología de última generación para que disfrutes de la experiencia más fluida y potente. Su procesador de 6 núcleos (Intel Core i7-10750H) es un buen ejemplo de fiabilidad, proporcionando un funcionamiento rápido en todo tipo de tareas. Los gamers más exigentes sabrán apreciar la potencia de su gráfica RTX 2070, los 16GB de memoria y el estilo inconfundible de la Republic of Gamers. También ha sido provisto de SSD de 1TB de capacidad y de una pantalla Full HD a 144Hz en donde visualizar los contenidos con todo lujo de detalles. Descubre más del Asus GU502LW-HN071T ROG Zephyrus M15 y hazte con él nuestra tienda online.!",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador: Intel® Core™ i7-10750H (6 Núcleos, 12 Subprocesos, Caché: 12MB SmartCache, 2.60GHz hasta 5.00GHz, 64-bit)",
+                  "Pantalla IPS 15.6 (39,62cm) / LED Retroiluminado / FULL HD (1920x1080) 16:9 / 144Hz / 250nits / Antirreflejos / NTSC 45% / SRGB 62,50% / Adobe 47,10% / Contraste 1000:1 / Ángulo de Visión de 170°/170°",
+                  "Memoria RAM: 16GB (8GB + 8GB [EN PLACA]) DDR4 2933MHz (ampliable a 24GB / 1 slot)",
+                  "Almacenamiento: 1TB SSD M.2 NVMe™ PCIe® 3.0",
+                  "Tarjeta gráfica: NVIDIA GeForce® RTX™ 2070 8GB DDR6 / Diseño Max-Q / VR Ready",
+                  "2 Altavoces Estéreo Integrados con Tecnología Smart Amp",
+                  "Micrófono de Matriz de compatible con reconocimiento de voz de Cortana y Alexa",
+                  "Sonido Envolvente 7.1 Canales / Audio Hi-Res / SABRE HiFi / ESS",
+                  "Teclado: Tipo chicle, iluminación RGB por tecla, ROG Aura Sync, Español",
+                  "Touchpad: Multitáctil / Tecnología Precision Touchpad (PTP) compatible con gestos inteligentes de hasta cuatro dedos",
+                  "Batería: 76Wh, 4 Celdas, Polímero de Litio"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Color",
+               "content":[
+                  "Tapa LCD: Aluminio, Negro Prisma",
+                  "Carcasa: Aluminio, Negro"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "Windows® 10 Home (64Bits)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "2 x USB 3.2 Gen1",
+                  "1 x USB 3.2 Gen2",
+                  "1 x Thunderbolt™ 3 USB-C® (USB-C® 3.2 Gen2/DisplayPort™ 1.4/Entrega de Alimentación)",
+                  "1 x Salida Auriculares 3.5mm (ESS Hi-Fi DAC)",
+                  "1 x Entrada Micrófono 3.5mm",
+                  "1 x Conector RJ45 LAN",
+                  "1 x HDMI 2.0b",
+                  "1 x Bloqueo de Seguridad Kensington",
+                  "1 x Entrada de Corriente",
+                  "Intel® Wi-Fi 6 (Gig+)(802.11ax) 2x2 RangeBoost",
+                  "Bluetooth® 5.0 (La Versión puede cambiar con las actualizaciones del Sistema Operativo)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "360 x 252 x 19,9 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "1,9 Kg (con batería de 4 celdas)"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus GX701LXS-HG032T - Portátil 17 i7-10875H 32GB RTX 2080 Super 1TB",
+      "reference":"GX701LXS-HG032T",
+      "part-number":"90NR03Q1-M01100",
+      "ean":"999999999",
+      "price":"3199",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"laptop",
+      "sub-category":"gaming",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/37171-thickbox_default/portatil-asus-17-s17-gx701lxs-hg032t-i7-10875h.jpg",
+         "https://www.neobyte.es/37170-thickbox_default/portatil-asus-17-s17-gx701lxs-hg032t-i7-10875h.jpg",
+         "https://www.neobyte.es/37172-thickbox_default/portatil-asus-17-s17-gx701lxs-hg032t-i7-10875h.jpg",
+         "https://www.neobyte.es/37173-thickbox_default/portatil-asus-17-s17-gx701lxs-hg032t-i7-10875h.jpg",
+         "https://www.neobyte.es/37174-thickbox_default/portatil-asus-17-s17-gx701lxs-hg032t-i7-10875h.jpg"
+      ],
+      "general-specs":[
+         "Intel Core i7-10875H ",
+         "Pantalla 17.3 FHD  / 300Hz ",
+         "RAM: 32GB / 1TB SSD",
+         "NVIDIA RTX 2080 SUPER"
+      ],
+      "shortDescription":"El Asus GX701LXS-HG032T ROG Zephyrus S17 desafía los límites de los portátiles. Este modelo de 17 pulgadas no ha escatimado a la hora de integrar un hardware potente que ofrezca la respuesta más rápida y fiable, maximizando la experiencia gaming en un equipo que podrás transportar fácilmente. Su pantalla Full HD a 300 Hz es toda una declaración de intenciones. Disfruta de imágenes detalladas y extremadamente fluidas para sumergirte de lleno en la acción de los juegos. Siguiendo con el listado de especificaciones, encontramos un procesador Intel Core i7 de 10ª generación, gráfica RTX 2080 Super y 32GB de memoria, una garantía de rendimiento capaz de hacer frente a todo tipo de tareas. Y para finalizar, un SSD de 1TB. El Asus GX701LXS-HG032T ROG Zephyrus S17 es una bestia dispuesta a todo. Hazte con él en Neobyte.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Procesador: Intel Core i7-10875H (8 Núcleos, 16 Subprocesos, Caché: 16MB SmartCache, 2.30GHz hasta 5.10GHz, 64-bit)",
+                  "Pantalla 17.3 - 43,94cm / LED Retroiluminado / FHD (1920x1080/16:9) / 300Hz / 300nits / 3ms / Antirreflejos / NTSC 72% / SRGB 100% / Adobe 75% / Contraste 1000:1 / IPS / Ángulo de Visión de 178°/178°",
+                  "Memoria RAM: 32GB (16GB + 16GB [EN PLACA]) DDR4 3200MHz",
+                  "Almacenamiento: 1TB SSD M.2 PCIe® 3.0 x4 NVMe™",
+                  "Tarjeta gráfica: NVIDIA GeForce RTX 2080 SUPER 8GB GDDR6 con Diseño Max-Q",
+                  "Altavoces estéreo integrados: Sí, 2 x 2,5W",
+                  "Micrófono integrado: Sí, (compatible Cortana y Alexa)",
+                  "Batería: 76Wh, 4 Celdas, Polimero de Litio"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "Windows® 10 Home (64Bits)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad y redes",
+               "content":[
+                  "2 x USB 3.2 (GEN1)",
+                  "1 x USB 3.2 (GEN2)",
+                  "1 x USB-C™ 3.2 (GEN2) (DisplayPort™ 1.4)",
+                  "1 x Thunderbolt™ 3 USB-C (USB-C™ 3.2 (GEN2)/DisplayPort™ 1.4/Entrega de Alimentación)",
+                  "1 x Salida Auriculares/Entrada Micrófono 3.5mm (combo)",
+                  "1 x HDMI 2.0b",
+                  "1 x Bloqueo de Seguridad Kensington",
+                  "1 x Entrada de Corriente",
+                  "Intel Wi-Fi 6 (Gig+)(802.11ax) 2x2 RangeBoost",
+                  "Bluetooth 5.0 (La Versión puede cambiar en función de las actualizaciones del SO)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones",
+               "content":[
+                  "399 x 272 x 18,7 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Peso",
+               "content":[
+                  "2,6 Kg (con batería de 4 celdas)"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Teclado Corsair K55 RGB USB Retroiluminado",
+      "reference":"K55 RGB USB Retroiluminado",
+      "part-number":"CH-9206015-ES",
+      "ean":"999999999",
+      "price":"56.95",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"peripheral",
+      "sub-category":"keyboard",
+      "manufacture":"corsair",
+      "images":[
+         "https://www.neobyte.es/35433-thickbox_default/teclado-corsair-k55-rgb-usb-retroiluminado.jpg",
+         "https://www.neobyte.es/35431-thickbox_default/teclado-corsair-k55-rgb-usb-retroiluminado.jpg",
+         "https://www.neobyte.es/35430-thickbox_default/teclado-corsair-k55-rgb-usb-retroiluminado.jpg",
+         "https://www.neobyte.es/35432-thickbox_default/teclado-corsair-k55-rgb-usb-retroiluminado.jpg"
+      ],
+      "general-specs":[
+         "Retroiluminación dinámica",
+         "Teclas de macros: 6 G-keys dedicadas",
+         "Tiempo respuesta: 1ms",
+         "Teclas multimedia dedicadas"
+      ],
+      "shortDescription":"¿Buscas auténtico control a la hora de jugar? El teclado Corsair K55 RGB te lo dará. Este modelo incorpora modos de retroiluminación RGB personalizable, 6 teclas macro     específicas y diferentes controles multimedia para integrar una funcionalidad extraordinaria en una herramienta muy completa. Sus teclas ofrecen un tacto agradable y silencioso, con efecto antifantasma multitecla para un registro simultáneo de comandos con gran exactitud. El reposamuñecas extraíble de goma suave hará que tus horas frente al ordenador sean más cómodas, perfecto para sesiones maratonianas de juego. Además, podrás ajustar la inclinación del teclado, lo que mejora la calidad de esas horas que pasas jugando.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Retroiluminación del teclado: retroiluminación dinámica de tres zonas, modos de iluminación 10+, personalizable",
+                  "Teclas de macros: 6 G-keys dedicadas",
+                  "Tiempo respuesta: 1ms",
+                  "Matriz: hasta 8 teclas rollover",
+                  "Tamaño de teclado estándard",
+                  "Memoria interna",
+                  "Teclas multimedia dedicadas (MUTE, SUBIR/BAJAR VOLUMEN, STOP, PREV, PLAY/PAUSE, SIGUIENTE)",
+                  "Reposamuñecas completamente extraíble con reposamuñecas de goma suave",
+                  "Tipo de cable: goma libre de enredos",
+                  "Bloqueo WIN",
+                  "Dimensiones: 480.2mm x 166.3mm x 34.6mm",
+                  "Peso: 822g"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Cooler Master Masterkeys MK850 - Teclado mecánico RGB",
+      "reference":"Masterkeys MK850",
+      "part-number":"MK-850-GKCR1-SP",
+      "ean":"999999999",
+      "price":"185.89",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"peripheral",
+      "sub-category":"keyboard",
+      "manufacture":"cooler master",
+      "images":[
+         "https://www.neobyte.es/35563-thickbox_default/teclado-cooler-master-masterkeys-mk850-rgb.jpg",
+         "https://www.neobyte.es/35565-thickbox_default/teclado-cooler-master-masterkeys-mk850-rgb.jpg",
+         "https://www.neobyte.es/35564-thickbox_default/teclado-cooler-master-masterkeys-mk850-rgb.jpg"
+      ],
+      "general-specs":[
+         "Teclado mecánico retroiluminado",
+         "Tipo de switch: Cherry MX Red",
+         "Tecnología Aimpad",
+         "Iluminación: RGB"
+      ],
+      "shortDescription":"El Cooler Master Masterkeys MK850 es un teclado mecánico equipado con tecnología Aimpad para un control analógico total en un conjunto de 8 teclas (QWER + ASDF). Este sistema es una combinación de sensores IR e interruptores mecánicos que aporta las funcionalidades de otros periféricos para obtener movimientos más precisos, pudiendo cambiar de juegos MOBA a FPS o a juegos conducción con una precisión sin precedentes. Cuenta con interruptores Cherry MX Red, un sinónimo de durabilidad, comodidad de uso y precisión, así como reposamuñecas e iluminación RGB. Compra el Cooler Master Masterkeys MK850 en Neobyte al mejor precio.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Teclado mecánico retroiluminado",
+                  "Tipo de switch: Cherry MX Red",
+                  "Material: Aluminio, plástico",
+                  "Color: Gunmetal",
+                  "Iluminación: RGB, 16.7 millones de colores",
+                  "5 teclas multimedia",
+                  "Reposamuñecas: Sí (magnética y removible)",
+                  "Memoria interna: 512KB",
+                  "Cable: USB-C extraíble",
+                  "Longitud del cable: 1.8m",
+                  "Dimensiones (Lo x An x Al): 494 x 268 x 550 mm",
+                  "Peso: 1092g"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Logitech G213 Prodigy - Teclado gaming USB",
+      "reference":"G213 Prodigy",
+      "part-number":"920-008086",
+      "ean":"999999999",
+      "price":"59.90",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"peripheral",
+      "sub-category":"keyboard",
+      "manufacture":"logitech",
+      "images":[
+         "https://www.neobyte.es/23904-thickbox_default/teclado-logitech-g213-prodigy-gaming-usb-rgb.jpg",
+         "https://www.neobyte.es/23905-thickbox_default/teclado-logitech-g213-prodigy-gaming-usb-rgb.jpg",
+         "https://www.neobyte.es/23906-thickbox_default/teclado-logitech-g213-prodigy-gaming-usb-rgb.jpg"
+      ],
+      "general-specs":[
+         "Teclas Logitech G Mech-Dome",
+         "Conexión USB",
+         "Resistente salpicaduras",
+         "Retroiluminación: RGB (5 zonas)"
+      ],
+      "shortDescription":"El Logitech G213 Prodigy es sinónimo de rendimiento gaming. Este teclado incorpora teclas Logitech G Mech-Dome, que ofrecen una respuesta rápida ante las pulsaciones, e iluminación RGB Lightsync, con 5 zonas de iluminación. Por otro lado, es resistente a salpicaduras, cuenta con reposamanos y patas ajustables y dispone de controles multimedia para reproducir, poner en pausa y silencia música y vídeos al instante. El Logitech G213 Prodigy es, en definitiva, un teclado duradero y funcional con el que disfrutarás de una ventaja frente a tus adversarios.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Teclas Logitech G Mech-Dome",
+                  "Tipo de conexión: USB 2.0",
+                  "Protocolo USB: USB 2.0",
+                  "Resistente salpicaduras: Probado con resistencia a derrames de 60 ml",
+                  "Indicadores luminosos (LED): Sí",
+                  "Retroiluminación: RGB (5 zonas)",
+                  "Controles multimedia",
+                  "Funcionamiento silencioso",
+                  "Reposamanos integrado",
+                  "Patas ajustables",
+                  "Longitud de cable (alimentación/carga): 1,8 M",
+                  "Altura: 218 mm",
+                  "Anchura: 452 mm",
+                  "Profundidad: 33 mm",
+                  "Peso: 1000 g"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Logitech Craft - Teclado inalámbrico",
+      "reference":"Craft",
+      "part-number":"920-008501",
+      "ean":"999999999",
+      "price":"149.89",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"peripheral",
+      "sub-category":"keyboard",
+      "manufacture":"logitech",
+      "images":[
+         "https://www.neobyte.es/40391-thickbox_default/teclado-logitech-craft-bluetooth.jpg",
+         "https://www.neobyte.es/40392-thickbox_default/teclado-logitech-craft-bluetooth.jpg",
+         "https://www.neobyte.es/40393-thickbox_default/teclado-logitech-craft-bluetooth.jpg",
+         "https://www.neobyte.es/40394-thickbox_default/teclado-logitech-craft-bluetooth.jpg"
+      ],
+      "general-specs":[
+         "RF 2,4Ghz / Bluetooth",
+         "Control giratorio",
+         "Retroiluminación inteligente",
+         "Ideal para creativos"
+      ],
+      "shortDescription":"Logitech Craft es el teclado inalámbrico diseñado para optimizar tu flujo de trabajo. Una herramienta de altas prestaciones especialmente creada para satisfacer las exigencias de profesionales creativos. Provisto de control giratorio, permite controlar de forma fácil y ágil diferentes aspectos y funciones específicas en las aplicaciones más utilizadas. El Logitech Craft también es único por su increíble calidad de fabricación, comodidad de uso y retroiluminación inteligente.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Puerto USB tipo C (carga)",
+                  "Radio de acción inalámbrico de 10 m",
+                  "Cifrado inalámbrico",
+                  "Conmutador de encendido/apagado",
+                  "3 indicadores luminosos de conexión",
+                  "Indicador luminoso de bloqueo de mayúsculas",
+                  "Indicador luminoso de carga de batería",
+                  "Compatible con ratones preparados para Logitech Flow™"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Compatibilidad de conexión",
+               "content":[
+                  "Tecnología inalámbrica Logitech Unifying de 2,4 GHz",
+                  "Tecnología Bluetooth de bajo consumo"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones y peso",
+               "content":[
+                  "Dimensiones y peso",
+                  "Altura: 32 mm",
+                  "Anchura: 430 mm",
+                  "Profundidad: 149 mm",
+                  "Peso: 960 g"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Corsair K83 - Teclado inalámbrico multimedia",
+      "reference":"K83",
+      "part-number":"CH-9268046-ES",
+      "ean":"999999999",
+      "price":"129.95",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"peripheral",
+      "sub-category":"keyboard",
+      "manufacture":"corsair",
+      "images":[
+         "https://www.neobyte.es/24936-thickbox_default/teclado-corsair-k83-inalambrico-multimedia.jpg",
+         "https://www.neobyte.es/24937-thickbox_default/teclado-corsair-k83-inalambrico-multimedia.jpg",
+         "https://www.neobyte.es/24938-thickbox_default/teclado-corsair-k83-inalambrico-multimedia.jpg",
+         "https://www.neobyte.es/24939-thickbox_default/teclado-corsair-k83-inalambrico-multimedia.jpg",
+         "https://www.neobyte.es/24940-thickbox_default/teclado-corsair-k83-inalambrico-multimedia.jpg"
+      ],
+      "general-specs":[
+         "Conectividad inalámbrica y cable",
+         "Retroiluminación blanca",
+         "Joystick",
+         "Panel táctil"
+      ],
+      "shortDescription":"Control total del entretenimiento. El teclado inalámbrico Corsair K83 puede ser conectado a tu Smart TV compatible, a tu PC o a tu reproductor multimedia de forma inalámbrica para hacerlo todo más fácil. Cuenta con un joystick con botones que permite jugar como un gamepad y navegar por los menús de forma sencilla, panel táctil con configuraciones ajustables y rueda de control de volumen con botón de silenciado. Además, dispone de teclas de acceso rápido para la reproducción de medios, la navegación o cambio de las teclas F para accesos directos y juegos.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Peso: 0.48kg",
+                  "Retroiluminación: blanca",
+                  "HID Keyboard Report Rate: 1000Hz",
+                  "Interruptores perfil ultra-bajo Scissor",
+                  "78 teclas",
+                  "Conectividad inalámbrica y cable",
+                  "Media Controls YN: Sí",
+                  "Keyboard Rollover: 20-Key Selective (20KRO) con Anti-Ghosting",
+                  "Tamaño (Full/TKL): compacto",
+                  "Conectividad por cable: USB 2.0 o 3.0 Type-A",
+                  "Conectividad inalámbrica: 1ms 2.4GHz wireless, Bluetooth 4.2",
+                  "Carga de batería: USB a Device",
+                  "Memoria On-Board",
+                  "Tecla dedicada bloqueo WIN",
+                  "Teclas multimedia: rueda volumen con Press to Mute, atajos FN",
+                  "Compatible iCUE",
+                  "Cable plano libre de enredos",
+                  "Autonomía batería: hasta 18 horas con brillo bajo o 40 horas con retroiluminación apagada",
+                  "Batería recargable Lithium-Ion Polymer",
+                  "Alcance: hasta 10m"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Corsair K68 RGB Cherry Red - Teclado gaming mecánico",
+      "reference":"K68 RGB Cherry Red",
+      "part-number":"CH-9102010-ES",
+      "ean":"999999999",
+      "price":"139.95",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"peripheral",
+      "sub-category":"keyboard",
+      "manufacture":"corsair",
+      "images":[
+         "https://www.neobyte.es/20796-thickbox_default/teclado-corsair-k68-rgb-cherry-mx-red.jpg",
+         "https://www.neobyte.es/20797-thickbox_default/teclado-corsair-k68-rgb-cherry-mx-red.jpg",
+         "https://www.neobyte.es/20798-thickbox_default/teclado-corsair-k68-rgb-cherry-mx-red.jpg",
+         "https://www.neobyte.es/20799-thickbox_default/teclado-corsair-k68-rgb-cherry-mx-red.jpg",
+         "https://www.neobyte.es/20800-thickbox_default/teclado-corsair-k68-rgb-cherry-mx-red.jpg"
+      ],
+      "general-specs":[
+         "Retroiluminación RGB",
+         "Layout Español",
+         "Interruptores Cherry MX Red",
+         "Reposamuñecas"
+      ],
+      "shortDescription":"¿Buscas un teclado mecánico que destaque por su durabilidad? El Corsair K68 RGB Cherry Red es resistente al agua y al polvo e incorpora interruptores Cherry MX para aguantar lo que le echen. Incorpora retroiluminación RGB en cada tecla para una personalización casi ilimitada y es posible programar efectos de iluminación y macros gracias al software CUE. El Corsair K68 RGB ofrece una ventaja competitiva frente a tus adversarios por su precisión y comodidad.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Retroiluminación RGB",
+                  "Layout Español",
+                  "HID Keyboard Report Rate: 1000Hz",
+                  "Interruptores Cherry® MX Red",
+                  "Keyboard Rollover: Full Key (NKRO), 100% anti-ghosting",
+                  "Bloqueo Windows",
+                  "Botones multimedia (MUTE, VOL DOWN/UP, STOP, PREV, PLAY/PAUSE, NEXT)",
+                  "Reposamuñecas",
+                  "Keyboard CUE Software: Habilitado",
+                  "Cable de goma libre de enredos",
+                  "Peso: 1.41kg"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Corsair Ironclaw RGB - Ratón gaming óptico",
+      "reference":"Ironclaw RGB",
+      "part-number":"CH-9307011-EU",
+      "ean":"999999999",
+      "price":"58.95",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"peripheral",
+      "sub-category":"mouse",
+      "manufacture":"corsair",
+      "images":[
+         "https://www.neobyte.es/20824-thickbox_default/raton-corsair-ironclaw-rgb-18000dpi-optical-negro.jpg",
+         "https://www.neobyte.es/20825-thickbox_default/raton-corsair-ironclaw-rgb-18000dpi-optical-negro.jpg",
+         "https://www.neobyte.es/20826-thickbox_default/raton-corsair-ironclaw-rgb-18000dpi-optical-negro.jpg",
+         "https://www.neobyte.es/20827-thickbox_default/raton-corsair-ironclaw-rgb-18000dpi-optical-negro.jpg",
+         "https://www.neobyte.es/20828-thickbox_default/raton-corsair-ironclaw-rgb-18000dpi-optical-negro.jpg"
+      ],
+      "general-specs":[
+         "Sensor óptico PMW3391",
+         "DPI: 18.000",
+         "Botones programables: 7",
+         "Retroiluminación RGB 1 zona"
+      ],
+      "shortDescription":"Corsair Ironclaw RGB es un ratón gaming diseñado para juegos FPS y MOBA que te permitirá destacar entre tus rivales. Se trata de un ratón ligero (105 gr), con una ergonomía que se adapta a la mayoría de las manos y los estilos de juego, lo que te hará más cómodo jugar durante horas. Cuenta, además, con un sensor óptico de gran precisión de hasta 18.000 DPI e interruptores Omron para una gran durabilidad. Además, es compatible con iCUE, de modo que podrás personalizar los efectos de iluminación y sincronizarlos con otros dispositivos compatibles. Hazte con el Corsair Ironclaw RGB, el ratón de los eSports.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Sensor óptico PMW3391",
+                  "DPI: 18.000",
+                  "Botones programables: 7",
+                  "Retroiluminación RGB 1 zona",
+                  "Memoria integrada",
+                  "Tipo de interruptor: Omron",
+                  "Conectividad por cable",
+                  "Durabilidad del botón: 50M L/R Click",
+                  "Compatible iCUE",
+                  "Para juegos FPS, MOBA",
+                  "Tasa de reporte: 1000Hz/500Hz/250Hz/125Hz (seleccionable)",
+                  "Cable 1.8 m de fibra trenzada"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Corsair M55 RGB PRO - Ratón gaming ambidiestro 12.400 dpi",
+      "reference":"M55 RGB PRO",
+      "part-number":"CH-9308011-EU",
+      "ean":"999999999",
+      "price":"39.95",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"peripheral",
+      "sub-category":"mouse",
+      "manufacture":"corsair",
+      "images":[
+         "https://www.neobyte.es/22613-thickbox_default/raton-corsair-m55-rgb-pro-ambidiestro.jpg",
+         "https://www.neobyte.es/22614-thickbox_default/raton-corsair-m55-rgb-pro-ambidiestro.jpg",
+         "https://www.neobyte.es/22615-thickbox_default/raton-corsair-m55-rgb-pro-ambidiestro.jpg",
+         "https://www.neobyte.es/22616-thickbox_default/raton-corsair-m55-rgb-pro-ambidiestro.jpg",
+         "https://www.neobyte.es/22617-thickbox_default/raton-corsair-m55-rgb-pro-ambidiestro.jpg"
+      ],
+      "general-specs":[
+         "Diseño ambidiestro",
+         "8 botones programables",
+         "Sensor óptico 12.400 DPI",
+         "Juegos indicados: FPS / MOBA"
+      ],
+      "shortDescription":"El diseño simétrico y la versatilidad del Corsair M55 RGB PRO lo convierten en una opción ganadora para aquellos gamers que busquen un ratón gaming ambidiestro de precio ajustado, construcción duradera y máxima precisión. Y es que este modelo integra un sensor óptico de garantías como es el PMW3327, que alcanza hasta 12.400 dpi, así como switches Omron de primera calidad y 8 botones programables. El Corsair M55 RGB PRO es perfecto para juegos tipo FPS y MOBA y para todo tipo de agarres, contando además, con iluminación RGB configurable mediante iCUE.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Diseño ambidiestro",
+                  "8 botones programables",
+                  "12.400 DPI",
+                  "Sensor óptico PMW3327",
+                  "Iluminación RGB 2 zonas",
+                  "Memoria interna para 1 perfil",
+                  "Switches Omron",
+                  "Durabilidad: 50M L/R Clic",
+                  "Tipo de agarre: palm, claw, fingertip",
+                  "Conectividad: cable de 1.8 m fibra trenzada",
+                  "Compatible con iCUE",
+                  "Indicado para juegos tipo FPS y MOBA",
+                  "Report rate seleccionable: 1000Hz/500Hz/250Hz/125Hz"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Corsair Harpoon RGB Wireless - Ratón gaming 10.000 DPI",
+      "reference":"Harpoon RGB Wireless",
+      "part-number":"CH-9311011-EU",
+      "ean":"999999999",
+      "price":"57.95",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"peripheral",
+      "sub-category":"mouse",
+      "manufacture":"corsair",
+      "images":[
+         "https://www.neobyte.es/20831-thickbox_default/raton-corsair-harpoon-rgb-wireless-10000dpi.jpg",
+         "https://www.neobyte.es/20832-thickbox_default/raton-corsair-harpoon-rgb-wireless-10000dpi.jpg",
+         "https://www.neobyte.es/20833-thickbox_default/raton-corsair-harpoon-rgb-wireless-10000dpi.jpg",
+         "https://www.neobyte.es/20834-thickbox_default/raton-corsair-harpoon-rgb-wireless-10000dpi.jpg",
+         "https://www.neobyte.es/20835-thickbox_default/raton-corsair-harpoon-rgb-wireless-10000dpi.jpg"
+      ],
+      "general-specs":[
+         "Sensor óptico PMW3325",
+         "DPI: 10.000",
+         "Conectividad inalámbrica",
+         "Retroiluminación RGB 1 zona"
+      ],
+      "shortDescription":"El diseño simétrico y la versatilidad del Corsair M55 RGB PRO lo convierten en una opción ganadora para aquellos gamers que busquen un ratón gaming ambidiestro de precio ajustado, construcción duradera y máxima precisión. Y es que este modelo integra un sensor óptico de garantías como es el PMW3327, que alcanza hasta 12.400 dpi, así como switches Omron de primera calidad y 8 botones programables. El Corsair M55 RGB PRO es perfecto para juegos tipo FPS y MOBA y para todo tipo de agarres, contando además, con iluminación RGB configurable mediante iCUE.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Diseño ambidiestro",
+                  "8 botones programables",
+                  "12.400 DPI",
+                  "Sensor óptico PMW3327",
+                  "Iluminación RGB 2 zonas",
+                  "Memoria interna para 1 perfil",
+                  "Switches Omron",
+                  "Durabilidad: 50M L/R Clic",
+                  "Tipo de agarre: palm, claw, fingertip",
+                  "Conectividad: cable de 1.8 m fibra trenzada",
+                  "Compatible con iCUE",
+                  "Indicado para juegos tipo FPS y MOBA",
+                  "Report rate seleccionable: 1000Hz/500Hz/250Hz/125Hz"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus ROG Strix Impact II - Ratón gaming",
+      "reference":"ROG Strix Impact II",
+      "part-number":"90MP01E0-B0UA00",
+      "ean":"999999999",
+      "price":"55.89",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"peripheral",
+      "sub-category":"mouse",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/27701-thickbox_default/raton-asus-gaming-strix-impact-ii.jpg",
+         "https://www.neobyte.es/27700-thickbox_default/raton-asus-gaming-strix-impact-ii.jpg",
+         "https://www.neobyte.es/27699-thickbox_default/raton-asus-gaming-strix-impact-ii.jpg",
+         "https://www.neobyte.es/27698-thickbox_default/raton-asus-gaming-strix-impact-ii.jpg",
+         "https://www.neobyte.es/27697-thickbox_default/raton-asus-gaming-strix-impact-ii.jpg"
+      ],
+      "general-specs":[
+         "Diseño ambidiestro",
+         "Sensor óptico",
+         "Hasta 6200 DPI",
+         "Iluminación Aura Sync"
+      ],
+      "shortDescription":"Máxima precisión y comodidad para derrotar a tus contrincantes. El Asus ROG Strix Impact II es un ratón gaming ambidiestro que te permitirá tomar el control absoluto de la partida. Un modelo provisto de botones pivotantes para una respuesta más rápida y sensor de 6200 ppp, con sensibilidad ajustable al vuelo. El cable de goma suave, por otro lado, ofrece menos resistencia y minimiza los tropiezos al usarlo mientras que la iluminación Aura Sync RGB le da un toque de estilo más personal. El Asus ROG Strix Impact II es el arma definitiva para marcar diferencias.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Conexión USB por cable",
+                  "Seguimiento: Óptico",
+                  "Resolución: 6200dpi",
+                  "Peso: 79 gramos",
+                  "Color: Negro",
+                  "Dimensiones: 120 x 62.5 x 39.5mm",
+                  "Compatible con Windows 10"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus ROG Gladius II Origin - Ratón gaming",
+      "reference":"ROG Gladius II Origin",
+      "part-number":"90MP00UI-B0UA00",
+      "ean":"999999999",
+      "price":"69.95",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"peripheral",
+      "sub-category":"mouse",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/19150-thickbox_default/raton-asus-rog-gladius-ii-origin.jpg",
+         "https://www.neobyte.es/19151-thickbox_default/raton-asus-rog-gladius-ii-origin.jpg",
+         "https://www.neobyte.es/19152-thickbox_default/raton-asus-rog-gladius-ii-origin.jpg",
+         "https://www.neobyte.es/19153-thickbox_default/raton-asus-rog-gladius-ii-origin.jpg"
+      ],
+      "general-specs":[
+         "Sensor óptico 12.000 DPI",
+         "Iluminación RGB",
+         "Perfecto para FPS ",
+         "Agarre perfecto"
+      ],
+      "shortDescription":"El Asus ROG Gladius II Origin es un preciso ratón óptico diseñado para juegos FPS (First Person Shooter) y dotado de iluminación RGB personalizable compatible con Aura Sync. Este modelo ofrece una ventaja competitiva frente a los adversarios gracias a su sensor de 12.000 DPI, garantizando una respuesta rápida en cada movimiento. Por otro lado, cuenta con interruptores Omron, de gran durabilidad, laterales de goma para un mayor agarre, botón DPI, que permite ajustar la sensibilidad del ratón sobre la marcha, y rueda de desplazamiento ALPS para una activación inmediata.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Conectividad por cable",
+                  "Seguimiento Óptico",
+                  "SO compatibles: Windows 10; Windows 7",
+                  "Dimensiones: 126 x 67 x 45 mm",
+                  "Peso: 110 g sin cable",
+                  "Resolución: 12000dpi",
+                  "Interfaz USB"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Contenido",
+               "content":[
+                  "1 x cable trenzado de 2 metros",
+                  "1 x cable de goma de 1 metro",
+                  "2 x interruptores Omron fabricados en Japón",
+                  "1 x pegatinas ROG",
+                  "1 x ROG logo sticker"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"BenQ Zowie XL2411P - Monitor 24' Full HD 144Hz",
+      "reference":"XL2411P",
+      "part-number":"9H.LGPLB.QBE",
+      "ean":"999999999",
+      "price":"199",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"peripheral",
+      "sub-category":"monitor",
+      "manufacture":"zowie",
+      "images":[
+         "https://www.neobyte.es/12918-thickbox_default/monitor-zowie-benq-xl2411p-full-hd.jpg",
+         "https://www.neobyte.es/12919-thickbox_default/monitor-zowie-benq-xl2411p-full-hd.jpg",
+         "https://www.neobyte.es/12920-thickbox_default/monitor-zowie-benq-xl2411p-full-hd.jpg",
+         "https://www.neobyte.es/12921-thickbox_default/monitor-zowie-benq-xl2411p-full-hd.jpg"
+      ],
+      "general-specs":[
+         "Panel TN de 24",
+         "Resolución Full HD",
+         "Tiempo respuesta: 1ms",
+         "Tasa de refresco: 144 Hz"
+      ],
+      "shortDescription":"Benq Zowie XL2411P es un monitor de 24' diseñado para ofrecer lo máximo en los eSports. Un monitor con el que podrás ajustar el color en función de tus necesidades y utilizar el ecualizador de negros para optimizar la visibilidad en las escenas más oscuras, algo que va perfecto para los Shooter en primera persona. Además, la frecuencia de 144 Hz aporta fluidez y dinamismo a los movimientos, incluso en los momentos de acción trepidante. Disfruta de un control total, de la máxima nitidez y de la mejor experiencia Gaming de competición.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Tamaño pantalla: 24'",
+                  "Resolucion (max.): 1920 x 1080",
+                  "Tecnología LED",
+                  "Formato: 16:9",
+                  "Tipo de panel: TN",
+                  "Tasa de refresco: 144 Hz",
+                  "Ángulo de visualización: H 170; V: 160",
+                  "Tiempo de respuesta: 1 ms",
+                  "Contraste dinámico: 12.000.000",
+                  "Estand ajustable en altura, rotación, pivotable, inclinación",
+                  "Equalizador de negro",
+                  "Vibracion de color",
+                  "Tecnología antiparpadeo",
+                  "Tecnología disminución luz azul",
+                  "Dimensiones: 570 x 431 x 168 mm",
+                  "VESA: 100 x 100 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conexiones",
+               "content":[
+                  "1 x DVI-DL",
+                  "1 x HDMI",
+                  "1 x DP1.2",
+                  "1x conector auricualres"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus TUF VG24VQ - Monitor 24' Full HD 144Hz",
+      "reference":"TUF VG24VQ",
+      "part-number":"90LM0570-B01170",
+      "ean":"999999999",
+      "price":"188.99",
+      "sales":"249.99",
+      "stock":"10",
+      "product-status":true,
+      "category":"peripheral",
+      "sub-category":"monitor",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/27201-thickbox_default/monitor-asus-24-vg24vq-144hz-freesync.jpg",
+         "https://www.neobyte.es/26444-thickbox_default/portatil-asus-b9450fa-bm0306r-i7-10510u-16gb-1tb.jpg"
+      ],
+      "general-specs":[
+         "Pantalla curva 24' Full HD",
+         "Frecuencia refresco: 144 Hz",
+         "FreeSync",
+         "Altavoces integrados"
+      ],
+      "shortDescription":"Entra en los eSports por la puerta grande con el Asus TUF VG24VQ. Este monitor gaming de 24 pulgadas, resolución Full HD y frecuencia de refresco de 144 Hz te hará vibrar con cada juego, ofreciendo la acción más trepidante con una nitidez excelente. Presenta, además, una curvatura 1500R que te sumergirá en las escenas totalmente, así como diferentes mejoras que te darán una ventaja competitiva frente a tus contrincantes: Shadow Boost, Gameplus, GameVisual, etc. Por otro lado, el Asus VG24VQ cuenta con una conectividad muy completa y diseño ergonómico para regular la altura, orientación, inclinación y rotación de la pantalla.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Tamaño de panel: 23,6' - 59.94 cm 16:9",
+                  "Retroiluminación del Panel/Tipo: VA",
+                  "Resolución real: 1920x1080",
+                  "Área de visión: (HxV) : 521.4 x 293.28 mm",
+                  "Brillo (Máx.): 350 cd/m²",
+                  "Ratio de contraste (Máx.): 3000:1",
+                  "Pixel Pitch: 0,272 mm",
+                  "Ángulo de visión (CR?10): 178° (H)/178° (V)",
+                  "Tiempo de respuesta: 1 ms",
+                  "Ratio de refresco (max): 144Hz",
+                  "Panel Curvo: 1500R",
+                  "Sin parpadeos"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Características de vídeo",
+               "content":[
+                  "Tecnología Trace Free",
+                  "Soporte HDCP",
+                  "GamePlus (modos): Sí (Punto de mira/Temporizador/Contador de FPS/Alineación de pantalla)",
+                  "Luz azul reducida: Sí",
+                  "GameVisual: 7 modos(Paisajes/Carreras/Cine/RTS/RPG/FPS/sRGB/MOBA Mode)",
+                  "Compatible tecnología FreeSync™",
+                  "Extreme Low Motion Blur",
+                  "GameFast Input technology",
+                  "Shadow Boost"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Audio",
+               "content":[
+                  "2W x 2 RMS"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Entradas/Salidas",
+               "content":[
+                  "Entrada de señal: HDMI(v2.0) x 2",
+                  "DisplayPort 1.2 x 1",
+                  "Salida auriculares: 3,5 mm Mini-Jack"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Diseño",
+               "content":[
+                  "Inclinación: +23°~-5°",
+                  "Giratorio: +62º~-62º",
+                  "Pivote: +90º~-90º",
+                  "Ajuste en altura: 0~150mm",
+                  "Anclaje VESA para pared: 100x100 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones y peso",
+               "content":[
+                  "Dimensión con soporte: 537.59 x (526.59 ~ 376.59) x 217.60 mm",
+                  "Dimensión sin soporte: 537.59 x 320.09 x 65.34 mm",
+                  "Peso Neto (Esti.): 5.66 Kg."
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus TUF VG27WQ - Monitor curvo 27' WQHD 165Hz",
+      "reference":"TUF VG27WQ",
+      "part-number":"90LM05F0-B01E70",
+      "ean":"999999999",
+      "price":"339.99",
+      "sales":"419",
+      "stock":"10",
+      "product-status":true,
+      "category":"peripheral",
+      "sub-category":"monitor",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/31060-thickbox_default/monitor-asus-27-tuf-vg27wq.jpg",
+         "https://www.neobyte.es/31061-thickbox_default/monitor-asus-27-tuf-vg27wq.jpg",
+         "https://www.neobyte.es/31062-thickbox_default/monitor-asus-27-tuf-vg27wq.jpg",
+         "https://www.neobyte.es/31063-thickbox_default/monitor-asus-27-tuf-vg27wq.jpg",
+         "https://www.neobyte.es/31064-thickbox_default/monitor-asus-27-tuf-vg27wq.jpg"
+      ],
+      "general-specs":[
+         "Pantalla curva 27",
+         "Resolución real: 2560x1440",
+         "Tiempo de respuesta: 1 ms mprt",
+         "Tasa Refresco: 165Hz"
+      ],
+      "shortDescription":"Diseñado para gamers profesionales, el Asus TUF VG27WQ ha sabido integrar las prestaciones más punteras para que destaques entre tus rivales mientras vives la experiencia más inmersiva. Entre el listado de especificaciones encontramos prestaciones impresionantes, como la resolución WQHD, la frecuencia de refresco de 165Hz, tiempo de respuesta de 1ms y la tecnología de alto rango dinámico (HDR). Además, cuenta con pantalla curva para una sensación más inmersiva y mejoras gaming como Shadow Boost, GamePlus o GameVisual. No te conformes con menos y hazte con el Asus TUF VG27WQ al precio más competitivo en Neobyte.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Tamaño de panel: 27' - 68,6 cm 16:9 Panorámica",
+                  "Saturación de color: 120% sRGB",
+                  "Tipo de panel: VA",
+                  "Resolución real: 2560x1440",
+                  "Área de visión: (HxV) : 597.6 x 336.15 mm",
+                  "Pixel Pitch: 0,233 mm",
+                  "Ángulo de visión (CR?10): 178° (H)/178° (V)",
+                  "Tiempo de respuesta: 1 ms mprt",
+                  "Brightness : 400 cd/? (Typical)",
+                  "Contrast Ratio : 3000 :1 (Typical)",
+                  "Sin parpadeos",
+                  "Curvatura del panel: 1500R",
+                  "Refresco: 165Hz"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Características de vídeo",
+               "content":[
+                  "Tecnología Trace Free",
+                  "Modos Splendid™: 8 modos",
+                  "Selección de tonos de piel: 3 modos",
+                  "Selección de la temperatura del color: 4 modos",
+                  "Soporte HDCP",
+                  "QuickFit (modos) : Sí (Cuadrícula de alineación/foto/Paper)",
+                  "GamePlus (modos): Sí (Punto de mira/Temporizador)",
+                  "Luz azul reducida: Sí",
+                  "VividPixel : Sí",
+                  "Tecnología FreeSync",
+                  "Modo HDR Multiple: Sí"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Audio",
+               "content":[
+                  "Altavoces estéreo: 2x 2 W RMS"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Entradas/Salidas",
+               "content":[
+                  "Entrada de señal: HDMI(v2.0), DisplayPort 1.2"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Diseño",
+               "content":[
+                  "Color de chasis: Negro",
+                  "Inclinación: +25°~-5°",
+                  "Giratorio: Sí",
+                  "Pivote: Sí",
+                  "Ajuste en altura: Sí",
+                  "Anclaje VESA para pared: 100x100 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Dimensiones y peso",
+               "content":[
+                  "Dimensión con soporte: 609 x 386.9 x 211.2mm",
+                  "Dimensión sin soporte: 609 x 359.9 x 44 mm",
+                  "Peso Neto (Esti.): 5.9 Kg."
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus VG278Q - Monitor 27' Full HD 144Hz 1ms",
+      "reference":"VG278Q",
+      "part-number":"90LM03P0-B01370",
+      "ean":"999999999",
+      "price":"289",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"peripheral",
+      "sub-category":"monitor",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/27171-thickbox_default/monitor-asus-27-vg278q-144hz.jpg",
+         "https://www.neobyte.es/27172-thickbox_default/monitor-asus-27-vg278q-144hz.jpg",
+         "https://www.neobyte.es/27173-thickbox_default/monitor-asus-27-vg278q-144hz.jpg",
+         "https://www.neobyte.es/27174-thickbox_default/monitor-asus-27-vg278q-144hz.jpg",
+         "https://www.neobyte.es/27175-thickbox_default/monitor-asus-27-vg278q-144hz.jpg"
+      ],
+      "general-specs":[
+         "Pantalla de 27",
+         "Resolución Full HD",
+         "144 Hz / 1 ms",
+         "FreeSync"
+      ],
+      "shortDescription":"Sumérgete en tus juegos a un ritmo trepidante con el Asus VG278Q. Este monitor gaming de 27” y resolución Full HD alcanza una frecuencia de refresco de 144 Hz, lo que se traduce en una acción totalmente fluida. Además, cuenta con tecnología Adaptive-Sync (FreeSync) para obtener una óptima sincronización de FPS y evitar que la imagen se entrecorte, tiempo de respuesta de 1 ms y Asus Extreme Low Motion Blur, que aumenta la nitidez de los objetos en movimiento. Por supuesto, ha sabido incluir diferentes funciones gaming específicas orientadas a maximizar la experiencia de juego y personalizar los ajustes en función del tipo de juego. Si te ha picado el gusanillo de los eSports, hazte con el Asus VG278Q y comienza a disfrutar.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características de pantalla",
+               "content":[
+                  "Tamaño del panel: 27' (68.47cm) 16:9",
+                  "Resolución Full HD: 1920 x 1080",
+                  "Tipo de panel: TN",
+                  "Saturación de color: 72% NTSC",
+                  "Área de visión: 597.6 x 336.15 mm",
+                  "Brillo: 400 cd/m2",
+                  "Contrase: 1000:1",
+                  "Pixel Pitch: 0.311mm",
+                  "Smart Contrast Ratio: 100000000:1",
+                  "Ángulo de visión: 170/160 (H/V)",
+                  "Tiempo de respuesta: 1ms",
+                  "Colores de pantalla: 16.7M",
+                  "Flicker Free"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Tecnología sin rastros: sí",
+                  "Selección de temperatura de color: 3 modos",
+                  "GamePlus (modos): Sí (Crosshair / Timer / FPS Counter / Display Alignment / Sniper)",
+                  "Luz azul baja: sí",
+                  "Soporte HDCP: sí",
+                  "GameVisual: 7 modos (Paisaje / Carreras / Cine / RTS / RPG / FPS / sRGB Modos / Modo MOBA)",
+                  "Adaptive-Sync compatible: Sí (Compatible con G-Sync)",
+                  "Tecnología VividPixel",
+                  "GameFast Input Technology",
+                  "ELMB SYNC",
+                  "Tecnología FreeSync"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Audio",
+               "content":[
+                  "Stereo: 2 x 2W RMS"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Entradas/Salidas",
+               "content":[
+                  "1 x HDMI",
+                  "1 x DisplayPort",
+                  "1 x DVI",
+                  "Salida Auriculares"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Características físicas",
+               "content":[
+                  "Inclinación: + 33 ° ~ -5 °",
+                  "Giratorio: Sí",
+                  "Pivote: Sí",
+                  "Ajuste de altura: Sí",
+                  "Montaje en pared VESA: 100x100 mm",
+                  "Dimensiones con peana: 619 x (376~506) x 211 mm",
+                  "Dimensiones sin peana: 619 x 363 x 50 mm",
+                  "Peso neto aprox: 5.6 kg."
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus XG32VQR - Monitor curvo 32' WQHD 144Hz HDR",
+      "reference":"XG32VQR ROG Strix",
+      "part-number":"90LM03S0-B02170",
+      "ean":"999999999",
+      "price":"599",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"peripheral",
+      "sub-category":"monitor",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/25874-thickbox_default/monitor-asus-32-xg32vqr.jpg",
+         "https://www.neobyte.es/25875-thickbox_default/monitor-asus-32-xg32vqr.jpg",
+         "https://www.neobyte.es/25876-thickbox_default/monitor-asus-32-xg32vqr.jpg",
+         "https://www.neobyte.es/25877-thickbox_default/monitor-asus-32-xg32vqr.jpg",
+         "https://www.neobyte.es/25878-thickbox_default/monitor-asus-32-xg32vqr.jpg"
+      ],
+      "general-specs":[
+         "Panel curvo VA 32",
+         "Resolución WQHD: 2560x1440",
+         "Frecuencia: 144Hz / FreeSync 2 HDR",
+         "DisplayHDR 400 / Aura Sync"
+      ],
+      "shortDescription":"Con el Asus XG32VQR ROG Strix vivirás la experiencia de juego más inmersiva gracias a sus 32' pulgadas y curvatura de 1800R. Este monitor gaming supone la combinación perfecta entre fluidez, detalle, contraste y diseño. Y es que cuenta con la extraordinaria resolución WQHD (2560x1440) con certificado DisplayHDR 400, lo que garantiza la máxima nitidez y una fidelidad de color increíble. Además, las tecnologías FreeSync 2 HDR y sus 144Hz de frecuencia de refresco garantizan una acción sumamente fluida, con menos latencia y mayor calidad de imagen. Otras de las características más destacadas que hacen del Asus XG32VQR ROG Strix un monitor gaming top son su completísima conectividad e irresistible diseño con iluminación Asus Aura Sync. Una maravilla que ahora puede ser tuya en Neobyte con las máximas garantías y en tiempo récord.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Características",
+               "content":[
+                  "Tamaño de panel: 31,5' - 80,1 cm 16:9 Panorámica",
+                  "Saturación de color: 125% (sRGB)",
+                  "Tipo de panel: VA",
+                  "Curvatura panel: 1800R",
+                  "Resolución real: WQHD (2560x1440)",
+                  "Área de visión: (HxV) : 697.344 x 392.256 mm",
+                  "Ratio de contraste (Máx.): 3000:1",
+                  "Superficie de la pantalla: No brillante",
+                  "Pixel Pitch: 0,155 mm",
+                  "Ángulo de visión (CR?10): 178° (H)/178° (V)",
+                  "Tiempo de respuesta: 4 ms (gris a gris)",
+                  "Brightness : 450 cd/m2 (Typical)",
+                  "Sin parpadeos",
+                  "HDR (High Dynamic Range) Support : Yes",
+                  "Refresh Rate(max) : 144Hz",
+                  "Tecnología Trace Free",
+                  "Selección de la temperatura del color: 4 modos",
+                  "Soporte HDCP",
+                  "GamePlus (modos): Sí (Punto de mira/Temporizador/Contador de FPS/Alineación de pantalla)",
+                  "Luz azul reducida: Sí",
+                  "GameVisual: 8 modos(Paisajes/Carreras/Cine/RTS/RPG/FPS/sRGB/modo Usuario/MOBA Mode)",
+                  "Compatible tecnología FreeSync™",
+                  "Display Widget",
+                  "GameFast Input technology",
+                  "FreeSync 2 HDR technology",
+                  "Shadow Boost"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conexiones",
+               "content":[
+                  "Entrada de señal: HDMI / DisplayPort",
+                  "Salida auriculares: 3,5 mm Mini-Jack",
+                  "Puertos USB: 3.0 x 2, 1 x Subida"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Especificaciones físicas",
+               "content":[
+                  "Inclinación: +20°~-5°",
+                  "Giratorio: Sí",
+                  "Ajuste en altura: Sí",
+                  "Anclaje VESA para pared: 100x100 mm",
+                  "Diseño de bisel ultradelgado: Sí",
+                  "Aura Sync lighting effect",
+                  "Dimensión con soporte: 713.38 x (490.02 ~ 590.02) x 299.27 mm / 9.6 kg.",
+                  "Dimensión sin soporte: 713.38 x 425.68 x 118.03 mm / 5.9 kg."
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus ROG Phone 3 Strix Edition - Smartphone 6.59' 8GB 256GB",
+      "reference":"ROG Phone 3 Strix Edition",
+      "part-number":"90AI0031-M00020",
+      "ean":"999999999",
+      "price":"799",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"smartphone",
+      "sub-category":"smartphone",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/37386-thickbox_default/movil-asus-rog-phone-iii-zs661ks-1a002eu-8gb-256gb.jpg",
+         "https://www.neobyte.es/37387-thickbox_default/movil-asus-rog-phone-iii-zs661ks-1a002eu-8gb-256gb.jpg",
+         "https://www.neobyte.es/37388-thickbox_default/movil-asus-rog-phone-iii-zs661ks-1a002eu-8gb-256gb.jpg",
+         "https://www.neobyte.es/37389-thickbox_default/movil-asus-rog-phone-iii-zs661ks-1a002eu-8gb-256gb.jpg",
+         "https://www.neobyte.es/37391-thickbox_default/movil-asus-rog-phone-iii-zs661ks-1a002eu-8gb-256gb.jpg"
+      ],
+      "general-specs":[
+         "Pantalla 6.59' AMOLED Full HD+",
+         "CPU: Qualcomm Snapdragon 865",
+         "Triple cámara trasera",
+         "RAM: 8GB / ROM: 256GB"
+      ],
+      "shortDescription":"El Asus ROG Phone 3 Strix Edition (ZS661KS-1A002EU) ha pensado en todo para que vivas una experiencia gaming total en tu móvil. Este smartphone de 6.59' incorpora la tecnología más innovadora, obteniendo un rendimento espectacular y una jugabilidad difícil de creer en un teléfono. Cuenta con procesador octa-core Qualcomm Snapdragon 865, 8GB de memoria RAM, 256GB de almacenamiento y una pantalla AMOLED Full HD+ a 144 Hz que te sumergirá de lleno en los contenidos. El Asus ROG Phone 3 Strix Edition dispone también de batería de larga duración y un sistema de sonido brutal. ¡Hazte ya con él en Neobyte!",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Procesador",
+               "content":[
+                  "Qualcomm® Snapdragon™ 865 (8 Núcleos, Caché: 4MB Level 3, 2.84GHz, 64-bit)",
+                  "Gráfica: Qualcomm® Adreno™ 650"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Pantalla",
+               "content":[
+                  "6.59'(16,74cm) AMOLED / 144Hz / 1ms / 650nits / FHD+ (2340x1080/19,5:9) / NTSC:108,8% / sRGB: 153,7% / DCI-P3: 113,3% / Contraste de 1.000.000:1 / Multitáctil capacitivo hasta 10 dedos simultáneos (compatible con guantes) / Precisión de Color: Delta-E < 1.5 / Corning® Gorilla® Glass 6"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Cámara",
+               "content":[
+                  "Frontal Principal: 24MP",
+                  "Trasera Principal: 64MP",
+                  "Trasera Secundaria: 13MP",
+                  "Trasera Tercera: 5MP"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Memoria",
+               "content":[
+                  "RAM: 8GB LPDDR5",
+                  "ROM: 256GB UFS3.1"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Redes y bandas",
+               "content":[
+                  "Dual SIM",
+                  "SIM 1: Nano SIM (2G/3G/4G/5G)",
+                  "SIM 2: Nano SIM (2G/3G/4G/5G)",
+                  "5G",
+                  "Wi-Fi 6 (802.11 a/b/g/n/ac/ax) 2x2",
+                  "2x2 MIMO",
+                  "Wi-Fi Direct™",
+                  "Bluetooth® 5.1 (HFP+A2DP+AVRCP+HID+PAN+OPP)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Conectividad",
+               "content":[
+                  "1 x USB-C™ 3.1 Gen1",
+                  "1 x Conector de Audio Combinado Auriculares/Auriculares con Micrófono/Micrófono 3,5mm",
+                  "NFC",
+                  "GPS: GPS (L1+L5), GLONASS (G1), BDS (B1), GALILEO (E1+E5a), QZSS (L1+L5)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sensores",
+               "content":[
+                  "Giroscopio",
+                  "E-Compass",
+                  "Proximidad",
+                  "Sensor de luz ambiental",
+                  "Hall Sensor",
+                  "Acelerómetro",
+                  "Gyro (compatible con ARCore)",
+                  "Ultrasonico",
+                  "Sensor de Huella (Pantalla)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Batería",
+               "content":[
+                  "23.1Wh, 6000mAh, 1 Celda, Polímeros"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "Android™ 10.0"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Especificaciones físicas",
+               "content":[
+                  "Dimensiones: 171 x 78 x 9,8~9,85 mm",
+                  "Peso: 240g (con batería de 1 celda)"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus Zenfone 7 Pro Negro - Smartphone 6.7' 8GB 256GB",
+      "reference":"Zenfone 7 Pro Negro (ZS671KS-2A016EU)",
+      "part-number":"90AI0021-M00160",
+      "ean":"999999999",
+      "price":"799",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"smartphone",
+      "sub-category":"smartphone",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/38697-thickbox_default/movil-asus-zenfone-7-pro-zs671ks-2a016eu-negro.jpg",
+         "https://www.neobyte.es/38698-thickbox_default/movil-asus-zenfone-7-pro-zs671ks-2a016eu-negro.jpg",
+         "https://www.neobyte.es/38699-thickbox_default/movil-asus-zenfone-7-pro-zs671ks-2a016eu-negro.jpg",
+         "https://www.neobyte.es/38700-thickbox_default/movil-asus-zenfone-7-pro-zs671ks-2a016eu-negro.jpg",
+         "https://www.neobyte.es/38701-thickbox_default/movil-asus-zenfone-7-pro-zs671ks-2a016eu-negro.jpg"
+      ],
+      "general-specs":[
+         "Pantalla AMOLED 6.67' (2400x1080)",
+         "RAM 8GB / ROM: 256GB ",
+         "Qualcomm Snapdragon 865 PLUS 5G",
+         "Cámara Sony IMX686 de 64Mpx"
+      ],
+      "shortDescription":"Apuesta por la innovación con el Asus Zenfone 7 Pro Negro (ZS671KS-2A016EU). Este completo smartphone destaca por unas prestaciones fuera de lo común, incorporando tecnología de última generación para que disfrutes de un funcionamiento rápido y estable... Se trata de un teléfono móvil con pantalla de 6.7' provisto de plataforma móvil Qualcomm Snapdragon 865 Plus 5G, 8GB de memoria RAM y 256GB de almacenamiento. Dispone de módulo giratorio de tres cámaras para hacer capturas frontales y traseras, incluyendo una cámara principal gran angular de 64 Mpx, una cámara ultra gran angular y una camara tele objetivo con zoom óptico de 3 aumentos. Es importante mencionar también sus acabados premium, con una cubierta trasera de cristal 3D que encajará perfectamente en la palma de tu mano. Compra el Asus Zenfone 7 Pro Negro (ZS671KS-2A016EU) al precio más competitivo.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Procesador",
+               "content":[
+                  "6.59'(16,74cm) AMOLED / 144Hz / 1ms / 650nits / FHD+ (2340x1080/19,5:9) / NTSC:108,8% / sRGB: 153,7% / DCI-P3: 113,3% / Contraste de 1.000.000:1 / Multitáctil capacitivo hasta 10 dedos simultáneos (compatible con guantes) / Precisión de Color: Delta-E < 1.5 / Corning® Gorilla® Glass 6"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Pantalla",
+               "content":[
+                  "6.67' (16,94cm) NanoEdge AMOLED",
+                  "Resolución 2400x1080 20:9 / 90Hz / 1ms",
+                  "92% de relación pantalla-cuerpo, relación 20:9",
+                  "700 nits de brillo, legible en exteriores",
+                  "Delta-E < 1",
+                  "110% DCI-P3, 105% gama de colores NTSC, soporta HDR10+",
+                  "Protección de pantalla Corning® Gorilla® Glass 6",
+                  "Pantalla con cuidado de la vista certificado por SGS",
+                  "Panel multitáctil capacitivo de 10 puntos (compatible con guantes)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Memoria",
+               "content":[
+                  "8GB LPDDR5"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Capacidad",
+               "content":[
+                  "Almacenamiento interno: UFS 3.1 256GB",
+                  "Tarjeta microSD: Hasta 2TB"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Cámara gran angular",
+               "content":[
+                  "Sensor de alta gama Sony® IMX686 de 64 MP y 1/1,73', píxeles de 0,8 µm.",
+                  "Tecnología Quad Bayer :16 MP, píxeles efectivos de 1,6 µm",
+                  "Apertura F1.8",
+                  "Longitud focal equivalente de 26,6 mm en una cámara de 35 mm",
+                  "Lente 6p",
+                  "Campo de visión de 78,3°",
+                  "Autoenfoque por detección de fase 2x1 integrado en la lente",
+                  "Estabilización de la imagen óptica de 4 ejes",
+                  "Doble flash LED",
+                  "Cambio instantáneo de cámaras"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Cámara ultra gran angular",
+               "content":[
+                  "Sensor de doble píxel Sony®, IMX363 12 MP: tamaño de 1/2,55', píxeles de 1,4 µm",
+                  "Apertura F2.2",
+                  "Corrección de la distorsión en tiempo real",
+                  "14,3 mm de distancia focal equivalente en una cámara de 35 mm",
+                  "Soporta macrofotografía de 4 cm."
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Telefoto",
+               "content":[
+                  "8 MP",
+                  "Zoom óptico 3x, hasta 12x en total.",
+                  "Estabilización de la imagen óptica de 4 ejes",
+                  "Longitud focal equivalente a 80 mm en una cámara de 35 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Grabación de vídeo",
+               "content":[
+                  "8K UHD (7680x4320) a 30 fps con la cámara principal",
+                  "4K UHD (3840 por 2160) a 30 / 60 fps con la cámara secundaria",
+                  "FHD de 1080p a 30 / 60 fps con HyperSteady",
+                  "Grabación de vídeo HD 720p a 30 fps",
+                  "Estabilización electrónica de imagen por 3 ejes",
+                  "Vídeo con seguimiento de movimiento (4K UHD a 60 fps)",
+                  "Lapso de tiempo (4K UHD)",
+                  "Vídeo en cámara lenta (4K UHD a 120 fps / 1080p FHD a 240 fps / 720p a 480 fps)",
+                  "Capturar foto fija mientras se graba el vídeo (no soportado durante la grabación de vídeo 8K)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Audio",
+               "content":[
+                  "Altavoces estéreo",
+                  "Altavoz de 5 imanes con dos amplificadores inteligentes NXP TFA9874 (más volumen, más graves y menos distorsión.",
+                  "CÓDEC Qualcomm Audio",
+                  "Tres micrófonos con tecnología de reducción de ruido ASUS"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Tecnología inalámbrica",
+               "content":[
+                  "WiFi 6 integrado (802.11a/b/g/n/ac/ax, 2x2 MIMO)",
+                  "WiFi de doble banda de 2.4 GHz / 5 GHz",
+                  "Bluetooth® 5.1 (BR/EDR+LE), soporta Qualcomm® aptX™ Adaptive",
+                  "Wi-Fi Direct",
+                  "NFC"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Navegación",
+               "content":[
+                  "Soporta GNSS, soporta GPS (L1/L5), Glonass (L1), Galileo (E1/E5a), BeiDou (B1/B2a), QZSS (L1/L5) y NavIC (L5)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Tarjetas SIM",
+               "content":[
+                  "Ranura 1: Tarjeta Nano SIM 2G/3G/4G/5G",
+                  "Ranura 2: Tarjeta Nano SIM 2G/3G/4G/5G",
+                  "Ranura 3: Tarjeta Micro-SD hasta de 2 TB"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Estándares de red",
+               "content":[
+                  "GSM/GPRS/EDGE; WCDMA/HSPA+/DC-HSPA+; FDD-LTE; TD-LTE; 5G Sub 6 SA/NSA"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sensor",
+               "content":[
+                  "Sensor de huellas lateral (0,3 segundos de desbloqueo, soporta 5 huellas)",
+                  "Reconocimiento facial",
+                  "Sensor de acelerador",
+                  "Sensor de E-Compass",
+                  "Sensor de proximidad",
+                  "Sensor de luz ambiental",
+                  "Sensor de giroscopio",
+                  "Sensor de ángulo",
+                  "Sensor Hall"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Batería",
+               "content":[
+                  "Batería de 5000 mAh, soporta carga rápida 4.0 y carga PD"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "Android™ 10 con el nuevo ASUS ZenUI 7"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Especificaciones físicas",
+               "content":[
+                  "Dimensiones: 165,08 x 77,28 x 9,6mm",
+                  "Peso: 230 g"
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "name":"Asus Zenfone 7 Pro Blanco - Smartphone 6.7' 8GB 256GB",
+      "reference":"Zenfone 7 Pro blanco (ZS671KS-2B017EU)",
+      "part-number":"90AI0022-M00170",
+      "ean":"999999999",
+      "price":"799",
+      "sales":"0",
+      "stock":"10",
+      "product-status":true,
+      "category":"smartphone",
+      "sub-category":"smartphone",
+      "manufacture":"asus",
+      "images":[
+         "https://www.neobyte.es/38687-thickbox_default/movil-asus-zenfone-7-pro-zs671ks-2b017eu-blanco.jpg",
+         "https://www.neobyte.es/38688-thickbox_default/movil-asus-zenfone-7-pro-zs671ks-2b017eu-blanco.jpg",
+         "https://www.neobyte.es/38689-thickbox_default/movil-asus-zenfone-7-pro-zs671ks-2b017eu-blanco.jpg",
+         "https://www.neobyte.es/38690-thickbox_default/movil-asus-zenfone-7-pro-zs671ks-2b017eu-blanco.jpg",
+         "https://www.neobyte.es/38691-thickbox_default/movil-asus-zenfone-7-pro-zs671ks-2b017eu-blanco.jpg"
+      ],
+      "general-specs":[
+         "Pantalla AMOLED 6.67' (2400x1080)",
+         "RAM 8GB / ROM: 256GB ",
+         "Qualcomm Snapdragon 865 PLUS 5G",
+         "Cámara Sony IMX686 de 64Mpx"
+      ],
+      "shortDescription":"Rendimiento a todos los niveles. El Asus Zenfone 7 Pro blanco (ZS671KS-2B017EU) destaca por unas prestaciones fuera de lo común, incorporando una pantalla inmersiva, procesador de gran potencia, cámara giratoria triple, batería de larga duración... Se trata de un smartphone de 6.7' provisto de plataforma móvil Qualcomm Snapdragon 865 Plus 5G, 8GB de memoria RAM y 256GB de almacenamiento con el que disfrutarás de un excelente rendimiento. Su módulo giratorio de tres cámaras permite hacer capturas frontales y traseras, incluyendo una cámara principal gran angular de 64 Mpx, una cámara ultra gran angular y una camara tele objetivo con zoom óptico de 3 aumentos. Es importante mencionar también sus acabados premium, con una cubierta trasera de cristal 3D que encajará perfectamente en la palma de tu mano. El Asus Zenfone 7 Pro blanco (ZS671KS-2B017EU) es innovación y puede ser tuyo en Neobyte al precio más competitivo.",
+      "generalDescription":[
+         {
+            "description":{
+               "name":"Procesador",
+               "content":[
+                  "CPU: Qualcomm® Snapdragon™ 865 Plataforma móvil 5G con 7 nm, procesador de 64-bit Octa-core",
+                  "GPU: Qualcomm® Adreno™ 650"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Pantalla",
+               "content":[
+                  "6.67' (16,94cm) NanoEdge AMOLED",
+                  "Resolución 2400x1080 20:9 / 90Hz / 1ms",
+                  "92% de relación pantalla-cuerpo, relación 20:9",
+                  "700 nits de brillo, legible en exteriores",
+                  "Delta-E < 1",
+                  "110% DCI-P3, 105% gama de colores NTSC, soporta HDR10+",
+                  "Protección de pantalla Corning® Gorilla® Glass 6",
+                  "Pantalla con cuidado de la vista certificado por SGS",
+                  "Panel multitáctil capacitivo de 10 puntos (compatible con guantes)",
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Memoria",
+               "content":[
+                  "8GB LPDDR5"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Capacidad",
+               "content":[
+                  "Almacenamiento interno: UFS 3.1 256GB",
+                  "Tarjeta microSD: Hasta 2TB"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Cámara gran angular",
+               "content":[
+                  "Sensor de alta gama Sony® IMX686 de 64 MP y 1/1,73', píxeles de 0,8 µm.",
+                  "Tecnología Quad Bayer :16 MP, píxeles efectivos de 1,6 µm",
+                  "Apertura F1.8",
+                  "Longitud focal equivalente de 26,6 mm en una cámara de 35 mm",
+                  "Lente 6p",
+                  "Campo de visión de 78,3°",
+                  "Autoenfoque por detección de fase 2x1 integrado en la lente",
+                  "Estabilización de la imagen óptica de 4 ejes",
+                  "Doble flash LED",
+                  "Cambio instantáneo de cámaras",
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Cámara ultra gran angular",
+               "content":[
+                  "Sensor de doble píxel Sony®, IMX363 12 MP: tamaño de 1/2,55', píxeles de 1,4 µm",
+                  "Apertura F2.2",
+                  "Corrección de la distorsión en tiempo real",
+                  "14,3 mm de distancia focal equivalente en una cámara de 35 mm",
+                  "Soporta macrofotografía de 4 cm."
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Telefoto",
+               "content":[
+                  "8 MP",
+                  "Zoom óptico 3x, hasta 12x en total.",
+                  "Estabilización de la imagen óptica de 4 ejes",
+                  "Longitud focal equivalente a 80 mm en una cámara de 35 mm"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Grabación de vídeo",
+               "content":[
+                  "8K UHD (7680x4320) a 30 fps con la cámara principal",
+                  "4K UHD (3840 por 2160) a 30 / 60 fps con la cámara secundaria",
+                  "FHD de 1080p a 30 / 60 fps con HyperSteady",
+                  "Grabación de vídeo HD 720p a 30 fps",
+                  "Estabilización electrónica de imagen por 3 ejes",
+                  "Vídeo con seguimiento de movimiento (4K UHD a 60 fps)",
+                  "Lapso de tiempo (4K UHD)",
+                  "Vídeo en cámara lenta (4K UHD a 120 fps / 1080p FHD a 240 fps / 720p a 480 fps)",
+                  "Capturar foto fija mientras se graba el vídeo (no soportado durante la grabación de vídeo 8K)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Audio",
+               "content":[
+                  "Altavoces estéreo",
+                  "Altavoz de 5 imanes con dos amplificadores inteligentes NXP TFA9874 (más volumen, más graves y menos distorsión.",
+                  "CÓDEC Qualcomm Audio",
+                  "Tres micrófonos con tecnología de reducción de ruido ASUS"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Tecnología inalámbrica",
+               "content":[
+                  "WiFi 6 integrado (802.11a/b/g/n/ac/ax, 2x2 MIMO)",
+                  "WiFi de doble banda de 2.4 GHz / 5 GHz",
+                  "Bluetooth® 5.1 (BR/EDR+LE), soporta Qualcomm® aptX™ Adaptive",
+                  "Wi-Fi Direct",
+                  "NFC"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Navegación",
+               "content":[
+                  "Soporta GNSS, soporta GPS (L1/L5), Glonass (L1), Galileo (E1/E5a), BeiDou (B1/B2a), QZSS (L1/L5) y NavIC (L5)"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Tarjetas SIM",
+               "content":[
+                  "Ranura 1: Tarjeta Nano SIM 2G/3G/4G/5G",
+                  "Ranura 2: Tarjeta Nano SIM 2G/3G/4G/5G",
+                  "Ranura 3: Tarjeta Micro-SD hasta de 2 TB"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Estándares de red",
+               "content":[
+                  "GSM/GPRS/EDGE; WCDMA/HSPA+/DC-HSPA+; FDD-LTE; TD-LTE; 5G Sub 6 SA/NSA"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sensor",
+               "content":[
+                  "Sensor de huellas lateral (0,3 segundos de desbloqueo, soporta 5 huellas)",
+                  "Reconocimiento facial",
+                  "Sensor de acelerador",
+                  "Sensor de E-Compass",
+                  "Sensor de proximidad",
+                  "Sensor de luz ambiental",
+                  "Sensor de giroscopio",
+                  "Sensor de ángulo",
+                  "Sensor Hall"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Batería",
+               "content":[
+                  "Batería de 5000 mAh, soporta carga rápida 4.0 y carga PD"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Sistema operativo",
+               "content":[
+                  "Android™ 10 con el nuevo ASUS ZenUI 7"
+               ]
+            }
+         },
+         {
+            "description":{
+               "name":"Especificaciones físicas",
+               "content":[
+                  "Dimensiones: 165,08 x 77,28 x 9,6mm",
+                  "Peso: 230 g"
+               ]
+            }
+         }
+      ]
+   }
+]

@@ -1,0 +1,102 @@
+
+
+#random-spot-name{
+    color:#D16F4D;
+    font-size:30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    margin: 0px;
+    
+}
+#spot-random-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+#spot-random-wrapper:visited{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    
+}
+#random-link:visited{
+    
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    
+}
+#random-spot-name:visited{
+    color:#D16F4D;
+    font-size:30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+}
+#text-spot{
+    color:#bbbb;
+    text-align: center;
+    
+}
+#image_random{
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+}
+@media only screen and (max-width: 600px){
+
+    
+    #random-spot-name{
+        color:#D16F4D;
+        font-size:30px;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        margin: 0px;
+        
+    }
+    #spot-random-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+    }
+    #spot-random-wrapper:visited{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        
+    }
+    #random-link:visited{
+        
+        text-transform: uppercase;
+        text-decoration: none;
+        
+        
+    }
+    #random-spot-name:visited{
+        color:#D16F4D;
+        font-size:30px;
+        text-transform: uppercase;
+        text-decoration: none;
+        
+    }
+    #text-spot{
+        color:#bbbb;
+        text-align: center;
+        
+    }
+    #image_random{
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+        -webkit-filter: grayscale(100%); 
+        filter: grayscale(100%);
+    }
+}

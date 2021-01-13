@@ -1,0 +1,60 @@
+<app-side-navbar #child></app-side-navbar>
+<app-profile-sidebar #childProfile></app-profile-sidebar>
+<header class="header-container">
+	<nav class="navbar">
+		<section class="navbar-left-side">
+      <button class="btn" (click)="child.openSidebar()">
+        <mat-icon class="left-side-icon">menu</mat-icon>
+      </button>
+			<figure class="navbar-logo-container">
+				<a 
+					[routerLink]="['']"
+					routerLinkActive="active"
+				>
+					<img
+						src="https://trello-attachments.s3.amazonaws.com/5ea1cd450cc6f654e8ea7a63/5fc66bcecb89af6544c0a4b5/ba15405c8bcd7883c75615be810b2342/logo_(1)_1logoNeobyte.svg"
+						alt="company-logo"
+					/>
+			</a>
+			</figure>
+		</section>
+		<section class="navbar-right-side">
+			<button class="right-side-btn btn">
+				<mat-icon class="right-side-icon">favorite_border</mat-icon>
+			</button>
+			<button class="right-side-btn btn">
+				<mat-icon class="right-side-icon">search</mat-icon>
+			</button>
+			<button 
+				*ngIf="flag; else elseBlock" 
+				class="right-side-btn btn" 
+				(click)="childProfile.openProfileSidebar()"
+			>
+				<mat-icon class="right-side-icon">account_circle</mat-icon>
+			</button>
+			<ng-template #elseBlock>
+				<a 
+					[routerLink]="['/login']"
+					routerLinkActive="active"
+					(click)="onTop()"
+				>
+					<mat-icon class="right-side-icon">login</mat-icon>
+			</a>
+			</ng-template>
+			<button class="right-side-btn btn shopping-cart-btn">
+				<a 
+					[routerLink]="['/cart']"
+					routerLinkActive="active"
+					(click)="onTop()"
+				>
+					<mat-icon class="right-side-icon">shopping_cart</mat-icon>
+					<div *ngIf="shoppingCart$ | async as shoppingCart" >
+						<ng-container *ngIf="shoppingCart.nbtotalproducts !== 0">
+							<p class="cart-product-counter"> {{ shoppingCart.nbtotalproducts }} </p>
+						</ng-container>
+					</div>
+			</a>
+			</button>
+		</section>
+	</nav>
+</header>

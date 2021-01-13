@@ -1,0 +1,230 @@
+.contact_wrapper{
+    margin: 100px 0px 100px;
+
+}
+
+.contact--title, .contact--input, .contact-text, .social-mail_title, .mail-txt, .number-txt, .modal_title, .modal-txt{
+    font-family: 'Nunito Sans', sans-serif;
+    
+}
+
+.social-mail_title, .modal_title{
+    letter-spacing: 0.25em;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    border-bottom: 1px solid rgb(55, 55, 55);
+}
+
+
+.contact--title{
+    letter-spacing: 0.25em;
+
+    padding:30px 30px 20px;
+    margin: 0px 0px 0px 50px
+} 
+
+.contact-text{
+   padding: 30px;
+   margin-left:50px;
+   font-weight: lighter;
+   color: rgb(55, 55, 55);
+   letter-spacing: 0.18em;
+   line-height: 1.7em;
+   max-width: 496px;
+}
+
+.contact--input{
+    font-size: 16px;
+    border:none;
+    outline: none;
+    border-bottom: 1px solid  #273b0985;
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+    
+}
+
+.form_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 20px 20px 80px;
+    padding: 20px;
+    -webkit-box-shadow: 0px 3px 10px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 10px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 10px -4px rgba(0,0,0,0.75); 
+    width: 496px !important;
+}
+
+
+
+.submit-btn{
+    text-align: center;
+
+    background-color: #273B09; 
+    border: none;
+    color: white;
+    padding: 15px 93px 15px 93px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    margin: 50px 15px 15px;
+}
+
+
+.submit-btn:hover{
+    background-color: #506c27; 
+    transition: 0.2s;
+}
+
+
+.modal-back-btn{
+ 
+
+    background-color: #273B09; 
+    border: none;
+    color: white;
+    padding: 15px 40px 15px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    margin: 50px 15px 15px;
+}
+
+.modal-back-btn_wrapper{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+.cards_wrapper{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.social-mail--contact_wrapper{
+    margin: 20px 80px 20px 80px;
+    padding: 20px;
+    -webkit-box-shadow: 0px 3px 10px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 10px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 10px -4px rgba(0,0,0,0.75); 
+    width: 200px;
+}
+
+.modal-msg{
+    padding: 20px;
+    width: 250px;
+}
+
+.name--email_wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#subject, #message {
+    width: 100%;
+    padding: 15px 0px 10px 0px;
+    margin-top: 10px;
+}
+
+
+#name{
+    
+    margin-right: 60px;
+    padding: 15px 40px 10px 0px;
+    width: 45%;
+    
+}
+
+#email{
+    padding: 15px 40px 10px 0px;
+    width: 45%;
+}
+
+#message{
+    resize: none;
+    height: 100px;
+}
+
+.social-icon{
+    width: 40px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+.social-icons_wrapper{
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    margin-top: -20px;
+}
+.facebook-logo_icon{
+    position: relative;
+    top: 2px
+}
+
+.mail-txt, .number-txt{
+    padding: 5px;
+}
+.number-mail_wrapper{
+    margin: 20px 0px;
+}
+
+.mail-txt, .number-txt, .social-mail_title{
+    color: rgb(55, 55, 55);
+}
+
+.mail-txt_wrapper, .number-txt_wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+    .contact-text{
+        text-align: center;
+        margin: auto
+        
+    }
+    .social-mail--contact_wrapper{
+        display: none;
+    }
+
+    .main-title{
+        text-align: center;
+        margin: 10px 50px;
+        padding: 0px 30px;
+      
+    }
+    .form_wrapper{
+        margin: 30px;
+    }
+    .cards_wrapper{
+        justify-content: center;
+    }
+    .contact--title{
+        margin: auto;
+    }
+    
+    
+}
+
+.modal-txt{
+    text-align: center;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.modal-back-btn a {
+    text-decoration: none;
+    color: white;
+}

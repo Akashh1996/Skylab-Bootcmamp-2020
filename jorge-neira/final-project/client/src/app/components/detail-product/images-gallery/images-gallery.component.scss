@@ -1,0 +1,23 @@
+.image-gallery-container {
+  .large-size-image {
+    .image-icons-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .image-display-lgsize {
+        width: 70%;
+      }
+    }
+  }
+  .small-size-images {
+    .images-display {
+      .images-display-list {
+        display: flex;
+        justify-content: center;
+        .images-display-smsize {
+          width: 60px;
+        }
+      }
+    }
+  }
+}

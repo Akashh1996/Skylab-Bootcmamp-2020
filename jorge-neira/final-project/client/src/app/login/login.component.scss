@@ -1,0 +1,105 @@
+.login-container {
+  padding: 20px;
+  margin-top: 100px;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .login-title {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  .login-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .login-input {
+      transition: .1s;
+      display: flex;
+      padding: 15px;
+      justify-content: center;
+      width: 100%;
+      border-radius: 6px;      
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      border: 1px solid rgb(170, 170, 170);
+    }
+    .login-input:focus {
+      border: 1px solid black;
+      box-shadow: 0px 0px 10px -1px rgba(102,228,242,1);
+      outline: none;
+    }
+    .login-input:hover {
+      border: 1px solid black;
+    }
+    .login-submit-btn {
+      transition: ease-in .1s;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 15px;
+      border: none;
+      background: #FF7700;
+      color: #fff;
+    }
+    .login-submit-btn:disabled {
+      background: #bd5800;
+      color: rgb(214, 214, 214);
+    }
+    .login-submit-btn:active {
+      background: #FF7700;
+    }
+  }
+  .login-new-client {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 100%;
+    .new-login-text {
+      margin: 0 10px;
+    }
+    .custom-divider {
+      flex: 1;
+      width: 100%;
+      height: 1px;
+      background-color: rgb(170, 170, 170);
+    }
+  }
+  .register-btn {
+    transition: ease-in .1s;
+    border: 1px solid rgb(170, 170, 170);
+    color: rgb(65, 65, 65);
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 15px;
+  }
+  .register-btn:hover {
+    color: #fff;
+    border: 1px solid #FF7700;
+    background: #FF7700; 
+  }
+    .error-wrapper {
+      width: 100%;
+      .error-message {
+      margin-bottom: 10px;
+      width: 100%;
+      border: 1px solid red;
+      border-left: 6px solid red;
+      border-radius: 6px;
+      .error-message, p {
+        color: red;
+        margin: 0;
+        padding: 15px;
+        font-weight: 500;
+      } 
+    }
+  }
+}

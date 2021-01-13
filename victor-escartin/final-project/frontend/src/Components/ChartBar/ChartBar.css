@@ -1,0 +1,13 @@
+.chart-container{
+    justify-content: center;
+    padding: 5vw;
+    text-align: center;
+    padding-top:0;
+}
+
+canvas{
+    height: 33vw!important;
+    width: 100%;
+    color: rgba(221, 164, 59, 0.555);
+}
+

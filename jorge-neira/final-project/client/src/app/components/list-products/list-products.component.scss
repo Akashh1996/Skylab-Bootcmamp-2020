@@ -1,0 +1,104 @@
+.list-product-container {
+  margin-top: 100px;
+  padding: 10px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: minmax(150px, 1fr) minmax(150px, 1fr);
+  grid-template-rows: auto auto;
+  .product-outer-wrapper {
+    transition: .1s;
+    padding: 5px;
+    height: fit-content;
+    border: 1px solid rgba(255, 255, 255, 0);
+    margin-bottom: 15px;
+    .list-product-card {
+      position: relative;
+      padding: 5px 10px 15px 10px;
+      border: 1px solid rgb(228, 228, 228);
+      word-break: break-word;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 6px;
+      .product-state-new {
+        border-radius: 6px 0 0 0;
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 18px;
+        background: #FF7700;
+        padding: 5px;
+        width: 80px;
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+      }
+      .product-stock-none {
+        border-radius: 0 6px 0 0;
+        color: white;
+        position: absolute;
+        text-align: right;
+        top: 0;
+        right: 0;
+        background: #cf1919;
+        padding: 5px;
+        width: 75px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+      }
+      .product-image-container {
+        outline: none;
+        .product-image {
+          cursor: pointer;
+          width: 100%;
+        }
+      }
+      .product-name {
+        text-align: center;
+      }
+      .product-price {
+        font-size: 25px;
+        font-weight: 600;
+        color: #FF7700;
+      }
+      .product-price-discount {
+        color: rgb(109, 109, 109);
+        font-weight: 600;
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+      }
+      .product-price-discount::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-top: .15rem solid red;
+        height: 45%;
+        width: 100%;
+        transform: rotateZ(-10deg);
+      }
+      .product-buy-btn {
+        cursor: pointer;
+        transition: ease-out .1s;
+        background: #FF7700;
+        color: white;
+        font-weight: 600;
+        letter-spacing: .06rem;
+        padding: 10px 0;
+        width: 100%;
+        border-radius: 6px;
+      }
+      .product-buy-btn:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  .product-outer-wrapper:hover {
+      border: 1px solid #FF7700;
+      border-radius: 6px;
+      box-shadow: 0px 0px 10px -2px rgba(107, 107, 107, 0.70);
+      .list-product-card {
+      border: 1px solid white;
+      }
+  }
+}
+

@@ -1,0 +1,365 @@
+.location-title{
+  margin:3vw;
+  text-align:center;
+}
+
+.wpo-case-details-img>img{
+    height: 25vw!important;
+    width: 50vw!important;
+    object-fit: cover!important;
+    border-radius: 5px;
+}
+
+#description-section{
+    margin-bottom: 5vw;
+}
+
+#details-container{
+    margin-top: 5vw;
+  }
+  
+  #details-row{
+    justify-content: center;
+  }
+  
+  .wpo-case-details-tab {
+      padding: 15px 30px;
+      border: 1px solid #ebebeb;
+      margin-top: 40px;
+    }
+    
+    .wpo-case-details-tab .nav li a {
+      display: block;
+      width: 160px;
+      height: 45px;
+      line-height: 28px;
+      text-align: center;
+      border-radius: 40px;
+      color: #2d4277;
+      transition: all .5s;
+      font-weight: 600;
+      box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+      margin-right: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .wpo-case-details-tab .nav-tabs .nav-item.show .nav-link, 
+    .wpo-case-details-tab .nav-tabs .nav-link.active{
+      background: #08cc7f!important;
+      color: #fff!important;
+      outline: none;
+      border-radius: 40px;
+      border: none;
+    }
+    
+    
+    .nav-tabs{
+      border-bottom: none!important;
+    }
+    
+    .wpo-case-details-text {
+      margin-top: 50px;
+    }
+    
+    .case-b-text {
+      margin-top: 40px;
+    }
+    
+    #Description {
+      padding: 15px 30px;
+      border: 1px solid #ebebeb;
+    }
+    
+    .wpo-case-details-text .wpo-case-text-top p {
+      margin-bottom: 30px;
+    }
+
+    .wpo-case-text-top>h2{
+        margin-bottom: 0;
+        padding: 0 auto ;
+        text-align: center;
+    }
+
+    .wpo-case-text-top >h3{
+        margin:0;
+        color: #062265!important;
+        margin-bottom: 5vw!important;
+    }
+    
+    .wpo-case-details-tab .event-b-text {
+      margin-top: 40px;
+    }
+    
+    .wpo-case-details-text .wpo-case-content h2 {
+      font-size: 30px;
+    }
+    
+    .wpo-case-details-text .wpo-case-content h3 {
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    
+    .case-bb-text ul {
+      display: unset;
+    }
+    
+    .case-bb-text ul li {
+      font-size: 15px;
+      font-size: 0.9375rem;
+      position: relative;
+      padding-left: 20px;
+      padding-bottom: 10px;
+    }
+    
+    .case-bb-text ul li:before {
+      content: "";
+      background: #08cc7f;
+      width: 6px;
+      height: 6px;
+      position: absolute;
+      left: 0;
+      top: 6px;
+    }
+    
+    .wpo-case-details-area .wpo-blog-single-section .comments-area {
+      margin-top: 0;
+    }
+    
+    .wpo-donations-amount,
+    .wpo-donations-details,
+    .wpo-doanation-payment {
+      padding: 30px;
+      border: 1px solid #ebebeb;
+      margin-bottom: 40px;
+    }
+    
+    .wpo-donations-amount h2,
+    .wpo-donations-details h2,
+    .wpo-doanation-payment h2 {
+      font-size: 18px;
+      font-size: 1.125rem;
+      font-weight: 600;
+      position: relative;
+      text-transform: capitalize;
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
+    
+    .wpo-donations-amount input,
+    .wpo-donations-details input,
+    .wpo-donations-details textarea {
+      background: transparent;
+      width: 100%;
+      height: 50px;
+      border: 0;
+      border: 1px solid  #08cc7f!important;
+      padding-left: 15px;
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
+      color: #525252;
+      border-radius: 5px;
+    }
+    
+    .wpo-donations-details textarea {
+      height: 135px;
+    }
+    
+    .wpo-donations-amount input:focus,
+    .wpo-donations-details input:focus,
+    .wpo-donations-details textarea:focus {
+      border: 3px solid   #2d4277!important;
+    }
+    
+    .payment-name ul li input {
+      margin-right: 0;
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+    
+    .wpo-payment-select> ul {
+      list-style: none;
+    }
+    
+    .payment-name ul {
+      display: flex;
+      margin-top: 30px;
+    }
+    
+    .wpo-payment-area form {
+      overflow: unset !important;
+    }
+    
+    .payment-name>ul> li {
+      width: 100px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      margin-right: 15px;
+    }
+    
+    .payment-name> ul {
+      list-style: none;
+    }
+    
+    .payment-name> ul> li> input {
+      margin-right: 0;
+    }
+    
+    .wpo-payment-select ul {
+      display: flex;
+    }
+    
+    .wpo-payment-select> ul> li {
+      margin-right: 10px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #5B5B5B;
+    }
+    
+    .wpo-payment-select label {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    
+    .wpo-payment-area h2 {
+      font-size: 20px;
+      color: #878787;
+      font-weight: 700;
+      padding-bottom: 40px;
+      margin-bottom: 0;
+    }
+    
+    .wpo-payment-area h2 span {
+      font-size: 30px;
+      color: #ff493c;
+    }
+    
+    .wpo-payment-area {
+      width: 100%;
+    }
+    
+    .payment-name ul li input:checked~label {
+      background: #a8edd2;
+    }
+    
+    .payment-name label {
+      width: 100%;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    
+    .payment-name .visa label {
+      border: 1px solid #0057A0;
+    }
+    
+    .payment-name .mas label {
+      border: 1px solid #CC0000;
+    }
+    
+    .payment-name .ski label {
+      border: 1px solid #691A5F;
+    }
+    
+    .payment-name .pay label {
+      border: 1px solid #019CDE;
+    }
+    
+    .payment-name.active {
+      display: block;
+    }
+    
+    .wpo-payment-option.active .payment-name {
+      display: none !important;
+    }
+    
+    .wpo-payment-area .form-style input {
+      width: 100%;
+      margin-bottom: 15px;
+      padding-left: 20px;
+      height: 40px;
+      background: #fff;
+      border-radius: 2px;
+      border: none;
+      border: 1px solid #ebebeb;
+    }
+    
+    .wpo-payment-area .form-style input:focus {
+      border: 1px solid #08cc7f;
+    }
+    
+    .wpo-payment-area .contact-form {
+      margin-top: 40px;
+    }
+    
+    #Donations .theme-btn {
+      border: none;
+      outline: none;
+      border-radius: 40px;
+      box-shadow: none;
+    }
+    
+    #Donations .submit-area {
+      text-align: center;
+    }
+  
+    #submit-donation{
+      background-color: #08cc7f!important;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 5px;
+      display: inline-block;
+      transition: all .3s;
+      border: none;
+      font-family: inherit;
+      padding: 10px 25px;
+      margin-bottom: 10vw;
+    }
+    
+    @media(max-width: 992px) {
+      .wpo-event-details-wrap {
+          margin-bottom: 30px;
+      }
+    }
+    
+    @media(max-width: 590px) {
+      .wpo-case-details-text .wpo-case-content h2 {
+          font-size: 18px;
+      }
+    
+      .wpo-case-details-tab .nav li a {
+          margin-bottom: 20px;
+      }
+    
+      .wpo-case-details-tab .nav li:last-child a {
+          margin-bottom: 0;
+      }
+    
+      .wpo-case-details-text .wpo-case-text-top {
+          padding: 8px;
+      }
+    
+      .wpo-payment-select ul {
+          display: flex;
+          flex-wrap: wrap;
+      }
+    
+      .wpo-doanation-payment {
+          padding: 20px 10px;
+      }
+    
+    }
+    
+    .wpo-donate-header h2 {
+      margin-bottom: 50px;
+      text-align: center;
+      font-size: 36px;
+      font-weight: 500;
+      margin-top: 0;
+    }
+    
+    input[type=checkbox], input[type=radio]{
+      margin-right: 5px;
+    }

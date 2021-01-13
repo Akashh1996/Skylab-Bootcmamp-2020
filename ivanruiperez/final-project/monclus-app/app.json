@@ -1,0 +1,14 @@
+{
+  "name": "Monclus",
+  "displayName": "Monclus",
+  "expo": {
+    "name": "Monclus",
+    "slug": "Monclus",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+
+}

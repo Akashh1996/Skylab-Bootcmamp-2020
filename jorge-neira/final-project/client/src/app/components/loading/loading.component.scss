@@ -1,0 +1,27 @@
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  padding: 50px 50px;
+  .loading-bar {
+    color: #FF7700;
+    background-color: #FF7700;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+::ng-deep .mat-progress-bar-fill::after {
+    background-color: #FF7700;
+}
+
+::ng-deep .mat-progress-bar-buffer {
+    background: black;
+}
+
+::ng-deep .mat-progress-bar {
+    border-radius: none;
+}

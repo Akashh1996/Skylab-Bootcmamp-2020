@@ -1,0 +1,150 @@
+.home-main-img_wrapper{
+    width: 100%;
+}
+
+.home-main-img{
+    width: 100%; 
+    z-index: 10;
+    opacity: 0.95;
+}
+
+.link-evnts-block{
+    background-color: #CCDCAA;
+    height: 300px;
+    padding-bottom: 1px;
+    margin-top: -4px;
+    display: flex;
+    flex-direction: row;
+    z-index: -10;
+    
+}
+
+.link-evnts-img_left{
+    width: 33%;
+    object-fit: cover;
+ 
+
+}
+
+.link-evnts-txt_wrapper{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    letter-spacing: 0.35em;
+    font-family: Helvetica, sans-serif;
+    font-size: large;
+}
+
+.link-evnts-img_right_wrapper{
+    width: 20%;
+}
+.link-evnts-img_right{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.link-evnts-txt_wrapper p:hover{
+    cursor: pointer;
+    color: rgb(86, 145, 82);
+    transition: 0.4s;
+}
+.link-evnts-txt_wrapper p{
+    color: white;
+}
+.link-evnts-txt_wrapper a{
+    text-decoration: none;
+}
+
+.illstrtn-block_wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.illstrtn-img_wrapper{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+.illstrtn-img-home{
+    width: 300px;
+    
+}
+
+.nut-illstratn{
+    width: 350px;
+}
+.home-subtitle{
+    letter-spacing: 0.35em;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    color: rgb(46, 46, 46);
+    margin: 20px auto 0px;
+    border-bottom: 1px solid rgb(118, 118, 118);
+    width: 35%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+.home-link-txt{
+    text-align: center;
+    letter-spacing: 0.35em;
+    font-family: Helvetica, sans-serif;
+    background-color: #a4bb80cd;
+    color: white;
+    padding: 4px 10px;
+    font-size: 20px;
+    position: relative;
+    top: -90px;
+    left: 70px;
+}
+
+.cntct-home-link-txt{
+    top: -110px;
+}
+.home-link-txt:hover{
+    background-color: #6b8343bd;
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+
+.illstrtn-img_wrapper a {
+    text-decoration: none;
+    cursor: default;
+}
+
+
+
+
+@media only screen and (max-width: 780px) {
+    .illstrtn-block_wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .home-subtitle{
+        font-size: 14px;
+    }
+    .illstrtn-img-home{
+        width: 280px;
+    }
+    .home-link-txt{
+        font-size: 17px;
+        top: -80px;
+    }
+  
+}

@@ -1,0 +1,53 @@
+<section class="login-container">
+
+  <h2 class="login-title">Iniciar sesión</h2>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form-wrapper">
+    <label>
+      <input 
+      type="email" 
+      name="email" 
+      id="email"
+      placeholder="*Email"
+      formControlName="email"
+      class="login-input"
+      />
+    </label>
+    <label>
+      <input 
+      type="password" 
+      name="password" 
+      id="password"
+      placeholder="*Contraseña"
+      formControlName="password"
+      class="login-input"
+      />
+    </label>
+    <button 
+      type="submit" 
+      [disabled]="!loginForm.valid" 
+      class="login-submit-btn btn"
+    >
+      Iniciar sesión
+    </button>
+  </form>
+
+  <div *ngIf="errorMessage" class="error-wrapper">
+    <ul>
+      <li *ngFor="let error of errorMessage" class="error-message">
+        <p> {{ error }} </p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="login-new-client">
+    <span class="custom-divider"></span>
+    <p class="new-login-text">¿Eres nuevo Cliente?</p>
+    <span class="custom-divider"></span>
+  </div>
+
+  <button [routerLink]="['/register']" routerLinkActive="active" class="btn register-btn">
+    Crear Cuenta
+  </button>
+
+</section>

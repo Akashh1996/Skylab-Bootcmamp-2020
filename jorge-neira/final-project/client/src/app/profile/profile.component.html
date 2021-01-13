@@ -1,0 +1,13 @@
+<section *ngIf="userData$ | async as userData; else loading" class="user-profile-container">
+  <h2>Bienvenido {{ userData.username }}</h2>
+  <ng-container *ngIf="userData.username === 'tintin'">
+    <img src="https://colegiolavallina.com/web/wp-content/uploads/2019/02/tintin_milu2.jpg" alt="" style="width: 100%; border-radius: 150px;">
+  </ng-container>
+  <ng-container *ngIf="userData.username !== 'tintin'">
+    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--4nVcu5jx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://cdn.dribbble.com/users/722835/screenshots/4082720/bot_icon.gif" alt="" style="width: 100%;">
+    <h3 style="font-size: 30px">Proximamente 2021</h3>
+  </ng-container>
+</section>
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>

@@ -1,0 +1,81 @@
+.list__card {
+  padding: 16px;
+  margin: 15px;
+}
+
+.description__card--list {
+  display: flex;
+  font-size: 16px;
+}
+
+.description__card--age {
+  margin-right: 15px;
+}
+
+.title__card--list {
+  font-size: 24px;
+}
+
+.photo__card--list {
+  height: 300px;
+  object-fit: cover
+}
+
+.favourite__section {
+  font-size: 24px;
+  padding: 20px;
+}
+
+.user__photo {
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.user__header {
+  text-align: center;
+  padding: 16px;
+  margin: 15px;
+}
+
+.meet__card {
+  margin: 0 auto 15px auto;
+  max-width: 350px;
+  text-align: center;
+  color: white;
+  background-color: #673ab7;
+  display: flex;
+  flex-direction: column;
+}
+
+.meet__button {
+  color:#673ab7;
+  background-color: white;
+}
+
+@media (min-width: 800px) {
+
+  .list__card {
+    padding: 16px;
+    margin: 15px;
+  }
+
+  .photo__card--list {
+    max-width: 200px;
+    height: 300px;
+  }
+
+  .list__card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  .user__header {
+    margin: 15px auto;
+    width: 40vw;
+  }
+}

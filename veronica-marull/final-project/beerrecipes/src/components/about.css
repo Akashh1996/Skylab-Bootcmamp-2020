@@ -1,0 +1,35 @@
+.about-text {
+
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background-color: rgba(32, 32, 32, 0.5); 
+    width: 400px;
+    height: auto;
+    line-height: 1.5;
+    font-size: 25px;
+    margin-right: 60px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 15px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+ 
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+
+    .about-text {
+        width: 600px;
+    }
+}
+    
+
+@media screen and (min-width: 1001px) {
+
+    .about-text {
+        width: 600px;
+    }
+    
+
+}

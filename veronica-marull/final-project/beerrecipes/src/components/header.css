@@ -1,0 +1,143 @@
+* {
+    text-decoration: none;
+    text-decoration-color: none;
+    
+}
+#burger_menu, #login-mobile{
+    
+    font-size: 40px;
+    display: flex;
+    padding-left: 20px;
+    
+}
+
+.login-burger {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 5px;
+    padding-right: 20px;
+    padding-top: 20px;
+    
+
+}
+#login-mobile:hover{
+    color: rgba(194, 181, 181, 0.5);
+}
+
+#burger_menu:hover {
+   color: rgba(194, 181, 181, 0.5);
+    
+}
+.navbar {
+    display: none;
+}
+.logo-mobile {
+    margin-top: 30px;
+    position: absolute;
+}
+
+.header_mobile {
+
+    width: auto;
+    height: 200px;
+    
+    
+    
+}
+.links {
+    color: black;
+}
+.container {
+    background-image: url('http://demo.webidia.com/themes/brew/img/headers/4.jpg');
+    background-position: center;
+}
+
+.user-photo {
+    width: 45px;
+    height: 45px;
+    border-radius: 22px;
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {}
+.container {
+    background-image: url('http://demo.webidia.com/themes/brew/img/headers/4.jpg');
+}
+
+
+@media screen and (min-width: 1001px) {
+
+    .container {
+        background-image: url('http://demo.webidia.com/themes/brew/img/headers/4.jpg');
+    }
+
+    .navbar {
+        margin-top: 40px;
+        width: auto;
+        height: 200px;
+        border-top: 1px solid #F9C73D;
+        border-bottom: 1px solid #F9C73D;
+        background-color: rgba(32, 32, 32, 0.3);
+        color: white;
+        margin-bottom: 40px;
+        display: flex;
+        
+        
+        
+    }
+    #home, #beers, #about, #contact{
+        padding-bottom: 30px;
+        padding-top: 80px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    #home {
+        margin-left: 30px;
+    }
+
+
+    #logo {
+        padding-top: 30px;
+        margin-left: 5px;
+    }
+
+    #home:hover, #beers:hover, #about:hover, #contact:hover {
+        background-color: rgba(248, 247, 247, 0.3);
+    }
+
+	.header_mobile {
+        display: none;
+    }
+
+    .login-logout-btn {
+        margin-left: 30px;
+        width: 100px;
+        height: 50px;
+        margin-top: 65px;
+        background-color: #F9C73D;
+        border: 1px solid #F9C73D;
+        border-radius: 10px;
+        font-size: 15px;
+        
+    }
+    .btn:hover {
+        background-color: rgba(248, 247, 247, 0.3);
+    }
+    
+    .login-logout {
+        display: flex;
+        margin-left: 200px;
+    }
+
+    .userName {
+        margin-top: 80px;
+    }
+    #login {
+        margin-left: 300px;
+    }
+    .userName {
+        margin-left: 100px;
+    }
+    
+}

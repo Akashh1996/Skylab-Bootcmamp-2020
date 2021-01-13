@@ -1,0 +1,25 @@
+  <section class="product-shipping">
+    <div class="product-shipping-disable" *ngIf="stock === 0">
+      <div class="shipping-disable-state">
+        <mat-icon class="disable-state-icon">cancel</mat-icon>
+        <p>No Disponible</p>
+      </div>
+      <input
+        type="email"
+        class="disable-state-input"
+        placeholder="tu@email.com"
+      />
+      <button class="disable-state-btn">
+        <mat-icon class="disable-btn-icon">notifications</mat-icon>
+        <p>AVÍSAME CUANDO ESTE DISPONIBLE</p>
+      </button>
+    </div>
+    <div class="product-shipping-enable" *ngIf="stock > 0">
+      <mat-icon class="product-shipping-icon">check_circle</mat-icon>
+      <p>¡En stock! Recíbelo en 24/48h.</p>
+    </div>
+    <div class="product-shipping-price">
+      <mat-icon class="product-shipping-icon">local_shipping</mat-icon>
+      <p>Tarifa plana de envío: <span>4.90€</span></p>
+    </div>
+  </section>

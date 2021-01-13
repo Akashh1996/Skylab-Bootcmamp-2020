@@ -1,0 +1,49 @@
+.login-page{
+    background-image: url("https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    background-size: 100vw 50vw;
+    object-fit: cover;
+    min-height: 50vw;
+    display: flex;
+    justify-content: center;
+    filter: brightness(2);
+}
+
+.sign-container{
+    margin: 5% auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0.884);
+    max-height: 35vw;
+    width: 35vw;
+    border-radius: 10px;
+}
+
+.text-center>h2{
+    color: white!important;
+    padding: 1vw 3vw;
+    font-size: 2vw;
+}
+
+.google-btn{
+    margin-top: 2vw;
+    background-color:  #3F48CC;
+    height: 4vw;
+    width: 15vw;
+    font-size: 1.2vw;
+    font-weight: 500;
+    border-radius: 10px;
+    box-shadow: white 1px 1px 7px;
+    border: none;
+    filter: brightness(0.5);
+}
+
+.google-btn:hover{
+    background-color:#14A37F;
+    box-shadow: white 1px 1px 7px 7px;
+}
+
+.logo-image>img{
+    width: 20vw;
+    filter: brightness(0.5);
+}

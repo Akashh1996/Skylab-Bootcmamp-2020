@@ -1,0 +1,154 @@
+*{
+    font-family: 'Oswald', sans-serif;
+}
+#spot-detail-wrapper{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    
+    align-items: center;
+    background-color:  #252525;
+    
+
+}
+#user-stance{
+    color:#BBBBBB;
+    width: 273px;
+    height: 83px;
+    left: 35px;
+    top: 266px;
+     
+        
+    background: #110F0F;
+    backdrop-filter: blur(4px);
+        
+        
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+
+}
+
+
+#spot_name{
+    
+    text-transform:uppercase;
+    color:#D16F4D;
+    
+    font-size: 40px;   
+}
+#description{
+    color:#BBBBBB;
+    color: #BBBBBB;
+    width: 60vh;
+    width: 100vh;
+    
+    
+    text-align: center; 
+    font-size: 23px;
+    
+    text-shadow: 5px -3px 15px 5px rgba(0,0,0,0.55);
+}
+
+#linebreak-detail{
+    border-top: 1px dotted #ddd;
+    margin-top: 28px;
+    
+    width: 100vh;
+}
+#spot-image{
+    width: 80vh;
+    height: 70vh;
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+    object-fit: scale-down;
+}
+#spot-image-one{
+    width: 250px;
+    height: 250px;
+    margin-top: 30px;
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+}
+.linebreak-vertical{
+    border-right: 1px dotted #ddd;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+#spot-location{
+    text-align: center;
+    margin-top: 50px;
+    color:#BBBBBB;
+    color: #BBBBBB;
+    width: 60vh;
+    width: 100vh;
+    font-size: 23px;
+    text-shadow: 5px -3px 15px 5px rgba(0,0,0,0.55);
+    display:flex;
+}
+.location{
+    display: flex;
+}
+#description-map{
+    text-align: center;
+    margin-top: 50px;
+    color:#D16F4D;
+    width: 60vh;
+    width: 100vh;
+    font-size: 40px;
+    text-shadow: 5px -3px 15px 5px rgba(0,0,0,0.55);
+    
+
+}
+@media only screen and (max-width: 600px) {
+    #linebreak-detail{
+        width: 200px;
+    }
+    
+    #spot-detail-wrapper{
+        margin-top:70px;
+    }
+    #description{
+        color: #BBBBBB;
+        color: #BBBBBB;
+        width: 60vh;
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+    }
+    #spot-image{
+        width: 80%;
+    }
+    #spot_name{
+        margin-right: 60px;
+        font-size: 30px;
+        margin-left: 60px;
+        text-align: center;
+    }
+    .location{
+        display: flex;
+        flex-direction: column;
+    }
+    #spot-location{
+        width: 100%;
+        font-size:20px;
+        margin: 0px;
+    }
+    #spot-image-one{
+    width: 200px;
+    height: 150px;
+    object-fit: contain;
+    }
+   
+    #description-map{
+        text-transform:uppercase;
+        color:#D16F4D;
+        margin:0;
+        font-size: 30px;
+        width: 100%;
+        
+    
+    }
+    
+}

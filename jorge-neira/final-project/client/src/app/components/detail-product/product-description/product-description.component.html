@@ -1,0 +1,24 @@
+  <section class="product-description">
+    <h3 class="product-description-title">Especificaciones técnicas</h3>
+    <mat-divider class="divider"></mat-divider>
+    <p class="product-description-text">
+      {{ shortDescription }}
+    </p>
+    <div
+      class="product-description-specs"
+      *ngFor="let especifications of generalDescription"
+    >
+      <h4 class="product-description-title">
+        {{ especifications.description.name }}
+      </h4>
+      <ul>
+        <li
+          class="product-description-item"
+          *ngFor="let content of especifications.description.content"
+        >
+          <mat-icon class="description-item-icon">chevron_right</mat-icon>
+          <p class="description-item-content">{{ content }}</p>
+        </li>
+      </ul>
+    </div>
+  </section>
