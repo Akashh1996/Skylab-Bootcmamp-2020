@@ -1,0 +1,74 @@
+.form_wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-evenly;
+    background-color:#252525; 
+    margin: 0;
+
+}
+
+#project-name{
+    background-color:#252525;
+    width: 30%;
+    border-radius: 5px;
+}
+#cordinates{
+    display: flex;
+    justify-content: space-around;
+    background-color:#252525;
+    border-radius: 5px;
+    width: 100%;
+}
+#project-info{
+    background-color:#252525;
+    border-radius: 5px;
+    
+}
+#project-photo{
+    background-color:#252525;
+
+}
+#submit-form{
+    background-color:#252525;
+    color:#D16F4D;
+    
+
+}
+#project-location{
+    color:#bbbb;
+    background-color:#252525 ;
+}
+#project-lat{
+    color:#bbbb;
+    background-color:#252525 ;
+    
+}
+#project-lng{
+    color:#bbbb;
+    background-color:#252525 ;
+
+}
+#textarea:focus, input:focus {
+    color: #bbbb;
+}
+#project-main-description{
+    color:#bbbb;
+    background-color:#252525 ;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .form_wrapper{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-evenly;
+        background-color:#252525; 
+        margin-top: 70px;
+    
+    }
+
+}

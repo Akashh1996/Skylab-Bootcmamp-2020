@@ -1,0 +1,41 @@
+.footer-wrapper{
+    position: relative;
+    bottom: 0 !important;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #252525;
+    z-index: 100;
+    
+}
+
+.footer-blocks_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.footer-title{
+    text-align: center;
+    color: #D16F4D;
+    border-top: 1px solid #bbbbbb3f;
+    border-bottom: 1px solid #bbbbbb3f !important;
+    font-size: 28px;
+}
+
+.footer-title_wrapper{
+    z-index: 10;
+}
+
+
+#blog{
+    color: #bbbbbb
+}
+
+#company{
+    color: #D16F4D; 
+}
+
+
+#footer{
+    margin-top: 100px ;
+}
