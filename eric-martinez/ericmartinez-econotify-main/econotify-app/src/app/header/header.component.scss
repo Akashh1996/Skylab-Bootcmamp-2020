@@ -1,0 +1,200 @@
+.desktop_nav{
+    display: none;
+}
+.mobile_nav{
+    display: none;
+}
+
+@media screen and (min-width: 421px){
+
+    a{
+      text-decoration: none;
+    }
+
+    .nav_item-content{
+     display: flex;
+     flex-direction: column;
+    }
+
+    .nav_buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .desktop_nav{
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        justify-content: space-between;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .search_component{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav_items{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .select_component{
+        font-family: Roboto, sans-serif;
+        text-align: center;
+        text-align-last: center;
+        font-weight: bold;
+        color: white;
+        width: 120px;
+        height: 37px;
+        border: 1px solid #151B35;
+        -webkit-appearance: none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        background: url(https://trello-attachments.s3.amazonaws.com/5f7afb80257ef0330839c5e5/5fbbe269bf626164301b66ab/7aa95610d7e6eb684f80e1fc01993b65/Polygon_3.svg) no-repeat 90px #151B35;
+    }
+
+    .input_search-Desktop{
+        display: block;
+        margin-right: 20px;
+        width: 180px;
+        height: 35px;
+        padding: 0 5px 0 60px;
+        background-color: white;
+        border: 1px solid #151B35;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        outline: none;
+        background-image: url(https://trello-attachments.s3.amazonaws.com/5f7afb80257ef0330839c5e5/5fbbe269bf626164301b66ab/25278c0444fab7e7f01dab4f1ab7e1be/search.svg);
+        background-position: 15px 8px;
+        background-repeat: no-repeat;
+        background-size: 8%;
+        font-size: 16px;
+        color: black;
+    }
+
+    .nav_item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0px;
+        border: 0;
+        background: none;
+        margin-left: 24px;
+    }
+
+    .nav_items-text{
+        font-family: Roboto, sans-serif;
+        color: #151B35;
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    .buttons_mobile{
+        display: none;
+    }
+
+    .button_desktop-viewArticle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button_openView{
+        height: 24px;
+        width: 121px;
+        border: none;
+        border-radius: 2px;
+        text-align: left;
+        text-align-last: left;
+        color: white;
+        font-family: Roboto, sans-serif;
+        font-size: 12px;
+        background: url(https://trello-attachments.s3.amazonaws.com/5f7afb80257ef0330839c5e5/5fbbe269bf626164301b66ab/7ec6bf89644148b750f624c47d38b4b0/open_in_new.svg) no-repeat 101px #FE4B4B;
+        background-size: 14px;
+    }
+
+    .button_back-component{
+        margin-left: 160px;
+        margin-top: 50px;
+    }
+
+    .button_back{
+        border: none;
+        background: transparent;
+    }
+
+    .article_title-button{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .button_openView-text{
+        margin-left: 8px;
+    }
+
+    .icon_share{
+        margin-left: 5px;
+    }
+
+    .icon_button {
+        height: 50px;
+        border-radius: 0px;
+        border: 0;
+        background: #151B35;
+    }
+
+    .material_icon-button{
+        color: white;
+    }
+
+    .input_search-containerDesktop{
+      display: none;
+    }
+    .input_search{
+      display: none;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .mobile_nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 50px;
+        background: #151B35;
+    }
+
+    .nav_mobile-component{
+        display: flex;
+        height: 50px;
+        align-items: center;
+    }
+
+    .input_search-container{
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      width: 100%;
+      height: 5%;
+      justify-content: center;
+    }
+    .input_search{
+      background-image: url(https://trello-attachments.s3.amazonaws.com/5f7afb80257ef0330839c5e5/5fbbe269bf626164301b66ab/04d913e00ec7a6bd5ea18b81b9731c09/search.svg);
+      background-repeat: no-repeat;
+      background-position: 15px 8px;
+      background-size: 7%;
+      font-size: 20px;
+      width: 90%;
+      height: 100%;
+      border: none;
+      margin-left: 5%;
+      padding-left: 50px;
+      border-bottom: 1px solid #ccc;
+      margin-right: 5%;
+    }
+}

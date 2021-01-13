@@ -1,0 +1,31 @@
+@media screen and (max-width: 420px){
+  .home_img{
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .logo_img{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 72%;
+    height: 15%;
+  }
+}
+
+@media screen and (min-width: 421px){
+  .home_img-mobile{
+    display: none;
+  }
+  .home_img-right{
+    position: absolute;
+    background-image: url(https://trello-attachments.s3.amazonaws.com/5f7afb80257ef0330839c5e5/5fbbe269bf626164301b66ab/eef000814a134931ce09332c1b30d392/Captura_de_pantalla_2020-12-03_a_las_12.30.58.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    width: 30vw;
+    right: 0;
+  }
+}

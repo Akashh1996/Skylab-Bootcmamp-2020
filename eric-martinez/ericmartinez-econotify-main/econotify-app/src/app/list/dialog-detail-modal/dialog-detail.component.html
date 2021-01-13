@@ -1,0 +1,110 @@
+<div *ngIf="data.modalArticle | async as article">
+  <div *ngIf='article? ifSaveArticle(article.id): false'>
+  </div>
+  <div class="nav_buttons">
+    <div class="buttons_mobile">
+        <div class="icon_save">
+          <div *ngIf="isSave; else elseBlock">
+            <button  class="icon_button" (click)="readArticle(article.id)">
+                <span class="material-icons material_icon-button saveButton">
+                  bookmark
+                </span>
+            </button>
+          </div>
+            <ng-template #elseBlock>
+              <button  class="icon_button" (click)="readArticle(article.id)">
+                <span class="material-icons material_icon-button">
+                  bookmark_border
+                </span>
+              </button>
+            </ng-template>
+        </div>
+        <div class="icon_share">
+            <button class="icon_button">
+                <span class="material-icons material_icon-button">
+                    share
+                </span>
+            </button>
+        </div>
+    </div>
+    <div class="icon_clear">
+        <button class="icon_clear-button"  (click)="backClick({isSave: isSave, article: article})">
+            <span class="material-icons material_icon-clear">
+                clear
+            </span>
+        </button>
+    </div>
+  </div>
+  <mat-dialog-content class="article_container">
+    <div class="header_container">
+      <div class="article_title">
+          <span class="span_year">{{article.issuedate}}</span>
+          <div class="article_title-button">
+              <h1 class="article_title-text">{{article.title}}</h1>
+              <div class="button_desktop-viewArticle">
+                  <a href={{article.links[0].url}}>
+                      <button type="button" class="button_openView">
+                          <span class="button_openView-text">View Full Paper</span>
+                      </button>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <hr class="hr_dashed"/>
+      <div class="header_seccion">
+          <div class="header_left-seccion">
+              <div class="header_author-name">
+                  <span class="material-icons material-icons_header">
+                      group
+                  </span>
+                  <span *ngFor="let author of article.authors; last as isLast" class="header_seccion-text">
+                    <a  class="header_seccion-author" (click)="openAuthorDialog(author)">
+                      {{author.name}}
+                    </a>
+                    <span *ngIf="!isLast">and</span>
+                  </span>
+              </div>
+              <div class="header_article-name">
+                  <span class="material-icons material-icons_header">
+                      import_contacts
+                  </span>
+                  <span class="header_seccion-text">
+                      {{article.journaltitle}}
+                  </span>
+              </div>
+          </div>
+          <div class="header_comments">
+              <button class="comments_button">
+                  <img src="https://trello-attachments.s3.amazonaws.com/5f7afb80257ef0330839c5e5/5fbbe269bf626164301b66ab/4fbd1b45b142bee5c4f6905ddc25cb3b/Union.svg" alt="comments_img">
+              </button>
+              <span class="comments_number">
+                {{article.ncite}}
+              </span>
+          </div>
+      </div>
+      <hr class="hr_style"/>
+      <div class="main_header">
+        <h2 class="main_title">Abstract</h2>
+        <a href={{article.links[0].url}} class="article_link-anchore">
+          <button class="main_header-button">
+            <span class="material-icons icon_viewPaper">
+              open_in_new
+            </span>
+            <div class="button_main-text">
+              <span>View</span>
+              <span>Paper</span>
+            </div>
+          </button>
+        </a>
+      </div>
+    </div>
+    <main>
+        <div class="main_article">
+            <p class="article_text">
+              {{article.abstract}}
+            </p>
+        </div>
+        <hr class="hr_style"/>
+    </main>
+  </mat-dialog-content>
+</div>

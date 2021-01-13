@@ -1,0 +1,231 @@
+.cdk-overlay-pane{
+  max-width: 100% !important;
+  width: 100vw;
+  height: 100vh;
+}
+
+.mat-dialog-container{
+  padding: 0 !important;
+}
+
+a{
+  text-decoration: none;
+}
+
+.authorDialog_container{
+  height: 100vh;
+  padding-right: 34px;
+  padding-bottom: 34px;
+  padding-left: 34px;
+}
+
+.author_name{
+  font-size: 20px;
+  margin-bottom: 0 !important;
+}
+
+.nav_container-author{
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #DB9E4B;
+}
+
+.name_img{
+  position: absolute;
+  left: 36%;
+  top: 40%;
+  font-family: Roboto, sans-serif;
+  background: #151B35;
+  border-radius: 50%;
+  width: 30%;
+  height: 210%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 54px;
+  font-weight: bold;
+  color: white;
+}
+
+.header_container-author{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 36%;
+  height: 20%;
+  width: 100%;
+}
+
+.modal_header-comments{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.subheader_comments{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.comments_button{
+  display: flex;
+  margin-top: 6px;
+  border: none;
+  background: transparent;
+  flex-direction: row;
+}
+
+.button_follow-container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.follow_author-button{
+  background: #48626F;
+  width: 70%;
+  height: 40px;
+  color: white;
+  margin-top: 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+.icon_back-button {
+  height: 50px;
+  border-radius: 0px;
+  margin-top: 5px;
+  margin-right: 10px;
+  border: 0;
+  background: #DB9E4B;
+  outline: none;
+}
+
+.material_icon-clear{
+  color: #666666;
+}
+
+.detail_nav{
+  display: none;
+}
+.nav_buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+
+.button_back-component{
+  display: none;
+}
+
+.button_main-desktop{
+  display: none;
+}
+
+.button_desktop-viewArticle{
+  display: none;
+}
+
+.buttons_mobile{
+  display: flex;
+  flex-direction: row;
+  margin-left: 24px;
+}
+
+.detail_anchore{
+text-decoration: none;
+}
+
+.icon_share{
+  margin-left: 5px;
+}
+
+.icon_button {
+  height: 50px;
+  border-radius: 0px;
+  border: 0;
+  background: #151B35;
+}
+
+.material_icon-button{
+  color: white;
+  font-size: 30px;
+}
+
+.icon_clear-button{
+  height: 50px;
+  border-radius: 0px;
+  margin-top: 5px;
+  margin-right: 10px;
+  border: 0;
+  background: white;
+}
+
+.list_container{
+padding: 34px;
+}
+
+.span_year{
+  color: #DB9E4B;
+}
+
+.article_title-text{
+  color: #151B35;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+}
+
+.header_seccion-author{
+color: rgba(0, 0, 0, 0.87);
+}
+
+.hr_dashed{
+  border-top: 2px dotted #798F8D;
+
+}
+
+.header_seccion{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+
+.material-icons_header{
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.header_seccion-text{
+  font-size: 12px;
+  vertical-align: super;
+}
+
+.header_comments{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.article_link-anchore{
+  text-decoration: none;
+}
+
+.hr_style{
+  border: 0;
+  height: 0;
+  border-bottom: 1px solid #798F8D;
+}
+
+.main_title{
+  margin-top: 20px;
+}
+
+.comments_number{
+  margin-left: 6px;
+  color: #303938;
+}

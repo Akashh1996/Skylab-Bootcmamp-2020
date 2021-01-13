@@ -1,0 +1,113 @@
+<div *ngIf="favArticles$; else signIn">
+  <div class="mobile_list">
+    <div *ngFor="let article of favArticles$">
+        <div class="article_title">
+            <span class="span_year">{{article.issuedate}}</span>
+            <div class="article_title-button" >
+                  <a class="open_dialog-button" (click)="openDialog(article.id)">
+                    <h1 class="article_title-text">{{article.title}}</h1>
+                  </a>
+            </div>
+        </div>
+        <hr class="hr_dashed"/>
+        <div class="header_seccion">
+            <div class="header_left-seccion">
+                <div class="header_author-name">
+                    <span class="material-icons material-icons_header">
+                        group
+                    </span>
+                    <span *ngFor="let author of article.authors; last as isLast" class="header_seccion-text">
+                      <a class="header_seccion-author" (click)="openAuthorDialog(author)">
+                        {{author.name}}
+                      </a>
+                        <span *ngIf="!isLast">and</span>
+                    </span>
+                </div>
+                <div class="header_article-name">
+                    <span class="material-icons material-icons_header">
+                        import_contacts
+                    </span>
+                    <span class="header_seccion-text">
+                        {{article.journaltitle}}
+                    </span>
+                </div>
+            </div>
+            <div class="header_comments">
+                <button class="comments_button">
+                    <img src="https://trello-attachments.s3.amazonaws.com/5f7afb80257ef0330839c5e5/5fbbe269bf626164301b66ab/4fbd1b45b142bee5c4f6905ddc25cb3b/Union.svg" alt="comments_img">
+                </button>
+                <span class="comments_number">
+                  {{article.ncite}}
+                </span>
+            </div>
+        </div>
+        <hr class="hr_style"/>
+    </div>
+  </div>
+  <div class="desktop_list">
+    <div class="row">
+      <div *ngFor="let article of favArticles$" class="column">
+        <div class="card_container">
+          <div class="article_title">
+            <span class="span_year">{{article.issuedate}}</span>
+            <div class="article_title-button">
+                <a
+                  routerLink="/article/{{article.id}}"
+                  class="detail_anchore">
+                    <h1 class="article_title-text">{{article.title}}</h1>
+                </a>
+            </div>
+          </div>
+          <hr class="hr_dashed"/>
+          <div class="header_seccion">
+              <div class="header_left-seccion">
+                  <div class="header_author-name">
+                      <span class="material-icons material-icons_header">
+                          group
+                      </span>
+                      <span *ngFor="let author of article.authors; last as isLast" class="header_seccion-text">
+                        <a
+                        href="/{{author.name}}/{{author.uid}}"
+                        class="header_seccion-author">
+                          {{author.name}}
+                        </a>
+                          <span *ngIf="!isLast">and</span>
+                      </span>
+                  </div>
+                  <div class="header_article-name">
+                      <span class="material-icons material-icons_header">
+                          import_contacts
+                      </span>
+                      <span class="header_seccion-text">
+                          {{article.journaltitle}}
+                      </span>
+                  </div>
+              </div>
+              <div class="header_comments">
+                  <button class="comments_button">
+                      <img src="https://trello-attachments.s3.amazonaws.com/5f7afb80257ef0330839c5e5/5fbbe269bf626164301b66ab/4fbd1b45b142bee5c4f6905ddc25cb3b/Union.svg" alt="comments_img">
+                  </button>
+                  <span class="comments_number">
+                      {{article.ncite}}
+                  </span>
+              </div>
+          </div>
+          <div *ngIf="article.abstract" class="main_article">
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title class="mat_panel-title">
+                  Read more....
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p class="article_text">{{article.abstract}}</p>
+            </mat-expansion-panel>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #signIn>
+  If you want to save papers, Sign in!
+</ng-template>
