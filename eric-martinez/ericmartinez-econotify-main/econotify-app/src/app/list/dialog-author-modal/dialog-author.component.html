@@ -1,0 +1,73 @@
+<div *ngIf="data.modalAuthor | async as authorArticles">
+  <div>
+  <div class="nav_container-author">
+    <button class="icon_back-button" matDialogClose>
+      <span class="material-icons material_icon-clear"> clear </span>
+    </button>
+    <div class="name_img">
+      {{ getAuthorInitials(data.authorName) }}
+    </div>
+  </div>
+  <main class="authorDialog_container">
+    <div>{{ngAfterView()}}</div>
+    <div class="header_container-author">
+      <h1 class="author_name">{{ data.authorName }}</h1>
+      <div class="modal_header-comments">
+        <div *ngIf="user !== null" class="button_follow-container">
+          <button
+            class="follow_author-button"
+            (click)="followAuthor(data.authorName)"
+          >
+            {{ isFollowed ? "FOLLOWING" : "FOLLOW AUTHOR" }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div *ngFor="let article of authorArticles">
+        <div class="article_title">
+          <span class="span_year">{{ article.issuedate }}</span>
+          <div class="article_title-button">
+            <a class="open_dialog-button" (click)="openDialog(article.id)">
+              <h1 class="article_title-text">{{ article.title }}</h1>
+            </a>
+          </div>
+        </div>
+        <hr class="hr_dashed" />
+        <div class="header_seccion">
+          <div class="header_left-seccion">
+            <div class="header_author-name">
+              <span class="material-icons material-icons_header"> group </span>
+              <span
+                *ngFor="let author of article.authors; last as isLast"
+                class="header_seccion-text"
+              >
+                <a class="header_seccion-author">
+                  {{ author.name }}
+                </a>
+                <span *ngIf="!isLast">and</span>
+              </span>
+            </div>
+            <div class="header_article-name">
+              <span class="material-icons material-icons_header">
+                import_contacts
+              </span>
+              <span class="header_seccion-text">
+                {{ article.journaltitle }}
+              </span>
+            </div>
+          </div>
+          <div class="subheader_comments">
+            <button class="comments_button">
+              <img
+                src="https://trello-attachments.s3.amazonaws.com/5f7afb80257ef0330839c5e5/5fbbe269bf626164301b66ab/4fbd1b45b142bee5c4f6905ddc25cb3b/Union.svg"
+                alt="comments_img"
+              />
+            </button>
+            <span class="comments_number"> {{article.ncite}} </span>
+          </div>
+        </div>
+        <hr class="hr_style" />
+    </div>
+  </main>
+  </div>
+</div>

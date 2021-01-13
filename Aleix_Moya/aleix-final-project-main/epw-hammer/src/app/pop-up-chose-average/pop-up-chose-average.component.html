@@ -1,0 +1,24 @@
+<h1>Faction's Average</h1>
+<h2>Choose Faction</h2>
+<main>
+    <p>
+        <select [(ngModel)]="factions" (change) = "setDropDownValue()">
+          <option [value]="item" *ngFor="let item of factionList" [ngValue]="item">{{item}}</option>
+        </select>
+      </p>
+
+  <h3>Average Faction shows: </h3>
+    <ul>
+      <li>Average wounds dealt of a single gun</li>
+      <li>Average models killed of a single gun</li>
+      <li>Average wounds dealt by faction standards</li>
+      <li>Average models killed by faction standards</li>
+      <li>Weapons' abilities are not considered for averages yet</li>
+    </ul>
+</main>
+<footer id="dialog-footer">
+    <div id="footer-row1">
+      <button mat-raised-button id="dialog-action-button" (click)="actionFunction()"><a [routerLink]="'/averageChoose'">Confirm</a></button>
+      <button mat-raised-button id="dialog-cancel-button" (click)="closeModal()">Go Back</button>
+    </div>
+</footer>

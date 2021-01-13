@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e9e5df;
+  font-family: 'Castoro', serif;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
+  color: '#0077CC',
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.tags__all{
+  padding: 10px;
+  box-sizing: border-box;
+  color: #0077CC;
+  box-shadow: 0 0px 3px 1px #0077CC;
+} 

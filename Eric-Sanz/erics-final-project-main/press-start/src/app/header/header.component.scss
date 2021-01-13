@@ -1,0 +1,157 @@
+* {font-family: Verdana, Geneva, Tahoma, sans-serif;}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: #161616;
+    color: #ffffff;
+    padding-right: 50px;
+    z-index: 30;
+    .header-container {
+        height: inherit;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .logo-press-start {
+            cursor: pointer;
+            outline: none;
+            padding-top: 5px;
+            width: 115px;
+            height: 70px;
+            margin-left: 20px;
+        }
+        fa-icon {
+            outline: none;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        fa-icon:hover, .calendar-icon:hover, .search-icon:hover, .sidenav-open:hover, .sidenav-close:hover, .signin-icon:hover, .news-articles-icon:hover, .shopping-cart-icon:hover, .logged-in:hover {
+            color:#f0da14;
+        }
+        .header__left {
+            display: flex;
+            align-items: center;
+            .calendar-icon {
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                margin-top: 15px;
+                fa-icon {
+                    margin-bottom: 3px;
+                }
+                p {
+                    margin-left: -15px;
+                    margin-top: 5px;
+                }
+            }
+            .search-icon {
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                margin-top: 15px;
+                fa-icon {
+                    margin-left: 5px;
+                    margin-bottom: 3px;
+                }
+                p {
+                    margin-top: 5px;
+                }
+            }
+            .sidenav-open {
+                cursor: pointer;
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+                fa-icon {
+                    margin-bottom: 2px;
+                    margin-left: 7px;
+                }
+                p {
+                    margin-top: 5px;
+                }
+            }
+            .sidenav-close {
+                cursor: pointer;
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+                margin-right: 20px;
+                fa-icon {
+                    margin-bottom: 2px;
+                    margin-left: 7px;
+                }
+                p {
+                    margin-top: 5px;
+                    margin-left: -15px;
+                }
+            }
+            fa-icon {
+                margin-right: 50px;
+            }
+        }
+        .header__right {
+            display: flex;
+            align-items: center;
+            .signin-icon {
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                margin-top: 15px;
+                margin-right: 15px;
+                fa-icon {
+                    margin-left: 12px;
+                    margin-bottom: 3px;
+                }
+                p {
+                    margin-top: 5px;
+                }
+            }
+            .logged-in {
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-right: 10px;
+                .out-icon {
+                    margin-top: 16px;
+                    margin-bottom: 8px;
+                }
+                .sign-out {
+                    margin-left: 40px;
+                }
+            }
+            .news-articles-icon {
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                margin-top: 15px;
+                fa-icon {
+                    margin-left: 15px;
+                    margin-bottom: 3px;
+                }
+                p {
+                    margin-left: 12px;
+                    margin-top: 5px;
+                }
+            }
+            .shopping-cart-icon {
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                margin-top: 15px;
+                fa-icon {
+                    margin-left: 27px;
+                    margin-bottom: 3px;
+                }
+                p {
+                    margin-left: 30px;
+                    margin-top: 5px;
+                }
+            }
+            fa-icon {
+                margin-left: 50px;
+            }
+        }
+    }
+}

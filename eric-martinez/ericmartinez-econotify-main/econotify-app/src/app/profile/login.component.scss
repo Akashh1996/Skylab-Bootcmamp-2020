@@ -1,0 +1,141 @@
+@media screen and (max-width: 420px){
+
+  main{
+    padding: 0 !important;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .login_component-conatiner{
+    background: linear-gradient(180deg, #FFFFFF 34.01%, #DADFE1 100%);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+  }
+
+  .profile_user-container{
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1{
+    color: #151B35;
+    margin-top: 8%;
+    font-size: 20px;
+  }
+
+  .profile_img{
+    height: 50%;
+    border-radius: 50%;
+  }
+
+  .button_signOut-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+    margin-top: 4%;
+  }
+
+  .signOut_button{
+    background: none;
+    border: none;
+  }
+
+  .logOut_icon{
+    font-size: 36px !important;
+  }
+
+  .nav_profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .nav_profile-component{
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+  }
+
+  .nav_profile-component-selected{
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px
+  }
+
+}
+
+@media screen and (min-width: 420px){
+
+  main{
+    padding: 0 !important;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .login_component-conatiner{
+    background: linear-gradient(180deg, #FFFFFF 34.01%, #DADFE1 100%);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+  }
+
+  .profile_user-container{
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1{
+    color: #151B35;
+    margin-top: 4%;
+    font-size: 20px;
+  }
+
+  .profile_img{
+    height: 50%;
+    border-radius: 50%;
+  }
+
+  .button_signOut-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+    margin-top: 4%;
+  }
+
+  .signOut_button{
+    background: none;
+    border: none;
+  }
+
+  .logOut_icon{
+    font-size: 36px !important;
+  }
+
+  .nav_profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .nav_profile-component-authors{
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+  }
+
+  .nav_profile-component-papers{
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+  }
+
+  .nav_profile-component-selected{
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px
+  }
+
+}
+

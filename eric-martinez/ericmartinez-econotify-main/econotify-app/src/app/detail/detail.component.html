@@ -1,0 +1,103 @@
+<div class="button_back-component">
+    <button type="button" class="button_back" (click)="goBack()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="25" viewBox="0 0 21 33" fill="none">
+            <path d="M20.1768 28.8603L16.3457 32.6914L5.6506e-05 16.3457L16.3457 -1.67459e-07L20.1768 3.83102L7.66209 16.3457L20.1768 28.8603Z" fill="#151B35"/>
+        </svg>
+    </button>
+</div>
+<body *ngIf="article">
+  <div *ngIf='article? ifSaveArticle(article.id): false'></div>
+    <div class="article_title">
+        <span class="span_year">{{article.issuedate}}</span>
+        <div class="article_title-button">
+            <h1 class="article_title-text">{{article.title}}</h1>
+            <div class="button_desktop-viewArticle">
+                <a href={{article.links[0].url}}>
+                    <button type="button" class="button_openView">
+                        <span class="button_openView-text">View Full Paper</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr class="hr_dashed"/>
+    <div class="header_seccion">
+        <div class="header_left-seccion">
+            <div class="header_author-name">
+                <span class="material-icons material-icons_header">
+                    group
+                </span>
+                <span *ngFor="let author of article.authors; last as isLast" class="header_seccion-text">
+                  <a href="/{{author.name}}/{{author.uid}}">
+                    {{author.name}}
+                  </a>
+                    <span *ngIf="!isLast">and</span>
+                </span>
+            </div>
+            <div class="header_article-name">
+                <span class="material-icons material-icons_header">
+                    import_contacts
+                </span>
+                <span class="header_seccion-text">
+                    {{article.journaltitle}}
+                </span>
+            </div>
+        </div>
+        <div class="header_comments">
+            <button class="comments_button">
+                <img src="https://trello-attachments.s3.amazonaws.com/5f7afb80257ef0330839c5e5/5fbbe269bf626164301b66ab/4fbd1b45b142bee5c4f6905ddc25cb3b/Union.svg" alt="comments_img">
+            </button>
+            <span class="comments_number">
+                {{article.ncite}}
+            </span>
+        </div>
+    </div>
+    <hr class="hr_style"/>
+    <main>
+        <div class="main_header">
+            <h2 class="main_title">Abstract</h2>
+            <a href={{article.links[0].url}} class="article_link-anchore">
+                <button class="main_header-button">
+                    <span class="material-icons icon_viewPaper">
+                        open_in_new
+                    </span>
+                    <div class="button_main-text">
+                        <span>View</span>
+                        <span>Paper</span>
+                    </div>
+                </button>
+            </a>
+            <div class="button_main-desktop">
+                <div class="icon_save-desktop">
+                  <div *ngIf="isSave; else elseBlock">
+                    <button class="icon_button-desktop" (click)="readArticle(article.id)">
+                      <span class="material-icons material_icon-button-desktop saveButton">
+                        bookmark
+                      </span>
+                    </button>
+                  </div>
+                  <ng-template #elseBlock>
+                    <button class="icon_button-desktop" (click)="readArticle(article.id)">
+                      <span class="material-icons material_icon-button-desktop">
+                        bookmark_border
+                      </span>
+                    </button>
+                  </ng-template>
+                </div>
+                <div class="icon_share-desktop">
+                    <button class="icon_button-desktop">
+                        <span class="material-icons material_icon-button-desktop">
+                            share
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="main_article">
+            <p class="article_text">
+                {{article.abstract}}
+            </p>
+        </div>
+        <hr class="hr_style"/>
+    </main>
+</body>

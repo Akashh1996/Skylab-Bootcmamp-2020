@@ -1,0 +1,135 @@
+footer {
+    border-top: 1px solid #ccc;
+    bottom: 0;
+    height: 300px;
+    z-index: 1;
+    background: #161616;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .footer-firstrow {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 1100px;
+        height: 90px;
+        padding-bottom: 20px;
+        border-bottom: 3px solid white;
+        .footer__payment-methods {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p {
+                color: white;
+            }
+            .payment-methods {
+                fa-icon {
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    color: #f0da14;
+                    font-size: 30px;
+                }   
+            }
+        }
+        .footer__media {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p {
+                color: white;
+            }
+            .social-media {
+                fa-icon {
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    color: #f0da14;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    .footer__contacts {
+        width: 1100px;
+        height: 140px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer__newsletter {
+        display: flex;
+        flex-direction: column;
+        padding-left: 50px;
+        padding-top: 20px;
+        height: 80px;
+        .newsletter__title {
+            color: #f0da14;
+            margin-top: -5px;
+            display: flex;
+            align-items: center;
+            mat-icon {
+                margin-left: -8px;
+                margin-bottom: 11px;
+            }
+            p {
+                font-weight: 600;
+            }
+        }
+        .newsletter__subscribe {
+            input {
+                outline: none;
+                height: 25px;
+                width: 190px;
+            }
+            button {
+                height: 30px;
+                width: 60px;
+                outline: none;
+                border: none;
+                background-color: #f0da14;
+                color: #161616;
+                font-weight: 600;
+                border-radius: 2px;
+                cursor: pointer;
+            }
+            button:active {
+                color: white;
+            }
+        }
+    }
+    .footer__delivery {
+        display: flex;
+        align-items: center;
+        .delivery {
+            padding-top: 5px;
+            margin-right: 10px;
+            p {
+                color: white;
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+            a {
+                text-decoration: none;
+                color: #f0da14;
+            }
+        }
+        fa-icon {
+            font-size: 60px;
+            color: white;
+        }
+    }
+
+    .footer__questions {
+        padding-right: 50px;
+        color: white;
+        .questions-links {
+            display: flex;
+            a {
+                text-decoration: none;
+                color: #f0da14;
+                margin-right: 20px;
+            }
+        }
+    }
+}

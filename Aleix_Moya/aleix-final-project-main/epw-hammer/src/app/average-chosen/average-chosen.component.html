@@ -1,0 +1,323 @@
+<main>
+  <h2 id="title">Average Chosen EPWHammer</h2>
+  <table id="allweaponTable">
+    <tr>
+      <th id="gun name">Name</th>
+    </tr>
+    <tr *ngFor="let gun of gunList" (click)="onSelect(gun)">
+      <td>{{gun.name}}</td>
+    </tr>
+  </table>
+  <div id="precisions">
+    <div id="precision">
+      <p id='precisionName'>BS</p>
+      <label >
+        <select [(ngModel)]="actualPrecisions[0]">
+          <option [value]="item" *ngFor="let item of possibleBWS" [ngValue]="item">{{item}}</option>
+        </select>
+      </label>
+    </div>
+    <div id="precision">
+      <p id='precisionName'>WS</p>
+      <label>
+        <select [(ngModel)]="actualPrecisions[1]">
+          <option [value]="item" *ngFor="let item of possibleBWS" [ngValue]="item">{{item}}</option>
+        </select>
+      </label>
+    </div>
+    <div id="precision">
+      <p id='precisionName' style="padding-top: 2px;">Unit Size</p>
+      <label>
+        <input id='attribute' type="text" [(ngModel)]='numberOfModels'/>
+      </label>
+    </div>
+  </div>
+  <div class="verticalCenteredList" *ngIf="Melee">
+    <div id="attributes">
+      <p id='attributeName'>Strength</p>
+      <label style="margin-top: 8%;">
+        <select (change)="saveMelee()" [(ngModel)]="actualStrength">
+          <option [value]="item" *ngFor="let item of possibleAoS" [ngValue]="item">{{item}}</option>
+        </select>
+      </label>
+    </div>
+    <div id="attributes">
+      <p id='attributeName'>Attacks</p>
+      <label style="margin-top: 8%;">
+        <select (change)="saveMelee()" [(ngModel)]="actualAttacks">
+          <option [value]="item" *ngFor="let item of possibleAoS" [ngValue]="item">{{item}}</option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="verticalCenteredList"  *ngIf="Ranged">
+    <div id="attributes">
+      <p id='attributeName'>Guns per Model</p>
+      <label>
+        <input id='attribute' type="text" [(ngModel)]='gunsPerfModels'/>
+      </label>
+    </div>
+    <div class="button_cont" style="margin-top:3%" (click)="saveRange()"><span class="smallButton"><span>Confirm</span></span></div>
+  </div>
+<table id="selctedweaponTable">
+  <caption style="display: none;">selected weapon table</caption>
+  <tr>
+    <th id=" selected gun name">Name</th>
+    <th id=" selected gun range">Range (inches)</th>
+    <th id=" selected gun Type">Type</th>
+    <th id=" selected gun Strength">Strength</th>
+    <th id=" selected gun Ap">AP</th>
+    <th id=" selected gun Damage">Damage</th>
+    <th id=" selected gun Ability">Ability</th>
+  </tr>
+  <tr>
+    <td><span>{{name}}</span></td>
+    <td><span>{{range}}</span></td>
+    <td><span>{{type}} {{nos}}</span></td>
+    <td><span>{{strength}}</span></td>
+    <td><span>{{armourPenetration}}</span></td>
+    <td><span>{{damage}}</span></td>
+    <td><span>{{ability}}</span></td>
+  </tr>
+  <tr>
+    <td><span>{{overcharged}}</span></td>
+    <td></td>
+    <td></td>
+    <td><span>{{overchargedStrength}}</span></td>
+    <td><span>{{overchargedAP}}</span></td>
+    <td><span>{{overchargedD}}</span></td>
+    <td><span>{{overchargedAbility}}</span></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><span>{{gunProfile(0)}}</span></td>
+    <td><span>{{gunProfileRange(0)}}</span></td>
+    <td><span>{{gunProfileType(0)}}{{gunProfileNoS(0)}}</span></td>
+    <td><span>{{gunProfileStrength(0)}}</span></td>
+    <td><span>{{gunProfileAp(0)}}</span></td>
+    <td><span>{{gunProfileDamage(0)}}</span></td>
+    <td><span>{{gunProfileAbility(0)}}</span></td>
+  </tr>
+  <tr>
+    <td><span>{{gunProfile(1)}}</span></td>
+    <td><span>{{gunProfileRange(1)}}</span></td>
+    <td><span>{{gunProfileType(1)}}{{gunProfileNoS(1)}}</span></td>
+    <td><span>{{gunProfileStrength(1)}}</span></td>
+    <td><span>{{gunProfileAp(1)}}</span></td>
+    <td><span>{{gunProfileDamage(1)}}</span></td>
+    <td><span>{{gunProfileAbility(1)}}</span></td>
+  </tr>
+  <tr>
+    <td><span>{{gunProfile(2)}}</span></td>
+    <td><span>{{gunProfileRange(2)}}</span></td>
+    <td><span>{{gunProfileType(2)}}{{gunProfileNoS(2)}}</span></td>
+    <td><span>{{gunProfileStrength(2)}}</span></td>
+    <td><span>{{gunProfileAp(2)}}</span></td>
+    <td><span>{{gunProfileDamage(2)}}</span></td>
+    <td><span>{{gunProfileAbility(2)}}</span></td>
+  </tr>
+  <tr>
+    <td><span>{{gunProfile(3)}}</span></td>
+    <td><span>{{gunProfileRange(3)}}</span></td>
+    <td><span>{{gunProfileType(3)}}{{gunProfileNoS(3)}}</span></td>
+    <td><span>{{gunProfileStrength(3)}}</span></td>
+    <td><span>{{gunProfileAp(3)}}</span></td>
+    <td><span>{{gunProfileDamage(3)}}</span></td>
+    <td><span>{{gunProfileAbility(3)}}</span></td>
+  </tr>
+  <tr>
+    <td><span>{{getMeltaGunProfile(0)}}</span></td>
+    <td><span>{{getMeltaGunRange(0)}}</span></td>
+    <td><span>{{getMeltaGunType(0)}}{{getMeltaGunNoS(0)}}</span></td>
+    <td><span>{{getMeltaGunS(0)}}</span></td>
+    <td><span>{{getMeltaGunAp(0)}}</span></td>
+    <td><span>{{getMeltaGunD(0)}}</span></td>
+  </tr>
+  <tr>
+    <td><span>{{getMeltaGunProfile(1)}}</span></td>
+    <td><span>{{getMeltaGunRange(1)}}</span></td>
+    <td><span>{{getMeltaGunType(1)}}{{getMeltaGunNoS(1)}}</span></td>
+    <td><span>{{getMeltaGunS(1)}}</span></td>
+    <td><span>{{getMeltaGunAp(1)}}</span></td>
+    <td><span>{{getMeltaGunD(1)}}</span></td>
+  </tr>
+</table>
+<table id="selctedweaponTable">
+  <caption style="display: none;">selected weapon table of equivalents</caption>
+  <tr>
+    <th id="empty"></th>
+    <th id="Meq">MEQ</th>
+    <th id="Teq">TEQ</th>
+    <th id="Geq">GEQ</th>
+    <th id="Veq">VEQ</th>
+    <th id="Keq">KEQ</th>
+  </tr>
+  <tr>
+    <td id="rowTitle">Wounds done</td>
+    <td><span>{{calculateBasicWounds(marineEquivalent)}}</span></td>
+    <td><span>{{calculateBasicWounds(terminatorEquivalent)}}</span></td>
+    <td><span>{{calculateBasicWounds(guardsmanEquivalent)}}</span></td>
+    <td><span>{{calculateBasicWounds(vehicleEquivalent)}}</span></td>
+    <td><span>{{calculateBasicWounds(knightEquivalent)}}</span></td>
+  </tr>
+  <tr>
+    <td id="rowTitle"><span>{{this.selectedGun.Overcharged ? 'Overcharged': ''}}</span></td>
+    <td><span>{{calculateOverchargedWounds(marineEquivalent)}}</span></td>
+    <td><span>{{calculateOverchargedWounds(terminatorEquivalent)}}</span></td>
+    <td><span>{{calculateOverchargedWounds(guardsmanEquivalent)}}</span></td>
+    <td><span>{{calculateOverchargedWounds(vehicleEquivalent)}}</span></td>
+    <td><span>{{calculateOverchargedWounds(knightEquivalent)}}</span></td>
+  </tr>
+  <tr>
+    <td id="rowTitle"><span>{{gunProfile(0) ? gunProfile(0): ''}}</span></td>
+    <td><span>{{calculateProfileWounds(marineEquivalent, 0)}}</span></td>
+    <td><span>{{calculateProfileWounds(terminatorEquivalent, 0)}}</span></td>
+    <td><span>{{calculateProfileWounds(guardsmanEquivalent, 0)}}</span></td>
+    <td><span>{{calculateProfileWounds(vehicleEquivalent, 0)}}</span></td>
+    <td><span>{{calculateProfileWounds(knightEquivalent, 0)}}</span></td>
+  </tr>
+  <tr>
+    <td id="rowTitle"><span>{{gunProfile(1) ? gunProfile(1): ''}}</span></td>
+    <td><span>{{calculateProfileWounds(marineEquivalent, 1)}}</span></td>
+    <td><span>{{calculateProfileWounds(terminatorEquivalent, 1)}}</span></td>
+    <td><span>{{calculateProfileWounds(guardsmanEquivalent, 1)}}</span></td>
+    <td><span>{{calculateProfileWounds(vehicleEquivalent, 1)}}</span></td>
+    <td><span>{{calculateProfileWounds(knightEquivalent, 1)}}</span></td>
+  </tr>
+  <tr>
+    <td id="rowTitle"><span>{{gunProfile(2) ? gunProfile(2): ''}}</span></td>
+    <td><span>{{calculateProfileWounds(marineEquivalent, 2)}}</span></td>
+    <td><span>{{calculateProfileWounds(terminatorEquivalent, 2)}}</span></td>
+    <td><span>{{calculateProfileWounds(guardsmanEquivalent, 2)}}</span></td>
+    <td><span>{{calculateProfileWounds(vehicleEquivalent, 2)}}</span></td>
+    <td><span>{{calculateProfileWounds(knightEquivalent, 2)}}</span></td>
+  </tr>
+  <tr>
+    <td id="rowTitle"><span>{{gunProfile(3) ? gunProfile(3): ''}}</span></td>
+    <td><span>{{calculateProfileWounds(marineEquivalent, 3)}}</span></td>
+    <td><span>{{calculateProfileWounds(terminatorEquivalent, 3)}}</span></td>
+    <td><span>{{calculateProfileWounds(guardsmanEquivalent, 3)}}</span></td>
+    <td><span>{{calculateProfileWounds(vehicleEquivalent, 3)}}</span></td>
+    <td><span>{{calculateProfileWounds(knightEquivalent, 3)}}</span></td>
+  </tr>
+  <tr>
+    <td id="rowTitle"><span>{{getMeltaGunProfile(0) ? getMeltaGunProfile(0): ''}}</span></td>
+    <td><span>{{calculateMeltaWounds(marineEquivalent, 0)}}</span></td>
+    <td><span>{{calculateMeltaWounds(terminatorEquivalent, 0)}}</span></td>
+    <td><span>{{calculateMeltaWounds(guardsmanEquivalent, 0)}}</span></td>
+    <td><span>{{calculateMeltaWounds(vehicleEquivalent, 0)}}</span></td>
+    <td><span>{{calculateMeltaWounds(knightEquivalent, 0)}}</span></td>
+  </tr>
+  <tr>
+    <td id="rowTitle"><span>{{getMeltaGunProfile(1) ? getMeltaGunProfile(1) : ''}}</span></td>
+    <td><span>{{calculateMeltaWounds(marineEquivalent, 1)}}</span></td>
+    <td><span>{{calculateMeltaWounds(terminatorEquivalent, 1)}}</span></td>
+    <td><span>{{calculateMeltaWounds(guardsmanEquivalent, 1)}}</span></td>
+    <td><span>{{calculateMeltaWounds(vehicleEquivalent, 1)}}</span></td>
+    <td><span>{{calculateMeltaWounds(knightEquivalent, 1)}}</span></td>
+  </tr>
+  <tr>
+    <td id="rowTitle">Models killed</td>
+    <td><span>{{calculateBasicDead(marineEquivalent)}}</span></td>
+    <td><span>{{calculateBasicDead(terminatorEquivalent)}}</span></td>
+    <td><span>{{calculateBasicDead(guardsmanEquivalent)}}</span></td>
+    <td><span>{{calculateBasicDead(vehicleEquivalent)}}</span></td>
+    <td><span>{{calculateBasicDead(knightEquivalent)}}</span></td>
+  </tr>
+  <tr>
+    <td id="rowTitle"><span>{{this.selectedGun.Overcharged ? 'Overcharged': ''}}</span></td>
+    <td><span>{{calculateOverchargedDead(marineEquivalent)}}</span></td>
+    <td><span>{{calculateOverchargedDead(terminatorEquivalent)}}</span></td>
+    <td><span>{{calculateOverchargedDead(guardsmanEquivalent)}}</span></td>
+    <td><span>{{calculateOverchargedDead(vehicleEquivalent)}}</span></td>
+    <td><span>{{calculateOverchargedDead(knightEquivalent)}}</span></td>
+  </tr>
+  <tr>
+    <td id="rowTitle"><span>{{gunProfile(0) ? gunProfile(0): ''}}</span></td>
+    <td><span>{{calculateProfileDead(marineEquivalent, 0)}}</span></td>
+    <td><span>{{calculateProfileDead(terminatorEquivalent, 0)}}</span></td>
+    <td><span>{{calculateProfileDead(guardsmanEquivalent, 0)}}</span></td>
+    <td><span>{{calculateProfileDead(vehicleEquivalent, 0)}}</span></td>
+    <td><span>{{calculateProfileDead(knightEquivalent, 0)}}</span></td>
+  </tr>
+  <tr>
+    <td id="rowTitle"><span>{{gunProfile(1) ? gunProfile(1): ''}}</span></td>
+    <td><span>{{calculateProfileDead(marineEquivalent, 1)}}</span></td>
+    <td><span>{{calculateProfileDead(terminatorEquivalent, 1)}}</span></td>
+    <td><span>{{calculateProfileDead(guardsmanEquivalent, 1)}}</span></td>
+    <td><span>{{calculateProfileDead(vehicleEquivalent, 1)}}</span></td>
+    <td><span>{{calculateProfileDead(knightEquivalent, 1)}}</span></td>
+  </tr>
+  <tr>
+    <td id="rowTitle"><span>{{gunProfile(2) ? gunProfile(2): ''}}</span></td>
+    <td><span>{{calculateProfileDead(marineEquivalent, 2)}}</span></td>
+    <td><span>{{calculateProfileDead(terminatorEquivalent, 2)}}</span></td>
+    <td><span>{{calculateProfileDead(guardsmanEquivalent, 2)}}</span></td>
+    <td><span>{{calculateProfileDead(vehicleEquivalent, 2)}}</span></td>
+    <td><span>{{calculateProfileDead(knightEquivalent, 2)}}</span></td>
+  </tr>
+  <tr>
+    <td id="rowTitle"><span>{{gunProfile(3) ? gunProfile(3): ''}}</span></td>
+    <td><span>{{calculateProfileDead(marineEquivalent, 3)}}</span></td>
+    <td><span>{{calculateProfileDead(terminatorEquivalent, 3)}}</span></td>
+    <td><span>{{calculateProfileDead(guardsmanEquivalent, 3)}}</span></td>
+    <td><span>{{calculateProfileDead(vehicleEquivalent, 3)}}</span></td>
+    <td><span>{{calculateProfileDead(knightEquivalent, 3)}}</span></td>
+  </tr>
+  <tr>
+    <td id="rowTitle"><span>{{getMeltaGunProfile(0) ? getMeltaGunProfile(0): ''}}</span></td>
+    <td><span>{{calculateMeltaDead(marineEquivalent, 0)}}</span></td>
+    <td><span>{{calculateMeltaDead(terminatorEquivalent, 0)}}</span></td>
+    <td><span>{{calculateMeltaDead(guardsmanEquivalent, 0)}}</span></td>
+    <td><span>{{calculateMeltaDead(vehicleEquivalent, 0)}}</span></td>
+    <td><span>{{calculateMeltaDead(knightEquivalent, 0)}}</span></td>
+  </tr>
+  <tr>
+    <td id="rowTitle"><span>{{getMeltaGunProfile(1) ? getMeltaGunProfile(1) : ''}}</span></td>
+    <td><span>{{calculateMeltaDead(marineEquivalent, 1)}}</span></td>
+    <td><span>{{calculateMeltaDead(terminatorEquivalent, 1)}}</span></td>
+    <td><span>{{calculateMeltaDead(guardsmanEquivalent, 1)}}</span></td>
+    <td><span>{{calculateMeltaDead(vehicleEquivalent, 1)}}</span></td>
+    <td><span>{{calculateMeltaDead(knightEquivalent, 1)}}</span></td>
+  </tr>
+  <tr>
+    <td id="rowTitle">Wounds done (faction Average)</td>
+    <td><span>{{factionAverageAllWounds(marineEquivalent)}}</span></td>
+    <td><span>{{factionAverageAllWounds(terminatorEquivalent)}}</span></td>
+    <td><span>{{factionAverageAllWounds(guardsmanEquivalent)}}</span></td>
+    <td><span>{{factionAverageAllWounds(vehicleEquivalent)}}</span></td>
+    <td><span>{{factionAverageAllWounds(knightEquivalent)}}</span></td>
+  </tr>
+  <tr>
+    <td id="rowTitle">Models Killed (faction Average)</td>
+    <td><span>{{factionAverageModelsKilled(marineEquivalent)}}</span></td>
+    <td><span>{{factionAverageModelsKilled(terminatorEquivalent)}}</span></td>
+    <td><span>{{factionAverageModelsKilled(guardsmanEquivalent)}}</span></td>
+    <td><span>{{factionAverageModelsKilled(vehicleEquivalent)}}</span></td>
+    <td><span>{{factionAverageModelsKilled(knightEquivalent)}}</span></td>
+  </tr>
+</table>
+
+<div id="chart" style="margin-top:3%"></div>
+<div class="button_cont" style="margin-top:3%" (click)="openModal()"><span class="example_f"><span>Add Modifiers</span></span></div>
+<div class="button_cont" ><a class="example_f" href="/home"><span>Back</span></a></div>
+</main>
+<footer id="myFooter">
+  <div id="mainFooter">
+      <div id="footerText">
+          <p>About</p>
+          <p>Contact</p>
+      </div>
+      <div id="footerText">
+          <p>Basic Rules</p>
+          <p>Features</p>
+      </div>
+      <div id="footerText">
+          <p>News</p>
+          <p>Patches</p>
+      </div>
+  </div>
+  <br>
+  <sub>You can go back to home if you click the logo</sub>
+  <p></p>
+  </footer>

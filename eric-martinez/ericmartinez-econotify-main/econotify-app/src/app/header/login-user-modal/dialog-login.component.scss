@@ -1,0 +1,207 @@
+@media screen and (max-width: 420px){
+  .cdk-overlay-pane{
+    width: 80vw;
+    height: 40vh !important;
+  }
+
+  .mat-dialog-container{
+    padding: 0 !important;
+  }
+
+  main{
+    padding: 0!important;
+    height: 100%;
+    width: 100%;
+  }
+
+  .signIn-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .login_title{
+    margin-left: 5px;
+    font-size: 18px;
+    margin-bottom: 0 !important;
+  }
+
+  .logo_content{
+    margin-bottom: 10%;
+  }
+
+  .button_back-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .login_buttons-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon_back-button {
+    height: 42px;
+    border-radius: 0px;
+    margin-top: 5px;
+    margin-right: 10px;
+    border: 0;
+    background: none;
+    outline: none;
+  }
+
+  .login_buttons {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .google-btn {
+    margin-top: 10%;
+    width: 100%;
+    height: 42px;
+    background-color: #4285f4;
+    border-radius: 2px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+    .google-icon-wrapper {
+      position: absolute;
+      margin-top: 1px;
+      margin-left: 1px;
+      width: 40px;
+      height: 40px;
+      border-radius: 2px;
+      background-color: #fff;
+    }
+    .google-icon {
+      position: absolute;
+      margin-top: 11px;
+      margin-left: 11px;
+      width: 18px;
+      height: 18px;
+    }
+    .btn-text {
+      margin: 11px 11px 0 0;
+      justify-content: center;
+      color: #fff;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      font-family: Roboto, sans-serif;
+    }
+    .btn-text-content{
+      margin-left: 73px;
+    }
+    &:hover {
+      box-shadow: 0 0 6px #4285f4;
+    }
+    &:active {
+      background: #1669F2;
+    }
+  }
+}
+
+@media screen and (min-width: 420px){
+  .cdk-overlay-pane{
+    width: 30vw !important;
+    height: 50vh !important;
+  }
+
+  .mat-dialog-container{
+    padding: 0 !important;
+  }
+
+  main{
+    padding: 0!important;
+    height: 100%;
+    width: 100%;
+  }
+
+  .signIn-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .login_title{
+    margin-left: 5px;
+    font-size: 18px;
+    margin-bottom: 0 !important;
+  }
+
+  .logo_content{
+    margin-bottom: 10%;
+  }
+
+  .button_back-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .login_buttons-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon_back-button {
+    height: 42px;
+    border-radius: 0px;
+    margin-top: 5px;
+    margin-right: 10px;
+    border: 0;
+    background: none;
+    outline: none;
+  }
+
+  .login_buttons {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .google-btn {
+    margin-top: 10%;
+    width: 100%;
+    height: 42px;
+    background-color: #4285f4;
+    border-radius: 2px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+    .google-icon-wrapper {
+      position: absolute;
+      margin-top: 1px;
+      margin-left: 1px;
+      width: 40px;
+      height: 40px;
+      border-radius: 2px;
+      background-color: #fff;
+    }
+    .google-icon {
+      position: absolute;
+      margin-top: 11px;
+      margin-left: 11px;
+      width: 18px;
+      height: 18px;
+    }
+    .btn-text {
+      margin: 11px 11px 0 0;
+      justify-content: center;
+      color: #fff;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      font-family: Roboto, sans-serif;
+    }
+    .btn-text-content{
+      margin-left: 73px;
+    }
+    &:hover {
+      box-shadow: 0 0 6px #4285f4;
+    }
+    &:active {
+      background: #1669F2;
+    }
+  }
+}

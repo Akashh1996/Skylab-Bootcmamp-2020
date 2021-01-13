@@ -1,0 +1,87 @@
+html{
+    min-height: 100%;
+    min-width: 100%;
+}
+body{
+    background-image:url('https://c4.wallpaperflare.com/wallpaper/1015/185/153/portrait-display-warhammer-40-000-space-marine-hd-wallpaper-preview.jpg') ;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0px;
+    min-height: 812px;
+    min-width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+h1{
+    margin-bottom:2%;
+    color: #83b5df;
+}
+.subtitle{
+    margin-top: 0;
+    color: #60829e;
+}
+header{
+    background-image: linear-gradient(#272727 50%, #27272713 );
+    min-height: 120px;    
+}
+#headerItems{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-height: 75px;
+    max-width: 100px !important;
+}
+#imageLogo{
+    transform: scale(0.5, 0.5);
+    max-width: 150px;
+    
+}
+#titleText{
+    display: flex;
+    flex-direction: column;
+}
+a{
+    color: black;
+    text-decoration: none;
+    padding: 1%;
+}
+#myFooter {
+    background-image: linear-gradient(#27272713 1%, #272727 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    margin-top: 5%;
+    width: 100%
+}
+#HomeFooter {
+    background-image: linear-gradient(#27272713 1%, #272727 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0px;
+    margin-top: 5%;
+    width: 100%
+  }
+
+#mainFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+}
+#footerText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}

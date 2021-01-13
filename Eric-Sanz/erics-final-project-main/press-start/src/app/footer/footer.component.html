@@ -1,0 +1,45 @@
+<footer>
+    <div class="footer-firstrow">
+        <div class="footer__media">
+            <p>Our Social Media</p>
+            <div class="social-media">
+                <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                <fa-icon [icon]="['fab', 'instagram']"></fa-icon>
+            </div>
+        </div>
+        <div class="footer__payment-methods">
+            <p>Accepted Payment Methods</p>
+            <div class="payment-methods">
+                <fa-icon [icon]="['fab', 'cc-visa']"></fa-icon>
+                <fa-icon [icon]="['fab', 'cc-mastercard']"></fa-icon>
+                <fa-icon [icon]="['fab', 'cc-paypal']"></fa-icon>
+            </div>
+        </div>
+    </div>
+    <div class="footer__contacts">
+        <div class="footer__newsletter">
+            <div class="newsletter__title">
+                <mat-icon>keyboard_arrow_right</mat-icon>
+                <p>Subscribe to our newsletter:</p>
+            </div>
+            <div class="newsletter__subscribe">
+                <input type="text" placeholder="Introduce your email"><button type="button">Send</button>
+            </div>
+        </div>
+        <div class="footer__delivery">
+            <div class="delivery">
+                <p>24H Delivery</p>
+                <a routerLink="information">More information...</a>
+            </div>
+            <fa-icon [icon]="['fas', 'shipping-fast']"></fa-icon>
+        </div>
+        <div class="footer__questions">
+            <p>Customer Services:</p>
+            <div class="questions-links">
+                <a routerLink="information">FAQ'S</a>
+                <a routerLink="information">Returns and refunds</a>
+            </div>
+        </div>
+    </div>
+</footer>

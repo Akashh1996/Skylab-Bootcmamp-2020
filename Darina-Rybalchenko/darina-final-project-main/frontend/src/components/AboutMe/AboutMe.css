@@ -1,0 +1,58 @@
+.about-me-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100vw;
+    margin: 20px auto auto auto;
+    background-color: #edebe5;
+}
+
+.about-me__image-container {
+    width: 90%;
+    margin: auto;
+}
+
+.about-me-image {
+    width: 100%;
+}
+
+.about-me-text-container {
+    width: 90%;
+    margin: auto;
+  
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #41555a;
+}
+
+.about-me-text {
+    font-family: 'Lato', sans-serif;
+    color: #41555a;
+}
+
+@media screen and (min-width: 800px) {
+    .about-me-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 10px auto auto auto;
+    }
+    .about-me__image-container {
+        width: 45%;
+        padding: 10px;
+    }
+    
+    .about-me-image {
+        width: 90%;
+    }
+    
+    .about-me-text-container {
+        width: 40%;
+        margin-left: 30px;
+    }
+    
+  
+}

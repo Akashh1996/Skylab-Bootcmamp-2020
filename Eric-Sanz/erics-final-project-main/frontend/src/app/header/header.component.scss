@@ -1,0 +1,40 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: #161616;
+    color: #ffffff;
+    padding-right: 50px;
+    .header-container {
+        height: inherit;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        img {
+            cursor: pointer;
+            outline: none;
+            padding-top: 5px;
+            width: 115px;
+            height: 70px;
+        }
+        mat-icon {
+            outline: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        mat-icon:hover {
+            color:#f0da14;
+        }
+        .header__left {
+            mat-icon {
+                margin-right: 60px;
+            }
+        }
+        .header__right {
+            mat-icon {
+                margin-left: 60px;
+            }
+        }
+    }
+}

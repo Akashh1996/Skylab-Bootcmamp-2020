@@ -1,0 +1,214 @@
+main {
+  margin-top: 3%;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.button_cont{
+    margin-bottom: 3%;
+}
+#title{
+  color: #c1e4ff
+}
+.example_f {
+  --button-bg: linear-gradient(to right, #5e9dce, #83b5df);
+  display: inline-block;
+  border-radius: 4px;
+  background: var(--button-bg) !important;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.example_f span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+}
+.example_f span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.example_f:hover span {
+  padding-right: 25px;
+}
+.example_f:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.smallButton {
+  --button-bg: linear-gradient(to right, #5e9dce, #83b5df);
+  display: inline-block;
+  border-radius: 4px;
+  background: var(--button-bg) !important;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: 12px;
+  width: 90px;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.smallButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+}
+.smallButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.smallButton:hover span {
+  padding-right: 25px;
+}
+.smallButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+table{
+  border-radius: 5px;
+  background-color: #f7f7f7d2;
+  color: black;
+  empty-cells: hide;
+}
+#chart{
+  border-radius: 5px;
+  background-color: #f7f7f7d2;
+}
+#allweaponTable{
+  overflow-y:scroll;
+  height:200px;
+  display:block;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5%;
+}
+th{
+  text-align: center;
+}
+#allweaponTable td, #allweaponTable th {
+  border: 1px solid #ddd;
+  width: 19em;
+  padding: 8px;
+}
+
+#allweaponTable tr:nth-child(even){background-color: #83b6df94;}
+
+#allweaponTable tr:hover {background-color: #83b5df;}
+
+#allweaponTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #5e9dce;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+.verticalCenteredList{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#Melee{
+  display: none;
+}
+
+#Ranged{
+  display: none;
+}
+
+#attributes{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 5px;
+  align-items: center;
+  padding: 5px;
+  padding-top: 7px;
+  background-color: #f7f7f7d2;
+  color: black;
+}
+#attributeName{
+  margin-bottom: 0px;
+}
+#attribute{
+  border-radius: 4px;
+  border: 1px solid black;
+  margin-left:4px;
+  max-height: 30px;
+  max-width: 25px;
+}
+#selctedweaponTable{
+  overflow-x:scroll;
+  width:95%;
+  display:block;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+}
+
+#selctedweaponTable td: {
+  margin-left: 5px;
+}
+
+#rowTitle{
+  text-align: center;
+}
+
+#precisions{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #f7f7f7d2;
+  color: black;
+}
+#precision{
+  padding: 5px;
+  margin-top: 12px;
+  margin-bottom: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+#precisionName{
+  margin-bottom: 0px;
+}
+select{
+  margin-left: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+}

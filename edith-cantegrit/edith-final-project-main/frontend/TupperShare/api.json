@@ -1,0 +1,98 @@
+[
+    {
+      "name_dish": "Mac and Cheese",
+      "cooker": {
+          "_id":"5fc8babbde5c06ab1eb4f859",
+          "user_name":"Edith Cantegrit",
+          "avatar_url":"https://avatars2.githubusercontent.com/u/65400483?v=4",
+          "user_description":"yo yo yo yo yo yo soy soy soy soy una persona persona persona",
+          "user_email":"edith.cantegrit@gmail.com",
+          "user_address":"carrer Gine i Partagas",
+          "type":["cooker","customer"],
+          "delivery_places":[
+              {"id":1,"name":"Skylab Coders Academy"},
+            {"id":2,"name":"Universidad Pompeu Fabra"},
+            {"id":3,"name":"carrer Gine i Partagas"}],
+            "favourite_cookers":[],
+            "store_recipes":[],
+            "weekmenu_tuppers":[]
+        },
+      "specifications": ["vegetarian", "spicy"],
+      "tuppers_total": 5,
+      "tuppers_bought": 4,
+      "price_dish": "3 €",
+      "delivery_time": "Monday at 14:00",
+      "delivery_place": ["Skylab Coders Academy"],
+      "ingredients": ["pasta", "cream", "cheese", "butter", "onions", "pepper"],
+      "description_dish": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "reviews": [],
+      "buyers": [{
+        "user_name":"Michael Anyway",
+        "avatar_url":"https://avatars2.githubusercontent.com/u/65400483?v=4",
+        "user_description":"soy Michael Michael Anyway tu tut tut tu canto bien y como bien",
+        "user_email":"miachael.anyway@gmail.com",
+        "user_address":"carrer de la Republica",
+        "type":["customer"],
+        "delivery_places":[
+            {"id":1,"name":"Air France Industries"},
+            {"id":2,"name":"Universidad de la Rioja"},
+            {"id":3,"name":"carrer de la Republica"}
+        ],
+        "favourite_cookers":[],
+        "store_recipes":[],
+        "weekmenu_tuppers":[]
+        }
+        ]
+          
+    }
+]
+
+
+{
+    "user_name":"Amy Farha",
+    "avatar_url":"https://juicinghouse.com/wp-content/uploads/2020/05/XzAzMTU1ODQuanBn.jpg",
+    "user_description":"soy Amy y me gusta muucho cocinar para todo el mundo, toda la familia, a ti, a tu primo y a la gente en la calle tambien",
+    "user_email":"amy.farha@gmail.com",
+    "user_address":"carrer Bon Pastor",
+    "type":["customer"],
+    "delivery_places":[
+        {"id":1,"name":"AXA Seguros"},
+        {"id":2,"name":"carrer Bon Pastor"}
+    ],
+    "favourite_cookers":[],
+    "store_recipes":[],
+    "weekmenu_tuppers":[]
+},
+{
+    "user_name":"Michael Anyway",
+    "avatar_url":"https://avatars2.githubusercontent.com/u/65400483?v=4",
+    "user_description":"soy Michael Michael Anyway tu tut tut tu canto bien y como bien",
+    "user_email":"miachael.anyway@gmail.com",
+    "user_address":"carrer de la Republica",
+    "type":["customer"],
+    "delivery_places":[
+        {"id":1,"name":"Air France Industries"},
+        {"id":2,"name":"Universidad de la Rioja"},
+        {"id":3,"name":"carrer de la Republica"}
+    ],
+    "favourite_cookers":[],
+    "store_recipes":[],
+    "weekmenu_tuppers":[]
+    }
+    ]
+      
+}
+
+[
+    {
+    "reviews": [{
+        "author": "Enrique Comeplatos",
+        "content": "I was amazed by the taste of this macaronnis" ,
+        "stars": 5     
+      }, 
+      {"author": "Ingrid Butter",
+        "content": "Really good, I gave it to my grandmother and she loved it also" ,
+        "stars": 4  
+    }]
+    }
+]

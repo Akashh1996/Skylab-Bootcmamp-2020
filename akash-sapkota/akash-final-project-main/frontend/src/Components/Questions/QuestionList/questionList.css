@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.question-article {
+    display: flex;
+    margin-top:10px ;
+    background-color: white;
+    box-shadow: 0 3px 9px #c9cccd;
+    padding: 20px;
+    margin-bottom: 10px;
+
+
+
+}
+
+.question-article__content{
+    width: 100%;
+}
+
+.tags{
+    font-family: Roboto, sans-serif;
+    padding: 7px;
+    box-sizing: border-box;
+    width: 100%;
+    color: #0077CC;
+    box-shadow: 0 0px 3px 1px #0077CC;
+  
+  } 
+
+.tags:hover{
+    background-color: #2D6FF7;
+    color: white;
+    box-shadow: 0 0px 1px 1px #0077CC;
+
+  } 
+.content-footer__left{
+    display: flex;
+    background-color: #F5F5F5;
+    align-items: center;
+    padding: 7px 0;
+    justify-content: flex-start;
+    color: grey;
+
+
+
+}
+.icon-wrapper{
+    display: flex;
+    cursor: pointer;
+    margin-left: 10px;
+
+
+}
+.icon-wrapper span{
+    margin-left: 10px;
+
+
+}
+.content-footer{
+    padding-top: 5px;
+}
+
+.question__description p{
+    display: -webkit-box;
+    max-width: 100%;
+    margin: 0 auto;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #707885;
+    font-size: 13px;
+    font-family: Roboto, sans-serif;
+    line-height: 30px;
+    font-weight: 500;
+
+} 
+
+
+.content-footer__left{
+    display: flex;
+    align-items: center;
+    
+}
+.content-footer__right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.content-header{
+    display: flex;
+    align-items: center;
+}
+.content-header__right{
+    justify-content: space-between;
+    display: flex;
+    flex: 1;
+
+}
+.content-footer__right button{
+    background-color: #FFFFFF;
+    border: 1px solid grey;
+    outline: 0;
+}
+.image-wrapper{
+    border: 2px solid #0077CC;
+    border-radius: 50%;
+    padding: 3px;
+}
+.buttons-user-logged{
+    display: flex;
+}
+
+.content-header__right>div {
+    margin-left: 15px;
+}
+.question-title{
+    margin: 10px 0;
+}
+.question-title a{
+    font-size: 18px;
+    font-family: Roboto, sans-serif;
+    color: #0077CC;
+    font-weight: 500;
+}
+.question-title a:hover{
+    color:   #2D6FF7;
+}
+.date-query{
+    color: #707885;
+    font-size: 11px;
+
+}
+.date{
+    color: #0077CC;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+
+}
+.owner-name{
+    color: #0077CC;
+    font-size: 13px;
+    font-family: Roboto, sans-serif;
+} 
+.question__description{
+    margin-bottom: 14px;
+}
+.content-question{
+    margin-bottom: 10px;
+}
+.content-question h2{
+    margin-top: 10px;
+}

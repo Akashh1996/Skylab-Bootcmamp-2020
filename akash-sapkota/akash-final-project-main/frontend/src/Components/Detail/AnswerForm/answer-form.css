@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+input{
+    border: 1px solid #c9cccd;
+    padding: 10px;
+    margin-top: 5px;
+    outline: #0077CC;
+}
+label{
+    display: flex;
+    flex-direction: column;
+    color: #0077CC;
+    font-family: Roboto, sans-serif;
+    margin-top: 10px;
+
+}
+ .textarea-code {
+    height: 50px;
+    outline: none;
+    border: 1px solid #c9cccd;
+    margin-top: 5px;
+    background-color: #F5F5F5;
+} 
+
+
+.answer-form{
+    padding: 20px;
+    box-shadow: 0 3px 9px #c9cccd;
+
+
+}
+.button-submit{
+    border: none;
+    padding: 10px 15px;
+    outline: none;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #0077CC;
+    color: white;
+}
+.button-submit:hover{
+    background-color: #2D6FF7;
+    color: white;
+}
+.add-answer{
+    padding: 10px 0;
+    color: #0077CC;
+    font-family: Roboto, sans-serif;
+    font-size: 0.7em;
+
+}
+
+.user-answer{
+    font-size: 18px;
+    font-family: Roboto, sans-serif;
+    color: #0077CC;
+    font-weight: 500;
+}
+.post-answer-description, .form-answer-code{
+    font-size: 13px;
+    font-family: Roboto, serif;
+}
+

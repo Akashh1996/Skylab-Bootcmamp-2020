@@ -1,0 +1,45 @@
+<p class="list-title">All Videogames</p>
+<div class="videogame__list-section" *ngIf="videogames$ | async as videogame">
+    <div class="favourites__link" *ngFor="let videogame of videogame" routerLink="/product/{{videogame._id}}">
+        <div class="favorite__product" *ngIf="videogame.sales; else notSaleProduct">
+            <div class="product__options">
+                <div class="product__onsale">
+                    <p class="onsale">On Sale</p>
+                </div>
+                <div class="product__buy">
+                    <fa-icon class="buy-icon" [icon]="['fas', 'cart-plus']"></fa-icon>
+                </div>
+            </div>
+            <mat-carousel class="slider" timings="400ms" [autoplay]="true" interval='5000'>
+                <mat-carousel-slide class="slide" height="100%" *ngFor="let slide of videogame.platform.cover" [image]="slide" [hideOverlay]="false"></mat-carousel-slide>
+            </mat-carousel>
+            <div *ngIf="videogame.shortName; else getShortName">
+                <p class="product__name-sale">{{videogame.shortName}}</p>
+            </div>
+            <ng-template #getShortName>
+                <p class="product__name-saletwo">{{videogame.name}}</p>
+            </ng-template>
+            <div class="first__price-options">
+                <p class="stroke">{{videogame.price | currency: 'EUR'}}</p>
+                <p class="notstroke">{{videogame.salePrice | currency: 'EUR'}}</p>
+            </div>
+        </div>
+        <ng-template #notSaleProduct>
+            <div class="favorite__product-notsale">
+                <div class="product__buy-notsale">
+                    <fa-icon class="buy-icon-notsale" [icon]="['fas', 'cart-plus']"></fa-icon>
+                </div>
+                <mat-carousel class="slider" timings="400ms" [autoplay]="true" interval='5000'>
+                    <mat-carousel-slide class="slide" height="100%" *ngFor="let slide of videogame.platform.cover" [image]="slide" [hideOverlay]="false"></mat-carousel-slide>
+                </mat-carousel>
+                <div class="notsaletwo-container" *ngIf="videogame.shortName; else shortNameGet">
+                    <p class="product__name-notsale">{{videogame.shortName}}</p>
+                </div>
+                <ng-template #shortNameGet>
+                    <p class="product__name-notsaletwo">{{videogame.name}}</p>
+                </ng-template>
+                <p class="original__price">{{videogame.price | currency: 'EUR'}}</p>
+            </div>
+        </ng-template>
+    </div>
+</div>

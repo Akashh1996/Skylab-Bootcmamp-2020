@@ -1,0 +1,16 @@
+.answers-detail{
+    width: 70%;
+    margin: 5px auto 0;
+    background: white;
+    padding: 20px;
+    box-shadow: none;
+    margin-bottom: 10px;
+}
+.answer-description{
+    margin: 8px 0px;
+}
+@media only screen and (max-width: 800px) {
+    .answers-detail {
+      width: 80%;
+    }
+  }

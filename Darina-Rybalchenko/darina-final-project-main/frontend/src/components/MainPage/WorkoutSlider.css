@@ -1,0 +1,21 @@
+
+.carousel-container {
+    margin-top: 10px;
+}
+
+.carousel-title{
+    font-family: 'Lato', sans-serif !important;
+    color: #41555a
+}
+
+.carousel-slogan{
+    font-family: 'Lato', sans-serif !important;
+    color: #41555a
+}
+
+@media screen and (min-width: 865px) {
+    .carousel-item{
+        height: 400px !important; 
+    }
+    
+}

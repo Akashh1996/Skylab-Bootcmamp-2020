@@ -1,0 +1,45 @@
+.workout-list {
+    list-style-type: none;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.list {
+    margin: auto;
+}
+
+.link-detail{
+    text-decoration: none !important;
+}
+
+.card-container{
+    outline-style: none !important;
+}
+
+.card-container:hover {
+    opacity: 0.9;
+
+}
+
+.workout-list__title {
+    color: #805f4c;
+	font-family: 'Poppins', sans-serif !important;
+}
+
+.workout-list__text {
+    font-size: 16px !important;
+    font-family: 'Lato', sans-serif !important;
+    font-weight: lighter !important;
+}
+
+
+@media screen and (max-width: 755px) {
+    .makeStyles-root-1{
+        max-width: 90vw !important;
+
+    }
+}
+

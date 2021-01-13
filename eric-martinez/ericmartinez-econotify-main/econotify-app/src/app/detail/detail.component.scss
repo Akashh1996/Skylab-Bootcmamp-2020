@@ -1,0 +1,182 @@
+body{
+  padding-top: 4%;
+  padding-right: 18%;
+  padding-left: 18%;
+  padding-bottom: 50px;
+}
+
+a{
+  text-decoration: none;
+  color: #151B35;
+}
+
+.button_desktop-viewArticle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_openView{
+    height: 24px;
+    width: 121px;
+    border: none;
+    border-radius: 2px;
+    text-align: left;
+    text-align-last: left;
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    background: url(https://trello-attachments.s3.amazonaws.com/5f7afb80257ef0330839c5e5/5fbbe269bf626164301b66ab/7ec6bf89644148b750f624c47d38b4b0/open_in_new.svg) no-repeat 101px #FE4B4B;
+    background-size: 14px;
+}
+
+.button_back-component{
+    margin-left: 160px;
+    margin-top: 50px;
+}
+
+.button_back{
+    border: none;
+    background: none;
+}
+
+.article_title-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.button_openView-text{
+    margin-left: 8px;
+}
+
+.icon_share{
+    margin-left: 5px;
+}
+
+.icon_button {
+    height: 50px;
+    border-radius: 0px;
+    border: 0;
+    background: #151B35;
+}
+
+.material_icon-button{
+    color: white;
+}
+
+.icon_clear-button{
+    display: none;
+}
+
+.span_year{
+    color: #DB9E4B;
+}
+
+.article_title-text{
+    color: #151B35;
+    font-family: Roboto, sans-serif;
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+.hr_dashed{
+    display: none;
+}
+
+.header_seccion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.material-icons_header{
+    margin-right: 5px;
+}
+
+.header_seccion-text{
+    font-size: 12px;
+    vertical-align: super;
+}
+
+.header_comments{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comments_button{
+    margin-top: 6px;
+    border: none;
+    background: transparent;
+}
+
+.hr_style{
+    border: 0;
+    height: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #798F8D;
+}
+
+.main_title{
+    margin-top: 24px;
+}
+
+.comments_number{
+    color: #151B35;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.main_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.main_header-button{
+    display: none;
+}
+
+.button_main-text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 4px;
+    font-size: 11px;
+    text-decoration: underline;
+}
+
+.main_article{
+    font-family: Georgia, serif;
+    font-size: 18px;
+    color: #303938;
+}
+
+.article_text{
+    margin-top: 14px;
+    line-height: 1.5;
+    color: #303938;
+}
+.button_main-desktop{
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+}
+
+.icon_button-desktop{
+    height: 50px;
+    border-radius: 0px;
+    border: 0;
+    margin-left: 2px;
+    background: #151B35;
+}
+
+.material_icon-button-desktop{
+    color: white;
+}
+
+.saveButton{
+  color: #DB9E4B !important;
+}

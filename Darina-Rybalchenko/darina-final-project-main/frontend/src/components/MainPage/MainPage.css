@@ -1,0 +1,12 @@
+.web-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    color: #41555a;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}

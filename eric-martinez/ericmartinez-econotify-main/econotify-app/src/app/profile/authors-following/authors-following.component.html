@@ -1,0 +1,15 @@
+<div *ngIf="favAuthors$" class="authors_container">
+  <div *ngFor="let author of favAuthors$" class="author_container">
+    <div class="author_container-name">
+      <span class="material-icons material_icon-author">
+        history_edu
+      </span>
+      <h1 class="author_name">
+        {{author}}
+      </h1>
+    </div>
+    <span (click)="followAuthor(author)" class="material-icons material_icon-deleteAuthor">
+      person_remove
+    </span>
+  </div>
+</div>

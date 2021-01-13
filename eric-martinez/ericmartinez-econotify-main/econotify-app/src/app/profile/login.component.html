@@ -1,0 +1,24 @@
+<main>
+  <div class="login_component-conatiner" *ngIf="auth.user | async as user; else showLogin">
+    <div class="button_signOut-container">
+      <button class="signOut_button" (click)="signOut()">
+        <span class="material-icons logOut_icon">
+          exit_to_app
+        </span>
+      </button>
+    </div>
+    <div class="profile_user-container">
+      <img src="{{user.photoURL}}" class="profile_img" alt="profile_img"/>
+      <h1>{{user.displayName}}</h1>
+    </div>
+    <div class="nav_profile">
+      <a class="nav_profile-component-authors nav_profile-component-selected" (click)="changeActive('Authors')">Authors</a>
+      <a class="nav_profile-component-papers" (click)="changeActive('Articles')">Papers</a>
+    </div>
+  </div>
+  <ng-template #showLogin>
+    <p>Please login.</p>
+  </ng-template>
+  <app-authors-following *ngIf="activeAuthors"></app-authors-following>
+  <app-last-read-articles *ngIf="!activeAuthors"></app-last-read-articles>
+</main>
