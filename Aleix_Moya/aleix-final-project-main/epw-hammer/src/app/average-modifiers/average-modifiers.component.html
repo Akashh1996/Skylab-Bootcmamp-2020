@@ -1,0 +1,93 @@
+<div id="content-wrapper">
+  <div id="dialog-header"> 
+    <h1 id="dialog-title">Set Your Modifiers</h1>
+  </div>
+  <section id="dialog-body">
+    <div>
+      <div id="columnItem">
+        <p>To hit modifier ({{actualModifiers.Hit}})</p>
+        <label>
+          <input type="text" [(ngModel)]='actualModifiers.Hit'/>
+        </label>
+      </div>
+      <div id="columnItem">
+        <p>To wound modifier ({{actualModifiers.Wound}})</p>
+        <label>
+          <input type="text" [(ngModel)]='actualModifiers.Wound'/>
+        </label>
+      </div>
+      <div id="columnItem">
+        <p>To save modifier ({{actualModifiers.Save}})</p>
+        <label>
+          <input type="text" [(ngModel)]='actualModifiers.Save'/>
+        </label>
+      </div>
+      <div id="columnItem">
+        <p>Feel No Pain modifier ({{actualModifiers.FnP}})</p>
+        <label>
+          <input type="text" [(ngModel)]='actualModifiers.FnP'/>
+        </label>
+      </div>
+      <div id="columnItem">
+        <p>Damage ({{actualModifiers.Damage}})</p>
+        <label>
+          <input type="text" [(ngModel)]='actualModifiers.Damage'/>
+        </label>
+      </div>
+      <div id="columnItem">
+        <p>Ap Modificator ({{actualModifiers.ModAp}})</p>
+        <label>
+          <input type="text" [(ngModel)]='actualModifiers.ModAp'/>
+        </label>
+      </div>
+      <div id="columnItem">
+        <p>Invulnerable Save ({{actualModifiers.SInV}})</p>
+        <label>
+          <input type="text" [(ngModel)]='actualModifiers.SInV'/>
+        </label>
+      </div>
+      <div id="columnItem">
+      <p>Reroll Hits</p>
+        <p>
+          <select [(ngModel)]="actualModifiers.rerollHits">
+            <option [value]="item" *ngFor="let item of rerollList" [ngValue]="item">{{item}}</option>
+          </select>
+        </p>
+      </div> 
+      <div id="columnItem">
+        <p>Reroll Wounds</p>
+        <p>
+          <select [(ngModel)]="actualModifiers.rerollWounds">
+            <option [value]="item" *ngFor="let item of rerollList" [ngValue]="item">{{item}}</option>
+          </select>
+        </p>
+      </div> 
+      <div id="columnItem">
+      <p>Reroll Saved</p>
+        <p>
+          <select [(ngModel)]="actualModifiers.rerollSaved">
+            <option [value]="item" *ngFor="let item of rerollList" [ngValue]="item">{{item}}</option>
+          </select>
+        </p>
+      </div> 
+      <div id="columnItem">
+      <p>Reroll Damage</p>
+      <p>
+        <select [(ngModel)]="actualModifiers.rerollDamage">
+          <option [value]="item" *ngFor="let item of damageRerrollList" [ngValue]="item">{{item}}</option>
+        </select>
+      </p>
+      </div>    
+    </div>
+  </section>
+  <footer id="dialog-footer">
+    <div id="footer-row1">
+      <button mat-raised-button id="dialog-action-button" (click)="actionFunction()">Confirm</button>
+      <button mat-raised-button id="dialog-cancel-button" (click)="resetModifiers()">Reset Modifiers</button>
+    </div>
+    <div id="footer-row2">
+      <button mat-raised-button id="dialog-cancel-button" (click)="closeModal()">Go Back</button>
+    </div>
+  </footer>
+  <br>
+</div>

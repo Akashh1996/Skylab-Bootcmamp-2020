@@ -1,0 +1,45 @@
+
+main   {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.button_cont{
+      margin-bottom: 5%;
+  }
+  .example_f {
+    --button-bg: linear-gradient(to right, #5e9dce, #83b5df);
+    display: inline-block;
+    border-radius: 4px;
+    background: var(--button-bg) !important;
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 20px;
+    width: 150px;
+    transition: all 0.4s;
+    cursor: pointer;
+  }
+  .example_f span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+  }
+  .example_f span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .example_f:hover span {
+    padding-right: 25px;
+  }
+  .example_f:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+ 
