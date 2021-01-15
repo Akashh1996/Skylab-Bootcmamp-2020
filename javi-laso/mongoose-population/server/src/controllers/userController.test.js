@@ -14,7 +14,7 @@ describe('userController functions', () => {
   beforeEach(() => {
     controller = userController(userSchema, addressSchema, countrySchema);
     res = { send: jest.fn() };
-    req = { body: { info: {} } };
+    req = { body: { address: {} } };
   });
 
   afterEach(() => {
@@ -82,29 +82,43 @@ describe('userController functions', () => {
       expect(countrySchema.create).toHaveBeenCalled();
     });
 
-    test('should call addressSchema.create', () => {
+    test('should call addressSchema.create', async () => {
+      countrySchema.create = jest.fn().mockResolvedValueOnce({ });
       addressSchema.create = jest.fn();
-      countrySchema.create = jest.fn().mockImplementationOnce((countryInfo, callback) => {
-        callback(null, {});
-      });
 
-      controller.putUsersMethod(req);
+      await controller.putUsersMethod(req, res);
 
       expect(addressSchema.create).toHaveBeenCalled();
     });
 
-    test('should call addressSchema.create', () => {
+    test('should call userSchema.create', async () => {
+      countrySchema.create = jest.fn().mockResolvedValueOnce({ });
+      addressSchema.create = jest.fn().mockResolvedValueOnce({ });
       userSchema.create = jest.fn();
-      addressSchema.create = jest.fn().mockImplementationOnce((addressInfo, callback) => {
-        callback(null, {});
-      });
-      countrySchema.create = jest.fn().mockImplementationOnce((countryInfo, callback) => {
-        callback(null, {});
-      });
 
-      controller.putUsersMethod(req);
+      await controller.putUsersMethod(req, res);
 
       expect(userSchema.create).toHaveBeenCalled();
+    });
+
+    test('should call res.send with the object that returns userSchema.create', async () => {
+      const lastReturnValue = { id: 'fakeId' };
+      countrySchema.create = jest.fn().mockResolvedValueOnce({ });
+      addressSchema.create = jest.fn().mockResolvedValueOnce({ });
+      userSchema.create = jest.fn().mockResolvedValueOnce(lastReturnValue);
+
+      await controller.putUsersMethod(req, res);
+
+      expect(res.send).toHaveBeenCalledWith(lastReturnValue);
+    });
+
+    test('should call res.send with the error if there is an error', async () => {
+      const error = 'newError';
+      countrySchema.create = jest.fn().mockRejectedValueOnce(error);
+
+      await controller.putUsersMethod(req, res);
+
+      expect(res.send).toHaveBeenCalledWith(error);
     });
   });
 });
